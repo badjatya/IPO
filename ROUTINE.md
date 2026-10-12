@@ -82,38 +82,52 @@ Web-search "<company> anchor investors" (exchange filing, news, IPO trackers), t
 the `## Anchor book` section of `analysis/<key>.md`: total ₹ Cr raised, number of anchors, top 5–10
 names with amounts, and the Strong/Average/Weak grade. If it's still not findable, leave it Pending.
 
-## 3. Write today's report
+## 3. Write today's verdicts (the email is rendered from them)
 
-Write `reports/<YYYY-MM-DD>-<am|pm>.md`. Structure:
+Write `reports/<YYYY-MM-DD>-<am|pm>.json` — **one entry for every IPO in `data/latest.json`**, keyed by its
+`key`. Numbers (dates, price, lot, GMP, P/E, subscription, odds) come from the snapshot automatically;
+you only write the judgement. Keep every string short (one line on a phone). The schema and an example
+are at the top of `ipo_agent/email_render.py`; `reports/2026-10-12-pm.json` is a filled-in example.
 
-1. **Action list (top)**: one line per IPO, e.g.
-   `CLOSING TODAY · Tonbo Imaging · Apply (Retail) · Retail 12.4x, GMP +55%`.
-2. **Open / closing today**: live subscription by category (QIB / bNII / sNII / Retail / Total),
-   the category odds table from the snapshot, and the **best category to apply in**
-   with a one-line reason. Use the snapshot's `best_category`; if GMP is ≤ 0 say "skip" instead.
-   Explain it plainly: expected gain per ₹ blocked = odds × GMP ÷ price, and GMP ÷ price is the same
-   for every category, so **the least-subscribed category wins**. The odds are a lower bound and
-   retail's real odds are usually further above it than sNII's (many retail bids are for >1 lot),
-   so when Retail and sNII are close, prefer Retail.
-3. **Upcoming**: dates, price band, lot, quota split (esp. retail %), minimum capital per category,
-   GMP, anchor book (amount + grade), and the 5-line summary + verdict from the cached analysis.
-4. **Awaiting listing**: allotment and listing dates, latest GMP.
-5. Footer: data time stamps, source errors, and
-   "Research aid, not investment advice. GMP is unofficial and can be manipulated."
+- `verdict`: `apply` | `listing_gains` | `avoid` | `neutral` | `pending` (no analysis yet / announced only)
+- `verdict_text`: short label, e.g. "Apply", "Listing gains only", "Avoid", "Analysis pending", "Watchlist"
+- `best_category`: "Retail" / "Small HNI" / "Big HNI" / null. For open IPOs use the snapshot's
+  `best_category`; if GMP ≤ 0 set verdict `avoid` and say skip. Explain it plainly: expected gain per ₹
+  blocked = odds × GMP ÷ price, and GMP ÷ price is the same for every category, so **the
+  least-subscribed category wins**. The odds are a lower bound and retail's real odds are usually
+  further above it than sNII's (many retail bids are for >1 lot), so when Retail and sNII are close,
+  prefer Retail.
+- `category_note` (optional): e.g. "1 lot per family PAN", "recheck subscription on <close date>"
+- `summary`: one sentence on what the company does · `financials`: one line, latest FY + growth
+- `quota`: from the analysis (RHP Offer Structure) · `positives`: 2–3 bullets · `red_flags`: 2–3 bullets
+- `anchor` + `anchor_grade` (`strong|average|weak|pending`)
+- top level: `date`, `session` ("AM"/"PM"), `headline` (one line: the single most useful takeaway
+  today, e.g. "Tonbo closes today — Retail 3.2x, apply"), optional `notes` (source problems, data gaps)
 
 Category rules to remember (mainboard): Retail ≤ ₹2 L (1 lot is enough when oversubscribed — apply
 1 lot from each family member's PAN); sNII ₹2–10 L (lottery of the minimum sNII size); bNII > ₹10 L
-(lottery of the minimum bNII size). Odds shown are conservative (≥ 1 in subscription-times).
+(lottery of the minimum bNII size).
+
+Then render:
+
+```bash
+python3 -m ipo_agent.email_render reports/<YYYY-MM-DD>-<am|pm>.json
+```
+
+It prints the email subject and writes `reports/<…>.html` (designed email) and `reports/<…>.txt`
+(plain-text version). Fix any "no verdict for …" warning by adding the missing IPO to the JSON.
 
 ## 4. Deliver
 
-Send the report with the Gmail connector:
-- To: the address in `config/delivery.json` (`"to"`).
-- Subject: `IPO brief <date> <AM|PM>: <n> open, <n> upcoming` (+ "· CLOSING TODAY: <names>" when relevant).
-- Body: the **complete** report, nothing dropped or shortened — every IPO, its full
-  analysis summary, odds table and verdict. Gmail doesn't render markdown tables, so convert tables to
-  short "label: value" lines (or send HTML if the connector supports an HTML body).
-- If the send fails, wait ~30 s and retry up to 3 times with the same full body.
+Send with the Gmail connector to the address in `config/delivery.json` (`"to"`), using the subject the
+renderer printed.
+- Look at the Gmail send tool's parameters. If it accepts HTML (e.g. an `html_body` / `htmlBody`
+  field, an `html` / `is_html` flag, or a content/mime type), send the **`.html` file contents as
+  the HTML body** and the `.txt` contents as the plain-text body if there is a separate field.
+  Otherwise send the `.txt` contents as the body. Send the file contents exactly — do not rewrite,
+  summarise or shorten them.
+- If the send fails, wait ~30 s and retry up to 3 times with the same body.
+- In your final message, say which format was sent (HTML or plain text).
 
 ## 5. Save
 

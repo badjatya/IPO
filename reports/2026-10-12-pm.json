@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-12",
+  "session": "PM",
+  "headline": "HD Fire Protect opens tomorrow — the pick of the week. Tonbo and Sahajanand are listing-gain plays only.",
+  "ipos": {
+    "hd-fire-protect": {
+      "verdict": "apply",
+      "verdict_text": "Apply",
+      "best_category": "Retail",
+      "category_note": "1 lot per family PAN; recheck on 15 Oct",
+      "summary": "India's #2 fire-protection equipment maker and largest exporter (sprinklers, deluge valves, foam systems), with the most UL/FM certifications among Indian peers.",
+      "financials": "FY26 revenue ₹489 Cr (+13%), PAT ₹117 Cr, EBITDA margin 31%, debt-free",
+      "quota": "QIB 50% · NII 15% · Retail 35%",
+      "positives": [
+        "Certification moat and 30% RoE; priced at 40.7x vs peer average 63x",
+        "GMP ~29% shows strong grey-market demand",
+        "35% retail quota helps allotment odds"
+      ],
+      "red_flags": [
+        "100% OFS — promoters selling, company gets nothing",
+        "₹196 Cr dividends to promoters in the last two years",
+        "PAT growth slowed to 6% in FY26; inventory days rising"
+      ],
+      "anchor": "Anchor bidding done today; allocation not public yet",
+      "anchor_grade": "pending"
+    },
+    "tonbo-imaging": {
+      "verdict": "listing_gains",
+      "verdict_text": "Listing gains only",
+      "best_category": "Retail",
+      "category_note": "only if the anchor book is strong",
+      "summary": "Bengaluru defence-electronics maker: thermal imaging cores, weapon sights, targeting and missile-seeker systems; ~71% of revenue from the Indian government.",
+      "financials": "FY26 revenue ₹363 Cr (−23%), PAT ₹51 Cr (−30%); Q1 FY27 loss ₹17.7 Cr",
+      "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+      "positives": [
+        "Owned, ITAR-free technology; #1 in Indian thermal imaging; ₹314 Cr order book",
+        "Very strong GMP (~49%) and defence-theme demand"
+      ],
+      "red_flags": [
+        "Revenue and profit falling; operating cash flow negative two years running",
+        "Working-capital days 517; inventory tripled in two years",
+        "79x P/E on falling earnings; 100% OFS; promoters hold only 17%"
+      ],
+      "anchor": "Anchor bidding on 14 Oct",
+      "anchor_grade": "pending"
+    },
+    "sahajanand-medical-technologies": {
+      "verdict": "listing_gains",
+      "verdict_text": "Listing gains only",
+      "best_category": "Retail",
+      "summary": "Surat-based maker of cardiac stents and structural-heart devices (TAVI, occluders); ~25% share of India's drug-eluting stent market, ~39% revenue from Europe.",
+      "financials": "FY26 revenue ₹1,211 Cr (+18%), PAT ₹69 Cr (5.7% margin); FY24 was a loss",
+      "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+      "positives": [
+        "Real product franchise with 16% revenue CAGR and improving margins",
+        "GMP ~13% and 35% retail quota"
+      ],
+      "red_flags": [
+        "53x P/E vs 44x peers on thin 14% EBITDA margin",
+        "Net debt/EBITDA 4.9x; Q1 operating cash flow negative",
+        "100% OFS with PE funds exiting; Delhi Police and CBI notices seeking documents"
+      ],
+      "anchor": "Anchor bidding on 14 Oct",
+      "anchor_grade": "pending"
+    },
+    "fusion-cx": {
+      "verdict": "pending",
+      "verdict_text": "Analysis pending",
+      "summary": "Customer-experience / BPO services company. RHP not on SEBI yet — full analysis on the next run after it is filed.",
+      "anchor": "Anchor bidding on 13 Oct",
+      "anchor_grade": "pending"
+    },
+    "zetwerk": {
+      "verdict": "pending",
+      "verdict_text": "Analysis pending",
+      "summary": "Manufacturing-services marketplace; loss-making. RHP not on SEBI yet.",
+      "red_flags": ["Loss-making (negative P/E)"]
+    },
+    "bonfiglioli-transmissions": {
+      "verdict": "pending",
+      "verdict_text": "Analysis pending",
+      "summary": "Industrial gearboxes and drives (Indian arm of Italy's Bonfiglioli). RHP not on SEBI yet."
+    },
+    "jio-platforms": {
+      "verdict": "pending",
+      "verdict_text": "Watchlist",
+      "summary": "Reliance's digital/telecom arm. Dates and price band not announced yet."
+    }
+  },
+  "notes": [
+    "Fusion CX, Zetwerk and Bonfiglioli will be analysed as soon as their RHPs appear on SEBI."
+  ]
+}
