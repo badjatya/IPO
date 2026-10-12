@@ -910,6 +910,106 @@ Non-GAAP Financial Measures
 Operating EBITDA  Operating EBITDA is calculated as restated profit before tax plus finance costs,
   depreciation and amortization expense less other income.
 Operating EBITDA Margin  Operating EBITDA margin is calculated as Operating EBITDA divided by Revenue from
+  Operations
+PAT Margin  PAT Margin is calculated as profit after tax (PAT) as a percentage of Total Income.
+  125
+ Key Operational and Financial  Formula
+  Metrics
+GAAP Financial Measures
+Revenue from Operations  Revenue from Operations is as per Restated Financial Information refers to income earned
+  by an entity from its core business activities including Sale of goods, Rendering services
+  and Other operating revenue
+Domestic Revenue  Domestic Revenue represents revenue stream specific to India.
+RoE  Return on equity (RoE) is calculated as PAT divided by Average Tangible Net worth.
+  Tangible Net worth is calculated as Total Equity subtracted by Intangible Assets
+RoCE  Return on capital employed (RoCE) is calculated as earnings before interest and tax (EBIT)
+  divided by the Average capital employed. EBIT is calculated as the restated profit after tax
+  for the year/ period plus total tax expense plus finance costs and capital employed is
+  calculated as the sum of Tangible Net worth and total borrowings
+Fixed Asset Turnover Ratio  Fixed Asset Turnover Ratio is calculated as Revenue from Operations divided by
+  Average Property, plant and equipment, Capital work-in-progress and Right-to-use assets.
+Inventory Days  Inventory days is calculated as average inventory divided by Cost of Sales, multiplied by
+  365. However, for the three months ended June 30, 2026, trade payable days is calculated
+  as trade payables divided by Cost of Goods Sold (COGS) for the given period multiplied
+  by 90 days. Cost of Sales is calculated as total expenses less Finance cost and Depreciation
+  and amortization
+Trade Receivable Days  Trade Receivable days is calculated as average trade receivable divided by Revenue from
+  Operations, multiplied by 365. However, for the three months ended June 30, 2026, trade
+  receivable days is calculated as trade receivables divided by Revenue from Operations for
+  the given period multiplied by 90 days
+Trade Payable Days  Trade payable days is calculated as average trade payable divided by Cost of Goods Sold
+  (COGS), multiplied by 365. However, for the three months ended June 30, 2026, trade
+  payable days is calculated as trade payables divided by Cost of Goods Sold (COGS) for the
+  given period multiplied by 90 days. COGS is calculated as the sum of Cost of materials
+  consumed, Purchase of stock-in-trade and change in inventories of finished goods, stock-
+  in-trade and work-in-progress.
+Cash Conversion Cycle  Cash conversion cycle is calculated as the sum of trade receivable days and inventory days,
+  less trade payable days
+Non-financial operational measures
+No of Customers  Number of customers refers to the total count of unique customers who have made and
+  retained a purchase during the year
+Description on the historic use of the key performance indicators by us to analyze, track or monitor our
+operational and/or financial performance
+In evaluating our business, we consider and use certain KPIs, as stated above, as a supplemental measure to review
+and assess our financial performance. The presentation of these KPIs is not intended to be considered in isolation or
+as a substitute for the Restated Financial Information. We use these KPIs to evaluate our financial performance. Some
+of these KPIs are not defined under Ind AS and are not presented in accordance with Ind AS. These KPIs have
+limitations as analytical tools. Further, these KPIs may differ from the similar information used by other companies
+and hence their comparability may be limited. Therefore, these metrics should not be considered in isolation or
+construed as an alternative to Ind AS measures of performance or as an indicator of our operating performance,
+liquidity or results of operation. Although these KPIs are not a measure of performance calculated in accordance with
+applicable accounting standards, our management believes that it provides an additional tool for investors to use in
+evaluating our ongoing operating results and trends and in comparing our financial results with other companies in our
+industry because it provides consistency and comparability with past financial performance, when taken collectively
+with financial measures prepared in accordance with Ind AS. Investors are encouraged to review the Ind AS financial
+measures and to not rely on any single financial or operational metric to evaluate our business.
+For details of our other operating metrics disclosed elsewhere in this Red Herring Prospectus, see sections titled “Our
+Business” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” starting on
+pages 210 and 327, respectively. We have described and defined the KPIs, as applicable, in “Definitions and
+Abbreviations – Key Performance Indicators” on page 10. Bidders are encouraged to review the Ind AS financial
+measures and not to rely on any single financial or operational metric to evaluate our business. For further details, see
+“Risk Factors — Significant differences exist between Ind AS and other accounting principles, such as U.S. GAAP and
+IFRS, which investors may be more familiar with and may consider material to their assessment of our financial
+condition.” on page 73.
+Brief explanation of the relevance of the KPIs for our business operations is set forth below.
+  126
+Comparison of KPIs with our peers listed in India
+  Sr. No.  KPI  Explanation of KPI, including  Rationale for inclusion as a KPI
+  key components
+GAAP Financial Measures
+1.  Revenue  from Revenue from Operations refers To identify overall performance
+  Operations(1)  to income earned by an entity
+  from its core business activities.
+  This includes: Sale of goods,
+  Rendering  services,  Other
+  operating revenue (e.g., income
+  from export incentives). It
+  excludes: Other income like
+  interest income, dividend income,
+  gains on asset sales
+2.  PAT(2)  Used to assess overall financial Reflects the company’s bottom-line
+  health  and  capacity  for profitability. Essential for assessing
+  reinvestment or distribution to overall  financial  performance,
+  shareholders  shareholder returns, and retained earnings
+  potential.
+Non-GAAP Financial Measures
+1  Domestic Revenue(3) Domestic Revenue refers to the Domestic Revenue is a critical indicator
+  total income generated from sales of the company’s performance in its
+  of goods or services within the primary market. It helps assess the
+  country where the company effectiveness  of  local  marketing
+  operates  strategies,  pricing  models,  and
+  distribution networks. Monitoring this
+  KPI allows businesses to make informed
+  decisions related to resource allocation,
+  product positioning, and sales strategies
+  to drive sustainable growth in the home
+  market.
+2  Export Revenue(4)  Export Revenue measures the Export Revenue is essential for
+  total income derived from sales of evaluating the company’s global reach
+  goods or services to international and competitiveness in international
+  markets. It includes revenue markets. Tracking this KPI provides
+  earned through direct exports  insights  into  foreign  market
+  opportun [...truncated]
 
 ===== OUR BUSINESS =====
 OUR BUSINESS
@@ -1538,4 +1638,59 @@ We are guided by a group of seasoned promoters and accomplished industry profess
 the foundation of our sustained growth and operational excellence. Harish Narshi Dharam [...truncated]
 
 ===== OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS =====
-[not found]
+OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS
+Except as disclosed in this section, there are no: (i) outstanding criminal proceedings; (including matters which are at FIR
+stage even if no cognizance has been taken by any court); (ii) all outstanding actions (including all disciplinary actions,
+penalties and show cause notices) taken by statutory or regulatory authorities; (iii) outstanding claims related to direct and
+indirect taxes (disclosed in a consolidated manner, giving details of the number of cases and total amount involved in such
+cases), (iv) other pending litigation (including civil litigations or arbitration proceeding) which has been determined to be
+material pursuant to the Materiality Policy (as disclosed herein below), each involving our Company, Subsidiary, Directors
+and Promoters (collectively, the “Relevant Parties”), (v) litigation involving our Group Companies which have a material
+impact on our Company, and (vi) if a tax matter, pertaining to direct tax or indirect tax, involves an amount exceeding the
+threshold proposed below, in relation to each Relevant Party, a separate disclosure of such tax matter will be included. Further,
+except as disclosed in this section, there are (a) no disciplinary actions (including penalties imposed) initiated by SEBI or a
+stock exchange against our Promoters in the last five Fiscals immediately preceding the date of this Red Herring Prospectus,
+including any outstanding action; or (b) no criminal proceedings involving our KMPs or Senior Management or (c) no pending
+actions by regulatory and statutory authorities against KMP or Senior Management, or (d) no pending litigation involving our
+Group Companies which may have a material impact on our Company in the opinion of our Board. Further, as on the date of
+this Red Herring Prospectus, there are no findings/observations of any inspections by SEBI or any other regulator involving
+our Company which are material and which need to be disclosed or non-disclosure of which may have bearing on the investment
+decision.
+For the purpose of (iii) and (iv) above, our Board in its meeting held on September 24, 2025 has considered and adopted a
+policy of materiality (“Materiality Policy”) for identification of material outstanding litigation involving Relevant Parties. In
+accordance with the Materiality Policy:
+(a)  all outstanding civil litigation /arbitration proceedings involving the Relevant Parties in which the aggregate monetary
+  amount involved made by or against the Relevant Parties is equal to or in excess of (a) 2% of the turnover of our
+  Company as per the Restated Financial Information; or (b) 2% of the net worth of our Company as per the Restated
+  Financial Information, except in case the arithmetic value of the net worth in negative; or (c) 5% of the average of the
+  absolute value of the profit/loss after tax of our Company as per the Restated Financial Information of the preceding
+  three financial years disclosed in the relevant Offer Documents, whichever is lower (“Materiality Threshold”);
+(b)  2% of turnover, as per the Restated Financial Information for Fiscal 2026 is ₹ 97.08 million;
+(c)  2% of net worth, as per the Restated Financial Information as at March 31, 2026, is ₹ 75.43 million; and
+(d)  5% of the average of absolute value of profit or loss after tax of our Company, as per the Restated Financial
+  Information for the last three Fiscals is ₹ 52.40 million.
+Accordingly, ₹ 52.40 million being the lowest of the above criteria has been considered as the materiality threshold for the
+purpose of (iv) above.
+(i)  any such outstanding civil litigation/ arbitration proceedings, involving our Company, Directors and Promoters
+  wherein a monetary liability is not quantifiable, or which does not exceed the Threshold as specified in (i) above, but
+  the outcome of such a litigation could have a material adverse effect on the financial position, business, operations,
+  performance, prospects, or reputation of the Company; or
+(ii)  any such proceedings where the decision in one proceeding is likely to affect the decision in similar proceedings, even
+  though the amount involved in an individual proceeding may not exceed the Threshold.
+For the purposes of the above, pre-litigation notices received by the Relevant Parties, KMPs or Senior Management from third
+parties (excluding those notices and show cause notices issued by statutory or regulatory or governmental or judicial or quasi-
+judicial taxation authorities, administrative or enforcement authorities or notices threatening initiation of criminal action to
+the Relevant Parties, KMPs or Senior Management) shall, unless otherwise decided by our Board, not be considered as
+outstanding litigation until such time the Relevant Party, KMP or Senior Management is impleaded as a defendant in litigation
+proceedings before any judicial forum, arbitral forum or governmental authorities. Further, first information reports (whether
+cognizance has been taken or not by any court) filed against the Relevant Parties, KMPs or Senior Management shall be
+disclosed in this Red Herring Prospectus.
+Except as stated in this section, there are no outstanding material dues to creditors of our Company. Further, in accordance
+with the Materiality Policy, our Company has considered such creditors ‘material’ to whom the amount due is equal to or in
+excess of 5% of the trade payables of our Company as at the end of the most recent fiscal/period covered in the Restated
+Financial Information included in the Offer Documents. The trade payables of our Company as at June 30, 2026, was ₹ 422.05
+  356
+million as per the Restated Financial Information. Accordingly, a creditor has been considered ‘material’ if the amount due to
+such creditor is equal to or exceeds ₹ 21.10 million (being 5% of the trade payables of our Company as on June 30, 2026, as
+per the Restated Financial Information).
+For outstanding dues to any micro, small or medium enterprise or other credito [...truncated]

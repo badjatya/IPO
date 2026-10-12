@@ -21,16 +21,15 @@ If the `errors` field is non-empty (e.g. NSE blocked), continue with what you
 have and use web search to fill the missing numbers. Say in the report which
 numbers came from web search.
 
-## 2. Deep analysis — only for IPOs with `needs_analysis: true`
+## 2. Deep analysis — for every IPO with `needs_analysis: true` and a non-null `rhp_url`
 
-Do this once per IPO and save it to the file in `analysis_file`; later runs reuse it.
-Skip IPOs in phase `announced` (no price band / RHP yet).
+This is the most important step; do not skip it to save time. Do it once per IPO and save it to the
+file in `analysis_file`; later runs reuse it. Do every eligible IPO, one after another. IPOs with
+`rhp_url: null` (RHP not filed yet) are skipped this run and say "analysis pending — RHP not filed".
 
-1. Extract the RHP: `python3 -m ipo_agent.rhp <NSE symbol>` → `analysis/rhp/<SYMBOL>.txt`.
-   If the IPO is not on NSE yet (`nse` is null), web-search its RHP PDF (sebi.gov.in → Filings →
-   Public Issues, or the BSE/lead-manager site) and run `python3 -m ipo_agent.rhp <pdf-url> --out
-   analysis/rhp/<key>.txt`. If no RHP can be found, skip the deep analysis this run.
-   Read the extracted text file (never the whole PDF).
+1. Extract the RHP: `python3 -m ipo_agent.rhp "<rhp_url>" --out analysis/rhp/<key>.txt`
+   (skip if that file already exists). `rhp_url` comes from NSE or SEBI; both work.
+   Read the extracted text file in full (never the whole PDF). Base every number on it.
 2. Search the web for the anchor investor list (anchor bidding happens the
    working day before the IPO opens), and for recent news on the company.
    If the anchor allocation isn't out yet, write `**Pending**` as the first word of the
@@ -111,8 +110,10 @@ Category rules to remember (mainboard): Retail ≤ ₹2 L (1 lot is enough when 
 Send the report with the Gmail connector:
 - To: the address in `config/delivery.json` (`"to"`).
 - Subject: `IPO brief <date> <AM|PM>: <n> open, <n> upcoming` (+ "· CLOSING TODAY: <names>" when relevant).
-- Body: the report. Gmail doesn't render markdown tables, so convert tables to short
-  "label: value" lines (or send HTML if the connector supports an HTML body).
+- Body: the **complete** report, nothing dropped or shortened — every IPO, its full
+  analysis summary, odds table and verdict. Gmail doesn't render markdown tables, so convert tables to
+  short "label: value" lines (or send HTML if the connector supports an HTML body).
+- If the send fails, wait ~30 s and retry up to 3 times with the same full body.
 
 ## 5. Save
 

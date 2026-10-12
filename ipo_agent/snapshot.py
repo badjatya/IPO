@@ -15,7 +15,7 @@ import re
 import sys
 from zoneinfo import ZoneInfo
 
-from . import allotment, investorgain
+from . import allotment, investorgain, sebi
 from .net import Client
 from .nse import MAINBOARD_SERIES, NSE
 
@@ -114,6 +114,27 @@ def build(today=None):
             ipos[key]["nse"]["series"] = series
         except Exception as e:
             errors[f"nse.detail.{n.get('symbol')}"] = repr(e)
+
+    # RHP links: NSE's issue page when it exists, else SEBI's RHP listing (published earlier).
+    need_sebi = [k for k, v in ipos.items()
+                 if not (v.get("nse") or {}).get("rhp_url")
+                 and not (ROOT / "analysis" / f"{k}.md").exists()]
+    sebi_list = []
+    if need_sebi:
+        try:
+            sebi_list = sebi.listing(client)
+        except Exception as e:
+            errors["sebi.listing"] = repr(e)
+    for key, ipo in ipos.items():
+        d = ipo.get("nse") or {}
+        ipo["rhp_url"], ipo["rhp_source"] = (d.get("rhp_url"), "nse") if d.get("rhp_url") else (None, None)
+        if key in need_sebi:
+            hit = next((r for r in sebi_list if same_company(ipo["name"], r[1])), None)
+            if hit:
+                try:
+                    ipo["rhp_url"], ipo["rhp_source"] = sebi.pdf_url(client, hit[2]), "sebi"
+                except Exception as e:
+                    errors[f"sebi.pdf.{key}"] = repr(e)
 
     out = []
     for key, ipo in ipos.items():

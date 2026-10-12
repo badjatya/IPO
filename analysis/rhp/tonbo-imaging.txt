@@ -1,0 +1,1710 @@
+
+===== THE OFFER =====
+the Offer
+P/E Ratio  Price/Earnings Ratio
+PAN  Permanent account number
+Patents Act  Patents Act, 1970
+Pension Funds  Funds registered with the Pension Fund Regulatory and Development Authority under the
+  provisions of the Pension Fund Regulatory and Development Authority Act, 2013
+RBI  Reserve Bank of India
+Regulation S  Regulation S under the U.S. Securities Act
+  12
+  Term  Description
+RTGS  Real Time Gross Settlement
+SCRA  Securities Contracts (Regulation) Act, 1956
+SCRR  Securities Contracts (Regulation) Rules, 1957
+SCORES  Securities and Exchange Board of India Complaint Redress System
+SEBI  Securities and Exchange Board of India, constituted under section 3 of the SEBI Act
+SEBI Act  Securities and Exchange Board of India Act, 1992
+SEBI AIF Regulations  Securities and Exchange Board of India (Alternative Investment Funds) Regulations, 2012
+SEBI Master Circular for  Securities and Exchange Board of India Master Circular for Depositories dated December
+Depositories  3, 2024 (SEBI/HO/MRD/MRD-PoD-1/P/CIR/2024/168)
+SEBI FPI Regulations  Securities and Exchange Board of India (Foreign Portfolio Investors) Regulations, 2019
+SEBI FVCI Regulations  Securities and Exchange Board of India (Foreign Venture Capital Investor) Regulations,
+  2000
+SEBI ICDR Master Circular  SEBI master circular number SEBI/HO/ 49/14/14(2)2026-CFD-POD2/I/4518/2026 dated
+  February 9, 2026
+SEBI ICDR Regulations  Securities and Exchange Board of India (Issue of Capital and Disclosure Requirements)
+  Regulations, 2018
+SEBI Listing Regulations  Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements)
+  Regulations, 2015
+SEBI Merchant Bankers  Securities and Exchange Board of India (Merchant Bankers) Regulations, 1992
+Regulations
+SEBI RTA Master Circular  SEBI master circular bearing number SEBI/HO/38/13/(4)2026-MIRSD-POD/I/4298/2026
+  dated February 6, 2026
+SEBI SBEB & SE  Securities and Exchange Board of India (Share Based Employee Benefits and Sweat
+Regulations  Equity) Regulations, 2021
+SEBI Takeover Regulations  Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers)
+  Regulations, 2011
+STT  Securities Transaction Tax
+TAN  Tax deduction account number
+Trade Marks Act  Trade Marks Act, 1999
+U.S. Securities Act  U.S. Securities Act of 1933, as amended
+US$/USD/US Dollar  United States Dollar
+USA/U.S./US  United States of America
+VAT  Value added tax
+VCF  Venture capital funds as defined in and registered with the SEBI under the Securities and
+  Exchange Board of India (Venture Capital Fund) Regulations, 1996 (now repealed) or the
+  SEBI AIF Regulations, as the case may be
+Technical, Industry Related Terms or Abbreviations
+  Term  Description
+ AI  Artificial Intelligence
+ ATAK  Android Team Awareness Kit, a geospatial application developed in the U.S. military for
+  android devices. It enables users to view shared maps, navigate, coordinate, and share data
+  in real-time, functioning for situational awareness in defence, disaster relief, and tactical
+  operations
+ ATGM  Anti-Tank Guided Missile is a precision-guided munition designed to engage and destroy
+  heavily armoured military vehicles, including tanks and armoured personnel carriers.
+  These missiles utilize advanced guidance systems such as infrared, laser, or wire-guidance
+  to ensure high accuracy, often featuring "fire-and-forget" technology
+ ATR  Automatic Target Recognition is a technology, typically utilizing computer processing and
+  artificial intelligence (AI), that automatically detects, classifies, and identifies targets of
+  interest from sensor data (such as radar, infrared, or electro-optical imagery) without direct
+  human intervention
+ C2  Command and Control in defence is the exercise of authority and direction by a designated
+  commander over assigned forces to accomplish a mission. It integrates personnel,
+  equipment, communications, and procedures to plan, direct, and coordinate operations. C2
+  enables effective decision-making, situational awareness, and the management of complex
+  military systems
+ C4ISR  Command, Control, Communications, Computers, Intelligence, Surveillance &
+  Reconnaissance, is an integrated, technology-driven framework used by military forces to
+  gather, analyse, and disseminate battlefield information, enabling faster decision-making,
+  enhanced situational awareness, and unified operational coordination
+ CAGR  Compound Annual Growth Rate
+  13
+  Term  Description
+C-UAS  Counter-Uncrewed/Unmanned Aerial Systems, often called anti-drone systems, are
+  technologies, processes, and strategies designed to detect, identify, track, and mitigate or
+  neutralize unauthorized or hostile unmanned aerial vehicles (UAS). These systems protect
+  sensitive airspace, critical infrastructure, and public events from risks posed by small, low-
+  flying drones
+DAP 2020  India’s Defence Acquisition Procedure 2020
+DEW/DES  Directed Energy Weapon/ Directed Energy Systems are advanced systems that use highly
+  concentrated electromagnetic energy, including lasers, microwaves, and particle beams—
+  rather than kinetic projectiles to disable, damage, or destroy enemy equipment, facilities,
+  and personnel. These weapons provide precise, rapid, and cost-effective engagement for
+  defence against drones, missiles, and electronics
+DRDO  Defence Research & Development Organisation (India)
+EBIT  Earnings before interest and tax
+EMS  Electronics manufacturing services
+EO  Electro-Optical refers to the interaction between electric fields and light, specifically
+  describing materials or devices that use electrical signals to modify, modulate, or generate
+  light. This field covers technology like lasers, sensors, and modulators that change a
+  material's refractive index via voltage, crucial for high-speed telecommunications and
+  surveillance
+EO/IR  Electro-Optical/Infrared systems are imaging systems used for military or law enforcement
+  applications which include both visible a [...truncated]
+
+===== SUMMARY OF RESTATED FINANCIAL INFORMATION =====
+SUMMARY FINANCIAL INFORMATION
+The summary financial information presented below have been derived from our Restated Consolidated Financial
+Statements and should be read in conjunction with “Restated Consolidated Financial Statements” and
+“Management’s Discussion and Analysis of Financial Condition and Results of Operations” on pages 322 and
+405, respectively.
+  [The remainder of this page has been intentionally left blank]
+  86
+  Summary of restated consolidated statement of assets and liabilities
+  (in ₹ million)
+Particulars  As at June 30,  As at March 31,
+  2026  2026  2025  2024
+ASSETS
+Non-Current Assets
+Property, Plant and Equipment  243.68  248.03  244.84  47.87
+Right of Use Assets  71.05  75.74  90.68  85.76
+Intangible Assets  1,669.75  1,627.01  1,651.92  1,838.81
+Capital Work-In-Progress  78.92  123.96  7.21  -
+Financial Assets
+  -Investments  -  -  0.03  0.03
+  -Other Financial Assets  671.55  605.92  792.97  142.08
+Other Non-Current Assets  34.19  28.80  17.98  1.05
+Total Non-Current Assets  2,769.14  2,709.46  2,805.63  2,115.60
+Current assets
+Inventories  3,196.33  2,194.85  1,111.44  1,116.86
+Financial Assets
+  -Trade Receivables  968.53  2,116.63  2,103.12  936.43
+  -Cash and Bank Balances  71.40  161.79  1,009.72  856.74
+  -Other Bank Balances  216.34  224.53  9.52  299.99
+  -Loans  5.82  7.26  4.34  5.45
+  -Other Financial Assets  89.81  79.21  5.50  6.40
+Other Current Assets  511.28  331.25  214.31  409.34
+Total Current Assets  5,059.51  5,115.52  4,457.95  3,631.21
+Total Assets  7,828.65  7,824.98  7,263.58  5,746.81
+EQUITY AND LIABILITIES
+Equity
+  -Equity Share Capital  114.56  114.56  7.33  2.99
+  -Other Equity - attributable to owners of the Company  5,270.81  5,417.03  4,894.05  1,689.87
+  -Instruments entirely equity in nature  -  -  -  608.44
+Total Equity  5,385.37  5,531.59  4,901.38  2,301.30
+Liabilities
+Non-Current liabilities
+  -Financial Liabilities
+  -Long Term Borrowings  -  -  -  152.72
+  -Long Term Lease Liabilities  63.54  68.54  87.83  83.75
+  -Deferred Tax Liabilities (net)  40.01  99.97  80.47  33.89
+  -Provisions  173.76  187.70  338.79  301.08
+  -Other Financial Liabilities  -  -  -  -
+Total Non-Current Liabilities  277.31  356.21  507.09  571.44
+Current liabilities
+Financial Liabilities
+  -Short Term Borrowings  1,297.16  1,160.64  781.35  810.86
+  -Short Term Lease Liabilities  19.09  18.50  11.33  7.03
+  -Trade Payables
+  - Total outstanding dues of micro enterprises and  89.92  61.06  22.74  29.59
+small enterprises
+  - Total outstanding dues of creditors other than  373.19  273.37  188.71  173.86
+micro and small enterprises
+  -Other Financial Liabilities  0.15  0.90  0.90  1.50
+Short Term Provisions  104.77  185.53  139.77  162.66
+Deferred Income  -  -  -  -
+  87
+Particulars  As at June 30,  As at March 31,
+  2026  2026  2025  2024
+Other Current Liabilities  281.69  237.18  710.31 1,688.57
+Total Current Liabilities  2,165.97  1,937.18 1,855.11 2,874.07
+Total Liabilities  2,443.28  2,293.39  2,362.20  3,445.51
+Total Equity and Liabilities  7,828.65  7,824.98  7,263.58  5,746.81
+  88
+  Summary of restated consolidated statement of profit and loss
+  (in ₹ million, unless otherwise stated)
+Particulars  For the period  For the year ended March 31,
+  ended June 30,  2026  2025  2024
+  2026
+Revenue from Operations  360.08  3,626.48  4,690.80  4,281.89
+Other Income  13.16  72.91  53.10  37.07
+Total Income  373.24  3,699.39  4,743.90  4,318.96
+Expenses
+Cost of Materials Consumed  834.62  1,655.54  2,153.09  2,132.75
+Changes in Inventories of Finished Goods  (610.32)  119.69  (106.98)  66.55
+Employee Benefits Expenses  155.94  495.83  444.35  130.55
+Finance Costs  36.36  106.16  177.42  76.81
+Depreciation and Amortisation Expenses  83.91  313.35  265.91  133.95
+Other expenses  110.22  309.24  809.70  828.80
+Total expenses  610.72  2,999.80  3,743.49  3,369.41
+Profit / (Loss) before exceptional and extraordinary items  (237.48)  699.59  1,000.41  949.55
+and tax
+Exceptional items  -  -  7.76  4.05
+Restated Profit before tax  (237.48)  699.59  992.65  945.50
+Tax expense
+Current tax  -  170.62  218.50  211.50
+MAT Credit  -  -  -  15.02
+Deferred tax  (60.12)  20.16  46.58  33.55
+Restated Profit for the year, net of Tax  (177.37)  508.80  727.57  685.43
+Other Comprehensive Income
+(i) Items that will not be reclassified to profit or loss
+  -Remeasurement of the Gain /(Loss) of defined benefit  0.63  (2.59)  (0.38)  1.37
+plans
+(ii) Income tax relating to items that will not be reclassified
+to profit or loss
+  -  Tax relating to re-measurement of defined benefit  (0.16)  0.65  0.10  (0.36)
+  plans
+(iii) Items that will be reclassified to profit or loss
+ - Exchange Difference on Translation of Foreign Operations  1.01  2.16  0.37  -
+Total Other Comprehensive Income  1.48  0.22  0.08  1.01
+Total Comprehensive Income for the period  (175.88)  509.02  727.65  686.45
+Basic earnings per share (face value of ₹ 2 each) (in ₹)  (3.20)  9.19  13.38  62.61
+Diluted earnings per share (face value of ₹ 2 each) (in ₹)  (3.20)  8.88  12.70  13.63
+  89
+  Summary of restated consolidated statement of cash flows
+  (in ₹ million)
+Particulars  For the period  For the year ended March 31,
+  ended June 30,  2026  2025  2024
+  2026
+Cash flow from Operating Activities
+Net Profit Before Tax  (237.48)  699.59  992.65  945.50
+Adjustments for:
+  Depreciation and amortisation expense  83.91  313.35  265.91  133.95
+  Finance costs  23.89  43.66  125.61  53.96
+  Interest income  (12.60)  (70.80)  (41.30)  (33.39)
+  Net loss on sale/discarding of Investment  -  0.03  -  0.05
+  Transfer to/ (from) Share Options Outstanding account  29.67  122.80  102.40  (7.30)
+  Other comprehensive income for the year  0.63  (2.59)  (0.28)  1.01
+  Translation reserve  1.01  2.16  0.37  -
+Operating Profit before Working Capital changes  (110.97)  1,108.20  1,445.36  1,093.78
+Adjustments for changes in Working Capital
+- (Increase)/decrease in other financial assets (non-  (65.63)  187.05  (650.89)  (32.47)
+current)
+- (Increase)/decrease in other non-current assets  (5.39)  (10.82)  (16.93)  0.24
+- (Increase)/decrease in inventories  (1,001.48)  (1,083.41)  5.42  (721.00)
+- (Increase)/decrease in trade receivables  1,148.11  (13.51)  (1,166.70)  (524.83)
+- (Increase)/decrease in other current assets  (180.04)  (116.94)  195.03  (215.10)
+- (Increase)/decrease in other financial assets (current)  (10.60)  (73.71)  0.90  (3.13)
+- (Increase)/decrease in loans  1.44  (2.92)  1.12  (2.26)
+- Increase/(decrease) in trade payables  128.68  122.98  8.01  (82.63)
+- Increase/(decrease) in other financial liabilities  (0.75)  -  (0.60)  (1.29)
+- Increase/(decrease) in provisions (non-current)  (13.93)  (151.09)  37.71  213.94
+- Increase/(decrease) in current provisions  (31.15)  27.14  90.80  11.77
+- Increase/(decrease) in Deferred Income  -  -  -  (0.18)
+- Increase/(decrease) in other current liabilities  44.49  (473.13)  (978.26)  1,100.45
+Cash generated from Operating Activities  (97.22)  (480.16)  (1,029.03)  837.28
+- Income taxes paid (net)  (49.61)  (152.00)  (332.17)  (53.95)
+Net Cash from Operating Activities (A) = i+ii+iii  (146.83)  (632.16)  (1361.19)  783.33
+Cash flow from Investing Activities:
+Payments for purchase of property, plant and equipment  (8.63)  (47.88)  (216.10)  (26.85)
+Payments for purchase of intangible assets and capital  (63.96)  (341.70)  (50.63)  (1,845.86)
+work in progress
+Payments for purchase of Right of use of assets  -  (3.87)  (21.44)  (62.34)
+Payments for purchase of investments  -  0.00  -  -
+Proceeds from sale of property, plant and equipment  -  -  -  -
+Interest received  12.60  70.80  41.30  33.39
+Net Cash from / (used in) Investing Activities (B)  (59.99)  (322.65)  (246.86)  (1,901.66)
+Cash flow from Financing Activities:
+Proceeds / (repayment) from short term borrowings  136.52  537.18  (29.51)  427.84
+Proceeds / (Repayment) of long-term borrowings  -  (157.89)  (152.72)  125.54
+Principal repayment of lease liabilities  (4.40)  (12.13)  8.38  55.64
+Finance cost paid  (23.89)  (43.66)  (125.61)  (53.96)
+Issue of Equity shares  -  -  1,750.00  -
+Issue of Cumulative Preference Shares  -  -  20.01  1,322.99
+Buyback of Equity shares  -  (1.60)  -  -
+Net Cash from / (used in) Financing Activities (C)  108.23  321.90  1,470.56  1,878.06
+Net Increase/(Decrease) in cash & cash equivalents  (98.59)  (632.91)  (137.49)  759.73
+(A+B+C)
+Cash and cash equivalents at the beginning of the  386.32  1,019.24  1,156.73  397.00
+year/period
+  90
+Particulars  For the period  For the year ended March 31,
+  ended June 30,  2026  2025  2024
+  2026
+Cash and cash equivalents at the end of the  287.74  386.32  1,019.24  1,156.73
+year/period
+  91
+
+===== CAPITAL STRUCTURE =====
+CAPITAL STRUCTURE
+The share capital of our Company, as on the date of this Red Herring Prospectus, is set forth below:
+  (in ₹, except share data)
+  S.  Particulars  Aggregate nominal  Aggregate value at
+ No.  value  Offer Price*
+A) AUTHORISED SHARE CAPITAL(1)
+1. 57,487,500 Equity Shares of face value of ₹2 each  114,975,000.00  -
+2. 125,000 preference shares of face value of ₹10 each;  1,250,000.00
+3. 160,000 preference shares of face value ₹ 913 each;  146,080,000.00
+4. 200,000 preference shares of face value ₹ 100 each;  20,000,000.00
+5. 45,000 preference shares of face value ₹ 10,171 each  457,695,000.00
+  Total  740,000,000.00
+B) ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL BEFORE THE OFFER
+1.  57,282,100 Equity Shares of face value of ₹2 each  114,564,200.00  -
+  Total  114,564,200.00
+C) PRESENT OFFER(2)
+1.  Offer for Sale of 12,174,046 Equity Shares of face value of ₹2  24,348,092  [●]
+  each aggregating up to ₹ [●] million by the Selling Shareholders(2)
+2.  The Offer includes:
+3.  Employee Reservation Portion of up to 14,000 Equity Shares of  28,000  [●]
+  face value of ₹2 each(3)
+  Net Offer of [●] Equity Shares of face value of ₹2 each  [●]  [●]
+E)  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL AFTER THE OFFER*
+1.  57,282,100 Equity Shares of face value of ₹2 each  114,564,200.00  -
+F)  SECURITIES PREMIUM ACCOUNT
+1.  Before the Offer  3,240,883,137.00
+  After the Offer*
+*
+ To be updated upon finalisation of the Offer Price and subject to finalisation of Basis of Allotment.
+1.  For details in relation to the changes in the authorised share capital of our Company since incorporation, see, ‘History and
+  Certain Corporate Matters – Amendments to the Memorandum of Association in the last 10 years’ on page 291.
+2.  Our Board has taken on record the consent of each of the Selling Shareholders to participate in the Offer for Sale pursuant to a
+  resolution passed at their meeting dated December 20, 2025 and October 1, 2026. Each Selling Shareholder, severally and not
+  jointly, confirms that its/his/her respective portion of the Offered Shares are eligible for being offered for sale in the Offer in
+  accordance with Regulation 8 of the SEBI ICDR Regulations. Each of the Selling Shareholders, severally and not jointly, has
+  confirmed their participation of their respective portion of Offered Shares in the Offer for Sale. For details on authorisation of the
+  Selling Shareholders in relation to their respective portion of the Offered Shares, see “Other Regulatory and Statutory Disclosures –
+  Authority for the Offer” on page 458.
+3.  Eligible Employees Bidding in the Employee Reservation Portion must ensure that the maximum Bid Amount does not exceed ₹0.50
+  million (net of Employee Discount, if any). However, the initial Allotment to an Eligible Employee in the Employee Reservation
+  Portion shall not exceed ₹0.20 million (net of Employee Discount, if any). In the event of under-subscription in the Employee
+  Reservation Portion, the unsubscribed portion will be available for allocation and Allotment, proportionately to all Eligible
+  Employees who have Bid in excess of ₹0.20 million (net of Employee Discount, if any), subject to the maximum value of Allotment
+  made to such Eligible Employees not exceeding ₹0.50 million (net of Employee Discount, if any). The unsubscribed portion, if any, in
+  the Employee Reservation Portion after allocation of up to ₹0.50 million (net of Employee Discount, if any), shall be added to the Net
+  Offer. For further details, see “Offer Structure” and “Offer Procedure” on pages 478 and 483 respectively.
+  106
+Notes to capital structure
+Equity Share capital history of our Company
+The following table sets forth the history of the Equity Share capital of our Company:
+  Date of  Nature of  Name(s) of allottee(s) and details of  Number of  Cumulative  Face value  Issue price  Cumulative  Number of  Nature of
+  allotment  allotment  equity shares  Equity  number of  per Equity  per Equity paid-up equity  allottees consideration
+  allotted  Shares  Equity  Share  Share  share capital
+  allotted  Shares  (₹)  (₹)  (₹)
+ January  7,  Initial  9,999 equity shares were allotted to  10,000  10,000  10.00  10.00  100,000.00  2  Cash
+ 2004#  subscription to  William J. Burke and 1 equity shares were
+  the  allotted to James S. Crofton
+  Memorandum
+  of Association
+ July 11, 2008  Bonus issue in  62,100 equity shares were allotted to  90,000  100,000  10.00  N.A.  1,000,000.00  2  N.A.
+  the ratio of 9:1  Magistri Inc. and 27,900 equity shares were
+  allotted to Sarnoff Corporation
+ March 26, 2009  Further issue  41,420 equity shares were allotted to Serial  41,420  141,420  10.00  10.00  1,414,200.00  1  Cash
+  Innovations Employee Stock Option Trust
+  (represented by its trustees, Timothy Guy
+  Mitchell, Stephen Mathias and Cecilia
+  D’Souza)
+ November  8,  Further issue  200,000 equity shares were allotted to  200,000  341,420  10.00  10.00  3,414,200.00  1  Cash
+ 2010  Serial Innovations Employee Stock Option
+  Trust (represented by its trustees, Timothy
+  Guy Mitchell, Stephen Mathias and Cecilia
+  D’Souza)
+ June 6, 2011  Further issue  492 equity shares were allotted to Ajit  5,690  347,110  10.00  183.00  3,471,100.00  33  Cash
+  Kumar Surana (HUF), 110 equity shares
+  were allotted to Akshay Chudasama, 218
+  equity shares were allotted to Alok
+  Agarwal, 110 equity shares were allotted to
+  Amar Deb, 492 equity shares were allotted
+  to Anand Ladsariya, 110 equity shares were
+  allotted to Ashok Kumar Tibrewala, 273
+  equity shares were allotted to Aurum
+  Ventures Private Limited, 110 equity
+  shares were allotted to Capt. Darryl Pais,
+  110 equity shares were allotted to Cheryl
+  Lawrence, 110 equity shares were allotted
+  to Gautam Sheth, 110 equity shares were
+  allotted to Gautam Shewakramani, 218
+  107
+  Date of  Nature of  Name(s) of allottee(s) and details of  Number of  Cumulative  Face value  Issue price  Cumulative  Number of  Nature of
+  allotment  allotment  equity shares  Equity  number of  per Equity  per Equity  paid-up equity  allottees consideration
+  allotted  Shares  Equity  Share  Share  share capital
+  allotted  Shares  (₹)  (₹)  (₹)
+  equity shares were allotted to Harshad
+  Lahoti, 218 equity shares were allotted to
+  Hemant Kanakia, 110 equity shares were
+  allotted to Karan Maheswari, 300 equity
+  shares were allotted to N Gautam, 218
+  equity shares were allotted to Nitin
+  Agarwal (HUF), 164 equity shares were
+  allotted to Parthiv Kilachand, 110 equity
+  shares were allotted to Bhuvantray
+  Investments and Trading Company Private
+  Limited, 246 equity shares were allotted to
+  Mecheri Smart Capital Private Limited, 27
+  equity shares were allotted to Anil Joshi,
+  110 equity shares were allotted to Praveen
+  Gupta, 110 equity shares were allotted to
+  Rafique Malik, 300 equity shares were
+  allotted to Rajendra Sah, 82 equity shares
+  were allotted to RRA Media and
+  Entertainment Private Limited, 110 equity
+  shares were allotted to Avnish Bajaj, 218
+  equity shares were allotted to Rajiv
+  Dadlani, 110 equity shares were allotted to
+  Aargus Endeavours LLP, 110 equity shares
+  were allotted to Sanjay Kamlani, 110 equity
+  shares were allotted to Sanjay Nath, 273
+  equity shares were allotted to Sasha
+  Mirchandani, 110 equity shares were
+  allotted to Vikas Choudhury, 55 equity
+  shares were allotted to Ramesh Shah and
+  136 equity shares were allotted to
+  Tiruvidaimarudhur Srivatsan Sivashankar
+February  14,  Conversion  4,918 equity shares were allotted to Anand  11,804  358,914  10.00  N.A.%  3,589,140.00  4  N.A.
+2013  into  equity  Ladsariya, 2,186 equity shares were
+  shares  allotted to M/s Excelman Ventures LLP,
+  4,154 equity shares were allotted to Nitin
+  Agarwal (HUF) and 546 equity shares were
+  allotted to Vikas Choudhury
+March 27, 2023  Buyback  of  Serial Innovations Employee Stock Option  (60,000)  298,914  10.00  10.00  2,989,140.00  1  Cash
+  equity shares  Trust
+  108
+  Date of  Nature of  Name(s) of allottee(s) and details of  Number of  Cumulative  Face value  Issue price  Cumulative  Number of  Nature of
+  allotment  allotment  equity shares  Equity  number of  per Equity  per Equity paid-up equity  allottees consideration
+  allotted  Shares  Equity  Share  Share  share capital
+  allotted  Shares  (₹)  (₹)  (₹)
+March 27, 2025  Private  29,600 equity shares were allotted to  70,000  368,914  10.00  25,000.00  3,689,140.00  11  Cash
+  placement  Florintree Flowtech LLP, 24,000 equity
+  shares were allotted to Yali Deeptech Fund
+  I, 6,400 equity shares were allotted to
+  Tenacity Ventures Fund – I, 4,000 equity
+  shares were allotted to Export-Import Bank
+  of India, 394 equity shares were allotted to
+  Artiman Ventures Select 2014 L.P., 6
+  equity shares were allotted to Artiman
+  Ventures Select 2014 Principals Fund L.P.,
+  560 equity shares were allotted to Amit
+  Dilip Shah*, 640 equity shares were allotted
+  to Pranav Parikh, 3,200 equity shares were
+  allotted to Vinimaya Advisory LLP, 400
+  equity shares were allotted to Paramjit
+  Singh and 800 equity shares were allotted
+  to  Tiruvidaimarudhur  Srivatsan
+  Sivashankar and Meera Sivashankar@
+March 27, 2025  Conversion  96,173 equity shares were allotted to  364,358  733,272  10.00  N.A.^  7,332,720.00  18  N.A.
+  into  equity  CEAQ India, 153,350 equity shares were
+  shares  allotted to CEAQ Singapore, 1,103 equity
+  shares were allotted to Blacksoil India
+  Credit Fund, 1,103 equity shares were
+  allotted to Blacksoil Capital Private
+  Limited, 81,630 equity shares were allotted
+  to HBL Engineering Limited, 3,947 equity
+  shares were allotted to Artiman Partners
+  LLC, 1,388 equity shares were allotted to
+  Artiman Ventures Select 2014 L.P., 22
+  equity shares were allotted to Artiman
+  Ventures Select 2014 Principals Fund L.P.,
+  1,692 equity shares were allotted to Amit
+  Dilip Shah*, 2,039 equity shares were
+  allotted to Ramesh Radhakrishnan, 6,454
+  equity shares were allotted to Meghaa
+  Karnani$, 8,153 equity shares were allotted
+  to SSV Advisory Services LLP, 3,397
+  equity shares were allotted to Vinimaya
+  Advisory LLP, 1,699 equity shares were
+  109
+  Date of  Nature of  Name(s) of allottee(s) and details of  Number of  Cumulative  Face value  Issue price  Cumulative  Number of  Nature of
+  allotment  allotment  equity shares  Equity  number of  per Equity  per Equity  paid-up equity  allottees consideration
+  allotted  Shares  Equity  Share  Share  share capital
+  allotted  Shares  (₹)  (₹)  (₹)
+  allotted to Tiruvidaimarudhur Srivatsan
+  Sivashankar and Meera Sivashankar@,
+  1,019 equity shares were allotted to Neville
+  Manuel Fernandes and Mellita Fernandes,
+  510 equity shares were allotted to Nitin
+  Agarwal (HUF), 510 equity shares were
+  allotted to Anand Ladsariya and 169 equity
+  shares were allotted to Shereen Bhan.
+June 26, 2025  Buyback  of  Serial Innovations Employee Stock Option  (160,451)  572,821  10.00  10.00  5,728,210.00  1  Cash
+  equity shares  Trust
+June 30, 2025  Bonus issue in  79,306 equity shares were allotted to  10,883,599  11,456,420  10.00  N.A.  114,564,200.00  29  N.A.
+  the ratio of  Timothy Guy Mitchell, 550,829 equity
+  19:1  shares were allotted to Serial Innovations
+  Employee Stock Option Trust, 943,996
+  equity shares were allotted to Arvind
+  Kondangi  Lakshmikumar,  1,931,255
+  equity shares were allotted to CEAQ India,
+  576,973 equity shares were allotted to
+  Ankit Kumar, 375,725 equity shares were
+  allotted to Cecilia D’Souza, 2,913,650
+  equity shares were allotted to CEAQ
+  Singapore, 20,957 equity shares were
+  allotted to Blacksoil India Credit Fund,
+  20,957 equity shares were allotted to
+  Blacksoil Capital Private Limited,
+  1,550,970 equity shares were allotted to
+  HBL Engineering Limited, 74,993 equity
+  shares were allotted to Artiman Partners
+  LLC, 33,858 equity shares were allotted to
+  Artiman Ventures Select 2014 L.P., 532
+  equity shares were allotted to Ar [...truncated]
+
+===== OBJECTS OF THE OFFER =====
+OBJECTS OF THE OFFER
+The objects of the Offer are to achieve the benefits of listing the Equity Shares of face value of ₹2 each on the
+Stock Exchanges and for the Offer for Sale of up to 12,174,046 Equity Shares of face value of ₹2 each aggregating
+to ₹[●] million. Each Selling Shareholder has, severally and not jointly, authorised its participation in the Offer
+for Sale to the extent of its respective portion of the Offered Shares, pursuant to its respective consent letter.
+For further details, see “The Offer” and “Other Regulatory and Statutory Disclosures – Authority for the Offer”
+on pages 84 and 458, respectively.
+Our Company expects that the proposed listing of its Equity Shares will enhance our visibility and brand image
+and provide liquidity to its existing Shareholders. Listing will also provide a public market for the Equity Shares
+in India.
+Utilisation of the Offer Proceeds by the Selling Shareholders
+Our Company will not receive any proceeds from the Offer (the “Offer Proceeds”) and the Offer Proceeds will
+be received by the Selling Shareholders, in proportion to the Offered Shares sold by the respective Selling
+Shareholders as a part of the Offer after deducting their portion of the Offer related expenses and the relevant
+taxes thereon. For details of the Offered Shares, see “Other Regulatory and Statutory Disclosures – Authority
+for the Offer” on page 458.
+Offer-related Expenses
+The Offer expenses are estimated to be approximately ₹[●] million.
+The expenses in relation to the Offer include, among others, listing fees, selling commission and brokerage, fees
+payable to the Book Running Lead Managers, fees payable to legal counsel, fees payable to the Registrar to the
+Offer, Escrow Collection Bank(s) and Sponsor Bank(s) to the Offer, processing fee to the SCSBs for processing
+application forms, brokerage and selling commission payable to members of the Syndicate, Registered Brokers,
+RTAs and CDPs, printing and stationery expenses, advertising and marketing expenses and all other incidental
+and miscellaneous expenses for listing the Equity Shares on the Stock Exchanges.
+Other than the listing fees and expenses in relation to product or corporate advertisements, i.e., any corporate
+advertisements consistent with past practices of our Company (other than the expenses relating to marketing and
+advertisements undertaken in connection with the Offer) which will be borne solely by our Company, all costs,
+charges, fees and expenses that are related to, associated with and incurred in connection with the Offer including,
+inter-alia, filing fees, book building fees and other charges, fees and expenses of the SEBI, the Stock Exchanges,
+the Registrar of Companies and any other Governmental Authority, advertising, printing, road show expenses,
+accommodation and travel expenses, fees and expenses of the legal counsel to our Company and the Indian and
+international legal counsel to the BRLMs, fees and expenses of the statutory auditors (to the extent related to the
+Offer), registrar fees and broker fees (including fees for procuring of applications), bank charges, fees and
+expenses of the BRLMs, syndicate members, Self-Certified Syndicate Banks, other Designated Intermediaries
+and any other consultant, advisor or third party in connection with the Offer shall be borne by and between the
+Selling Shareholders in proportion to their respective Offered Shares being offered for sale by each of the Selling
+Shareholders in the Offer in accordance with the Applicable Law including Section 28(3) of the Companies Act,
+2013, except as may be prescribed by the SEBI or any other regulatory authority.
+Each of the Selling Shareholders, severally and not jointly, agrees that it shall reimburse our Company for their
+respective proportion of such costs and expenses in relation to the Offer paid by our Company on behalf of the
+respective Selling Shareholder irrespective of the completion of the Offer, directly from the Public Offer Account
+in the manner as may be set out in the Offer related agreements. For any Offer related expenses that are not paid
+from the Public Offer Account, our Company agrees to advance the cost and such expenses will be reimbursed by
+the Selling Shareholders in proportion to their respective Offered Shares being offered for sale in the Offer. To
+the extent any Offer-related expenses are paid directly by a Selling Shareholder, such amounts shall be netted
+against the respective reimbursement obligations of that Selling Shareholder to our Company, so that only the net
+amount, after accounting for such direct payments, shall be payable by or to the relevant parties.
+Further, in the event that the Offer is postponed or withdrawn or abandoned for any reason or in the event the
+Offer is not successfully completed, the Offer related costs and expenses (including taxes) attributable to the Offer
+shall be borne by the Selling Shareholders in proportion to their respective Offered Shares being offered for sale
+by the each of the Selling Shareholders in the Offer as above, and it is further clarified that, in the event any
+  134
+Selling Shareholder withdraws or abandons the Offer at any stage prior to the completion of the Offer, it shall
+reimburse to our Company all costs, charges, fees and expenses incurred in connection with the Offer on a
+proportionate basis as detailed above, up to the date of such withdrawal, abandonment or termination with respect
+to such Selling Shareholder.
+The estimated Offer expenses are as follows:
+  (₹ in million)
+  Activity  Estimated  As a % of the  As a % of the
+  expenses(1)  total estimated  total Offer
+  Offer  size(1)
+  expenses(1)
+  Fees and commissions payable to the Book Running Lead  [●]  [●]  [●]
+  Managers (including any underwriting commission,
+  brokerage and selling commission)
+  Advertising and marketing expenses for the Offer  [●]  [●]  [●]
+  Fees payable to the Registrar to the Offer  [●]  [●]  [●]
+  Commission/processing fee for SCSBs, Sponsor Bank(s)  [●]  [●]  [●]
+  and Bankers to the Offer. Brokerage and selling
+  commission and bidding charges for Members of the
+  Syndicate, Registered Brokers, RTAs and CDPs(2)
+  Printing and distribution of Offer stationery  [●]  [●]  [●]
+  Other expenses including, listing fees, SEBI filing fees,  [●]  [●]  [●]
+  BSE and NSE processing fees, book building software
+  fees and other regulatory expenses
+  Fees payable to other intermediaries to the Offer,  [●]  [●]  [●]
+  including but not limited to Statutory Auditor,
+  independent chartered accountant, practicing company
+  secretary and industry data provider
+  Fee payable to legal counsels  [●]  [●]  [●]
+  Miscellaneous  [●]  [●]  [●]
+  Total estimated Offer expenses  [●]  [●]  [●]
+Note: Offer expenses include applicable taxes, where applicable. Offer expenses will be finalized on determination of Offer Price and
+incorporated at the time of filing of the Prospectus. Offer expenses are estimates and are subject to change.
+(1)
+  Amounts will be finalised and incorporated in the Prospectus on determination of Offer Price. Offer expenses are estimates and are subject
+to change. Offer expenses include goods and services tax, where applicable.
+(2)
+  Selling commission payable to the SCSBs on the portion for Retail Individual Bidders and Non-Institutional Bidders which are directly
+procured and uploaded by the SCSBs, would be as follows:
+  Portion for Retail Individual Investors*  0.30% of the Amount Allotted* (plus applicable taxes)
+  Portion for Non-Institutional Investors*  0.15% of the Amount Allotted* (plus applicable taxes)
+*Amount Allotted is the product of the number of Equity Shares of face value ₹2 each Allotted and the Offer Price. Selling commission payable
+to the SCSBs will be determined on the basis of the bidding terminal id as captured in the Bid book of BSE or NSE.
+ No additional uploading/ processing fees shall be payable by the Company and the Selling Shareholders to the SCSBs on the Bid cum
+Application Form directly procured by them.
+Processing fees payable to the SCSBs for capturing Syndicate Member/Sub-syndicate (Broker)/Sub-broker code on the ASBA Form for Non-
+Institutional Bidders and Qualified Institutional Bidders with bids above ₹ 0.50 million would be ₹ 10 plus applicable taxes, per valid
+application subject to a maximum cap of ₹ 0.50 million (plus applicable taxes). In case the total uploading charges/processing fees payable
+exceeds ₹0.50 million, then the amount payable to SCSBs would be proportionately distributed based on the number of valid applications
+such that the total uploading charges / processing fees payable does not exceed ₹0.50 million (plus applicable taxes).
+Brokerage, selling commission and processing/uploading charges on the portion for Retail Individual Bidders (using the UPI mechanism),
+and Non-Institutional Bidders which are procured by members of the Syndicate (including their sub-Syndicate Members), RTAs and CDPs or
+for using 3-in-1 type accounts- linked online trading, demat & bank account provided by some of the brokers which are members of Syndicate
+(including their sub-Syndicate Members) would be as follows:
+  Portion for Retail Individual Investors*  0.30% of the Amount Allotted* (plus applicable taxes)
+  Portion for Non-Institutional Investors*  0.15% of the Amount Allotted* (plus applicable taxes)
+* Amount Allotted is the product of the number of Equity Shares Allotted and the Offer Price.
+The Selling commission payable to the Syndicate / sub-Syndicate Members:
+  135
+For Retail Individual Bidders up to ₹ 0.20 million and Non-Institutional Bidders (from ₹ 0.20 million - ₹ 0.50 million) will be determined on
+the basis of the application form number / series, provided that the application is also bid by the respective Syndicate / sub-Syndicate Members.
+For clarification, if a Syndicate ASBA application on the application form number / series of a Syndicate / sub-Syndicate Members, is bid by
+an SCSB, the Selling Commission will be payable to the SCSB and not the Syndicate / sub-Syndicate Members.
+For Non-Institutional Bidders (above ₹ 0.50 million), Syndicate ASBA Form bearing SM Code & Sub-Syndicate Code of the application form
+submitted to SCSBs for Blocking of the Fund and uploading on the Exchanges platform by SCSBs. For clarification, if a Syndicate ASBA
+application on the application form number / series of a Syndicate / Sub-Syndicate Member, is bid by an SCSB, the Selling Commission will
+be payable to the Syndicate / Sub Syndicate members and not the SCSB.
+Uploading Charges payable to members of the Syndicate including their sub-Syndicate Members on the applications made by Retail Individual
+Bidders using 3-in-1 accounts/Syndicate ASBA mechanism and Non-Institutional Bidders which are procured by them and submitted to SCSB
+for blocking or using 3-in-1 accounts/Syndicate ASBA mechanism, would be as follows: ₹ 10 plus applicable taxes, per valid application bid
+by the Syndicate (including their sub-Syndicate Members).
+Bidding charges/ Processing Charges payable on the application made using 3-in-1 accounts will be subject to a maximum cap of ₹0.50
+million (plus applicable taxes), in case if the total Bidding charges /processing Charges exceeds ₹0.50 million (plus applicable taxes) then it
+will be paid on pro-rata basis for portion of (i) Retail Individual Investor’s (ii) Non-institutional Investors.
+The selling commission and bidding charges payable to Registered Brokers, the RTAs and CDPs will be determined on the basis of the bidding
+terminal id as captured in the Bid Book of BSE or NSE.
+Selling commission/ uploading charges payable to the Registered Brokers on the portion for Retail Individual Investors and Non-Institutional
+Investors which are directly procured by the Registered Broker and submitted to SCSB for processing, would be as follows:
+ Portion for Retail Individual Investors*  ₹10 per valid application (plus applicable taxes)
+ Portion for Non-Institutional Investors*  ₹10 p [...truncated]
+
+===== BASIS OF OFFER PRICE =====
+BASIS FOR OFFER PRICE
+  The Price Band and Offer Price will be determined by our Company in consultation with the BRLMs, on the basis
+  of assessment of market demand for the Equity Shares issued through the Book Building Process and quantitative
+  and qualitative factors as described below. The face value of the Equity Shares is ₹2 each and the Offer Price is
+  [●] times the face value at the lower end of the Price Band and [●] times the face value at the higher end of the
+  Price Band. Investors should refer to “Risk Factors”, “Our Business”, “Restated Consolidated Financial
+  Statements” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations”
+  on pages 21, 245, 322 and 405, respectively, to have an informed view before making an investment decision.
+1.  Qualitative Factors
+  Some of the qualitative factors which form the basis for computing the Offer Price are set forth below:
+1.  Leading defence technology solutions provider with pioneering proprietary technologies;
+  Our Company is one of the few companies in India with no dependence on external technology partners as it owns
+  100% of its intellectual property since Fiscal 2024, pursuant to assignment agreements dated March 11, 2024
+  through which our Company purchased intellectual property from CEAQ Singapore. The proprietary technology
+  ranges from optics to embedded software and electronics including critical subsystems for sighting systems,
+  including proprietary video engines, AI-accelerated image processing, and sub-5 µrad multi-axis gimbal
+  stabilization, as per the F&S Report. Our Company supplies and controls the technical aspects of building the core
+  components; optical designs, infrared imaging engines, video processing electronics, target tracking/classification
+  electronics, laser ranging modules stabilized gimbal platforms, software and hardware systems to control a variety
+  of peripherals.
+2.  Driving innovation in defence electronics through in-house R&D with an asset light business model;
+  We operate an asset-light business model with a focus on product design and development. Our Company is
+  integrated horizontally: core design and IP are developed in-house, while manufacturing is outsourced to EMS.
+  Our contract manufacturing model allows us to focus on our R&D capabilities.
+3.  Among the few defence electronics OEMs with a wide acceptability across the globe
+  Our Company is a global defence electronics OEM with a clientele spanning both domestic and international
+  markets. Our products have been sold globally to customers in EU, US and Israel, enabling adoption in India
+  through the global first approach, underscoring their acceptance in some of the world’s most advanced defence
+  markets as per the F&S Report. We design and supply ITAR-free strategic defence electronics, placing us among
+  the few global OEMs able to deliver advanced technologies without geopolitical export constraints. This capability
+  offers strategic leverage to countries pursuing defence autonomy and resilient supply chains and enable us to meet
+  rising demand for unrestricted systems as militaries modernise.
+4.  Diversified defence product portfolio with deployability across all domains
+  As per the F&S Report, we are a global defence electronics OEM, with a track record of design and delivery of
+  field tested defence systems, designing and developing products primarily catering to military and armed forces
+  across the globe. The products deployed by us are used across both developed and emerging markets for defence
+  technology. As per the F&S Report, developed markets like the US and Israel set the benchmark for technological
+  superiority and emerging markets like India, South East Asia and Africa are price sensitive.
+5.  Sound financials with healthy performance
+  We strive to maintain a robust financial position with emphasis on having a strong, well-capitalised consolidated
+  statement of assets and liabilities with moderate debt and sustainable profitability. We believe our financial
+  position provides us with an advantage over our competitors with access to financing which is critical to our
+  business. Our asset light business model has helped us in catering to the market demand without incurring
+  additional capex and thus having reduced working capital requirements.
+  6.  Experienced and dedicated promoters and key managerial personnel with extensive domain knowledge
+  We are led by our Promoter, Managing Director and Chief Executive Officer, Arvind Kondangi Lakshmikumar
+  who has over 21 years of experience in raising capital, running our product engineering teams globally and
+  138
+  managing government and enterprise sales at our Company. Further, our Promoter, Executive Director and Chief
+  Business and Revenue Officer, Ankit Kumar, has over 21 years of experience running our research and
+  development programs in defence, surveillance and automotive safety globally and is a domain expert in optics,
+  computer vision and machine learning automotive. Further, our Promoter, Executive Director and Chief
+  Commercial Officer, Cecilia D’Souza has over 21 years of experience in finance, accounting and management of
+  our multi-location international business and has a strong background in international accounting, mergers and
+  acquisitions, procurement and operational logistics. Our Promoters are actively involved in the critical aspects of
+  our business including engineering, operational systems, quality assurance, marketing and finance. Further, our
+  Directors also have experience in technology, finance and management and technology sectors. The commitment
+  and track record of our management team provides stability in the execution of our business plan.
+  For further details, see “Our Business – Our Strengths” on page 252.
+2.  Quantitative Factors
+  Certain information presented below relating to us is based on the Restated Consolidated Financial Statements.
+  For details, see “Restated Consolidated Financial Statements” on page 322.
+  Some of the quantitative factors which may form the basis for calculating the Offer Price are as follows:
+  (a)  Basic and Diluted Earnings Per Equity Share (“EPS”) at face value of ₹2 each:
+  As derived from the Restated Consolidated Financial Statements:
+  Financial Year/ period ended  Basic EPS# (₹)  Diluted EPS# (₹)  Weight#
+  June 30, 2026  (3.20)*  (3.20) *  -
+  March 31, 2026  9.19  8.88  3
+  March 31, 2025  13.38  12.70  2
+  March 31, 2024  62.61  13.63  1
+  Weighted Average  19.49  10.95
+  #
+  As certified by Kalyanasundaram and Associates, Chartered Accountants, our Statutory Auditor, bearing FRN 005455S, by way of the
+  certificate dated October 10, 2026.
+  *Refer note (vi) below
+  Notes:
+  i.  The face value of each Equity Share is ₹ 2.
+  ii. Basic Earnings per share is calculated by dividing Restated profit for the year/ period attributable to equity Shareholders by the number
+  of equity shares outstanding at the end of the year reduced by ESOP Trust shares.
+  iii. Diluted earnings per share is calculated by dividing Restated profit for the year/ period attributable to equity Shareholders by the
+  number of equity shares outstanding at the end of the year/ period adjusted for the effect of dilutive potential equity shares.
+  iv. Basic and Diluted Earnings per share have been adjusted for the effects of bonus issue, share split, and share buyback
+  v.  Weighted average is calculated as Aggregate of financial year-wise weighted EPS divided by the aggregate of weights i.e. (EPS x Weight)
+  for each financial year /Total of weights.
+  vi. Basic and Diluted Earnings per share for the three months ended June 30, 2026 have not been annualised
+  (b)  Price/Earning (“P/E”) ratio in relation to the Price Band of ₹ [●] to ₹ [●] per Equity Share at face
+  value of ₹2 each:
+  Particulars  P/E at the Floor Price (no. of  P/E at the Cap Price (no. of
+  times)*  times)*
+  Based on basic EPS for Fiscal 2026  [●]  [●]
+  Based on diluted EPS for Fiscal 2026  [●]  [●]
+  *
+  To be computed post finalisation of Price Band.
+  (c)  Industry Peer Group P/E ratio
+  The selected peers include Indian listed defence technologies companies with product offerings across electro-
+  optics, defence electronics and sub-systems, catering primarily to defence and aerospace applications.
+  Based on the peer group information (excluding our Company) given below in this section, the highest P/E ratio
+  is 117.74, the lowest P/E ratio is 45.70 and the average P/E ratio is 81.62.
+  Particulars  P/E Ratio#
+  Highest  117.74
+  139
+  Particulars  P/E Ratio#
+  Lowest  45.70
+  Average  81.62
+#
+  As certified by Kalyanasundaram and Associates, Chartered Accountants, our Statutory Auditor, bearing FRN 005455S, by way of the
+ certificate dated October 10, 2026.
+Notes:
+i.  The highest and lowest industry P/E shown above is based on the peer set provided below under “Comparison of accounting ratios with
+  listed industry peers”. The industry average has been calculated as the arithmetic average P/E of the peer set provided below under “-
+  Comparison of accounting ratios with listed industry peers”
+ii. P/E figures for the peers are computed based on closing market price as on October 7, 2026, divided by Diluted EPS based on the
+  financial results declared by the peers available on website of www.bseindia.com for the Financial Year ending March 31, 2026.
+(d)  Return on Net Worth (“RoNW”)
+  Financial Year/ period ended  RoNW (%)#  Weight#
+  June 30, 2026  (3.25)*  -
+  March 31, 2026  9.75  3
+  March 31, 2025  20.20  2
+  March 31, 2024  52.72  1
+  Weighted Average  20.40
+#
+  As certified by Kalyanasundaram and Associates, Chartered Accountants, our Statutory Auditor, bearing FRN 005455S, by way of the
+ certificate dated October 10, 2026.
+*Refer note (iv) below
+Notes:
+i.  Weighted average is calculated as Aggregate of financial year-wise weighted Return on Net Worth (%) divided by the aggregate of
+  weights i.e. Return on Net Worth (%) multiplied by Weight for each financial year divided by Total of weights
+ii. Return on Net Worth (%) for our Company is calculated as Net profit after tax divided by Average Net worth as at year/ period end.
+iii. Net Worth means the aggregate value of the paid-up share capital and all reserves created out of the profits and securities premium
+  account and debit or credit balance of profit and loss account and instruments entirely in the nature of equity after deducting the
+  aggregate value of the accumulated losses, deferred expenditure and miscellaneous expenditure not written off, but does not include
+  reserves created out of revaluation of assets, write-back of depreciation and amalgamation in accordance with Regulation 2(1)(hh) of
+  the SEBI ICDR Regulations. We have calculated net worth by aggregate value of equity share capital, instruments entirely equity in
+  nature, capital redemption reserve, retained earnings, securities premium, other comprehensive income (fair value gains/(loss) on equity
+  instruments), foreign currency translation reserve and shares pending issuance.
+iv. Return on Net Worth (%) for the three months ended June 30, 2026 have not been annualized
+(e)  Net Asset Value (“NAV”) per Equity Share, as adjusted for change in capital
+Particulars  Amount (₹)%
+As on June 30, 2026  94.01
+As on March 31, 2026  96.57
+After the completion of the Offer
+- At the Floor Price  [●]*
+- At the Cap Price  [●]*
+Offer Price  [●]#
+%
+  As certified by Kalyanasundaram and Associates, Chartered Accountants, our Statutory Auditor, bearing FRN 005455S, by way of the
+ certificate dated October 10, 2026.
+* To be computed post finalisation of Price Band
+# To be determined on conclusion of the Book Building Process
+Notes:
+i.  Net Worth means the aggregate value of the paid-up share capital and all reserves created out of the profits and securities premium
+  account and debit or credit balance of profit and loss account and instruments entirely in the nature of equity after deducting the
+  aggregate value of the accumulated losses, deferred expenditure and miscellaneous expenditure not written off, but does not include
+  reserves created out of revaluation of assets, write-back of depreciation and amalgamation in accordance with Regulation 2(1)(hh) of
+  the SEBI ICDR Regulations . We have calculated net worth by aggregate value of equity share capital, instruments entirely equity in
+  nature, capital redemption reserve, retained earnings, securities premium, other comprehensive income (fair value gains/(loss) on equity
+  instruments), foreign currency translation reserve and shares pending issuance
+ii. Offer Price per Equity Share will be determined on conclusion of the Book Building Process.
+iii. Net asset value per share is calculated as Net worth divided by Number of equity shares outstanding at the end of the financial year/
+  period.
+iv. Net Asset Value per Equity Share has been adjusted for the effects of bonus issue, share split, and share buyback.
+  140
+(f)  Comparison of accounting ratios with listed industry peers
+  Name of the  Standalone /  Revenue  Face  Closing  P/E  EPS  EPS  RoNW  NAV
+  Company  Consolidated  from  Value  price  (Basic)  (Diluted)  (%)  (₹ per
+  Operations  per  as on  (₹)  (₹)  share)
+  (₹ in  Equity  October
+  million)  Share  7, 2026
+  (₹)
+ Our  Consolidated  3,626.48  2.00  NA  NA  9.19  8.88  9.75  96.57
+ Company
+ Paras  Consolidated  4,765.70  5.00  1,286.95  117.74  10.93  10.93  NA  90.02
+ Defence and
+ Space
+ Technologies
+ Limited
+ Data  Standalone  9,247.70  2.00  4,231.00  87.29  48.47  48.47  17.00  310.08
+ Patterns
+ (India)
+ Limited
+ Astra  Consolidated  11,628.02  2.00  1,701.15  83.92  20.32  20.27  NA  138.46
+ Microwave
+ Products
+ Limited
+ Zen  Consolidated  6,876.90  1.00  1,580.35  73.44  21.52  21.52  NA  209.22
+ Technologies
+ Limited
+ Bharat  Consolidated  2,76,101.10  1.00  378.85  45.70  8.29  8.29  NA  32.82
+ Electronics
+ Limited
+Source: All the financial information for listed industry peers is sourced from the filings made with stock exchanges available on
+www.bseindia.com for the Financial Year ending March 31, 2026.
+Source for our Company: Based on the Restated Consolidated Financial Statements for the financial year ended March 31, 2026.
+Notes:
+i.  P/E Ratio has been computed based on the closing market price of equity shares on BSE on October 7, 2026, divided by the Diluted
+  EPS.
+ii. Return on Net Worth (%) for our Company is calculated as Net profit after tax divided by Average Net worth as at year/ period end.
+iii. Net Worth means the aggregate value of the paid-up share capital and all reserves created out of the profits and securities premium
+  account and debit or credit balance of profit and loss account and instruments entirely in the nature of equity after deducting the
+  aggregate value of the accumulated losses, deferred expenditure and miscellaneous expenditure not written off, but does not include
+  reserves created out of revaluation of assets, write-back of depreciation and amalgamation in accordance with Regulation 2(1)(hh) of
+  the SEBI ICDR Regulations. We have calculated net worth by aggregate value of equity share capital, instruments entirely equity in
+  nature, capital redemption reserve, retained earnings, securities premium, other comprehensive income (fair value gains/(loss) on equity
+  instruments), foreign currency translation reserve and shares pending issuance.
+iv. Return on Net Worth (%) for peer companies is as per their respective public company filings
+v.  NAV is computed as the closing net worth divided by Number of equity shares outstanding at the end of the financial year/ period.
+vi. Closing price for the peer represents closing market price of equity shares sourced from BSE as of October 7, 2026.
+vii. Equity Shares for our Company have been adjusted for the effects of bonus issue, share split, and share buyback
+Key Performance Indicators (“KPIs”)
+The table below sets forth the details of KPIs that our Company considers have a bearing for arriving at the
+basis for Offer Price. These KPIs have been used historically by our Company to understand and analyze
+our business performance.
+Our Company considers that the KPIs set forth below are the ones that may have a bearing for arriving at
+the basis for the Offer Price. The Bidders can refer to the below-mentioned KPIs, being a combination of
+financial and operational KPIs, to make an assessment of our Company’s performance and make an informed
+decision. The KPIs disclosed below have been approved and confirmed by a resolution of our Audit
+Committee dated October 10, 2026 and the Audit Committee has confirmed that except as disclosed in this
+Red Herring Prospectus, no KPIs have been disclosed by our Company to any investors at any point of time
+during the three years prior to the date of filing of this Red Herring Prospectus. Further, the members of our
+Audit Committee have confirmed that there are no KPIs pertaining to our Company that have been disclosed
+to any Promoter or member of Promoter Group or Directors in their capacity as Shareholders at any point of
+time during the three years prior to the date of filing of this Red Herring Prospectus. The KPIs disclosed
+herein have been certified by Kalyanasundaram and Associates, Chartered Accountants, our Statutory
+Auditor, bearing FRN 005455S, by way of their certificate dated October 10, 2026, which certificate
+  141
+shall be included as part of the material documents for inspection and shall be accessible on the website of
+our Company at https://tonboimaging.com/main/material-documents/ as disclosed in “Material Contracts
+and Documents for Inspection – Material Documents” on page 523. Further, the Chief Financial Officer has
+certified pursuant to a certificate dated October 10, 2026, that the KPIs disclosed below, comprising the GAAP
+financial measures, Non-GAAP financial measures and operational measures. The list of our KPIs along with
+brief explanation of the relevance of the KPI for our business operations are set forth below.
+Our Company confirms that it shall continue to disclose all the KPIs included in this section on a periodic basis,
+at least once in a year (or any lesser period as determined by our Board of our Company) until one year after the
+date of listing of the Equity Shares on the Stock Exchanges or for such other duration as may be required under
+the SEBI ICDR Regulations. The criteria for disclosing KPIs until complete utilisation of the proceeds of the
+Offer is not applicable given that the Offer comprises only of offer for sale.
+Description on the historic use of the KPIs by our Company to analyse, track or monitor the operational
+and/or financial performance of our Company
+In evaluating our business, we consider and use certain KPIs, as presented above, as a supplemental measure to
+review and assess our financial and operating performance. The presentation of these KPIs is not intended to be
+considered in isolation or as a substitute for the Restated Consolidated Financial Statements. Some of these KPIs
+are not defined under Ind AS and are not presented in accordance with Ind AS. These KPIs have limitations as
+analytical tools. Further, these KPIs may differ from the similar information used by other companies, including
+peer companies, and hence their comparability may be limited. Therefore, these KPIs should not be considered in
+isolation or construed as an alternative to Ind AS financial statements or as an indicator of our operating
+performance, liquidity, profitability or results of operation. Although these KPIs are not a measure of performance
+calculated in accordance with applicable accounting standards, our Company’s management believes that it
+provides an additional tool for investors to use in evaluating our operating results and trends and in comparing
+our financial results with other companies in our industry.
+Set out below is the explanation of the KPIs:
+  Key performance Indicator  Explanation
+  (“KPI”)
+ Revenue from Operations  Income earned from the Company’s core business activities, excluding other
+  income
+ Revenue growth  Year-on-year percentage increase in revenue from operations
+ Gross Profit  Gross Profit is the profit after deduction of direct cost of goods sold from
+  Revenues.
+ Gross Profit Margin  Gross Profit Margin is an indicator of the profitability of our products and is a
+  measure of how we price our products relative to costs of manufacturing.
+ EBITDA  EBITDA is the operational profit after meeting direct cost of goods sold,
+  employee costs and other operating expenses but before financing costs and
+  depreciation & amortization, excluding other income
+ EBITDA Margin  EBITDA margin is an indicator of the operational profitability of our business.
+ PAT  Net profit earned after deducting all expenses and taxes
+ PAT Margin  PAT Margin is an indicator of the overall profitability of the business and is a
+  function of scale, operational efficiency and financial efficiency.
+ ROCE %  ROCE measures the profits generated from capital employed and is a measure of
+  capital efficiency (whether debt or equity)
+ ROE %  ROE measures the profits attributable to shareholders
+ Net Tangible Fixed Asset Turnover  Net tangible fixed asset turnover is a measure of capital intensity of the business.
+ (x)
+ Working Capital Days  Measure of working capital used in the business such as inventory and trade
+  receivables net of trade payables.
+ Export Share % in Revenue  Revenue generated from export as a percentage of total revenue from operations
+ Revenue Split by Products  Revenue from Operations is broken down into platform, tactical and other product
+ Categories  types
+ (Tactical, Platforms and Others)  1) Tactical Systems – Our tactical systems are electro-optical sights offering
+  dismounted soldiers’ observation and targeting capabilities.
+  2) Our platform systems are designed to be integrated into surveillance,
+  reconnaissance and targeting platforms.
+  3) Others include OEM component sales
+ Confirmed Order Book  Represents the total value of confirmed customer orders yet to be fulfilled
+  142
+Orderbook Split – By Region  Represents the total value of confirmed customer orders yet to be fulfilled broken
+  down into domestic and export
+Orderbook Split – By Product  Represents the total value of confirmed customer orders yet to be fulfilled broken
+Categories (Tactical, Platforms and  down into platform, tactical and other product types
+Others)
+  143
+Details of our KPIs as of and for the three months ended June 30, 2026 and the Financial Years ended March 31, 2026, March 31, 2025, and March 31, 2024, are set
+out below:
+  Sr. No.  Key Performance Indicators (KPIs)  Units  For the period ended For the period ended  For the period ended  For the period ended
+  June 30, 2026#  March 31, 2026#  March 31, 2025#  March 31, 2024#
+  Financial Metrics
+  1  Revenue from Operations(1)  ₹ million  360.08  3,626.48  4,690.80  4,281.89
+  2  Revenue Growth(2)  %  NA  (22.69)  9.55  342.22
+  3  Gross Profit(3)  ₹ million  135.78  1,851.26  2,644.69  2,082.60
+  4  Gross Profit Margin (4)  %  37.71%  51.05  56.38  48.64
+  5  EBITDA(5)  ₹ million  (130.37)  1,046.18  1,390.64  1,123.24
+  6  EBITDA Margin(6)  %  (36.21%)  28.85  29.65  26.23
+  7  PAT(7)  ₹ million  (177.37)  508.80  727.57  685.43
+  8  PAT Margin(8)  %  (47.52%)  13.75  15.34  15.87
+  9  ROCE %(9)  %  (4.31%)*  14.54  27.41  67.76
+  10  ROE %(10)  %  (3.25%)*  9.75  20.20  52.72
+  11  Net Tangible Fixed Asset Turnover (x)(11)  Times  1.48*  14.62  19.16  89.45
+  12  Working Capital Days(12)  No of Days  Refer note 1#  517  280  152
+  Operational measures
+  13  Export Share % in Revenue(13)  %  0.25%  5.57  65.52  48.61
+  14  Revenue Split (Tactical) (14)  ₹ million  214.43  2,116.75  3,622.96  3,592.69
+  15  Revenue Split (Platform) (15)  ₹ million  141.20  1,448.08  1,010.53  127.00
+  16  Revenue Split (Others) (16)  ₹ million  -  11.95  10.33  110.39
+  17  Confirmed Order Book(17)  ₹ million  3,142.40  2,790.16  2,186.08  5,631.44
+  18  Orderbook Split (Domestic) (18)  ₹ million  2,318.72  1,971.09  2,127.05  2,595.91
+  19  Orderbook Split (International) (19)  ₹ million  823.68  819.07  59.03  3,035.53
+  20  Orderbook Split (Tactical) (20)  ₹ million  1,154.30  882.74  698.17  3,367.63
+  21  Orderbook Split (Platform) (21)  ₹ million  1,983.48  1,907.42  1,487.76  2,263.81
+  22  Orderbook Split (Others) (22)  ₹ million  4.62  -  0.15  -
+#
+ As certified by Kalyanasundaram and Associates, Chartered Accountants, our Statutory Auditor, bearing FRN 005455S, by way of the certificate dated October 10, 2026.
+* Not Annualized for the period ended June 30, 2026.
+Note1#: The working capital days for period ended June 30, 2026 is 1,454 days and has been calculated basis 91 days for the said period. The working capital days for the three months ended June 30, 2026 are not
+directly comparable with those presen [...truncated]
+
+===== OUR BUSINESS =====
+OUR BUSINESS
+Some of the information in this section, including information with respect to our business plans and strategies,
+contains forward-looking statements that involve risks and uncertainties. You should read “Forward-Looking
+Statements” on page 20 for a discussion of the risks and uncertainties related to those statements and “Risk
+Factors”, “Restated Consolidated Financial Statements” and “Management’s Discussion and Analysis of
+Financial Condition and Results of Operations” on pages 21, 322 and 405, respectively, for a discussion of
+certain factors that may affect our business, financial condition, results of operations or cash flows. Our actual
+results may differ materially from those expressed in or implied by these forward-looking statements. Also see,
+“Definitions and Abbreviations” on page 1 for certain terms used in this section.
+We have included various operational and financial performance indicators in this Red Herring Prospectus,
+certain of which may not be derived from our Restated Consolidated Financial Statements. The manner in which
+such operational and financial performance indicators are calculated and presented, and the assumptions and
+estimates used in such calculations, may vary from that used by other companies in India and other jurisdictions.
+Investors should consult their own advisors in making an investment decision and evaluate such information in
+the context of the Restated Consolidated Financial Statements and other information relating to our business and
+operations included in this Red Herring Prospectus.
+Our Company’s financial year commences on April 1 and ends on March 31 of the subsequent year, and
+references to a particular fiscal year are to the 12 months ended March 31 of that particular year. Unless
+otherwise indicated or the context otherwise requires, the financial information for the three months ended June
+30, 2026 and Fiscals 2026, 2025 and 2024, included herein is based on or derived from our Restated Consolidated
+Financial Statements included in this Red Herring Prospectus. Our Company did not have any subsidiaries prior
+to Fiscal 2024. Accordingly, the restated financial information for Fiscal 2024 is presented on a standalone
+basis. Our wholly owned subsidiaries, Tonbo Systems Pty Ltd and Tonbo LLC, were incorporated on July 10,
+2024 and September 3, 2024, respectively, in Fiscal 2025. One of our Directors, Arvind Kondangi Lakshmikumar,
+as a nominee of our Company, subscribed to 100% of Tonbo Systems Pty Ltd’s share capital. Accordingly, the
+restated financial information for Fiscal 2025 were consolidated and derived from special-purpose consolidated
+financial statements. For further information, see “Restated Consolidated Financial Statements” on page 322.
+The Restated Consolidated Financial Statements are based on our audited consolidated financial statements and
+is restated in accordance with the Companies Act, 2013, and the SEBI ICDR Regulations. Our audited
+consolidated financial statements are prepared in accordance with Indian Accounting Standards, which differs
+in certain material respects with IFRS and U.S. GAAP. For details, see “Risk Factors – Significant differences
+exist between Ind AS and other accounting principles, such as U.S. GAAP and IFRS, which investors may be
+more familiar with and may consider material to their assessment of our financial condition” on page 76.
+Unless otherwise stated or the context otherwise requires, references in this section to “we”, “us”, or “our” are
+to Tonbo Imaging India Limited and our Subsidiaries on a consolidated basis while “our Company” or “the
+Company” are to Tonbo Imaging India Limited on a standalone basis.
+Unless otherwise indicated, industry and market data used in this section has been derived from the industry
+report titled “Assessment of Global and Indian Defence Electronics and Technology Industry” dated October
+2026 (the “F&S Report”) prepared and issued by Frost and Sullivan (India) Private Limited, appointed and
+exclusively commissioned and paid for by us to enable investors to understand the industry in which we operate
+in connection with the Offer. The data included herein includes excerpts from the F&S Report and may have been
+re-ordered by us for the purposes of presentation. Unless otherwise indicated, financial, operational, industry
+and other related information derived from the F&S Report and included herein with respect to any particular
+calendar year/ Fiscal refers to such information for the relevant calendar year/ Fiscal. Further, the F&S Report
+was prepared on the basis of information as of specific dates and opinions in the F&S Report may be based on
+estimates, projections, forecasts and assumptions that may be as of such dates. F&S Report has prepared this
+study in an independent and objective manner, and it has taken all reasonable care to ensure its accuracy and
+has further advised that it has taken due care and caution in preparing the F&S Report based on the information
+obtained by it from sources which it considers reliable. A copy of the F&S Report is available on the website of
+our Company at https://tonboimaging.com/main/industry-report/. For further information, see “Risk Factors –
+Certain sections of this Red Herring Prospectus disclose information from the industry report titled
+“Assessment of Global and Indian Defence Electronics and Technology Industry” which is a paid report and
+commissioned and paid for by us exclusively in connection with the Offer and any reliance on such information
+for making an investment decision in the Offer is subject to inherent risks.” on page 69. Also see, “Certain
+Conventions, Currency of Presentation, Use of Financial Information and Market Data –Industry and Market
+Data” and “Industry Overview” on pages 18 and 160, respectively.
+  245
+Overview
+We are a global defence electronics original equipment manufacturer (“OEM”). We design, develop and
+manufacture sensing, processing, communication and guidance systems for surveillance, reconnaissance,
+targeting, and control. We have developed a diversified product portfolio including thermal imaging cores,
+weapon sights, hand-held thermal imaging binoculars, targeting systems, missile seekers, fire control systems,
+missile guidance systems amongst others to enable autonomy on the battlefield.
+The image below depicts the various functions of our product portfolio:
+Our expertise spans design capabilities across electro optics and infrared systems (“EO/IR”) and embedded vision
+systems serving both – Indian and global companies. As per the F&S Report, over the period of April 2024 to
+March 2026, our Company is the largest manufacturer, in terms of sales value, of thermal imaging systems to
+government and defence agencies in India. In addition, our Company’s market share of thermal imaging exports
+from India was 94% in terms of units, positioning it as the largest exporter of thermal imaging systems from India
+by units shipped between FY24 and FY26. For further details, see “Industry Overview – Tonbo Imaging’s
+Position in the Ecosystem” on page 231.
+With over 28,000 systems deployed across 24 countries, as of June 30, 2026, our Company is a recognized OEM
+providing a diverse suite of field-proven electro-optic products free from export restrictions under International
+Traffic in Arms Regulations (“ITAR”). ITAR is a U.S. export control framework governing the sale, transfer, and
+sharing of defence related technology, data, and services. Our EO/IR portfolio is free from ITAR, enabling it to
+serve non-aligned and export sensitive markets more flexibly, as we design and develop our products within India,
+making us one of the few global OEMs capable of supplying cutting-edge technologies without geopolitical export
+limitations.
+As per the F&S Report, our Company is one of the few companies in India with no dependence on external
+technology partners as we own 100% of our intellectual property since Fiscal 2024, pursuant to assignment
+agreements dated March 11, 2024 through which our Company purchased intellectual property from CEAQ
+Singapore. The proprietary technology ranges from optics to embedded software and electronics. For further
+details, see “Industry Overview – Strategic Comparison” on page 237 and for details with respect to the
+intellectual property assigned/owned, please see “-Intellectual Property Rights” on page 277. The Government
+of India has introduced numerous policies under the ‘Make in India’ initiative and the ‘Atmanirbhar’ vision,
+introducing reforms to promote the indigenous design, development and manufacturing of defence equipment in
+the country, thereby reducing reliance on defence imports. Introduced in 2020, India’s Defence Acquisition
+  246
+Procedure 2020 (“DAP 2020”), “Indigenously-Designed, Developed and Manufactured” (“IDDM”) is a part of
+India’s ‘Make in India’ initiative for defence. In order to be an eligible IDDM vendor under the DAP 2020, our
+Company is required to ensure that the control of the Company is with Indian citizens and at least half of the ex-
+factory cost of the products needs to originate from Indian design, development, production or value-addition, and
+limits the permissible foreign or non-indigenous content in the final product to a maximum of 50% of the overall
+contract value. We are a supplier under IDDM.
+We were incorporated in 2003 as a subsidiary of a research company initially providing R&D and technology
+development services focused on designing intellectual property. In 2012, post the buyout of the erstwhile
+subsidiary of the research company by our Promoters, we transitioned into a defense-focused product
+manufacturing company, developing and supplying advanced electro-optic and electronic systems. With over
+28,000 systems deployed across 24 countries as of June 30, 2026, our Company offers a diverse suite of field-
+proven electro-optical solutions. Field-proven denotes systems that have been operationally validated in live
+combat and security environments, demonstrating reliability, durability, and mission effectiveness under real-
+world conditions. For further details, see “Industry Overview – Tonbo Imaging’s Position in the Ecosystem” on
+page 231.
+Our investors include:
+  247
+Note:Through certain secondary transactions by CEAQ India and CEAQ Singapore pursuant to SPAs dated September 25, 2026, Amansa
+Investments Ltd, Samruddhi Investments, 360 ONE Multi-Stage Defence and Space Fund, Valuequest Founders Conviction LVF, SBI
+Emergent India Fund, SBI Optimal Equity Fund, HDFC Life Insurance Company Limited, Akash Manek Bhanshali, Susquehanna Asia
+Technology Pty Limited and Malabar Capital have also become investors in our Company. For further details, see “Capital Structure” on
+page 106.
+Our products are divided into tactical systems and platform systems. The table below sets forth the revenue from
+operations generated from each product vertical in the three months ended June 30, 2026 and Fiscals 2026, 2025
+and 2024, respectively:
+  Products  Three months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  June 30, 2026
+  Amount  As a  Amount  As a  Amount  As a  Amount  As a
+  (₹ million) percentage  (₹  percentage  (₹  percentage  (₹  percentage
+  of revenue  million)  of revenue  million)  of revenue  million)  of revenue
+  from  from  from  from
+  operations  operations  operations  operations
+  (%)  (%)  (%)  (%)
+ Tactical  214.43  59.55  2,116.75  58.37  3,622.96  77.24  3,592.69  83.90
+ systems
+ Platform  141.20  39.21  1,448.08  39.93  1,010.53  21.54  127.00  2.97
+ systems
+ Others*  Nil  NA  11.95  0.33  10.33  0.22  110.39  2.58
+ Total sale  355.63  98.76  3,576.78  98.63  4,643.82  99.00  3,830.08  89.45
+ of products
+ and
+ solutions
+ Other  4.45  1.24
+ Operating  49.70  1.37  46.98  1.00  451.81  10.55
+ Revenue$
+ Revenue  360.08  100.00  3,626.48  100.00  4,690.80  100.00  4,281.89  100.00
+ from
+ operations#
+Note: We are yet to book revenue for our directed energy systems which are currently in the development stage.
+*Comprise certain OEM component sales.
+# Our Revenue from operations is a sum of total sale of products and solutions and other operating revenue.
+$
+  Other Operating Revenue includes revenue from other ancillary services such as technical / post-sales support on products, component sales
+and foreign exchange gains.
+Our portfolio of products span the electromagnetic spectrum – visible imaging based on what the human eye can
+see, to long wave infrared and multi-sensor imaging which are based on heat signatures of objects emitting infrared
+radiation. Our product portfolio is put forth below:
+  248
+We are seeing an evolution of our business from being focussed on tactical systems and platform subsystems to
+offering integrated autonomous platform systems. These platform systems are solutions that bring together
+hardware and software components of multiple subsystems made by us into an integrated platform for battlefield
+deployment.
+Our Company emphasizes miniaturisation, such as smallest form factor thermal weapon sights, scalable, modular
+payloads adaptable for remote weapons stations, loitering munitions, intelligence, surveillance, and
+reconnaissance (“ISR”) balloons and soldier - wearable systems. Our products are deployed in programs ranging
+from remote weapon stations (“RWS”) and missile seekers to situational awareness systems, optical
+reconnaissance payloads, and driver vision enhancement systems for armoured vehicles.
+In the three months ended June 30, 2026 and Fiscals 2026, 2025 and 2024, in addition to supply within India, we
+supplied our products to overseas customers in countries including Armenia, Romania, Slovenia, USA, Morocco,
+South Korea, UAE, Philippines, Singapore, North Macedonia, Australia and Taiwan. For further details, see
+“Industry Overview – Tonbo Imaging’s Position in the Ecosystem” on page 231.
+The table below sets our revenue from exports in the three months ended June 30, 2026 and Fiscals 2026, 2025
+and 2024, respectively:
+  249
+ Products  Three months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  June 30, 2026
+  Amount  As a  Amount  As a  Amount  As a  Amount  As a
+  (₹  percentage  (₹  percentage  (₹  percentage  (₹ million)  percentage
+  million)  of revenue  million)  of revenue  million)  of revenue  of revenue
+  from  from  from  from
+  operations  operations  operations  operations
+  (%)  (%)  (%)  (%)
+ Revenue  0.92  0.25  202.13  5.57  3,073.38  65.52  2,081.46  48.61
+ from
+ exports
+Our customers include global militaries, law enforcement and homeland security agencies and other global
+defence OEMs. As of June 30, 2026, we have supplied to 24 countries including India, Armenia, Romania,
+Slovenia, USA, Morocco, South Korea, UAE, Philippines, Singapore, North Macedonia, Australia and Taiwan.
+The map below sets forth our geographical footprint across the world as of June 30, 2026:
+As of June 30, 2026, we had an order book of ₹ 3,142.40 million. The table below sets forth the breakdown of our
+order book from our domestic and overseas customers as of June 30, 2026:
+ Particulars  Number of orders*  Value
+  (₹ million)
+ Domestic customers  30  2,318.72
+ Overseas customers  6  823.68
+ Total  36  3,142.40
+* Comprises only firm orders, which represent orders that have been contractually confirmed by customers, formally accepted by the
+Company, and are supported by binding documentation such as executed contracts or purchase orders.
+From July 1, 2026 to September 30, 2026, we have received orders aggregating to ₹ 1,181.52 million.
+The table below sets forth the revenue bifurcation from government and private customers in three months ended
+June 30, 2026 and Fiscal 2026, 2025 and 2024, respectively:
+ Customer  Three months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+ Groups  June 30, 2026
+  Amount  As  a  Amount  As  a  Amount  As  a  Amount  As  a
+  (₹  percenta  (₹  percenta  (₹  percenta  (₹  percenta
+  million)  ge  of  million)  ge  of  million)  ge  of  million)  ge  of
+  Revenue  Revenue  Revenue  Revenue
+  from  from  from  from
+  operatio  operatio  operatio  operatio
+  ns (%)  ns (%)  ns (%)  ns (%)
+ Private - System  43.11  11.97  874.12  24.10  451.79  9.63  307.57  7.18
+ Integrators*
+ Indian  312.52  86.79  2,581.52  71.19  1,515.10  32.30  1,633.70  38.15
+ Government
+  250
+ Customer  Three months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+ Groups  June 30, 2026
+  Amount  As  a  Amount  As  a  Amount  As  a  Amount  As  a
+  (₹  percenta  (₹  percenta  (₹  percenta  (₹  percenta
+  million)  ge  of  million)  ge  of  million)  ge  of  million)  ge  of
+  Revenue  Revenue  Revenue  Revenue
+  from  from  from  from
+  operatio  operatio  operatio  operatio
+  ns (%)  ns (%)  ns (%)  ns (%)
+ Foreign  Nil  NA  121.14  3.34  2,676.93  57.07  1,888.81  44.12
+ Government
+ Total sale of  355.63  98.76  3,576.78  98.63  4,643.82  99.00  3,830.08  89.45
+ product  and
+ solutions
+ Other  4.45  1.24  49.70  1.37  46.98  1.00  451.81  10.55
+ Operating
+ Revenue
+ Total revenue  360.08  100.00  3,626.48  100.00  4,690.80  100.00  4,281.89  100.00
+ from operations
+*Includes both Indian and foreign system integrators.
+As part of our efforts towards R&D, we have set up an R&D centre at Bengaluru, Karnataka where we have
+employed 130 engineers as of June 30, 2026, to undertake research, develop and experiment with new designs,
+technologies and equipment. Key technologies developed through our R&D efforts include, inter alia, micro-
+scanned optics, scene-based non-uniformity correction, thermal stereo vision systems for depth perception in low-
+light conditions, 3D imaging using single-detector thermal imagers, control systems for inertial stabilization and
+high accuracy pointing systems, fast steering mirror assemblies for dynamic beam alignment etc. Our R&D efforts
+also include use of alternative material such as polymers to reduce dependence on supply constraints in the defence
+sector as well as reducing costs to levels where commercial/consumer applications can be developed. We have
+ownership of a portfolio of intellectual property, which includes intellectual property solutions in relation to, inter
+alia, infrared imaging, night vision, computer vision and deep learning, precision stabilisation, autonomous fire
+control, directed energy, optical communications, high-altitude surveillance and missile seekers.
+Our Company operates an asset light business model through horizontal integration: core design and intellectual
+property (both assigned to us and developed indigenously) (“IP”), while manufacturing is outsourced to certified
+electronics manufacturing services (“EMS”) partners, including, Kaynes Technology India Limited and Avalon
+Technology and Services Private Limited. We prototype our pilot engineering units in our R&D centre, then scale
+production through EMS partners under non-exclusive contract manufacturing arrangements, issuing purchase
+orders that set out the required product specifications. Our R&D centre is ISO certified; it has the ISO 9001:2015
+(quality management systems), ISO 14001:2015 (environmental management system) and ISO/IEC 27001:2022
+(information security management system) and ISO 28000:2022 (security and resilience-security management
+systems requirements) for design, development, manufacture and servicing of electro optical systems and imaging
+cores in the areas of infrared imaging for use in defence, commercial, security and industrial applications. Our
+asset light business model minimises capital expenditure, enables scalable production, and keeps us lean and
+efficient, allowing us to focus on R&D.
+We have received several awards including the ‘Excellence in Tech Export Promotion - Medium Enterprises’
+award by CNBC, ‘Young Turks Startup of the Year’ award at the CNBC-TV 18 India Business Leader Awards
+and ‘Marico Innovation Foundation’ award in the business category for ‘India’s Best Innovations’. Further, our
+operations comply with international standards for quality management system, environmental management
+system, information security management system and security and resilience-security management systems
+requirements for design, development, manufacture and servicing of electro optical systems and imaging cores in
+the areas of infrared imaging for use in defence, commercial, security and industrial applications.
+Our Company was founded by technologists with prior experience in the U.S. Department of Defense and Sarnoff
+Corporation. Over the last 13 years, our Company has built a 339 member team including engineers with deep
+expertise in infrared imaging, optics, lasers, sensor fusion, and machine learning. The Promoters have worked
+together for over 21 years, overseeing multi-year global defence programs and pioneering next-generation military
+technologies. Our Promoter, Managing Director and Chief Executive Officer, Arvind Kondangi Lakshmikumar
+has over 21 years of experience in raising capital, running our product engineering teams globally and managing
+government and enterprise sales at our Company. Further, our Promoter, Executive Director and Chief Business
+and Revenue Officer, Ankit Kumar, has over 21 years of experience running our research and development
+  251
+programs in defence, surveillance and automotive safety globally and is a domain expert in optics, computer vision
+and machine learning automotive. Further, our Promoter, Executive Director and Chief Commercial Officer,
+Cecilia D’Souza has over 21 years of experience in finance, accounting and management of our multi-location
+international business and has a strong background in international accounting, mergers and acquisitions,
+procurement and operational logistics. We believe that the combined experience of our Promoters, our dynamic
+management team and our skilled employees position us well to capitalize on future growth opportunities.
+The table below sets forth certain financial information for the three months ended June 30, 2026 and Fiscals
+2026, 2025 and [...truncated]
+
+===== OUR PROMOTERS AND PROMOTER GROUP =====
+OUR PROMOTERS AND PROMOTER GROUP
+The Promoters of our Company are as follows:
+(a)  Ankit Kumar;
+(b)  Arvind Kondangi Lakshmikumar; and
+(c)  Cecilia D’Souza.
+As on the date of this Red Herring Prospectus, our Promoters hold in aggregate 9,982,600 Equity Shares of face
+value ₹2 each, which constitutes 17.43% of the issued, subscribed and paid-up Equity Share capital of our
+Company. For details on shareholding of our Promoters in our Company, see “Capital Structure – History of the
+share capital - Build-up of the Promoters’ shareholding in our Company” on page 114.
+Details of our Promoters
+Ankit Kumar
+  Ankit Kumar, born on July 13, 1982, aged 44 years, is the Executive
+  Director and Chief Business Revenue Officer of our Company. His
+  permanent residence is at #124, Concorde Cuppertino, Neeladri Road,
+  Opp Wipro Gate No.16, Electronic City Phase 1, Bangalore South,
+  Electronics City, Bengaluru 560 100, Karnataka, India.
+  For Ankit Kumar’s complete profile, along with details of his
+  educational qualifications, experience in the business, special
+  achievements, directorships in other entities, business and financial
+  activities, see “Our Management – Brief profiles of our Directors” on
+  page 302. For details of other ventures, see “Entities forming part of
+  the Promoter Group” and “Our Management” on pages 320 and 300.
+  His PAN is AQCPK0124H.
+Arvind Kondangi Lakshmikumar
+  Arvind Kondangi Lakshmikumar, born on July 12, 1976, aged 50 years,
+  is the Managing Director and Chief Executive Officer of our Company.
+  His permanent residence is at 235, 18th Main 6th Block, Koramangala
+  Club, Koramangala, Bangalore South, Bengaluru 560 095, Karnataka,
+  India.
+  For Arvind Kondangi Lakshmikumar’s complete profile, along with
+  details of his educational qualifications, special achievements,
+  experience in the business, directorships in other entities, business and
+  financial activities, see “Our Management – Brief profiles of our
+  Directors” on page 302. For details of other ventures, see “Entities
+  forming part of the Promoter Group” and “Our Management” on
+  pages 320 and 300 respectively.
+  His PAN is AAJPA7701R.
+  318
+Cecilia D’Souza
+  Cecilia D’Souza, born on July 30, 1974, aged 52 years, is the Executive
+  Director and Chief Commercial Officer of our Company. Her
+  permanent residence is #48 Marcelle Ville, Netaji Road, Near Coles
+  Park, Bangalore North, Bengaluru 560 005, Karnataka, India.
+  For Cecilia D’Souza’s complete profile, along with details of her
+  educational qualifications, experience in the business, special
+  achievements, directorships in other entities, business and financial
+  activities, see “Our Management – Brief profiles of our Directors” on
+  page 302. For details of other ventures, see “Entities forming part of
+  the Promoter Group” and “Our Management” on pages 320 and 300
+  respectively.
+  Her PAN is AEQPD5167D.
+Our Company confirms that the permanent account number, bank account number(s), Aadhaar card number,
+driving license number and passport number of each of our Promoters have been submitted to the Stock Exchanges
+at the time of filing the Draft Red Herring Prospectus.
+Details of change in control of our Company
+There has been no change in control in our Company in the five years preceding the date of this Red Herring
+Prospectus. Further, pursuant to the resolution of our Board at their meeting dated September 29, 2025, Ankit
+Kumar, Arvind Kondangi Lakshmikumar, and Cecilia D’Souza have been identified as the Promoters of our
+Company. We are a supplier under “Indigenously-Designed, Developed and Manufactured” (“IDDM”) under
+India’s Defence Acquisition Procedure 2020 (“DAP 2020”). IDDM is a part of India’s ‘Make in India’ initiative
+for defence. In order to be an eligible IDDM vendor under the DAP 2020, our Company is required to ensure that
+the control of the Company is with Indian citizens and it must comply with the conditions that the final product
+be indigenously designed, developed and manufactured with a minimum of 50% indigenous content on cost basis
+of the base contract price i.e. total contract price less taxes and duties.
+Interests of Promoters
+Our Promoters are interested in our Company to the extent (i) that they have promoted our Company; (ii) of their
+shareholding in our Company, and any dividend declared thereon; and (iii) directorships and positions that they
+hold or may hold in our Company, Subsidiaries and Group Companies and to the extent of remuneration or
+reimbursement of expenses payable to them, if any, in this regard.
+For further details, see “Capital Structure – Notes to capital structure – History of buildup of the Promoter’s
+shareholding in our Company” and “Our Management – Interest of Directors” on pages 114 and 306
+respectively.
+Except as set out in “Our Management – Interest of Directors - Interest in land and property” on page 306, our
+Promoters have no interest in any property acquired by our Company during the three years preceding the date of
+this Red Herring Prospectus, or property proposed to be acquired by our Company.
+As on the date of this Red Herring Prospectus, our Promoters do not have any interest in any transaction by our
+Company in acquisition of land, construction of building or supply of machinery, etc.
+Further, no sum has been paid or agreed to be paid to any of our Promoters or to any firm or company in which
+any of our Promoters are interested as a member, in cash or shares or otherwise by any person either to induce
+any of our Promoters to become, or qualify them as a director, or otherwise for services rendered by any our
+Promoters or by such firm or company in connection with the promotion or formation of our Company.
+Payments or benefits to our Promoters or members of our Promoter Group
+Except in the ordinary course of business, no amount or benefit has been paid or given to our Promoters or
+members of our Promoter Group during the two years preceding the filing of this Red Herring Prospectus nor is
+there any intention to pay or give any amount or benefit to our Promoters or members of our Promoter Group.
+  319
+Material guarantees given by our Promoters to third parties with respect to the Equity Shares
+Our Promoters have not given any material guarantee to any third party with respect to the Equity Shares of our
+Company, as on the date of this Red Herring Prospectus.
+Companies or firms with which our Promoter have disassociated in the last three years
+  Name of  Name of the company or  Reasons and  Terms of  Date of
+  Promoter  firm from which the  circumstances  disassociation  disassociation
+  Promoter has disassociated
+  Ankit Kumar  CEAQ Singapore  Divestment of stake  Not applicable November 20, 2025
+  CEAQ India  Cessation of directorship  Not applicable November 6, 2025
+ Arvind Kondangi  CEAQ Singapore  Divestment of stake and  Not applicable December 4, 2025
+  Lakshmikumar  cessation of directorship
+  CEAQ India  Cessation of directorship  Not applicable November 6, 2025
+  Cecilia D’Souza  CEAQ Singapore  Divestment of stake  Not applicable November 20, 2025
+  CEAQ India  Cessation of directorship  Not applicable December 17, 2025
+Promoter Group
+Natural persons forming part of our Promoter Group
+The natural persons who are part of the Promoter Group (due to their relationship with our Promoter), are as
+follows:
+  Name of Promoter  Name of relative  Relationship
+  Ankit Kumar  Ashwani Kumar  Father
+  Suman Arora  Mother
+  Nancy Chakravarty  Spouse
+  Kanishk Kumar  Brother
+  Meenal Kumar  Sister
+  Kian Kumar  Son
+  Jagdish Kumar  Spouse’s father
+  Shashi Bala  Spouse’s mother
+  Himanshu  Spouse’s brother
+  Mansi Chakravarty  Spouse’s sister
+  Arvind Kondangi  Kondangi Srinivasan Lakshmikumar  Father
+  Lakshmikumar  Priya Narasimhan  Spouse
+  Dhruv Arvind  Son
+  Maya Arvind  Daughter
+  Jaya Narasimhan  Spouse’s mother
+  Mukund Narasimhan  Spouse’s brother
+  Cecilia D’Souza  Natalia D’Souza  Mother
+  Sunil D’Souza  Brother
+  Cynthia Goveas  Sister [...truncated]
+
+===== RISK FACTORS =====
+SECTION II – RISK FACTORS
+An investment in our Equity Shares involves a high degree of risk. You should carefully consider all the
+information in this Red Herring Prospectus, including the risks and uncertainties described below before making
+an investment in our Equity Shares.
+We have described the risks and uncertainties that we believe are material, but these risks and uncertainties may
+not be the only risks relevant to us, our Equity Shares, or the industry in which we currently operate or propose
+to operate. Unless specified or quantified in the relevant risk factors below, we are not in a position to quantify
+the financial or other implications of any of the risks mentioned in this section. If any or a combination of the
+following risks actually occur, or if any of the risks that are currently not known or deemed to be not relevant or
+material now actually occur or become material in the future, our business, cash flows, prospects, financial
+condition and results of operations could suffer, the trading price of our Equity Shares could decline, and you
+may lose all or part of your investment. In order to obtain an understanding of our Company and our business,
+prospective investors should read this section in conjunction with “Our Business”, “Industry Overview”, “Key
+Regulations and Policies in India”, “Restated Consolidated Financial Statements” and “Management’s
+Discussion and Analysis of Financial Condition and Results of Operations” on pages 245, 160, 282, 322 and
+405, respectively, as well as other financial information included elsewhere in this Red Herring Prospectus. In
+making an investment decision, you must rely on your own examination of our Company and the terms of the
+Offer, including the merits and risks involved, and you should consult your tax, financial and legal advisors about
+the particular consequences of investing in the Offer. Prospective investors should pay particular attention to the
+fact that our Company is incorporated under the laws of India and is subject to a legal and regulatory environment
+which may differ in certain respects from that of other countries.
+This Red Herring Prospectus also contains forward-looking statements that involve risks, assumptions, estimates
+and uncertainties. Our actual results could differ materially from those anticipated in these forward-looking
+statements as a result of certain factors, including but not limited to the considerations described below and
+elsewhere in this Red Herring Prospectus.
+Our fiscal year ends on March 31 of each year, and references to a particular Fiscal are to the 12 months ended
+March 31 of that year. Unless otherwise indicated, or if the context requires otherwise, the financial information
+included herein is based on our Restated Consolidated Financial Statements for the three months ended June 30,
+2026 and Fiscals 2026, 2025 and 2024 included in this Red Herring Prospectus. Our Company did not have any
+subsidiaries prior to Fiscal 2024. Accordingly, the restated financial information for Fiscal 2024 is presented on
+a standalone basis. Our wholly owned subsidiaries, Tonbo Systems Pty Ltd and Tonbo LLC, were incorporated
+on July 10, 2024 and September 3, 2024, respectively, in Fiscal 2025. One of our Directors, Arvind Kondangi
+Lakshmikumar, as a nominee of our Company, subscribed to 100% of Tonbo Systems Pty Ltd’s share capital.
+Accordingly, the restated financial information for Fiscal 2025 were consolidated and derived from special-
+purpose consolidated financial statements. For further information, see “Restated Consolidated Financial
+Statements” on page 322. The manner of calculation and presentation of some of the operational and financial
+performance metrics, and the assumptions and estimates used in such calculations, may vary from that used by
+other companies in India and other jurisdictions.
+Unless otherwise indicated, or if the context otherwise requires, in this section, references to “the Company” or
+“our Company” are to Tonbo Imaging India Limited on a standalone basis, and references to “we”, “us”, “our”,
+are to Tonbo Imaging India Limited and its Subsidiaries, on a consolidated basis.
+Unless otherwise indicated, industry and market data used in this section has been derived or extracted from the
+report titled ‘Assessment of Global and Indian Defence Electronics and Technology Industry’ dated October 2026
+prepared and issued by Frost and Sullivan (India) Private Limited, which has been commissioned and paid for
+by us and prepared, only for the purposes of understanding the industry exclusively in connection with the Offer
+(the “F&S Report”). The F&S Report will be made available on the website of our Company at
+https://tonboimaging.com/main/industry-report/ from the date of this Red Herring Prospectus until the Bid/Offer
+Closing Date. Unless otherwise indicated, all financial, operational, industry and other related information
+derived from the F&S Report and included herein with respect to any particular year, refers to such information
+for the relevant year. For further details, see “Risk Factors – Certain sections of this Red Herring Prospectus
+disclose information from the industry report titled “Assessment of Global and Indian Defence Electronics and
+Technology Industry” which is a paid report and commissioned and paid for by us exclusively in connection
+with the Offer and any reliance on such information for making an investment decision in the Offer is subject
+to inherent risks”, “Certain Conventions, Use of Financial Information and Market Data and Currency of
+Presentation - Industry and Market Data” and “Industry Overview” on pages 69, 16 and 160, respectively.
+  21
+Internal Risk Factors
+1.  Our business is cyclical in nature on account of it being geopolitically driven and subject to
+  government budget cycles. Further, tender-based procurement cycle results in poor revenue visibility,
+  which may have an adverse impact on our business, financial stability, results of operations, investor
+  confidence, and the ability to secure financing for growth or innovation.
+Our Company operates in the defence electronics sector, which is exposed to the complexities of government
+procurement processes. These processes are typically characterised by extended timelines, multiple layers of
+scrutiny, and dependence on government budget cycles. Funding for defence projects is subject to annual or multi-
+year government budgets, which can be delayed or reprioritised due to shifting political or economic
+circumstances. Further, defence procurement is governed by strict regulatory frameworks, requiring extensive
+documentation, technical evaluations, and compliance checks. Additionally, multiple government agencies and
+oversight bodies are often involved, each with their own review and approval processes, further extending
+procurement cycles. This results in protracted decision-making and contract award timelines which lead to
+uncertainty in order inflows and revenue volatility.
+As per the F&S Report, in recent years, geopolitical instability, including border conflicts, rising regional tensions,
+and emerging non-state threats, has led to accelerated procurement through emergency purchase mechanisms and
+fast-track acquisitions. These mechanisms are designed to address immediate operational needs, leading to sudden
+spikes in demand for defence electronics. While this has created short-term demand surges, such procurement
+cycles are episodic and may not be sustained if geopolitical tensions subside or governments revert to
+conventional, multi-year acquisition programs. The episodic nature of emergency procurement leads to
+fluctuations in order volumes and revenue, making it difficult for companies to forecast and plan long-term
+investments or resource allocation. Consequently, revenue visibility can be inconsistent, and conversion of
+opportunities from the broader Total Addressable Market (“TAM”) and Serviceable Addressable Market (“SAM”)
+often remains a prolonged, resource-intensive process in the absence of conflict-driven urgency. While our
+Company has generally benefitted in such events, there is no guarantee that future conflict-driven demand spikes
+will result in orders for our Company. Such developments may also adversely affect procurement timelines,
+execution of orders and revenue recognition, as experienced in Fiscal 2026, when revenue from operations
+declined primarily due to delays in the execution of certain international orders arising from the West Asia conflict
+as well as the deferment of certain anticipated orders from Fiscal 2026 to Fiscal 2027, which impacted revenue
+recognition during the year. The outcome of such procurement will depend on factors including tender timelines,
+product suitability, competition, and available capacity. For further details, see “Industry Overview” on page 160.
+The need to maintain readiness for both episodic surges and prolonged procurement cycles can strain resources,
+as we must balance the costs of maintaining capacity with the uncertainty of future demand. The unpredictability
+of procurement cycles complicates strategic planning, investment decisions, and supply chain management. We
+may face challenges in maintaining a competitive edge if we are unable to adapt quickly to shifts between
+emergency and conventional procurement modes.
+The following table sets forth details of our revenue from operations for the three months ended June 30, 2026
+and Fiscals 2026, 2025 and 2024 and the year on year increase/decrease :
+ Particula  Three months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+ rs  June 30, 2026
+  Amoun Percentage of Amoun Percentage of  Amoun Percentage of  Amoun Percentage of
+  t  increase/(decre  t  increase/(decr  t  increase/(decr  t  increase/(decr
+  (₹  ase) in revenue  (₹  ease)  in  (₹  ease) in  (₹  ease) in
+  million  from  millio revenue from  millio  revenue from  millio  revenue from
+  )  operations of  n)  operations of  n)  operations of  n)  operations of
+  the previous  the previous  the previous  the previous
+  year (%)  year (%)  year (%)  year (%)
+ Revenue  360.0  NA  (22.69)  4,690.8  9.55  4,281.8  NA
+ from  8  3,626.  0  9
+ operatio  48
+ ns
+Our revenue from operations increased from ₹4,281.89 million in Fiscal 2024 to ₹4,690.80 million in Fiscal 2025,
+before decreasing to ₹3,626.48 million in Fiscal 2026. This is because while there has been an increase in domestic
+procurement between Fiscal 2024 and Fiscal 2026, as well as the subsequent rise in enquiries and orders in the
+financial year ended March 31, 2026, due to heightened geo-political uncertainties globally, however, as indicated
+  22
+above, our revenue from operations have also decreased in Fiscal 2026 due to delays in execution of certain
+international orders arising from the West Asia conflict as well as the deferment of certain anticipated orders from
+Fiscal 2026 to Fiscal 2027, which impacted revenue recognition during the year. In particular, our international
+order book of ₹59.03 million outstanding as at March 31, 2025 was executed in Fiscal 2026. Further, our Company
+received an order of ₹ 514.41 million from a customer in Fiscal 2026, which it could not execute in Fiscal 2026
+due to delays attributable to the West Asia conflict. This order of ₹ 514.41 million forms part of the order book as
+of June 30, 2026 and is expected to be executed in Fiscal 2027. Accordingly, the conversion of such demands into
+orders is on-going and it is difficult to predict the pace of conversion with accuracy, which might have an impact
+on our future business, financial stability, results of operations etc.
+Our revenue from operation in the three months ended June 30, 2026 is also low primarily due to the seasonality
+of our business and slow execution. Further, we have incurred a loss of ₹(177.37) million in the three months
+ended June 30, 2026 that is primarily attributed to lower revenue recognition in addition to expenses like employee
+benefits expenses and depreciation which are relatively uniformly distributed over the full Fiscal.
+The table below sets out details of number of bids submitted, bids won, bids lost and bid to win ratio in the three
+months ended June 30, 2026 and Fiscals 2026, 2025 and 2024, respectively:
+  Particulars  Three months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024  Total
+  June 30, 2026
+  Number of bids submitted#  14  131  64  66  275
+  Bids Won*  2  45  23  27  97
+  Bids Lost  5  49  24  33  111
+  Bid to win ratio  14.29%  34.35%  35.94%  40.91%  35.27%
+*
+  Comprises bids for which purchase orders were awarded to our Company during the relevant year end and includes bids where (i) our
+Company was the lowest bidder as at the relevant year end and the corresponding purchase orders for such bids were placed with our Company
+subsequent to such year end; and (ii) our Company had submitted bids as at the relevant year end, thereafter it was declared the lowest bidder
+and the corresponding purchase orders for such bids were placed with our Company subsequent to such year end.
+#
+  No. of bids submitted also include active bids which are still not assigned.
+There can be no assurance that a sudden demand spike followed by demand drop will not occur in the future. The
+lack of consistent revenue visibility can impact financial stability, business, results of operations, investor
+confidence, and the ability to secure financing for growth or innovation.
+2.  While we are not dependent on a single customer and we typically have short term, non recurring
+  contracts with a majority of our customers which are based on tenders, some of our customers have
+  contributed significantly to our revenue from operations in the three months ended June 30, 2026 and
+  the last three Fiscals. If our customers choose not to source their requirements from us or to terminate
+  our contracts or purchase orders or tenders, our business, cash flows, financial condition and results
+  of operations may be adversely affected.
+Our customers include global militaries, system integrators who supply to global militaries and procurements by
+NATO countries, law enforcement and homeland security agencies and other global defence OEMs and our
+customer base as on June 30, 2026, comprises of multinational and Indian customers in over 24 countries which
+includes customers in Israel, Armenia, Spain, the Philippines and the United States of America.
+We typically enter into contracts with our customers via a competitive bidding process in which we compete for
+tenders based on, among other factors, pricing, technical capabilities and performance, as well as reputation for
+quality, experience, past track record, and financing capabilities. The growth of our business and ability to gain
+customers depends on our ability to win tenders in a competitive bidding process. We do not have annuity revenues
+since these contracts are typically short term and non-recurring in nature. Our pricing terms, payment cycles and
+permitte [...truncated]
+
+===== MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF =====
+MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF
+  OPERATIONS
+The following discussion is intended to convey the management’s perspective on our financial condition and
+results of operations for the Fiscals 2026, 2025 and 2024. Unless otherwise stated or unless the context requires
+otherwise, the financial information in this section has been derived from the Restated Consolidated Financial
+Statements.
+Our Company’s financial year commences on April 1 and ends on March 31 of the subsequent year, and
+references to a particular fiscal year are to the 12 months ended March 31 of that particular year. Unless
+otherwise indicated or the context otherwise requires, the financial information for the Fiscals 2026, 2025 and
+2024, included herein is based on or derived from our Restated Consolidated Financial Statements included in
+this Red Herring Prospectus. Our Company did not have any subsidiaries prior to Fiscal 2024. Accordingly, the
+restated financial information for Fiscal 2024 is presented on a standalone basis. Our wholly owned subsidiaries,
+Tonbo Systems Pty Ltd and Tonbo LLC, were incorporated on July 10, 2024 and September 3, 2024, respectively,
+in Fiscal 2025. One of our Directors, Arvind Kondangi Lakshmikumar, as a nominee of our Company, subscribed
+to 100% of Tonbo Systems Pty Ltd’s share capital. Accordingly, the restated financial information for Fiscal 2025
+were consolidated and derived from special-purpose consolidated financial statements. For further information,
+see “Restated Consolidated Financial Statements” on page 322. The Restated Consolidated Financial
+Statements is based on our audited financial statements and is restated in accordance with the Companies Act,
+2013, and the SEBI ICDR Regulations. Our audited financial statements are prepared in accordance with Indian
+Accounting Standards, which differs in certain material respects with IFRS and U.S. GAAP. For details, see “Risk
+Factors – Significant differences exist between Ind AS and other accounting principles, such as U.S. GAAP
+and IFRS, which investors may be more familiar with and may consider material to their assessment of our
+financial condition” on page 76.
+Unless otherwise stated or the context otherwise requires, references in this section to “we”, “us”, or “our” are
+to Tonbo Imaging India Limited and our Subsidiaries on a consolidated basis while “our Company” or “the
+Company” are to Tonbo Imaging India Limited on a standalone basis.
+Unless otherwise indicated, industry and market data used in this section has been derived from the industry
+report titled “Assessment of Global and Indian Defence Electronics and Technology Industry” dated October
+2026 (the “F&S Report”) prepared and issued by Frost and Sullivan (India) Private Limited, appointed by us
+and exclusively commissioned and paid for by us to enable investors to understand the industry in which we
+operate in connection with the Offer. The data included herein includes excerpts from the F&S Report and may
+have been re-ordered by us for the purposes of presentation. Unless otherwise indicated, financial, operational,
+industry and other related information derived from the F&S Report and included herein with respect to any
+particular calendar year/ Fiscal refers to such information for the relevant calendar year/ Fiscal. Further, the
+F&S Report was prepared on the basis of information as of specific dates and opinions in the F&S Report may
+be based on estimates, projections, forecasts and assumptions that may be as of such dates. F&S Report has
+prepared this study in an independent and objective manner, and it has taken all reasonable care to ensure its
+accuracy and has further advised that it has taken due care and caution in preparing the F&S Report based on
+the information obtained by it from sources which it considers reliable. A copy of the F&S Report is available on
+the website of our Company at https://tonboimaging.com/main/industry-report/. For further information, see
+“Risk Factors – Internal Risks – Certain sections of this Red Herring Prospectus disclose information from
+the industry report titled “Assessment of Global and Indian Defence Electronics and Technology Industry”
+which is a paid report and commissioned and paid for by us exclusively in connection with the Offer and any
+reliance on such information for making an investment decision in the Offer is subject to inherent risks.” on
+page 69. Also see, “Certain Conventions, Currency of Presentation, Use of Financial Information and Market
+Data –Industry and Market Data” and “Industry Overview” on pages 18 and 160, respectively.
+Overview
+We are a global defence electronics original equipment manufacturer (“OEM”). We design, develop and
+manufacture sensing, processing, communication and guidance systems for surveillance, reconnaissance,
+targeting, and control. We have developed a diversified product portfolio including thermal imaging cores,
+weapon sights, hand-held thermal imaging binoculars, targeting systems, missile seekers, fire control systems,
+missile guidance systems amongst others to enable autonomy on the battlefield.
+The image below depicts the various functions of our product portfolio:
+  405
+Our expertise spans design capabilities across electro optics and infrared systems (“EO/IR”) and embedded vision
+systems serving both – Indian and global companies. As per the F&S Report, over the period of April 2024 to
+March 2026, our Company is the largest manufacturer, in terms of sales value, of thermal imaging systems to
+government and defence agencies in India. In addition, our Company’s market share of thermal imaging exports
+from India was 94% in terms of units, positioning it as the largest exporter of thermal imaging systems from India
+by units shipped between FY24 and FY26. For further details, see “Industry Overview – Tonbo Imaging’s
+Position in the Ecosystem” on page 231.
+With over 28,000 systems deployed across 24 countries, as of June 30, 2026, our Company is a recognized OEM
+providing a diverse suite of field-proven electro-optic products free from export restrictions under International
+Traffic in Arms Regulations (“ITAR”). ITAR is a U.S. export control framework governing the sale, transfer, and
+sharing of defence related technology, data, and services. Our EO/IR portfolio is free from ITAR, enabling it to
+serve non-aligned and export sensitive markets more flexibly, as we design and develop our products within India,
+making us one of the few global OEMs capable of supplying cutting-edge technologies without geopolitical export
+limitations.
+As per the F&S Report, our Company is one of the few companies in India with no dependence on external
+technology partners as we own 100% of our intellectual property since Fiscal 2024, pursuant to assignment
+agreements dated March 11, 2024 through which our Company purchased intellectual property from CEAQ
+Singapore. The proprietary technology ranges from optics to embedded software and electronics. For further
+details, see “Industry Overview – Strategic Comparison” on page 237 and for details with respect to the
+intellectual property assigned/owned, please see “Our Business -Intellectual Property Rights” on page 277. The
+Government of India has introduced numerous policies under the ‘Make in India’ initiative and the ‘Atmanirbhar’
+vision, introducing reforms to promote the indigenous design, development and manufacturing of defence
+equipment in the country, thereby reducing reliance on defence imports. Introduced in 2020, India’s Defence
+Acquisition Procedure 2020 (“DAP 2020”), “Indigenously-Designed, Developed and Manufactured” (“IDDM”)
+is a part of India’s ‘Make in India’ initiative for defence. In order to be an eligible IDDM vendor under the DAP
+2020, our Company is required to ensure that the control of the Company is with Indian citizens and at least half
+of the ex-factory cost of the products needs to originate from Indian design, development, production or value-
+addition, and limits the permissible foreign or non-indigenous content in the final product to a maximum of 50%
+of the overall contract value. We are a supplier under IDDM.
+  406
+We were incorporated in 2003 as a subsidiary of a research company initially providing R&D and technology
+development services focused on designing intellectual property. In 2012, post the buyout of the erstwhile
+subsidiary of the research company by our Promoters, we transitioned into a defense-focused product
+manufacturing company, developing and supplying advanced electro-optic and electronic systems. With over
+28,000 systems deployed across 24 countries as of June 30, 2026, our Company offers a diverse suite of field-
+proven electro-optical solutions. Field-proven denotes systems that have been operationally validated in live
+combat and security environments, demonstrating reliability, durability, and mission effectiveness under real-
+world conditions. For further details, see “Industry Overview – Tonbo Imaging’s Position in the Ecosystem” on
+page 231.
+Our investors include:
+  407
+Note:Through certain secondary transactions by CEAQ India and CEAQ Singapore pursuant to SPAs dated September 25, 2026, Amansa
+Investments Ltd, Samruddhi Investments, 360 ONE Multi-Stage Defence and Space Fund, Valuequest Founders Conviction LVF, SBI
+Emergent India Fund, SBI Optimal Equity Fund, HDFC Life Insurance Company Limited, Akash Manek Bhanshali, Susquehanna Asia
+Technology Pty Limited and Malabar Capital have also become investors in our Company. For further details, see “Capital Structure” on
+page 106.
+Our products are divided into tactical systems and platform systems. The table below sets forth the revenue from
+operations generated from each product vertical in the three months ended June 30, 2026 and Fiscals 2026, 2025
+and 2024, respectively:
+  Products  Three months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  June 30, 2026
+  Amount  As a  Amount  As a  Amount  As a  Amount  As a
+  (₹ million) percentage  (₹  percentage  (₹  percentage  (₹  percentage
+  of revenue  million)  of revenue  million)  of revenue  million)  of revenue
+  from  from  from  from
+  operations  operations  operations  operations
+  (%)  (%)  (%)  (%)
+ Tactical  214.43  59.55  2,116.75  58.37  3,622.96  77.24  3,592.69  83.90
+ systems
+ Platform  141.20  39.21  1,448.08  39.93  1,010.53  21.54  127.00  2.97
+ systems
+ Others*  Nil  NA  11.95  0.33  10.33  0.22  110.39  2.58
+ Total sale  355.63  98.76  3,576.78  98.63  4,643.82  99.00  3,830.08  89.45
+ of products
+ and
+ solutions
+ Other  4.45  1.24
+ Operating  49.70  1.37  46.98  1.00  451.81  10.55
+ Revenue$
+ Revenue  360.08  100.00  3,626.48  100.00  4,690.80  100.00  4,281.89  100.00
+ from
+ operations#
+Note: We are yet to book revenue for our directed energy systems which are currently in the development stage.
+*Comprise certain OEM component sales.
+# Our Revenue from operations is a sum of total sale of products and solutions and other operating revenue.
+$
+  Other Operating Revenue includes revenue from other ancillary services such as technical / post-sales support on products, component sales
+and foreign exchange gains.
+Our portfolio of products span the electromagnetic spectrum – visible imaging based on what the human eye can
+see, to long wave infrared and multi-sensor imaging which are based on heat signatures of objects emitting infrared
+radiation. Our product portfolio is put forth below:
+  408
+We are seeing an evolution of our business from being focussed on tactical systems and platform subsystems to
+offering integrated autonomous platform systems. These platform systems are solutions that bring together
+hardware and software components of multiple subsystems made by us into an integrated platform for battlefield
+deployment.
+Our Company emphasizes miniaturisation, such as smallest form factor thermal weapon sights, scalable, modular
+payloads adaptable for remote weapons stations, loitering munitions, intelligence, surveil [...truncated]
+
+===== OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS =====
+OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS
+Except as stated below, as on the date of this Red Herring Prospectus, there are no outstanding (i) criminal
+proceedings, (ii) action and proceedings by statutory or regulatory authorities, (iii) claims related to direct or
+indirect tax matters, and (iv) litigation proceedings that are otherwise material, in each case, involving our
+Company, our Promoters, Subsidiaries and our Directors (“Relevant Parties”), and (v) criminal proceedings
+(including first information reports whether or not cognizance has been taken by any court or judicial authority),
+and action and proceedings taken by regulatory authorities and statutory authorities involving the Key
+Managerial Personnel and Senior Management; or (vi) pending outstanding litigation proceedings involving our
+Group Company which may have a material impact on our Company. Further there are no disciplinary actions
+including penalty imposed by the SEBI or stock exchanges against our Promoters in the last five Financial Years
+including any outstanding action. .
+For the purpose of identification of material litigation in (iv) above, our Board has considered and adopted the
+following policy on materiality with regard to outstanding litigation involving the Relevant Parties to be disclosed
+in this Red Herring Prospectus pursuant to a resolution dated August 4, 2026 of our Board (“Materiality Policy”).
+Pursuant to the Materiality Policy, all other pending litigation involving the Relevant Parties has been considered
+material if:
+•  the value or expected impact in terms of value of the claim by or against the entity or person in any such
+  pending proceeding exceeds (a) 2% of the turnover for Fiscal 2026 as per the Restated Consolidated
+  Financial Statements, i.e. ₹72.53 million; (b) 2% of the net worth as at March 31, 2026 as per the
+  Restated Consolidated Financial Statements, i.e. ₹110.63 million; or (c) 5% of the average of the
+  absolute value of the profit/loss after tax of our Company as per the Restated Consolidated Financial
+  Statements for the last three Fiscals, i.e. ₹32.03 million, whichever is lower, in this case being 5% of the
+  average of the absolute value of the profit/loss after tax of our Company as per the Restated Consolidated
+  Financial Statements for the last three Fiscals, i.e., ₹32.03 million (“Materiality Amount”); or
+•  where the decision in one case is likely to affect the decision in similar cases, even though the amount
+  involved in an individual litigation may not exceed the Materiality Amount; or
+•  any outstanding civil litigation involving the Relevant Parties wherein the monetary liability is not
+  quantifiable, or does not exceed the Materiality Amount, if the outcome of such litigation could have a
+  material adverse effect on the business, operations, performance, prospects, financial position or
+  reputation of the Company.
+Further, litigation where the decision in one case is likely to affect the decision in similar cases, even though the
+amount involved in an individual litigation may not exceed the Materiality Amount shall also be considered
+material litigation in relation to the Relevant Parties. In addition, any outstanding civil litigation/ arbitration
+proceedings involving the Relevant Parties wherein the monetary liability is not quantifiable, or does not exceed
+the Materiality Amount in an individual litigation, shall be considered ‘material’ and shall be disclosed in this
+Red Herring Prospectus, if the outcome of such litigation could have a material adverse effect on the business,
+operations, performance, prospects, financial position or reputation of our Company.
+For the above purposes, pre-litigation notices received by the Relevant Parties, Key Managerial Personnel and
+Senior Management from third parties (excluding notices from statutory, regulatory, or tax authorities) shall not
+be evaluated for materiality until such time that the Relevant Parties are impleaded as defendants or respondents
+in proceedings before any judicial/quasi-judicial/arbitral forum or is notified by any governmental, statutory, or
+regulatory authority of any such proceeding that may be commenced.
+Except as stated in this section, there are no outstanding dues to material creditors of our Company. In terms of
+the Materiality Policy for the purpose of disclosure of material creditors in this Red Herring Prospectus, all
+creditors of our Company to whom the amount due from our Company exceeds 5.00% of the total trade payables
+of the Company as per the Restated Consolidated Financial Statements are material creditors (i.e., 5.00% of
+₹463.11 million which is ₹ 23.16 million based on the Restated Consolidated Financial Statements as at June 30,
+2026).
+Further, for outstanding dues to micro, small or medium enterprise, the disclosures shall be based on the
+information available with the Company regarding the status of the creditor as ‘MSME’ as defined under Section
+  447
+2 read with Section 7 of the Micro, Small and Medium Enterprises Development Act, 2006, as amended, as has
+been relied upon by the statutory auditors in preparing their audit report. Unless otherwise specified, the terms
+defined in the description of a particular litigation matter pertain to such matter only.
+Litigation involving our Company
+Criminal proceedings against our Company
+As of the date of this Red Herring Prospectus, there are no outstanding criminal proceedings initiated against our
+Company.
+Criminal proceedings by our Company
+As of the date of this Red Herring Prospectus, there are no outstanding criminal proceedings initiated by our
+Company.
+Action taken by statutory and regulatory authorities involving our Company
+As of the date of this Red Herring Prospectus, there is no outstanding action taken by statutory and regulatory
+authorities involving our Company.
+Material civil litigation against our Company
+As of the date of this Red Herring Prospectus, except as stated below, there is no outstandi [...truncated]
