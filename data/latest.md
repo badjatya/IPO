@@ -1,9 +1,9 @@
-# IPO numbers – 2026-10-12 (as of 16:41 IST)
+# IPO numbers – 2026-10-12 (as of 17:18 IST)
 
 ## HD Fire Protect — upcoming
 - Dates: open 2026-10-13 · close 2026-10-15 · allotment 2026-10-16 · listing 2026-10-21
 - Price band: ₹258–271 · lot 55 shares · size ₹712.31 Cr · P/E 40.69
-- GMP: ₹83 (30.63%) · anchor allocation: not yet
+- GMP: ₹78 (28.78%) · anchor allocation: not yet
 - Issue: Initial Public offer comprising of Offer for sale up to 26,284,500 Equity Shares (Including Eligible Employee Reservation up to Rs. 17.50 million)
 - Lead managers: Ambit Private Limited, Anand Rathi Advisors Limited and IIFL Capital Services Limited · registrar: MUFG Intime India Private Limited
 
@@ -16,7 +16,7 @@
 ## Fusion CX — upcoming
 - Dates: open 2026-10-14 · close 2026-10-16 · allotment 2026-10-19 · listing 2026-10-22
 - Price band: ₹289 (upper) · lot 51 shares · size ₹702 Cr · P/E 21.62
-- GMP: ₹10 (3.46%) · anchor allocation: unknown (not on NSE yet)
+- GMP: ₹14 (4.84%) · anchor allocation: unknown (not on NSE yet)
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
@@ -27,7 +27,7 @@
 ## Tonbo Imaging India — upcoming
 - Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
 - Price band: ₹700 (upper) · lot 21 shares · size ₹852.18 Cr · P/E 78.83
-- GMP: ₹385 (55%) · anchor allocation: unknown (not on NSE yet)
+- GMP: ₹345 (49.29%) · anchor allocation: unknown (not on NSE yet)
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
@@ -38,7 +38,7 @@
 ## Zetwerk — upcoming
 - Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
 - Price band: ₹151 (upper) · lot 99 shares · size ₹5012.33 Cr · P/E -14.17
-- GMP: ₹14 (9.27%) · anchor allocation: unknown (not on NSE yet)
+- GMP: ₹15.5 (10.26%) · anchor allocation: unknown (not on NSE yet)
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
@@ -60,7 +60,7 @@
 ## Sahajanand Medical Technologies — upcoming
 - Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
 - Price band: ₹344 (upper) · lot 43 shares · size ₹475.48 Cr · P/E 50.59
-- GMP: ₹40 (11.63%) · anchor allocation: unknown (not on NSE yet)
+- GMP: ₹46 (13.37%) · anchor allocation: unknown (not on NSE yet)
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
@@ -71,4 +71,4 @@
 ## Jio Platforms — announced
 - Dates: open ? · close ? · allotment ? · listing ?
 - Price band: not announced · lot ? shares · size - · P/E -
-- GMP: ₹182.5 (0%) · anchor allocation: unknown (not on NSE yet)
+- GMP: ₹181 (0%) · anchor allocation: unknown (not on NSE yet)
