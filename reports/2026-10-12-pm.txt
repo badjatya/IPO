@@ -1,17 +1,17 @@
 IPO BRIEF · PM · Mon 12 Oct 2026
 0 open · 6 upcoming
 
-HD Fire Protect opens tomorrow (GMP ~29%) — the pick of the week; Tonbo & Sahajanand are listing-gain plays. Four IPOs open 15 Oct.
+HD Fire Protect opens tomorrow (GMP ~31%) — still the pick; Fusion CX now analysed: fair price, weak GMP. Four IPOs open 15 Oct.
 
 AT A GLANCE
 ────────────────────────────────────────
-• HD Fire Protect — Opens tomorrow — Apply — GMP +29%
-• Fusion CX — Opens Wed 14 Oct — Analysis pending — GMP +5%
-• Tonbo Imaging India — Opens Thu 15 Oct — Listing gains only — GMP +49%
-• Zetwerk — Opens Thu 15 Oct — Analysis pending — GMP +10%
+• HD Fire Protect — Opens tomorrow — Apply — GMP +31%
+• Fusion CX — Opens Wed 14 Oct — Neutral — GMP +3%
+• Tonbo Imaging India — Opens Thu 15 Oct — Listing gains only — GMP +55%
+• Zetwerk — Opens Thu 15 Oct — Analysis pending — GMP +9%
 • Bonfiglioli Transmissions — Opens Thu 15 Oct — Analysis pending — GMP +26%
-• Sahajanand Medical Technologies — Opens Thu 15 Oct — Listing gains only — GMP +13%
-• Jio Platforms — Announced — Watchlist — GMP ₹181
+• Sahajanand Medical Technologies — Opens Thu 15 Oct — Listing gains only — GMP +12%
+• Jio Platforms — Announced — Watchlist — GMP ₹182.5
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 HD FIRE PROTECT
@@ -22,7 +22,7 @@ India's #2 fire-protection equipment maker and largest exporter (sprinklers, del
 Financials: FY26 revenue ₹489 Cr (+13%), PAT ₹117 Cr, EBITDA margin 31%, debt-free
 Bidding: Tue 13 Oct – Thu 15 Oct   Listing: Wed 21 Oct
 Price band: ₹258–271   Lot: 55   Size: ₹712 Cr
-P/E: 40.69x   GMP: ₹78 (+28.8%)
+P/E: 40.69x   GMP: ₹83 (+30.6%)
 Quota: QIB 50% · NII 15% · Retail 35%
 Where to apply:
    Retail              1 lot     ₹14,905  odds –
@@ -38,17 +38,24 @@ Anchor book: Pending · Anchor bidding 12 Oct; allocation not public yet
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 FUSION CX
-Opens Wed 14 Oct  |  Analysis pending
+Opens Wed 14 Oct  |  Neutral
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Customer-experience / BPO services company. RHP not on SEBI yet — full analysis on the next run after it is filed.
+Customer-experience (CX/BPO) outsourcer with 40 delivery centres in 13 countries; telecom is 47% of revenue.
+Financials: FY26 revenue ₹1,818 Cr (+37%), PAT ₹170 Cr (2.3x), RoNW 31%
 Bidding: Wed 14 Oct – Fri 16 Oct   Listing: Thu 22 Oct
-Price band: ₹289   Lot: 51   Size: ₹702 Cr
-P/E: 21.62x   GMP: ₹14 (+4.8%)
+Price band: ₹275–289   Lot: 51   Size: ₹702 Cr
+P/E: 21.62x   GMP: ₹10 (+3.5%)
+Quota: QIB ≥75% · NII ≤15% · Retail ≤10%
 Where to apply:
    Retail              1 lot     ₹14,739  odds –
    Small HNI (sNII)   14 lot     ₹2.06 L  odds –
    Big HNI (bNII)     68 lot    ₹10.02 L  odds –
-Anchor book: Pending · Anchor bidding on 13 Oct
+  ✓ Fast growth with operating cash flow ₹264 Cr above PAT ₹170 Cr
+  ✓ 21.5x P/E vs peer average 26.7x; ₹500 Cr fresh issue, ₹276 Cr repays debt
+  ⚠ Top-10 customers ≈50% of revenue; acquisition-led growth (goodwill ₹363 Cr)
+  ⚠ Promoters hold 96% and sell ₹202 Cr in the OFS; tiny 10% retail quota
+  ⚠ FY26 margin jump (PAT 5.6% → 9.3%) unproven
+Anchor book: Pending · Anchor bidding on 13 Oct; allocation not out yet
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 TONBO IMAGING INDIA
@@ -59,7 +66,7 @@ Bengaluru defence-electronics maker: thermal imaging cores, weapon sights, targe
 Financials: FY26 revenue ₹363 Cr (−23%), PAT ₹51 Cr (−30%); Q1 FY27 loss ₹17.7 Cr
 Bidding: Thu 15 Oct – Mon 19 Oct   Listing: Fri 23 Oct
 Price band: ₹700   Lot: 21   Size: ₹852 Cr
-P/E: 78.83x   GMP: ₹345 (+49.3%)
+P/E: 78.83x   GMP: ₹385 (+55.0%)
 Quota: QIB ≤50% · NII ≥15% · Retail ≥35%
 Where to apply:
    Retail              1 lot     ₹14,700  odds –
@@ -79,7 +86,7 @@ Opens Thu 15 Oct  |  Analysis pending
 Manufacturing-services marketplace; loss-making. RHP not on SEBI yet.
 Bidding: Thu 15 Oct – Mon 19 Oct   Listing: Fri 23 Oct
 Price band: ₹151   Lot: 99   Size: ₹5,012 Cr
-P/E: loss-making   GMP: ₹15.5 (+10.3%)
+P/E: loss-making   GMP: ₹14 (+9.3%)
 Where to apply:
    Retail              1 lot     ₹14,949  odds –
    Small HNI (sNII)   14 lot     ₹2.09 L  odds –
@@ -108,7 +115,7 @@ Surat-based maker of cardiac stents and structural-heart devices (TAVI, occluder
 Financials: FY26 revenue ₹1,211 Cr (+18%), PAT ₹69 Cr (5.7% margin); FY24 was a loss
 Bidding: Thu 15 Oct – Mon 19 Oct   Listing: Fri 23 Oct
 Price band: ₹344   Lot: 43   Size: ₹475 Cr
-P/E: 50.59x   GMP: ₹46 (+13.4%)
+P/E: 50.59x   GMP: ₹40 (+11.6%)
 Quota: QIB ≤50% · NII ≥15% · Retail ≥35%
 Where to apply:
    Retail              1 lot     ₹14,792  odds –
@@ -128,9 +135,10 @@ Announced  |  Watchlist
 Reliance's digital/telecom arm. Dates and price band not announced yet.
 Bidding: ? – ?   Listing: ?
 Price band: not announced   Lot: ?   Size: –
-P/E: –   GMP: ₹181
+P/E: –   GMP: ₹182.5
 
 ────────────────────────────────────────
-• Fusion CX, Zetwerk, Bonfiglioli: RHP not yet on NSE/SEBI — analysed once filed.
-• Anchor allocations for HD Fire Protect not findable yet; recheck on the AM run.
-Data as of 17:45 IST. Research aid, not investment advice. GMP is unofficial.
+• Zetwerk, Bonfiglioli: RHP not yet on NSE/SEBI — analysed once filed.
+• Anchor allocation for HD Fire Protect not findable yet; recheck on the AM run.
+• Fusion CX GMP varies by source (₹10 on Investorgain snapshot; web trackers ₹40–55).
+Data as of 19:08 IST. Research aid, not investment advice. GMP is unofficial.

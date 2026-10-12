@@ -1,7 +1,7 @@
 {
   "date": "2026-10-12",
   "session": "PM",
-  "headline": "HD Fire Protect opens tomorrow (GMP ~29%) — the pick of the week; Tonbo & Sahajanand are listing-gain plays. Four IPOs open 15 Oct.",
+  "headline": "HD Fire Protect opens tomorrow (GMP ~31%) — still the pick; Fusion CX now analysed: fair price, weak GMP. Four IPOs open 15 Oct.",
   "ipos": {
     "hd-fire-protect": {
       "verdict": "apply",
@@ -64,10 +64,23 @@
       "anchor_grade": "pending"
     },
     "fusion-cx": {
-      "verdict": "pending",
-      "verdict_text": "Analysis pending",
-      "summary": "Customer-experience / BPO services company. RHP not on SEBI yet — full analysis on the next run after it is filed.",
-      "anchor": "Anchor bidding on 13 Oct",
+      "verdict": "neutral",
+      "verdict_text": "Neutral",
+      "best_category": null,
+      "category_note": "GMP only ₹10 (trackers range ₹10–55); recheck after the 13 Oct anchor book",
+      "summary": "Customer-experience (CX/BPO) outsourcer with 40 delivery centres in 13 countries; telecom is 47% of revenue.",
+      "financials": "FY26 revenue ₹1,818 Cr (+37%), PAT ₹170 Cr (2.3x), RoNW 31%",
+      "quota": "QIB ≥75% · NII ≤15% · Retail ≤10%",
+      "positives": [
+        "Fast growth with operating cash flow ₹264 Cr above PAT ₹170 Cr",
+        "21.5x P/E vs peer average 26.7x; ₹500 Cr fresh issue, ₹276 Cr repays debt"
+      ],
+      "red_flags": [
+        "Top-10 customers ≈50% of revenue; acquisition-led growth (goodwill ₹363 Cr)",
+        "Promoters hold 96% and sell ₹202 Cr in the OFS; tiny 10% retail quota",
+        "FY26 margin jump (PAT 5.6% → 9.3%) unproven"
+      ],
+      "anchor": "Anchor bidding on 13 Oct; allocation not out yet",
       "anchor_grade": "pending"
     },
     "zetwerk": {
@@ -90,7 +103,8 @@
     }
   },
   "notes": [
-    "Fusion CX, Zetwerk, Bonfiglioli: RHP not yet on NSE/SEBI — analysed once filed.",
-    "Anchor allocations for HD Fire Protect not findable yet; recheck on the AM run."
+    "Zetwerk, Bonfiglioli: RHP not yet on NSE/SEBI — analysed once filed.",
+    "Anchor allocation for HD Fire Protect not findable yet; recheck on the AM run.",
+    "Fusion CX GMP varies by source (₹10 on Investorgain snapshot; web trackers ₹40–55)."
   ]
 }
