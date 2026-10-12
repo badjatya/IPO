@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T17:25+05:30",
+ "generated_at": "2026-10-12T17:45+05:30",
  "date": "2026-10-12",
  "ipos": [
   {
@@ -180,8 +180,8 @@
    "gmp_updated": "12-Oct 14:37",
    "url": "https://www.investorgain.com/gmp/tonbo-imaging-india-ipo/2369/",
    "nse": null,
-   "rhp_url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791778947564.pdf",
-   "rhp_source": "sebi",
+   "rhp_url": null,
+   "rhp_source": null,
    "phase": "upcoming",
    "price_high": 700.0,
    "subscription": null,
@@ -229,7 +229,7 @@
    ],
    "best_category": null,
    "analysis_file": "analysis/tonbo-imaging.md",
-   "needs_analysis": true,
+   "needs_analysis": false,
    "needs_anchor_update": false
   },
   {
@@ -390,8 +390,8 @@
    "gmp_updated": "12-Oct 14:37",
    "url": "https://www.investorgain.com/gmp/sahajanand-medical-technologies-ipo/1842/",
    "nse": null,
-   "rhp_url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791785603861.pdf",
-   "rhp_source": "sebi",
+   "rhp_url": null,
+   "rhp_source": null,
    "phase": "upcoming",
    "price_high": 344.0,
    "subscription": null,
@@ -439,7 +439,7 @@
    ],
    "best_category": null,
    "analysis_file": "analysis/sahajanand-medical-technologies.md",
-   "needs_analysis": true,
+   "needs_analysis": false,
    "needs_anchor_update": false
   },
   {

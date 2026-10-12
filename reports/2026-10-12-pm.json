@@ -1,7 +1,7 @@
 {
   "date": "2026-10-12",
   "session": "PM",
-  "headline": "HD Fire Protect opens tomorrow — the pick of the week. Tonbo and Sahajanand are listing-gain plays only.",
+  "headline": "HD Fire Protect opens tomorrow (GMP ~29%) — the pick of the week; Tonbo & Sahajanand are listing-gain plays. Four IPOs open 15 Oct.",
   "ipos": {
     "hd-fire-protect": {
       "verdict": "apply",
@@ -21,7 +21,7 @@
         "₹196 Cr dividends to promoters in the last two years",
         "PAT growth slowed to 6% in FY26; inventory days rising"
       ],
-      "anchor": "Anchor bidding done today; allocation not public yet",
+      "anchor": "Anchor bidding 12 Oct; allocation not public yet",
       "anchor_grade": "pending"
     },
     "tonbo-imaging": {
@@ -74,12 +74,14 @@
       "verdict": "pending",
       "verdict_text": "Analysis pending",
       "summary": "Manufacturing-services marketplace; loss-making. RHP not on SEBI yet.",
-      "red_flags": ["Loss-making (negative P/E)"]
+      "red_flags": [
+        "Loss-making (negative P/E)"
+      ]
     },
     "bonfiglioli-transmissions": {
       "verdict": "pending",
       "verdict_text": "Analysis pending",
-      "summary": "Industrial gearboxes and drives (Indian arm of Italy's Bonfiglioli). RHP not on SEBI yet."
+      "summary": "Industrial gearboxes and drives (Indian arm of Italy's Bonfiglioli). RHP not on SEBI yet. GMP ~26%."
     },
     "jio-platforms": {
       "verdict": "pending",
@@ -88,6 +90,7 @@
     }
   },
   "notes": [
-    "Fusion CX, Zetwerk and Bonfiglioli will be analysed as soon as their RHPs appear on SEBI."
+    "Fusion CX, Zetwerk, Bonfiglioli: RHP not yet on NSE/SEBI — analysed once filed.",
+    "Anchor allocations for HD Fire Protect not findable yet; recheck on the AM run."
   ]
 }
