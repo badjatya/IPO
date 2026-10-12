@@ -5,7 +5,7 @@ _Analysed: 2026-10-12 · Sources: RHP (SEBI), Investorgain GMP, news (HDFC Sky, 
 - Price band ₹327–344 · lot 43 shares (₹14,792) · face value ₹1
 - Issue ₹475.5 Cr at upper band — **100% OFS** (13,822,116 shares = 13.60% of pre-offer capital), **fresh issue ₹0**
 - Market cap at upper band: **₹3,497 Cr** (101,646,778 shares, unchanged post-issue; includes 35.15 lakh shares held by SMT ESOP Trust)
-- Quota: RHP extract leaves QIB/NII/Retail blank ([●]) → exact split **not found**. Likely QIB 75% · NII 15% (sNII 5%, bNII 10%) · **Retail 10%** because FY24 was loss-making (Reg 6(2) route) — inference, verify on the final notice. Employee reservation up to 250,000 shares (~₹8.6 Cr at cap), discount not found
+- Quota (RHP "Offer Structure"): QIB ≤50% · NII ≥15% (sNII 1/3, bNII 2/3) · **Retail ≥35%** · employee up to 250,000 shares
 - Dates: anchor 14 Oct · open 15 Oct · close 19 Oct · allotment 21 Oct · listing 23 Oct (BSE, NSE)
 - Lead managers / registrar: not found in extracted RHP text
 - GMP ₹40–46 (~12–13%)
@@ -63,6 +63,6 @@ None — pure OFS. All proceeds (~₹475 Cr) go to the selling shareholders afte
 ## Verdict
 **Apply for listing gains only (small, GMP-dependent).**
 1. Real franchise: ~25% India DES share, 16% revenue CAGR, margins and PAT improving, strong Europe traction.
-2. GMP ₹40–46 (~12–13%) and a QIB-heavy book offer a listing pop if anchors are good; retail quota is likely only ~10%, so allotment odds are low.
+2. GMP ₹40–46 (~12–13%) and a QIB-heavy book offer a listing pop if anchors are good; the 35% retail quota keeps retail odds reasonable.
 3. Against that: 53x P/E vs 43.9x peer average, thin margins, leverage, pure OFS and open investigation notices cap the upside.
 Long-term: good product moat but expensive and cash-hungry; wait for margin and cash-flow proof before holding.

@@ -43,7 +43,7 @@ _Analysed: <date> · Sources: RHP, <others>_
 
 ## Snapshot
 Price band · lot · issue size · fresh issue vs OFS (₹ Cr each) · market cap at upper band · listing date
-Quota split: QIB % · NII % (sNII = 1/3, bNII = 2/3 of NII) · **Retail %** · employee / shareholder reservation (₹ Cr, discount)
+Quota split from the RHP "OFFER STRUCTURE" section: QIB % · NII % (sNII = 1/3, bNII = 2/3 of NII) · **Retail %** · employee / shareholder reservation (₹ Cr, discount). Never guess the split; if the section is missing write "not found".
 
 ## What the company does
 3–5 lines: products/services, customers, revenue mix, plants/geography, moat.
