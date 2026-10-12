@@ -1,4 +1,4 @@
-# IPO numbers – 2026-10-12 (as of 17:21 IST)
+# IPO numbers – 2026-10-12 (as of 17:25 IST)
 
 ## HD Fire Protect — upcoming
 - Dates: open 2026-10-13 · close 2026-10-15 · allotment 2026-10-16 · listing 2026-10-21
