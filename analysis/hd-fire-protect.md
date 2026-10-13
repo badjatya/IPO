@@ -62,8 +62,9 @@ cheap in absolute terms for ~13–15% growth.
 None — pure OFS. All ₹712 Cr goes to the two promoter sellers; the company gets only the listing benefits.
 
 ## Anchor book
-**Pending** — anchor bidding is on 12 Oct; the allocation (≈ ₹213 Cr, i.e. 60% of the QIB portion) is usually filed with the
-exchanges the same evening. Next run: list top names, number of anchors, and grade (Strong/Average/Weak).
+**Strong** — ₹213.1 Cr raised from 25 anchors at ₹271 (78.64 lakh shares, 60% of QIB portion); source: NSE/BSE allocation letter dated 12 Oct 2026. 71.9% went to 9 domestic MFs (17 schemes).
+Top names: Magnum Equity Ex-Top 100 L/S ₹26.2 Cr · Kotak Infrastructure & Economic Reform ₹22.8 Cr · Ashoka Whiteoak EM Equity ₹22.8 Cr · HDFC MF (Multi Cap ₹17.5 Cr, Innovation ₹8.7 Cr) · ICICI Pru Energy Opportunities ₹14.5 Cr · Aditya Birla SL MF (Infrastructure ₹10.0 Cr, Manufacturing ₹10.0 Cr + 3 small) · Allianz India Equity ₹8.8 Cr · Mirae Small Cap ₹8.8 Cr · PGIM Small Cap ₹8.4 Cr · Motilal Oswal Finvest ₹8.4 Cr · Bajaj Life ₹7.5 Cr · Amundi, UTI, Axis Max Life, Bandhan.
+Grade: Strong (HDFC, ICICI Pru, Kotak, ABSL, Mirae, UTI; broad MF participation). Lock-in: 50% 30 days, 50% 90 days.
 
 ## Red flags
 - 100% OFS + ₹196 Cr of dividends in the two years before the IPO → promoters monetising, no growth capital raised
