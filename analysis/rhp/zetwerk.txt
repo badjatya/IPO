@@ -1,0 +1,1735 @@
+
+===== THE OFFER =====
+the Offer
+Designated Intermediary(ies)  Collectively, the members of the Syndicate, sub-syndicate or agents, SCSBs (other than in relation to
+  RIBs using the UPI Mechanism), Registered Brokers, CDPs and RTAs, who are authorised to collect
+  Bid cum Application Forms from the relevant Bidders, in relation to the Offer.
+  In relation to ASBA Forms submitted by RIBs Bidding in the Retail Portion and Eligible Employees
+  Bidding in the Employee Reservation Portion by authorising an SCSB to block the Bid Amount in the
+  ASBA Account and NIBs bidding with an application size of up to ₹500,000 (not using the UPI
+  Mechanism) by authorising an SCSB to block the Bid Amount in the ASBA Account, Designated
+  Intermediaries shall mean SCSBs.
+  8
+  Term  Description
+  In relation to ASBA Forms submitted by UPI Bidders where the Bid Amount will be blocked upon
+  acceptance of UPI Mandate Request by such UPI Bidders using the UPI Mechanism, Designated
+  Intermediaries shall mean Syndicate, sub-syndicate/agents, Registered Brokers, CDPs, SCSBs and
+  RTAs.
+  In relation to ASBA Forms submitted by QIBs (excluding Anchor Investors) and NIBs (not using UPI
+  Mechanism), Designated Intermediaries shall mean Syndicate, sub-syndicate/ agents, SCSBs,
+  Registered Brokers, the CDPs and RTAs
+Designated RTA Locations  Such locations of the RTAs where Bidders (except Anchor Investors) can submit the ASBA Forms to
+  RTAs. The details of such Designated RTA Locations, along with the names and contact details of the
+  RTAs eligible to accept ASBA Forms are available on the respective websites of the Stock Exchanges
+  (www.bseindia.com and www.nseindia.com), as updated from time to time
+Designated Stock Exchange  NSE
+Draft Abridged Prospectus  The memorandum dated August 13, 2026, containing such salient features of the Updated Draft Red
+  Herring Prospectus – I
+Eligible Employee  All or any of the following: (a) a permanent employee of our Company and Subsidiaries working in
+  India, as of the date of filing of this Red Herring Prospectus and who continues to be a permanent
+  employee of our Company, until the submission of the Bid cum Application Form; and (b) a Director
+  of our Company, whether whole time or not, who is eligible to apply under the Employee Reservation
+  Portion under applicable law as on the date of filing of this Red Herring Prospectus with the RoC and
+  who continues to be a Director of our Company, until the submission of the Bid cum Application
+  Form, but not including (i) Promoters; (ii) persons belonging to the Promoter Group; and (iii) Directors
+  who either themselves or through their relatives or through any body corporate, directly or indirectly,
+  hold more than 10% of the outstanding Equity Shares of our Company.
+  The maximum Bid Amount under the Employee Reservation Portion by an Eligible Employee shall
+  not exceed ₹500,000 (net of the employee discount). However, the initial Allotment to an Eligible
+  Employee in the Employee Reservation Portion shall not exceed ₹200,000 (net of the employee
+  discount). Only in the event of under-subscription in the Employee Reservation Portion, the
+  unsubscribed portion will be available for allocation and Allotment, proportionately to all Eligible
+  Employees who have Bid in excess of ₹200,000 (net of the employee discount), subject to the
+  maximum value of Allotment made to such Eligible Employee not exceeding ₹500,000 (net of the
+  employee discount)
+Eligible FPI(s)  FPI(s) that are eligible to participate in the Offer in terms of applicable law and from such jurisdictions
+  outside India where it is not unlawful to make an offer / invitation under the Offer and in relation to
+  whom the Bid cum Application Form and this Red Herring Prospectus constitutes an invitation to
+  purchase the Equity Shares
+Eligible NRI(s)  NRI(s) eligible to invest under Schedule 3 and Schedule 4 of the FEMA Rules, from jurisdictions
+  outside India where it is not unlawful to make an offer or invitation under the Offer and in relation to
+  whom the Bid cum Application Form and this Red Herring Prospectus will constitute an invitation to
+  purchase the Equity Shares
+Employee Discount  Discount of up to [●]% (equivalent to ₹[●] per Equity Share of face value ₹1 each) to the Offer Price
+  given to Eligible Employees bidding in the Employee Reservation Portion, as may be decided by our
+  Company in consultation with the BRLMs
+Employee Reservation Portion  The portion of the Offer being up to 700,000 Equity Shares of face value ₹1 each, aggregating to ₹[●]
+  available for allocation to Eligible Employees, on a proportionate basis. Such portion shall not exceed
+  5% of the post-Offer Equity Share capital of our Company
+Escrow Accounts  The ‘no-lien’ and ‘non-interest bearing’ accounts opened with the Escrow Collection Banks and in
+  whose favour the Bidders (excluding ASBA Bidders) will transfer money through NACH/direct
+  credit/NEFT/RTGS in respect of the Bid Amount when submitting a Bid
+Escrow Collection Bank  The bank which are clearing members and registered with SEBI as banker to an issue under the SEBI
+  BTI Regulations, as amended and with whom the Escrow Account are opened, in this case being ICICI
+  Bank Limited
+“First Bidder” or “Sole Bidder” The Bidder whose name shall be mentioned in the Bid cum Application Form or the Revision Form
+  and in case of joint Bids, whose name shall also appear as the first holder of the beneficiary account
+  held in joint names
+Floor Price  The lower end of the Price Band, subject to any revision(s) thereto, not being less than the face value
+  of Equity Shares, at or above which the Offer Price and the Anchor Investor Offer Price will be
+  finalised and below which no Bids will be accepted
+Fresh Issue  Fresh issue of [●] Equity Shares bearing face value of ₹ 1 each aggregating to ₹28,300.00 million by
+  our Company
+Fugitive Economic Offender  An individual who is declared a fugitive economic offender under Section 12 of the  [...truncated]
+
+===== SUMMARY OF RESTATED FINANCIAL INFORMATION =====
+SUMMARY OF RESTATED CONSOLIDATED FINANCIAL INFORMATION
+The following tables provide the summary of financial information of the Zetwerk Group derived from our Restated
+Consolidated Financial Information as at and for the three months period ended June 30, 2026 and June 30, 2025, and as at and
+for the Financial Years ended March 31, 2026, March 31, 2025 and March 31, 2024. The summary of financial information
+presented below should be read in conjunction with the “Restated Consolidated Financial Information” and “Management’s
+Discussion and Analysis of Financial Condition and Results of Operations” on pages 423 and 563, respectively.
+  (The remainder of this page has been left intentionally blank)
+  81
+  SUMMARY STATEMENT OF ASSETS AND LIABILITIES
+  (Amount in ₹ million)
+  Particulars  As at June 30, As at June 30, As at March  As at March  As at March
+  2026  2025  31, 2026  31, 2025  31, 2024
+ASSETS
+Non-current assets
+Property, plant and equipment  8,086.21  5,884.28  8,215.33  5,960.35  3,259.49
+Capital work-in-progress  3,266.20  184.05  2,554.78  147.26  503.37
+Investment properties  2,151.03  429.14  2,122.05  405.29  386.04
+Right-of-use assets  3,600.44  2,486.69  3,731.35  2,350.51  1,576.27
+Goodwill  10,669.85  3,456.12  10,540.22  3,456.12  2,778.37
+Other intangible assets  782.79  467.60  856.28  500.22  552.84
+Intangible assets under development  -  -  -  -  0.75
+Investments accounted for using equity method  210.07  541.06  288.15  640.73  271.40
+Financial assets
+Investments  171.53  348.56  282.32  218.57  -
+Trade receivables  2,223.71  3,688.33  2,235.51  3,632.61  3,461.40
+Loans  353.25  1,103.96  603.09  2,558.44  -
+Other financial assets  2,083.44  2,478.55  2,387.46  3,370.31  1,937.71
+Other non-current assets  330.48  231.43  177.94  314.61  53.10
+Deferred tax assets (net)  33.26  3.89  64.63  -  49.99
+Non-current tax assets (net)  1,482.05  1,001.81  1,381.67  1,598.46  1,339.07
+Total non-current assets  35,444.31  22,305.47  35,440.78  25,153.48  16,169.80
+Current assets
+Inventories  14,170.39  9,739.95  12,495.84  9,310.94  11,724.74
+Financial assets
+Investments  2,574.86  975.18  1,280.00  2,803.59  3,985.08
+Trade receivables  21,439.89  17,729.76  23,299.28  17,528.29  21,115.76
+Cash and cash equivalents  4,449.65  3,127.24  13,219.47  8,841.42  7,256.07
+Bank balances other than cash and cash equivalents  12,299.69  9,891.90  11,218.45  10,240.47  4,247.32
+Loans  123.41  308.16  120.72  4.14  205.00
+Other financial assets  5,432.98  7,356.59  5,725.29  6,859.06  15,940.44
+Other current assets  16,124.68  19,396.69  17,169.63  22,812.91  22,664.29
+Assets classified as held for Sale  8,101.08  -  13,876.81  -  -
+Total current assets  84,716.63  68,525.47  98,405.49  78,400.82  87,138.70
+Total assets  120,160.94  90,830.94  133,846.27  103,554.30  103,308.50
+EQUITY AND LIABILITIES
+Equity
+Equity share capital  113.93  113.06  113.84  113.06  107.03
+Instrument entirely equity in nature  46,877.15  454.19  46,584.75  452.57  295.61
+Other equity  (7,712.26)  38,039.44  (159.61)  43,552.24  40,249.95
+Equity attributable to the owners of the Holding  39,278.82  38,606.69  46,538.98  44,117.87  40,652.59
+Company
+Non-controlling interests  1,662.46  444.65  1,598.24  419.77  (27.97)
+Total equity  40,941.28  39,051.34  48,137.22  44,537.64  40,624.62
+Liabilities
+Non-current liabilities
+Financial liabilities
+Borrowings  4,324.58  1,328.07  4,753.28  410.81  735.44
+Lease liabilities  2,853.55  1,745.67  2,922.70  1,839.30  1,139.48
+Other financial liabilities  4,473.85  6.38  4,291.96  6.38  -
+Provisions  131.72  89.92  116.14  76.32  85.45
+Deferred tax liabilities (net)  272.43  164.09  292.60  189.28  88.08
+Government grants  345.39  -  63.67  -  -
+Total non-current liabilities  12,401.52  3,334.13  12,440.35  2,522.09  2,048.45
+Current liabilities
+Financial liabilities
+Borrowings  15,097.34  15,744.02  14,608.34  17,054.69  11,585.58
+Lease liabilities  1,051.58  914.15  1,099.50  683.83  563.57
+Trade payables
+Total outstanding dues of micro enterprises and small  1,291.31  1,046.00
+enterprises;  1,411.47  1,134.31  1,079.07
+  82
+  (Amount in ₹ million)
+  Particulars  As at June 30, As at June 30, As at March As at March As at March
+  2026  2025  31, 2026  31, 2025  31, 2024
+Total outstanding dues of creditors other than micro  17,852.95  17,293.89
+enterprises and small enterprises  20,581.28  18,417.18  28,960.77
+Acceptances  7,712.85  6,984.31  10,144.50  10,150.07  11,148.36
+Other financial liabilities  3,362.98  911.85  3,697.66  828.87  1,323.69
+Other current liabilities  6,335.53  5,191.55  6,972.32  7,896.82  5,732.73
+Provisions  312.37  259.27  305.57  288.54  205.07
+Government grants  11.03  -  11.47  -  -
+Current tax liabilities (net)  322.65  100.43  273.86  40.26  36.59
+Liabilities associated with Assets held for Sale  13,467.55  -  14,162.73  -  -
+Total current liabilities  66,818.14  48,445.47  73,268.70  56,494.57  60,635.43
+Total liabilities  79,219.66  51,779.60  85,709.05  59,016.66  62,683.88
+Total equity and liabilities  120,160.94  90,830.94  133,846.27  103,554.30  103,308.50
+  83
+  SUMMARY STATEMENT OF PROFIT AND LOSS
+  (Amount in ₹ million, unless stated otherwise)
+  Particulars  For the three  For the  For the  For the  For the
+  months  three  Financial  Financial  Financial
+  period ended  months  Year  Year  Year ended
+  June 30,  period  ended  ended  March 31,
+  2026  ended June March 31,  March 31,  2024
+  30, 2025  2026  2025
+Continuing operations
+Income
+Revenue from operations  41,178.77  26,494.35  159,133.23  113,318.56  123,643.72
+Other income  778.27  526.63  1,873.09  1,603.72  1,590.85
+Total income  41,957.04  27,020.98  161,006.32  114,922.28  125,234.57
+Expenses
+Cost of materials consumed (including materials for construction  12,519.60  6,644.76  39,636.73  30,357.45  22,171.83
+and project contracts)
+Purchase of stock-in-trade  23,976.46  16,732.13  98,797.52  68,003.42  94,310.44
+(Increase)/ decrease in inventories of finished goods, stock-in-trade  (277.33)  (1.49)  1,393.88  1,290.66  (2,305.31)
+and work-in-progress
+Employee benefits expense  2,035.87  1,292.33  6,437.74  4,773.34  4,241.01
+Finance costs  1,264.43  757.53  3,662.24  3,368.70  3,230.89
+Depreciation and amortization expenses  661.70  455.19  1,966.93  1,610.14  1,817.77
+Other expenses  2,209.55  1,632.49  9,522.25  6,116.58  5,008.87
+Total expenses  42,390.28  27,512.94  161,417.29  115,520.29  128,475.50
+Restated loss before share of loss of joint ventures and associate,  (433.24)  (491.96)  (410.97)  (598.01)  (3,240.93)
+exceptional items and tax from continuing operations
+Share of loss of joint ventures and associate  (80.68)  (237.25)  (395.07)  (612.01)  (1,025.39)
+Restated loss before exceptional items and tax from continuing  (513.92)  (729.21)  (806.04)  (1,210.02)  (4,266.32)
+operations
+Exceptional items (net)  -  (8,032.33)  (8,358.39)  (835.49)  (3,717.73)
+Restated loss before tax from continuing operations  (513.92)  (8,761.54)  (9,164.43)  (2,045.51)  (7,984.05)
+Tax expenses for continuing operations
+Current tax  116.04  73.19  607.21  79.19  117.48
+Deferred tax (credit)/charge  11.33  (28.08)  (127.71)  25.99  423.78
+Total tax expense/(credit)  127.37  45.11  479.50  105.18  541.26
+Restated loss for the period/ year from continuing operations  (641.29)  (8,806.65)  (9,643.93)  (2,150.69)  (8,525.31)
+Discontinued operations
+Restated loss before exceptional items and tax from discontinued  (6,688.54)  (348.07)  (1,887.78)  (1,556.39)  (654.18)
+operations
+ Exceptional Items of discontinued operations  -  (4,530.00)  (4,530.00)  -  -
+ Tax income/(expense) of discontinued operations  -  -  -  -  -
+Restated loss for the period/ year from discontinued operations  (6,688.54)  (4,878.07)  (6,417.78)  (1,556.39)  (654.18)
+Restated loss for the period/ year  (7,329.83) (13,684.72) (16,061.71)  (3,707.08)  (9,179.49)
+Other comprehensive (loss)/income (OCI)
+Items that will not be reclassified to statement of profit and loss:
+Re-measurement (loss)/gains on defined benefit plans  (5.40)  (8.96)  (14.65)  39.46  3.55
+Income tax effect  0.13  1.00  1.09  (1.20)  (1.67)
+  (5.27)  (7.96)  (13.56)  38.26  1.88
+Items that will be reclassified to statement of profit and loss:
+Exchange differences on translation of foreign operations  55.04  20.91  (305.15)  (67.45)  (19.89)
+  84
+  (Amount in ₹ million, unless stated otherwise)
+  Particulars  For the three  For the  For the  For the  For the
+  months  three  Financial  Financial  Financial
+  period ended  months  Year  Year  Year ended
+  June 30,  period  ended  ended  March 31,
+  2026  ended June March 31, March 31,  2024
+  30, 2025  2026  2025
+  55.04  20.91  (305.15)  (67.45)  (19.89)
+Share of other comprehensive income/(loss) of an associate and  (0.63)  0.07  0.15  (0.25)  (0.01)
+joint venture
+Income tax effect  0.08  (0.01)  (0.05)  0.05  -
+  (0.55)  0.06  0.10  (0.20)  (0.01)
+Other comprehensive (loss)/income for the period/ year, net of  49.22  13.01  (318.61)  (29.39)  (18.02)
+tax
+Restated total comprehensive (loss)/income for the period/ year  (7,280.61) (13,671.71) (16,380.32)  (3,736.47)  (9,197.51)
+Restated loss for the period/ year from continuing operations  (641.29)  (8,806.65)  (9,643.93)  (2,150.69)  (8,525.31)
+attributable to:
+Owners of the Holding Company  (687.34)  (8,819.76)  (9,905.31)  (2,104.05)  (8,537.72)
+Non-controlling interests  46.05  13.11  261.38  (46.64)  12.41
+Restated loss for the period/ year from discontinued operations  (6,688.54)  (4,878.07)  (6,417.78)  (1,556.39)  (654.18)
+attributable to:
+Owners of the Holding Company  (6,688.94)  (4,878.02)  (6,418.42)  (1,556.60)  (654.27)
+Non-controlling interests  0.40  (0.05)  0.64  0.21  0.09
+Restated other comprehensive (loss)/income for the period/ year  49.22  13.01  (318.61)  (29.39)  (18.02)
+attributable to:
+Owners of the Holding Company  50.90  14.69  (316.93)  (31.94)  (18.02)
+Non-controlling interests  (1.68)  (1.68)  (1.68)  2.55  -
+Restated total comprehensive (loss)/income for the period/ year  (7,280.61) (13,671.71) (16,380.32)  (3,736.47)  (9,197.51)
+attributable to:
+Owners of the Holding Company  (7,325.38) (13,683.09) (16,640.66)  (3,692.59)  (9,210.01)
+Non-controlling interests  44.77  11.38  260.34  (43.88)  12.50
+Restated (Loss)/Earnings per share (EPS)
+[Nominal value per share: INR 1 (June 30, 2025: INR 1, March
+31, 2026: INR 1, March 31, 2025: INR 1 and March 31, 2024:
+INR 1)]
+Restated Earnings per share for continuing operations
+Basic (INR)  (0.45)  (6.08)  (6.69)  (1.17)  (4.86)
+Diluted (INR)  (0.45)  (6.08)  (6.69)  (1.17)  (4.86)
+Restated Earnings per share for discontinued operations
+Basic (INR)  (4.37)  (3.36)  (4.33)  (0.86)  (0.37)
+Diluted (INR)  (4.37)  (3.36)  (4.33)  (0.86)  (0.37)
+Restated Earnings per share for continuing operations and
+discontinued operations
+Basic (INR)  (4.82)  (9.45)  (11.02)  (2.03)  (5.23)
+Diluted (INR)  (4.82)  (9.45)  (11.02)  (2.03)  (5.23)
+Note:
+1. Restated (loss)/Earnings per share (EPS) – Basic and Diluted are not annualised for the period ended June 30, 2026 and June 30, 2025.
+  85
+  SUMMARY STATEMENT OF CASH FLOWS
+  (Amount in ₹ million)
+  Particulars  For the three For the three  For the  For the  For the
+  months  months  Financial  Financial  Financial
+  period ended period ended  Year ended  Year ended  Year ended
+  June 30, 2026 June 30, 2025  March 31,  March 31,  March 31,
+  2026  2025  2024
+Cash flow from operating activities
+Restated loss before tax from continuing operations  (513.92)  (8,761.54)  (9,164.43)  (2,045.51)  (7,984.05)
+Restated loss before tax from discontinued operations  (6,688.54)  (4,878.07)  (6,417.78)  (1,556.39)  (654.18)
+Restated loss before tax from continuing and  (7,202.46)  (13,639.61)  (15,582.21)  (3,601.90)  (8,638.23)
+discontinued operations
+Adjustments for:
+Depreciation and amortization expenses  696.21  497.83  2,137.95  1,773.83  1,923.31
+Share based payment expense  326.07  118.55  882.06  514.75  788.90
+Interest expense  1,550.30  1,023.60  4,910.83  4,211.81  4,366.50
+Net loss/(gain) on fair value changes on investments  (23.60)  14.48  13.93  (62.49)  (48.43)
+carried at FVTPL
+Income from sale of mutual funds  (23.98)  (63.60)  (101.76)  (85.91)  (47.90)
+Net loss/(gain) on forward contracts  (303.60)  31.76  196.80  (130.73)  87.40
+Interest income  (353.08)  (468.74)  (1,479.94)  (1,521.15)  (1,667.31)
+Gain on lease termination  (6.80)  (21.03)  (79.55)  (2.75)  (2.90)
+Loss allowance on trade receivables, unbilled revenue,  5,116.66  73.59  352.22  1,269.56  158.83
+security deposits and other advances
+Unrealised (gain)/loss on foreign exchange transactions  (84.42)  (26.06)  (54.69)  40.47  17.91
+and translations
+Net (profit)/ loss on sale of property, plant and equipment  (10.25)  (0.02)  (3.14)  (1.22)  3.53
+Provision for warranties  -  -  -  -  (10.29)
+Bad debt/advances/other assets written off  -  -  -  -  2.51
+Share of loss from joint venture  80.68  237.25  395.07  612.01  1,025.39
+Net loss on fair value of financial liability at FVTPL  -  -  -  -  3.89
+Provision for impairment of supplier advances  163.90  -  359.36  185.53  252.26
+Income from Government grants  (3.05)  -  (30.88)  -  -
+Provision for onerous contracts  115.00  -  -  -  -
+Exceptional items
+Reversal for impairment of bad and doubtful debts  -  (25.55)  (172.30)  (237.48)  -
+Provision for impairment of bad and doubtful debts, (net  -  -  -  193.89  2,849.27
+of expenses / loss incurred)
+Impairment of investment in joint venture  -  -  -  -  101.94
+Provision for Unbilled revenue  -  4,230.00  4,160.00  -  -
+Unbilled revenue written off  -  -  -  525.23  -
+(Gain)/loss on change of control  -  -  (663.44)  24.50  (1,406.92)
+Loss on account of change in control from Joint Venture  -  -  -  -  615.72
+to Subsidiary
+Provision for impairment of supplier advances  -  300.00  370.00  236.23  1,365.20
+Retrenchment costs of employees  -  -  -  -  3.16
+Provision for slow and non-moving inventories  -  -  -  -  51.98
+Loss on [...truncated]
+
+===== CAPITAL STRUCTURE =====
+CAPITAL STRUCTURE
+  Details of the share capital of our Company, as at the date of this Red Herring Prospectus, are as set forth below:
+  (in ₹, except share data)
+  Particulars  Aggregate value at  Aggregate value
+  face value  at Offer Price*
+  A.  AUTHORISED SHARE CAPITAL(1)
+  Equity Shares comprising:
+  45,605,618,966 Equity Shares of face value of ₹1 each  45,605,618,966  -
+  Preference Shares comprising:  -
+  48,705 Series A CCPS of face value of ₹10 each  487,050  -
+  64,346 Series A1 CCPS of face value of ₹10 each  643,460  -
+  73,127 Series B CCPS of face value of ₹10 each  731,270  -
+  44,566 Series C CCPS of face value of ₹10 each  445,660  -
+  84,522 Series D CCPS of face value of ₹10 each  845,220  -
+  44,963 Series E CCPS of face value of ₹10 each  449,630  -
+  42,130 Series F CCPS of face value of ₹10 each  421,300  -
+  1,346,000 Series F1 CCPS of face value of ₹10 each  13,460,000  -
+  27,810,917 Series F2 CCPS of face value of ₹10 each  278,109,170  -
+  150,220,077 Series F3 CCPS of face value of ₹10 each  1,502,200,770  -
+  Total  47,403,412,496  -
+  B.  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL BEFORE THE OFFER
+  Equity Shares comprising:
+  1,506,772,659 Equity shares of face value ₹1 each  1,506,772,659  -
+  C.  PRESENT OFFER
+  Offer of up to [●] Equity Shares of face value of ₹1 each aggregating up to ₹[●] million(2)  [●]  [●]
+  of which
+  Fresh Issue of up to [●] Equity Shares of face value of ₹1 each aggregating up to  [●]  [●]
+  ₹28,300.00 million(2)
+  Offer for Sale of up to 144,525,036 Equity Shares of face value of ₹1 each aggregating up  [●]  [●]
+  to ₹ [●] million (3)
+  Employee Reservation Portion of up to 700,000 Equity Shares of face value of ₹1 each  [●]  [●]
+  aggregating up to ₹[●] million(4)
+  Net Offer of up to [●] Equity Shares of face value of ₹1 each  [●]  [●]
+  D.  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL AFTER THE OFFER**
+  [●] Equity Shares of face value of ₹1 each  [●]  -
+  E.  SECURITIES PREMIUM ACCOUNT
+  Before the Offer  ₹76,424.51 million
+  After the Offer*  [●]
+*
+  To be updated upon finalisation of the Offer Price, and subject to the Basis of Allotment.
+**
+  Assuming full subscription in the Offer
+(1)
+  For details of changes in the authorised share capital of our Company since incorporation, see “History and Certain Corporate Matters – Amendments
+  to our Memorandum of Association” on page 363.
+(2)
+  The Offer has been authorised by our Board pursuant to the resolution passed at its meeting dated March 24, 2026 and the Fresh Issue by our
+  Shareholders pursuant to the special resolution passed at their extraordinary general meeting dated March 26, 2026.
+(3)
+  Our Board has taken on record the approval for the Offer for Sale by the Selling Shareholders pursuant to its resolutions dated March 29, 2026, October
+  5, 2026 and October 11, 2026, respectively. The Offered Shares have been held by each of the Selling Shareholders for a period of at least one year
+  preceding the date of the UDRHP-I with SEBI and are eligible for being offered for sale in the Offer, in terms of Regulations 8 and 8A of the SEBI ICDR
+  Regulations. For details on authorization of the Selling Shareholders in relation to their respective portion of the Offered Shares, see “The Offer” and
+  “Other Regulatory and Statutory Disclosures” on pages 78 and 627, respectively.
+(4)
+  The Employee Reservation Portion shall not exceed 5% of our post-Offer Equity Share capital. Eligible Employees bidding in the Employee Reservation
+  Portion must ensure that the maximum Bid Amount does not exceed ₹500,000 (net of the employee discount). However, the initial Allotment to an Eligible
+  Employee in the Employee Reservation Portion shall not exceed ₹200,000 (net of the employee discount). Only in the event of an under-subscription in
+  the Employee Reservation Portion post the initial Allotment, such unsubscribed portion may be Allotted on a proportionate basis to Eligible Employees
+  Bidding in the Employee Reservation Portion, for a value in excess of ₹200,000 (net of the employee discount), subject to the total Allotment to an Eligible
+  Employee not exceeding ₹500,000 (net of the employee discount). Our Company in consultation with the Book Running Lead Managers, may offer a
+  discount of up to [●]% to the Offer Price (equivalent of ₹[●] per Equity Share of face value of ₹1 each) to Eligible Employees Bidding in the Employee
+  Reservation Portion, subject to necessary approvals as may be required, and which shall be announced at least two Working Days prior to the Bid / Offer
+  Opening Date.
+  123
+Notes to the capital structure
+1.  Share capital history of our Company
+(a)  Equity share capital
+  The history of the equity share capital of our Company is set forth below:
+  Date of  Nature of  Nature of  Number of Face value Issue price Cumulative Cumulative paid-  Details of allottees
+  allotment/buy-back allotment/buyba consideration  Equity  per Equity per Equity number of up Equity Share
+  of equity shares  ck  Shares  Share  Share  Equity  capital (in ₹)
+  allotted  (in ₹)  (in ₹)  Shares
+  December 6, 2017*  Initial  Cash  100,000  1  1.00  100,000  100,000 Initial subscription of 80,000 Equity Shares of face value of ₹1
+  subscription  to  each to Balaraman Ramakkrushnan and 20,000 Equity shares of
+  the Memorandum  face value of ₹1 each to Srinath Ramakkrushnan
+  of Association
+  July 31, 2018  Rights issue  Cash  30  1  1,835  100,030  100,030 Allotment of 10 Equity Shares of face value of ₹1 each to Sanjeev
+  Rangrass, 10 Equity Shares of face value of ₹1 each to Nalini
+  Rangrass and 10 Equity Shares of face value of ₹1 each to Rajesh
+  Kumar Naidu Yabaji (nominee of 204 Ventures)
+  August 14, 2018  Private placement  Cash  20  1  1,835  100,050  100,050 Allotment of 10 Equity Shares of face value of ₹1 each to Kae
+  Capital Fund II and 10 Equity shares of face value of ₹1 each to
+  Kalysta Capital Fund II (Mauritius)
+  August 24, 2018  Private Placement  Cash  10  1  1,835  100,060  100,060 Allotment of 10 Equity Shares of face value of ₹1 each to Peak
+  XV Partners Investments V (erstwhile SCI Investments V)
+  December 15, 2018 Rights issue  Cash  2  1  1,835  100,062  100,062 Allotment of one Equity Share of face value ₹1 each to A.
+  Venkatachalam and one Equity Share of face value ₹1 each to
+  Subbiah Vellayan
+  December 18, 2019 Allotment  Cash  600  1 28,687.41  100,662  100,662 Allotment of 17 Equity Shares of face value ₹1 each to Arpit
+  pursuant  to  Srivastava, 17 Equity Shares of face value ₹1 each to Prem
+  exercise of stock  Bhushan Karn, five Equity Shares of face value ₹1 each to Jeevan
+  options  under  M, 17 Equity Shares of face value ₹1 each to Sethupathy
+  ESOP 2018  Natrayan, 17 Equity Shares of face value ₹1 each Akshay Jain,
+  17 Equity Shares of face value ₹1 each to Thirugnanam R, 17
+  Equity Shares of face value ₹1 each to Murugiah Madasamy, 17
+  Equity Shares of face value ₹1 each to Deepak A.S, 238 Equity
+  Shares of face value ₹1 each to Rahul Sharma and 238 Equity
+  Shares of face value ₹1 each to Vishal Chaudhary
+  September 22, 2020 Allotment  Cash  917  1  49,926  101,579  101,579 Allotment of 13 Equity Shares of face value ₹1 each to Akshay
+  pursuant  to  Jain, six Equity Shares of face value ₹1 each to Anirudh Reddy,
+  exercise of stock  77 Equity Shares of face value ₹1 each to Ankit Fatehpuria, 10
+  options  under  Equity Shares of face value ₹1 each to Anshul Sharma, 18 Equity
+  ESOP 2018  Shares of face value ₹1 each to Arnold Nitin, 25 Equity Shares
+  of face value ₹1 each to Arpit Srivastava, 13 Equity Shares of
+  face value ₹1 each to Deepak A.S, three Equity Shares of face
+  124
+  Date of  Nature of  Nature of  Number of  Face value  Issue price Cumulative Cumulative paid-  Details of allottees
+allotment/buy-back allotment/buyba consideration  Equity  per Equity  per Equity number of up Equity Share
+  of equity shares  ck  Shares  Share  Share  Equity  capital (in ₹)
+  allotted  (in ₹)  (in ₹)  Shares
+  value ₹1 each to Guruprakash Varma E, six Equity Shares of face
+  value ₹1 each to Jeevan M, eight Equity Shares of face value ₹1
+  each to Kabita Agarwal, 15 Equity Shares of face value ₹1 each
+  to Krishna Mohan Rai, 25 Equity Shares of face value ₹1 each to
+  Murugiah Madasamy, six Equity Shares of face value ₹1 each to
+  Nikhisha P, 19 Equity Shares of face value ₹1 each to Narahari
+  P, six Equity Shares of face value ₹1 each to Nishant Kumar
+  Gupta, 13 Equity Shares of face value ₹1 each to Prem Bhushan
+  Karn, 4 Equity Shares of face value ₹1 each to Rajashekar S, six
+  Equity Shares of face value ₹1 each to Sagar Kumar H.N, four
+  Equity Shares of face value ₹1 each to S. Sanjeeviraja, six Equity
+  Shares of face value ₹1 each to Srinivas Darshan K.S, 58 Equity
+  Shares of face value ₹1 each to Thirugnanam R, 38 Equity Shares
+  of face value ₹1 each to Varchas Bansal, 269 Equity Shares of
+  face value ₹1 each to Rahul Sharma and 269 Equity Shares of
+  face value ₹1 each to Vishal Chaudhary
+July 27, 2021  Conversion  of  N.A.  1,024  1  N.A.^  102,603  102,603 Allotment of 512 Equity Shares of face value ₹1 each to Rahul
+  optionally  Sharma and 512 Equity Shares of face value ₹1 each to Vishal
+  convertible  Chaudhary
+  redeemable
+  preference shares
+  into  Equity
+  Shares in the ratio
+  1:1
+August 2, 2021  Allotment  Cash  2,718  1  1  105,321  105,321 Allotment of 50 Equity Shares of face value ₹1 each to
+  pursuant  to  Thirugnanam R, 25 Equity Shares of face value ₹1 each to
+  exercise of stock  Dheeraj Dhingra, one Equity Share of face value ₹1 each to
+  options  under  Puneet Goyal, five Equity Shares of face value ₹1 each to Anurag
+  ESOP 2018  Mishra, 15 Equity Shares of face value ₹1 each to Vijaya Saradhi
+  peri, 1,900 Equity Shares of face value ₹1 each to Omkar
+  Hariharpur Nagabhushana, one Equity Share of face value ₹1
+  each to Salim Ajijkha Pathan, 35 Equity Shares of face value ₹1
+  each to Varchas Bansal, one Equity Share of face value ₹1 each
+  to Arvind Kumar R, 30 Equity Shares of face value ₹1 each to
+  Anirudh Reddy Edla, four Equity Shares of face value ₹1 each to
+  Ramesh Babu Balaram, one Equity Share of face value ₹1 each
+  to Tarun Kumar SP, four Equity Shares of face value ₹1 each to
+  Jithin J. Neerackal, four Equity Shares of face value ₹1 each to
+  V. Pradeesh, 10 Equity Shares of face value ₹1 each to Raja
+  Sameer Nandan Mothadaka, 10 Equity Shares of face value ₹1
+  each to Murugiah Madasamy, four Equity Shares of face value
+  ₹1 each to Sanjeeviraja S, 30 Equity Shares of face value ₹1 each
+  125
+  Date of  Nature of  Nature of  Number of  Face value  Issue price Cumulative Cumulative paid-  Details of allottees
+allotment/buy-back allotment/buyba consideration  Equity  per Equity  per Equity number of up Equity Share
+  of equity shares  ck  Shares  Share  Share  Equity  capital (in ₹)
+  allotted  (in ₹)  (in ₹)  Shares
+  to Ankit Sonthalia, two Equity Shares of face value ₹1 each to
+  Rajashekar S, 27 Equity Shares of face value ₹1 each to Salil
+  Kumar Srivastava, 40 Equity Shares of face value ₹1 each to
+  Abhijit Kothawale, five Equity Shares of face value ₹1 each to
+  Nikhil Sharma, 10 Equity Shares of face value ₹1 each to Krishna
+  Mohan Rai, three Equity Shares of face value ₹1 each to A.
+  Ponnalagan, 15 Equity Shares of face value ₹1 each to Prem
+  Bhushan Karn, 10 Equity Shares of face value ₹1 each to Arnold
+  Nitin M.S, 30 Equity Shares of face value ₹1 each to Peeyush
+  Agarwal, two Equity Shares of face value ₹1 each to Akash
+  Hirosh, 30 Equity Shares of face value ₹1 each to Narahari
+  Payala, 15 Equity Shares of face value ₹1 each to Siddhartha
+  Ghosh, seven Equity Shares of face value ₹1 each to Himanshu
+  Gupta, two Equity Shares of face value ₹1 each to Rajendra Parhi,
+  one Equity Share of face value ₹1 each to Jaddu Charan Tej
+  Kumar Reddy, 10 Equity Shares of face value ₹1 each to
+  Sankaranarayanan S.E, three Equity Shares of face v [...truncated]
+
+===== OBJECTS OF THE OFFER =====
+OBJECTS OF THE OFFER
+The Offer comprises the Fresh Issue of [●] Equity Shares bearing face value of ₹1 each, aggregating up to ₹28,300.00 million
+by our Company and the Offer for Sale of 144,525,036 Equity Shares bearing face value of ₹1 each, aggregating up to ₹ [●]
+million by the Selling Shareholders. For details, see “The Offer” on page 78. For details on the authorisation of each of the
+Selling Shareholders in relation to their respective portion of the Offered Shares. see “Other Regulatory and Statutory
+Disclosures – Approvals and authorisations by the Selling Shareholders” on page 627.
+Offer for Sale
+The Selling Shareholders shall sell an aggregate of up to 144,525,036 Equity Shares of face value of ₹1 each, aggregating to
+₹[●] million held by them. The Selling Shareholders have, severally and not jointly, specifically confirmed and authorised the
+transfer and Allotment of its portion of the Offered Shares pursuant to the Offer for Sale, as set out below:
+  Name of the Selling Shareholder  Maximum number of Equity Shares face  Date of consent  Date of corporate
+  value of ₹1 each offered in the Offer for  letter  action/ board
+  Sale*  resolution
+Promoter Selling Shareholders
+Amrit Pratik Acharya  Up to 14,230,672 Equity Shares of face value  March 25, 2026  N.A.
+  of ₹1 each aggregating up to ₹[●] million
+Srinath Ramakkrushnan  Up to 14,230,672 Equity Shares of face value  March 25, 2026  N.A.
+  of ₹1 each aggregating up to ₹[●] million
+Promoter Group Selling Shareholder
+Creovate Innovation Private Limited  Up to 22,974,820 Equity Shares of face value  March 25, 2026  March 18, 2026
+  of ₹1 each aggregating up to ₹[●] million
+Investor Selling Shareholders
+Peak XV Partners Investments V Up to 17,611,820 Equity Shares of face value  October 5, 2026  March 13, 2026 and
+(Formerly known as SCI Investments V) of ₹1 each aggregating up to ₹[●] million  October 5, 2026
+Lightspeed Venture Partners Select IV Up to 13,529,722 Equity Shares of face value  October 5, 2026  March 27, 2026 and
+Mauritius  of ₹1 each aggregating up to ₹[●] million  October 5, 2026
+Kae Capital Fund II  Up to 12,570,262 Equity Shares of face value  October 5, 2026  October 5, 2026
+  of ₹1 each aggregating up to ₹[●] million
+Accel India V (Mauritius) Limited  Up to 12,016,622 Equity Shares of face value  October 5, 2026  March 24, 2026 and
+  of ₹1 each aggregating up to ₹[●] million  October 5, 2026
+Lightspeed India Partners II, LLC  Up to 11,597,361 Equity Shares of face value  October 5, 2026  February 20, 2026 and
+  of ₹1 each aggregating up to ₹[●] million  September 18, 2026
+Peak XV Partners Growth Investments Up to 5,797,579 Equity Shares of face value of  October 5, 2026  March 13, 2026 and
+III (Formerly known as SCI Growth ₹1 each aggregating up to ₹[●] million  October 5, 2026
+Investments III)
+Kalysta Capital Fund II (Mauritius)  Up to 4,190,105 Equity Shares of face value of  October 5, 2026  October 5, 2026
+  ₹1 each aggregating up to ₹[●] million
+Lightspeed India Partners III, LLC  Up to 3,145,603 Equity Shares of face value of  October 5, 2026  March 13, 2026 and
+  ₹1 each aggregating up to ₹[●] million  September 18, 2026
+Saifuddin Fakhruddin Qureishi  Up to 2,857,565 Equity Shares of face value of  March 23, 2026  N.A.
+  ₹1 each aggregating up to ₹[●] million
+Matthew Harris Arnold  Up to 2,442,738 Equity Shares of face value of  March 23, 2026  N.A.
+  ₹1 each aggregating up to ₹[●] million
+Subbiah Vellayan  Up to 409,182 Equity Shares of face value of  October 9, 2026  N.A.
+  ₹1 each aggregating up to ₹[●] million
+A. Venkatachalam  Up to 408,469 Equity Shares of face value of  October 9, 2026  N.A.
+  ₹1 each aggregating up to ₹[●] million
+Shivraj Singh Kandhari (Guardian, Up to 100 Equity Shares of face value of ₹1  October 9, 2026  N.A.
+Bikramjit Singh Kandhari)  each aggregating up to ₹[●] million
+Can Köseoğlu  Up to 299,402 Equity Shares of face value of  March 23, 2026  N.A.
+  ₹1 each aggregating up to ₹[●] million
+Andrew Richard Woglom  Up to 256,630 Equity Shares of face value of  March 23, 2026  N.A.
+  ₹1 each aggregating up to ₹[●] million
+Cem Garih Nahmiyas  Up to 86,129 Equity Shares of face value of ₹1  March 23, 2026  N.A.
+  each aggregating up to ₹[●] million
+Nitin Mahajan  Up to 83,167 Equity Shares of face value of ₹1  March 23, 2026  N.A.
+  each aggregating up to ₹[●] million
+Daniel Robert Bachelet  Up to 71,286 Equity Shares of face value of ₹1  March 23, 2026  N.A.
+  each aggregating up to ₹[●] million
+Individual Selling Shareholders
+Rahul Sharma  Up to 1,714,539 Equity Shares of face value of  March 23, 2026  N.A.
+  ₹1 each aggregating up to ₹[●] million
+  201
+  Name of the Selling Shareholder  Maximum number of Equity Shares face  Date of consent  Date of corporate
+  value of ₹1 each offered in the Offer for  letter  action/ board
+  Sale*  resolution
+ Vishal Chaudhary  Up to 1,714,539 Equity Shares of face value of  March 25, 2026  N.A.
+  ₹1 each aggregating up to ₹[●] million
+ Ankit Fatehpuria  Up to 2,286,052 Equity Shares of face value of  March 23, 2026  N.A.
+  ₹1 each aggregating up to ₹[●] million
+Each Selling Shareholder shall be entitled to its respective portion of the proceeds of the Offer for Sale, after deducting its
+respective portion of the Offer related expenses and the relevant taxes thereon, as applicable. Our Company will not receive
+any proceeds from the Offer for Sale and the proceeds received from the Offer for Sale will not form part of the Net Proceeds.
+For further details, see “- Offer related expenses” on page 244.
+Fresh Issue
+The details of the proceeds of the Fresh Issue are set forth below:
+  Particulars  Estimated amount (in ₹ million)
+ Gross Proceeds  28,300.00
+ (Less) Expenses in relation to the Fresh Issue(1)  ([●])
+ Net Proceeds(1)  [●]
+(1)
+  To be finalised upon determination of the Offer Price and updated in the Prospectus prior to filing with the RoC. For details with respect to sharing of
+  fees and expenses amongst our Company and the Selling Shareholders, please refer to “– Offer related expenses” on page 244.
+Requirement of funds
+We propose to utilise the Net Proceeds towards funding the following objects:
+1.  Repayment/prepayment, in part or full, of certain of or all of borrowings availed by: (a) our Company and (b) certain
+  of our Subsidiaries through investments in such Subsidiaries, namely;
+  (i)  Sharp Tanks and Structurals Private Limited;
+  (ii)  Terra91 International Private Limited;
+  (iii)  Smile Electronics Limited;
+  (iv)  Kryfs Power Components Limited;
+  (v)  Kryfs Transformers Private Limited;
+  (vi)  Unimacts Global LLC;
+  (vii)  Zetwerk Manufacturing SG Pte. Ltd.;
+  (viii)  Zap91 Solar India Private Limited; and
+  (ix)  Zet Town India Private Limited
+2.  Funding inorganic growth through unidentified acquisitions and other strategic acquisitions, and general corporate
+  purposes.
+  (collectively, the “Objects”).
+  The main objects clause and the objects incidental and ancillary to the main objects clause of our Memorandum of
+  Association enables our Company and the Subsidiaries to: (a) undertake their existing business activities; and (b)
+  undertake the activities for which the funds are being raised by in the Fresh Issue and are proposed to be funded from
+  the Net Proceeds.
+  In addition, our Company also expects to receive the benefits of listing of the Equity Shares on the Stock Exchanges,
+  including enhancement of our Company’s visibility and brand name and creation of a public market for our Equity
+  Shares in India.
+Utilization of Net Proceeds
+The Net Proceeds are proposed to be utilised in the following manner:
+  202
+  (in ₹ million)
+  S. No.  Objects  Estimated amount
+  1.  Repayment/prepayment, in part or full, of certain of or all of borrowings availed by:
+  (a) our Company;  13,000.00
+  (b) certain of our Subsidiaries, namely, (i) Sharp Tanks and Structurals Private Limited; (ii) Terra91  8,600.00
+  International Private Limited; (iii) Smile Electronics Limited; (iv) Kryfs Power Components
+  Limited; (v) Kryfs Transformers Private Limited; (vi) Unimacts Global LLC; (vii) Zetwerk
+  Manufacturing SG Pte. Ltd.; (viii) Zap91 Solar India Private Limited; and (ix) Zet Town India
+  Private Limited through investments in such Subsidiaries; and
+  2.  Funding inorganic growth through unidentified acquisitions and other strategic acquisitions, and  [●]#
+  general corporate purposes
+  Total  [●]#
+#
+  To be finalized upon determination of the Offer Price and updated in the Prospectus prior to filing with the RoC. The aggregate amount to be utilised for
+  general corporate purposes and unidentified inorganic acquisitions shall not exceed 35% of the Gross Proceeds. The amount to be utilised for general
+  corporate purposes or unidentified inorganic acquisitions, individually, as the case may be, shall not exceed 25% of the Gross Proceeds.
+Proposed schedule of implementation and deployment of Net Proceeds
+We propose to deploy the Net Proceeds towards the Objects in accordance with the estimated schedule of implementation and
+deployment of funds set forth in the table below:
+  (in ₹ million)
+  Particulars  Estimated amount  Estimated utilisation of Net
+  proposed to be financed  Proceeds
+  from Net Proceeds  Fiscal 2027  Fiscal 2028
+  Repayment/prepayment, in part or full, of certain of or all of borrowings
+  availed by:
+  (a) our Company; and  13,000.00  13,000.00  Nil
+  (b) certain of our Subsidiaries, namely, (i) Sharp Tanks and Structurals  8,600.00  8,600.00  Nil
+  Private Limited; (ii) Terra91 International Private Limited; (iii)
+  Smile Electronics Limited; (iv) Kryfs Power Components Limited;
+  (v) Kryfs Transformers Private Limited; (vi) Unimacts Global LLC;
+  (vii) Zetwerk Manufacturing SG Pte. Ltd.; (viii) Zap91 Solar India
+  Private Limited; and (ix) Zet Town India Private Limited, through
+  investments in such Subsidiaries;
+  Funding inorganic growth through unidentified acquisitions and other  [●](1)  [●](1)  [●](1)
+  strategic acquisitions, and general corporate purposes
+  Total  [●]  [●]  [●]
+(1)
+  The aggregate amount to be utilised for general corporate purposes and unidentified inorganic acquisitions shall not exceed 35% of the Gross Proceeds.
+  The amount to be utilised for general corporate purposes or unidentified inorganic acquisitions, individually, as the case may be, shall not exceed 25% of
+  the Gross Proceeds.
+Pursuant to a resolution dated October 5, 2026 passed by our Board, our Company has approved the utilisation of the Net
+Proceeds for the Objects, in accordance with the aforementioned schedule of implementation and deployment. The fund
+requirements, the deployment of funds and the intended use of the Net Proceeds as described herein are based on our current
+business plan, management estimates, prevailing market conditions and other commercial and technical factors. However, such
+fund requirements and deployment of funds have not been appraised by any bank, or financial institution or any other
+independent agency. We may have to revise our funding requirements and deployment on account of a variety of factors such
+as our financial and market condition, business and strategy, competition and other external factors such as changes in the
+business environment, terms and conditions of borrowings availed by our Company and Subsidiaries and interest or exchange
+rate fluctuations, which may not be within the control of our management. Depending upon such factors, we may have to reduce
+or extend the deployment period for the Objects, at the discretion of our management, and in accordance with applicable laws.
+This may entail rescheduling or revising the planned expenditure and funding requirements, including the expenditure for a
+particular purpose at the discretion of our management, subject to compliance with applicable laws. For details, see “Risk
+Factors – Our funding requirements and the proposed deployment of Net Proceeds have not been appraised by any bank or
+financial instituti [...truncated]
+
+===== BASIS OF OFFER PRICE =====
+BASIS FOR OFFER PRICE
+The Price Band and Offer Price will be determined by our Company, in consultation with the Book Running Lead Managers,
+on the basis of assessment of market demand for the Equity Shares to be offered through the Book Building Process and on the
+basis of quantitative and qualitative factors as described below. The face value of the Equity Shares is ₹1 each and the Offer
+Price is [●] times the Floor Price and [●] times the Cap Price, and Floor Price is [●] times the face value and the Cap Price is
+[●] times the face value.
+Bidders should also see “Risk Factors”, “Restated Consolidated Financial Information”, “Our Business”, “Other Financial
+Information”, and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” on pages 28,
+423, 309, 555 and 563 respectively, to have an informed view before making an investment decision.
+Qualitative factors
+Some of the qualitative factors and our strengths which form the basis for computing the Offer Price are as follows:
+•  Our unique business model enables us to serve multiple demand pools and makes us resilient across economic
+  cycles
+  o  Our end-to-end manufacturing platform, powered by our proprietary Zetwerk OS, transforms fragmented
+  capacity across 6,979 third-party suppliers in 26 countries, including India, and our 26 manufacturing
+  facilities across four countries, including India, as of Fiscal 2026, into a unified network that allows us to
+  serve multiple industries, manufacture diverse product types, and operate across geographies reliably and at
+  scale.
+  o  We have built a broad base of suppliers across 26 countries, expanding from a solely third-party supplier
+  model to a hybrid model incorporating both third parties and our own manufacturing capabilities.
+•  Ability to scale in a capital-efficient manner
+  o  Our hybrid, technology-driven manufacturing platform combines the advantages of both models, allowing us
+  to benefit from the scalability of a distributed network, with capacity accessed primarily through third-party
+  manufacturers without a corresponding increase in invested capital, together with the control of selective own
+  capacity for complex, high-value manufacturing. Our selective expansion into own manufacturing facilities
+  has also allowed us to capture higher margins.
+  o  Our hybrid model also supports simultaneous manufacturing, where our proprietary Zetwerk OS coordinates
+  a single order across multiple facilities to shorten production cycles. It automates key decisions and replaces
+  manual processes with technology. This creates meaningful operating leverage in our cost structure that
+  improves with scale.
+•  Zetwerk OS, our proprietary technology enables end‑to-end workflow management across the manufacturing
+  lifecycle while driving powerful network effects across our operations
+  o  Our manufacturing platform operates on our proprietary Zetwerk OS, an end-to-end technology that
+  standardises every stage of the manufacturing lifecycle and supports distributed manufacturing. Our
+  manufacturing platform integrates modules covering enquiry management, supplier recommendation and
+  evaluation, design for manufacturing, order management, production planning, quality management,
+  inventory tracking and logistics coordination.
+  o  Zetwerk OS is purpose-built for platform-scale workflow, managing thousands of concurrent projects across
+  multiple suppliers, geographies and product categories
+•  Deep relationships with customers driving higher revenue visibility and stickiness
+  o  Many of our customer relationships evolve from single‑order engagements to multi‑year contracts. This is
+  demonstrated by the Revenue from Repeat Customers in our Manufacturing Business which was 89.26% in
+  the three months ended June 30, 2026, 95.36% in the three months ended June 30, 2025, 80.15% in Fiscal
+  2026, 84.80% in Fiscal 2025 and 78.11% in Fiscal 2024. Our customer retention is reflected in our Fiscal
+  2023 to Fiscal 2026 median NRR of 128.85% (NRR stood at 175.49% in Fiscal 2023, 137.46% in Fiscal
+  2024, 87.13% in Fiscal 2025 and 120.24% in Fiscal 2026).
+  o  As customers transition from single‑product sourcing to multi‑category programs, we build multiple
+  touchpoints that strengthen these relationships through a broader range of procurement. Many customers also
+  expand their engagement beyond procurement, involving us earlier in design and manufacturing planning to
+  leverage our ODM and engineering capabilities and multi‑geography production footprint.
+  248
+•  Ability to add value-additive ecosystem services to our manufacturing platform
+  o  The unified, technology-first design of our manufacturing platform supports the addition of new value‑added
+  services on top of our core manufacturing capabilities. This ecosystem of services strengthens our customer
+  proposition by addressing structural gaps in the manufacturing ecosystem, unlocking capabilities that
+  individual customers cannot access on their own.
+  o  Through our Ecosystem Business segment, under the Terra91 brand, we consolidate material demand across
+  customers and suppliers to negotiate directly with raw material suppliers. This aggregated buying power
+  enables more efficient procurement, better pricing and higher input quality in ways not typically available to
+  individual suppliers or customers.
+•  Experienced, cycle-tested management team backed by an experienced board of directors
+  o  Our Promoters, Amrit Pratik Acharya and Srinath Ramakkrushnan, met at IIT Madras and began their careers
+  at ITC. Our Company was incorporated in December 2017 and was later joined by Vishal Chaudhary, Ankit
+  Fatehpuria and other members of our core management team.
+  o  Our founders and management team bring extensive and diverse experience across manufacturing,
+  engineering, and technology-led operations, providing the expertise needed to scale our manufacturing
+  platform. They have guided our business through economic cycles and expanded the scale and complexity of
+  our operations.
+•  Comprehensive and institutionalised risk management framework with strong protection against external risks
+  o  We have established a comprehensive and institutionalised risk management framework to mitigate key
+  business risks, including raw material price volatility, foreign exchange exposure, counterparty risk, and
+  supplier-related risks. Our diversified business model spanning multiple geographies and industries acts as a
+  natural hedge against sector-specific downturns.
+  o  We proactively hedge key raw materials such as aluminium, zinc, copper, lead and other inputs where we
+  have direct purchase exposure and exchange-traded hedging instruments are available, limiting the impact of
+  adverse commodity price movements on our cost base. As our scale has increased, we have negotiated more
+  favourable terms with key suppliers, several of whom now assume responsibility for their underlying raw
+  material price risks.
+  o  To manage counterparty risk, we apply credit risk underwriting processes and maintain insurance coverage.
+  We typically operate on back-to-back arrangements with suppliers, including quality assurance, warranties,
+  and performance guarantees, which further limits residual operational and financial risks.
+For further details, see “Risk Factors” and “Our Business” on pages 28 and 309, respectively.
+Quantitative factors
+Some of the information presented below relating to us is derived from the Restated Consolidated Financial Information. For
+details, see “Restated Consolidated Financial Information” and “Other Financial Information” on pages 423 and 555,
+respectively.
+Some of the quantitative factors which may form the basis for computing the Offer Price are as follows:
+A.  Basic and diluted earnings per Equity Share (“EPS”)
+  Financial Year  Basic EPS (in ₹)  Diluted EPS (in ₹)  Weight
+  Fiscal 2026  (6.69)  (6.69)  3
+  Fiscal 2025  (1.17)  (1.17)  2
+  Fiscal 2024  (4.86)  (4.86)  1
+  Weighted Average EPS  (4.54)  (4.54)
+  Three months period ended June 30, 2026*  (0.45)  (0.45)  -
+  Three months period ended June 30, 2025*  (6.08)  (6.08)  -
+  *
+  Not annualised
+  Notes:
+  1.  Weighted average = Aggregate of year-wise weighted EPS divided by the aggregate of weights i.e. (EPS x weight) for each year divided by
+  the total of weights.
+  2.  In accordance with Ind AS 33, Restated (loss)/Earnings per share for continuing operations (EPS) - Basic (in ₹) is calculated by dividing the
+  restated loss for the period/year attributable to Owners of the Holding Company by the weighted average number of equity shares, optionally
+  convertible redeemable preference shares, cumulative compulsorily convertible preference shares (“CCPS”) and vested employee stock
+  options and restricted stock units with no substantive consideration outstanding as at end of period/ year. Restated (loss)/Earnings per share
+  (EPS) – Basic (in ₹) have been adjusted for all periods/years presented in accordance with Ind AS 33 for reduction in capital base pursuant
+  to Board resolution dated March 19, 2026, bonus issue of equity shares in the ratio of 999 equity shares for every equity share held pursuant
+  249
+  to Board resolution dated November 14, 2022 and bonus issue of CCPS in the ratio of 4 Bonus CCPS for every equity share pursuant to Board
+  resolution dated June 27, 2025.
+  3.  In accordance with Ind AS 33, Restated (loss)/Earnings per share (EPS) - Diluted (in ₹) is calculated by dividing the restated loss for the
+  period/year attributable to Owners of the Holding Company by the weighted average number of equity shares, optionally convertible
+  redeemable preference shares, cumulative compulsorily convertible preference shares (”CCPS”) and vested employee stock options and
+  restricted stock units with no substantive consideration outstanding as at end of period/year. The effect of unvested employee stock options
+  and restricted stock units are anti-dilutive in nature for the years ended March 31, 2026, March 31, 2025 and March 31, 2024 and three
+  month period ended June 30, 2026 and June 30, 2025, hence has not been considered for the calculation of Restated (loss)/Earnings per share
+  (EPS) - Diluted (in ₹). Restated (loss)/Earnings per share (EPS) - Diluted (in ₹) have been adjusted for all periods/years presented in
+  accordance with Ind AS 33 for reduction in capital base pursuant to Board resolution dated March 19, 2026, bonus issue of equity shares in
+  the ratio of 999 equity shares for every equity share held pursuant to Board resolution dated November 14, 2022 and bonus issue of CCPS in
+  the ratio of 4 Bonus CCPS for every equity share pursuant to Board resolution dated June 27, 2025.
+B.  Price/Earning (“P/E”) ratio in relation to the Price Band of ₹[●] to ₹[●] per Equity Share:
+  Particulars  P/E at the Floor  P/E at the Cap
+  Price (number of  Price (number of
+  times)  times)
+  P/E ratio based on basic EPS for Financial Year ended March 31, 2026  [●]*  [●]*
+  P/E ratio based on diluted EPS for Financial Year ended March 31, 2026  [●]*  [●]*
+  *
+  To be updated after finalization of Price Band.
+C.  Industry peer group P/E ratio
+  There are no listed companies in India or globally which operate in a similar business model as ours.
+D.  Return on Net Worth (“RoNW”)
+  Financial Year  RoNW (%)  Weight
+  Fiscal 2026  (21.11)  3
+  Fiscal 2025  (4.76)  2
+  Fiscal 2024  (21.00)  1
+  Weighted Average  (15.64)
+  Three months period ended June 30, 2026*  (1.74)  -
+  Three months period ended June 30, 2025*  (22.82)  -
+  *
+  Not annualised
+  Notes:
+  1.  Weighted average = Aggregate of year-wise weighted RoNW divided by the aggregate of weights i.e. (RoNW x Weight) for each year/Total of
+  weights
+  2.  Return on Net Worth (%) (RoNW) = Loss for the period/year from continuing operations attributable to the owners of holding company
+  divided by Net Worth of the Company as at the end of the period/year.
+  3.  Net worth is the aggregate value of the paid-up share capital and all reserves created out of the profits, securities premium account and debit
+  or credit balance of profit and loss account, after deducting the aggregate value of the accumulated losses, deferred expenditure and
+  miscellaneous expenditure not written off, but does not include reserves created out of revaluation of assets, write back of depreciation and
+  amalgamation in accordance with Regulation 2(1)(hh) of SEBI ICDR Regulations, 2018. We have calculated net worth as the aggregate of
+  equity share capital, instrument entirely equity in nature, and other equity including share application money pending allotment less foreign
+  currency translation reserve.
+E.  Net Asset Value (“NAV”) per Equity Share
+  Period ended  NAV per Equity Share (₹)
+  As on June 30, 2026  25.85
+  As on March 31, 2026  31.26
+  After the Offer
+  - At the Floor Price  [●]^
+  - At the Cap Price  [●]^
+  - At the Offer Price  [●]#
+  ^
+  To be computed after finalization of Price Band.
+  #
+  To be determined on conclusion of the Book Building Process.
+  Notes:
+  1.  Net asset value per share is calculated as Net Worth at the end of period/year divided by number of shares outstanding at the end of
+  period/year. Number of shares outstanding at the end of period/year are aggregate number of equity shares, optionally convertible
+  redeemable preference shares, cumulative compulsorily convertible preference shares ('CCPS') and vested employee stock options with
+  no substantive consideration outstanding as at end of period/year. Number of shares outstanding at the end of period/year have been
+  adjusted for all years presented in accordance with principles of Ind AS 33 - Earnings per share for reduction in capital base pursuant
+  to Board resolution dated March 19, 2026, bonus issue of equity shares in the ratio of 999 equity shares for every equity share held
+  pursuant to Board resolution dated November 14, 2022 and bonus issue of CCPS in the ratio of 4 Bonus CCPS for every equity share
+  pursuant to Board resolution dated June 27, 2025.
+  2.  Net worth is the aggregate value of the paid-up share capital and all reserves created out of the profits, securities premium account and
+  debit or credit balance of profit and loss account, after deducting the aggregate value of the accumulated losses, deferred expenditure
+  and miscellaneous expenditure not written off, but does not include reserves created out of revaluation of assets, write back of
+  depreciation and amalgamation in accordance with Regulation 2(1)(hh) of SEBI ICDR Regulations, 2018. We have calculated net worth
+  250
+  as the aggregate of equity share capital, instrument entirely equity in nature, and other equity including share application money pending
+  allotment less foreign currency translation reserve.
+F.  Comparison of accounting ratios with listed industry peers
+  Global manufacturing capacity is organized through operating models that differ in asset ownership, and coordination
+  intensity. Each model represents a distinct way of converting supplier capability into finished industrial output.
+  •  Vertically Integrated (Captive) Manufacturing: Under this model, company own and operate dedicated
+  production facilities designed around specific product lines or process capabilities, placing asset ownership
+  primarily within the firm. Production planning, procurement, quality control, and logistics are managed
+  internally within the organization. Supplier relationships exist primarily at the raw-material or subcomponent
+  level, while final assembly and critical processes remain within captive plants. Capacity expansion occurs
+  through direct capital investment, and operational decisions are governed by internal production schedules.
+  •  Contract Manufacturing: In this model, a specialized manufacturing firm owns and operates production
+  facilities, while producing goods on behalf of external brands. Asset ownership is concentrated with the
+  manufacturer, whereas product design, intellectual property, branding, and market access remain with the
+  client company. Coordination between the brand and manufacturer is bilateral and contract driven. The brand
+  defines product specifications, quality standards, delivery timelines, and volume forecasts, while the contract
+  manufacturer executes production within agreed parameters. Capacity expansion is driven by long-term client
+  commitments, demand visibility, or aggregation of orders across multiple brands, and typically involves
+  investments in new production lines, automation, geographic expansion, or facility scaling.
+  •  Manufacturing Platform: In this model, production assets remain owned by independent suppliers, but a
+  centralized platform provides the coordination layer that governs how those assets are utilized. The platform
+  aggregates demand from multiple buyers and allocates work across a distributed supplier network, resulting
+  in high coordination intensity driven by standardized execution protocols and real-time monitoring. Supplier
+  onboarding, quality systems, procurement, and logistics are managed through shared digital infrastructure
+  that provides system-wide visibility and control. The capital architecture remains asset-light at the platform
+  level, with growth achieved by aggregating and optimizing existing supplier capacity rather than through
+  direct ownership of manufacturing assets. Rather than functioning as a passive marketplace, the platform
+  operates as an orchestration layer for distributed manufacturing, synchronizing capacity, financing, and
+  delivery across a multi-tier network.
+  We are a technology-led, asset-light manufacturing platform driving production of industrial goods, both in India and
+  globally. We aggregate manufacturing capacity across a network of third-party suppliers and our own facilities into a
+  “universal factory," unified through Zetwerk OS, our proprietary technology backbone. Our customers range across
+  sizes, from innovative startups to mature companies, and across industries, including utilities, renewables, consumer
+  electronics, artificial intelligence infrastructure, aerospace, space & defence, oil & gas, and industrial automation.
+  Accordingly, there are no listed companies in India or globally which operate in a similar business model as ours.
+G.  Key Performance Indicators (“KPIs”)
+  The KPIs disclosed below have been used historically by our Company to understand and analyze our business
+  performance, which in result, help us in analyzing the growth of business. Our Company considers that the KPIs set
+  forth below are the ones that may have a bearing for arriving at the basis for the Offer Price. The table below sets forth
+  the details of our KPIs that our Company considers have a bearing for arriving at the basis for Offer Price. All the
+  KPIs disclosed below have been approved by a resolution of our Audit Committee dated October 11, 2026 and certified
+  by M/s. RADS & Co., Chartered Accountants (FRN: 320298E) (UDIN: 26303622PUKTUW9356), on behalf of the
+  management of our Company by way of certificate dated October 11, 2026 and the Audit Committee has confirmed
+  that except as disclosed in this Red Herring Prospectus in accordance with the SEBI ICDR Regulations, SEBI circular
+  with bearing number SEBI/HO/CFD/CFD-PoD-2/P/CIR/2025/28 dated February 28, 2025 and the Industry Standards
+  on Key Performance Indicators Disclosures in the Draft Offer Document and Offer Document (“KPI Standards”),
+  no KPIs have been disclosed by our Company to any investors at any point of time during the three years prior to the
+  date of filing of this Red Herring Prospectus. Further, the KPIs disclosed herein have been subject to verification and
+  certification by M/s. RADS & Co., Chartered Accountants (FRN: 320298E), pursuant to their certificate dated October
+  11, 2026 (UDIN: 26303622PUKTUW9356) which has been included in “Material Contracts and Documents for
+  Inspection –Material Documents” on page 719. The KPIs that have been consistently used by the management to
+  analyse, track and monitor the operational and financial performance of our Company and were presented in the past
+  meetings of our Board or shared with the investors during the three years preceding the date of this Red Herring
+  Prospectus, which have been consequently identified as relevant and material KPIs and are disclosed in this “Basis for
+  Offer Price” section.
+  251
+The list of our KPIs along with brief explanation of the relevance of the KPI for our business operations for the three
+months period ended June 30, 2026 and June 30, 2025 and for the Financial Years ended March 31, 2026, March 31,
+2025 and March 31, 2024 are set forth below. The Bidders may refer to the following KPIs for an assessment of the
+performance of our Company across various business verticals and to facilitate an informed investment decision:
+  Particulars  For the three months period ended  Fiscal
+  June 30, 2026  June 30, 2025  2026  2025  2024
+Overall Business
+Revenue from Operations(1)(#) (₹ million)  41,178.77  26,494.35  159,133.23  113,318.56  123,643.72
+Period-on-Period/Y-o-Y Revenue Growth(2)  55.42%  NA*  40.43%  (8.35%)  NA*
+(#) (%)
+Gross Margin(3)(#) (%)  12.05%  11.77%  12.13%  12.06%  7.66%
+Contribution Margin(4) (#) (%)  8.53%  7.46%  8.17%  9.09%  6.21%
+Adjusted EBITDA(5)(#) (₹ million)  1,031.61  311.06  4,213.35  3,225.88  970.25
+Adjusted EBITDA Margin(6)(#) (%)  2.51%  1.17%  2.65%  2.85%  0.78%
+Revenue from Operations by Geography (%)(#)
+India(7) (#) (%)  83.53%  77.29%  82.54%  79.41%  75.43%
+USA(8) (#) (%)  12.77%  20.44%  14.33%  19.09%  21.54%
+Rest of the countries(9) (#) (%)  3.70%  2.27%  3.13%  1.50%  3.03%
+Manufacturing Business(#)
+Manufacturing Order Book(10) (₹ million)  130,623.96  85,346.96  123,700.09  86,289.78  61,697.46
+Manufacturing New Orders(11) (₹ million)  31,474.54  20,446.98  153,933.51  113,271.11  89,941.43
+Segment Revenue from Manufacturing  19,018.82  14,808.27  93,746.76  62,491.02  60,818.51
+Business(12) (₹ million)
+Period-on-Period/Y-o-Y Growth in segment  28.43%  NA*  50.02%  2.75%  NA*
+Revenue from Manufacturing Business(13)
+(%)
+Manufacturing Business Revenue(#)
+Energy Products(14) (₹ million)  11,342.98  8,672.80  65,075.72  34,818.44  41,596.61
+Precision Products(15) (₹ million)  4,367.40  3,357.52  13,971.87  14,058.55  5,809.45
+Capital Goods(16) (₹ million)  3,303.38  2,772.14  14,643.97  13,532.17  13,160.38
+Other Operating Revenue(17) (₹ million)  5.06  5.81  55.20  81.86  252.07
+Manufacturing Business Revenue By Region
+India(18) (%)  64.33%  59.36%  70.40%  62.66%  53.42%
+International(19) (%)  35.67%  40.64%  29.60%  37.34%  46.58%
+Other Manufacturing Indicators
+Manufacturing  Business  Contribution  16.04%  12.32%  12.40%  13.43%  10.80%
+Margin(20) (%)
+Manufacturing Business EBITDA(21) (₹  1,246.88  715.75  5,650.86  4,002.45  3,452.66
+million)
+Manufacturing Business EBITDA Margin(22)  6.56%  4.83%  6.03%  6.40%  5.68%
+(%)
+* Not applicable, as the relevant financial information for the three months ended June 30, 2024 and Fiscal 2023 have not been included in this
+  Red Herring Prospectus.
+(#) Represents figures from continuing operations
+Notes:
+1.  Revenue from Operations refers to revenue recognized in accordance with IND AS.
+2.  Period-on-Period/Y-o-Y Revenue Growth (%) is calculated as a percentage of revenue from operations of the relevant period/year minus
+  revenue from operations of the preceding period/year, divided by revenue from operations of the preceding period/year.
+3.  Gross margin % is calculated as Gross Profit divided by revenue from operations – continuing operations. Gross Profit represents revenue
+  from operations-continuing operations less cost of materials consumed (including materials for construction and project contracts), purchase
+  of stock-in-trade and (Increase)/ decrease in inventories of finished goods, stock-in-trade and work-in-progress.
+4.  Contribution Margin % is calculated as Contribution Margin divided by revenue from operations. Contribution margin represents Gross
+  Margin less directly attributable expenses namely, direct wages, subcontracting charges, freight charges, etc.
+5.  Adjusted EBITDA is computed as the loss for the period/year - continuing operations plus total tax expense/(credit), depreciation and
+  amortisation expenses, finance costs, share based payment expense, exceptional items(net), share of loss of joint ventures and associate less
+  other income from continuing operations.
+6.  Adjusted EBITDA Margin (%) is computed as Adjusted EBITDA for the relevant period/year divided by revenue from operations for the
+  relevant period/year, expressed as percentage.
+7.  Represents segment revenue from operations from India based on IND AS 108 Operating Segments, expressed as a percentage of Revenue
+  from Operations.
+8.  Represents segment revenu [...truncated]
+
+===== OUR BUSINESS =====
+OUR BUSINESS
+Unless the context otherwise requires, in this section, references to the “Group”, “we”, “us” and “our” are to our Company
+and our Subsidiaries as of and for the relevant Fiscals/periods, on a consolidated basis. Some of the information in the following
+section, especially information with respect to our plans and strategies, consists of certain forward-looking statements that
+involve risks and uncertainties. Our actual results may differ materially from those expressed in, or implied by, these forward-
+looking statements. You should read the section “Forward-Looking Statements” on page 27 for a discussion of the risks and
+uncertainties related to those statements and the section “Risk Factors” on page 28 for a discussion of certain risks that may
+affect our business, financial condition, or results of operations.
+Unless otherwise stated, the financial information in this section is presented on a restated consolidated basis and has been
+derived from our Restated Consolidated Financial Information included in this Red Herring Prospectus beginning on page
+423. See “Certain Conventions, Presentation of Financial, Industry and Market Data and Currency of Presentation―Industry
+and Market Data” on page 24. Our financial year ends on March 31 of each year. Accordingly, references to “Fiscal 2024”,
+“Fiscal 2025” and “Fiscal 2026”, are to the 12-month period ended March 31 of the relevant year. Financial information for
+the three months periods ended June 30, 2026 and June 30, 2025 is not indicative of the financial results for the full year and
+is not comparable with financial information for Fiscals 2026, 2025 and 2024.
+We have included certain Non-GAAP financial measures and other performance indicators relating to our financial
+performance and business in this Red Herring Prospectus, each of which are supplemental measures of our performance and
+liquidity and are not required by, or presented in accordance with the Ind AS, Indian GAAP, IFRS or U.S. GAAP. Such measures
+and indicators are not defined under Ind AS, Indian GAAP, IFRS or U.S. GAAP, and therefore, should not be viewed as
+substitutes for performance, liquidity or profitability measures under Ind AS, Indian GAAP, IFRS or U.S. GAAP. In addition,
+such measures and indicators are not standardised terms, and a direct comparison of these measures and indicators between
+companies may not be possible. Other companies may calculate these measures and indicators differently from us, limiting
+their usefulness as a comparative measure. Although such measures and indicators are not a measure of performance
+calculated in accordance with applicable accounting standards, our Company’s management believes that they are useful to
+an investor in evaluating us as they are widely used measures to evaluate a company’s operating performance. For risks
+relating to Non-GAAP Measures, see “Risk Factors—Internal Risks—This Red Herring Prospectus contains certain non-GAAP
+financial measures and other statistical information related to our operations and financial performance. These non-GAAP
+measures and statistical information may vary from any standard methodology that is applicable across the industry, and
+therefore may not be comparable with financial or statistical information of similar nomenclature computed and presented by
+other companies.” on page 65.
+Unless otherwise indicated, industry and market data used in this section have been derived from the report titled “Overview
+of Durable Goods Procurement and Manufacturing Platform Market” dated August 3, 2026, prepared and issued by Redseer,
+which has been commissioned and paid for by us and prepared, only for the purposes of understanding the industry exclusively
+in connection with the Offer. The Redseer Report has been made available on the website of our Company at ir.zetwerk.com
+and will continue to be made available until the Bid/Offer Closing Date and has also been included in “Material Contracts and
+Documents for Inspection—Material Documents” on page 719. The data included herein includes excerpts from the Redseer
+Report and such excerpts may have been re-ordered by us for the purposes of presentation. There are no parts, data or
+information which may be relevant for the proposed Offer, that has been left out or changed in any manner. Unless otherwise
+indicated, all financial, operational, industry and other related information derived from the Redseer Report and included
+herein with respect to any particular year, refers to such information for the relevant year. For further details, please see “Risk
+Factors—Internal Risks—This Red Herring Prospectus contains information from an industry report which has been prepared
+exclusively for the Offer and paid for and commissioned by us exclusively in connection with the Offer and any reliance on such
+information for making an investment decision in the Offer is subject to inherent risks” and “Industry Overview” on pages 63
+and 281, respectively.
+Overview
+We are a technology-led, asset-light manufacturing platform for industrial and consumer goods in India and globally. We
+aggregate manufacturing capacity across a network of third-party suppliers and our own facilities into a “universal factory,”
+unified through Zetwerk OS, our proprietary technology backbone. Our customers range across sizes, from innovative startups
+to mature companies, and across industries, including utilities, renewables, consumer electronics, artificial intelligence
+infrastructure, aerospace, space & defence, oil & gas, and industrial automation. Some of our customers include Siemens
+Gamesa, Acer India Private Limited, boAt, NextPower (formerly Nextracker), CG Power and Industrial Solutions Limited,
+NTPC Renewable Energy Limited, L&T MHI Power Boiler Pvt Ltd, DRDO (Electronics & Radar Development Establishment
+(LRDE)), National Aluminium Company Limited, Indian Oil Corporation Limited, Mortenson, Nordex Acciona, Indian Air
+Force, and Numaligarh Refinery Limited. Third-party suppliers with whom we work have capabilities in manufacturing
+processes, including sheet metal stamping, metal fabrication, injection moulding, extrusions, assembly, die casting, forging,
+grinding and machining, and span several countries, including industrial geographies such as India, Vietnam, Thailand, Taiwan,
+  309
+Germany, Spain, Eastern Europe, Mexico and the USA. Since our incorporation, we have cumulatively delivered products and
+raw materials worth ₹743,742.10 million in terms of GMV to our customers.
+Note: For Fiscal 2026.
+According to the Redseer Report: manufacturing capacity is often globally fragmented, with production typically carried out in
+uncoordinated, discrete facilities characterised by variable quality and inconsistent service levels, making scaling inefficient
+and unreliable. This challenge is particularly pronounced in new, high-growth industries such as renewable energy, artificial
+intelligence, defense, aerospace, and space exploration, where rapid growth in demand for manufactured goods is often
+bottlenecked by supply chain constraints. For instance, industry average lead times for power transformer manufacturing range
+from 30-36 months in India to 36-42 months in the United States.
+We are well positioned to address these challenges and pursue manufacturing opportunities in new industries. We enable our
+customers to build complex products faster, across multiple geographies, while meeting quality requirements and maintaining
+competitive costs. Our platform model is designed to scale capacity and capabilities in an asset‑light manner. We are focused
+on accelerating time to market for our customers. By aggregating spare capacity from multiple third‑party suppliers, we are
+able to manufacture products at low cost while optimising for speed and quality. Zetwerk OS, our proprietary technology, drives
+the end‑to‑end order flow, from supplier selection and digital recipes to project management, quality control, and logistics. Our
+manufacturing platform can distribute a single order across multiple third‑party suppliers and our own manufacturing facilities,
+enabling simultaneous manufacturing. Through such distribution, we are also able to break geographic barriers, enabling us to
+serve customers using suppliers across geographies. Through a combination of the capabilities mentioned above and the
+inherent benefits of a platform model, we have been able to build a large base of customers.
+  310
+The growth in our New Orders and Customer Count since our incorporation is illustrated in the chart below:
+Notes:
+(1) New Orders represent the aggregate value of purchase orders or contracts received from customers during a specified period/ Fiscal for the supply of
+  products or services for the Manufacturing Business and Ecosystem Business (excluding exited categories).
+(2) Customer Count refers to the number of unique customers (based on the contracting entity) we served during the period/ Fiscal for the Manufacturing
+  Business and Ecosystem Business (excluding exited categories).
+Additionally, according to the Redseer Report, manufacturing in India has multiple secular tailwinds, such as China+1
+diversification, ‘Make in India,’ defence indigenisation, and large infrastructure spending on public and private capital
+expenditure, but faces challenges around supply fragmentation, thereby creating reliability issues. We believe that we are well
+equipped to solve such challenges. According to the Redseer Report, as of Fiscal 2026, manufacturing platforms have a total
+addressable market (“TAM”) of ₹10.26-₹12.57 trillion (US$120.65-147.91 billion) and ₹2.07-₹6.26 trillion (US$24.32-73.60
+billion) in India and the USA, respectively. From Fiscal 2026, the total addressable market for manufacturing platforms is
+expected to grow to ₹17.68-₹20.00 trillion (US$208.01-235.27 billion) and ₹26.76-₹30.95 trillion (US$314.81-364.09 billion)
+in India and the USA, respectively, by Fiscal 2031.
+Our two reportable business segments through which we monetise our manufacturing platform are:
+(i)  our Manufacturing Business segment, where we offer our customers the ability to manufacture diversified industrial
+  and consumer products through our aggregated base of suppliers and our own facilities; and
+(ii)  our Ecosystem Business segment, branded Terra91, where we aggregate and source industrial commodities from
+  suppliers, enabling cost‑effective procurement for our customers, including customers in our Manufacturing Business.
+Following board resolutions dated January 23, 2026 and March 9, 2026, and a shareholders resolution dated March 26, 2026,
+we decided to discontinue our Civil Infrastructure Works segment, which undertook construction and other civil infrastructure
+projects such as water pipelines and railway tracks, and authorized the sale of its operations. The discontinuation of the Civil
+Infrastructure Works segment was made pursuant to our strategic realignment to focus on our core business segments.
+Our revenue from operations – continuing operations grew from ₹123,643.72 million in Fiscal 2024 to ₹159,133.23 million in
+Fiscal 2026 and from ₹26,494.35 million for the three months period ended June 30, 2025 to ₹41,178.77 million for the three
+months period ended June 30, 2026, while our Adjusted EBITDA grew from ₹970.25 million in Fiscal 2024 to ₹4,213.35
+million in Fiscal 2026 and from ₹311.06 million for the three months period ended June 30, 2025 to ₹1,031.61 million for the
+three months period ended June 30, 2026, and our Adjusted PBT grew from ₹(2,487.56) million in Fiscal 2024 to ₹457.27
+million in Fiscal 2026 and from ₹(375.03) million for the three months period ended June 30, 2025 to ₹(116.25) million for the
+three months period ended June 30, 2026. Our Segment revenue - Manufacturing business based on Ind AS 108 Operating
+Segments grew from ₹60,818.51 million in Fiscal 2024 to ₹93,746.76 million in Fiscal 2026 and from ₹14,808.27 million for
+the three months period ended June 30, 2025 to ₹19,018.82 million for the three months period ended June 30, 2026, while our
+Segment revenue - Ecosystem business based on Ind AS 108 Operating Segments grew from ₹62,825.21 million in Fiscal 2024
+to ₹65,386.47 million in Fiscal 2026 and from ₹11,686.08 million for the three months period ended June 30, 2025 to ₹22,159.95
+million for the three months period ended June 30, 2026.
+  311
+(i)  Manufacturing Business
+We enable our customers to manufacture a diversified range of industrial and consumer products. Following receipt of customer
+orders, products are manufactured through a combination of third‑party supplier network and our own manufacturing facilities.
+Revenue is recognised once products are physically manufactured and delivered to customers. This is our primary source of
+revenue and is reported under the “Manufacturing Business” segment. Within this segment, our key product verticals include
+Energy Products, Precision Products and Capital Goods. Examples of products or their components manufactured through our
+platform are set out in the diagram below.
+  312
+Our segment revenue - Manufacturing business based on Ind AS 108 Operating Segments has been the key driver of our growth,
+accounting for 46.19% and 58.91% of our revenue from operations – continuing operations for the three months period ended
+  313
+June 30, 2026 and Fiscal 2026, respectively. Our segment revenue - Manufacturing business based on Ind AS 108 Operating
+Segments grew by 2.75% from ₹60,818.51 million in Fiscal 2024 to ₹62,491.02 million in Fiscal 2025, and further by 50.02%
+to ₹93,746.76 million in Fiscal 2026. It also grew by 28.43% from ₹14,808.27 million for the three months period ended June
+30, 2025 to ₹19,018.82 million for the three months period ended June 30, 2026.
+Our Manufacturing Business EBITDA grew by 15.92% from ₹3,452.66 million in Fiscal 2024 to ₹4,002.45 million in Fiscal
+2025, and further by 41.19% to ₹5,650.86 million in Fiscal 2026. It also grew by 74.21% from ₹715.75 million for the three
+months period ended June 30, 2025 to ₹1,246.88 million for the three months period ended June 30, 2026. Our Manufacturing
+Business EBITDA Margin improved from 5.68% in Fiscal 2024 to 6.40% in Fiscal 2025 and remained relatively stable at
+6.03% in Fiscal 2026. Manufacturing Business EBITDA Margin improved from 4.83% for the three months period ended June
+30, 2025 to 6.56% for the three months period ended June 30, 2026. Further, our Manufacturing Business ROCE was 22.75%
+in Fiscal 2026 and 30.76% in Fiscal 2025.
+(ii) Ecosystem Business
+Over time, we expanded our role to help suppliers of our Manufacturing Business procure raw materials at competitive prices
+by leveraging the scale and throughput of our manufacturing platform to negotiate more favourable commercial terms. This
+capability subsequently developed into a separate business, branded “Terra91”, through which customers—including suppliers
+and customers of our Manufacturing Business—are able to source industrial commodities and raw materials through our
+platform. This is accounted for under our Ecosystem Business segment.
+Our segment revenue - Ecosystem business based on Ind AS 108 Operating Segments was ₹22,159.95 million for the three
+months period ended June 30, 2026 and ₹65,386.47 million in Fiscal 2026. Our Ecosystem Business EBITDA was ₹305.79
+million for the three months period ended June 30, 2026 and ₹807.98 million in Fiscal 2026. Our Ecosystem Business EBITDA
+Margin was 1.38% for the three months period ended June 30, 2026 and 1.24% in Fiscal 2026.
+For a breakdown of our revenue from operations by segment, please see the section titled “Management’s Discussion and
+Analysis of Financial Condition and Results of Operations—Principal Factors Affecting our Financial Condition and Results
+of Operations—Demand from our key products” on page 568.
+Our Journey: The Evolution of Our Manufacturing Platform
+Our Company was incorporated in December 2017. Our Promoters, Amrit Pratik Acharya and Srinath Ramakkrushnan, bring
+experience in manufacturing sourcing from their previous professional roles at ITC.
+In our early stages, we operated as a pure manufacturing marketplace, with demand sourced entirely from India and supplied
+exclusively through Indian suppliers. Our initial focus was on aggregating suppliers for capital goods products that were
+typically project‑based and non‑recurring in nature. For example, customers setting up greenfield manufacturing facilities
+would engage us to source machinery or machine components. Such orders were generally one‑time, with limited follow‑on
+requirements other than spare parts.
+Over time, we intentionally diversified the platform across multiple growth vectors, including:
+•  expanding beyond India to serve international customers;
+•  supplying recurring, opex‑linked components in addition to project‑based capex orders;
+•  adding design‑led capabilities by offering original design manufacturing (“ODM”) solutions for select customers and
+  components;
+•  expanding our supplier base internationally and also to include a broader range of manufacturing processes capable
+  of serving multiple industries; and
+•  selectively establishing our own manufacturing facilities.
+As a result, we have evolved from an India‑only marketplace catering to limited industries into a diversified and resilient
+manufacturing platform with multiple demand engines, a multi-geography supplier base and an expanded capability for
+customers in India and internationally.
+  314
+Notes: For Fiscal 2026.
+(1) Represents the Revenue recognised from sale of products and services in domestic markets as a % of revenue from Manufacturing Business.
+(2) Represents the Revenue recognised from sale of products and services in international markets as a % of revenue from Manufacturing Business.
+(3) Manufacturing Business Share of GMV from One-time Capex Products represents GMV derived from the sale of products purchased by Manufacturing
+  Business customers other than Recurring Components, expressed as a percentage of Manufacturing Business GMV.
+(4) Manufacturing Business Share of GMV from Recurring Components represents GMV derived from the sale of components purchased by Manufacturing
+  Business customers on a recurring basis as part of their operational requirements to service their customers, expressed as a percentage of Manufacturing
+  Business GMV.
+(5) Manufacturing Business Share of GMV from Build-to-Print Contracts represents the percentage of Manufacturing Business GMV derived from Build-
+  to-Print contracts which are contracts under which the Company is responsible only for manufacturing and other works according to customer-provided
+  engineering drawings and specifications.
+(6) Manufacturing Business Share of GMV from ODM Contracts represents the percentage of Manufacturing Business GMV derived from ODM contracts
+  which are contracts under which the Company is responsible for product design in addition to manufacturing and other works.
+The table below sets forth the number of our total suppliers for the periods/ Fiscals indicated:
+  Three months period ended
+  Fiscal
+  Particulars  June 30,
+  2026  2025  2026  2025  2024
+Total Suppliers(1)  3,735  3,336  6,979  6,731  6,088
+Note:
+(1) Total Suppliers are suppliers with whom we have transacted during the respective period/ Fiscal in our entire platform excluding exited categories.
+Growth of our Recurring Components Business
+According to the Redseer Report, capital expenditure is largely project-based, with demand being non-recurring in nature and
+closely linked to macroeconomic cycles. The impact of the COVID-19 pandemic highlighted the cyclical nature of this project-
+driven operating model, prompting us to diversify from our original focus on one-time “capex”-related products to also serving
+original equipment manufacturers (“OEMs”) with recurring components linked to their ongoing opex budgets, such as torque
+tubes for NextPower, laptops and motherboards for Acer India Private Limited and transformer lamination for companies such
+as Bharat Bijlee Ltd. We believe this diversification from predominantly one-time capex products to a mix of capex products
+and recurring components has made our revenue more predictable, enabling us to keep growing even when capex-related
+demand was lower, as was the case in Fiscal 2025. The chart below illustrates the increasing contribution of recurring
+components to our Manufacturing Business GMV across macroeconomic cycles.
+  315
+Note: Manufacturing Business Share of GMV from Recurring Components represents GMV derived from the sale of components purchased by Manufacturing
+Business customers on a recurring basis as part of their operational requirements to service their customers, expressed as a percentage of Manufacturing
+Business GMV.
+Within our Manufacturing Business segment, our Precision Products vertical comprises wholly recurring components and our
+Energy Products vertical comprises both one-time capex products and recurring components, while our Capital Goods vertical
+is entirely capex products. As shown in the chart below, our Energy and Precision Products verticals have grown at a faster
+pace than our Capital Goods vertical.
+Note:
+(1) Overall Segment Revenue from Manufacturing Business as depicted in the above chart includes Other Operating Revenue for the respective periods/
+  Fiscals.
+International Business Expansion
+According to the Redseer Report, global manufacturing is entering a new phase of re-industrialisation and strategic rebalancing.
+While earlier industrial cycles were driven by export competitiveness and deep global integration, the current decade is defined
+by resilience, supply security, and geographic diversification. Governments across major economies are advancing industrial
+policy to strengthen domestic manufacturing bases, while companies are expanding production footprints beyond traditional
+  316
+hubs to mitigate concentration risk. Co [...truncated]
+
+===== OUR PROMOTERS AND PROMOTER GROUP =====
+OUR PROMOTERS AND PROMOTER GROUP
+Amrit Pratik Acharya and Srinath Ramakkrushnan are the Promoters of our Company.
+As on the date of this Red Herring Prospectus, our Promoters hold in aggregate 243,882,540 Equity Shares of face value of ₹1
+each, which constitute 15.86% of the subscribed and paid-up share capital of our Company on a fully diluted basis.
+For further details regarding the shareholding of our Promoters, see “Capital Structure – Shareholding of our Promoters and
+Promoter Group” on page 180.
+Details of our Promoters
+  Amrit Pratik Acharya, born on September 19, 1988, aged 38 years, is one of our
+  Promoters, an Executive Director, Managing Director, Chairperson and Chief Executive
+  Officer of our Company. He currently resides at H-50, Lumbin Vihar,
+  Chandrasekharpur, Sailashree Vihar, Bhubaneswar, Khorda 751 021, Odisha, India.
+  For further details in relation to his address, educational qualifications, experience in
+  the business or employment, positions/posts held in the past and other directorships,
+  other ventures, special achievements, business and financial activities, see “Our
+  Management – Brief biographies of our Directors” beginning on page 403.
+  His permanent account number is APUPA3336A.
+  Srinath Ramakkrushnan, born on June 23, 1988, aged 38 years, is one of our
+  Promoters and an Executive Director and Chief Operating Officer of our Company. He
+  currently resides at Villa 19, Lane 1 Phase 1, Adarsh Palm Retreat Villas,
+  Devarabisanhalli, Bellandur, Bengaluru 560 103, India.
+  For further details in relation to his address, educational, qualifications, experience in
+  the business or employment, positions/posts held in the past and other directorships,
+  other ventures, special achievements, business and financial activities, see “Our
+  Management – Brief biographies of our Directors” beginning on page 403.
+  His permanent account number is BIJPS0364K.
+Our Company confirms that the respective permanent account numbers, bank account numbers, passport numbers, Aadhar card
+numbers and driving license numbers of our Promoters were submitted to the Stock Exchanges at the time of filing of the Pre-
+filed Draft Red Herring Prospectus.
+Other ventures of our Promoters
+Except as disclosed in this section under “- Promoter Group”, under “History and Certain Corporate Matters – Our
+Subsidiaries, Joint Ventures and Associates”, and in the section “Our Management - Our Board - Directorships in other
+companies” on pages 373 and 401, respectively, our Promoters are not involved in any other ventures.
+Change in the control of our Company
+There has been no change in the control of our Company in the last five years preceding the date of this Red Herring Prospectus.
+Pursuant to its resolution dated January 23, 2026, our Board identified Amrit Pratik Acharya and Srinath Ramakkrushnan as
+the Promoters of our Company.
+Interests of Promoters and common pursuits
+Our Promoters are interested in our Company to the extent that (i) they are the Promoters of our Company; (ii) to the extent of
+their direct and indirect shareholding in our Company and certain of its Subsidiaries, Joint Ventures and Associates and
+  419
+dividends, if any, or any other distributions payable in respect thereto; including the dividend payable, if any, and any other
+distributions in respect of the Equity Shares held by them in our Company, from time to time, (iii) to the extent their respective
+immediate relatives hold shares in the Company and our Subsidiaries, and (iv) they have availed loans from our Company, as
+disclosed in “Our Management - Interests of Key Managerial Personnel and Senior Management” on page 417. For details of
+the shareholding of our Promoters and details of the pledged shares of our Promoter and Promoter Group in our Company, see
+“Capital Structure - Build-up of the shareholding of our Promoters in our Company” and “Capital Structure - Pledged Equity
+Shares” on pages 178 and 172, respectively.
+Our Promoters are also the Executive Directors of our Company and may be deemed to be interested to the extent of their
+remuneration and reimbursement of expenses, payable to them, if any, in their capacity as Directors. For other details, see “Our
+Management - Interest of Directors” on page 407.
+No sum has been paid or agreed to be paid to our Promoters or to the firms or companies in which our Promoters are interested
+as a member in cash or shares or otherwise by any person, either to induce them to become or to qualify them, as a director or
+promoter or otherwise for services rendered by our Promoters or by such firms or companies in connection with the promotion
+or formation of our Company.
+Except for the Shareholders' Agreement, our Promoters have not entered into any agreements which either directly or indirectly
+or potentially or whose purpose or effect is to impact the management or control of the Company or impose any restriction or
+create any liability upon our Company, whether or not our Company is a party to such agreements. For more details, see
+“History and Certain Corporate Matters - Shareholders' agreements and other material agreements - Key terms of subsisting
+shareholders' agreements” on page 397.
+Our Promoters have no interest in any property acquired by our Company during the three years immediately preceding the
+date of this Red Herring Prospectus or proposed to be acquired by our Company, or in any transaction by our Company for
+acquisition of land, construction of building or supply of machinery, etc.
+Payment or benefit to our Promoters or members of our Promoter Group
+Except as stated in “Summary of Related Party Transactions” on page 89, no amount or benefit has been paid or given to our
+Promoters or any of the members of the Promoter Group during the two years preceding the filing of this Red Herring Prospectus
+nor is there any intention to pay or give any amount or benefit to our Promoters or any of the members of the Promoter Group.
+Material guarantees given by our Promoter to third parties with respect to specified securities of our Company
+Our Promoters have not given any material guarantees to any third party with respect to the specified securities of our Company
+as on date of this Red Herring Prospectus.
+Companies and firms with which our Promoters have disassociated in the last three years
+Our Promoters have not disassociated themselves from any company or firm in the last three years immediately preceding the
+date of this Red Herring Prospectus.
+Confirmations
+Our Promoters and members of our Promoter Group have not been declared Wilful Defaulters or Fraudulent Borrowers.
+Our Promoters and members of our Promoter Group have not been prohibited from accessing the capital markets or debarred
+from buying, selling or dealing in securities under any order or direction passed by SEBI or any other securities market regulator
+or any other authority/court.
+Our Promoters are not and have not been promoters or directors of any other company which is debarred from accessing or
+operating in capital markets under any order or direction passed by SEBI or any other securities market regulator or any other
+regulatory or governmental authority, court or tribunal in India or abroad.
+Our Promoters have not been declared as fugitive economic offenders under the Fugitive Economic Offenders Act, 2018.
+In the ordinary course of business of our Company, there is no conflict of interest between, any suppliers of raw materials and
+the third-party service providers (which are crucial for operations of our Company) and our Promoters and members of our
+Promoter Group.
+  420
+Promoter Group
+The following individuals and entities constitute our Promoter Group in terms of Regulation 2(1)(pp) of the SEBI ICDR
+Regulations in addition to our Promoters:
+Natural persons who are part of our Promoter Group
+The following table sets forth details of the natural persons who are part of our Promoter Group (due to their relationship with
+our Promoters):
+Sr. No.  Name [...truncated]
+
+===== RISK FACTORS =====
+SECTION II: RISK FACTORS
+An investment in our Equity Shares involves a high degree of risk. You should carefully consider all the information in this Red
+Herring Prospectus, including the risks and uncertainties described below before making an investment in our Equity Shares.
+We have described the risks and uncertainties that we believe are material, but these risks and uncertainties may not be the
+only risks relevant to us, our Equity Shares, or the industry in which we currently operate or propose to operate. Unless
+specified or quantified in the relevant risk factors below, we are not in a position to quantify the financial or other implications
+of any of the risks mentioned in this section. The risks described in this section are those that we consider to be the most
+significant to our business, results of operations, financial condition and cash flows as of the date of this Red Herring
+Prospectus. The risks set out in this section may not be exhaustive and are not the only ones relevant to us or Equity Shares,
+additional risks and uncertainties not presently known to us, or which we currently deem to be immaterial, may arise or may
+become material in the future and may also impair our business. If any or a combination of the following risks actually occur,
+or if any of the risks that are currently not known or deemed to be not relevant or material now actually occur or become
+material in the future, our business, cash flows, prospects, financial condition and results of operations could suffer, the trading
+price of our Equity Shares could decline, and you may lose all or part of your investment. For more details on our business and
+operations, see “Our Business,” “Industry Overview,” “Key Regulations and Policies,” “Restated Consolidated Financial
+Information,” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” on pages 309,
+281, 353, 423 and 563, respectively, as well as other financial and statistical information included elsewhere in this Red Herring
+Prospectus. In making an investment decision, you must rely on your own examination of our Company and the terms of the
+Offer, including the merits and risks involved, and you should consult your tax, financial and legal advisors about the particular
+consequences of investing in the Offer. Prospective investors should pay particular attention to the fact that our Company is
+incorporated under the laws of India and is subject to a legal and regulatory environment which may differ in certain respects
+from that of other countries.
+This Red Herring Prospectus also contains forward-looking statements that involve risks, assumptions, estimates and
+uncertainties. Our actual results could differ materially from those anticipated in these forward-looking statements as a result
+of certain factors, including but not limited to the considerations described below and elsewhere in this Red Herring Prospectus.
+For details, see “Forward-Looking Statements” on page 27.
+Unless the context otherwise requires, in this section, references to the “Group”, “we”, “us” and “our” are to our Company
+and our Subsidiaries as of and for the relevant periods/ Fiscals, on a consolidated basis. Unless otherwise indicated, industry
+and market data in this section have been derived from the report titled “Overview of Durable Goods Procurement and
+Manufacturing Platform Market” dated August 3, 2026, prepared and issued by Redseer Strategy Consultants Private Limited,
+which has been commissioned and paid for by us and prepared, only for the purposes of understanding the industry exclusively
+in connection with the Offer. The Redseer Report has been made available on the website of our Company at ir.zetwerk.com
+and will continue to be made available until the Bid/ Offer Closing Date and has also been included in “Material Contracts
+and Documents for Inspection—Material Documents” on page 719. The data included herein includes excerpts from the
+Redseer Report and such excerpts may have been re-ordered by us for the purposes of presentation. There are no parts, data
+or information which may be relevant for the proposed Offer, that has been left out or changed in any manner. Unless otherwise
+indicated, all financial, operational, industry and other related information derived from the Redseer Report and included
+herein with respect to any particular year, refers to such information for the relevant year. For further details, please see “—
+Internal Risks—This Red Herring Prospectus contains information from an industry report which has been prepared
+exclusively for the Offer and paid for and commissioned by us exclusively in connection with the Offer and any reliance on such
+information for making an investment decision in the Offer is subject to inherent risks.” and “Industry Overview” on pages 63
+and 281, respectively. Unless otherwise indicated or unless context requires otherwise, the financial information in this section
+has been derived from the Restated Consolidated Financial Information. The risk factors have been ordered on the basis of
+their materiality.
+INTERNAL RISKS
+1.  We incurred a restated loss for the period/year from continuing operations of ₹641.29 million, ₹8,806.65 million,
+  ₹9,643.93 million, ₹2,150.69 million and ₹8,525.31 million for the three months periods ended June 30, 2026 and June
+  30, 2025 and Fiscals 2026, 2025 and 2024, respectively, and certain of our Subsidiaries have incurred losses in the past.
+  Any similar losses in the future may adversely affect our business, financial condition and cash flows.
+  We started our operations in 2018 and have grown significantly. Specifically, over the last three years, we have significantly
+  scaled our operations across segments and geographies, resulting in the growth of our revenue from operations and have
+  seen an increase in Manufacturing New Orders, Manufacturing Business Share of GMV from ODM Contracts and average
+  order value. For further details, see “Our Business – Overview” on page 309. To support this growth, we have increased
+  our investments in enhancing our original design manufacturing capabilities, execution capabilities, new product categories
+  and talent pool, all of which increased our total expenses. As a result, we had a restated loss for the period/ year in the three
+  28
+months periods ended June 30, 2026 and June 30, 2025 and Fiscals 2026, 2025 and 2024. Set out below is a table showing
+our restated loss from continuing operations and discontinued operations for the periods/ Fiscals indicated.
+  Particulars  Three months period ended  Fiscal
+  June 30,
+  2026  2025  2026  2025  2024
+  (in ₹ million)
+  Restated loss before exceptional items and tax from  (513.92)  (729.21)  (806.04)  (1,210.02)  (4,266.32)
+  continuing operations
+  Exceptional items (net)*  -  (8,032.33)  (8,358.39)  (835.49)  (3,717.73)
+  Total tax expense/(credit)*  127.37  45.11  479.50  105.18  541.26
+  Restated loss for the period/year from continuing operations  (641.29)  (8,806.65)  (9,643.93)  (2,150.69)  (8,525.31)
+  Restated loss for the period/year from discontinued  (6,688.54)  (4,878.07)  (6,417.78)  (1,556.39)  (654.18)
+  operations
+  Restated loss for the period/year  (7,329.83)  (13,684.72) (16,061.71)  (3,707.08)  (9,179.49)
+*
+  Represents figures from continuing operations
+Our restated loss before exceptional items and tax from continuing operations declined from ₹4,266.32 million in Fiscal
+2024 to ₹806.04 million in Fiscal 2026 and from ₹729.21 million in the three months period ended June 30, 2025 to ₹513.92
+million in the three months period ended June 30, 2026. Our results for Fiscal 2026 and the three months period ended June
+30, 2025 were also impacted by a loss on account of exceptional items (net) from continuing operations of ₹8,358.39
+million and ₹8,032.33 million, respectively, primarily comprising a non-cash charge relating to adjustments to the
+conversion ratio of various classes of shares held by our Company’s shareholders.
+In addition, we made a strategic decision to discontinue our Civil Infrastructure Works, under which we undertook
+construction and other projects focused on civil infrastructure. We incurred a restated loss for the period/year from
+discontinued operations of ₹6,688.54 million, ₹4,878.07 million, ₹6,417.78 million, ₹1,556.39 million and ₹654.18 million
+for the three months periods ended June 30, 2026 and June 30, 2025 and Fiscals 2026, 2025 and 2024, respectively. Our
+restated loss for the period from discontinued operations in the three months period ended June 30, 2026 was primarily
+attributable to provisions for bad and doubtful debts and unbilled revenue in the three months period ended June 30, 2026.
+Our restated loss for the period/year from discontinued operations for Fiscal 2026 and for the three months period ended
+June 30, 2025 were primarily attributable to exceptional items of discontinued operations of ₹4,530.00 million, pertaining
+to impairment loss, as the realisable value of the Civil Infrastructure business is expected to be lower than the net asset
+value of the business. For more information, see “Management's Discussion and Analysis of Financial Condition and
+Results of Operations - Results of Operations” on page 570.
+On a standalone basis, our Company and certain of our Subsidiaries have incurred losses for the three months periods ended
+June 30, 2026 and June 30, 2025 and Fiscals 2026, 2025 and 2024. The following table provides an overview of the losses
+of our Company (on a standalone basis) and Subsidiaries that incurred losses during any of the Fiscals/ periods indicated:
+  Particulars  Three months period  Fiscal
+  ended June 30,
+  2026  2025  2026  2025  2024
+  (₹ million)
+  Zetwerk Manufacturing Businesses Limited (formerly known as  (7,508.53)  (13,384.13) (14,234.68) (826.79)  (6,742.76)
+  Zetwerk Manufacturing Businesses Private Limited)
+  Zetfab India Private Limited  (5.00)  (3.68)  (18.79) (17.04)  (26.77)
+  Zet Town India Private Limited(1)  (170.71)  (164.69)  (762.08) (906.72)  -
+  Zetwerk Aerosystems Private Limited  (2.40)  (1.90)  (8.19)  (6.72)  (11.93)
+  Sharp Tanks & Structurals Private Limited  68.71  (24.26)  82.72 (717.77)  4.82
+  Zetwerk Electronics Private Limited  (2.58)  (3.19)  (192.13)  (3.70)  (2.29)
+  Zetchem Supply Chain Services Private Limited  (3.32)  (2.37)  (4.44) (74.37)  (71.69)
+  VRR Investments Private Limited(2)  (1.60)  (1.44)  (5.95)  (4.41)  (10.55)
+  GLR Natural Resources Private Limited(3)  (4.33)  (1.43)  (9.87)  (1.57)  (0.18)
+  Apple Engineers India Private Limited(4)  (0.10)  (0.03)  (0.18)  (0.23)  (0.59)
+  TERRA91 International Private Limited(5)  250.49  (16.85)  (301.45)  11.85  -
+  ZAP91 Solar India Private Limited(6)  (1.93)  (0.34)  (6.31) (12.36)  -
+  Sapphire Clothing Company India Private Limited(7)  (20.54)  (1.78)  (11.16)  (1.13)  -
+  Unimacts Global LLC (Consolidated)(8)  (54.75)  (77.60)  (1183.17) (99.46)  (31.29)
+  Zetwerk Manufacturing USA Inc.  (139.82)  65.45  (479.33) (237.02)  (828.62)
+  Zetwerk Manufacturing SG Pte Ltd (Consolidated)(9)  193.60  (26.27)  (674.29)  145.13  (1,209.33)
+  Zetwerk Holdings ME&A Limited (Consolidated)(10)  (1.86)  (1.43)  (12.01) (32.26)  (140.02)
+  Zetsol Energy Private Limited (11)  (0.15)  -  (0.13)  -  -
+  Smile Electronics Limited (12)  (46.80)  57.66  22.40  121.83  -
+  Winsharp Electronics Private Limited(13)  (71.01)  -  -  -  -
+Notes:
+  29
+  (1)  Zet Town India Private Limited was a joint venture of our Company with effect from April 1, 2023 and became a Subsidiary of our Company with
+  effect from March 31, 2024.
+  (2) VRR Investments Private Limited was acquired in December 2023.
+  (3) GLR Natural Resources Private Limited was acquired in August 2023.
+  (4) Apple Engineers India Private Limited was acquired in December 2023.
+  (5) TERRA91 International Private Limited was incorporated in July 2024.
+  (6) ZAP91 Solar India Private Limited was incorporated in December 2024.
+  (7) Sapphire Clothing Company India Private Limited was acquired in January 2025.
+  (8) Includes 2011 Angelina Manufacturing, LLC, Unimacts Monterey MX, LLC, Unimacts India Private Limited, Unimacts Supply Chain Management
+  (Shanghai) Co. Ltd., Unimacts Manufacturing MX, LLC and Unimacts Manufacturing Spain, S.L, the wholly owned subsidiaries of Unimacts Global
+  LLC.
+  (9) Includes Projekt Indigo Studio Limited and Chapters Brand Group Limited.
+  (10) Includes Zetwerk Impex FZE.
+  (11) Zetsol Energy Private Limited was incorporated in September 2025.
+  (12) Smile Electronics Limited (step down subsidiary w.e.f June 6, 2024).
+  (13) Winsharp Electronics Private Limited (Joint venture until March 30, 2026 and step down subsidiary w.e.f March 31, 2026).
+  To grow our business, we expect to continue to expand into new categories of products, including capital expenditure
+  (“capex”) and operating expenditure (“opex”)-related products; continue to diversify by entering new geographies and
+  industries; invest in design-led manufacturing and develop our original design manufacturing (“ODM”) capabilities; as
+  well as selectively expand our own manufacturing facilities through organic development of greenfield set-ups as well as
+  targeted acquisitions. See “Our Business—Our Growth Strategies” on page 331. Certain strategies may not be successfully
+  implemented or may take longer than expected to yield results due to business risks and environmental uncertainties, which
+  could result in continued losses and adversely affect our ability to achieve or sustain profitability. If we are unable to
+  generate adequate revenues and manage our expenses, we and our Subsidiaries may continue to incur losses which may
+  have an adverse effect on our financial condition and business operations. Should our Company or our Subsidiaries fail or
+  cease to become profitable, our business, cash flows, financial condition and results of operations could be adversely
+  affected.
+2.  We rely on third-party suppliers for manufacturing and raw materials, and exposure to price volatility, capacity and
+  quality issues, supply disruptions, and trade and foreign exchange risks could adversely affect our business, financial
+  condition, cash flows, results of operations and prospects.
+  We rely on third-party suppliers for both our Manufacturing Business and our Ecosystem Business. For our Manufacturing
+  Business, we operate a low capital expenditure model and rely on third-party medium-and-small scale suppliers in India
+  and other markets such as the USA and Southeast Asia to manufacture the majority of our products, including fabricated
+  steel structures, transformers and solar modules. For our Ecosystem Business, we procure raw materials and commodities
+  such as ferrous and non‑ferrous metals and petrochemicals, including aluminium, zinc, steel, copper and lead from third-
+  party suppliers, which we then supply to our customers.
+  The following table sets forth  [...truncated]
+
+===== MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF =====
+MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF
+  OPERATIONS
+The following discussion is intended to convey management’s perspective on our financial condition and results of operations
+for the three months periods ended June 30, 2026 and June 30, 2025 and Fiscals 2026, 2025 and 2024. Unless otherwise stated,
+the financial information in this section has been derived from the Restated Consolidated Financial Information.
+Our financial year ends on March 31 of each year. Accordingly, references to “Fiscal 2026”, “Fiscal 2025” and “Fiscal
+2024”, are to the 12-month period ended March 31 of the relevant year.
+Ind AS differs in certain respects from Indian GAAP, IFRS and U.S. GAAP and other accounting principles with which
+prospective investors may be familiar. Please also see “Risk Factors — Internal Risks — This Red Herring Prospectus contains
+certain non-GAAP financial measures and other statistical information related to our operations and financial performance.
+These non-GAAP measures and statistical information may vary from any standard methodology that is applicable across the
+industry, and therefore may not be comparable with financial or statistical information of similar nomenclature computed and
+presented by other companies.” on page 65. This discussion contains certain forward-looking statements that involve risks and
+uncertainties. Our actual results may differ materially from those anticipated in these forward-looking statements as a result
+of certain factors, such as the risks set forth in the chapters entitled “Risk Factors” and “Forward-Looking Statements”
+beginning on pages 28 and 27, respectively.
+Unless otherwise indicated, industry and market data used in this section have been derived from the Redseer Report, which
+has been commissioned and paid for by our Company exclusively in connection with the Offer for the purposes of confirming
+our understanding of the industry in which we operate. The data included herein includes excerpts from the Redseer Report
+and may have been reordered by us for the purposes of presentation. The Redseer Report has been made available on the
+website of our Company at ir.zetwerk.com and will continue to be made available until the Bid/ Offer Closing Date and has
+also been included in “Material Contracts and Documents for Inspection—Material Documents” on page 719. Unless
+otherwise indicated, operational, industry and other related information derived from the Redseer Report and included herein
+with respect to any particular year refers to such information for the relevant calendar year. For further details, please see
+“Industry Overview” on page 281.
+In this section, references to Segment revenue - Manufacturing Business and Segment revenue - Ecosystem Business are based
+on Ind AS 108, Operating Segments. In this section, references to Manufacturing Business – Energy Products, Manufacturing
+Business – Precision Products and Manufacturing Business – Capital Goods are based on disaggregation of revenue as per
+Ind AS 115 Revenue from Contracts with Customers.
+Overview
+We are a technology-led, asset-light manufacturing platform for industrial and consumer goods in India and globally. We
+aggregate manufacturing capacity across a network of third-party suppliers and our own facilities into a “universal factory,"
+unified through Zetwerk OS, our proprietary technology backbone. Our customers range across sizes, from innovative startups
+to mature companies, and across industries, including utilities, renewables, consumer electronics, artificial intelligence
+infrastructure, aerospace, space & defence, oil & gas, and industrial automation. Some of our customers include Siemens
+Gamesa, Acer India Private Limited, boAt, NextPower (formerly Nextracker), CG Power and Industrial Solutions Limited,
+NTPC Renewable Energy Limited, L&T MHI Power Boiler Pvt Ltd, DRDO (Electronics & Radar Development Establishment
+(LRDE)), National Aluminium Company Limited, Indian Oil Corporation Limited, Mortenson, Nordex Acciona, Indian Air
+Force, and Numaligarh Refinery Limited. Third-party suppliers with whom we work have capabilities in manufacturing
+processes, including sheet metal stamping, metal fabrication, injection moulding, extrusions, assembly, die casting, forging,
+grinding and machining, and span several countries, including industrial geographies such as India, Vietnam, Thailand, Taiwan,
+Germany, Spain, Eastern Europe, Mexico and the USA. Since our incorporation, we have cumulatively delivered products and
+raw materials worth ₹743,742.10 million in terms of GMV to our customers.
+Our Business Model
+Our business model is centred around our technology‑led, asset‑light manufacturing platform, through which we enable our
+customers to source diversified industrial products. We operate primarily as a principal, contracting directly with customers for
+the supply of manufactured goods and related services, while procuring such goods and services from third‑party suppliers and,
+in certain cases, executing specific activities through our own facilities. We have two operating segments:
+•  Manufacturing Business segment: comprises design, manufacturing, supply and/or installation of custom-made goods
+  focused on sectors of energy, precision components, capital goods and other ancillaries. This would include products
+  sourced/ manufactured at third-party facilities and accounted in the books as procurement and sale of products.
+  Additionally, this would also include projects with scope of design/ engineering and construction/ installation.
+  563
+•  Ecosystem Business segment: comprises the sale of industrial and other commodities used primarily as raw materials
+  such as ferrous and non‑ferrous metals and petrochemicals, including aluminium, zinc, steel, copper, lead and bitumen.
+  During Fiscal 2024, this also included revenue from trading of apparel, textiles and other products; we exited this line
+  of business in Fiscal 2024.
+Following board resolutions dated January 23, 2026 and March 9, 2026, and a shareholders resolution dated March 26, 2026,
+we decided to discontinue our Civil Infrastructure Works segment, which undertook construction and other civil infrastructure
+projects such as water pipelines and railway tracks, and authorized the sale of its operations. The discontinuation of the Civil
+Infrastructure Works segment was made pursuant to our strategic realignment to focus on our core business segments.
+The following table shows our segment revenue based on Ind AS 108 Operating Segments including as a percentage of revenue
+from operations – continuing operations for the periods/ Fiscals indicated:
+  Three months period ended June 30,  Fiscal
+  2026  2025  2026  2025  2024
+  Percentag
+  Percentage  Percentage  Percentage  Percentage
+  e of
+  of revenue  of revenue  of revenue  of revenue
+  revenue
+  from  from  from  from
+  Particulars  from
+  Amount operations Amount operations Amount operations Amount operations Amount
+  operations
+  (₹ million)  –  (₹ million)  –  (₹ million)  –  (₹ million)  –  (₹ million)
+  –
+  continuing  continuing  continuing  continuing
+  continuing
+  operations  operations  operations  operations
+  operations
+  (in %)  (in %)  (in %)  (in %)
+  (in %)
+Segment  19,018.82  46.19% 14,808.27  55.89% 93,746.76  58.91% 62,491.02  55.15% 60,818.51  49.19%
+Revenue  -
+Manufacturing
+Business
+Segment  22,159.95  53.81% 11,686.08  44.11% 65,386.47  41.09% 50,827.54  44.85% 62,825.21  50.81%
+Revenue  -
+Ecosystem
+Business
+Revenue from 41,178.77  100.00% 26,494.35  100.00% 159,133.23  100.00% 113,318.56  100.00% 123,643.72  100.00%
+operations  –
+continuing
+operations
+Manufacturing Business
+Customer orders
+We generate revenue in our Manufacturing Business through customer orders for manufactured products and related services.
+Customers place one-time, or multi-year orders with us for sourcing of products, in the form of purchase orders, master supply
+agreements or long‑term arrangements, including multi‑year take‑or‑pay contracts in certain cases.
+Upon receipt and acceptance, customer orders are logged into our order book, which represents the aggregate value of confirmed
+but unexecuted orders as of a given date. Orders in the order book are executed over time, depending on product specifications,
+production schedules, logistics timelines and contractual milestones. Revenue is recognised as and when performance
+obligations under the relevant contracts are satisfied.
+In the case of take‑or‑pay arrangements, customers commit to procuring a minimum value or volume of goods over a specified
+period. If the customer does not place orders up to the committed threshold within the stipulated time, they are contractually
+obligated to pay an agreed margin or shortfall amount. Such arrangements provide greater revenue visibility and reduce demand
+volatility, although actual revenue recognised remains linked to execution of goods and services or enforceable contractual
+payments.
+Execution of orders from suppliers
+Once an order is confirmed, we deploy our proprietary technology platform to match the order with suitable manufacturers
+from our panel of third-party suppliers based on factors such as capability, capacity, location, quality track record, and delivery
+timelines. Under this model:
+•  We procure manufactured goods from third-party suppliers on a principal-to-principal basis;
+•  We may split a single customer order across multiple suppliers where appropriate to optimise timelines or capacity
+  utilisation;
+  564
+•  In certain cases, we also utilise our own facilities for assembly, finishing or specific manufacturing processes.
+We take title to the goods procured from suppliers before supplying them to customers, and bear responsibility for quality
+assurance, delivery and contractual performance.
+Ecosystem Business
+Under our Ecosystem Business segment, which we operate under the brand Terra91, we facilitate the sourcing and supply of
+industrial raw materials and commodities to customers.
+Under Terra91, our customers place purchase orders with us for sourcing of raw materials such as ferrous and non-ferrous
+metals and other industrial commodities used in manufacturing processes. We aggregate these purchase orders and buy the
+materials in bulk from our panel of suppliers and manufacturers, leveraging aggregated demand to optimise pricing, availability,
+and delivery timelines.
+We act as a principal to customers, purchasing raw materials from suppliers and supplying them to customers. Revenue is
+recognised upon transfer of control of the materials to the customer and margins are derived from the spread between
+procurement costs and customer pricing, taking into account logistics, handling and related services.
+While Terra91 originated as a sourcing solution to support suppliers in our Manufacturing Business, it has evolved into a
+standalone revenue segment serving third-party customers across multiple industries.
+Discontinued Operations
+We previously operated a Civil Infrastructure Works business, under which we undertook construction and other projects
+focused on civil infrastructure, mainly water pipelines and railway tracks. At meetings held on January 23, 2026 and March 9,
+2026, our Board of Directors approved the sale of the operations of this business and we have commenced actions required to
+effect such sale, which is expected to be completed in Fiscal 2027.. Accordingly, the Civil Infrastructure Works business has
+been classified as a discontinued operation in accordance with Ind AS 105, “Non-current Assets Held for Sale and Discontinued
+Operations”, and is no longer disclosed as a separate operating segment in the Restated Consolidated Financial Information. In
+Fiscal 2026, we recognised exceptional items of discontinued operations of ₹4,530.00 million in respect of an impairment loss,
+as the realisable value of the Civil Infrastructure Works business was expected to be lower than the net asset value of the
+busine [...truncated]
+
+===== OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS =====
+OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS
+Except as disclosed in this section, there are no outstanding (i) criminal proceedings (including criminal matters which are at
+first information reports stage whether or not cognizance has been taken by any court) involving our Company, Promoters,
+Subsidiaries, or Directors (collectively, “Relevant Parties”); (ii) actions (including all outstanding disciplinary actions, notices
+and orders levying penalties and show cause notices) taken by statutory or regulatory authorities (including any judicial, quasi-
+judicial, administrative authorities or enforcement authorities)) against the Relevant Parties; (iii) claims related to direct or
+indirect taxes involving the Relevant Parties (disclosed in a consolidated manner giving the total number of cases and the total
+amounts involved);(iv) disciplinary actions including penalties imposed by SEBI or the Stock Exchanges against the Promoters
+in the last five financial years, including outstanding action; and (v) all other outstanding litigation/ arbitration proceedings
+involving the Relevant Parties as determined to be material pursuant to the Materiality Policy. Further, except as disclosed in
+this section, there are no criminal proceedings (including matters which are at first information reports stage for which no
+cognizance has been taken by any court or any judicial authority) and actions (including show cause notices, other notices or
+orders, including notices and orders levying penalties) by regulatory and statutory authorities (including any judicial, quasi-
+judicial, administrative authorities or enforcement authorities) involving our Key Managerial Personnel and Senior
+Management. In addition, there is no pending litigation involving our Group Companies, the adverse outcome of which may
+have a material impact on our Company.
+Pursuant to the Materiality Policy, for the purposes of (v) above, any outstanding litigation involving the Relevant Parties
+(including tax matters mentioned in point (iii) above), has been considered ‘material’ and accordingly disclosed in this Red
+Herring Prospectus where the monetary amount of claim/ amount in dispute, to the extent quantifiable exceeds, (a) two percent
+of turnover*, for the most recent financial year to be based on the restated consolidated financial statements; or (b) two percent
+of net worth*, as at the end of the most recent financial period to be based on the Restated Consolidated Financial Information;
+or (c) five percent of the average of absolute value of profit or loss after tax*, for the last three financial years to be based on
+the Restated Consolidated Financial Information, whichever is lower (“Materiality Threshold”).
+*
+ Note: These terms will have the meaning ascribed to them under the Companies Act, 2013, as amended, read along with the
+applicable accounting standards.
+Accordingly, 5% of the average of absolute value of profit or loss after tax, based on the Restated Consolidated Financial
+Information for the last three Fiscals is ₹482.47 million, i.e., ₹482.47 million has been considered as the Materiality Threshold.
+Further, outstanding litigation including civil litigation/ arbitration proceedings where the decision in one case is likely to
+affect the decision in similar cases, even though the value or expected impact in terms of value involved in an individual
+litigation may not exceed the Materiality Threshold shall also be considered material litigation in relation to the Relevant
+Parties. In addition, any outstanding civil litigation/ arbitration proceedings involving the Relevant Parties wherein the value
+or expected impact in terms of value is not quantifiable, or which does not exceed the Materiality Threshold, shall be considered
+‘material’ and shall be disclosed in this Red Herring Prospectus, if the outcome of such litigation could have a material bearing
+on the business, operations, performance, prospects, financial position or reputation of our Company.
+For the purposes of disclosure of outstanding criminal proceedings involving the Relevant Parties and Key Managerial
+Personnel and Senior Management of the Company, criminal complaints shall not be considered as outstanding litigation, until
+such time that an FIR has been registered (even if no cognizance has been taken by any court) or cognizance has been taken
+by the relevant court/magistrate/authority. Further, for the purposes of the above, pre-litigation notices received or sent by any
+of the Relevant Parties from/to third parties (excluding those notices issued by statutory or regulatory or governmental or
+taxation authorities and notices threatening criminal action), shall not be considered as litigation until such time that the
+Relevant Parties are not impleaded as a party in the litigation proceedings before any judicial/ quasi-judicial or arbitral forum.
+Except as stated in this section, there are no outstanding material dues to creditors of our Company. Further in terms of the
+Materiality Policy, a creditor shall be considered “material”, if the outstanding dues to such creditor is equal to or exceeds
+5% of the consolidated trade payables of our Company, as on the date of the most recent financial period in the Restated
+Consolidated Financial Information as disclosed in this Red Herring Prospectus (“Material Creditors”). Accordingly, as on
+June 30, 2026, any outstanding dues exceeding ₹957.21 million have been considered as material outstanding dues for the
+purposes of identification of material creditors and related information in this section. For outstanding dues to any party which
+is a micro, small or medium enterprise (“MSME”), the disclosure will be based on information available with the Company
+regarding the status of the creditor as defined under Micro, Small and Medium Enterprises Development Act, 2006, as amended
+read with the rules and notifications thereunder.
+  599
+I.  Litigation involving our Company
+A.  Litigation against our Company
+  a)  Cr [...truncated]
+
+===== OFFER STRUCTURE =====
+OFFER STRUCTURE
+The Offer of up to [●] Equity Shares of face value of ₹1 each for cash at a price of ₹[●] per Equity Share (including a share
+premium of ₹[●] per Equity Share) aggregating up to ₹[●] million comprising of a Fresh Issue of up to [●] Equity Shares of
+face value of ₹1 each aggregating up to ₹28,300.00 million by our Company and an Offer for Sale of 144,525,036 Equity Shares
+of face value of ₹1 each aggregating up to ₹ [●] million by the Selling Shareholders. For details, see “The Offer” on page 78.
+The Offer includes a reservation of up to 700,000 Equity Shares of face value ₹1 each aggregating up to ₹[●] million for
+subscription by Eligible Employees and Net Offer of up to [●] Equity Shares of face value ₹1 each. The Employee Reservation
+Portion shall not exceed 5% of our post-Offer paid-up Equity Share capital.
+The Offer and Net Offer shall constitute [●] % and [●]% of the post-Offer paid-up Equity Share capital of our Company,
+respectively.
+In terms of Rule 19(2)(b) of the SCRR, the Offer is being made through the Book Building Process in compliance with
+Regulation 6(2) and Regulation 31 and 32(2) of the SEBI ICDR Regulations.
+  Particulars  Eligible Employees#  QIBs(1)  NIBs  RIBs
+Number of Equity Shares Up to 700,000 Equity Not less than [●] Equity Not more than [●] Equity Not more than [●] Equity
+available for Allotment or Shares of face value of ₹1 Shares of face value of ₹1 Shares of face value of ₹1 Shares of face value of ₹1
+allocation*(2)  each  each  each  available  for each  available  for
+  allocation or Net Offer allocation or Net Offer
+  less allocation to QIB less allocation to QIB
+  Bidders and RIBs  Bidders and NIBs
+Percentage of Offer size The  Employee Not less than 75% of the Not more than 15% of the Not more than 10% of the
+available for Allotment or Reservation  Portion Net Offer shall be Net Offer, or the Net Net Offer or the Net Offer
+allocation  constitutes up to [●]% of available for allocation to Offer less allocation to less allocation to QIB
+  the post-Offer paid-up QIBs. However, up to 5% QIB Bidders and RIBs Bidders and NIBs shall be
+  equity share capital of our of the QIB Portion shall be available for available for allocation.
+  Company  (excluding the Anchor allocation, subject to the
+  Investor Portion) shall be following:
+  available for allocation (i) one-third of the
+  proportionately to Mutual  portion available to
+  Funds only. Mutual Funds  NIBs  shall  be
+  participating in the Mutual  reserved  for
+  Fund Portion will also be  applicants with an
+  eligible for allocation in  application size of
+  the remaining balance QIB  more than ₹200,000
+  Portion (excluding the  and  up  to
+  Anchor Investor Portion).  ₹1,000,000; and
+  The unsubscribed portion (ii) two-third of the
+  in the Mutual Fund Portion  portion available to
+  will be available for  NIBs  shall  be
+  allocation to other QIBs  reserved  for
+  applicants  with
+  application size of
+  more than ₹1.00
+  million
+  Provided  that  the
+  unsubscribed portion in
+  either of the subcategories
+  specified above may be
+  allocated to applicants in
+  the other sub-category of
+  Non-  Institutional
+  Bidders.
+Basis of Allotment if Proportionate; unless the Proportionate as follows The  Equity  Shares Allotment to each RIB
+respective category is Employee  Reservation (excluding the Anchor available for allocation to shall not be less than the
+oversubscribed*  Portion  is Investor Portion):  NIBs under the Non- minimum Bid Lot, subject
+  undersubscribed,  the a) Up to [●] Equity Institutional Portion, shall to availability of Equity
+  value of allocation to an  Shares of face value be  subject  to  the Shares in the Retail
+  Eligible Employee shall  of ₹1 each shall be following:  Portion and the remaining
+  not exceed ₹200,000 (net  available  for a) one third of the available Equity Shares if
+  of employee discount). In  allocation  on  a  portion available to any, shall be allotted on a
+  the  event  of  proportionate basis to  NIBs being [●] proportionate basis. For
+  undersubscription in the  Mutual Funds only;  Equity Shares of details,  see  “Offer
+  Employee  Reservation  and  face value of ₹1 each Procedure” on page 663.
+  Portion, the unsubscribed  are reserved for
+  658
+  Particulars  Eligible Employees#  QIBs(1)  NIBs  RIBs
+  portion may be allocated, b)  [●] Equity Shares of  Bidders  Biddings
+  on a proportionate basis,  face value of ₹1 each  more than ₹200,000
+  to Eligible Employees for  shall be available for  and  up  to
+  a  value  exceeding  allocation  on  a  ₹1,000,000; and
+  ₹200,000 up to ₹500,000  proportionate basis to b) two third of the
+  (net  of  employee  all  other  QIBs,  portion available to
+  discount)  including  Mutual  NIBs being [●]
+  Funds  receiving  Equity Shares of
+  allocation as per (a)  face value of ₹1 each
+  above  are reserved for
+  Up to 60% of the QIB  Bidders  Bidding
+  Portion (of up to [●]  more  than
+  Equity Shares of face  ₹1,000,000.
+  value of ₹1 each) may be Provided  that  the
+  allocated  on  a unsubscribed portion in
+  discretionary basis to either of the categories
+  Anchor Investors. With specified in (a) or (b)
+  effect from December 1, above, may be allocated
+  2025, 40% out of the to Bidders in the other
+  Anchor Investor Portion category.
+  shall be available for The allotment to each
+  allocation as follows, (i) Non- Institutional Bidder
+  33.33% shall be available shall not be less than the
+  for allocation to domestic minimum  application
+  Mutual Funds and (ii) size, subject to the
+  6.67% for Life Insurance availability of Equity
+  Companies and Pension Shares in the Non-
+  Funds, subject to valid Institutional Portion, and
+  Bids being received from the remaining Equity
+  domestic Mutual Funds, Shares, if any, shall be
+  life insurance companies allotted  on  a
+  and pension funds at or proportionate basis in
+  above the Anchor Investor accordance with the
+  Allocation Price. In the conditions specified in
+  event  of  under- this regard in Schedule
+  subscription in (ii) above, XIII of the SEBI ICDR
+  the allocation may be Regulations. For details,
+  made to domestic Mutual see “Offer Procedure” on
+  Funds.  page 663.
+Mode of Bid  Through ASBA Process Through ASBA Process Through ASBA process Through ASBA process
+  only (including UPI only  (excluding  UPI only (including UPI only  (including  UPI
+  Mechanism)  Mechanism) except in case Mechanism  for  an Mechanism)
+  of Anchor Investors(3)  application size of up to
+  ₹0.50 million)
+Minimum Bid  [●] Equity Shares and in Such number of Equity Such number of Equity [●] Equity Shares and in
+  multiples of [●] Equity Shares that the Bid Shares that the Bid multiples of [●] Equity
+  Shares thereafter  Amount exceeds ₹200,000 Amount  exceeds Shares thereafter
+  and in multiples of [●] ₹200,000 and in multiples
+  Equity Shares thereafter  of [●] Equity Shares
+  thereafter
+Maximum Bid  Such number of Equity Such number of Equity Such number o [...truncated]

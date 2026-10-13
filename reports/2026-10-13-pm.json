@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-13",
+  "session": "PM",
+  "headline": "HD Fire Protect day 1: Retail 2.84x, GMP ~34% — still Apply Retail (1 lot per family PAN). Zetwerk, Bonfiglioli, Tonbo, Sahajanand open 15 Oct; Fusion CX opens tomorrow.",
+  "ipos": {
+    "hd-fire-protect": {
+      "verdict": "apply",
+      "verdict_text": "Apply",
+      "best_category": "Retail",
+      "category_note": "Day 1: Retail 2.84x beats sNII 9.0x / bNII 6.8x; 1 lot per family PAN; recheck close 15 Oct",
+      "summary": "India's #2 fire-protection equipment maker and largest exporter (sprinklers, deluge valves, foam systems), with the most UL/FM certifications among Indian peers.",
+      "financials": "FY26 revenue ₹489 Cr (+13%), PAT ₹117 Cr, EBITDA margin 31%, debt-free",
+      "quota": "QIB 50% · NII 15% · Retail 35%",
+      "positives": [
+        "Certification moat and 30% RoE; priced at 40.7x vs peer average 63x",
+        "Strong anchor book: ₹213 Cr, 72% to HDFC/ICICI Pru/Kotak/ABSL MFs",
+        "35% retail quota helps allotment odds"
+      ],
+      "red_flags": [
+        "100% OFS — promoters selling, company gets nothing",
+        "₹196 Cr dividends to promoters in the last two years",
+        "PAT growth slowed to 6% in FY26; inventory days rising"
+      ],
+      "anchor": "₹213 Cr from 25 anchors: HDFC MF, ICICI Pru, Kotak, ABSL MF, Mirae, UTI, Allianz",
+      "anchor_grade": "strong"
+    },
+    "tonbo-imaging": {
+      "verdict": "listing_gains",
+      "verdict_text": "Listing gains only",
+      "best_category": "Retail",
+      "category_note": "GMP jumped to ~68% (₹475); still only if anchor book (14 Oct) is strong",
+      "summary": "Bengaluru defence-electronics maker: thermal imaging cores, weapon sights, targeting and missile-seeker systems; ~71% of revenue from the Indian government.",
+      "financials": "FY26 revenue ₹363 Cr (−23%), PAT ₹51 Cr (−30%); Q1 FY27 loss ₹17.7 Cr",
+      "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+      "positives": [
+        "Owned, ITAR-free technology; #1 in Indian thermal imaging; ₹314 Cr order book",
+        "Very strong GMP (~68%) and defence-theme demand"
+      ],
+      "red_flags": [
+        "Revenue and profit falling; operating cash flow negative two years running",
+        "Working-capital days 517; inventory tripled in two years",
+        "79x P/E on falling earnings; 100% OFS; promoters hold only 17%"
+      ],
+      "anchor": "Anchor bidding on 14 Oct",
+      "anchor_grade": "pending"
+    },
+    "sahajanand-medical-technologies": {
+      "verdict": "listing_gains",
+      "verdict_text": "Listing gains only",
+      "best_category": "Retail",
+      "summary": "Surat-based maker of cardiac stents and structural-heart devices (TAVI, occluders); ~25% share of India's drug-eluting stent market, ~39% revenue from Europe.",
+      "financials": "FY26 revenue ₹1,211 Cr (+18%), PAT ₹69 Cr (5.7% margin); FY24 was a loss",
+      "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+      "positives": [
+        "Real product franchise with 16% revenue CAGR and improving margins",
+        "GMP ~10% and 35% retail quota"
+      ],
+      "red_flags": [
+        "53x P/E vs 44x peers on thin 14% EBITDA margin",
+        "Net debt/EBITDA 4.9x; Q1 operating cash flow negative",
+        "100% OFS with PE funds exiting; Delhi Police and CBI notices seeking documents"
+      ],
+      "anchor": "Anchor bidding on 14 Oct",
+      "anchor_grade": "pending"
+    },
+    "fusion-cx": {
+      "verdict": "neutral",
+      "verdict_text": "Neutral",
+      "best_category": null,
+      "category_note": "GMP ₹31 (~11%); opens 14 Oct — recheck after anchor book",
+      "summary": "Customer-experience (CX/BPO) outsourcer with 40 delivery centres in 13 countries; telecom is 47% of revenue.",
+      "financials": "FY26 revenue ₹1,818 Cr (+37%), PAT ₹170 Cr (2.3x), RoNW 31%",
+      "quota": "QIB ≥75% · NII ≤15% · Retail ≤10%",
+      "positives": [
+        "Fast growth with operating cash flow ₹264 Cr above PAT ₹170 Cr",
+        "21.5x P/E vs peer average 26.7x; ₹500 Cr fresh issue, ₹276 Cr repays debt"
+      ],
+      "red_flags": [
+        "Top-10 customers ≈50% of revenue; acquisition-led growth (goodwill ₹363 Cr)",
+        "Promoters hold 96% and sell ₹202 Cr in the OFS; tiny 10% retail quota",
+        "FY26 margin jump (PAT 5.6% → 9.3%) unproven"
+      ],
+      "anchor": "Anchor bidding 13 Oct; allocation not out yet",
+      "anchor_grade": "pending"
+    },
+    "zetwerk": {
+      "verdict": "neutral",
+      "verdict_text": "Neutral",
+      "best_category": null,
+      "category_note": "Listing-gain trade only; decide after anchor book (14 Oct) and subscription",
+      "summary": "Tech-led manufacturing platform (energy, precision, capital goods) with 26 own plants and ~7,000 suppliers; ₹5,012 Cr issue.",
+      "financials": "FY26 revenue ₹15,913 Cr (+40%), adj. EBITDA 2.7%, net loss ₹1,606 Cr",
+      "quota": "QIB ≥75% · NII ≤15% · Retail ≤10%",
+      "positives": [
+        "Revenue +40% in FY26; ₹13,062 Cr manufacturing order book",
+        "₹2,160 Cr of fresh issue repays debt; GMP ~14%"
+      ],
+      "red_flags": [
+        "Loss-making every year; ₹1,606 Cr loss FY26 incl. discontinued ops",
+        "No listed peer; ~60x adj. EBITDA, thin 2.7% margin",
+        "Half the issue is OFS by VC funds; only 10% retail quota"
+      ],
+      "anchor": "Anchor bidding 14 Oct",
+      "anchor_grade": "pending"
+    },
+    "bonfiglioli-transmissions": {
+      "verdict": "listing_gains",
+      "verdict_text": "Listing gains only",
+      "best_category": "Retail",
+      "category_note": "Leaning Apply if anchor book is strong; recheck subscription at close 19 Oct",
+      "summary": "Indian arm of Italy's Bonfiglioli: industrial gearboxes, geared motors and drives (industrial, off-highway, wind).",
+      "financials": "CY25 revenue ₹2,014 Cr (+9%), PAT ₹238 Cr (+24%), RoNW 24%, debt-free",
+      "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+      "positives": [
+        "Debt-free, PAT margin 11.8% rising to 13% in H1 CY26",
+        "~46x P/E vs peer average 51.6x; GMP ~28%",
+        "35% retail quota"
+      ],
+      "red_flags": [
+        "100% OFS by parent — company gets nothing",
+        "Wind ≈27–32% of revenue; industry data from company-paid report"
+      ],
+      "anchor": "Anchor bidding 14 Oct",
+      "anchor_grade": "pending"
+    },
+    "jio-platforms": {
+      "verdict": "pending",
+      "verdict_text": "Watchlist",
+      "summary": "Reliance's digital/telecom arm. Dates and price band not announced yet."
+    }
+  },
+  "notes": [
+    "Zetwerk and Bonfiglioli RHPs now out — analysed today (P/E ~46x for Bonfiglioli computed from RHP EPS).",
+    "Anchor lists for Fusion CX, Tonbo, Zetwerk, Bonfiglioli, Sahajanand not yet public; web search found nothing."
+  ]
+}

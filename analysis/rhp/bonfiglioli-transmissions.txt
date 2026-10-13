@@ -1,0 +1,2021 @@
+
+===== THE OFFER =====
+the Offer
+P/E Ratio  Price/Earnings Ratio
+PAN  Permanent account number
+Patents Act  The Patents Act, 1970
+RBI  Reserve Bank of India
+Regulation S  Regulation S under the U.S. Securities Act
+RTGS  Real Time Gross Settlement
+Rule 144A  Rule 144A under the U.S. Securities Act
+SCRA  The Securities Contracts (Regulation) Act, 1956
+SCRR  The Securities Contracts (Regulation) Rules, 1957
+SCORES  SEBI complaints redress system
+SEBI  The Securities and Exchange Board of India, constituted under section 3 of the SEBI Act.
+SEBI Act  The Securities and Exchange Board of India Act, 1992
+SEBI AIF Regulations  The Securities and Exchange Board of India (Alternative Investment Funds) Regulations,
+  2012
+SEBI FPI Regulations  The Securities and Exchange Board of India (Foreign Portfolio Investors) Regulations,
+  2019.
+SEBI FVCI Regulations  The Securities and Exchange Board of India (Foreign Venture Capital Investor)
+  Regulations, 2000
+SEBI ICDR Regulations  The Securities and Exchange Board of India (Issue of Capital and Disclosure
+  Requirements) Regulations, 2018
+SEBI ICDR Master Circular  The SEBI master circular number SEBI/HO/49/14/14(2)2026-CFD-POD2/I/4518/2026
+  issued on June 21, 2023 and updated on February 9, 2026
+SEBI Listing Regulations  The Securities and Exchange Board of India (Listing Obligations and Disclosure
+  Requirements) Regulations, 2015
+SEBI Merchant Bankers  The Securities and Exchange Board of India (Merchant Bankers) Regulations, 1992
+Regulations
+SEBI Insider Trading  The Securities and Exchange Board of India (Prohibition of Insider Trading) Regulations,
+Regulations  2015
+SEBI RTA Master Circular  The SEBI master circular bearing number SEBI/HO/38/13/(4)2026-MIRSD-
+  POD/I/4298/2026 dated February 6, 2026
+SEBI SBEBSE Regulations  The Securities and Exchange Board of India (Share Based Employee Benefits and Sweat
+  Equity) Regulations, 2021
+SEBI Takeover Regulations  The Securities and Exchange Board of India (Substantial Acquisition of Shares and
+  Takeovers) Regulations, 2011
+SEBI VCF Regulations  The erstwhile Securities and Exchange Board of India (Venture Capital Funds)
+  Regulations, 1996
+SECI  Solar Energy Corporation of India
+Social Security Code  Code on Social Security, 2020
+STT  Securities Transaction Tax
+TAN  Tax deduction account number
+  14
+Term  Description
+Trade Marks Act  The Trade Marks Act, 1999
+U.S. GAAP  The Generally Accepted Accounting Principles in the United States of America
+U.S. QIBs  Persons that are “qualified institutional buyers”, as defined in Rule 144A
+U.S. Securities Act  The U.S. Securities Act of 1933, as amended.
+US$/USD/US Dollar  United States Dollar
+USA/U.S./US  United States of America
+VAT  Value added tax
+VCF  Venture capital funds as defined in and registered with the SEBI under the SEBI VCF
+  Regulations or the SEBI AIF Regulations, as the case may be
+  15
+  CERTAIN CONVENTIONS, PRESENTATION OF FINANCIAL, INDUSTRY AND MARKET DATA
+Certain Conventions
+All references herein to the ‘Government’, ‘Indian Government’, ‘GoI’, ‘Central Government’ or the ‘State
+Government’ are to the Government of India, central or state, as applicable. Further, all references herein to: (i)
+“Italy”, are to the Italian Republic, and its territories and possessions, (ii) “U.S.A.”, are to the United States of
+America, and its territories and possessions, (iii) “China”, are to the People’s Republic of China, and its territories
+and possessions, and (iv) “Germany”, are to the Federal Republic of Germany and its territories and possessions.
+Unless otherwise specified, any time mentioned in this Red Herring Prospectus is in Indian Standard Time
+(“IST”). Unless indicated otherwise, all references to a year in this Red Herring Prospectus are to a Financial
+Year, as described below.
+Unless stated otherwise, all references to page numbers in this Red Herring Prospectus are to the corresponding
+page numbers of this Red Herring Prospectus.
+Currency and Units of Presentation
+All references to “Rupee(s)”, “Rs.” or “₹” or “INR” are to Indian Rupees, the official currency of the Republic of
+India. All references to “US$” or “U.S. Dollars” or “USD” are to United States Dollars, the official currency of
+the United States of America. All references to “EUR” in this Red Herring Prospectus are to the Euro, the official
+currency of the Italian Republic, a member of the European Union.
+Our Company has presented certain numerical information in this Red Herring Prospectus in ‘million’ units or in
+whole numbers where the numbers have been too small to represent in such units. One million represents
+1,000,000, one billion represents 1,000,000,000 and one trillion represents 1,000,000,000,000.
+Exchange Rates
+This Red Herring Prospectus contains conversion of certain other currency amounts into Indian Rupees that have
+been presented solely to comply with the SEBI ICDR Regulations. These conversions should not be construed as
+a representation that these currency amounts could have been, or can be converted into Indian Rupees, at any
+particular rate or at all.
+Unless otherwise stated, the exchange rates referred to for the purpose of conversion of foreign currency amounts
+into Rupee amounts, are as follows:
+  Currency(1)  Exchange rate as on*
+  June 30, 2026  June 30, 2025  December 31,  December 31,  December 31,
+  2025  2024  2023
+  (in INR)
+  USD  94.60  85.54  89.91  85.60  83.17
+  EUR  107.85  100.56  105.59  88.93  91.90
+(1)
+  Source: https://www.ecb.europa.eu.
+*
+ In the event that any of the aforementioned date is a public holiday, the previous calendar day not being a public holiday has been considered.
+The exchange rate is rounded off to two decimal places.
+Financial and other data
+Our Company’s Financial Year commences on January 1 and ends on December 31 of the same year. Accordingly,
+all references in this Red Herring Prospectus to Fiscal, unless stated otherwise, are to the 12-month period ended
+on December 31 of the same Financial Year.
+Unless stated otherwise or the cont [...truncated]
+
+===== SUMMARY OF RESTATED FINANCIAL INFORMATION =====
+SUMMARY OF FINANCIAL INFORMATION
+The following tables set forth summary financial information derived from our Restated Financial Information.
+The summary financial information presented below should be read in conjunction with “Restated Financial
+Information” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations”
+on pages 281 and 355, respectively.
+  [The remainder of this page is intentionally left blank]
+  65
+  Summary Balance Sheet Data
+  Particulars  As at June 30, As at June  As at  As at December  As at December
+  2026  30, 2025 December  31, 2024  31, 2023
+  31, 2025
+  in ₹ million
+Assets
+Non-current assets
+Property, plant and equipment  2,698.92  2,590.10  2,691.52  2,639.82  2,561.45
+Capital work-in-progress  135.69  117.92  123.46  137.32  202.57
+Intangible assets  2.97  4.16  3.38  3.04  23.18
+Intangible assets under development  -  9.56  -  9.46  -
+Right-of-use asset  285.38  329.08  306.97  343.07  381.04
+Financial assets
+  i. Investments  1.13  1.13  1.13  1.13  1.13
+  ii. Loans  69.30  92.40  69.30  92.40  -
+  iii. Other financial assets  67.95  57.56  38.30  55.56  54.59
+Deferred tax assets (Net)  161.24  241.77  174.08  161.80  175.08
+Non-Current tax assets (Net)  4.92  4.92  4.92  4.92  26.93
+Other non-current assets  131.72  60.81  78.31  74.39  71.89
+Total non-current assets  3,559.22  3,509.41  3,491.37  3,522.91  3,497.86
+Current assets
+Inventories  3,776.06  3,401.95  3,192.13  3,214.17  3,322.79
+Financial assets
+  i. Trade receivables  5,325.06  4,409.52  5,177.39  4,061.92  4,101.43
+  ii. Cash and cash equivalents  1,401.70  250.81  1,531.81  1,446.67  905.32
+  iii. Bank balances other than (ii)  -  1,638.33  100.15  0.94  1,700.12
+  above
+  iv. Loans  60.91  59.41  49.95  126.11  -
+  iv. Other financial assets  96.99  242.05  138.13  147.87  65.59
+Current tax assets (net)  -  -  -  82.30  92.53
+Other current assets  738.30  367.93  713.65  387.87  461.51
+Total current assets  11,399.02  10,370.00  10,903.21  9,467.85  10,649.29
+Total assets  14,958.24  13,879.41  14,394.58  12,990.76  14,147.15
+Equity and liabilities
+Equity
+Equity share capital  1,879.96  1,253.31  1,253.31  1,253.31  1,311.23
+Other equity  8,462.72  7,501.16  8,676.62  7,356.20  6,702.40
+Total equity  10,342.68  8,754.47  9,929.93  8,609.51  8,013.63
+Non-current liabilities
+Financial liabilities
+  i. Lease liabilities  3.20  7.32  3.88  28.09  60.10
+  ii. Other financial liabilities  18.03  0.93  22.11  1.82  20.31
+Provisions  122.36  107.51  121.30  106.35  107.59
+Total non-current liabilities  143.59  115.76  147.29  136.26  188.00
+Current liabilities
+Contract liabilities  83.45  52.98  56.43  50.40  31.33
+Financial liabilities
+  i. Borrowings  -  -  -  -  1,107.86
+  ia. Lease liabilities  4.69  40.05  24.24  37.48  36.56
+  ii. Trade payables
+  Total outstanding dues of micro  594.62  484.11  516.43  382.72  595.84
+  and small enterprises
+  Total outstanding dues of  3,117.44  2,773.30  2,785.69  2,702.79  3,224.42
+  creditors other than micro and
+  small enterprises
+  iii. Other financial liabilities  106.41  1,122.44  438.70  662.18  499.15
+Current tax Liability (net)  155.32  170.35  30.59  -  -
+Other current liabilities  271.98  183.38  209.16  201.90  135.81
+Provisions  138.06  182.57  256.12  207.52  314.55
+Total current liabilities  4,471.97  5,009.18  4,317.36  4,244.99  5,945.52
+Total liabilities  4,615.56  5,124.94  4,464.65  4,381.25  6,133.52
+Total equity and liabilities  14,958.24  13,879.41  14,394.58  12,990.76  14,147.15
+  66
+  Summary profit and loss account
+  Particulars  For the six For the six For the year For the year  For the year
+  months  months  ended  ended  ended December
+  period period ended December 31, December 31,  31, 2023
+  ended June June 30,  2025  2024
+  30, 2026  2025
+  in ₹ million unless otherwise stated
+Continuing Operations
+Income
+Revenue from operations  11,318.69  9,603.55  20,135.26  18,541.83  16,873.30
+Other income  72.99  61.42  100.63  69.72  144.71
+Total Income  11,391.68  9,664.97  20,235.89  18,611.55  17,018.01
+Expenses
+Cost of raw materials & components  7,541.76  5,977.36  11,967.18  11,854.27  11,104.93
+consumed
+Changes in inventories of finished  (633.04)  34.41  542.53  (64.11)  (268.86)
+goods and work-in-progress
+Employee benefits expense  589.61  492.28  1,062.70  982.19  896.70
+Finance costs  40.72  36.56  77.77  104.18  130.92
+Depreciation and amortisation expense  271.87  234.02  478.23  466.29  370.99
+Other expenses  1,581.62  1,335.22  2,855.15  2,818.74  2,701.62
+Total expenses  9,392.54  8,109.85  16,983.56  16,161.56  14,936.30
+Restated Profit before tax from  1,999.14  1,555.12  3,252.33  2,449.99  2,081.71
+continuing operations
+Tax expense:
+  Current tax  509.31  452.12  818.82  577.06  560.85
+  Tax pertaining to earlier years  0.17  28.26  61.21  (58.58)  73.52
+  Deferred tax  3.85  (74.95)  (6.44)  15.53  (19.31)
+Total tax expense  513.33  405.43  873.59  534.01  615.06
+Restated Profit after tax for the  1,485.81  1,149.69  2,378.74  1,915.98  1,466.65
+period/year from continuing operations
+Discontinued Operations
+Profit from Discontinued Operations  -  -  -  24.41
+before tax  22.06
+Gain on disposal of discontinued  -  -  -  23.74  -
+Operations
+Tax Expenses of Discontinued  -  -  -  (10.14)  (6.14)
+Operations
+Restated Profit after tax for the  -  -  -  35.66  18.27
+period/year  from  discontinued
+operations
+Restated Profit after tax for the  1,485.81  1,149.69  2,378.74  1,951.64  1,484.92
+period/year
+Other comprehensive income:
+Items that will not be reclassified to
+profit or loss in subsequent periods
+Remeasurements loss of post-  35.71  (19.94)  (23.19)  (8.95)  (53.51)
+employment benefit obligations
+Income tax relating to the above item  (8.99)  5.02  5.84  2.25  13.47
+Other comprehensive income/ (loss) for  26.72  (14.92)  (17.35)  (6.70)  (40.04)
+the period/year, net of tax
+Restated total comprehensive income  1,512.53  1,134.77  2,361.39  1,944.94  1,444.88
+for the period/year, net of tax
+Restated Earnings per equity share:
+[Nominal value per share: Rs. 10;
+December 31, 2025, December 31, 2024,
+December 31, 2023: Rs.10]
+Restated Earnings per Equity Share:  7.90  6.12  12.65  10.08  7.57
+(Basic and Diluted) - Continuing
+Operations* (In ₹)
+Restated Earnings per Equity Share:  -  -  -  0.19  0.09
+(Basic and Diluted) - Discontinued
+Operations (In ₹)
+  67
+  Particulars  For the six For the six For the year For the year  For the year
+  months  months  ended  ended  ended December
+  period period ended December 31, December 31,  31, 2023
+  ended June June 30,  2025  2024
+  30, 2026  2025
+  in ₹ million unless otherwise stated
+Restated Earnings per Equity Share:  7.90  6.12  12.65  10.27  7.66
+(Basic and Diluted) - Continuing &
+Discontinued Operations* (In ₹)
+* Not annualized for the six months periods ended June 30, 2026 and June 30, 2025
+  68
+  Summary cash flow statement
+  For the year ended
+  For the six  For the six
+  months period  months period  December
+  Particulars  December  December
+  ended June 30,  ended June30,  31, 2023
+  31, 2025  31, 2024
+  2026  2025
+  (in ₹ million)
+Cash flows from operating
+activities
+Restated Profit before tax
+from  Continuing  and
+Discontinued Operations  1,999.14  1,555.12  3,252.33  2,495.79  2,106.12
+Adjustments for
+  Profit from discontinued
+  operations  -  -  -  (22.06)  (24.41)
+  Gain on disposal of
+  discontinuing Operations  -  -  -  (23.74)  -
+  Depreciation  and
+  amortisation expense  250.28  214.67  436.79  407.59  320.89
+  Depreciation of Right-of-
+  use asset  21.59  19.35  41.44  42.67  50.10
+  Allowance for doubtful
+  debts no longer required
+  written back  -  (9.12)  (6.70)  -  (3.95)
+  Interest income  (59.14)  (44.00)  (81.02)  (65.01)  (140.12)
+  Allowance for doubtful
+  debts  3.36  -  -  23.24  -
+  Gain on sale of property,
+  plant and equipment  (0.21)  (1.32)  (1.12)  (0.97)  (0.64)
+  Finance cost excluding
+  interest on lease liabilities  39.92  34.41  74.04  97.21  125.59
+  Interest expense on Lease
+  liabilities  0.80  2.15  3.73  6.97  5.33
+  Provision  for  product
+  warranty  14.48  4.56  60.85  82.25  100.62
+  Net  foreign  exchange
+  differences (unrealised)  (0.21)  (12.09)  (12.06)  (17.88)  23.61
+  Gain on termination of
+  lease  -  (6.29)  (6.29)  -  -
+  Loss on disposal of
+  property,  plant  and
+  equipment  0.38  1.75  2.78  0.57  3.93
+Operating Profit before
+working capital changes  2,270.39  1,759.19  3,764.77  3,026.63  2,567.07
+Working capital adjustments
+  Increase in trade receivables  (169.08)  (307.58)  (1,083.44)  (31.41)  (308.56)
+  (Increase)/Decrease in
+  inventories  (583.93)  (187.78)  22.04  308.58  (694.37)
+  (Increase)/Decrease in other
+  financial assets  12.01  (85.23)  34.54  (249.16)  4.60
+  Increase/ (Decrease) in trade
+  payables  428.21  152.64  203.26  (677.10)  935.74
+  (Increase)/ Decrease in other
+  assets  (24.65)  19.94  (325.78)  67.31  (135.73)
+  Decrease in provisions  (95.76)  (54.85)  (22.44)  (124.42)  (32.71)
+  Increase/ (Decrease) in other
+  financial liabilities  (243.31)  (234.60)  (5.14)  34.87  178.52
+  Increase in other Contract
+  liabilities  27.02  2.58  6.03  -  -
+  Increase/ (Decrease) in other
+  current liabilities  62.81  (157.62)  42.05  51.51  42.72
+  69
+  For the year ended
+  For the six  For the six
+  months period  months period  December
+  Particulars  December  December
+  ended June 30,  ended June30,  31, 2023
+  31, 2025  31, 2024
+  2026  2025
+  (in ₹ million)
+Cash generated from
+operations  1,683.71  906.69  2,635.89  2,406.81  2,557.28
+Cash flow from operating
+activities - discontinued
+operations  -  -  -  44.59  41.90
+Tax paid (Continuing &
+Discontinued Operations) - Net
+of refunds  (384.75)  (220.16)  (759.08)  (567.90)  (616.90)
+Net cash inflow from
+operating activities  1,298.96  686.53  1,876.81  1,883.50  1,982.28
+Cash flows from investing
+activities
+  Purchase of property, plant
+  and equipment and intangible
+  assets  (409.22)  (247.99)  (539.77)  (430.77)  (1,201.21)
+  Proceeds from disposal of
+  property,  plant  and
+  equipment  0.83  19.99  20.95  8.40  (0.12)
+  Deposits made during the
+  period/ year  (4.44)  (1,638.33)  (1,200.15)  (500.80)  (4,740.10)
+  Loans advanced to related
+  party  (240.75)  (203.93)  (441.99)  (218.50)  -
+  Loans repaid by related party  229.79  270.64  541.25  -  -
+  Proceeds from the deposits
+  matured  during  the
+  period/year  100.00  0.12  1,100.94  2,200.00  4,870.40
+  Proceeds from Sale of
+  Discontinued operations  -  -  -  -
+  Adjustments in net assets of
+  Bonfiglioli Drives Solutions
+  Private Limited  -  (62.36)  (78.50)  (118.30)  (29.48)
+  Interest income received  63.21  33.87  73.48  117.00  133.40
+Cash Flow From Investing
+Activities  -  Continuing
+Operations  (260.58)  (1,827.99)  (523.79)  1,057.03  (967.11)
+Cash Flow From Investing
+Activities - Discontinued
+Operations  -  -  -  36.92  (32.12)
+Net Cash Flow From / (Used)
+Investing Activities  (260.58)  (1,827.99)  (523.79)  1,093.95  (999.23)
+ Cash flows from financing
+activities
+Interest paid  (47.68)  (34.41)  (74.04)  (99.07)  (125.59)
+Payment of Principle portion of
+lease liabilities  (20.23)  (17.84)  (37.06)  (38.55)  (48.32)
+Payment of Interest of lease
+liabilities  (0.80)  (2.15)  (3.73)  (6.90)  (5.33)
+Borrowings
+  Proceeds  -  -  -  500.00  2,990.00
+  Repayments  -  -  -  (1,607.86)  (3,319.60)
+Payment of Dividend  (1,099.78)  -  (1,153.05)  (463.72)  (655.60)
+Buyback of shares  -  -  -  (720.00)  -
+Net cash used from financing
+activities  (1,168.49)  (54.40)  (1,267.88)  (2,436.10)  (1,164.44)
+Net increase/(decrease) in
+cash and cash equivalents
+(A+B+C)  (130.11)  (1,195.86)  85.14  541.35  (181.39)
+  70
+  For the year ended
+  For the six  For the six
+  months period  months period  December
+  Particulars  December  December
+  ended June 30,  ended June30,  31, 2023
+  31, 2025  31, 2024
+  2026  2025
+  (in ₹ million)
+Cash and cash equivalents at the
+beginning of the period / year  1,531.81  1,446.67  1,446.67  905.32  1,086.71
+Cash and cash equivalents as
+at the end of the period/year  1,401.70  250.81  1,531.81  1,446.67  905.32
+  71
+
+===== CAPITAL STRUCTURE =====
+CAPITAL STRUCTURE
+The share capital of our Company, as on the date of this Red Herring Prospectus, is set forth below.
+  (in ₹, except share data)
+ S.  Particulars  Aggregate value Aggregate value
+ No.  at face value  at Offer Price*
+A)  AUTHORISED SHARE CAPITAL(1)
+  187,995,834 Equity Shares of face value of ₹10 each  1,879,958,340  -
+B)  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL BEFORE THE OFFER
+  187,995,834 Equity Shares of face value of ₹10 each  1,879,958,340  -
+C)  PRESENT OFFER(2)(3)
+  Offer for Sale of up to 43,239,042 Equity Shares of face value of ₹ 10 each  432,390,420  [●]
+  aggregating to ₹ [●] million
+  which includes
+  Employee Reservation portion of up to 50,000 Equity Shares of face value of  [●]  [●]
+  ₹10 each(4)
+  Net Offer of up to [●] Equity Shares of face value of ₹10 each  [●]  [●]
+D)  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL AFTER THE OFFER*#
+  187,995,834 Equity Shares of face value of ₹ 10 each  1,879,958,340  -
+E)  SECURITIES PREMIUM ACCOUNT
+  Before and after the Offer#  NIL
+*
+ To be updated upon finalisation of the Offer Price and subject to finalisation of Basis of Allotment.
+#
+  Given that the Offer comprises of an Offer for Sale and does not include any fresh issuance of shares, the issued, subscribed and paid-up
+share capital of our Company and the securities premium before and after the Offer shall remain the same.
+(1)
+  For details in relation to changes in the authorized share capital of our Company, see “History and Certain Corporate Matters –
+  Amendments to our Memorandum of Association in the last 10 years” on page 250.
+(2)
+  The Offer has been authorized by a resolution passed by our Board at their meeting held on February 3, 2026.
+(3)
+  The Promoter Selling Shareholder has consented to and authorized the transfer of the Offered Shares pursuant to the Offer for Sale.
+  Further, our Board has taken on record such consent and authorization of the Promoter Selling Shareholder pursuant to its resolution
+  dated February 3, 2026 and the resolution passed by the IPO Committee dated October 6, 2026. The Promoter Selling Shareholder has
+  confirmed that the Offered Shares are eligible for being offered in the Offer for Sale in compliance with Regulation 8 of the SEBI ICDR
+  Regulations. For details of the consent of the Promoter Selling Shareholder in relation to the Offered Shares, see “Other Regulatory
+  and Statutory Disclosures” on page 410.
+(4)
+  Eligible Employees Bidding in the Employee Reservation Portion must ensure that the maximum Bid Amount does not exceed ₹ 0.5
+  million. However, the initial allocation to an Eligible Employee in the Employee Reservation Portion shall not exceed ₹ 200,000. In the
+  event of under-subscription in the Employee Reservation Portion (if any), the unsubscribed portion will be available for allocation and
+  Allotment, proportionately to all the Eligible Employees who have Bid in excess of ₹ 200,000, subject to the maximum value of Allotment
+  made to such Eligible Employee not exceeding ₹ 500,000. The unsubscribed portion, if any, in the Employee Reservation Portion after
+  allocation of up to ₹ 500,000, shall be added to the Net Offer. Our Company, in consultation with the BRLMs, may offer a discount of
+  [●]% on the Offer Price (equivalent of ₹ [●] per Equity Share) to the Eligible Employees Bidding in the Employee Reservation Portion
+  which shall be announced at least two Working Days prior to the Bid/ Offer Opening Date. The Employee Reservation Portion shall not
+  exceed 5% of our post-Offer equity share capital. For further details, see “Offer Procedure” and “Offer Structure” on pages 441 and
+  436, respectively.
+Notes to Capital Structure
+1.  Equity Share capital history of our Company
+  The following table sets forth the history of the Equity Share capital of our Company:
+  [The remainder of this page is intentionally left blank]
+  93
+  Date of  Reason for /  Name(s) of allottee(s) and  Number of  Face value per  Issue price/  Number of  Nature of  Cumulative  Cumulative
+ allotment/  nature of  details of  Equity Shares  Equity Share  buyback price allottee(s)/entit  consideration  number  paid-up Equity
+ reduction  allotment/bu  Equity Shares  allotted/  (₹)  per Equity  ies whose  of Equity  Share capital
+  y-back  allotted per allottee/bought  bought back  Share  equity shares  Shares  (₹)
+  back  (₹)  were bought
+  back
+June 23, 1998  Initial  10 Equity Shares each  20  10  10  2  Cash  20  200
+  subscription  allotted  to  K
+  to the  Balasubramanian and M S
+  Memorandu  Natesan
+  m
+  of
+  Association(1
+  )
+April 5,  Further issue  2,375,292 Equity Shares  2,795,618  10  10  3  Cash  2,795,638  27,956,380
+1999(3)  allotted  to  Bonfiglioli
+  S.p.A.*; 419,346 Equity
+  Shares allotted to Simest
+  S.pA. Società Italiana per le
+  Imprese  all’Estero
+  (SIMEST); and 980 Equity
+  Shares allotted to M. Ganesh
+August 20,  Further issue  5,477,622 Equity Shares  5,477,622  10  10  1  Cash  8,273,260  82,732,600
+1999(3)  allotted to Bonfiglioli S.p.A.*
+March 20,  Further issue  2,345,648 Equity Shares  3,726,302  10  10  2  Cash  11,999,562  119,995,620
+2000(3)  allotted  to  Bonfiglioli
+  S.p.A.*; 1,380,654 Equity
+  Shares allotted to Simest
+  S.pA. Società Italiana per le
+  Imprese  all’Estero
+  (SIMEST)
+March 30,  Further issue  20,000,438 Equity Shares  20,000,438  10  10  1  Cash  32,000,000  320,000,000
+2001  allotted to Bonfiglioli S.p.A.*
+November 23,  Further issue  8,000,000 Equity Shares  8,000,000  10  10  1  Cash  40,000,000  400,000,000
+2001(3)  allotted to Bonfiglioli S.p.A.*
+December 29,  Further issue  40,000,000 Equity Shares  40,000,000  10  10  1  Cash  80,000,000  800,000,000
+2011  allotted to Bonfiglioli S.p.A.*
+December 27,  Further issue  45,000,000 Equity Shares  45,000,000  10  10  1  Cash  125,000,000  1,250,000,000
+2012  allotted to Bonfiglioli S.p.A.*
+  94
+  Date of  Reason for /  Name(s) of allottee(s) and  Number of  Face value per  Issue price/  Number of  Nature of  Cumulative  Cumulative
+  allotment/  nature of  details of  Equity Shares  Equity Share  buyback price allottee(s)/entit  consideration  number  paid-up Equity
+  reduction  allotment/bu  Equity Shares  allotted/  (₹)  per Equity  ies whose  of Equity  Share capital
+  y-back  allotted per allottee/bought  bought back  Share  equity shares  Shares  (₹)
+  back  (₹)  were bought
+  back
+  December 26,  Allotment  3,181,818 Equity Shares  3,181,818  10  53.60  1  Other  than  128,181,818  1,281,818,180
+  2017  pursuant to  allotted  to  Bonfiglioli  cash
+  Scheme of  Vectron GmbH
+  Arrangement
+  for
+  Demerger(2)
+  December 21,  Rights issue  2,941,176 Equity Shares  2,941,176  10  68  1  Cash  131,122,994  1,311,229,940
+  2021  allotted to Bonfiglioli S.p.A.*
+  May 9, 2024  Buyback of  3,181,818 Equity Shares held  (5,792,438)  10  124.30  2  Cash  125,330,556  1,253,305,560
+  shares  by  Bonfiglioli  Vectron
+  GmbH and 2,610,620 Equity
+  Shares held by Bonfiglioli
+  S.p.A. were bought back
+  January 25,  Bonus issue  62,665,278 Equity Shares  62,665,278  10  N.A  1  N.A  187,995,834  1,879,958,340
+  2026  allotted to Bonfiglioli S.p.A.
+  in the ratio of one Equity
+  Share for every two Equity
+  Shares held (1:2), as on the
+  record date, i.e., November 3,
+  2025
+(1)
+  Our Company was incorporated on June 23, 1998. The date of subscription to the Memorandum of Association is June 19, 1998 and the allotment of Equity Shares was made pursuant to such subscription.
+(2)
+  Such allotment has been done in consideration of the demerger of the solar business undertaking of Bonfiglioli Renewable Power Conversion India Private Limited into our Company as per the Scheme of
+  Arrangement for Demerger. For further details, see “History and Certain Corporate Matters – Details regarding material acquisitions or divestments of business/undertakings, mergers, amalgamations, any
+  revaluation of assets, etc., in the last 10 years” on page 251.
+(3)
+  We have been unable to trace certain form filings, and challans for the allotments dated April 5, 1999; August 20, 1999; March 20, 2000; and November 23, 2001. Accordingly, reliance has been placed on alternate
+  documentation such as Board resolutions for the respective allotments. Further, Pramod S, Practicing Company Secretary, has conducted an independent search at the RoC office and submitted a report dated
+  February 6, 2026 and the aforementioned form filings and their respective challans have not been retrieved through this independent search. For more details, see “Risk Factors – Certain corporate records and
+  forms filed by us with the RoC, are not traceable. While we have conducted a search with the RoC, in respect of the unavailability of such forms and other records, we cannot assure you that such forms or
+  records will be available at all or any time in the future” on page 30.
+*  formerly known as Bonfiglioli Riduttori S.p.A.
+  [the remainder of this page has been intentionally left blank]
+  95
+2.  Preference Share Capital of our Company
+  Our Company does not have any preference share capital as on the date of this Red Herring Prospectus.
+3.  Shares issued for consideration other than cash or out of revaluation reserves and bonus issuance
+  Except as disclosed below, our Company has not issued any Equity Shares for consideration other than
+  cash or made a bonus issuance:
+  Date of  Reason for /  Name(s) of  Number of  Face  Issue  Nature of  Benefits
+  allotment  nature of  allottee(s)  Equity Shares  value  price consideration  accrued to
+  allotment  allotted  per  per  our
+  Equity Equity  Company
+  Share Share
+  (₹)  (₹)
+  December  Allotment  Bonfiglioli  3,181,818  10  53.60  Other than  The potential
+  26, 2017  pursuant to  Vectron  cash  benefits of
+  Scheme of  GmbH  the
+  Arrangement  demerger, as
+  for  set out in the
+  Demerger (1)  Scheme of
+  Arrangement
+  for
+  Demerger
+  included,
+  among
+  others,
+  streamlining
+  of business
+  activities for
+  our
+  Company.
+  January  Bonus issue  Bonfiglioli  62,665,278  10  N.A  N.A  Bonus
+  25, 2026  S.p.A.  issuance in
+  ratio of 1:2,
+  as on the
+  record date
+  November 3,
+  2025
+  (1)
+  Such allotment has been done in consideration of the demerger of the solar business undertaking of Bonfiglioli Renewable
+  Power Conversion India Private Limited into our Company in accordance with the Scheme of Arrangement for Demerger.
+  For further details, see “History and Certain Corporate Matters – Details regarding material acquisitions or divestments
+  of business/undertakings, mergers, amalgamations, any revaluation of assets, etc., in the last 10 years” on page 251.
+  Our Company has not issued any equity shares out of revaluation reserves since its incorporation.
+4.  Equity Shares issued pursuant to Sections 230 to 234 of the Companies Act, 2013 or Sections 391
+  to 394 of the Companies Act, 1956
+  Except as disclosed below, our Company has not issued any Equity Shares pursuant to any scheme
+  approved under Sections 391 to 394 of the Companies Act, 1956 or Sections 230 to 234 of the Companies
+  Act since its incorporation:
+  Date of  Reason for / nature  Name of  Number of  Face  Issue  Nature of
+  allotment  of allotment  allottee  Equity  value per  price per consideration
+  Shares  Equity  Equity
+  allotted  Share  Share
+  (₹)  (₹)
+  December  Allotment pursuant  Bonfiglioli  3,181,818  10  53.60 Other  than
+  26, 2017  to  Scheme  of  Vectron  cash
+  Arrangement  for  GmbH
+  Demerger(1)
+  (1)
+  Such allotment has been done in consideration of the demerger of the solar business undertaking of Bonfiglioli Renewable
+  Power Conversion India Private Limited into Bonfiglioli Transmission Private Limited as per the Scheme of Arrangement
+  for Demerger. For further details, see “History and Certain Corporate Matters – Details regarding material acquisitions
+  or divestments of business/undertakings, mergers, amalgamations, any revaluation of assets, etc., in the last 10 years” on
+  page 251.
+  96
+5.   [...truncated]
+
+===== OBJECTS OF THE OFFER =====
+OBJECTS OF THE OFFER
+The objects of the Offer are to (i) to carry out the Offer for Sale of up to 43,239,042 Equity Shares of face value
+of ₹ 10 each by the Promoter Selling Shareholder aggregating to ₹ [●] million; and (ii) achieve the benefits of
+listing the Equity Shares on the Stock Exchanges. For further details of the Offer, see “The Offer” on page 63.
+Further, our Company expects that listing of the Equity Shares will enhance our visibility and brand image and
+provide liquidity and a public market for the Equity Shares in India.
+Utilisation of the Offer Proceeds by the Promoter Selling Shareholder
+Our Company will not receive any proceeds from the Offer (the “Offer Proceeds”) and all the Offer Proceeds
+will be received by the Promoter Selling Shareholder after deduction of Offer related expenses and relevant taxes
+thereon, to be borne by the Promoter Selling Shareholder. For details of the Promoter Selling Shareholder and
+Offered Shares, see “Other Regulatory and Statutory Disclosures – Authority for the Offer” on page 410.
+Offer-related Expenses
+The Offer expenses are estimated to be approximately ₹ [●] million.
+The expenses in relation to this Offer include, among others, listing fees, selling commission and brokerage, fees
+payable to the BRLMs, fees payable to legal counsel, fees payable to the Registrar to the Offer, Escrow Collection
+Bank(s) and Sponsor Bank(s) to the Offer, processing fee to the SCSBs for processing application forms,
+brokerage and selling commission payable to members of the Syndicate, Registered Brokers, RTAs and CDPs,
+printing and stationery expenses, advertising and marketing expenses and all other incidental and miscellaneous
+expenses for listing the Equity Shares on the Stock Exchanges.
+Other than the listing fees, audit fees of statutory auditors (to the extent not attributable to the Offer), and expenses
+in relation to product or corporate advertisements, i.e. any corporate advertisements consistent with past practices
+of our Company (other than the expenses relating to marketing and advertisements undertaken in connection with
+the Offer), which shall be solely borne by our Company, the Promoter Selling Shareholder agrees to bear all costs,
+charges, fees and expenses that are directly attributable to the Offer, including, filing fees, book building fees and
+other charges, fees and expenses of the SEBI, the Stock Exchanges, the RoC and any other governmental authority,
+audit fees of statutory auditors (to the extent attributable to the Offer), advertising, printing, accommodation and
+travel expenses, fees and expenses of legal counsel to the Company and the Promoter Selling Shareholder,
+registrar fees and broker fees (including fees for procuring of applications), bank charges, fees and expenses of
+the BRLMs, Syndicate Members, Self Certified Syndicate Banks, other Designated Intermediaries and any other
+consultant, advisor or third party in connection with the Offer in accordance with applicable law. Upon
+commencement of listing and trading of the Equity Shares on the Stock Exchanges pursuant to the Offer, the
+Promoter Selling Shareholder shall reimburse our Company for any expenses in relation to the Offer, paid by our
+Company on behalf of the Promoter Selling Shareholder directly from the Public Offer Account except as may be
+prescribed by the SEBI or any other regulatory authority. In the event that the Offer is withdrawn or not completed
+for any reason, all the costs and expenses (including all applicable taxes) directly attributed to the Offer shall be
+borne in a manner as may be mutually agreed between our Company and the Promoter Selling Shareholder in
+accordance with applicable law.
+The break-up of the estimated Offer expenses are as follows:
+  Activity  Estimated  As a % of the  As a % of the
+  expenses*  total estimated  total Offer size
+  (in ₹ million)  Offer expenses
+ Fees and commissions payable to the BRLMs (including any  [●]  [●]  [●]
+ underwriting commission, brokerage and selling commission)
+ Advertising and marketing expenses  [●]  [●]  [●]
+ Fees payable to the Registrar to the Offer  [●]  [●]  [●]
+ Commission/processing fee for SCSBs, Sponsor Bank(s) and  [●]  [●]  [●]
+ Bankers to the Offer. Brokerage and selling commission and
+ bidding charges for Members of the Syndicate, Registered Brokers,
+ RTAs and CDPs(1)
+ Printing and distribution of Offer stationery  [●]  [●]  [●]
+ Others  [●]  [●]  [●]
+A. Regulatory filing fees, book building software fees, listing fees
+  etc
+  106
+  Activity  Estimated  As a % of the  As a % of the
+  expenses*  total estimated  total Offer size
+  (in ₹ million)  Offer expenses
+B.  Fees payable to other parties (including Statutory Auditor,  [●]  [●]  [●]
+  Independent Chartered Accountant, Independent Chartered
+  Engineer, Industry Expert)
+C. Fees payable to legal counsels  [●]  [●]  [●]
+D. Miscellaneous  [●]  [●]  [●]
+ Total estimated Offer expenses  [●]  [●]  [●]
+*
+  Offer expenses include goods and services tax, where applicable. Amounts will be finalised and incorporated at the time of filing of the
+Prospectus.
+*
+  Offer expenses are estimates and are subject to change.
+(1) Selling commission payable to the SCSBs on the portion for RIBs, Non-Institutional Bidders and Eligible Employee Bidders which are directly
+procured and uploaded by the SCSBs, would be as follows:
+Portion for RIBs*  0.30% of the Amount Allotted (plus applicable taxes)
+Portion for Non-Institutional Bidders*  0.10% of the Amount Allotted (plus applicable taxes)
+Portion for Eligible Employees*  0.15% of the Amount Allotted (plus applicable taxes)
+* Amount Allotted is the product of the number of Equity Shares Allotted and the Offer Price. Selling Commission payable to the SCSBs will be
+determined on the basis of the bidding terminal id as captured in the Bid book of BSE or NSE. No processing fees shall be payable by the Company
+and any of the Selling Shareholders to the SCSBs on the applications directly procured by them. Processing fees payable to the SCSBs for capturing
+Syndicate  Member/sub-Syndicate  (Broker)/sub-broker  code  on  the  ASBA  Form  for
+Non-Institutional Bidders and QIBs with Bids above ₹500,000 would be ₹10 plus applicable taxes, per valid application. In case the total uploading
+charges/ processing fee payable to SCSBs will be subject to maximum cap of ₹ 1.00 million (plus applicable taxes). In case the total processing fees
+exceeds ₹ 1.00 million (plus applicable taxes), then processing fees will be paid on pro-rata basis for portion of (i) Retail Individual Bidders, (ii) Non-
+Institutional Bidders and (iii) Eligible Employees as applicable.
+(2) Brokerage, selling commission and processing/uploading charges on the portion for RIBs (using the UPI mechanism), Eligible Employee Bidders
+and Non-Institutional Bidders which are procured by members of the Syndicate (including their sub-Syndicate Members), RTAs and CDPs or for using
+3-in-1 type accounts- linked online trading, demat & bank account provided by some of the brokers which are members of Syndicate (including their
+sub-Syndicate Members) would be as follows:
+Portion for RIBs  0.30 % of the Amount Allotted (plus applicable taxes)
+Portion for Non-Institutional Bidders  0.10% of the Amount Allotted (plus applicable taxes)
+Portion for Eligible Employees*  0.15% of the Amount Allotted (plus applicable taxes)
+* Amount Allotted is the product of the number of Equity Shares Allotted and the Offer Price.
+The selling commission payable to the Syndicate / Sub-Syndicate Members will be determined as under:
+(i) for RIBs (up to ₹ 0.20 million) and Non- Institutional Bidders (up to ₹ 0.50 million), on the basis of the application form number / series, provided
+  that the Bid cum Application Form is also bid by the respective Syndicate / Sub-Syndicate Member. For clarification, if a Syndicate ASBA
+  application on the application form number / series of a Syndicate / Sub-Syndicate Member, is bid by an SCSB, the selling commission will be
+  payable to the SCSB and not the Syndicate / Sub-Syndicate Member; and
+(ii) for Non-Institutional Bidders (above ₹ 0.50 million), Syndicate ASBA form bearing SM Code and Sub-Syndicate code of the application form
+  submitted to SCSBs for blocking of the fund and uploading on the exchanges platform by SCSBs. For clarification, if a Syndicate ASBA application
+  on the application form number / series of a Syndicate / Sub-Syndicate Member, is bid by an SCSB, the selling commission will be payable to the
+  Syndicate / Sub Syndicate members and not the SCSB.
+The selling commission and bidding charges payable to Registered Brokers, the RTAs and CDPs will be determined on the basis of the bidding terminal
+id as captured in the Bid Book of BSE or NSE.
+(3) Bidding charges payable to SCSBs on the QIB Portion and NIIs (excluding UPI Bids) which are procured by the Syndicate/sub-Syndicate/Registered
+Broker/RTAs/ CDPs and submitted to SCSBs for blocking and uploading would be ₹10 per valid application (plus applicable taxes).
+Selling commission/ uploading charges payable to the Registered Brokers on the portion for RIBs, Eligible Employee Bidders and Non-Institutional
+Bidders which are directly procured by the Registered Broker and submitted to SCSB for processing, would be as follows:
+Portion for RIBs, Non-Institutional Bidders and Eligible  ₹ 10 per valid application (plus applicable taxes)
+Employees
+*Based on Valid applications
+Uploading Charges payable to members of the Syndicate (including their sub-Syndicate Members) on the applications made using 3-in-1 accounts
+would be ₹10 plus applicable taxes, per valid application bid by the Syndicate (including their sub- Syndicate Members) subject to a maximum of ₹
+2.00 million (plus applicable taxes), in case if the total processing fees exceeds ₹ 2.00 million (plus applicable taxes) then processing fees will be paid
+on pro-rata basis for portion of (i) RIBs (ii) NIBs and (iii) Eligible Employees, as applicable
+(4) Uploading charges/ Processing fees for applications made by RIBs using the UPI Mechanism would be as under:
+Members of the Syndicate / RTAs / CDPs₹ 10 per valid application (plus applicable taxes).
+/Registered Brokers*
+Sponsor Bank(s)  Axis Bank Limited – ₹ 0/- (NIL) per valid Bid cum Application Form (plus applicable taxes)
+  The Sponsor Bank shall be responsible for making payments to the third parties such as remitter bank, NPCI
+  and such other parties as required in connection with the performance of its duties under the SEBI circulars,
+  the Syndicate Agreement, and other applicable laws
+  107
+  ICICI Bank Limited - ₹ 0/- (NIL) per valid Bid cum Application Form (plus applicable taxes)
+  The Sponsor Bank shall be responsible for making payments to the third parties such as remitter bank, NPCI
+  and such other parties as required in connection with the performance of its duties under the SEBI circulars,
+  the Syndicate Agreement, and other applicable laws
+*Based on valid applications.
+All such commissions and processing fees set out above shall be paid as per the timelines in terms of the Syndicate Agreement and Cash Escrow and
+Sponsor Bank Agreement
+*The total uploading charges / processing fees payable to members of the Syndicate, RTAs, CDPs, Registered Brokers will be subject to a maximum
+cap of ₹ 5 million (plus applicable taxes). In case the total uploading charges/processing fees payable exceeds ₹5 million, then the amount payable to
+members of the Syndicate, RTAs, CDPs, Registered Brokers would be proportionately distributed based on the number of valid applications such that
+the total uploading charges / processing fees payable does not exceed ₹ 5 million.
+All such commissions and processing fees set out above shall be paid as per the timelines in terms of the Syndicate Agreement and Cash Escrow and
+Sponsor Bank Agreement. Pursuant to SEBI circular no. SEBI/HO/CFD/DIL2/P/CIR/2022/75 dated May 30, 2022, applications made using the ASBA
+facility in initial public o [...truncated]
+
+===== BASIS OF OFFER PRICE =====
+BASIS FOR OFFER PRICE
+The Price Band and Offer Price will be determined by our Company in consultation with the BRLMs, and in
+accordance with applicable law, on the basis of assessment of market demand for the Equity Shares offered
+through the Book Building Process and quantitative and qualitative factors as described below. The face value of
+the Equity Shares is ₹10 each and the Offer Price is [●] times the face value at the lower end of the Price Band
+and [●] times the face value at the higher end of the Price Band. Investors should refer to “Risk Factors”, “Our
+Business”, “Restated Financial Information” and “Management’s Discussion and Analysis of Financial
+Condition and Results of Operations” on pages 20, 205, 281 and 355, respectively, to have an informed view
+before making an investment decision.
+I.  Qualitative factors
+Some of the qualitative factors about our Company which form the basis for computing the Offer Price are set
+forth below:
+•  End-to-end technology-led power transmissions and industrial drive solutions provider across business
+  verticals.
+•  Highly diversified offerings across business verticals and customer industries.
+•  Established parentage and trusted brand backed by global and local R&D capabilities.
+•  Deep relationships with marquee customers built through decades of collaboration, a strong sales team and
+  dealer network and after-sales service support.
+•  State-of-the-art manufacturing infrastructure with embedded industry 4.0 principles supported by an efficient
+  and localized supply chain network.
+•  Stable and experienced management team delivering strong financial performance.
+For further details, see “Our Business – Strengths” on page 210.
+  II.  Quantitative factors
+Certain information presented below relating to us is based on the Restated Financial Information. For details, see
+“Restated Financial Information” and “Other Financial Information” on pages 281 and 348, respectively.
+Some of the quantitative factors which may form the basis for calculating the Offer Price are as follows:
+A.  Basic and Diluted Earnings Per Equity Share of face value of ₹10 each (“EPS”):
+  Financial Year/Period Ended  Basic EPS (in ₹)  Diluted EPS (in ₹)  Weight#
+  December 31, 2025  12.65  12.65  3
+  December 31, 2024  10.08  10.08  2
+  December 31, 2023  7.57  7.57  1
+  Weighted Average$  10.95
+  Six months periods ended June 30, 2026*  7.90  7.90  -
+  Six months periods ended June 30, 2025*  6.12  6.12  -
+  *Not annualised
+  #
+  As determined by the Company
+  $
+  Weighted average = Aggregate of year-wise weighted EPS divided by the aggregate of weights i.e. (EPS x Weight) for each year
+  /Total of weights
+  Notes:
+  1. The face value of each Equity Share is ₹ 10.
+  2. Basic earnings per share (from continuing operations) = Net profit after tax (loss after tax) from continuing operations/
+  Weighted average number of equity shares outstanding during the period/year.
+  3. Diluted earnings per share (from continuing operations) = Net profit after tax (loss after tax) from continuing operation/
+  Weighted average number of potential equity shares outstanding during the period/year.
+  4. Earnings per Share calculations are in accordance with the notified Indian Accounting Standard 33 ‘Earnings per share’
+  notified under the Companies (Indian Accounting Standards) Rules of 2015 (as amended).
+  5. Weighted average number of shares outstanding have been retrospective adjusted to give impact of the issuance of bonus
+  shares in accordance with Ind AS 33- Earning per share (if any). The bonus shares are issued by our Company in the
+  proportion of 1 (One) bonus Equity Share for every 2 (Two) Equity Shares of our Company pursuant to a resolution dated
+  109
+  November 10, 2025 passed by the Shareholders and such bonus issue of equity shares were allotted pursuant to a resolution
+  passed by Board of Directors on January 25, 2026.
+B.  Price/Earning (“P/E”) Ratio in relation to the Price Band of ₹ [●] to ₹ [●] per Equity Share of face
+  value of ₹10 each:
+  Particulars  P/E at Floor Price (number of  P/E at Cap Price (number of
+  times)*  times)*
+  Based on basic EPS for Fiscal 2025  [●]  [●]
+  Based on diluted EPS for Fiscal  [●]  [●]
+  2025
+  *
+  To be computed after finalisation of price band and populated in the Prospectus to be filed with the RoC.
+  Note:
+  P/E ratio = Price per Equity Share divided by diluted earnings per Equity Share.
+C.  Industry Peer Group P/E ratio
+  Based on the peer group information (excluding our Company), details of the highest, lowest, and
+  industry average P/E ratio are set forth below:
+  Particulars  P/E Ratio (x)
+  Highest  63.39
+  Lowest  31.63
+  Average  51.61
+  Notes:
+  (1) The highest, lowest and average Industry P/E shown above is based on the industry peer set provided in this section.
+  (2) The industry P / E ratio mentioned above is for the year ended March 31, 2026/December 31, 2025 (as applicable).
+  (3) P / E Ratio has been computed based on the closing market price of equity shares on NSE on September 28,2026 divided by
+  the Diluted EPS for the year ended March 31, 2026/December 31, 2025 (as applicable).
+D.  Return on Net Worth (“RoNW”)
+  Financial Year/Period Ended  RoNW (%)  Weight#
+  December 31, 2025  23.96%  3
+  December 31, 2024  22.25%  2
+  December 31, 2023  18.30%  1
+  Weighted Average$  22.45%
+  Six months periods ended June 30, 2026*  14.37%  -
+  Six months periods ended June 30, 2025*  13.13%  -
+  *
+  Not annualized
+  #
+  As determined by the Company
+  $
+  Weighted average = Aggregate of year-wise weighted RoNW divided by the total aggregate weight i.e., (RoNW x Weight) for each
+  year/Total of weights.
+  Notes:
+  1. Return on Net Worth (%) = Net Profit after tax from continuing operations attributable to owners of the Company divided by
+  net worth at the end of the respective period/year.
+  2. Net worth means the aggregate value of the paid-up share capital and all reserves created out of the profits and securities
+  premium account and debit or credit balance of profit and loss account, after deducting the aggregate value of the
+  accumulated losses, deferred expenditure and miscellaneous expenditure not written off, but does not include reserves created
+  out of revaluation of assets, write-back of depreciation and amalgamation in accordance with Regulation 2(1)(hh) of the
+  SEBI ICDR Regulations. Net worth of the company is calculated as aggregate value of equity share capital and other equity
+  excluding Capital Reserve, if any at the end of the period / year.
+  110
+E.  Net Asset Value (“NAV”) per Equity Share of face value of ₹ 10 each
+  Particulars  Amount (₹)
+  As at June 30, 2026  55.02
+  As on December 31, 2025  52.82
+  After completion of the Offer*
+  - At the Floor Price  [●]
+  - At the Cap Price  [●]
+  Offer Price**  [●]
+  *
+  To be computed post finalization of Price Band and populated in the Prospectus to be filed with the RoC.
+  **
+  To be determined on conclusion of the Book Building Process.
+  Notes:
+  1. NAV per Equity Share is calculated as net worth as at the end of the period/year divided by number of equity shares
+  outstanding as at the end of period / year plus bonus shares for all periods presented in accordance with principles of IND
+  AS 33 – Earnings per Share. The bonus shares are issued by our Company in the proportion of 1 (One) bonus Equity Share
+  for every 2 (Two) Equity Shares of the Company pursuant to a resolution dated November 10, 2025 passed by the Shareholders
+  and such bonus issue of equity shares were allotted pursuant to a resolution passed by Board of Directors on January 25,
+  2026.
+  2. Net worth means the aggregate value of the paid-up share capital and all reserves created out of the profits and securities
+  premium account and debit or credit balance of profit and loss account, after deducting the aggregate value of the
+  accumulated losses, deferred expenditure and miscellaneous expenditure not written off, but does not include reserves created
+  out of revaluation of assets, write-back of depreciation and amalgamation in accordance with Regulation 2(1)(hh) of the
+  SEBI ICDR Regulations. Net worth of our Company is calculated as aggregate value of equity share capital and other equity
+  at the end of the period / year.
+  [the remainder of this page is intentionally left blank]
+  111
+F.  Comparison of accounting ratios with listed industry peers
+Following is the comparison with our listed peer companies:
+ Name of the Company  Revenue  from  Face  Closing Price as  P/E4  EPS (Basic)  EPS (Diluted)  RoNW  for  NAV  per
+  Operations  for  Value  on September 28,  for  Year  for  Year  Year ended  Equity
+  Year  ended  per  2026  ended  ended  December 31,  Share as at
+  December  31,  Equity  December 31,  December 31,  2025 (%)  December
+  2025 (₹ million)  Share (₹)  2025 (₹)  2025 (₹)  31, 2025 (₹)
+ Our Company  20,135.26  10  N.A  N.A  12.65  12.65  23.96%  52.82
+ Indian listed peers
+ Elecon Engineering Company Limited  23,660.50  1  480.75  31.63  15.20  15.20  14.81%  102.65
+ Shanthi Gears Limited  5,187.20  1  633.30  63.39  9.99  9.99  17.42%  57.36
+ Schaeffler India Limited  96,858.50  2  3,955.50  53.74  73.60  73.60  19.02%  386.94
+ Timken India Limited  34,780.29  10  3,180.50  57.66  55.16  55.16  13.68%  403.31
+1.  Audited consolidated financial statements of the Elecon Engineering Company Limited, Shanthi Gears Limited and Timken India Limited for the year ended March 31, 2026 and Schaeffler India Limited for the
+  year ended December 31, 2025 have been submitted to stock exchanges.
+2.  P/E Ratio of the company shall be disclosed post finalization of price band.
+3.  P/E Ratio of peers group companies is calculated as closing share price as of September 28, 2026 as available on NSE divided by the diluted EPS for the year ended March 31, 2026/December 31, 2025 (as
+  applicable).
+4.  Basic and Diluted EPS is sourced from the audited consolidated financial statements of the respective peer group companies for the year ended March 31, 2026/December 31, 2025 (as applicable).
+5.  RoNW is computed as net profit or loss for the year attributable to equity shareholders divided by net worth at the end of the year.
+6.  Net worth means the aggregate value of the paid-up share capital and all reserves created out of the profits and securities premium account and debit or credit balance of profit and loss account, after deducting
+  the aggregate value of the accumulated losses, deferred expenditure and miscellaneous expenditure not written off, but does not include reserves created out of revaluation of assets, write-back of depreciation and
+  amalgamation in accordance with Regulation 2(1)(hh) of the SEBI ICDR Regulations. Net worth of the company is calculated as aggregate value of equity share capital and other equity excluding Capital Reserve,
+  if any, at the end of the period / year.
+7.  NAV per Equity Share is calculated as net worth as at the end of the period/year divided by number of equity shares outstanding as at the end of period / year plus bonus shares for all periods presented in
+  accordance with principles of IND AS 33 – Earnings per Share. The bonus shares are issued by our Company in the proportion of 1 (One) bonus Equity Share for every 2 (Two) Equity Shares of the Company
+  pursuant to a resolution dated November 10, 2025 passed by the Shareholders and such bonus issue of equity shares were allotted pursuant to a resolution passed by Board of Directors on January 25, 2026.
+Peer profile:
+  Particulars  Elecon Engineering Company Limited  Shanthi Gears Limited  Timken India Limited  Schaeffler India Limited
+ Brief Profile  One of Asia's largest manufacturers of  Well established Indian manufacturer of  Is a leading manufacturer of tapered roller  Schaeffler India (brands: FAG, INA,
+  indutrsial gearboxes, with a strong focus  industrial gearboxes and precision gears,  bearings  and  industrial  power  LuK) is a major supplier of precision
+  on heavy-duty and high torque  serving OEM and replacement markets  transmission products, integrated with  bearings, engine and transmission
+  applications  Timken's global engineering and supply  components, and drivetrain systems,
+  network.  serving both automotive and industrial
+  products.
+ Manufacturing capabilities  -  CNC machining, gear grinding, heat  Tapered roller bearing manufacturing  Multiple manufacturing plants in
+  treatment, precision gears, and custom  facility at Jamshedpur, along with  Vadodara, Hosur, and Pune/Talegaon,
+  gearbox manufacturing  capabilities in industrial bearings, power  producing  bearings,  engine  &
+  transmission components, and bearing  transmission components, clutch systems,
+  rebuild & refurbishment services.  and precision industrial products.
+  112
+  Particulars  Elecon Engineering Company Limited  Shanthi Gears Limited  Timken India Limited  Schaeffler India Limited
+ Industries served  Mining, cement, steel, power, fertiliser,  Steel, cement, Sugar, Defence, railways,  Automotive (CVs), Metals, Mining, Off-  Automotive (PV, CV, 2W), Rail & Off-
+  ports, paper, plastic, rubber, material  Mining, Paper, OEM machinery  highway, Rail, Energy, Industrial  Highway, Industrial Machinery, Wind
+  handling  Machinery, Aftermarket  Energy, Manufacturing & Process
+  Industries.
+ Domestic and export contribution  ~70-75% domestic; ~25-30% exports  ~80-85% domestic; ~15-20% exports  Higher export contribution compared to  Balanced domestic and export mix, with
+  peers due to integration with Timken's  exports of bearings and drivetrain
+  global supply chain, with exports if  components to Europe, the US, and global
+  tapered roller bearings to the US, Europe  Schaeffler OEM programs.
+  and APAC
+Source: F&S Report
+  [the remainder of this page is intentionally left blank]
+  113
+G.  Key Performance Indicators
+The table below sets forth the details of key performance indicators (“KPIs”) that our Company considers have a
+bearing for arriving at the basis for Offer Price. These KPIs have been used historically by our Company to
+understand and analyze our business performance, which in result, help us in analyzing the growth of business in
+comparison to our peers. The Bidders can refer to the below-mentioned KPIs, being a combination of financial
+and operational KPI, to make an assessment of our Company’s performance in various business verticals and
+make an informed decision.
+The KPIs disclosed below have been approved and confirmed by a resolution of our Audit Committee dated
+October 9, 2026, and certified by Gatham Anandhan Balaji, our Whole-Time Director and Chief Financial Officer,
+on behalf of the management of our Company by way of a certificate dated October 9, 2026. Further, since we
+are wholly owned by Bonfiglioli S.p.A., one of our Corporate Promoters, the Audit Committee has confirmed that
+there are no KPIs pertaining to our Company that have been disclosed to any investors at any point of time during
+the three years period prior to the date of filing of this Red Herring Prospectus. The KPIs pertaining to our
+Company, as disclosed below, have been identified in accordance with the SEBI circular on “Industry Standards
+on Key Performance Indicators (“KPIs”) Disclosures in the draft Offer Document and Offer Document” dated
+February 28, 2025. Further, the KPIs disclosed herein have been certified by J C Bhalla & Co., Chartered
+Accountants, (FRN No. 001111N) by way of their certificate dated October 9, 2026. This certificate on KPIs shall
+form part of the material contracts for inspection and shall be accessible on the website of our Company at
+https://www.bonfiglioli.in/Investor_Relations. For further details, see “Material Contracts and Documents for
+Inspection” on page 500.
+Our Company confirms that it shall continue to disclose all the KPIs included in this section on a periodic basis,
+at least once in a year (or any other period as determined by the Board of Directors of our Company), for a period
+of one year after the date of listing of the Equity Shares on the Stock Exchanges, or for such other duration as
+required under the SEBI ICDR Regulations.
+For details of our other operating metrics disclosed elsewhere in this Red Herring Prospectus, see “Our Business”,
+and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” on pages 205
+and 355, respectively.
+Details of our KPIs as of and for the six months period ended June 30, 2026 and June 30, 2025, and for the Fiscals
+ended December 31, 2025, December 31, 2024, and December 31, 2023, is set out below:
+  Particulars  Six months  Six months  Year ended  Year ended  Year ended
+  ended June  ended June  December  December  December
+  30, 2026*  30, 2025*  31, 2025  31, 2024  31, 2023
+ Revenue from Operations (₹  11,318.69  9,603.55  20,135.26  18,541.83  16,873.30
+ million) (#)
+ Revenue from Customers in India  70.04  74.11  72.49  74.59  76.15
+ %(1) (#)
+ Revenue from Customers Outside  29.96  25.89  27.51  25.41  23.85
+ India %(2) (#)
+ Revenue from Verticals (#):
+ Industry & Automation Solutions  42.53  40.63  40.95  41.25  43.09
+ (% of revenue from operations) (3)
+ Off-Highway Mobility Industry (%  28.31  24.46  25.18  23.50  25.23
+ of revenue from operations) (4)
+ Wind Industry (% of revenue from  27.36  32.20  31.53  32.33  29.69
+ operations) (5)
+ Others (% of revenue from  1.80  2.71  2.34  2.92  1.99
+ operations) (6)
+ EBITDA (excluding Other Income)  2,238.74  1,764.28  3,707.70  2,950.74  2,438.91
+ (₹ million) (7) (#)
+ EBITDA (excluding Other Income)  19.78  18.37  18.41  15.91  14.45
+ Margin (%) (8) (#)
+  114
+  Particulars  Six months  Six months  Year ended  Year ended  Year ended
+  ended June  ended June  December  December  December
+  30, 2026*  30, 2025*  31, 2025  31, 2024  31, 2023
+  Profit after tax (₹ million) (9) (#)  1,485.81  1,149.69  2,378.74  1,915.98  1,466.65
+  PAT Margin (%) (10) (#)  13.04  11.90  11.76  10.29  8.62
+  Net Debt (₹ million) (11)  (1,393.81)  (1,841.77)  (1,603.84)  (1,382.04)  (1,400.92)
+  Cash Conversion Cycle (Days) (12)  94  90  90  83  80
+  Fixed Asset Turnover (13) (16)  3.99  3.55  7.15  6.68  6.10
+  Return on Capital Employed (%) (15)  20.03  18.62  34.05  30.05  24.53
+  (16) (#)
+  Return on Equity (%) (14) (16) (#)  14.66  13.24  25.66  23.05  19.21
+  Inventory Days Outstanding (Days)  99  102  93  100  112
+  (17)
+  Payable Days Outstanding (Days)(18)  90  95  97  97  121
+  Receivable Days Outstanding  85  83  94  80  89
+  (Days)(19)
+* Not annualized
+(#)
+  Represents results from continuing operations only.
+Notes:
+(1) Calculated as Revenue from Customers in India divided by Total Revenue from Customers.
+(2) Calculated as Revenue from Customers from outside India divided by Total Revenue from Customers.
+(3) Calculated as Revenue from Industry and Automation Solutions vertical divided by Revenue from Operations.
+(4) Calculated as Revenue from Off-Highway Mobility Industry vertical divided by Revenue from Operations.
+(5) Calculated as Revenue from Wind Industry vertical divided by Revenue from Operations.
+(6) Calculated as Revenue from non-core sales such as sale of components to vendors divided by Revenue from Operations.
+(7) EBITDA is calculated as Profit after tax for the period / year plus total tax expense plus finance costs plus depreciation and amortization.
+  EBITDA (excluding Other Income) = EBITDA minus Other Income.
+(8) EBITDA (excluding Other Income) Margin is calculated as EBITDA (excluding Other Income) divided by revenue from operations.
+(9) Profit after tax for the period/year is calculated as Profit after tax for the period/year represents profit for the relevant period/year.
+(10) PAT Margin is calculated as Profit after tax for the period/year divided by Total Income.
+(11) Net Debt is calculated as the sum of current borrowings, current lease liabilities, non-current borrowings and non-current lease liabilities
+  minus cash and cash equivalents and bank balances other than cash and cash equivalents.
+(12) Cash Conversion Cycle is calculated as receivable days plus inventory days minus payable days (in which receivable days is calculated
+  as receivables divided by revenue from operations multiplied by number of days; inventory days is calculated as inventory divided by
+  cost of goods sold multiplied by number of days; and payable days is calculated as payables divided by purchase of raw materials and
+  components plus stock-in-trade multiplied by number of days; where cost of goods sold is the sum of cost of material consumed, change
+  in inventory, purchases of stock-in-trade; receivables, inventory and payables taken as of end of period/year) Cash conversion for six
+  months period ended June 30, 2026 and June 30, 2025, has been calculated using 181 days, being the actual number of days in the
+  reporting period.
+(13) Fixed asset turnover is calculated as revenue from operations divided by Fixed Assets. Fixed Assets is calculated as sum of Property,
+  Plant and Equipment and Capital work-in-progress at the end of the period/year.
+(14) Return on Equity is calculated as profit after tax for the period/year divided by average of opening and closing total equity for the period
+  / year.
+(15) Return on Capital Employed is calculated as earnings before interest and tax divided by capital employed; earnings before interest and
+  tax is calculated as profit after tax for the period / year plus total tax expense plus finance costs; capital employed is calculated as the
+  sum of tangible net worth and total debt; tangible net worth is calculated as total equity minus intangible assets minus intangible assets
+  under development minus deferred tax assets (net); total debt is calculated as sum of current borrowings, current lease liabilities, non-
+  current borrowings and non-current lease liabilities.
+(16) Return on Capital Employed (%), Return on Equity (%) and Fixed Asset Turnover numbers for six months period ended June 30, 2026
+  and June 30, 2025 have not been annualized.
+(17) Inventory days outstanding is calculated as inventory as of end of period/year divided by cost of goods sold multiplied by number of
+  days, where cost of goods sold is the sum of cost of material consumed, change in inventory, purchases of stock-in-trade. Inventory days
+  outstanding for six months period ended June 30, 2026 and June 30, 2025, has been calculated using 181 days, being the actual number
+  of days in the reporting period.
+(18) Payable days outstanding is calculated as payables as of end of period/year divided by sum of purchase of raw materials and components
+  consumed and purchase of stock-in-trade multiplied by number of days. Payable days outstanding for six months period ended June 30,
+  2026 and June 30, 2025, has been calculated using 181 days, being the actual number of days in the reporting period.
+(19) Receivable days outstanding is calculated as trade receivables as of end of period/year divided by revenue from operations multiplied
+  by number of days. Receivable days outstanding for six months period ended June 30, 2026 and June 30, 2025, has been calculated
+  using 181 days, being the actual number of days in the reporting period.
+  115
+Brief explanations of the relevance of the KPIs:
+The list of our KPIs along with brief explanation of the relevance of the KPI for our business operations are set
+forth below:
+KPI  Explanation
+Revenue from Operations  Revenue from operations is used by our management to track the overall financial
+  performance of our Company and size and scale of our business
+Revenue from Customers in India %  Share of revenue from customers in India indicates the size and scale of our business
+  within India, and helps assess the performance of domestic business
+Revenue from Customers Outside  Share of Revenue from customers outside India reflects the size and scale of our
+India %  overseas operations
+Revenues from Verticals  Revenue from verticals is used to assess the profile of our business and track
+Industry & Automation %  performance of each vertical
+Off Highway Mobility Industry %
+Wind Industry %
+Others %
+EBITDA (excluding Other Income)  EBITDA (excluding Other Income) is crucial because it is a key performance
+  indicator that is reflection of our Company’s profitability before interest,
+  depreciation, amortisation and taxes
+EBITDA (excluding Other Income)  EBITDA (excluding Other Income) Margin is an indicator of the operational
+Margin (%)  profitability and financial performance of our business
+Profit after tax for the period/year  Provides information regarding the profitability of the business carried on by our
+  Company
+PAT Margin (%)  PAT Margin reflects the overall profitability of the business of our Company
+Net Debt  Net Debt helps to track our leverage position and profile adjusted for cash. Negative
+  value of net debt represents net cash position of the company.
+Cash Conversion Cycle  Cash Conversion Cycle measures ho [...truncated]
+
+===== OUR BUSINESS =====
+OUR BUSINESS
+Some of the information in the following section, including information with respect to our business plans and
+strategies, consists of certain forward-looking statements that involve risks and uncertainties. Our actual results
+may differ materially from those expressed in, or implied by, these forward-looking statements. You should read
+the section “Forward-Looking Statements” on page 19 for a discussion of the risks and uncertainties related to
+those statements and the section “Risk Factors” on page 20, “Management’s Discussion and Analysis of Results
+of Operations” on page 355, “Industry Overview” on page 131 for a discussion of certain risks that may affect
+our business, financial condition, or results of operations.
+Our Company’s financial year commences on January 1 and ends on December 31 of the same year, and
+references to a particular Fiscal are to the 12 months ended December 31 of that particular year. Unless otherwise
+stated, or the context otherwise requires, the financial information used in this section is derived from our
+“Restated Financial Information” included in this Red Herring Prospectus beginning on page 281.
+Only to the extent explicitly indicated, industry and market data used in this section has been derived from the
+report titled “Market potential assessment of power transmission products across industry & automation,
+mobility, and wind solutions” dated September 28, 2026, prepared and issued by Frost and Sullivan (the “F&S
+Report”), commissioned by and paid for by our Company in relation to the Offer and any reliance on such
+information for making an investment decision in this Offer is subject to inherent risks. The F&S Report has been
+prepared and issued by Frost & Sullivan for the purpose of understanding the industry exclusively in connection
+with the Offer. The F&S Report will be made available on the website of our Company at
+https://www.bonfiglioli.in/Investor_Relations from the date of this Red Herring Prospectus until the Bid/Offer
+Closing Date. Unless otherwise indicated, all financial, operational, industry and other related information
+derived from the F&S Report and included herein with respect to any particular fiscal or calendar year, refers to
+such information for the relevant fiscal or calendar year. For further details, see “Risk Factors – We have used
+information from the F&S Report which has been commissioned and paid for by our Company for industry
+related data in this Red Herring Prospectus and any reliance on such information is subject to inherent risks”
+and “Industry Overview” on pages 47 and 131, respectively.
+All references to “Bonfiglioli Group” refer to any company (individually or in the aggregate, as the context may
+require) that is directly or indirectly owned or controlled by one of our Corporate Promoters, Bonfiglioli S.p.A.
+Overview
+We are one of India’s largest technology-led mechanical and electro-mechanical power transmissions and
+industrial drive solutions providers by revenue for the six months period ended June 30, 2026 (Source: F&S
+Report). We manufacture a wide range of mission-critical and highly precision engineered gear motors, gearboxes
+and drive systems used across diverse end-user markets (Source: F&S Report). Our legacy and reputation lie in
+the Bonfiglioli brand, which has a worldwide presence of nearly 70 years, and which we have established in India
+through more than 25 years of operations.
+Our Corporate Promoter, Bonfiglioli S.p.A. is headquartered in Italy, and according to the F&S Report, is one of
+the largest technologically advanced players globally in the mechanical and electro-mechanical power
+transmissions and industrial drive solutions industry with consolidated revenues of Euro 1,172.94 million
+(₹115.56 billion) for the year ended December 31, 2025. It focuses on the development, manufacture and
+distribution of gearboxes and drive systems to cater to the needs of industrial processes, automation, off-highway
+mobility solutions and renewable energy applications. As at the date of this Red Herring Prospectus, the
+Bonfiglioli Group has operations spanning across 80 countries through 18 production sites, seven R&D centres,
+a network of more than 550 distributors and resellers, and a workforce of more than 5,000 employees, with 21
+patents granted under the name of Bonfiglioli S.p.A.
+The markets we cater to are broadly categorized into three business verticals: Industry and Automation Solutions,
+Off-Highway Mobility and Wind Industries, based on the end-use applications. According to the F&S Report, we
+are the largest manufacturer in India of gearboxes (gear motors below 15 kNm) and drives catering to OEMs and
+end-users in the Industry & Automation, Off-Highway Mobility and Wind Industries in India as of June 30, 2026,
+in terms of revenue from operations. We were also among the leading manufacturers of planetary gearboxes in
+India in the year ended December 31, 2025 by revenue. (Source: F&S Report)
+Set forth below is an overview of our three business verticals, categorized based on the customer industries we
+serve:
+  205
+  Particulars  Industry & Automation  Off- highway Mobility  Wind Industry
+  Solutions  Industry
+ Market share according to  Leading market share of  32.0%(2)  Leading market share of
+ the F&S Report  25.0% (1)  67.9% (3)
+ End-user industries(4)  Material handling, chemicals  Earthmoving/  excavator,  Wind turbine manufacturers
+  & pharmaceuticals, mining,  concrete, mining, road
+  food, beverage & tobacco,  construction, agricultural
+  metal processing & machine  and material handling
+  tools, construction, textiles &
+  leather, rubber & plastics
+ Product portfolio  Low, medium and heavy duty  Swing and track drives;  Yaw and pitch drives
+  gear motors and gearboxes in  drum and skip/ mixer
+  torque capacities ranging  drives; wheel and auger/
+  from 13 Nm to 1,400 kNm  conveyor drives; cutter and
+  Helical, bevel, planetary and  hoist drives
+  worm gearboxes and gear
+  motors, electric motors;
+  variable frequency drives,
+  servo motors and drives, and
+  precision drives for robotics
+  & automation solutions
+ Key  customers  and  ElectroMech  Material  Action  Construction  Nordex  India  Private
+ vintage(5)  Handling Systems (India)  Equipment,  Ajax  Limited, Senvion Wind
+  Private  Limited,  GMM  Engineering Limited, CNH  Technology Private Limited
+  Pfaudler Limited, Milltec  Industrial (India) Private  and Suzlon Energy Limited.
+  Machinery Private Limited,  Limited,  Hyundai
+  Terex India Private Limited,  Construction  Equipment  As of June 30, 2026, seven
+  Uzzala Bio Energy Solutions  India Private Limited, JCB  of our top 10 OEM
+  and Ammann India Private  India Limited, Schwing  customers by revenue in
+  Limited.  Stetter  (India)  Private  Fiscal 2025, had been
+  Limited and Wirtgen India  engaged with us for more
+  As of June 30, 2026, each of  Private Limited.  than 10 years
+  our top 10 OEM customers
+  (by revenue in Fiscal 2025),  As of June 30, 2026, eight
+  had been engaged with us for  of our top 10 OEM
+  more than 10 years  customers by revenue in
+  Fiscal 2025, had been
+  engaged with us for more
+  than 10 years
+ Number of SKUs
+ Six months period ended  8,517  221  42
+ June 30, 2026
+ Six months period ended  7,758  214  42
+ June 30, 2025
+ Fiscal 2025  11,535  274  48
+ Fiscal 2024  11,219  236  62
+ Fiscal 2023  9,676  221  62
+ Sales and distribution  Direct customer relationships  Direct  customer  Direct  customer
+  and dealer network  relationships  and  co-  relationships  and  co-
+  engineering (IP for co-  engineering (IP for co-
+  engineered  products  engineered  products
+  remains with the Bonfiglioli  remains with the Bonfiglioli
+  Group)  Group)
+Notes:
+ (1) Among low and medium-duty gear motors (below 15 kNm) in India based on revenue for the year ended December 31, 2025.
+ (2) Among off-highway mobility market among non-captive players in India by revenue for the year ended December 31, 2025.
+ (3) Among domestic manufacturers of yaw and pitch drives in terms of sales values for the year ended December 31, 2025.
+ (4) We categorize our customers into the relevant business verticals based on application of the customers’ product – for example, mining
+  applications where the equipment is static are categorized under Industry & Automation Solutions while those where the equipment is
+  mobile are categorized under Off-Highway Mobility.
+ (5) Names of customers identified above have been included based on consents received from such entities to include their names in this
+  Red Herring Prospectus.
+The table below sets forth vertical-wise revenue from operations across our three business verticals for the periods/
+years indicated:
+  206
+  Vertical  Six months period  Six months period  Year ended  Year ended  Year ended
+  ended June 30, 2026  ended June 30, 2025  December 31, 2025  December 31, 2024  December 31, 2023
+  Amoun  Percenta  Amoun  Percenta  Amoun  Percenta  Amoun  Percenta  Amoun  Percenta
+  t (₹  ge of total  t (₹  ge of total  t (₹  ge of total  t (₹  ge of total  t (₹  ge of total
+  million  revenue  million  revenue  million  revenue  million  revenue  million  revenue
+  )  from  )  from  )  from  )  from  )  from
+  operation  operation  operation  operation  operation
+  s (%)  s (%)  s (%)  s (%)  s (%)
+ Industry  4,813.28  42.53%  3,902.36  40.63%  8,244.39  40.95%  7,648.89  41.25%  7,270.46  43.09%
+ &
+ Automatio
+ n
+ Solutions
+ Off-  3,203.78  28.31%  2,349.51  24.46%  5,070.48  25.18%  4,357.92  23.50%  4,257.93  25.23%
+ Highway
+ Mobility
+ Industry
+ Wind  3,096.46  27.36%  3,092.33  32.20%  6,347.70  31.53%  5,994.29  32.33%  5,009.58  29.69%
+ Industry
+ Others (1)  205.17  1.80%  259.35  2.71%  472.69  2.34%  540.73  2.92%  335.33  1.99%
+ Total  11,318.69  100.00%  9,603.55  100.00% 20,135.26  100.00% 18,541.83  100.00% 16,873.30  100.00%
+Notes: (1) Others include export incentive, scrap sales, and sale of components such as components like pinion shafts, housings, sun gears, reduction wheels,
+shafts, covers that we provide and bill to vendors we sub-contract certain services to on behalf of our customers.
+Set forth below is a chart highlighting key milestones that we have achieved through 25 years of operations in
+India:
+Our customer base comprises OEMs that we directly supply products to under our Industry & Automation vertical,
+and OEMs that we co-engineer with under our Off-Highway Mobility Industry and Wind Industry verticals. We
+cater to a wide range of industries under our Industry & Automation vertical with no single industry contributing
+more than 10% of our revenue under the Industry & Automation vertical in the six months periods ended June 30,
+2026 and June 30, 2025 and in Fiscals 2025, 2024, and 2023. The Industry & Automation vertical benefits from
+our strong and loyal dealer network which, as of June 30, 2026 comprised of 44 dealers of which 16 dealers had
+been engaged with us for 20 years or more. Furthermore, of the 44 dealers we engaged with, 36 dealers engaged
+with us on an exclusive basis as of June 30, 2026. We are an integral part of our customer’s product development
+cycles under the Off-Highway Mobility and Wind Industries, working closely with them from design stage to
+create customized, technology intensive products to meet their bespoke end-use specifications. For further
+information on our customer base, see “ – Our Operations – Sales and Distribution” on page 227.
+In the six months period ended June 30, 2026, we served more than 930 customers directly and had been engaged
+by seven out of our top 10 OEM customers (in terms of revenue from operations in Fiscal 2025) for more than 10
+years, demonstrating the lasting value and reliability of our service commitment. We also had a diverse range of
+customers with our top 10 OEM customers representing less than 31.72% of our revenue from operations in the
+six months periods ended June 30, 2026 and June 30, 2025 and in each of Fiscals 2025, 2024, and 2023. We also
+engage with dealers for onward sales to OEMs under our Industry & Automation vertical.
+  207
+We approach customers directly through our pan-India sales network that comprised 13 sales offices and 64 sales
+employees as of June 30, 2026. The table below sets forth channel-wise revenue from operations across our sales
+channels for the periods/ years indicated:
+  Sales  Six months period  Six months period  Year ended  Year ended  Year ended
+ Channe  ended June 30, 2026  ended June 30, 2025  December 31, 2025  December 31, 2024  December 31, 2023
+  l  Amoun Percentag  Amoun Percentag  Amount  Percent  Amount  Percenta  Amount  Percent
+  t (₹  e of total  t (₹  e of total  (₹  age of  (₹  ge of  (₹  age of
+  million  revenue  million  revenue  million)  total  million)  total  million)  total
+  )  from  )  from  revenu  revenue  revenue
+  operation  operation  e from  from  from
+  s (%)  s (%)  operati  operatio  operatio
+  ons (%)  ns (%)  ns (%)
+ Dealer  2,145.72  18.96%  1,865.11  19.42%  3,909.41  19.42%  3,535.58  19.07%  3,333.07  19. 75%
+ sales
+ Direct  6,741.06  59.56%  6,210.11  64.66%  12,746.32  63.30%  11,756.65  63.41%  10,556.18  62.56%
+ sales
+ Inter-  2,263.99  20.00%  1,294.75  13.48%  3,064.77  15.22%  2,755.09  14.97%  2,722.21  16.13%
+ compan
+ y sales
+ (1)
+ Others(2)  167.92  1.48%  233.59  2.44%  414.76  2.06%  474.51  2.56%  261.84  1.55%
+ Total  11,318.69  100.00%  9,603.55  100.00%  20,135.26 100.00% 18,541.83  100.00%  16,873.30  100.00%
+Notes:
+(1) Inter-company sales includes sale of finished goods such as yaw drives and swing drives to related parties for onward sale to their customers.
+(2) Others includes non-core sales such as the sale of components to vendors.
+We benefit significantly by being a part of the Bonfiglioli Group, which enables us to leverage its global customer
+relationships and supply products and solutions to the Indian businesses of international players. With access to
+the extensive research and development expertise of Bonfiglioli S.p.A. (“BSPA”), including a broad portfolio of
+innovative products, we are able to meet the localized requirements of our customers. As of June 30, 2026, the
+Bonfiglioli Group had seven R&D centers globally including in India, Italy, Germany and China, that employed
+376 employees. Set forth below is a diagrammatic representation of the holding structure of our Company as on
+the date of this RHP:
+  Sonia Bonfiglioli  Luciano Bonﬁglioli
+  (Promoter)  (Promoter)
+  59.92%  40.08%
+  Luisa Lusardi  Luisa Lusardi
+  (usufruct)  (usufruct)
+  Promoter; Luciano  Promoter; Sonia
+  Bonfiglioli (bare  Bonfiglioli (bare
+  ownership)  ownership)
+  BON-FI S.r.l
+  (Corporate Promoter)
+  69.54%
+  10.23%  20.23%
+  Bonﬁglioli S.p.A.
+  (Corporate Promoter)
+  100%
+  Bonﬁglioli Transmissions Limited
+We regularly liaise with the R&D and IT center located in Chennai, Tamil Nadu, India (“India R&D Centre”)
+which is housed under Bonfiglioli Technology Space Private Limited (“BTSPL”), a company forming part of the
+  208
+Bonfiglioli Group. The India R&D Centre has test facilities for products across all three of our business verticals,
+and as of June 30, 2026, it was the only test laboratory in India equipped to test yaw and pitch drives for wind
+turbines (Source: F&S Report). The proximity of our manufacturing operations with Bonfiglioli Group’s global
+R&D ecosystem enables faster product development through strong design manufacturing alignment and early
+supplier involvement, resulting in faster time-to-market and enhancing our responsiveness to India-specific
+customer requirements, establishing our position as a specialised solutions provider in India. The India R&D
+Centre is the only R&D centre in the Bonfiglioli Group that caters to all three end-user verticals, which allows us
+to leverage its development capabilities across our entire portfolio of products and services. For further
+information on our shared R&D functions, see “ – Our Operations – Research and Development” on page 231.
+As of June 30, 2026, we operated three facilities in India, two of which were in Tamil Nadu (at Thirumudivakkam
+and Mannur) and one was in Maharashtra (in Talegaon), that manufactured a combined total of 341,133 units of
+gear motors and gearboxes in Fiscal 2025. Over the years, we have consistently increased sourcing parts and
+materials from domestic suppliers to strengthen our localisation strategy. As of June 30, 2026, we had 215
+suppliers in India and 70 suppliers outside India. In the six months periods ended June 30, 2026 and June 30, 2025
+and in Fiscals 2025, 2024 and 2023, purchases of raw materials and components from the domestic market
+represented 68.32%, 68.15%, 70.00%, 68.71% and 64.12%, of our total purchase of raw material and components,
+respectively, demonstrating our commitment to sourcing from India. We source from a diverse network of
+suppliers, with no single supplier providing more than 20.00% of our purchases in the six months periods ended
+June 30, 2026 and June 30, 2025 and Fiscals 2025, 2024 and 2023. For further information on our material
+procurement, see “ – Our Operations – Procurement and Suppliers” on page 237.
+We follow a multi-dimensional approach to quality assurance that involves ensuring quality compliance at each
+level of our operations. We also provide after-sales services to our customers through two dedicated channels: (a)
+team of in-house service engineers stationed at our 13 sales offices across India (three of which are located at our
+manufacturing locations in Thirumudivakkam (Tamil Nadu), Mannur (Tamil Nadu), and Talegaon (Maharashtra)
+that aggregated to 15 engineers as of June 30, 2026; and (b) a broad base of 13 third-party authorised service
+facilities that had an aggregate of 24 service engineers as of June 30, 2026. We strive to, on average, respond to
+complaints within the next working day, significantly increasing product uptime and lifecycle value.
+Our 25 years of operating experience in India, global R&D, manufacturing capabilities, and customer
+relationships, have enabled us to deliver growth over the years in terms of our profitability, return on equity and
+return on capital employed.
+The table below summarizes key financial results and financial position for the periods/ years indicated:
+  Particulars  As at and for the  As at and for  As at and for  As at and for the  As at and for the
+  six months  the six  the year  year ended  year ended
+  period ended  months  ended  December 31,  December 31,
+  June 30, 2026  period ended  December 31,  2024  2023
+  June 30, 2025  2025
+ Total Assets (₹ million)  14,958.24  13,879.41  14,394.58  12,990.76  14,147.15
+ Total Equity (₹ million)  10,342.68  8,754.47  9,929.93  8,609.51  8,013.63
+ Total Current Assets (₹ million)  11,399.02  10,370.00  10,903.21  9,467.85  10,649.29
+ Total Current Liabilities (₹ million)  4,471.97  5,009.18  4,317.36  4,244.99  5,945.52
+ Current Borrowings (₹ million)  -  -  -  -  1,107.86
+ Cash and Cash Equivalents (₹  1,401.70  250.81  1,531.81  1,446.67  905.32
+ million)
+ Total income (₹ million)  11,391.68  9,664.97  20,235.89  18,611.55  17,018.01
+ Revenue from operations –  11,318.69  9,603.55  20,135.26  18,541.83  16,873.30
+ continuing operations (1) (₹ million)
+ Revenue from operations –  12.43%  3.59%  8.59%  9.89%  8.25%
+ continuing operations growth (2)
+ (YoY %)
+ Restated profit after tax for the  1,485.81  1,149.69  2,378.74  1,915.98  1,466.65
+ period/year from continuing
+ operations (₹ million)
+ EBITDA (excluding Other Income)  2,238.74  1,764.28  3,707.70  2,950.74  2,438.91
+ (₹ million) (3)
+ EBITDA (excluding Other Income)  19.78%  18.37%  18.41%  15.91%  14.45%
+ Margin (%) (4)
+ PAT Margin (%) (5)  13.04%  11.90%  11.76%  10.29%  8.62%
+ Net Debt (₹ million) (6)  (1,393.81)  (1,841.77)  (1,603.84)  (1,382.04)  (1,400.92)
+ Working Capital (₹ million) (7)  6,927.05  5,360.82  6,585.85  5,222.86  4,703.77
+ Cash Conversion Cycle (Days) (8)  94  90  90  83  80
+  209
+  Particulars  As at and for the  As at and for  As at and for  As at and for the  As at and for the
+  six months  the six  the year  year ended  year ended
+  period ended  months  ended  December 31,  December 31,
+  June 30, 2026  period ended  December 31,  2024  2023
+  June 30, 2025  2025
+ Return on Capital Employed (%) (9)  20.03%  18.62%  34.05%  30.05%  24.53%
+ *
+ Return on Equity (%) (10) *  14.66%  13.24%  25.66%  23.05%  19.21%
+ Fixed Asset Turnover Ratio (in  3.99  3.55  7.15  6.68  6.10
+ times) (11) *
+ Inventory Days Outstanding (Days)  99  102  93  100  112
+ (12)
+ Payable Days Outstanding (Days)  90  95  97  97  121
+ (13)
+  Receivable Days Outstanding  85  83  94  80  89
+  (Days) (14)
+*
+  Not annualized for the six months periods ended June 30, 2026 and June 30, 2025.
+  (1) Revenue from continuing operations (sale of products, sale of services and other operating revenue) for the period / year.
+  (2) Year-on-year growth in revenue from operations – continuing operations for a period/ year is calculated as revenue from
+  operations – continuing operations in the relevant period/ year minus revenue from operations – continuing operations in the prior
+  period/ year divided by revenue from operations – continuing operations in the prior period/ year and represented as a percentage.
+  (3) EBITDA (excluding Other Income) is calculated as profit after tax for the period/ year plus total tax expense plus finance costs
+  plus depreciation and amortization. EBITDA (excluding Other Income) = EBITDA minus Other Income.
+  (4) EBITDA (excluding Other Income) Margin is calculated as EBITDA (excluding Other Income) divided by revenue from operations.
+  (5) PAT Margin is calculated as profit after tax for the period/year divided by Total Income.
+  (6) Net Debt is calculated as the sum of current borrowings, current lease liabilities, non-current borrowings and non-current lease
+  liabilities minus cash and cash equivalents and bank balances other than cash and cash equiva [...truncated]
+
+===== OUR PROMOTERS AND PROMOTER GROUP =====
+OUR PROMOTERS AND PROMOTER GROUP
+Our Promoters
+As on the date of this Red Herring Prospectus, the following are the Promoters of our Company:
+ Sr. No.  Particulars  Name of the individual/ entity
+  1.  Individual Promoter  Sonia Bonfiglioli
+  2.  Individual Promoter  Luciano Bonfiglioli
+  3.  Individual Promoter  Luisa Lusardi
+  4.  Corporate Promoter  BON-FI S.r.l.
+  5.  Corporate Promoter  Bonfiglioli S.p.A.
+As on the date of this Red Herring Prospectus, one of our Corporate Promoters, Bonfiglioli S.p.A., holds an
+aggregate of 187,995,834 Equity Shares of face value of ₹10 each (including 10 Equity Shares held by nominee
+shareholders on its behalf), comprising 100.00% of the pre-Offer issued, subscribed and paid-up Equity Share
+capital of our Company. For further details, see “Capital Structure – History of build-up of Promoters’
+shareholding in our Company” on page 97.
+Details of our Individual Promoters
+  Sonia Bonfiglioli
+  Sonia Bonfiglioli, born on November 25, 1963, aged 62 years, is one of the
+  Individual Promoters and Non-Executive Director of our Company. She
+  resides at Via Dell'Osservanza, N 76, Bologna, Italy. For the complete profile
+  of Sonia Bonfiglioli, along with the details of her educational qualification,
+  experience in the business/employment, positions/posts held in past, other
+  directorships, other ventures, special achievements, her business and financial
+  activities, as applicable, see “Our Management” on page 255.
+  Luciano Bonfiglioli
+  Luciano Bonfiglioli, born on May 3, 1966, aged 60 years, is one of the
+  Individual Promoters of our Company. He resides at Via Degli Scalini, N 19,
+  Bologna, Italy. He holds a degree of doctor of economics and commerce from
+  the University of Bologna. He has experience in the business of manufacturing
+  mechanical components and was previously associated with Bonfiglioli S.p.A.
+  (formerly Bonfiglioli Riduttori S.p.A) as an industrial manager. He is also
+  currently on the board of Bonfiglioli S.p.A.
+  274
+  Luisa Lusardi
+  Luisa Lusardi, born on May 16, 1933, aged 93 years, is one of the Individual
+  Promoters of our Company. She resides at Via Dell'Osservanza, N 78,
+  Bologna, Italy. She has experience in the business of manufacturing
+  mechanical components and was previously associated with Bonfiglioli S.p.A.
+  (formerly Bonfiglioli Riduttori S.p.A.). Records of her educational
+  qualifications are not traceable. For further details see, “Risk Factors – We
+  have not been able to obtain certain records of educational qualifications of
+  one of our Individual Promoters” on page 41.
+Our Company confirms that the bank account number, passport number and driving license number of our
+Individual Promoters, as applicable, have been submitted to the Stock Exchanges at the time of filing of the Draft
+Red Herring Prospectus. Further, our Individual Promoters, being citizens of Italy, do not possess PAN and
+Aadhaar cards.
+Details of our Corporate Promoters
+1.  Bonfiglioli S.p.A.
+Corporate information
+Bonfiglioli S.p.A. was incorporated on December 30, 1967, as a joint stock company under the laws of the
+Republic of Italy with registration number BO -186735. Its registered office is situated at Calderara Di Reno (BO)
+via Cav. Clementino Bonfiglioli 1 CAP 40012, Italy.
+Nature of business
+As on the date of this Red Herring Prospectus, Bonfiglioli S.p.A. is a joint stock company, primarily engaged in
+the activity of holding companies.
+Change in business activities
+There has been no change in business activities of Bonfiglioli S.p.A. during the last five years preceding the date
+of this Red Herring Prospectus.
+Board of directors
+The board of directors of Bonfiglioli S.p.A. as on the date of this Red Herring Prospectus is as follows:
+ Sr. No.  Name of the Director  Designation
+  1.  Sonia Bonfiglioli  Chairperson
+  2.  Luciano Bonfiglioli  Director
+  3.  Roberto Carlo Testore  Director
+  4.  Giampiero Bergami  Director
+  5.  Massimo Sarti  Director
+  6.  Alexander John Ross III  Director
+  7.  Federica Guidi  Director
+  8.  Marco Mossuto  Director
+Shareholding pattern
+The shareholding pattern of Bonfiglioli S.p.A. as on the date of this Red Herring Prospectus is as follows:
+ Sr. No  Name of Shareholders  Number of shares of EUR  Shareholding (%)
+  1 each
+ 1.  BON-FI S.r.l.  34,771,500  69.54
+  275
+  Sr. No  Name of Shareholders  Number of shares of EUR  Shareholding (%)
+  1 each
+  2.  Luisa Lusardi (usufruct); and Sonia Bonfiglioli  10,114,250  20.23
+  (bare ownership)*
+  3.  Luisa Lusardi (usufruct); and Luciano Bonfiglioli  5,114,250  10.23
+  (bare ownership)^
+*
+  Luisa Lusardi holds usufruct and voting rights in extraordinary general meetings through Sonia Bonfiglioli with respect to 10,114,250 shares
+aggregating to 20.23% of the shareholding of the Promoter.
+^
+  Luisa Lusardi holds usufruct and voting rights in extraordinary general meetings through Luciano Bonfiglioli with respect to 5,114,250
+shares aggregating to 10.23% of the shareholding of the Promoter.
+Details of change in control
+There has been no change in the control of Bonfiglioli S.p.A. during the last three years preceding the date of this
+Red Herring Prospectus.
+Promoter of Bonfiglioli S.p.A.
+The controlling shareholder of Bonfiglioli S.p.A. is BON-FI S.r.l.
+As on the date of this Red Herring Prospectus, except for Luisa Lusardi who directly holds more than 15% of the
+shares of Bonfiglioli S.p.A., and Sonia Bonfiglioli, and Luciano Bonfiglioli who indirectly hold more than 15%
+of the shares of Bonfiglioli S.p.A., no other natural person holds more than 15% of the shares of Bonfiglioli S.p.A.
+Our Company confirms that the bank account number, corporate registration number along with the address of
+the authority where Bonfiglioli S.p.A. is registered has been submitted to the Stock Exchanges at the time of filing
+of the Draft Red Herring Prospectus.
+2.  BON-FI S.r.l.
+Corporate information
+BON-FI S.r.l. was incorporated on March 23, 2017, as a limited liability company under the laws of the Republic
+of Italy with registration number BO-532905. Its registered office is situated at Galleria Guglielmo Marconi 1
+Cap, 40122, Bologna, Italy.
+Nature of business
+As on the date of this Red Herring Prospectus, BON-FI S.r.l. is a limited liability company, engaged in activities
+of holding companies
+Change in business activities
+There has been no change in business activities of BON-FI S.r.l. from the date of its incorporation.
+Board of directors
+The board of directors of BON-FI S.r.l. as on the date of this Red Herring Prospectus is as follows:
+  Sr. No.  Name of the Director  Designation
+  1.  Sonia Bonfiglioli  Chairperson
+  2.  Luciano Bonfiglioli  Deputy Chairman
+  3.  Tommaso Tomba  Director
+Shareholding pattern
+The shareholding pattern of BON-FI S.r.l. as on the date of this Red Herring Prospectus is as follows:
+  Sr. No  Name of Shareholders  Number of shares of EUR  Shareholding (%)
+  1 each
+  1.  Sonia Bonfiglioli  59,915.10  59.92
+  2.  Luciano Bonfiglioli  40,084.90  40.08
+  276
+Details of change in control
+There has been no change in the control of BON-FI S.r.l. during the last three years preceding the date of this Red
+Herring Prospectus.
+Promoter of BON-FI S.r.l.
+As on the date of this Red Herring Prospectus, each of Sonia Bonfiglioli, and Luciano Bonfiglioli hold more than
+15% of the shares of BON-FI S.r.l., and no other natural person holds more than 15% of the shares of BON-FI
+S.r.l.
+Our Company confirms that the bank account number, corporate registration number along with the address of
+the authority where BON-FI S.r.l.is registered has been submitted to the Stock Exchanges at the time of filing of
+the Draft Red Herring Prospectus.
+Further, the infographic below sets forth a pictorial representation of the full structure of our Promoters:
+Change in the control of our Company
+There has been no change in the control of our Company during the last five years preceding the date of this Red
+Herring Prospectus.
+Pursuant to  [...truncated]
+
+===== RISK FACTORS =====
+SECTION II: RISK FACTORS
+An investment in equity shares involves a high degree of risk. Prospective investors should carefully consider all
+the information in this Red Herring Prospectus, including the risks and uncertainties described below, before
+making an investment in our Equity Shares.
+The risks described in this section are those that we consider to be the most significant to our business, but these
+risks and uncertainties may not be the only risks relevant to us, the Equity Shares, or the industry in which we
+currently operate in and additional risks and uncertainties, not currently known to us or that we currently do not
+deem material, may arise or may become material in the future and may also adversely affect our business,
+financial condition, results of operations, cash flows and/or prospects. In order to obtain a complete
+understanding of our Company and our business, prospective investors should read this section in conjunction
+with “Our Business”, “Industry Overview”, “Key Regulations and Policies”, “Management’s Discussion and
+Analysis of Financial Condition and Results of Operations” and “Restated Financial Information” on pages
+205, 131, 242, 355, and 281, respectively, as well as the other financial and statistical information contained in
+this Red Herring Prospectus.
+In making an investment decision, prospective investors must rely on their own examination of us and our business
+and the terms of the Offer including the merits and risks involved. Prospective investors should consult their tax,
+financial and legal advisors about the particular consequences of investing in the Offer. Unless specified or
+quantified in the relevant risk factors below, we are not in a position to quantify the financial or other implications
+of any of the risks described in this section. If any or a combination of the following risks, or other risks that are
+not currently known or are not currently deemed material, actually occur, our business, financial condition, results
+of operations, and cash flows and/or prospects could be adversely affected, the trading price of our Equity Shares
+could decline, and investors may lose all or part of their investment. Prospective investors should pay particular
+attention to the fact that our Company is incorporated under the laws of India and is subject to a legal and
+regulatory environment which may differ in certain respects from that of other countries.
+This Red Herring Prospectus also contains information relating to our strategies, future plans and forward-
+looking statements that involve known and unknown risks, assumptions, estimates, uncertainties and other factors.
+Accordingly, our actual results could differ from those anticipated in these forward-looking statements as a result
+of certain factors, including the considerations described below and elsewhere in this Red Herring Prospectus.
+For further information, see “Our Business” on page 205 and “Forward-Looking Statements” on page 19.
+Our Company’s financial year commences on January 1 and ends on December 31 of the same year, and references
+to a particular Fiscal are to the 12 months ended December 31 of that particular year. Unless otherwise stated,
+or the context otherwise requires, the financial information used in this section is derived from our “Restated
+Financial Information” included in this Red Herring Prospectus beginning on page 281. The manner of
+calculation and presentation of some of the operational and financial performance metrics, and the assumptions
+and estimates used in such calculations, may vary from that used by other companies in India and other
+jurisdictions.
+Only to the extent explicitly indicated, industry and market data used in this section has been derived from the
+report titled “Market potential assessment of power transmission products across industry & automation,
+mobility, and wind solutions” dated September 28, 2026, prepared and issued by Frost and Sullivan (the “F&S
+Report”), commissioned by and paid for by our Company in relation to the Offer and any reliance on such
+information for making an investment decision in this Offer is subject to inherent risks. The F&S Report has been
+prepared and issued by Frost & Sullivan for the purpose of understanding the industry exclusively in connection
+with the Offer. The F&S Report will be made available on the website of our Company at
+https://www.bonfiglioli.in/Investor_Relations from the date of this Red Herring Prospectus until the Bid/Offer
+Closing Date. Unless otherwise indicated, all financial, operational, industry and other related information
+derived from the F&S Report and included herein with respect to any particular fiscal or calendar year, refers to
+such information for the relevant fiscal or calendar year. For further details, see “– We have used information
+from the F&S Report which has been commissioned and paid for by our Company for industry related data in
+this Red Herring Prospectus and any reliance on such information is subject to inherent risks” and “Industry
+Overview” on pages 47 and 131, respectively.
+All references to “Bonfiglioli Group” refer to any company (individually or in the aggregate, as the context may
+require) that is directly or indirectly owned or controlled by one of our Corporate Promoters, Bonfiglioli S.p.A.
+(“BSPA”).
+  20
+INTERNAL RISKS
+1.  We depend on a limited number of suppliers for procurement of raw materials and components
+  required for our manufacturing operations. Our largest supplier is Bonfiglioli Riduttori S.p.A, a
+  related party. Purchases from our related parties represented 15.53%, 16.75%, 15.18%, 17.00% and
+  19.98%, and purchases from our top 10 suppliers represented 40.84%, 41.74%, 41.20%, 45.62% and
+  47.52% of our total purchases of raw materials and components in the six months periods ended June
+  30, 2026 and 2025 and in Fiscals 2025, 2024 and 2023, respectively. As we do not have definitive
+  agreements with our suppliers, any interruption in the availability of raw materials and components
+  on account of any disruption, breakdown or shutdown of our suppliers’ operations could adversely
+  impact our operations.
+We depend on a limited number of suppliers for the procurement of raw materials and components required for
+our manufacturing operations. The table below highlights the percentage of purchases of raw materials and
+components sourced from our top-five suppliers, top-10 suppliers and related parties for the periods/years
+indicated:
+  Particulars  For the six  For the six  For the  For the  For the
+  months  months  year  year  year
+  period  period  ended  ended  ended
+  ended June  ended June  December  December  December
+  30, 2026  30, 2025  31, 2025  31, 2024  31, 2023
+ Total purchases of raw materials and  7,492.65  6,199.55  12,487.67  11,681.54  11,530.44
+ components (₹ million)
+ Purchases of raw materials and components  15.53%  16.75%  15.18%  17.00%  19.98%
+ from largest supplier (which is a related party) as
+ a % of total purchases of raw materials and
+ components (%)(1)
+ Purchases of raw materials and components  30.50%  30.91%  29.34%  32.63%  35.64%
+ from top-five suppliers as a % of total purchases
+ of raw materials and components (%)
+ Purchases of raw materials and components  40.84%  41.74%  41.20%  45.62%  47.52%
+ from top-10 suppliers as a % of total purchases
+ of raw materials and components (%)(2)
+ Raw materials and components sourced from  15.79%  17.37%  15.68%  17.90%  20.91%
+ related parties as a % of total purchases of raw
+ materials & components (%)
+Notes:
+(1) Our largest supplier for the six months periods ended June 30, 2026 and 2025, and during Fiscals 2025, 2024 and 2023 was Bonfiglioli
+  Riduttori S.p.A., a related party and one of our Group Companies.
+(2) Our top 10 suppliers for the six months periods ended June 30, 2026 and 2025 and in Fiscals 2025, 2024 and 2023, included our Group
+  Company Bonfiglioli Riduttori S.p.A.
+We do not typically enter into long-term agreements with suppliers and generally do not have firm commitments
+from our suppliers. We instead source raw materials and components on a purchase order basis and negotiate
+prices and quantities with our suppliers with each purchase order, that set out the rights and obligations of the
+parties. We accordingly rely on short-term purchase orders to govern our relationships with our suppliers.
+The table below sets forth the purchases of raw materials and components sourced from our top 10 suppliers,
+including as a percentage of total cost of raw materials and components for the periods/years indicated, and
+duration of relationship with such suppliers as of June 30, 2026:
+  Top 10  Duratio  For the six months  For the six months  For the year ended  For the year ended  For the year ended
+ suppliers  n of  period ended June  period ended June  December 31, 2025  December 31, 2024  December 31, 2023
+ based on  relations  30, 2026  30, 2025
+  procure  hip as of  Purchas  % of  Purchas  % of  Purchas  % of  Purchas  % of  Purchas  % of
+  ment  June 30,  e of raw  total  e of raw  total  e of raw  total  e of raw  total  e of raw  total
+ attributa  2026  material  raw  material  raw  material  raw  material  raw  material  raw
+ ble in the  s and  material  s and  material  s and  material  s and  material  s and  material
+  six  compon  s and  compon  s and  compon  s and  compon  s and  compon  s and
+  months  ents  compon  ents  compon  ents  compon  ents  compon  ents  compon
+  ended  consume  ents  consume  ents  consume  ents  consume  ents  consume  ents
+  June 30,  d (₹  consume  d (₹  consume  d (₹  consume  d (₹  consume  d (₹  consume
+  2026 (1)  million)  d  million)  d  million)  d  million)  d  million)  d
+ Supplier 1  26  1,163.34  15.53%  1,038.24  16.75%  1,896.23  15.18%  1,985.81  17.00%  2,303.32  19.98%
+ Supplier 2  19  378.62  5.05%  331.52  5.35%  658.33  5.27%  543.24  4.65%  511.11  4.43%
+ Supplier 3  26  287.05  3.83%  195.19  3.15%  379.91  3.04%  483.26  4.14%  483.55  4.19%
+ Supplier 4  12  247.73  3.31%  177.56  2.86%  365.20  2.92%  404.18  3.46%  426.36  3.70%
+  21
+  Top 10  Duratio  For the six months  For the six months  For the year ended  For the year ended  For the year ended
+ suppliers  n of  period ended June  period ended June  December 31, 2025  December 31, 2024  December 31, 2023
+  based on  relations  30, 2026  30, 2025
+  procure  hip as of  Purchas  % of  Purchas  % of  Purchas  % of  Purchas  % of  Purchas  % of
+  ment  June 30,  e of raw  total  e of raw  total  e of raw  total  e of raw  total  e of raw  total
+  attributa  2026  material  raw  material  raw  material  raw  material  raw  material  raw
+ ble in the  s and  material  s and  material  s and  material  s and  material  s and  material
+  six  compon  s and  compon  s and  compon  s and  compon  s and  compon  s and
+  months  ents  compon  ents  compon  ents  compon  ents  compon  ents  compon
+  ended  consume  ents  consume  ents  consume  ents  consume  ents  consume  ents
+  June 30,  d (₹  consume  d (₹  consume  d (₹  consume  d (₹  consume  d (₹  consume
+  2026 (1)  million)  d  million)  d  million)  d  million)  d  million)  d
+ Supplier 5  4  208.86  2.79%  173.70  2.80%  363.73  2.91%  395.71  3.39%  385.42  3.34%
+ Supplier 6  7  159.02  2.12%  139.70  2.25%  328.99  2.63%  379.63  3.25%  349.89  3.03%
+ Supplier 7  6  157.38  2.10%  139.23  2.25%  316.16  2.53%  336.21  2.88%  330.03  2.86%
+ Supplier 8  20  156.49  2.09%  133.63  2.16%  283.95  2.27%  290.87  2.49%  236.86  2.05%
+ Supplier 9  7  155.19  2.07%  133.58  2.15%  275.94  2.21%  271.65  2.33%  230.18  2.00%
+ Supplier  3  146.31  1.95%  125.06  2.02%  275.86  2.21%  238.01  2.04%  222.42  1.93%
+ 10
+  Total  3,059.98  40.84%  2,587.41  41.74%  5,144.30  41.20%  5,328.57  45.62%  5,479.12  47.52%
+Notes: (1) Supplier names have been masked as relevant consents for disclosure of supplier names along with purchase values have not been received.
+As a result, we are largely dependent on our existing relationships with our suppliers. In addition, we provide
+detailed specifications for our raw materials and components to our suppliers, which includes drawings,
+documents, and samples. Any failure by our suppliers to provide parts and materials to us on time or at all, or as
+per our specifications and quality standards for reasons such as capacity limitations, breakdowns, or machine
+failures, industrial relations and safety issues, could have an adverse impact on our ability to meet our
+manufacturing and delivery schedules, which in turn may have an adverse impact on our operations, reputation,
+and ability to appropriately price our gearboxes and margins. While there have been no instances in the six months
+periods ended June 30, 2026 and 2025 and in Fiscals 2025, 2024 and 2023, where any of our top 10 suppliers has
+discontinued their business with us or were unable to deliver raw materials and components to us there can be no
+assurance that we will not experience significant delays in the future or that our suppliers will continue to engage
+with us in the future. In the event our suppliers are unable to meet our delivery timelines or refuse to supply raw
+materials and components to us in the future we may be unable to find suitable alternatives. Furthermore, as we
+do not have exclusive arrangements with our suppliers, our suppliers could engage with our competitors and
+prioritize supplies of their other customers, which could adversely impact our ability to procure a sufficient
+quantity of materials at competitive rates. Any disruption in the procurement of materials could have a material
+adverse effect on our business, financial condition, results of operations, and cash flows.
+Furthermore, if we are unable to retain our key suppliers on commercially favourable terms, we may have to seek
+alternative suppliers as replacements which may result in increased costs, impact quality and cause delays in our
+manufacturing and sale schedules, which in turn could adversely affect our business, financial condition, results
+of operations, cash flows and reputation.
+2.  Any increase in the prices of raw materials and components required for our operations or levy of
+  duties on the materials we import for our operations, could adversely affect our business, financial
+  condition, results of operations, and cash flows.
+We source raw materials and components such as electric motors, hydraulic motors, bearings and brake pads for
+our manufacturing operations from a combination of domestic and foreign suppliers. The table below shows the
+cost of raw materials and components consumed and changes in work-in-progress as a percentage of our revenue
+from operations – continuing operations and purchases of raw materials and components sourced from India and
+outside India as a percentage of total cost of raw materials and components consumed for the periods/years
+indicated:
+  Particulars  For the six  For the six  For the  For the  For the
+  m [...truncated]
+
+===== MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF =====
+MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF
+  OPERATIONS
+The following discussion is intended to convey the management’s perspective on our financial condition and
+results of operations for the six months period ended June 30, 2026 and 2025 and for Fiscals 2025, 2024 and
+2023.
+Unless otherwise stated, or the context otherwise requires, the financial information used in this section is derived
+from our “Restated Financial Information” included in this Red Herring Prospectus on page 281.
+Ind AS differs in certain respects from Indian GAAP, IFRS and US GAAP and other accounting principles with
+which prospective investors may be familiar. Please also see “Risk Factors - Differences exist between Ind AS
+use to prepare our financial information and other accounting principles, such as IFRS, Indian GAAP and
+U.S. GAAP, with which investors may be more familiar” on page 52.
+This discussion contains certain forward-looking statements that involve risks and uncertainties. Our actual
+results may differ materially from those anticipated in these forward-looking statements as a result of certain
+factors, such as the risks set forth in the chapters entitled “Risk Factors” and “Forward-Looking Statements”
+on pages 20 and 19, respectively.
+Our Company’s financial year commences on January 1 and ends on December 31 of the same year, and
+references to a particular Fiscal are to the 12 months ended December 31 of that particular year. Unless otherwise
+stated, or the context otherwise requires, the financial information used in this section is derived from our
+“Restated Financial Information” included in this Red Herring Prospectus beginning on page 281.
+Only to the extent explicitly indicated, industry and market data used in this section has been derived from the
+report titled “Market potential assessment of power transmission products across industry & automation,
+mobility, and wind solutions” dated September 28, 2026, prepared and issued by Frost and Sullivan (the “F&S
+Report”), commissioned by and paid for by our Company in relation to the Offer and any reliance on such
+information for making an investment decision in this Offer is subject to inherent risks. The F&S Report has been
+prepared and issued by Frost & Sullivan for the purpose of understanding the industry exclusively in connection
+with the Offer. The F&S Report will be made available on the website of our Company at
+https://www.bonfiglioli.in/Investor_Relations from the date of this Red Herring Prospectus until the Bid/Offer
+Closing Date. Unless otherwise indicated, all financial, operational, industry and other related information
+derived from the F&S Report and included herein with respect to any particular fiscal or calendar year, refers to
+such information for the relevant fiscal or calendar year. For further details, see “Risk Factors – We have used
+information from the F&S Report which has been commissioned and paid for by our Company for industry
+related data in this Red Herring Prospectus and any reliance on such information is subject to inherent risks”
+and “Industry Overview” on pages 47 and 131, respectively.
+All references to “Bonfiglioli Group” refer to any company (individually or in the aggregate, as the context may
+require) that is directly or indirectly owned or controlled by one of our Corporate Promoters, Bonfiglioli S.p.A.
+(“BSPA”).
+OVERVIEW
+We are one of India’s largest technology-led mechanical and electro-mechanical power transmissions and
+industrial drive solutions providers by revenue for the six months period ended June 30, 2026 (Source: F&S
+Report). We manufacture a wide range of mission-critical and highly precision engineered gear motors, gearboxes
+and drive systems used across diverse end-user markets (Source: F&S Report). Our legacy and reputation lie in
+the Bonfiglioli brand, which has a worldwide presence of nearly 70 years, and which we have established in India
+through more than 25 years of operations.
+Our Corporate Promoter, Bonfiglioli S.p.A. is headquartered in Italy, and according to the F&S Report, is one of
+the largest technologically advanced players globally in the mechanical and electro-mechanical power
+transmissions and industrial drive solutions industry with consolidated revenues of Euro 1,172.94 million
+(₹115.56 billion) for the year ended December 31, 2025. It focuses on the development, manufacture and
+distribution of gearboxes and drive systems to cater to the needs of industrial processes, automation, off-highway
+mobility solutions and renewable energy applications. As at the date of this Red Herring Prospectus, the
+Bonfiglioli Group has operations spanning across 80 countries through 18 production sites, seven R&D centres,
+  355
+a network of more than 550 distributors and resellers, and a workforce of more than 5,000 employees, with 21
+patents granted under the name of Bonfiglioli S.p.A.
+The markets we cater to are broadly categorized into three business verticals: Industry and Automation Solutions,
+Off-Highway Mobility and Wind Industries, based on the end-use applications. According to the F&S Report, we
+are the largest manufacturer in India of gearboxes (gear motors below 15 kNm) and drives catering to OEMs and
+end-users in the Industry & Automation, Off-Highway Mobility and Wind Industries in India as of June 30, 2026,
+in terms of revenue from operations. We were also among the leading manufacturers of planetary gearboxes in
+India in the year ended December 31, 2025 by revenue. (Source: F&S Report)
+Set forth below is an overview of our three business verticals, categorized based on the customer industries we
+serve:
+  Particulars  Industry & Automation  Off- highway Mobility  Wind Industry
+  Solutions  Industry
+ Market share according to  Leading market share of  32.0%(2)  Leading market share of
+ the F&S Report  25.0% (1)  67.9% (3)
+ End-user industries(4)  Material handling, chemicals  Earthmoving/  excavator,  Wind turbine manufacturers
+  & pharmaceuticals, mining,  concrete, mining, road
+  food, beverage & tobacco,  construction, agricultural
+  metal processing & machine  and material handling
+  tools, construction, textiles &
+  leather, rubber & plastics
+ Product portfolio  Low, medium and heavy duty  Swing and track drives;  Yaw and pitch drives
+  gear motors and gearboxes in  drum and skip/ mixer
+  torque capacities ranging  drives; wheel and auger/
+  from 13 Nm to 1,400 kNm  conveyor drives; cutter and
+  Helical, bevel, planetary and  hoist drives
+  worm gearboxes and gear
+  motors, electric motors;
+  variable frequency drives,
+  servo motors and drives, and
+  precision drives for robotics
+  & automation solutions
+ Key  customers  and  ElectroMech  Material  Action  Construction  Nordex  India  Private
+ vintage(5)  Handling Systems (India)  Equipment,  Ajax  Limited, Senvion Wind
+  Private  Limited,  GMM  Engineering Limited, CNH  Technology Private Limited
+  Pfaudler Limited, Milltec  Industrial (India) Private  and Suzlon Energy Limited.
+  Machinery Private Limited,  Limited,  Hyundai
+  Terex India Private Limited,  Construction  Equipment  As of June 30, 2026, seven
+  Uzzala Bio Energy Solutions  India Private Limited, JCB  of our top 10 OEM
+  and Ammann India Private  India Limited, Schwing  customers by revenue in
+  Limited.  Stetter  (India)  Private  Fiscal 2025, had been
+  Limited and Wirtgen India  engaged with us for more
+  As of June 30, 2026, each of  Private Limited.  than 10 years
+  our top 10 OEM customers
+  (by revenue in Fiscal 2025),  As of June 30, 2026, eight
+  had been engaged with us for  of our top 10 OEM
+  more than 10 years  customers by revenue in
+  Fiscal 2025, had been
+  engaged with us for more
+  than 10 years
+ Number of SKUs
+ Six months period ended  8,517  221  42
+ June 30, 2026
+ Six months period ended  7,758  214  42
+ June 30, 2025
+ Fiscal 2025  11,535  274  48
+ Fiscal 2024  11,219  236  62
+ Fiscal 2023  9,676  221  62
+ Sales and distribution  Direct customer relationships  Direct  customer  Direct  customer
+  and dealer network  relationships  and  co-  relationships  and  co-
+  engineering (IP for co-  engineering (IP for co-
+  356
+  Particulars  Industry & Automation  Off- highway Mobility  Wind Industry
+  Solutions  Industry
+  engineered  products  engineered  products
+  remains with the Bonfiglioli  remains with the Bonfiglioli
+  Group)  Group)
+Notes:
+ (1) Among low and medium-duty gear motors (below 15 kNm) in India based on revenue for the year ended December 31, 2025.
+ (2) Among off-highway mobility market among non-captive players in India by revenue for the year ended December 31, 2025.
+ (3) Among domestic manufacturers of yaw and pitch drives in terms of sales values for the year ended December 31, 2025.
+ (4) We categorize our customers into the relevant business verticals based on application of the customers’ product – for example, mining
+  applications where the equipment is static are categorized under Industry & Automation Solutions while those where the equipment is
+  mobile are categorized under Off-Highway Mobility.
+ (5) Names of customers identified above have been included based on consents received from such entities to include their names in this
+  Red Herring Prospectus.
+The table below sets forth vertical-wise revenue from operations across our three business verticals for the periods/
+years indicated:
+  Vertical  Six months period  Six months period  Year ended  Year ended  Year ended
+  ended June 30, 2026  ended June 30, 2025  December 31, 2025  December 31, 2024  December 31, 2023
+  Amoun  Percenta  Amoun  Percenta  Amoun  Percenta  Amoun  Percenta  Amoun  Percenta
+  t (₹  ge of total  t (₹  ge of total  t (₹  ge of total  t (₹  ge of total  t (₹  ge of total
+  million  revenue  million  revenue  million  revenue  million  revenue  million  revenue
+  )  from  )  from  )  from  )  from  )  from
+  operation  operation  operation  operation  operation
+  s (%)  s (%)  s (%)  s (%)  s (%)
+ Industry  4,813.28  42.53%  3,902.36  40.63%  8,244.39  40.95%  7,648.89  41.25%  7,270.46  43.09%
+ &
+ Automatio
+ n
+ Solutions
+ Off-  3,203.78  28.31%  2,349.51  24.46%  5,070.48  25.18%  4,357.92  23.50%  4,257.93  25.23%
+ Highway
+ Mobility
+ Industry
+ Wind  3,096.46  27.36%  3,092.33  32.20%  6,347.70  31.53%  5,994.29  32.33%  5,009.58  29.69%
+ Industry
+ Others (1)  205.17  1.80%  259.35  2.71%  472.69  2.34%  540.73  2.92%  335.33  1.99%
+ Total  11,318.69  100.00%  9,603.55  100.00% 20,135.26  100.00% 18,541.83  100.00% 16,873.30  100.00%
+Notes: (1) Others include export incentive, scrap sales, and sale of components such as components like pinion shafts, housings, sun gears, reduction wheels,
+shafts, covers that we provide and bill to vendors we sub-contract certain services to on behalf of our customers.
+Set forth below is a chart highlighting key milestones that we have achieved through 25 years of operations in
+India:
+Our customer base comprises OEMs that we directly supply products to under our Industry & Automation vertical,
+and OEMs that we co-engineer with under our Off-Highway Mobility Industry and Wind Industry verticals. We
+cater to a wide range of industries under our Industry & Automation vertical with no single industry contributing
+more than 10% of our revenue under the Industry & Automation vertical in the six months periods ended June 30,
+  357
+2026 and June 30, 2025 and in Fiscals 2025, 2024, and 2023. The Industry & Automation vertical benefits from
+our strong and loyal dealer network which, as of June 30, 2026 comprised of 44 dealers of which 16 dealers had
+been engaged with us for 20 years or more. Furthermore, of the 44 dealers we engaged with, 36 dealers engaged
+with us on an exclusive basis as of June 30, 2026. We are an integral part of our customer’s product development
+cycles under the Off-Highway Mobility and Wind Industries, working closely with them from design stage to
+create customized, technology intensive products to meet their bespoke end-use specificati [...truncated]
+
+===== OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS =====
+OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS
+Except as stated below, as on the date of this Red Herring Prospectus, there are no outstanding (i) criminal
+proceedings (including first information reports whether cognizance has been taken or not) involving our
+Company, Directors or Promoters (collectively, “Relevant Parties”); (ii) actions taken by statutory or regulatory
+authorities (including show cause notices issued by such authorities) against the Relevant Parties; (iii) claims
+related to direct or indirect taxes involving the Relevant Parties (disclosed in a manner giving the total number
+of claims and the total amounts involved);(iv) disciplinary actions including penalties imposed by SEBI or the
+Stock Exchanges against the Promoters in the last five financial years, including outstanding action; and (v) other
+outstanding civil litigation or arbitration proceedings involving the Relevant Parties as determined to be material
+pursuant to the Materiality Policy; (vi) criminal proceedings (including first information reports whether
+cognizance has been taken or not) involving Key Managerial Personnel or Senior Management, and (vii) actions
+taken by regulatory or statutory authorities (including show cause notices issued by such authorities) against any
+of our Key Managerial Personnel or Senior Management. Further, there is no pending litigation involving our
+Group Companies, the adverse outcome of which may have a material impact on our Company.
+Pursuant to the Materiality Policy, for the purposes of (v) above, any outstanding litigation involving the Relevant
+Parties (including tax matters mentioned in point (iii) above), has been considered ‘material’ and accordingly
+disclosed in this Red Herring Prospectus where the monetary amount of claim/ amount in dispute, to the extent
+quantifiable exceeds, (a) 2% of turnover, for the most recent financial year based on the Restated Financial
+Information i.e., Fiscal 2025, being ₹ 402.70 million; or (b) 2% of net worth, as at the end of the most recent
+financial year based on the Restated Financial Information i.e., December 31, 2025, being ₹ 198.60 million; or
+(c) 5% of the average of absolute value of profit or loss after tax, for the last three financial years based on the
+Restated Financial Information being ₹ 96.92 million, whichever is lower (“Materiality Threshold”).
+Accordingly, 5% of the average of absolute value of profit or loss after tax, based on the Restated Financial
+Information for the last three Financial Year, i.e., ₹ 96.92 million has been considered as the Materiality
+Threshold. Further, litigation where the decision in one case is likely to affect the decision in similar cases, even
+though the amount involved in an individual litigation may not exceed the Materiality Threshold shall also be
+considered material litigation in relation to the Relevant Parties. In addition, any outstanding civil litigation/
+arbitration proceedings involving the Relevant Parties wherein the monetary liability is not quantifiable, or does
+not exceed the Materiality Threshold, shall be considered ‘material’ and shall be disclosed in this Red Herring
+Prospectus, if the outcome of such litigation could have a material adverse effect on the business, operations,
+performance, prospects, financial position or reputation of our Company.
+For the above purposes, pre-litigation notices received by any of the Relevant Parties or Group Companies from
+third parties (excluding notices issued by governmental, statutory, regulatory, judiciary, quasi-judicial or taxation
+authorities or regulatory/ statutory notices in relation to any criminal action) shall not be evaluated for materiality
+until such persons are impleaded as defendants or respondents in proceedings before any judicial/arbitral forum
+or is notified by any governmental, statutory, or regulatory authority of any such proceeding that may be
+commenced.
+Except as stated in this section, there are no outstanding dues to material creditors of our Company, as of June
+30, 2026. In terms of the Materiality Policy, outstanding dues to any creditor of our Company having a monetary
+value which is equal to or exceeds 5% of our Company’s trade payables based on the most recent financial period
+for which Restated Financial Information, shall be considered as ‘material’. Accordingly, as on June 30, 2026,
+any creditor with outstanding dues exceeding or equivalent to ₹ 185.60 million has been considered as ‘material’
+for the purposes of disclosure and related information in this section. Further, for outstanding dues to any party
+which is a micro or small enterprise, the disclosure will be based on information available with our Company
+regarding status of the creditor as defined under Section 2 of the Micro, Small and Medium Enterprises
+Development Act, 2006 (“MSME Act”).
+Unless otherwise specified, the terms defined in the description of a particular litigation matter pertain to such
+matter only.
+  400
+i.  Litigation involving our Company
+  (a)  Criminal proceedings against our Company
+  Nil
+  (b)  Criminal proceedings by our Company
+  Our Company has, in the ordinary course of business, initiated eight recovery proceedings against our
+  customers, for the dishonour of cheques under Section 138 read with Section 141 of the Negotiable
+  Instruments Act, 1881. The aggregate amount involved in these proceedings is ₹ 43.11 million, to the
+  extent ascertainable. These proceedings are pending at various stages of adjudication before various
+  courts.
+  (c)  Actions by statutory and regulatory authorities against our Company
+  Nil
+  (d)  Material civil litigation against our Company
+  Nil
+  (e)  Material civil litigation by our Company
+  Nil
+  (f)  Tax proceedings against our Company
+  Nature of the claim  Number of claims  Amount involved (in ₹
+  million)
+  Direct tax (A)  3  34.74#
+  Indirect tax (B)  3  319.61*@
+  Total (A+B)  6  354.35
+  * to the extent quantifiable based on the demand letter/order received from t [...truncated]
+
+===== OFFER STRUCTURE =====
+OFFER STRUCTURE
+The Offer is of up to 43,239,042 Equity Shares of face value of ₹10 each, for cash at a price of ₹ [●] per Equity
+Share (including a share premium of ₹ [●] per Equity Share) aggregating to ₹ [●] million comprising an Offer for
+Sale by the Promoter Selling Shareholder. The Offer includes an Employee Reservation Portion of up to 50,000
+Equity Shares of face value of ₹10 each resulting in Net Offer of [●] Equity Shares of face value of ₹10 each. The
+Offer and Net Offer shall constitute [●]% and [●]%, respectively of the post-Offer paid-up Equity Share capital
+of our Company.
+In terms of Rule 19(2)(b) of the SCRR, the Offer is being made through the Book Building Process, in compliance
+with Regulations 6(1) and 31 of the SEBI ICDR Regulations.
+  Particulars  QIBs(1)  Non-Institutional  Retail Individual  Eligible Employees#
+  (1)
+  Investors  Investors
+Number of  Not more than [●] Not less than [●] Equity Not less than [●] Equity Not less than [●] Equity
+Equity Shares  Equity Shares of face Shares of face value of ₹ 10 Shares of face value of ₹ Shares bearing face value
+available for  value of ₹ 10 each  each  available  for 10 each available for of ₹ 10 each.
+Allotment/  allocation or Offer less allocation or Offer less
+allocation*(2)  allocation to QIB Bidders allocation to QIB Bidders
+  and RIIs.  and NIIs.
+Percentage of  Not more than 50% of Not less than 15% of the Not less than 35% of the [●]% of the post-Offer
+Offer size  the Net Offer shall be Net Offer or the Offer less Net Offer or Offer less paid-up  equity share
+available for  available for allocation allocation to QIBs and RIIs, allocation to QIBs and capital of our Company.
+Allotment/  to QIBs. However, up to subject to the following:  NIIs will be available for
+allocation  5% of the Net QIB  allocation.
+  Portion  shall  be (a) one-third  of  the
+  available for allocation  portion available to
+  proportionately  to  NIIs shall be reserved
+  Mutual Funds only.  for bidders with an
+  Mutual  Funds  application size of
+  participating in the  more than ₹200,000
+  Mutual Fund Portion  and up to ₹1,000,000;
+  will also be eligible for  and
+  allocation  in  the
+  remaining balance Net (b) two-third  of  the
+  QIB  Portion.  The  portion available to
+  unsubscribed portion in  NIIs shall be reserved
+  the Mutual Fund Portion  for  bidders  with
+  will be available for  application size of
+  allocation to the Net  more than ₹1,000,000.
+  QIB Portion.
+  provided  that  the
+  unsubscribed portion in
+  either of the sub-categories
+  specified above may be
+  allocated to Bidders in the
+  other sub-category of NIIs
+  subject to valid Bids being
+  received at or above the
+  Offer Price.
+  436
+  Particulars  QIBs(1)  Non-Institutional  Retail Individual  Eligible Employees#
+  Investors (1)  Investors
+Basis  of Proportionate as follows The Allotment of Equity Allotment to each RII shall Proportionate unless the
+Allotment/  (excluding the Anchor Shares to each NII shall not not be less than the Employee  Reservation
+allocation  if Investor Portion):  be less than the minimum minimum Bid lot, subject Portion  is
+respective  (a) [●] Equity Shares application size, subject to to availability of Equity undersubscribed, the value
+category  is  of face value of ₹ availability in the Non- Shares in the Retail of allocation to an Eligible
+oversubscribed*  10 each shall be Institutional Portion, and Portion and the remaining Employee shall not exceed
+  available  for the remainder, if any, shall available Equity Shares if ₹  200,000  (net  of
+  allocation on a be  allotted  on  a any, shall be allotted on a Employee Discount, if
+  proportionate basis proportionate basis in proportionate basis. For any). In the event of
+  to Mutual Funds accordance  with  the further details see, “Offer undersubscription in the
+  only; and  conditions specified in Procedure” on page 441. Employee  Reservation
+  (b) [●] Equity Shares Schedule XIII to the SEBI  Portion, the unsubscribed
+  of face value of ₹ ICDR Regulations. The  portion may be allocated,
+  10 each shall be Equity Shares available for  on a proportionate basis, to
+  available  for allocation to Bidders in the  Eligible  Employees
+  allocation on a Non-Institutional Portion  Bidding in the Employee
+  proportionate basis shall be subject to the  Reservation Portion for
+  to  all  QIBs, following:  value exceeding ₹ 200,000
+  including Mutual (a) One-third of the Non-  (net  of  Employee
+  Funds  receiving  Institutional Portion  Discount, if any), subject
+  allocation as per (a)  shall be available for  to total Allotment to an
+  above.  allocation to Bidders  Eligible Employee not
+  (c) up to 60% of the  with an application  exceeding ₹ 500,000 each
+  QIB Portion ( [●]  size  more  than  (net  of  Employee
+  Equity Shares of  ₹200,000  up  to  Discount, if any).
+  face value of ₹ 10  ₹1,000,000; and
+  each)  may  be (b) Two-thirds of the
+  allocated on a  Non-Institutional
+  discretionary basis  Portion  shall  be
+  to Anchor Investors  available  for
+  of which 40% shall  allocation to Bidders
+  be reserved in the  with an application
+  following manner:  size of more than
+  (i) 33.33% shall be  ₹1,000,000.
+  available  for
+  allocation  to Provided  that  the
+  domestic Mutual unsubscribed portion in
+  Funds, and (ii) either of these two sub-
+  6.67% shall be categories  of  Non-
+  available for Life Institutional Portion may be
+  Insurance  allocated to the Bidders in
+  Companies  and the other sub-category of
+  Pension  Funds, Non-Institutional Portion in
+  subject to valid bids accordance with SEBI
+  being  received ICDR Regulations.
+  from  domestic
+  Mutual Funds, Life The allotment to each NII
+  Insurance  shall not be less than the
+  Companies  and Minimum NII Bid Size,
+  Pension Funds at or subject to availability of
+  above the Anchor Equity Shares in the Non-
+  Investor Allocation Institutional Portion and the
+  Price. In the event remaining available Equity
+  of  under- Shares, if any, shall be
+  subscription in (ii) allotted on a proportionate
+  above,  the basis, in accordance with
+  allocation may be Schedule XIII to the SEBI
+  made to domestic ICDR Regulations.
+  Mutual Funds.
+Minimum Bid  Such number of Equity Such number of Equity [●] Equity Shares of face [●] Equity Shares of face
+  Shares and in multiples Shares and in multiples of value of ₹ 10 each and in value of ₹ 10 each.
+  of [●] Equity Shares of [●] Equity Shares of face multiples of [•] Equity
+  face value of ₹ 10 each value of ₹ 10each so that Shares of face value of ₹10
+  so that the Bid Amount the Bid Amount exceeds each thereafter.
+  exceeds ₹200,000  ₹200,000
+  437
+  Particulars  QIBs(1)  Non-Institutional  Retail Individual  Eligible Employees#
+  Investors (1)  Investors
+Maximum Bid  Such number of Equity Such number of Equity Such number of Equity Such number of Equity
+  Shares in multiples of Shares in multiples of [●] Shares in multiples of [●] Shares in multiples of [●]
+  [●] Equi [...truncated]
