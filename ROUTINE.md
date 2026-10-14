@@ -13,34 +13,42 @@ verdict). The snapshot shows each card as "Cached call" and sets `needs_card` / 
 `needs_anchor_update` only when something is actually missing. Never re-read an `analysis/*.md`
 or re-search a company that already has a card unless one of those flags says so.
 
-## 1. Refresh the numbers
+## 1. Refresh the numbers, and check for a quiet run
 
 ```bash
-python3 -m ipo_agent.snapshot --print
+python3 -m ipo_agent.snapshot
+python3 -m ipo_agent.quiet <AM|PM>
 ```
 
-This writes `data/latest.json` and `data/latest.md`. It lists every mainboard IPO
-that is announced, upcoming, open, closing today, or awaiting listing, with:
-dates, price band, lot, issue size, GMP, P/E, live category-wise subscription
+The snapshot writes `data/latest.json` and `data/latest.md`. Don't read them yet. `quiet` scores any
+IPO that has listed (it runs the outcomes step, see below) and then decides whether this run needs you:
+
+- **`QUIET: wrote reports/…`**: no IPO is open or closing today and nothing needs research. It wrote
+  this run's verdict file from the previous run's calls and the fresh numbers, rendered the email,
+  and printed the subject. **Skip steps 2 and 3; don't read `data/latest.md`, the analyses or the
+  report JSON.** Go straight to step 4 (deliver) and step 5 (save).
+- **`NOT QUIET — Claude needed:`** followed by the reasons. Read `data/latest.md` and do steps 2–5 as
+  usual.
+- **An error/traceback from `quiet`**: treat the run as not quiet. Run `python3 -m ipo_agent.outcomes`
+  yourself (`quiet` may have stopped before it), read `data/latest.md` and do steps 2–5.
+
+`data/latest.md` lists every mainboard IPO that is announced, upcoming, open, closing today, or
+awaiting listing, with: dates, price band, lot, issue size, GMP, P/E, live category-wise subscription
 (QIB / sNII / bNII / Retail) and an allotment-odds table per category.
 
-If the `errors` field is non-empty (e.g. NSE blocked), continue with what you
+If it has a "Source errors" section (e.g. NSE blocked), continue with what you
 have and use web search to fill the missing numbers. Say in the report which
 numbers came from web search.
 
-Then score any IPO that has listed:
-
-```bash
-python3 -m ipo_agent.outcomes
-```
-
-It records each newly listed IPO in `data/outcomes.json` (listing price, day-1 close, GMP the night
-before, our last call before bids closed, final subscription) and prints the running scorecard.
-Listing-day prices are published after the close, so a listing that isn't out yet is retried next run.
-For each IPO it reports as recorded, add one line to the report's `notes`, e.g. "HD Fire listed +28%
-(GMP said +34%); our call: Apply". If it reports an error for an IPO that listed at least a day ago
-(e.g. NSE blocked), web-search the listing price and day-1 close and record them with
-`python3 -m ipo_agent.outcomes --set <key> listing=<price> close=<price>`.
+**Listings.** `quiet` records each newly listed IPO in `data/outcomes.json` (listing price, day-1 close,
+GMP the night before, our last call before bids closed, final subscription). Listing-day prices are
+published after the close, so a listing that isn't out yet is retried next run. On a quiet run it adds
+the notes itself. Otherwise it prints one line per recorded IPO under "Listed since last run", e.g.
+"HD Fire Protect listed +28% (GMP said +34%); our call: Apply": copy each into the report's `notes`.
+If it reports an `outcomes:` error for an IPO that listed at least a day ago (e.g. NSE blocked),
+web-search the listing price and day-1 close and record them with
+`python3 -m ipo_agent.outcomes --set <key> listing=<price> close=<price>`. The running scorecard is
+`python3 -m ipo_agent.outcomes --no-fetch`.
 
 ## 2. Deep analysis — for every IPO with `needs_analysis: true` and a non-null `rhp_url`
 
@@ -132,8 +140,10 @@ GMP, P/E, subscription, odds) come from the snapshot automatically. Keep strings
  "notes": []}
 ```
 
-Always write an entry for IPOs that are open, closing today or awaiting listing (their call
-depends on live subscription/GMP); any other IPO with nothing new can be left out (its card is used as is). Override a card field (`verdict`,
+Always write an entry for IPOs that are open or closing today (their call depends on live
+subscription/GMP). Also write one on the first run after an IPO's bids close: the next quiet run copies
+its `verdict`, `verdict_text`, `best_category` and `category_note` forward until listing. Any other IPO
+with nothing new can be left out (its card is used as is). Override a card field (`verdict`,
 `red_flags`, …) only when today's numbers change the call — and if the change is lasting (e.g. a
 fact learned from news), update the card instead. The full schema is at the top of
 `ipo_agent/email_render.py`.

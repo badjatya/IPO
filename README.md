@@ -15,6 +15,9 @@ The work is split in two:
 
 Anything that doesn't change with the market is researched **once per IPO** and cached in `analysis/`,
 so later runs spend tokens only on what moved (GMP, subscription, the day's call).
+On a quiet run, when no IPO is open or closing and nothing needs research, Claude isn't asked for any
+judgement at all: `ipo_agent/quiet.py` carries the previous run's calls forward over the fresh numbers
+and renders the email, and Claude only sends it and commits.
 
 ## How a run works
 
@@ -34,7 +37,9 @@ flowchart TD
 
     snap["<b>1. Snapshot</b><br/>python3 -m ipo_agent.snapshot<br/>+ allotment odds per category"] --> latest[("data/latest.json / .md")]
 
-    latest --> need{"needs_analysis<br/>and RHP available?"}
+    latest --> quiet{"<b>Quiet run?</b><br/>python3 -m ipo_agent.quiet<br/>nothing open or closing,<br/>nothing to research"}
+    quiet -- "yes: previous calls + fresh numbers" --> render
+    quiet -- no --> need{"needs_analysis<br/>and RHP available?"}
     need -- yes --> rhp["<b>2. RHP extract</b><br/>python3 -m ipo_agent.rhp<br/>→ analysis/rhp/&lt;key&gt;.txt"]
     rhp --> deep["<b>Claude: deep analysis</b><br/>RHP + web search (anchors, news)<br/>→ analysis/&lt;key&gt;.md"]
     need -- "no (already cached)" --> anchor{"needs_anchor_update?"}
@@ -117,6 +122,7 @@ The rules and maths are in [ipo_agent/allotment.py](ipo_agent/allotment.py).
 | [ipo_agent/allotment.py](ipo_agent/allotment.py) | Category minimums, allotment odds and the best category. |
 | [ipo_agent/cards.py](ipo_agent/cards.py) | Loads the cached per-IPO card and decides when one is missing or stale. The card schema is at the top of the file. |
 | [ipo_agent/email_render.py](ipo_agent/email_render.py) | Renders the HTML email and the plain-text version from the snapshot plus each IPO's card, overridden by Claude's verdict JSON for the run. The JSON schema is at the top of the file. |
+| [ipo_agent/quiet.py](ipo_agent/quiet.py) | Decides whether a run needs Claude. When it doesn't (nothing open or closing, no `needs_*` flag, no phase change, no falling GMP, no source error), it writes the run's verdict file from the previous run's calls and renders the email. |
 | [ipo_agent/outcomes.py](ipo_agent/outcomes.py) | Listing-day scorecard: records each listed IPO's listing price and day-1 close (NSE) next to the GMP the night before, our last call before bids closed and the final subscription, then prints gains by call, GMP miss and which signals tracked listing gains. |
 | [ipo_agent/net.py](ipo_agent/net.py) | Small HTTP client with a cookie jar, browser headers and retries. |
 | `data/latest.{json,md}` | The latest snapshot. Older ones are kept in `data/snapshots/`. |

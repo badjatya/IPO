@@ -3,6 +3,7 @@
 Daily research on Indian **mainboard** IPOs (no SME). When run as a scheduled routine, follow `ROUTINE.md`.
 
 - `python3 -m ipo_agent.snapshot --print` — fetch numbers (Investorgain list/GMP + NSE details/subscription) → `data/latest.{json,md}`
+- `python3 -m ipo_agent.quiet <AM|PM>` — records new listings, then on a quiet run (nothing open/closing, nothing to research) writes `reports/<date>-<am|pm>.json` from the previous run's calls and renders the email; otherwise prints why Claude is needed
 - `python3 -m ipo_agent.rhp <SYMBOL|url>` — extract key RHP sections → `analysis/rhp/` (RHP links come from NSE, or SEBI before NSE lists the issue)
 - `python3 -m ipo_agent.outcomes` — listing-day scorecard: listing price/close vs GMP the night before, our call and final subscription → `data/outcomes.json`
 - `python3 -m ipo_agent.trends` — GMP and subscription-by-day trends from `data/snapshots/` (the snapshot attaches them to each IPO; the email shows them)
