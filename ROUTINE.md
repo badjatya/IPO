@@ -28,6 +28,20 @@ If the `errors` field is non-empty (e.g. NSE blocked), continue with what you
 have and use web search to fill the missing numbers. Say in the report which
 numbers came from web search.
 
+Then score any IPO that has listed:
+
+```bash
+python3 -m ipo_agent.outcomes
+```
+
+It records each newly listed IPO in `data/outcomes.json` (listing price, day-1 close, GMP the night
+before, our last call before bids closed, final subscription) and prints the running scorecard.
+Listing-day prices are published after the close, so a listing that isn't out yet is retried next run.
+For each IPO it reports as recorded, add one line to the report's `notes`, e.g. "HD Fire listed +28%
+(GMP said +34%); our call: Apply". If it reports an error for an IPO that listed at least a day ago
+(e.g. NSE blocked), web-search the listing price and day-1 close and record them with
+`python3 -m ipo_agent.outcomes --set <key> listing=<price> close=<price>`.
+
 ## 2. Deep analysis — for every IPO with `needs_analysis: true` and a non-null `rhp_url`
 
 This is the most important step; do not skip it to save time. Do it once per IPO and save it to the

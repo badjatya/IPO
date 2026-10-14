@@ -80,7 +80,8 @@ stateDiagram-v2
     AnchorDone --> Open: bidding opens
     Open --> Closed: subscription final
     note right of Open: best category picked from<br/>live subscription each run
-    Closed --> [*]: listed (dropped from snapshot)
+    Closed --> Listed: listing day
+    Listed --> [*]: scored in data/outcomes.json (dropped from snapshot)
 ```
 
 ## Picking the category
@@ -116,8 +117,10 @@ The rules and maths are in [ipo_agent/allotment.py](ipo_agent/allotment.py).
 | [ipo_agent/allotment.py](ipo_agent/allotment.py) | Category minimums, allotment odds and the best category. |
 | [ipo_agent/cards.py](ipo_agent/cards.py) | Loads the cached per-IPO card and decides when one is missing or stale. The card schema is at the top of the file. |
 | [ipo_agent/email_render.py](ipo_agent/email_render.py) | Renders the HTML email and the plain-text version from the snapshot plus each IPO's card, overridden by Claude's verdict JSON for the run. The JSON schema is at the top of the file. |
+| [ipo_agent/outcomes.py](ipo_agent/outcomes.py) | Listing-day scorecard: records each listed IPO's listing price and day-1 close (NSE) next to the GMP the night before, our last call before bids closed and the final subscription, then prints gains by call, GMP miss and which signals tracked listing gains. |
 | [ipo_agent/net.py](ipo_agent/net.py) | Small HTTP client with a cookie jar, browser headers and retries. |
 | `data/latest.{json,md}` | The latest snapshot. Older ones are kept in `data/snapshots/`. |
+| `data/outcomes.json` | One record per listed IPO: what we expected vs how it listed. |
 | `analysis/<key>.md` | Cached deep analysis per IPO. `analysis/rhp/<key>.txt` holds the extracted RHP text. |
 | `analysis/<key>.json` | Cached email card per IPO, reused by every run. |
 | `reports/<date>-<am\|pm>.{json,html,txt}` | Claude's verdicts and the rendered email for each run. |
@@ -138,6 +141,9 @@ python3 -m ipo_agent.rhp TONBO --out analysis/rhp/tonbo-imaging.txt
 
 # Render the email from a verdict file
 python3 -m ipo_agent.email_render reports/2026-10-12-pm.json
+
+# Record IPOs that have listed and print the scorecard (--no-fetch: just print it)
+python3 -m ipo_agent.outcomes
 ```
 
 The verdicts and the deep analysis are written by Claude, so a full brief needs the routine (or a Claude Code
