@@ -57,6 +57,7 @@ PHASE_COLOR = {
     "upcoming": ("#E8F0FE", "#1967D2"),
     "announced": ("#F1F3F4", "#5F6368"),
 }
+TREND = {"up": ("↑", "📈", "#137333"), "down": ("↓", "📉", "#C5221F"), "flat": ("→", "➡️", "#5F6368")}
 GRADE = {"strong": ("Strong", "#137333"), "average": ("Average", "#B06000"),
          "weak": ("Weak", "#C5221F"), "pending": ("Pending", "#5F6368")}
 FONT = "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;"
@@ -89,6 +90,47 @@ def gmp_text(ipo, short=False):
     if not ipo.get("price_high"):  # no price band yet: % is meaningless
         return f"₹{ipo['gmp']:g}"
     return f"{ipo['gmp_pct']:+.0f}%" if short else f"₹{ipo['gmp']:g} ({ipo['gmp_pct']:+.1f}%)"
+
+
+def trend(ipo, kind):
+    return (ipo.get("trend") or {}).get(kind)
+
+
+def gmp_arrow(ipo):
+    """Glance-row arrow for the GMP trend (rising/falling only)."""
+    t = trend(ipo, "gmp")
+    if not t or t["direction"] == "flat":
+        return ""
+    arrow, _, color = TREND[t["direction"]]
+    return f' <span style="color:{color};font-weight:700">{arrow}</span>'
+
+
+def gmp_trend_line(ipo):
+    t = trend(ipo, "gmp")
+    if not t:
+        return ""
+    _, icon, color = TREND[t["direction"]]
+    return f'<p style="font-size:13px;color:{color};font-weight:600;margin:0 0 4px">{icon} {esc(t["text"])}</p>'
+
+
+def sub_by_day(t):
+    """Category × bidding-day table of subscription (shown once there are 2+ days)."""
+    head = ('<tr style="background:#F1F3F4"><th></th>'
+            + "".join(f'<th style="padding:5px 8px;font-size:11px;color:#5F6368;text-align:right">Day {x["day"]}'
+                      f'<div style="font-weight:400">{esc(dt.date.fromisoformat(x["date"]).strftime("%a %d"))}</div></th>'
+                      for x in t["days"]) + "</tr>")
+    rows = []
+    for k, label in (("retail", "Retail"), ("snii", "Small HNI"), ("bnii", "Big HNI"), ("qib", "QIB"), ("total", "Total")):
+        if not all(k in x["times"] for x in t["days"]):
+            continue
+        bold = "font-weight:700;" if k == "total" else ""
+        rows.append(f'<tr><td style="padding:4px 8px;font-size:13px;color:#3C4043;{bold}">{label}</td>'
+                    + "".join(f'<td style="padding:4px 8px;font-size:13px;text-align:right;{bold}">{x["times"][k]:g}x</td>'
+                              for x in t["days"]) + "</tr>")
+    return (f'<div style="font-size:13px;font-weight:700;color:#202124;margin:14px 0 4px">Subscription by day</div>'
+            f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
+            f'style="border:1px solid #E8EAED;border-radius:8px;border-collapse:separate;overflow:hidden">'
+            f'{head}{"".join(rows)}</table>')
 
 
 def phase_label(ipo, today):
@@ -231,8 +273,11 @@ def card(ipo, v, today):
     if v.get("financials"):
         body.append(f'<p style="font-size:13px;color:#5F6368;margin:4px 0 0">📊 {esc(v["financials"])}</p>')
     body.append(facts_grid(pairs))
+    body.append(gmp_trend_line(ipo))
     if ipo.get("subscription"):
         body.append(sub_table(ipo["subscription"]))
+    if trend(ipo, "subscription"):
+        body.append(sub_by_day(trend(ipo, "subscription")))
     if ipo.get("categories") and ipo["phase"] != "announced":
         body.append(category_table(ipo["categories"], (v.get("best_category") or ipo.get("best_category") or "").lower()
                                    .replace("small hni", "snii").replace("big hni", "bnii")))
@@ -259,7 +304,7 @@ def glance(ipos, verdicts, today):
         rows.append(
             f'<tr><td style="padding:9px 0;border-bottom:1px solid #F1F3F4;font-size:14px;font-weight:600;color:#202124">'
             f'{esc(i["name"])}<div style="font-size:12px;font-weight:400;color:#5F6368;margin-top:1px">'
-            f'{esc(phase_label(i, today))} · GMP {esc(gmp_text(i, short=True))}</div></td>'
+            f'{esc(phase_label(i, today))} · GMP {esc(gmp_text(i, short=True))}{gmp_arrow(i)}</div></td>'
             f'<td style="padding:9px 0 9px 8px;border-bottom:1px solid #F1F3F4;text-align:right;vertical-align:middle">'
             f'{pill(v.get("verdict_text") or vlabel, vbg, vfg, 11)}</td></tr>')
     return (f'<tr><td style="padding:0 0 16px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
@@ -338,7 +383,8 @@ def render_text(rep, snap):
     for i in ipos:
         v = verdicts.get(i["key"], {})
         vt = v.get("verdict_text") or VERDICT.get(v.get("verdict", "pending"), VERDICT["pending"])[0]
-        L.append(f"• {i['name']} — {phase_label(i, today)} — {vt} — GMP {gmp_text(i, short=True)}")
+        arrow = TREND[trend(i, "gmp")["direction"]][0] if trend(i, "gmp") else ""
+        L.append(f"• {i['name']} — {phase_label(i, today)} — {vt} — GMP {gmp_text(i, short=True)} {arrow}".rstrip())
     for i in ipos:
         v = verdicts.get(i["key"], {})
         vt = v.get("verdict_text") or VERDICT.get(v.get("verdict", "pending"), VERDICT["pending"])[0]
@@ -358,10 +404,14 @@ def render_text(rep, snap):
         L += [f"Bidding: {fmt_day(i.get('open'))} – {fmt_day(i.get('close'))}   Listing: {fmt_day(i.get('listing'))}",
               f"Price band: {band}   Lot: {i.get('lot') or '?'}   Size: {size}",
               f"P/E: {pe}   GMP: {gmp_text(i)}"]
+        if trend(i, "gmp"):
+            L.append(trend(i, "gmp")["text"])
         if v.get("quota"):
             L.append(f"Quota: {v['quota']}")
         if i.get("subscription"):
             L.append("Subscription: " + " · ".join(f"{k.upper()} {s['times']:g}x" for k, s in i["subscription"].items()))
+        if trend(i, "subscription"):
+            L.append(f"Subscription by day — {trend(i, 'subscription')['text']}")
         if i.get("categories") and i["phase"] != "announced":
             L.append("Where to apply:")
             for c in i["categories"]:

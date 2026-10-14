@@ -15,7 +15,7 @@ import re
 import sys
 from zoneinfo import ZoneInfo
 
-from . import allotment, cards, investorgain, sebi
+from . import allotment, cards, investorgain, sebi, trends
 from .net import Client
 from .nse import MAINBOARD_SERIES, NSE
 
@@ -175,8 +175,9 @@ def build(today=None):
     order = {"closing_today": 0, "open": 1, "listing_today": 2, "upcoming": 3,
              "awaiting_listing": 4, "announced": 5, "listed": 6}
     out.sort(key=lambda x: (order.get(x["phase"], 9), x.get("open") or "9999"))
-    return {"generated_at": now.isoformat(timespec="minutes"), "date": today,
+    snap = {"generated_at": now.isoformat(timespec="minutes"), "date": today,
             "ipos": out, "errors": errors}
+    return trends.attach(snap, ROOT / "data" / "snapshots")
 
 
 def _inr(x):
@@ -214,6 +215,9 @@ def render_markdown(snap):
             f" · size {('₹%g Cr' % i['size_cr']) if i.get('size_cr') else '-'} · P/E {i.get('pe') if i.get('pe') is not None else '-'}",
             f"- GMP: {gmp} · anchor allocation: {_anchor(i)}",
         ]
+        t = i.get("trend") or {}
+        if t.get("gmp"):
+            lines.append(f"- {t['gmp']['text']}")
         c = i.get("card")
         if c:
             lines.append(f"- Cached call ({c.get('source')}, {c.get('analysed')}): {c.get('verdict_text') or c.get('verdict')}"
@@ -228,6 +232,8 @@ def render_markdown(snap):
             s = i["subscription"]
             lines.append("- Subscription: " + " · ".join(
                 f"{k.upper()} {v['times']}x" for k, v in s.items()))
+        if t.get("subscription"):
+            lines.append(f"- Subscription by day: {t['subscription']['text']}")
         if i.get("categories"):
             lines += ["", "| Category | Min application | Capital | Odds | Exp. gain | Return on blocked |",
                       "|---|---|---|---|---|---|"]

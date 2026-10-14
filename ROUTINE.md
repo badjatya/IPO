@@ -138,6 +138,13 @@ depends on live subscription/GMP); any other IPO with nothing new can be left ou
 fact learned from news), update the card instead. The full schema is at the top of
 `ipo_agent/email_render.py`.
 
+**Trends.** The snapshot builds each IPO's GMP trend from the saved snapshots (`GMP ₹80 → ₹65 → ₹48 since
+12 Oct, falling`) and, from bidding Day 2, its subscription by day; the email shows both itself. A falling
+GMP before listing is one of the better warning signs: when an IPO's trend says `falling`, say so in its
+`category_note` (e.g. "GMP falling since 13 Oct — apply only if you'd hold"), put it in the `headline` if
+it's the day's main news, and downgrade the `verdict` when the fall changes the call (apply → listing_gains,
+or avoid if GMP is heading to zero). Trends are live numbers: never write them into a card.
+
 - `verdict`: `apply` | `listing_gains` | `avoid` | `neutral` | `pending` (no analysis yet / announced only)
 - `verdict_text`: short label, e.g. "Apply", "Listing gains only", "Avoid", "Analysis pending", "Watchlist"
 - `best_category`: "Retail" / "Small HNI" / "Big HNI" / null. For open IPOs use the snapshot's
