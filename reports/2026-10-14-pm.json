@@ -1,0 +1,11 @@
+{"date": "2026-10-14", "session": "PM",
+ "headline": "HD Fire closes tomorrow — Retail 8x, GMP steady ~33%, apply via Retail; Tonbo, Zetwerk, Bonfiglioli, SMT open 15 Oct",
+ "ipos": {
+  "hd-fire-protect": {"best_category": "Retail", "category_note": "Closes 15 Oct. GMP steady ₹83–91. Retail 8x vs HNI ~31x, so Retail has the best odds; 1 lot per family PAN"},
+  "fusion-cx": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Small HNI", "category_note": "Day 1: Retail 1.09x, sNII 0.47x, so allotment is near-certain. GMP rising ₹10 → ₹35 (12%). Subscription usually jumps on the last day; recheck 16 Oct"},
+  "zetwerk": {"category_note": "Opens 15 Oct. GMP has slipped from ₹23 to ₹19 and the company is loss-making; wait for anchor and Day 1 numbers"},
+  "sahajanand-medical-technologies": {"category_note": "Opens 15 Oct. GMP has slipped from ₹41 to ₹37; wait for Day 1 numbers"},
+  "tonbo-imaging": {"category_note": "Opens 15 Oct. GMP ~71% but P/E ~79; anchor allocation due 14 Oct, to be updated"},
+  "bonfiglioli-transmissions": {"category_note": "Opens 15 Oct. GMP rising; anchor allocation due 14 Oct, to be updated"}
+ },
+ "notes": ["No IPO has listed yet, so the scorecard is empty.", "Jio Platforms: RHP not filed, analysis pending."]}
