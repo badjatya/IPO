@@ -1,4 +1,4 @@
-# IPO numbers – 2026-10-13 (as of 19:08 IST)
+# IPO numbers – 2026-10-14 (as of 09:07 IST)
 
 ## HD Fire Protect — open
 - Dates: open 2026-10-13 · close 2026-10-15 · allotment 2026-10-16 · listing 2026-10-21
@@ -16,11 +16,11 @@
 
 Best category by return on capital: **retail**
 
-## Fusion CX — upcoming
+## Fusion CX — open
 - Dates: open 2026-10-14 · close 2026-10-16 · allotment 2026-10-19 · listing 2026-10-22
 - Price band: ₹275–289 · lot 51 shares · size ₹702 Cr · P/E 21.62
-- GMP: ₹31 (10.73%) · anchor allocation: not yet
-- Issue: Initial Public Offer comprising of Fresh Issue aggregating upto Rs. 5000 million and Offer for Sale aggregating upto Rs.2020 million
+- GMP: ₹33.5 (11.59%) · anchor allocation: done (https://nsearchives.nseindia.com/content/ipo/ANCHOR_FUSIONCX.zip)
+- Issue: Initial Public Offer comprising of Fresh Issue aggregating upto Rs. 5000 million and Offer for Sale aggregating upto Rs.2020 million (including Anchor reservation portion of 1,09,30,795 Equity Shares)
 - Lead managers: Nuvama Wealth Management Limited, IIFL Capital Services Limited and Motilal Oswal Investment Advisors Limited · registrar: KFin Technologies Limited
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
@@ -32,7 +32,7 @@ Best category by return on capital: **retail**
 ## Tonbo Imaging India — upcoming
 - Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
 - Price band: ₹665–700 · lot 21 shares · size ₹852.18 Cr · P/E 78.83
-- GMP: ₹475 (67.86%) · anchor allocation: not yet
+- GMP: ₹490 (70%) · anchor allocation: not yet
 - Issue: Initial Public Offer comprising of Offer for Sale of up to 12,174,046 Equity Shares (including Employee Reservation Portion of up to 14,000 Equity Shares)
 - Lead managers: JM Financial Limited and IIFL Capital Services Limited · registrar: KFin Technologies Limited
 
@@ -45,7 +45,7 @@ Best category by return on capital: **retail**
 ## Zetwerk — upcoming
 - Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
 - Price band: ₹143–151 · lot 99 shares · size ₹5012.33 Cr · P/E -14.17
-- GMP: ₹21 (13.91%) · anchor allocation: not yet
+- GMP: ₹23 (15.23%) · anchor allocation: not yet
 - Issue: Initial Public offer comprising Fresh issue of aggregating up to Rs. 28,300 million and offer for sale up to 14,45,25,036 Equity Shares (Including Eligible Employee Reservation up to 7,00,000 Equity Shares)
 - Lead managers: Kotak Mahindra Capital Company Limited, Morgan Stanley India Company Private Limited, Goldman Sachs (India) Securities Private Limited, Avendus Capital Private Limited, JM Financial Limited, HSBC Securities and Capital Markets (India) Private Limited and Pantomath Capital Advisors Private Limited · registrar: KFin Technologies Limited
 
@@ -58,7 +58,7 @@ Best category by return on capital: **retail**
 ## Bonfiglioli Transmissions — upcoming
 - Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
 - Price band: ₹558–586 · lot 25 shares · size ₹2533.66 Cr · P/E -
-- GMP: ₹167 (28.5%) · anchor allocation: not yet
+- GMP: ₹175 (29.86%) · anchor allocation: not yet
 - Issue: Initial Public Offer of offer for sale up to 4,32,39,042 Equity Shares
 - Lead managers: Axis Capital Limited, BNP Paribas, ICICI Securities Limited and Jefferies India Private Limited · registrar: MUFG Intime India Private Limited
 
@@ -71,7 +71,7 @@ Best category by return on capital: **retail**
 ## Sahajanand Medical Technologies — upcoming
 - Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
 - Price band: ₹327–344 · lot 43 shares · size ₹475.48 Cr · P/E 50.59
-- GMP: ₹35 (10.17%) · anchor allocation: not yet
+- GMP: ₹41 (11.92%) · anchor allocation: not yet
 - Issue: Initial Public Offer comprising of Offer for sale upto 13,822,116 Equity Shares (Including Eligible Employees Reservation Portion of up to 2,50,000 Equity Shares)
 - Lead managers: Motilal Oswal Investment Advisors Limited, Avendus Capital Private Limited, HSBC Securities and Capital Markets (India) Private Limited , Nuvama Wealth Management Limited · registrar: MUFG Intime India Private Limited
 
@@ -84,4 +84,4 @@ Best category by return on capital: **retail**
 ## Jio Platforms — announced
 - Dates: open ? · close ? · allotment ? · listing ?
 - Price band: not announced · lot ? shares · size - · P/E -
-- GMP: ₹209 (0%) · anchor allocation: unknown (not on NSE yet)
+- GMP: ₹218 (0%) · anchor allocation: unknown (not on NSE yet)

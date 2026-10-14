@@ -34,7 +34,9 @@ FY26 basic EPS ₹13.47 gives **P/E ≈21.5x at the ₹289 cap on pre-issue earn
 Fresh ₹500 Cr: ₹275.7 Cr repay or prepay borrowings of the company and subsidiaries (all in FY27); ₹61.1 Cr investment in step-down subsidiaries Omind Technologies for the Arya and MindVoice IT tools; balance for unidentified acquisitions and general corporate purposes (capped at 35% of gross proceeds, and each of the two at no more than 25%). OFS ₹202 Cr goes to the promoters.
 
 ## Anchor book
-**Pending** — anchor bidding is on 13 Oct; the allocation is not out yet.
+₹315 Cr raised from anchors at ₹289 (~1.09 Cr shares; per news reports, figures from the NSE allocation letter, which is a scanned image, could not be read). Domestic MFs took ~78%: 6 fund houses, 15 schemes, 85.09 lakh shares — Kotak MF, ICICI Pru MF, Motilal Oswal MF — plus Kotak Mahindra Life Insurance and Bengal Finance & Investment (Ashish Kacholia). Individual per-anchor amounts and total anchor count: not found. No FII names reported.
+**Grade: Average-to-Strong** (solid domestic MFs, no marquee FIIs). Lock-in: 50% 30 days, 50% 90 days.
+Pre-IPO: Kotak Life, Kacholia and Sanshi Fund-I bought ₹120 Cr via secondary transfers on 9 Oct.
 
 ## Red flags
 - Top-10 customers were 49.8% / 52.2% / 45.3% of revenue (latest period, FY26, FY25 per RHP risk factor), and telecom is now 47% of revenue.
