@@ -15,7 +15,7 @@ import re
 import sys
 from zoneinfo import ZoneInfo
 
-from . import allotment, investorgain, sebi
+from . import allotment, cards, investorgain, sebi
 from .net import Client
 from .nse import MAINBOARD_SERIES, NSE
 
@@ -60,8 +60,11 @@ def phase(ipo, today):
     return "listed"
 
 
-def anchor_pending(analysis_file):
-    """True if the cached analysis still has the anchor-book section marked Pending."""
+def anchor_pending(key, analysis_file):
+    """True if the cached card (or, without one, the analysis) still has the anchor book Pending."""
+    card = cards.load(key)
+    if card:
+        return (card.get("anchor_grade") or "pending").lower() == "pending"
     if not analysis_file.exists():
         return False
     m = re.search(r"## Anchor book\s*\n(.*?)(\n## |\Z)", analysis_file.read_text(), re.S)
@@ -149,6 +152,7 @@ def build(today=None):
         analysis_file = ROOT / "analysis" / f"{key}.md"
         ph = phase(ipo, today)
         anchor_done = bool(d.get("anchor_report_url")) if d else None
+        card = cards.load(key)
         out.append({
             "key": key,
             **ipo,
@@ -161,7 +165,10 @@ def build(today=None):
             "best_category": allotment.best_category(cats),
             "analysis_file": str(analysis_file.relative_to(ROOT)),
             "needs_analysis": not analysis_file.exists(),
-            "needs_anchor_update": anchor_pending(analysis_file) and bool(
+            "card_file": str(cards.path(key).relative_to(ROOT)),
+            "needs_card": cards.needs_card(key),
+            "card": card,
+            "needs_anchor_update": anchor_pending(key, analysis_file) and bool(
                 anchor_done or ph in ("open", "closing_today", "awaiting_listing", "listing_today")),
         })
 
@@ -207,6 +214,12 @@ def render_markdown(snap):
             f" · size {('₹%g Cr' % i['size_cr']) if i.get('size_cr') else '-'} · P/E {i.get('pe') if i.get('pe') is not None else '-'}",
             f"- GMP: {gmp} · anchor allocation: {_anchor(i)}",
         ]
+        c = i.get("card")
+        if c:
+            lines.append(f"- Cached call ({c.get('source')}, {c.get('analysed')}): {c.get('verdict_text') or c.get('verdict')}"
+                         f" · anchor {c.get('anchor_grade') or 'pending'} · {c.get('summary') or ''}")
+        else:
+            lines.append("- Cached call: none — write the card")
         if d.get("issue_size_text"):
             lines.append(f"- Issue: {d['issue_size_text']}")
         if d.get("lead_managers"):

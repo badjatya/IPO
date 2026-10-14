@@ -1,0 +1,21 @@
+{
+ "name": "Sahajanand Medical Technologies",
+ "source": "rhp",
+ "analysed": "2026-10-12",
+ "verdict": "listing_gains",
+ "verdict_text": "Listing gains only",
+ "summary": "Surat-based maker of cardiac stents and structural-heart devices (TAVI, occluders); ~25% share of India's drug-eluting stent market, ~39% revenue from Europe.",
+ "financials": "FY26 revenue ₹1,211 Cr (+18%), PAT ₹69 Cr (5.7% margin); FY24 was a loss",
+ "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+ "positives": [
+  "Real product franchise with 16% revenue CAGR and improving margins",
+  "35% retail quota helps allotment odds"
+ ],
+ "red_flags": [
+  "53x P/E vs 44x peers on thin 14% EBITDA margin",
+  "Net debt/EBITDA 4.9x; Q1 operating cash flow negative",
+  "100% OFS with PE funds exiting; Delhi Police and CBI notices seeking documents"
+ ],
+ "anchor": "Anchor bidding 14 Oct; allocation not public yet",
+ "anchor_grade": "pending"
+}

@@ -1,0 +1,22 @@
+{
+ "name": "HD Fire Protect",
+ "source": "rhp",
+ "analysed": "2026-10-12",
+ "verdict": "apply",
+ "verdict_text": "Apply",
+ "summary": "India's #2 fire-protection equipment maker and largest exporter (sprinklers, deluge valves, foam systems), with the most UL/FM certifications among Indian peers.",
+ "financials": "FY26 revenue ₹489 Cr (+13%), PAT ₹117 Cr, EBITDA margin 31%, debt-free",
+ "quota": "QIB 50% · NII 15% · Retail 35%",
+ "positives": [
+  "Certification moat and 30% RoE; priced at 40.7x vs peer average 63x",
+  "Strong anchor book: ₹213 Cr, 72% to HDFC/ICICI Pru/Kotak/ABSL MFs",
+  "35% retail quota helps allotment odds"
+ ],
+ "red_flags": [
+  "100% OFS — promoters selling, company gets nothing",
+  "₹196 Cr dividends to promoters in the last two years",
+  "PAT growth slowed to 6% in FY26; inventory days rising"
+ ],
+ "anchor": "₹213 Cr from 25 anchors: HDFC MF, ICICI Pru, Kotak, ABSL MF, Mirae, UTI, Allianz",
+ "anchor_grade": "strong"
+}

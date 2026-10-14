@@ -6,6 +6,13 @@ Scope: **Indian mainboard IPOs only** (no SME). Times are IST.
 Work on the `main` branch (`git checkout main && git pull`), not a `claude/` branch: the cached
 analyses in `analysis/` must be on `main` so the next run can reuse them.
 
+**Cache, don't redo.** Everything about an IPO that doesn't move with the market is researched once
+and cached in `analysis/`: the RHP text (`rhp/<key>.txt`), the deep analysis (`<key>.md`) and the
+email card (`<key>.json` — summary, financials, quota, positives, red flags, anchor, baseline
+verdict). The snapshot shows each card as "Cached call" and sets `needs_card` / `needs_analysis` /
+`needs_anchor_update` only when something is actually missing. Never re-read an `analysis/*.md`
+or re-search a company that already has a card unless one of those flags says so.
+
 ## 1. Refresh the numbers
 
 ```bash
@@ -34,7 +41,7 @@ file in `analysis_file`; later runs reuse it. Do every eligible IPO, one after a
    working day before the IPO opens), and for recent news on the company.
    If the anchor allocation isn't out yet, write `**Pending**` as the first word of the
    Anchor book section; step 2b will fill it in on a later run.
-3. Write `analysis/<key>.md` using the template below. Be specific and numeric.
+3. Write `analysis/<key>.md` using the template below, then its card (step 2c). Be specific and numeric.
    Cite RHP figures in ₹ crore. Never invent numbers; write "not found" instead.
 
 ```markdown
@@ -77,17 +84,45 @@ Long-term view in one line.
 
 ## 2b. Anchor update — only for IPOs with `needs_anchor_update: true`
 
-The cached analysis still says the anchor book is Pending, but the anchor allocation is now done.
+The card still says the anchor book is pending, but the anchor allocation is now done.
 Web-search "<company> anchor investors" (exchange filing, news, IPO trackers), then replace **only**
-the `## Anchor book` section of `analysis/<key>.md`: total ₹ Cr raised, number of anchors, top 5–10
-names with amounts, and the Strong/Average/Weak grade. If it's still not findable, leave it Pending.
+the `## Anchor book` section of `analysis/<key>.md` (if it exists): total ₹ Cr raised, number of
+anchors, top 5–10 names with amounts, and the Strong/Average/Weak grade. Update `anchor` and
+`anchor_grade` in `analysis/<key>.json` to match — the card is what the next run checks. If it's
+still not findable, leave both pending.
+
+## 2c. Cards — for every IPO with `needs_card: true`, or whose analysis you just wrote in step 2
+
+Write `analysis/<key>.json` (schema at the top of `ipo_agent/cards.py`), one line per string:
+- `"source": "rhp"` when `analysis/<key>.md` exists: fill every field from that analysis
+  (summary, financials, quota, 2–3 positives, 2–3 red flags, anchor, anchor_grade, verdict).
+- `"source": "web"` when there is no RHP yet: one quick web search for what the company does;
+  `verdict: "pending"`, `verdict_text: "Analysis pending"` (or "Watchlist" if only announced).
+  This stub is replaced automatically once the RHP analysis exists.
+- Facts only: **no GMP, subscription, or "today/tomorrow"** in a card — the email shows the live
+  numbers itself, and the card is reused for days. Use absolute dates ("Anchor bidding 14 Oct").
 
 ## 3. Write today's verdicts (the email is rendered from them)
 
-Write `reports/<YYYY-MM-DD>-<am|pm>.json` — **one entry for every IPO in `data/latest.json`**, keyed by its
-`key`. Numbers (dates, price, lot, GMP, P/E, subscription, odds) come from the snapshot automatically;
-you only write the judgement. Keep every string short (one line on a phone). The schema and an example
-are at the top of `ipo_agent/email_render.py`; `reports/2026-10-12-pm.json` is a filled-in example.
+Write `reports/<YYYY-MM-DD>-<am|pm>.json`, keyed by each IPO's `key`. The renderer merges each entry
+over the IPO's card, so write **only what changes with today's numbers** — work from
+`data/latest.md` (numbers + cached calls); don't re-read the analyses. Numbers (dates, price, lot,
+GMP, P/E, subscription, odds) come from the snapshot automatically. Keep strings short.
+
+```json
+{"date": "2026-10-14", "session": "AM",
+ "headline": "Tonbo closes today — Retail 3.2x, apply",
+ "ipos": {"tonbo-imaging": {"best_category": "Retail", "category_note": "recheck on 16 Oct"},
+          "hd-fire-protect": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null,
+                              "category_note": "GMP turned negative — skip"}},
+ "notes": []}
+```
+
+Always write an entry for IPOs that are open, closing today or awaiting listing (their call
+depends on live subscription/GMP); any other IPO with nothing new can be left out (its card is used as is). Override a card field (`verdict`,
+`red_flags`, …) only when today's numbers change the call — and if the change is lasting (e.g. a
+fact learned from news), update the card instead. The full schema is at the top of
+`ipo_agent/email_render.py`.
 
 - `verdict`: `apply` | `listing_gains` | `avoid` | `neutral` | `pending` (no analysis yet / announced only)
 - `verdict_text`: short label, e.g. "Apply", "Listing gains only", "Avoid", "Analysis pending", "Watchlist"
@@ -98,9 +133,10 @@ are at the top of `ipo_agent/email_render.py`; `reports/2026-10-12-pm.json` is a
   further above it than sNII's (many retail bids are for >1 lot), so when Retail and sNII are close,
   prefer Retail.
 - `category_note` (optional): e.g. "1 lot per family PAN", "recheck subscription on <close date>"
-- `summary`: one sentence on what the company does · `financials`: one line, latest FY + growth
-- `quota`: from the analysis (RHP Offer Structure) · `positives`: 2–3 bullets · `red_flags`: 2–3 bullets
-- `anchor` + `anchor_grade` (`strong|average|weak|pending`)
+- Card fields (normally from `analysis/<key>.json`; same rules when writing the card):
+  `summary`: one sentence on what the company does · `financials`: one line, latest FY + growth
+  `quota`: from the analysis (RHP Offer Structure) · `positives`: 2–3 bullets · `red_flags`: 2–3 bullets
+  `anchor` + `anchor_grade` (`strong|average|weak|pending`)
 - top level: `date`, `session` ("AM"/"PM"), `headline` (one line: the single most useful takeaway
   today, e.g. "Tonbo closes today — Retail 3.2x, apply"), optional `notes` (source problems, data gaps)
 
@@ -115,7 +151,7 @@ python3 -m ipo_agent.email_render reports/<YYYY-MM-DD>-<am|pm>.json
 ```
 
 It prints the email subject and writes `reports/<…>.html` (designed email) and `reports/<…>.txt`
-(plain-text version). Fix any "no verdict for …" warning by adding the missing IPO to the JSON.
+(plain-text version). Fix any "no card or verdict for …" warning by writing that IPO's card (step 2c).
 
 ## 4. Deliver
 

@@ -5,16 +5,20 @@ Usage:
     python3 -m ipo_agent.email_render reports/2026-10-12-pm.json
       -> reports/2026-10-12-pm.html, reports/2026-10-12-pm.txt, prints the subject line
 
+Each IPO's entry is merged over its cached card, analysis/<key>.json (see cards.py), so the
+verdict file only needs what changes run to run; any card field can be overridden here.
+
 Verdict file (written by Claude each run), keyed by snapshot `key`:
 {
   "date": "2026-10-12", "session": "PM",
   "headline": "optional one-line takeaway",
   "ipos": {
     "<key>": {
-      "verdict": "apply|listing_gains|avoid|neutral|pending",
+      "verdict": "apply|listing_gains|avoid|neutral|pending",  # optional if the card's still holds
       "verdict_text": "Apply (Retail)",
       "best_category": "Retail",                 # or null
       "category_note": "1 lot per family PAN",   # optional
+      # usually from the card, override only if changed:
       "summary": "one sentence: what the company does",
       "financials": "FY26 revenue ₹489 Cr (+13%), PAT ₹117 Cr", # optional
       "quota": "QIB 50% · NII 15% · Retail 35%",  # optional
@@ -33,6 +37,8 @@ import html
 import json
 import pathlib
 import sys
+
+from . import cards
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -278,10 +284,20 @@ def subject(rep, ipos):
     return s
 
 
+def merged(rep, ipos):
+    """Per-IPO verdicts: cached card fields, overridden by this run's entry."""
+    out = {}
+    for i in ipos:
+        v = {**(cards.load(i["key"]) or {}), **rep.get("ipos", {}).get(i["key"], {})}
+        if v:
+            out[i["key"]] = v
+    return out
+
+
 def render_html(rep, snap):
     today = rep["date"]
     ipos = snap["ipos"]
-    verdicts = rep.get("ipos", {})
+    verdicts = merged(rep, ipos)
     n_open, n_up, closing = counts(ipos)
     stats = " &nbsp;·&nbsp; ".join(x for x in (
         f"<b>{n_open}</b> open", f"<b>{n_up}</b> upcoming",
@@ -312,7 +328,7 @@ def render_html(rep, snap):
 def render_text(rep, snap):
     today = rep["date"]
     ipos = snap["ipos"]
-    verdicts = rep.get("ipos", {})
+    verdicts = merged(rep, ipos)
     n_open, n_up, closing = counts(ipos)
     L = [f"IPO BRIEF · {rep['session']} · {dt.date.fromisoformat(today).strftime('%a %d %b %Y')}",
          f"{n_open} open · {n_up} upcoming" + (f" · CLOSING TODAY: {', '.join(closing)}" if closing else ""), ""]
@@ -369,9 +385,9 @@ def main(argv=None):
     snap = json.loads((ROOT / "data" / "latest.json").read_text())
     rep_path.with_suffix(".html").write_text(render_html(rep, snap))
     rep_path.with_suffix(".txt").write_text(render_text(rep, snap))
-    missing = [i["key"] for i in snap["ipos"] if i["key"] not in rep.get("ipos", {})]
+    missing = [i["key"] for i in snap["ipos"] if i["key"] not in merged(rep, snap["ipos"])]
     if missing:
-        print(f"warning: no verdict for {missing}", file=sys.stderr)
+        print(f"warning: no card or verdict for {missing}", file=sys.stderr)
     print(subject(rep, snap["ipos"]))
 
 

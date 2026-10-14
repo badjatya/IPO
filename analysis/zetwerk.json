@@ -1,0 +1,21 @@
+{
+ "name": "Zetwerk",
+ "source": "rhp",
+ "analysed": "2026-10-13",
+ "verdict": "neutral",
+ "verdict_text": "Neutral",
+ "summary": "Tech-led manufacturing platform (energy, precision, capital goods) with 26 own plants and ~7,000 suppliers; ₹5,012 Cr issue.",
+ "financials": "FY26 revenue ₹15,913 Cr (+40%), adj. EBITDA 2.7%, net loss ₹1,606 Cr",
+ "quota": "QIB ≥75% · NII ≤15% · Retail ≤10%",
+ "positives": [
+  "Revenue +40% in FY26; ₹13,062 Cr manufacturing order book",
+  "₹2,160 Cr of fresh issue repays debt"
+ ],
+ "red_flags": [
+  "Loss-making every year; ₹1,606 Cr loss FY26 incl. discontinued ops",
+  "No listed peer; ~60x adj. EBITDA, thin 2.7% margin",
+  "Half the issue is OFS by VC funds; only 10% retail quota"
+ ],
+ "anchor": "Anchor bidding 14 Oct; allocation not public yet",
+ "anchor_grade": "pending"
+}

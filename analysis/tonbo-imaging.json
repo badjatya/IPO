@@ -1,0 +1,21 @@
+{
+ "name": "Tonbo Imaging India",
+ "source": "rhp",
+ "analysed": "2026-10-12",
+ "verdict": "listing_gains",
+ "verdict_text": "Listing gains only",
+ "summary": "Bengaluru defence-electronics maker: thermal imaging cores, weapon sights, targeting and missile-seeker systems; ~71% of revenue from the Indian government.",
+ "financials": "FY26 revenue ₹363 Cr (−23%), PAT ₹51 Cr (−30%); Q1 FY27 loss ₹17.7 Cr",
+ "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+ "positives": [
+  "Owned, ITAR-free technology; #1 in Indian thermal imaging; ₹314 Cr order book",
+  "Defence theme; pre-IPO buyers include SBI MF, HDFC Life and 360 ONE"
+ ],
+ "red_flags": [
+  "Revenue and profit falling; operating cash flow negative two years running",
+  "Working-capital days 517; inventory tripled in two years",
+  "79x P/E on falling earnings; 100% OFS; promoters hold only 17%"
+ ],
+ "anchor": "Anchor bidding 14 Oct; allocation not public yet",
+ "anchor_grade": "pending"
+}

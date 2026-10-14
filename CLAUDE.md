@@ -6,6 +6,7 @@ Daily research on Indian **mainboard** IPOs (no SME). When run as a scheduled ro
 - `python3 -m ipo_agent.rhp <SYMBOL|url>` — extract key RHP sections → `analysis/rhp/` (RHP links come from NSE, or SEBI before NSE lists the issue)
 - `ipo_agent/allotment.py` — category minimums and allotment odds (Retail / sNII / bNII)
 - `analysis/<key>.md` — cached deep analysis per IPO (written once, reused)
+- `analysis/<key>.json` — cached email card per IPO (`ipo_agent/cards.py`); the daily report only overrides what changed
 - `reports/<date>-<am|pm>.json` — Claude's verdicts; `python3 -m ipo_agent.email_render <json>` renders the `.html` email + `.txt`
 - `config/delivery.json` — email recipient
 

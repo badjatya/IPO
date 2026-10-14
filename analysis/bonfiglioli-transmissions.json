@@ -1,0 +1,21 @@
+{
+ "name": "Bonfiglioli Transmissions",
+ "source": "rhp",
+ "analysed": "2026-10-13",
+ "verdict": "listing_gains",
+ "verdict_text": "Listing gains only",
+ "summary": "Indian arm of Italy's Bonfiglioli: industrial gearboxes, geared motors and drives (industrial, off-highway, wind).",
+ "financials": "CY25 revenue ₹2,014 Cr (+9%), PAT ₹238 Cr (+24%), RoNW 24%, debt-free",
+ "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+ "positives": [
+  "Debt-free, PAT margin 11.8% rising to 13% in H1 CY26",
+  "~46x P/E vs peer average 51.6x",
+  "35% retail quota"
+ ],
+ "red_flags": [
+  "100% OFS by parent — company gets nothing",
+  "Wind ≈27–32% of revenue; industry data from company-paid report"
+ ],
+ "anchor": "Anchor bidding 14 Oct; allocation not public yet",
+ "anchor_grade": "pending"
+}
