@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-15T16:50+05:30",
+ "generated_at": "2026-10-15T19:08+05:30",
  "date": "2026-10-15",
  "ipos": [
   {
@@ -45,8 +45,8 @@
      },
      "nii": {
       "shares_offered": 3932005.0,
-      "shares_bid": 503442610.0,
-      "times": 128.04
+      "shares_bid": 503696105.0,
+      "times": 128.1
      },
      "bnii": {
       "shares_offered": 2621337.0,
@@ -55,23 +55,23 @@
      },
      "snii": {
       "shares_offered": 1310668.0,
-      "shares_bid": 119493825.0,
-      "times": 91.17
+      "shares_bid": 119747320.0,
+      "times": 91.36
      },
      "retail": {
       "shares_offered": 9174677.0,
-      "shares_bid": 189635270.0,
-      "times": 20.67
+      "shares_bid": 191136165.0,
+      "times": 20.83
      },
      "employee": {
       "shares_offered": 71138.0,
-      "shares_bid": 1115620.0,
-      "times": 15.68
+      "shares_bid": 1120020.0,
+      "times": 15.74
      },
      "total": {
       "shares_offered": 18420492.0,
-      "shares_bid": 1516342190.0,
-      "times": 82.32
+      "shares_bid": 1518100980.0,
+      "times": 82.41
      }
     },
     "series": "EQ"
@@ -88,8 +88,8 @@
     },
     "nii": {
      "shares_offered": 3932005.0,
-     "shares_bid": 503442610.0,
-     "times": 128.04
+     "shares_bid": 503696105.0,
+     "times": 128.1
     },
     "bnii": {
      "shares_offered": 2621337.0,
@@ -98,23 +98,23 @@
     },
     "snii": {
      "shares_offered": 1310668.0,
-     "shares_bid": 119493825.0,
-     "times": 91.17
+     "shares_bid": 119747320.0,
+     "times": 91.36
     },
     "retail": {
      "shares_offered": 9174677.0,
-     "shares_bid": 189635270.0,
-     "times": 20.67
+     "shares_bid": 191136165.0,
+     "times": 20.83
     },
     "employee": {
      "shares_offered": 71138.0,
-     "shares_bid": 1115620.0,
-     "times": 15.68
+     "shares_bid": 1120020.0,
+     "times": 15.74
     },
     "total": {
      "shares_offered": 18420492.0,
-     "shares_bid": 1516342190.0,
-     "times": 82.32
+     "shares_bid": 1518100980.0,
+     "times": 82.41
     }
    },
    "anchor_done": true,
@@ -125,12 +125,12 @@
      "min_lots": 1,
      "min_shares": 55,
      "min_amount": 14905,
-     "subscription_x": 20.67,
-     "odds": 0.0484,
+     "subscription_x": 20.83,
+     "odds": 0.048,
      "odds_text": "≥1 in 21",
      "gain_if_allotted": 4290,
-     "expected_gain": 208,
-     "return_on_blocked_pct": 1.39
+     "expected_gain": 206,
+     "return_on_blocked_pct": 1.38
     },
     {
      "category": "snii",
@@ -138,11 +138,11 @@
      "min_lots": 14,
      "min_shares": 770,
      "min_amount": 208670,
-     "subscription_x": 91.17,
-     "odds": 0.011,
+     "subscription_x": 91.36,
+     "odds": 0.0109,
      "odds_text": "≥1 in 91",
      "gain_if_allotted": 60060,
-     "expected_gain": 659,
+     "expected_gain": 657,
      "return_on_blocked_pct": 0.32
     },
     {
@@ -240,13 +240,13 @@
        "times": {
         "qib": 156.82,
         "bnii": 146.47,
-        "snii": 91.17,
-        "retail": 20.67,
-        "total": 82.32
+        "snii": 91.36,
+        "retail": 20.83,
+        "total": 82.41
        }
       }
      ],
-     "text": "Day 1 → 3: Retail 2.84x → 8x → 20.67x · sNII 8.96x → 30.73x → 91.17x · bNII 6.76x → 31.01x → 146.47x · QIB 1.02x → 1.42x → 156.82x · Total 3.31x → 11.01x → 82.32x"
+     "text": "Day 1 → 3: Retail 2.84x → 8x → 20.83x · sNII 8.96x → 30.73x → 91.36x · bNII 6.76x → 31.01x → 146.47x · QIB 1.02x → 1.42x → 156.82x · Total 3.31x → 11.01x → 82.41x"
     }
    }
   },
@@ -293,7 +293,7 @@
      },
      "nii": {
       "shares_offered": 3829090.0,
-      "shares_bid": 4280175.0,
+      "shares_bid": 4287315.0,
       "times": 1.12
      },
      "bnii": {
@@ -303,18 +303,18 @@
      },
      "snii": {
       "shares_offered": 1276363.0,
-      "shares_bid": 1900974.0,
+      "shares_bid": 1908114.0,
       "times": 1.49
      },
      "retail": {
       "shares_offered": 2552727.0,
-      "shares_bid": 6658968.0,
-      "times": 2.61
+      "shares_bid": 6685029.0,
+      "times": 2.62
      },
      "total": {
       "shares_offered": 14040000.0,
-      "shares_bid": 11298489.0,
-      "times": 0.8
+      "shares_bid": 11331690.0,
+      "times": 0.81
      }
     },
     "series": "EQ"
@@ -331,7 +331,7 @@
     },
     "nii": {
      "shares_offered": 3829090.0,
-     "shares_bid": 4280175.0,
+     "shares_bid": 4287315.0,
      "times": 1.12
     },
     "bnii": {
@@ -341,18 +341,18 @@
     },
     "snii": {
      "shares_offered": 1276363.0,
-     "shares_bid": 1900974.0,
+     "shares_bid": 1908114.0,
      "times": 1.49
     },
     "retail": {
      "shares_offered": 2552727.0,
-     "shares_bid": 6658968.0,
-     "times": 2.61
+     "shares_bid": 6685029.0,
+     "times": 2.62
     },
     "total": {
      "shares_offered": 14040000.0,
-     "shares_bid": 11298489.0,
-     "times": 0.8
+     "shares_bid": 11331690.0,
+     "times": 0.81
     }
    },
    "anchor_done": true,
@@ -363,11 +363,11 @@
      "min_lots": 1,
      "min_shares": 51,
      "min_amount": 14739,
-     "subscription_x": 2.61,
-     "odds": 0.3831,
+     "subscription_x": 2.62,
+     "odds": 0.3817,
      "odds_text": "≥1 in 3",
      "gain_if_allotted": 867,
-     "expected_gain": 332,
+     "expected_gain": 331,
      "return_on_blocked_pct": 2.25
     },
     {
@@ -467,12 +467,12 @@
         "qib": 0.05,
         "bnii": 0.93,
         "snii": 1.49,
-        "retail": 2.61,
-        "total": 0.8
+        "retail": 2.62,
+        "total": 0.81
        }
       }
      ],
-     "text": "Day 1 → 2: Retail 1.09x → 2.61x · sNII 0.47x → 1.49x · bNII 0.31x → 0.93x · QIB 0x → 0.05x · Total 0.3x → 0.8x"
+     "text": "Day 1 → 2: Retail 1.09x → 2.62x · sNII 0.47x → 1.49x · bNII 0.31x → 0.93x · QIB 0x → 0.05x · Total 0.3x → 0.81x"
     }
    }
   },
@@ -519,33 +519,33 @@
      },
      "nii": {
       "shares_offered": 1824007.0,
-      "shares_bid": 7388829.0,
-      "times": 4.05
+      "shares_bid": 7586691.0,
+      "times": 4.16
      },
      "bnii": {
       "shares_offered": 1216005.0,
-      "shares_bid": 3985863.0,
-      "times": 3.28
+      "shares_bid": 4094958.0,
+      "times": 3.37
      },
      "snii": {
       "shares_offered": 608002.0,
-      "shares_bid": 3402966.0,
-      "times": 5.6
+      "shares_bid": 3491733.0,
+      "times": 5.74
      },
      "retail": {
       "shares_offered": 4256017.0,
-      "shares_bid": 9226497.0,
-      "times": 2.17
+      "shares_bid": 9411444.0,
+      "times": 2.21
      },
      "employee": {
       "shares_offered": 14000.0,
-      "shares_bid": 69069.0,
-      "times": 4.93
+      "shares_bid": 70203.0,
+      "times": 5.01
      },
      "total": {
       "shares_offered": 8526033.0,
-      "shares_bid": 21909720.0,
-      "times": 2.57
+      "shares_bid": 22293663.0,
+      "times": 2.61
      }
     },
     "series": "EQ"
@@ -562,33 +562,33 @@
     },
     "nii": {
      "shares_offered": 1824007.0,
-     "shares_bid": 7388829.0,
-     "times": 4.05
+     "shares_bid": 7586691.0,
+     "times": 4.16
     },
     "bnii": {
      "shares_offered": 1216005.0,
-     "shares_bid": 3985863.0,
-     "times": 3.28
+     "shares_bid": 4094958.0,
+     "times": 3.37
     },
     "snii": {
      "shares_offered": 608002.0,
-     "shares_bid": 3402966.0,
-     "times": 5.6
+     "shares_bid": 3491733.0,
+     "times": 5.74
     },
     "retail": {
      "shares_offered": 4256017.0,
-     "shares_bid": 9226497.0,
-     "times": 2.17
+     "shares_bid": 9411444.0,
+     "times": 2.21
     },
     "employee": {
      "shares_offered": 14000.0,
-     "shares_bid": 69069.0,
-     "times": 4.93
+     "shares_bid": 70203.0,
+     "times": 5.01
     },
     "total": {
      "shares_offered": 8526033.0,
-     "shares_bid": 21909720.0,
-     "times": 2.57
+     "shares_bid": 22293663.0,
+     "times": 2.61
     }
    },
    "anchor_done": true,
@@ -599,12 +599,12 @@
      "min_lots": 1,
      "min_shares": 21,
      "min_amount": 14700,
-     "subscription_x": 2.17,
-     "odds": 0.4608,
+     "subscription_x": 2.21,
+     "odds": 0.4525,
      "odds_text": "≥1 in 2",
      "gain_if_allotted": 10521,
-     "expected_gain": 4848,
-     "return_on_blocked_pct": 32.98
+     "expected_gain": 4761,
+     "return_on_blocked_pct": 32.39
     },
     {
      "category": "snii",
@@ -612,12 +612,12 @@
      "min_lots": 14,
      "min_shares": 294,
      "min_amount": 205800,
-     "subscription_x": 5.6,
-     "odds": 0.1786,
+     "subscription_x": 5.74,
+     "odds": 0.1742,
      "odds_text": "≥1 in 6",
      "gain_if_allotted": 147294,
-     "expected_gain": 26302,
-     "return_on_blocked_pct": 12.78
+     "expected_gain": 25661,
+     "return_on_blocked_pct": 12.47
     },
     {
      "category": "bnii",
@@ -625,12 +625,12 @@
      "min_lots": 69,
      "min_shares": 1449,
      "min_amount": 1014300,
-     "subscription_x": 3.28,
-     "odds": 0.3049,
+     "subscription_x": 3.37,
+     "odds": 0.2967,
      "odds_text": "≥1 in 3",
      "gain_if_allotted": 725949,
-     "expected_gain": 221326,
-     "return_on_blocked_pct": 21.82
+     "expected_gain": 215415,
+     "return_on_blocked_pct": 21.24
     }
    ],
    "best_category": "retail",
@@ -729,32 +729,32 @@
      },
      "nii": {
       "shares_offered": 51269349.0,
-      "shares_bid": 3422133.0,
+      "shares_bid": 3521529.0,
       "times": 0.07
      },
      "bnii": {
       "shares_offered": 34179566.0,
-      "shares_bid": 2404413.0,
+      "shares_bid": 2471436.0,
       "times": 0.07
      },
      "snii": {
       "shares_offered": 17089783.0,
-      "shares_bid": 1017720.0,
+      "shares_bid": 1050093.0,
       "times": 0.06
      },
      "retail": {
       "shares_offered": 34179566.0,
-      "shares_bid": 4924755.0,
-      "times": 0.14
+      "shares_bid": 5010885.0,
+      "times": 0.15
      },
      "employee": {
       "shares_offered": 700000.0,
-      "shares_bid": 140085.0,
+      "shares_bid": 141174.0,
       "times": 0.2
      },
      "total": {
       "shares_offered": 185066845.0,
-      "shares_bid": 25074720.0,
+      "shares_bid": 25261335.0,
       "times": 0.14
      }
     },
@@ -772,32 +772,32 @@
     },
     "nii": {
      "shares_offered": 51269349.0,
-     "shares_bid": 3422133.0,
+     "shares_bid": 3521529.0,
      "times": 0.07
     },
     "bnii": {
      "shares_offered": 34179566.0,
-     "shares_bid": 2404413.0,
+     "shares_bid": 2471436.0,
      "times": 0.07
     },
     "snii": {
      "shares_offered": 17089783.0,
-     "shares_bid": 1017720.0,
+     "shares_bid": 1050093.0,
      "times": 0.06
     },
     "retail": {
      "shares_offered": 34179566.0,
-     "shares_bid": 4924755.0,
-     "times": 0.14
+     "shares_bid": 5010885.0,
+     "times": 0.15
     },
     "employee": {
      "shares_offered": 700000.0,
-     "shares_bid": 140085.0,
+     "shares_bid": 141174.0,
      "times": 0.2
     },
     "total": {
      "shares_offered": 185066845.0,
-     "shares_bid": 25074720.0,
+     "shares_bid": 25261335.0,
      "times": 0.14
     }
    },
@@ -809,7 +809,7 @@
      "min_lots": 1,
      "min_shares": 99,
      "min_amount": 14949,
-     "subscription_x": 0.14,
+     "subscription_x": 0.15,
      "odds": 1.0,
      "odds_text": "full",
      "gain_if_allotted": 1732,
@@ -934,38 +934,38 @@
     "subscription": {
      "qib": {
       "shares_offered": 8637808.0,
-      "shares_bid": 517525.0,
+      "shares_bid": 517875.0,
       "times": 0.06
      },
      "nii": {
       "shares_offered": 6478357.0,
-      "shares_bid": 3456775.0,
-      "times": 0.53
+      "shares_bid": 3763625.0,
+      "times": 0.58
      },
      "bnii": {
       "shares_offered": 4318905.0,
-      "shares_bid": 2001925.0,
-      "times": 0.46
+      "shares_bid": 2173125.0,
+      "times": 0.5
      },
      "snii": {
       "shares_offered": 2159452.0,
-      "shares_bid": 1454850.0,
-      "times": 0.67
+      "shares_bid": 1590500.0,
+      "times": 0.74
      },
      "retail": {
       "shares_offered": 15116165.0,
-      "shares_bid": 5772500.0,
-      "times": 0.38
+      "shares_bid": 6059900.0,
+      "times": 0.4
      },
      "employee": {
       "shares_offered": 50000.0,
-      "shares_bid": 50250.0,
-      "times": 1.0
+      "shares_bid": 52025.0,
+      "times": 1.04
      },
      "total": {
       "shares_offered": 30282330.0,
-      "shares_bid": 9797050.0,
-      "times": 0.32
+      "shares_bid": 10393425.0,
+      "times": 0.34
      }
     },
     "series": "EQ"
@@ -977,38 +977,38 @@
    "subscription": {
     "qib": {
      "shares_offered": 8637808.0,
-     "shares_bid": 517525.0,
+     "shares_bid": 517875.0,
      "times": 0.06
     },
     "nii": {
      "shares_offered": 6478357.0,
-     "shares_bid": 3456775.0,
-     "times": 0.53
+     "shares_bid": 3763625.0,
+     "times": 0.58
     },
     "bnii": {
      "shares_offered": 4318905.0,
-     "shares_bid": 2001925.0,
-     "times": 0.46
+     "shares_bid": 2173125.0,
+     "times": 0.5
     },
     "snii": {
      "shares_offered": 2159452.0,
-     "shares_bid": 1454850.0,
-     "times": 0.67
+     "shares_bid": 1590500.0,
+     "times": 0.74
     },
     "retail": {
      "shares_offered": 15116165.0,
-     "shares_bid": 5772500.0,
-     "times": 0.38
+     "shares_bid": 6059900.0,
+     "times": 0.4
     },
     "employee": {
      "shares_offered": 50000.0,
-     "shares_bid": 50250.0,
-     "times": 1.0
+     "shares_bid": 52025.0,
+     "times": 1.04
     },
     "total": {
      "shares_offered": 30282330.0,
-     "shares_bid": 9797050.0,
-     "times": 0.32
+     "shares_bid": 10393425.0,
+     "times": 0.34
     }
    },
    "anchor_done": true,
@@ -1019,7 +1019,7 @@
      "min_lots": 1,
      "min_shares": 25,
      "min_amount": 14650,
-     "subscription_x": 0.38,
+     "subscription_x": 0.4,
      "odds": 1.0,
      "odds_text": "full",
      "gain_if_allotted": 4200,
@@ -1032,7 +1032,7 @@
      "min_lots": 14,
      "min_shares": 350,
      "min_amount": 205100,
-     "subscription_x": 0.67,
+     "subscription_x": 0.74,
      "odds": 1.0,
      "odds_text": "full",
      "gain_if_allotted": 58800,
@@ -1045,7 +1045,7 @@
      "min_lots": 69,
      "min_shares": 1725,
      "min_amount": 1010850,
-     "subscription_x": 0.46,
+     "subscription_x": 0.5,
      "odds": 1.0,
      "odds_text": "full",
      "gain_if_allotted": 289800,
@@ -1149,33 +1149,33 @@
      },
      "nii": {
       "shares_offered": 2035818.0,
-      "shares_bid": 200122.0,
-      "times": 0.1
+      "shares_bid": 279543.0,
+      "times": 0.14
      },
      "bnii": {
       "shares_offered": 1357212.0,
-      "shares_bid": 85570.0,
-      "times": 0.06
+      "shares_bid": 109994.0,
+      "times": 0.08
      },
      "snii": {
       "shares_offered": 678606.0,
-      "shares_bid": 114552.0,
-      "times": 0.17
+      "shares_bid": 169549.0,
+      "times": 0.25
      },
      "retail": {
       "shares_offered": 4750241.0,
-      "shares_bid": 911041.0,
-      "times": 0.19
+      "shares_bid": 1019358.0,
+      "times": 0.21
      },
      "employee": {
       "shares_offered": 250000.0,
-      "shares_bid": 10148.0,
+      "shares_bid": 10449.0,
       "times": 0.04
      },
      "total": {
       "shares_offered": 9750482.0,
-      "shares_bid": 1121913.0,
-      "times": 0.12
+      "shares_bid": 1309952.0,
+      "times": 0.13
      }
     },
     "series": "EQ"
@@ -1192,33 +1192,33 @@
     },
     "nii": {
      "shares_offered": 2035818.0,
-     "shares_bid": 200122.0,
-     "times": 0.1
+     "shares_bid": 279543.0,
+     "times": 0.14
     },
     "bnii": {
      "shares_offered": 1357212.0,
-     "shares_bid": 85570.0,
-     "times": 0.06
+     "shares_bid": 109994.0,
+     "times": 0.08
     },
     "snii": {
      "shares_offered": 678606.0,
-     "shares_bid": 114552.0,
-     "times": 0.17
+     "shares_bid": 169549.0,
+     "times": 0.25
     },
     "retail": {
      "shares_offered": 4750241.0,
-     "shares_bid": 911041.0,
-     "times": 0.19
+     "shares_bid": 1019358.0,
+     "times": 0.21
     },
     "employee": {
      "shares_offered": 250000.0,
-     "shares_bid": 10148.0,
+     "shares_bid": 10449.0,
      "times": 0.04
     },
     "total": {
      "shares_offered": 9750482.0,
-     "shares_bid": 1121913.0,
-     "times": 0.12
+     "shares_bid": 1309952.0,
+     "times": 0.13
     }
    },
    "anchor_done": true,
@@ -1229,7 +1229,7 @@
      "min_lots": 1,
      "min_shares": 43,
      "min_amount": 14792,
-     "subscription_x": 0.19,
+     "subscription_x": 0.21,
      "odds": 1.0,
      "odds_text": "full",
      "gain_if_allotted": 2021,
@@ -1242,7 +1242,7 @@
      "min_lots": 14,
      "min_shares": 602,
      "min_amount": 207088,
-     "subscription_x": 0.17,
+     "subscription_x": 0.25,
      "odds": 1.0,
      "odds_text": "full",
      "gain_if_allotted": 28294,
@@ -1255,7 +1255,7 @@
      "min_lots": 68,
      "min_shares": 2924,
      "min_amount": 1005856,
-     "subscription_x": 0.06,
+     "subscription_x": 0.08,
      "odds": 1.0,
      "odds_text": "full",
      "gain_if_allotted": 137428,
@@ -1418,8 +1418,8 @@
    "gmp_updated": "15-Oct 14:37",
    "url": "https://www.investorgain.com/gmp/jio-platforms-ipo/2306/",
    "nse": null,
-   "rhp_url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1792045029108.pdf",
-   "rhp_source": "sebi",
+   "rhp_url": null,
+   "rhp_source": null,
    "phase": "upcoming",
    "price_high": 1119.0,
    "subscription": null,
@@ -1467,16 +1467,30 @@
    ],
    "best_category": null,
    "analysis_file": "analysis/jio-platforms.md",
-   "needs_analysis": true,
+   "needs_analysis": false,
    "card_file": "analysis/jio-platforms.json",
    "needs_card": false,
    "card": {
     "name": "Jio Platforms",
-    "source": "web",
-    "analysed": "2026-10-14",
-    "verdict": "pending",
-    "verdict_text": "Watchlist",
-    "summary": "Reliance's digital/telecom arm."
+    "source": "rhp",
+    "analysed": "2026-10-15",
+    "verdict": "neutral",
+    "verdict_text": "Neutral",
+    "summary": "Reliance's digital/telecom holding company: Jio (533 mn customers), JioAirFiber (14 mn), proprietary 5G stack; 100% fresh issue, ₹27,500 Cr to repay RJIL debt.",
+    "financials": "FY26 revenue ₹1,46,885 Cr (+15%), PAT ₹30,049 Cr (20.5% margin, +15%)",
+    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+    "positives": [
+     "Operating cash flow ₹77,556 Cr in FY26 vs capex ₹34,255 Cr",
+     "Largest Indian telecom base; ₹27,500 Cr proceeds cut debt",
+     "35% retail quota"
+    ],
+    "red_flags": [
+     "₹30,213 Cr issue at ~₹10 lakh Cr market cap; ~33x P/E for mid-teens growth",
+     "Finance costs doubled to ₹8,653 Cr in FY26; ~₹1.05 lakh Cr spectrum liabilities",
+     "Industry data from company-commissioned report"
+    ],
+    "anchor": "Pending — anchor bidding 20 Oct",
+    "anchor_grade": "pending"
    },
    "needs_anchor_update": false,
    "trend": {
