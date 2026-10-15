@@ -1,0 +1,13 @@
+{"date": "2026-10-15", "session": "PM",
+ "headline": "HD Fire closed: total 82x, Retail 20.7x, GMP ₹78 (29%) but falling from ₹91, still apply; Fusion CX 0.8x on Day 2 with GMP down to ₹17",
+ "ipos": {
+  "hd-fire-protect": {"verdict": "apply", "verdict_text": "Apply", "best_category": "Retail", "category_note": "Bids closed. Retail 20.7x (odds ~1 in 21), sNII 91x, bNII 146x, so Retail has the best odds. GMP falling since 14 Oct (₹91 to ₹78, still ~29%), apply only if you'd hold or exit on listing. Allotment 16 Oct"},
+  "fusion-cx": {"verdict": "neutral", "verdict_text": "Neutral", "best_category": "Small HNI", "category_note": "Day 2: Retail 2.61x, sNII 1.49x, bNII 0.93x, QIB 0.05x. GMP falling since 14 Oct (₹35 to ₹17, ~6%), thin listing gain. Closes 16 Oct, apply only if you'd hold"},
+  "tonbo-imaging": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Retail", "category_note": "Day 1: Retail 2.17x, sNII 5.6x, bNII 3.28x. GMP ₹501 (72%), rising. Fundamentals weak (79x P/E), apply for a listing exit. Closes 19 Oct, recheck then"},
+  "zetwerk": {"verdict": "neutral", "verdict_text": "Neutral", "best_category": null, "category_note": "Day 1: total 0.14x. GMP falling since 13 Oct (₹23 to ₹17.5, ~12%). Loss-making, skip unless you'd hold. Recheck on 19 Oct"},
+  "bonfiglioli-transmissions": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Retail", "category_note": "Day 1: total 0.32x, Retail 0.38x so allotment is near-certain. GMP ₹168 (29%), eased from ₹181. 100% OFS. Recheck on 19 Oct"},
+  "sahajanand-medical-technologies": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Retail", "category_note": "Day 1: total 0.12x, allotment near-certain. GMP ₹47 (14%), rising. Recheck on 19 Oct"},
+  "jio-platforms": {"verdict": "neutral", "verdict_text": "Neutral", "best_category": null, "category_note": "Opens 21 Oct. GMP ₹219 (~20%), rising. Anchor book not out yet; 35% retail quota"},
+  "paras-healthcare": {"verdict": "pending", "verdict_text": "Analysis pending", "best_category": null, "category_note": "RHP not filed, analysis pending"}
+ },
+ "notes": ["Jio Platforms RHP analysed; the RHP peer table (Basis of Offer Price) was not extracted, so peer valuation is not found."]}

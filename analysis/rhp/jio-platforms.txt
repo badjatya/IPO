@@ -1,0 +1,1333 @@
+
+===== THE OFFER =====
+[not found]
+
+===== SUMMARY OF RESTATED FINANCIAL INFORMATION =====
+SUMMARY FINANCIAL INFORMATION
+The summary financial information presented below have been derived from the Restated Consolidated Financial
+Information and should be read in conjunction with “Restated Consolidated Financial Information” and
+“Management’s Discussion and Analysis of Financial Condition and Results of Operations” on pages 320 and
+436, respectively.
+  [The remainder of this page has been intentionally left blank]
+  74
+Summary of restated consolidated statement of assets and liabilities
+  (in ₹ million)
+  As at
+  Particulars  March 31,  March 31,  March 31,
+  June 30, 2026  June 30, 2025
+  2026  2025  2024
+ Assets
+ Non-Current Assets
+ Property, Plant and Equipment  2,509,426  1,914,360  2,509,916  1,872,709  1,488,738
+ Spectrum  1,860,169  1,452,577  1,881,203  1,471,220  698,520
+ Other Intangible Assets  343,964  203,494  337,970  205,408  123,420
+ Goodwill  60,936  60,974  60,790  60,978  60,884
+ Capital Work-in-Progress  154,544  665,862  144,673  603,287  811,768
+ Spectrum Under Development  87,160  548,910  86,114  541,763  1,296,020
+ Other Intangible Assets Under
+  73,030  182,146  68,277  177,161  243,654
+ Development
+ Financial Assets
+  Investments  37,964  28,885  37,754  28,888  26,172
+  Other Financial Assets  1,220  581  1,141  531  101
+ Deferred Tax Assets (Net)  560  490  531  407  510
+ Other Non-Current Assets  305,739  293,187  300,005  290,853  263,625
+ Total Non-Current Assets  5,434,712  5,351,466  5,428,374  5,253,205  5,013,412
+ Current Assets
+ Inventories  2,810  2,412  2,629  2,274  1,192
+ Financial Assets
+  Investments  328,063  240,739  266,448  197,754  34,200
+  Trade Receivables  31,507  30,090  25,268  24,614  28,512
+  Cash and Cash Equivalents  190,268  97,089  165,570  80,115  24,889
+  Other Bank Balances  3,891  4,094  3,896  4,121  4,216
+  Other Financial Assets  66,199  34,354  71,821  29,898  19,909
+ Other Current Assets  171,603  201,526  191,934  220,357  269,474
+ Total Current Assets  794,341  610,304  727,566  559,133  382,392
+ Total Assets  6,229,053  5,961,770  6,155,940  5,812,338  5,395,804
+ Equity and Liabilities
+ Equity
+ Equity Share capital  89,390  89,390  89,390  89,390  89,390
+ Other Equity  3,348,560  3,031,281  3,270,379  2,961,084  2,693,474
+ Non-Controlling Interest  10,969  11,068  10,993  11,338  11,353
+ Liabilities
+ Non-Current Liabilities
+ Financial Liabilities
+  Borrowings  491,201  489,960  514,548  452,289  431,825
+  Lease Liabilities  63,519  121,718  75,618  88,127  95,363
+  Deferred Payment Liabilities  995,517  1,044,099  995,517  1,044,099  1,082,697
+  Other Financial Liabilities  95,148  58,974  87,107  51,564  44,622
+ Provisions  2,523  2,524  2,483  2,648  1,305
+ Deferred Tax Liabilities (Net)  438,118  332,497  412,104  308,646  218,849
+ Other Non-Current Liabilities  26,544  22,546  25,994  22,142  14,744
+ Total Non-Current Liabilities  2,112,570  2,072,318  2,113,371  1,969,515  1,889,405
+ Current Liabilities
+ Financial Liabilities
+  Borrowings  122,521  238,232  193,262  278,314  111,664
+  Lease Liabilities  58,163  64,057  63,258  38,228  32,257
+  Trade Payables  109,481  88,354  89,316  76,561  64,434
+  Deferred Payment Liabilities  49,620  47,360  49,620  47,360  45,740
+  Other Financial Liabilities  186,842  176,144  116,281  183,463  324,169
+ Other Current Liabilities  137,706  140,629  157,430  154,380  130,886
+ Provisions  3,231  2,937  2,640  2,705  3,032
+ Total Current Liabilities  667,564  757,713  671,807  781,011  712,182
+ Total Liabilities  2,780,134  2,830,031  2,785,178  2,750,526  2,601,587
+ Total Equity and Liabilities  6,229,053  5,961,770  6,155,940  5,812,338  5,395,804
+  75
+Summary of restated consolidated statement of profit and loss
+  (in ₹ million, unless otherwise specified)
+  Three months periods
+  Fiscal
+  ended
+  Particulars
+  June 30,  June 30,
+  2026  2025  2024
+  2026  2025
+ Income
+ Revenue from Operations  391,729  350,323  1,468,853  1,282,184  1,095,581
+ Other Income  10,250  6,541  28,738  11,146  6,173
+ Total Income  401,979  356,864  1,497,591  1,293,330  1,101,754
+ Expenses
+ Network Operating Expenses  88,733  85,167  344,924  333,546  303,377
+ Access Charges  3,899  2,992  16,369  12,810  10,662
+ License Fees/Spectrum Charges  31,073  28,209  117,104  104,953  92,134
+ Employee Benefits Expense  16,838  16,111  66,487  62,079  53,823
+ Finance Costs  29,799  21,048  86,534  49,051  40,476
+ Depreciation and Amortisation Expense  74,575  64,789  272,489  241,376  221,031
+ Selling and Distribution Expenses  11,904  10,480  45,648  36,950  25,454
+ Other Expenses  40,887  32,554  144,505  101,292  66,717
+ Total Expenses  297,708  261,350  1,094,060  942,057  813,674
+ Profit Before Share of Profit/ (Loss) of Associate/
+  104,271  95,514  403,531  351,273  288,080
+ Joint Venture and Tax
+ Tax Expenses
+ Current tax  301  214  1,180  838  702
+ Deferred tax  26,329  24,196  101,824  89,232  73,038
+ Profit After Tax  77,641  71,104  300,527  261,203  214,340
+ Share of Profit/ (Loss) of Associate and Joint Venture  0  (3)  (36)  (113)  (108)
+ Profit for the period/ year  77,641  71,101  300,491  261,090  214,232
+ Other Comprehensive Income
+ (i) Items that will not be reclassified to profit or loss  (213)  30  8,166  2,761  3,137
+ (ii) Income tax relating to items that will not be
+  54  (10)  (1,167)  150  (747)
+ reclassified to profit or loss
+ (iii) Items that will be reclassified to profit or loss  248  (1,711)  2,631  3,915  (312)
+ (iv) Income tax relating to items that will be
+  440  423  (242)  (779)  123
+ reclassified to profit or loss
+ Total Other Comprehensive Income for the period/
+  529  (1268)  9,388  6,047  2,201
+ year (Net of Tax)
+ Total Comprehensive income for the period/ year  78,170  69,833  309,879  267,137  216,433
+ Net Profit/ (Loss) Attributable to:
+ a) Owners of the Company  77,650  71,147  300,643  261,102  214,218
+ b) Non-Controlling Interest  (9)  (46)  (152)  (12)  14
+ Other Comprehensive Income Attributable to:
+ a) Owners of the Company  530  (1268)  9,385  6,047  2,201
+ b) Non-Controlling Interest  (1)  0  3  0  0
+ Total Comprehensive Income Attributable to:
+ a) Owners of the Company  78,180  69,879  310,028  267,149  216,419
+ b) Non-Controlling Interest  (10)  (46)  (149)  (12)  14
+ Earnings Per Equity Share of Face Value of ₹10
+ Each
+ Basic (in Rupees)  8.69*  7.96*  33.63  29.21  23.96
+ Diluted (in Rupees)  8.68*  7.95*  33.59  29.17  23.93
+* Not annualised
+  76
+Summary of restated consolidated statement of cash flows
+  (in ₹ million)
+  Three months
+  Fiscal
+  periods ended
+  Particulars
+  June 30,  June 30,
+  2026  2025  2024
+  2026  2025
+ Cash Flow from Operating Activities:
+ Profit Before Tax as per Restated Consolidated
+  403,531  351,273  288,080
+ Statement of Profit and Loss  104,271  95,514
+ Adjusted for:
+ (Profit) on Desubsidiarization  -  -  (412)  -  -
+ (Profit) on Sale/ Loss on Sale/ Discard of Property, Plant
+  30  87  120  278  132
+ and Equipment and Other Intangible Assets (Net)
+ Depreciation and Amortisation Expense  74,575  64,789  272,489  241,376  221,031
+ Effect of Exchange Rate Change  1,435  (265)  777  602  (409)
+ Net Gain on Financial Assets  (2,293)  (1,749)  (4,645)  (1,948)  (4,569)
+ Dividend Income  (16)  -  (44)  -  -
+ Interest Income  (7,355)  (4,630)  (21,966)  (8,602)  (598)
+ Finance Costs  29,799  21,048  86,534  49,051  40,476
+ Operating Profit before Working Capital Changes  200,446  174,794  736,384  632,030  544,143
+ Adjusted for:
+ Trade and Other Receivables  5,789  6,275  7,025  (4,175)  (10,618)
+ Inventories  (181)  (138)  (355)  (1,082)  (564)
+ Trade and Other Payables  27,381  28,318  35,410  55,908  45,328
+ Cash Generated from Operations  233,435  209,249  778,464  682,681  578,289
+ Tax Refund/ (Paid) (Net)  1,024  (184)  (2,901)  (1,124)  (1,673)
+ Net Cash Flow from Operating Activities (A)  234,459  209,065  775,563  681,557  576,616
+ Cash Flow from Investing Activities:
+ Expenditure for Property, Plant and Equipment,
+  (41,951)  (120,588)  (342,553)  (443,494)  (536,067)
+ Spectrum and Other Intangible Assets
+ Proceeds from Disposal of Property, Plant and
+  113  107  710  814  971
+ Equipment
+ Purchase of Non-Current Investments  (210)  -  (441)  -  (3,211)
+ Disposal of Investment in Subsidiary  -  -  1,628  -  -
+ Purchase of Investment in Subsidiary  (10)  -  -  -  -
+ Purchase of Investments  (1,867,99  (1,550,44
+  (501,100)  (407,125)  (928,538)
+  8)  4)
+ Proceeds from Sale of Investments  441,886  365,519  1,803,991  1,392,504  944,103
+ Payment of Deferred Payment Liabilities  -  -  (47,360)  (45,740)  (44,229)
+ Fixed Deposits with Banks  1  (2)  8  138  (150)
+ Interest Income  3,032  3,663  16,072  8,958  1,245
+ Dividend Income  16  -  34  -  -
+ Net Cash Flow (used in) Investing Activities (B)  (98,223)  (158,426)  (435,909)  (637,264)  (565,876)
+ Cash Flow from Financing Activities:
+ Payment of Lease Liabilities  (17,400)  (14,618)  (60,642)  (35,796)  (36,825)
+ Proceeds from Borrowings - Non-current (including
+  100,539  110,817  238,543
+ Current Maturities)  949  78,244
+ Repayment of Borrowings - Non-current (including
+  (10,749)  (47,480)  (84,650)  (89,878)  (26,134)
+ Current Maturities)
+ Borrowings - Current (Net)  (81,141)  (37,941)  (87,028)  159,872  (35,394)
+ Finance Costs paid  (3,197)  (11,870)  (122,409)  (134,082)  (136,397)
+ Net Cash Flow (used in) / generated from Financing
+  (111,538)  (33,665)  (254,190)  10,933  3,793
+ Activities (C)
+ Net Increase in Cash and Cash Equivalents (A+B+C)  24,698  16,974  85,464  55,226  14,533
+ Opening Balance of Cash and Cash Equivalents  165,570  80,115  80,115  24,889  10,317
+  77
+  Three months
+  Fiscal
+  periods ended
+  Particulars
+  June 30,  June 30,
+  2026  2025  2024
+  2026  2025
+Add: Upon (deletion)/ addition of Subsidiaries  -  -  (9)  -  39
+Closing Balance of Cash and Cash Equivalents  190,268  97,089  165,570  80,115  24,889
+  78
+
+===== CAPITAL STRUCTURE =====
+CAPITAL STRUCTURE
+The share capital of the Company, as of the date of this Red Herring Prospectus, is set forth below.
+  (in ₹, except share data)
+  Aggregate value at  Aggregate value at
+  S. No.  Particulars
+  face value  Issue Price*
+  A)  AUTHORIZED SHARE CAPITAL(1)
+  10,000,000,000 Equity Shares of face value of ₹10 each  100,000,000,000  N.A
+  180,000,000,000 preference shares of face value of ₹10 each  1,800,000,000,000  N.A
+  Total  1,900,000,000,000
+  B)  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL BEFORE THE ISSUE
+  8,939,030,830 Equity Shares of face value of ₹10 each  89,390,308,300  N.A
+  C)  THE ISSUE(2)
+  Issue of up to 270,000,000 Equity Shares of face value of ₹10
+  each for cash at a price of ₹[●] per Equity Share (including a
+  [●]  [●]
+  securities premium of ₹[●] per Equity Share), aggregating up
+  to ₹[●] million(2)
+  which includes:
+  Employee Reservation Portion of up to [●] Equity Shares of
+  face value of ₹10 each for cash at a price of ₹[●] per Equity
+  [●]  [●]
+  Share (including a securities premium of ₹[●] per Equity
+  (3)
+  Share) aggregating up to ₹5,000 million
+  RIL Shareholders Reservation Portion of up to [●] Equity
+  Shares of face value of ₹10 each for cash at a price of ₹[●] per
+  [●]  [●]
+  Equity Share (including a securities premium of ₹[●] per
+  (4)
+  Equity Share) aggregating up to ₹25,000 million
+  Net Issue of up to [●] Equity Shares of face value of ₹10 each
+  for cash at a price of ₹[●] per Equity Share (including a
+  [●]  [●]
+  securities premium of ₹[●] per Equity Share) aggregating up to
+  ₹[●] million
+  D)  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL AFTER THE ISSUE
+  [●] Equity Shares of face value of ₹10 each  [●]  N.A
+  E)  SECURITIES PREMIUM ACCOUNT
+  Before the Issue  ₹1,965,152 million
+  After the Issue  ₹[●] million
+*
+ To be updated upon finalisation of the Issue Price and subject to finalization of the Basis of Allotment.
+1. For details in relation to changes in the authorized share capital of the Company since incorporation, see “History and Certain
+  Corporate Matters – Amendments to the Memorandum of Association since incorporation” on page 249.
+2. The Issue has been approved by the Board by a resolution passed at its meeting held on April 9, 2026, and by the Shareholders by a
+  special resolution passed at its extraordinary general meeting held on May 4, 2026.
+3. While Eligible Employees are permitted to Bid up to ₹500,000 (net of Employee Discount), for the purpose of determining whether the
+  Employee Reservation Portion is under-subscribed or oversubscribed, all the Bids received would be capped at ₹200,000 (net of
+  Employee Discount). In the event, the Employee Reservation Portion is under-subscribed, the value of allocation to an Eligible Employee
+  shall not exceed ₹200,000 (net of Employee Discount) and the unsubscribed portion would be Allocated on a proportionate basis, to
+  Eligible Employees Bidding in the Employee Reservation Portion in excess of ₹200,000 (net of Employee Discount), subject to total
+  Allotment to an Eligible Employee not exceeding ₹500,000 (net of Employee Discount). In the event the Employee Reservation Portion
+  is oversubscribed, then Allocation to Eligible Employees would be carried out on a proportionate basis with all the Bids received capped
+  at ₹200,000 (net of Employee Discount). In all the above cases, the Allocation would be subject to the minimum Bid Lot and subject to
+  availability of Equity Shares in the Employee Reservation Portion. In terms of Regulation 33(2)(d) of the SEBI ICDR Regulations, any
+  unsubscribed portion in the Employee Reservation Portion may be added to the RIL Shareholders Reservation Portion (subject to
+  maximum limits) and the unsubscribed portion thereafter, if any, shall be added to the Retail Portion and the Non-Institutional Portion
+  as part of the Net Issue, in the proportion of 70:30 viz. the inter-se allocation in the Net Issue between the Retail Portion and Non-
+  Institutional Portion specified under the SEBI ICDR Regulations. For further details, see “Issue Structure” and “Issue Procedure” on
+  pages 529 and 534, respectively.
+4. Eligible RIL Shareholders Bidding in the RIL Shareholders Reservation Portion can also Bid under the Net Issue (under the Retail
+  Portion or the Non-Institutional Portion) and Employee Reservation Portion (if eligible) and such Bids shall not be considered as
+  multiple Bids, subject to applicable limits. In terms of Regulation 33(2)(d) of the SEBI ICDR Regulations, any unsubscribed portion in
+  the RIL Shareholders Reservation Portion may be added to the Employee Reservation Portion (subject to maximum limits) and the
+  unsubscribed portion thereafter, if any, shall be added to the Retail Portion and the Non-Institutional Portion as part of the Net Issue,
+  in the proportion of 70:30 viz. the inter-se allocation in the Net Issue between the Retail Portion and Non-Institutional Portion specified
+  under the SEBI ICDR Regulations. For further details, see “Issue Structure” and “Issue Procedure” on pages 529 and 534, respectively.
+Notes to the Capital Structure
+1.  Share capital history of the Company
+(a)  History of Equity Share capital of the Company
+The following table sets forth the history of the Equity Share capital of the Company:
+  99
+  Face  Issue  Cumulative
+  Cumulative
+  Date of  No. of Equity  value per  price per  paid-up Equity  Nature of
+  Details of allottees  Nature of allotment  number of
+ allotment  Shares allotted  Equity  Equity  Share capital (in consideration
+  Equity Shares
+  Share (₹)  Share (₹)  ₹)
+  Initial subscription to
+ November  10,000 Equity Shares to Reliance Industries
+  the Memorandum of  10,000  10  10  10,000  100,000  Cash
+ 15, 2019*  Limited**
+  Association
+December 12,  4,961,290,000 Equity Shares to Reliance Industries
+  Rights issue  4,961,290,000  10  10  4,961,300,000  49,613,000,000  Cash
+  2019  Limited
+  19,350,000 Equity Shares to Infotel Infocomm
+  Enterprises Private Limited
+  10,077,400 Equity Shares to Anant Nahata
+  6,079,700 Equity Shares to Manju Nahata  Conversion  of
+  38,700,000 CCDs of
+  1,532,600 Equity Shares to Priyanka Sanghi
+July 7, 2020  face value of ₹10 each  38,700,000  10  10  5,000,000,000  50,000,000,000  Cash^
+  967,500 Equity Shares to BML Enterprises LLP
+  issued pursuant to a
+  309,600 Equity Shares to Vikash Agarwal
+  private placement
+  153,300 Equity Shares to Subodh Kumar Garg
+  153,300 Equity Shares to West Valley Services LLP
+  76,600 Equity Shares to Kamal Kumar Sharma
+  554,938,340 Equity Shares to Jaadhu Holdings,
+July 7, 2020  LLC (an affiliate of Meta Platforms, Inc. (formerly  Private placement  554,938,340  10  488.34  5,554,938,340  55,549,383,400  Cash
+  known as Facebook, Inc.))
+  34,488,650 Equity Shares to Interstellar Platform
+July 9, 2020  Holdings Pte. Ltd. (an affiliate of L Catterton  Private placement  34,488,650  10  549.31  5,589,426,990  55,894,269,900  Cash
+  Management Limited)
+  206,931,899 Equity Shares to The Public
+  Investment Fund (a sovereign wealth fund of the
+  Kingdom of Saudi Arabia)
+  168,489,206 Equity Shares to SLP Redwood
+July 10, 2020  Holdings Pte. Ltd. (an affiliate of Silver Lake)  Private placement  512,786,330  10  549.31  6,102,213,320  61,022,133,200  Cash
+  17,244,325 Equity Shares to SLP Redwood Co-
+  Invest (DE), L.P. (an affiliate of Silver Lake)
+  120,120,900 Equity Shares to General Atlantic
+  Singapore JP Pte. Ltd.
+  Conversion  of
+  60,740,774 Equity Shares to Jaadhu Holdings, LLC  60,740,774 CCPS of
+July 10, 2020  (an affiliate of Meta Platforms, Inc. (formerly  face value of ₹10 each  60,740,774  10  488.34  6,162,954,094  61,629,540,940  Cash^^
+  known as Facebook, Inc.))  issued pursuant to a
+  private placement
+  103,465,950 Equity Shares to Platinum Jasmine A
+July 13, 2020  Private placement  765,648,027  10  549.31  6,928,602,121  69,286,021,210  Cash
+  2018 Trust (acting through its trustee, Platinum
+  100
+  Face  Issue  Cumulative
+  Cumulative
+  Date of  No. of Equity  value per  price per  paid-up Equity  Nature of
+  Details of allottees  Nature of allotment  number of
+ allotment  Shares allotted  Equity  Equity  Share capital (in consideration
+  Equity Shares
+  Share (₹)  Share (₹)  ₹)
+  Owl C 2018 RSC Limited, a wholly owned
+  subsidiary of Abu Dhabi Investment Authority)
+  82,772,760 Equity Shares to India Markets Pte. Ltd.
+  (an entity managed/ advised by TPG Capital (S)
+  Pte. Ltd)
+  165,545,519 Equity Shares to MIC Redwood 1 RSC
+  Limited (an indirectly wholly owned subsidiary of
+  Mubadala Investment Company PJSC)
+  206,931,899 Equity Shares to Omicron Asia
+  Holdings II Pte. Ltd. (an affiliate of funds, vehicles
+  and/ or entities managed and/ or advised by
+  Kohlberg Kravis Roberts & Co. L.P., an indirect
+  subsidiary of KKR & Co. Inc.)
+  206,931,899 Equity Shares to VEPF VII AIV I, L.P.
+  (an affiliate of funds, vehicles and/ or entities
+  managed and/ or advised by Vista Equity Partners
+  Management, LLC)
+  Conversion  of
+  84,977,490 Equity Shares to Jaadhu Holdings, LLC  84,977,490 CCPS of
+July 13, 2020  (an affiliate of Meta Platforms, Inc. (formerly  face value of ₹10 each  84,977,490  10  488.34  7,013,579,611  70,135,796,110  Cash^^
+  known as Facebook, Inc.))  issued pursuant to a
+  private placement
+  34,488,650 Equity Shares to Intel Capital
+ September  Corporation
+  Private placement  47,778,022  10  549.31  7,061,357,633  70,613,576,330  Cash
+  30, 2020  13,289,372 Equity Shares to Qualcomm Asia
+  Pacific Pte. Ltd.
+  Conversion  of
+  5,302,771 Equity Shares to Jaadhu Holdings, LLC  5,302,771 CCPS of
+ September
+  (an affiliate of Meta Platforms, Inc. (formerly  face value of ₹10 each  5,302,771  10  488.34  7,066,660,404  70,666,604,040  Cash^^
+  30, 2020
+  known as Facebook, Inc.))  issued pursuant to a
+  private placement
+ November  690,854,775 Equity Shares to Google International
+  Private placement  690,854,775  10  488.34  7,757,515,179  77,575,151,790  Cash
+ 23, 2020  LLC
+  Conversion  of
+  76,676,361 Equity Shares to Jaadhu Holdings, LLC  76,676,361 CCPS of
+ November
+  (an affiliate of Meta Platforms, Inc. (formerly  face value of ₹10 each  76,676,361  10  488.34  7,834,191,540  78,341,915,400  Cash^^
+ 23, 2020
+  known as Facebook, Inc.))  issued pursuant to a
+  private placement
+  101
+  Face  Issue  Cumulative
+  Cumulative
+  Date of  No. of Equity  value per  price per  paid-up Equity  Nature of
+  Details of allottees  Nature of allotment  number of
+  allotment  Shares allotted  Equity  Equity  Share capital (in consideration
+  Equity Shares
+  Share (₹)  Share (₹)  ₹)
+  Conversion  of
+  109,640,177  Equity  Shares  to  Jaadhu  109,640,177 CCPS of
+  December 21,
+  Holdings, LLC (an affiliate of Meta Platforms, Inc.  face value of ₹10 each  109,640,177  10  488.34  7,943,831,717  79,438,317,170  Cash^^
+  2020
+  (formerly known as Facebook, Inc.))  issued pursuant to a
+  private placement
+  Conversion  of
+  48,241,356,354
+  December 21,  987,859,113 Equity Shares to Reliance Industries  OCPS of face value of
+  987,859,113  10  488.34  8,931,690,830  89,316,908,300  Cash^^^
+  2020  Limited  ₹10 each  issued
+  pursuant to a rights
+  issue
+  November  Allotment under the
+  4,000,000 Equity Shares to JPL ESOS 2020 Trust  4,000,000  10  10  8,935,690,830  89,356,908,300  Cash
+  17, 2021  JPL ESOS 2020
+  January 4,  Allotment under the
+  3,340,000 Equity Shares to JPL ESOS 2020 Trust  3,340,000  10  10  8,939,030,830  89,390,308,300  Cash
+  2022  JPL ESOS 2020
+*
+  While the Company was incorporated on November 15, 2019, the date of subscription to the Memorandum of Association is November 13, 2019. Further, the details of the subscribers to the Memorandum of Association
+were taken on record by the Board on November 20, 2019.
+**
+  Including one Equity Share each allotted to six individuals as nominees of RIL.
+^
+  Cash consideration was paid at the time of issuance of the CCDs.
+^^
+  Cash consideration was paid at the time of issuance of t [...truncated]
+
+===== OBJECTS OF THE OFFER =====
+OBJECTS OF THE ISSUE
+The Issue comprises of a fresh issue of up to 270,000,000 Equity Shares of face value of ₹10 each for cash at a
+price of ₹[●] per Equity Share (including a securities premium of ₹[●] per Equity Share) aggregating up to ₹[●]
+million. For details, see “The Issue” beginning on page 72.
+The Net Proceeds of the Issue, i.e., Gross Proceeds of the Issue less the Issue related expenses are proposed to be
+utilised in the following manner:
+1.  Prepayment, in full or in part, of certain outstanding borrowings availed by the Material Subsidiary,
+  namely, RJIL; and
+2.  General corporate purposes,
+(collectively, the “Objects”).
+Additionally, we expect to achieve the benefits of listing of the Equity Shares on the Stock Exchanges and creation
+of a public market for the Equity Shares.
+The objects of the Company and matters which are necessary in furtherance of the objects as contained in the
+MoA enables the Company to undertake its existing business activities. Further, the main objects and objects
+incidental and ancillary to the main objects set out in the memorandum of association of RJIL, enables RJIL to
+undertake the activities which were funded by the borrowing proposed to be prepaid in full or in part from the Net
+Proceeds.
+Net Proceeds
+The details of the proceeds of the Issue are summarized in the table below:
+  Particulars  Estimated Amount (₹ in million)
+  Gross Proceeds *  [●]
+  Less: Issue related expenses*  [●]
+  Net Proceeds  [●]
+*
+  To be finalized upon determination of the Issue Price and updated in the Prospectus. For details on Issue related expenses, see “- Issue
+related expenses” on page 122.
+Proposed schedule of implementation and deployment of Net Proceeds
+The Company proposes to deploy the Net Proceeds towards the Objects in accordance with the estimated schedule
+of deployment of funds set forth in the table below:
+  (in ₹ million)
+  Total  estimated  Amount  to  be
+  amount to be funded  deployed from the
+  S. No.  Particulars
+  from  the  Net  Net Proceeds in
+  Proceeds  Fiscal 2027
+  Prepayment, in full or in part, of certain outstanding
+  1.  275,000  275,000
+  borrowings availed by the Material Subsidiary, RJIL
+  2.  General corporate purposes*  [●]  [●]
+  Net Proceeds  [●]  [●]
+*To be finalised upon determination of the Issue Price and updated in the Prospectus. The amount utilised for general corporate purposes
+shall not exceed 25% of the Gross Proceeds.
+The requirement and deployment of funds as indicated above are based on the current business plan, internal
+management estimates, prevailing market conditions and other commercial and technical factors, including
+interest rates, exchange rate fluctuations and other charges, and the financing and other agreements entered into
+by RJIL, and have not been appraised by any bank or financial institution or other independent agency. The
+Company may have to revise the funding requirements and deployment depending on various factors including
+timing of completion of the Issue and such other external factors, which may not be within the control of our
+management. This may entail rescheduling and revising the funding requirement for a particular Object or
+increasing or decreasing the amounts earmarked towards any of the aforementioned Objects at the discretion of
+the management, subject to compliance with applicable law. For these reasons, if we are unable to utilize the Net
+Proceeds (in full or in part) within the period stated above, the remaining Net Proceeds shall be utilized in
+  116
+subsequent periods as may be determined by the Company, in accordance with applicable laws. For risk in this
+regard, see “Risk Factors – 42. We cannot assure you that the deployment of the Net Proceeds will take place as
+planned and as described in this Red Herring Prospectus. Further, we cannot guarantee that we will achieve the
+intended results or outcomes from such deployment of Net Proceeds” on page 62.
+If the actual utilization of the Net Proceeds towards the prepayment of certain outstanding borrowings availed by
+RJIL is lower than ₹275,000 million, the balance of the Net Proceeds will be used for general corporate purposes
+subject to the total deployment towards general corporate purposes not exceeding 25% of the Gross Proceeds.
+Details of the Objects
+1.  Prepayment, in full or in part, of certain outstanding borrowings availed by the Material Subsidiary,
+  namely, RJIL.
+The Material Subsidiary of the Company, RJIL, has entered into various borrowing arrangements including term
+loans in the nature of external commercial borrowings (“ECB”).
+An aggregate amount of up to ₹275,000 million from the Net Proceeds is proposed to be utilized towards
+prepayment, in full or in part, of the principal amount outstanding of certain borrowings availed by RJIL. Our
+Company believes that such prepayment will help reduce the Net Debt and the associated servicing costs, and
+improve our Net Leverage and the NAV of the Equity Shares, thereby improving the results of our operations and
+financial condition. Additionally, the Company believes that this would improve our ability to raise further
+resources in the future to fund potential business development opportunities. The Company believes that the
+progressive deleveraging of the balance sheet, further strengthened by the proposed prepayment from the Net
+Proceeds, will position the Company favourably for continued investment in its strategic priorities, including 5G
+network densification and expansion, fixed broadband penetration, AI and cloud services, enterprise digital
+services, and international technology partnerships, while maintaining the financial flexibility to pursue business
+development opportunities as they arise.
+The selection of borrowings proposed to be prepaid amongst the various borrowing arrangements entered into by
+RJIL, are based on various factors, including (i) maturity profile and the remaining tenor of the borrowing, (ii)
+cost of the borrowing, including applicable interest rates and exchange rates, (iii) any conditions attached to the
+borrowings, including restricting the ability to prepay the borrowings and time taken to fulfil, or obtain waivers
+for fulfilment of such conditions, or relating to the terms of prepayment, (iv) provisions of any laws, rules and
+regulations governing such borrowings, and (v) other commercial considerations including, among others, the
+amount of the loan outstanding.
+The Company would determine the manner and the form in which the required Net Proceeds would be made
+available to RJIL for the stated Object. The Company may extend such funds to RJIL by subscribing to its equity
+shares, convertible or non-convertible preference shares, debentures, or by granting loans or in any combination
+thereof. The Company would make such determination considering various factors including tax efficiency and
+regulatory compliances at the time of extending such funds to RJIL.
+Brief standalone financial information of RJIL for the three months periods ended June 30, 2026 and June 30,
+2025, and Fiscals 2026, 2025 and 2024 are set forth below:
+ S.  Particulars  For the three months  For Fiscal ended
+ No.  periods ended June 30,
+  2026  2025  2026  2025  2024
+  (₹ million)
+ 1  Revenue from operations  342,121  308,821  1,288,714  1,141,413  1,001,194
+ 1A  Revenue from operations as a % of  87.34%  88.15%  87.74%  89.02%  91.38%
+  the consolidated Revenue from
+  Operations
+ 2  Net worth  2,915,933  2,679,643  2,844,264  2,612,527  2,364,579
+ 3  Profit after tax  71,669  67,110  281,732  247,948  204,656
+ 4  Borrowings  583,749  702,452  678,052  705,282  527,394
+  - Non-current  487,162  477,968  501,332  442,436  423,728
+  - Current  96,587  224,484  176,720  262,846  103,666
+  117
+The following table provides the details of borrowings availed by RJIL and outstanding as on June 30, 2026, which is proposed to be prepaid in full or in part, from the Net
+Proceeds:
+  Principal
+  Schedul
+  Name and  amount
+  ed
+  Name of lender as stated in the  date of the  Nature of  Sanctioned  outstanding  Purpose of
+ S. No.  repaym  Prepayment conditions
+  relevant facility agreement  facility  borrowings  amount  as on  borrowing
+  ent
+  agreement  June 30,
+  date
+  2026*
+  1.  i. Australia and New Zealand  Term  loan  External  US$  676  US$  676  June 26,  i. Subject to the terms of the facility  Funding
+  Banking Group Limited,  facilities  commercial  million  million  2028  agreement, RJIL may, if it has delivered a  capital
+  Singapore Branch;  agreement  borrowing –  (“Facility A  (₹63,992  prepayment notice to the facility agent not  expenditure
+  ii. Bank of America N.A., Hong  dated June 12,  term loan  Loan”); and  million); and  less than seven days prior to the proposed  towards
+  Kong Branch;  2023#  date for the making of the prepayments  deployment
+  iii. The Bank of Nova Scotia,  JPY 44,923  JPY 44,923  specified in the prepayment notice:  of  5G
+  Singapore Branch;  million  million  infrastructure
+  iv. Barclays Bank PLC;  (“Facility B  (₹26,200  a. prepay (without any premium or break  .
+  v. BNP Paribas, acting through  Loan”)  million)  cost or penalty whatsoever) the whole of
+  its Singapore Branch;  the Facility A Loan or any part of the
+  vi. Citibank, N.A., Hong Kong  Facility A Loan on the last day of any
+  Branch (organized under the  interest period relating to the Facility A
+  laws of the United States of  Loan; or
+  America  with  limited
+  liability)  b. prepay (without any premium or break
+  vii. Crédit Agricole Corporate  cost or penalty whatsoever) the whole of
+  and Investment Bank, Hong  the Facility B Loan or any part of the
+  Kong Branch (incorporated  Facility B Loan on any business day.
+  in France with limited
+  liability);  ii. Minimum prepayment:
+  viii. DBS Bank Ltd;
+  ix. First Abu Dhabi Bank PJSC;  (a) Facility A Loan: The amount of
+  x. The Hongkong and Shanghai  prepayment must be a minimum
+  Banking  Corporation  amount of US$ 25 million, if higher, in
+  Limited;  integral multiples of US$ 5 million, or
+  xi. Mizuho Bank Ltd, Singapore  less if any amount is equal to the
+  Branch;  outstanding amount under Facility A
+  xii. MUFG Bank Ltd, GIFT  Loan.
+  Branch;
+  xiii. Standard Chartered Bank  (b) Facility B Loan: The amount of
+  (Singapore) Limited;  prepayment must be a minimum
+  xiv. State Bank of India, Hong  amount of JPY 3,000 million, if higher,
+  Kong  Branch  (Bank  in integral multiples of JPY 500 million
+  or less if an amount is equal to the
+  118
+  Principal
+  Schedul
+  Name and  amount
+  ed
+  Name of lender as stated in the  date of the  Nature of  Sanctioned  outstanding  Purpose of
+S. No.  repaym  Prepayment conditions
+  relevant facility agreement  facility  borrowings  amount  as on  borrowing
+  ent
+  agreement  June 30,
+  date
+  2026*
+  incorporated in India with  outstanding amount under Facility B
+  limited liability);  Loan.
+  xv. Sumitomo Mitsui Banking
+  Corporation  Singapore
+  Branch (Incorporated in
+  Japan with limited liability);
+  and
+  xvi. United  Overseas  Bank
+  Limited,
+  or any other bank or financial
+  institution which has become a
+  party to the facility agreement
+  pursuant to assignments or
+  novation.
+  2.  i. Australia and New Zealand  Term  loan  External  US$ 1,200  US$ 1,200  Facility  i. Subject to the terms of the facility  Funding
+  Banking Group Limited,  facilities  commercial  million  million  A Loan:  agreement, RJIL may, if it has delivered a  capital
+  Singapore Branch;  agreement  borrowing –  (“Facility A  (₹113,595  June 1,  prepayment notice to the facility agent not  expenditure
+  ii. BNP Paribas, acting through  dated  term loan  Loan”); and  million); and  2028;  less than seven days prior to the proposed  towards
+  its Singapore Branch;  November 18,  and  date for the making of the prepayments  deployment
+  iii. Bank of America N.A., Hong  2022#  JPY 41,814  JPY 41,814  Facility  specified in the prepayment notice:  of  5G
+  Kong Branch  million   [...truncated]
+
+===== BASIS OF OFFER PRICE =====
+[not found]
+
+===== OUR BUSINESS =====
+OUR BUSINESS
+Some of the information in the following section, including information with respect to our business plans and
+strategies, consists of certain forward-looking statements that involve risks and uncertainties. Our actual results
+may differ materially from those expressed in, or implied by, these forward-looking statements. You should read
+the section “Risk Factors” on page 30 for a discussion of the risks and uncertainties related to such statements
+and the sections titled “Management’s Discussion and Analysis of Financial Condition and Results of Operations”
+on page 436, “Industry Overview” on page 152, “Forward-Looking Statements” on page 29 and “Certain
+Conventions, Use of Financial Information and Market Data and Currency of Presentation – Industry and Market
+Data” on page 25. Unless otherwise stated, or the context otherwise requires, the financial information used in
+this section is derived from our Restated Consolidated Financial Information included in this Red Herring
+Prospectus on page 320.
+Unless otherwise indicated, industry and market data used in this section have been derived from the Analysys
+Mason Report, which has been commissioned and paid for by us exclusively in connection with the Issue for the
+purposes of understanding the industry in which we operate. The Analysys Mason Report will form part of the
+material documents for inspection, and a copy of the Analysys Mason Report is available on the website of the
+Company at www.jio.com/about/investor-relations/. The data included herein include excerpts from the Analysys
+Mason Report and such excerpts may have been re-ordered by us for the purposes of presentation. There are no
+parts, data or information which may be relevant for the proposed Issue, from the Analysys Mason Report, that
+have been left out or changed in any manner. Unless otherwise indicated, all financial, operational, industry and
+other related information derived from the Analysys Mason Report and included herein with respect to any
+particular year, refers to such information for the relevant Fiscal. For further details, please see “Risk Factors –
+36. We have paid for and commissioned from Analysys Mason an industry report (“Analysys Mason Report”).
+Information relating to the digital connectivity and services industry in this Red Herring Prospectus has been
+obtained from this Analysys Mason Report. There can be no assurance that such third-party statistical, financial
+and other industry information is either complete or accurate” and “Industry Overview” on pages 60 and 152,
+respectively. Unless the context otherwise indicates or implies or unless otherwise specified, references to
+“Reliance Group” in this section refer to the Promoter together with its subsidiaries, joint ventures and associates,
+on a consolidated basis.
+Overview
+We are a technology platform, built on proprietary digital technology and pan-India digital connectivity as the
+foundational layer, driving digital transformation in India. Since our inception, we have played a pivotal role in
+democratising access to digital connectivity and digital services in India. Jio Platforms’ digital connectivity forms
+one of the fundamental pillars of India’s growing digital economy, which is expected to reach $1.4 trillion (₹125.8
+trillion) by Fiscal 2031, as per the Analysys Mason Report. Our Subsidiary, Reliance Jio Infocomm Limited
+(“RJIL”), served 533.3 million customers in India, as of June 30, 2026. A combination of mobile, fixed broadband
+and digital services across a unified platform, together with data and customer personalisation, positions us as a
+comprehensive digital gateway for accessing the internet, digital services and emerging technologies, including
+artificial intelligence (“AI”).
+  For more details on each of our strengths, see “ – Our Strengths” on page 206.
+  196
+Our business model is built on a proprietary technology stack that we have designed, developed and deployed in-
+house. We have vertically integrated technology capabilities across network, device engineering, software and
+operating systems, and digital applications. This full-stack ownership helps us to significantly reduce dependency
+on third-party vendors, provides structural cost advantages, and enables faster innovation cycles. As of June 30,
+2026, our Company had 12,477 employees in the digital products and technology development team, representing
+approximately 45% of our total full-time employees. As of June 30, 2026, the Company and its Subsidiaries have
+applied for 7,220 patents, across 4G, 5G, 6G cloud-native core network architectures, AI-driven network
+automation, and other digital technologies within India and outside India. The Company was ranked among the
+top 20 global companies in the Patent Cooperation Treaty rankings in 2025, according to the World Intellectual
+Property Organisation. We believe this depth of proprietary technology provides us with a competitive advantage
+and positions us as a technology platform that uses connectivity as its foundational core distribution layer. Further,
+by leveraging this proprietary technology stack, we are transitioning into an AI-native digital services company
+endeavouring to deliver connected intelligence and agentic AI services at scale to consumers and businesses.
+Our Technology Platform
+In modern software-driven network architecture, the traditional distinction between ‘telecom’ and ‘technology’
+no longer applies. Our position is more grounded in technology, given that we have designed, built, and deployed
+our entire network and services stack primarily using proprietary technology, from radio access network to core
+capabilities, from operating systems to digital applications. Technology is the fundamental architecture of how
+our business is structured, built, and operated.
+In this context:
+•  Our Company had 12,477 full-time employees in digital products and technology development as of June 30,
+  2026, representing approximately 45% of our total full-time employees. Of these 12,477 employees, 8,156
+  are involved in the development of digital products and services while the remaining are engaged in network
+  technology engineering;
+•  We have filed 7,220 patent applications across 4G, 5G, 6G cloud-native core network architectures, AI-driven
+  network automation, and digital technologies - with 2,655 applications in India and 4,565 filed across foreign
+  jurisdictions, as of June 30, 2026. We are the only Indian company to be among the top 20 companies globally
+  in the WIPO Patent Cooperation Treaty (“PCT”) rankings in 2025 - a distinction that places us alongside
+  leading global technology firms70;
+•  We are the only digital connectivity provider globally with an end-to-end, proprietary 5G standalone (“SA”)
+  technology stack, as per the Analysys Mason Report;
+•  We have in-house hardware and software capabilities - evidenced through the design of our set-top-box and
+  the JioBharat OS, which can operate on low-cost chipsets and with minimal memory footprint, enabling high
+  quality digital services on affordable devices;
+•  JioBrain, our proprietary AI engine, is embedded across network operations enabling autonomous decision
+  making for capacity allocation, fault prediction, and real-time network optimisation;
+•  JioAirFiber scaled to 14.0 million customers as of June 30, 2026, from the time of its launch in September
+  2023 – making it the largest fixed wireless customer base in India – enabled by our proprietary UBR-based
+  fixed wireless access (“FWA”) technology, as per the Analysys Mason Report;
+•  We have pioneered successive technology waves in India:
+  -  in 4G, we were the first to roll out an all-IP, greenfield 4G LTE network at scale and achieved 100 million
+  customers in less than six months as per the Analysys Mason Report; and
+  -  in 5G, we achieved the fastest rollout globally with pan-India coverage in 15 months and 284.9 million
+  customers in 45 months as per the Analysys Mason Report.
+70
+  World Intellectual Property Organization (2026). PCT Yearly Review 2026: The International Patent System. Geneva: WIPO. WIPO
+Publication No. 901EN/26.
+  197
+Our Business
+Our Platform Infrastructure
+We own and have developed in-house, the material technology assets forming the core of our business. Our
+platform is built on five integrated layers: (i) Digital products and services – our consumer applications and
+enterprise solutions, (ii) Digital connectivity – including our in-house developed network core, platforms and
+devices; (iii) Phygital access at scale – our phygital distribution network; (iv) Deep customer insights – the
+customer data and analytics we process; and (v) Proprietary technology – comprising our intellectual property
+portfolio and licensed trademarks. As a result, we are able to deliver transformative 71 digital connectivity at
+scale,72 while maintaining operational efficiency and enhancing customer experience 73 across all touchpoints.
+The ownership framework across these five platform layers is as follows:
+  -  Digital Products and Services: Our consumer applications (JioTV+, JioSaavn, JioGames, JioAICloud,
+  JioPC) and enterprise solutions (cloud, IoT, managed Wi-Fi, CPaaS, security) are owned by us and
+  developed in-house.
+  -  Digital Connectivity: Digital connectivity including our 4G and 5G network, forms the foundational
+  layer, delivering pan-India reach to over 99% of the population for wireless broadband as of June 30,
+  2026. This connectivity layer is supported by cloud infrastructure, comprising our distributed data centre
+  network, including more than 100 edge nodes deployed within our 4G and 5G networks as of June 30,
+  2026, fibre connectivity at over 1,200 facilities across India, and partnerships with leading global cloud
+  service providers such as Microsoft and Google Cloud.
+  -  Phygital Access at Scale: We operate our phygital distribution network through the MyJio App and Jio
+  Set-top-box (which we own), and Jio Centres and Jio Points located at premises of Reliance Retail
+  Limited. Reliance Retail Limited is the sole distributor of our pre-paid connectivity services under a
+  long-term master distribution agreement and master collection agreement, also providing channel
+  distribution, marketing and customer acquisition services. For details of related party arrangements and
+  their terms, see “Summary of Related Party Transactions”, “Risk Factors – 2. We have entered into
+  various agreements with the Promoter, Reliance Retail Limited and other Reliance Group entities for
+  various aspects of our business. Any disruption in the services under these agreements could have an
+  adverse impact on our business, financial condition and results of operations”, and “Risk Factors – 3.
+  Reliance Retail Limited (“RRL”) is the sole distributor of our pre-paid connectivity services and provides
+  channel distribution, marketing and promotional activities services to us. Any disruption in our
+  arrangement with RRL would adversely impact our business, financial condition and results of
+  operations” on pages 80, 31 and 33.
+  -  Deep Customer Insights: RJIL’s large and highly engaged customer base of 533.3 million customers as
+  of June 30, 2026, generates data across connectivity, content consumption and digital service usage. We
+  leverage these insights to design services tailored to consumer needs and preferences, enable data-driven
+  personalisation, and support AI-assisted services. Higher engagement generates more data, which we
+  leverage to improve our platforms and enhance customer experience and satisfaction.
+  -  Proprietary Technology: The Company and its Subsidiaries own the intellectual property underpinning
+  the platform, having filed 7,220 patent applications across 4G, 5G, 6G cloud-native core network
+  architectures, AI-driven network automation and other digital technologies, of which 1,043 have been
+  granted, as of June 30, 2026. Key trademarks, including the “Jio” flagship mark, are owned by our
+  Promoter and licensed to us pursuant to the Trademark License Agreement, which may be terminated
+71  We have driven transformative structural change in India's digital connectivity landscape since our entry in 2016. Mobile broadband
+  penetration has risen from approximately 12.80% in Fiscal 2016 to 68.47% in the fourth quarter of Fiscal 2026, monthly wireless data
+  usage has increased from less than 0.2GB to 26.7GB per user in the third quarter of Fiscal 2026, and the average cost to customers per
+  GB has reduced from ₹228.0 in the exit quarter of Fiscal 2016 to ₹7.5 in the exit quarter of Fiscal 2026. We transformed mobile pricing
+  in India by introducing free voice calls and affordable internet packages, as per the Analysys Mason Report. (see page 152 of this Red
+  Herring Prospectus).
+72  533.3 million customers and 49.78% market share in wireless broadband as of June 30, 2026, reflects our role in expanding digital
+  connectivity nationally, as per the Analysys Mason Report. (see page 152 of this Red Herring Prospectus).
+73  our all-IP pan-India network, 99% population coverage for our 5G wireless broadband network, and mobile broadband speeds that
+  have been more than double the average of other operators for the last three years, as per the Analysys Mason Report. (see page 152 of
+  this Red Herring Prospectus).
+  198
+  upon loss of management control over the Company and/or RJIL by the Promoter. For more information,
+  please see “Risk Factors – 7. We do not control the use of the “Jio” trademark by other companies in
+  the Reliance Group. Such shared use of the “Jio” brand exposes us to risks related to negative publicity
+  resulting from actions beyond our control. Further, we may be unable to adequately protect our
+  intellectual property rights, and we may also be subject to risks of infringement claims. Any of these
+  events may have a material adverse impact on our reputation, business, financial condition and results
+  of operations” on page 36.
+We are progressively embedding AI across our technology stack and offerings to achieve Level 4 on the TM
+Forum’s Autonomous Networks scale74, where networks operate, maintain and evolve end-to-end autonomously,
+and offer AI-assisted services to our customers. Our nation-scale phygital reach supports rapid delivery of digital
+services to our customer base and drives swift adoption. Since our launch in 2016, we have followed a deliberate
+strategy of offering a wide suite of digital services with digital connectivity as an enabler of seamless access to
+digital services.
+Certain aspects of our platform have been developed through partnerships with suppliers, and we have also built
+partnerships with third-parties for cloud infrastructure, content and AI features, which are non-exclusive and
+subject to renewal. See “ – Other arrangements” on page 226 for more details.
+The diagram below provides a snapshot of the five pillars of our platform - (i) digital products and services, (ii)
+digital connectivity, (iii) phygital access at scale, (iv) deep customer insights, and (v) proprietary technology:
+Notes:
+(1) As of June 30, 2026. See “ – Our Platform Infrastructure” on page 198 for more details on each layer of our platform infrastructure.
+(2) Digital Products and Services: Our digital applications - including consumer applications (JioTV+, JioSaavn, JioGames, JioAICloud,
+  JioPC) and enterprise solutions (cloud, IoT, managed Wi-Fi, CPaaS, security) - are delivered through our platform services layer, which
+  provides a single unified interface for consumers and businesses to access connectivity, compute, content, undertake financial services
+  and utilise AI capabilities.
+(3) Digital connectivity, including our 4G and 5G network, forms the foundational layer, delivering pan-India reach to over 99% of the
+  population for wireless broadband as of June 30, 2026. This connectivity layer is supported by cloud infrastructure, comprising our
+  distributed data centre network, including more than 100 edge nodes deployed within our 4G and 5G networks as of June 30, 2026, fibre
+  connectivity at over 1,200 facilities across India, and partnerships with leading global cloud service providers such as Microsoft and
+  Google Cloud.
+(4) Phygital Access at Scale: This layered architecture enables us to rapidly design, deploy and scale new digital services while maintaining
+  operational efficiency and consistent customer experience across touchpoints.
+(5) Deep Customer Insights: RJIL’s large and highly engaged customer base of 533.3 million customers as of June 30, 2026, generates data
+  across connectivity, content consumption and digital service usage. We leverage these insights to design services tailored to consumer
+  needs and preferences, enable data-driven personalisation, and support AI-assisted services. Higher engagement generates more data,
+74  The TM Forum's Autonomous Networks scale is a six-level framework (Levels 0–5) developed by a global telecommunications industry
+  association to measure progress from manual to fully autonomous network operations. Level 4 denotes a highly autonomous network
+  where AI-driven systems can predict, decide and act with minimal human intervention.
+  199
+  which we leverage to improve our platforms and enhance customer experience and satisfaction.
+(6)  Proprietary Technology: Our own technology capabilities deployed across network, device engineering, software and operating systems
+  and digital applications power our digital connectivity business. Further, our AI capabilities, including our proprietary AI platform
+  “JioBrain”, are embedded across this infrastructure to enable autonomous network operations, predictive analytics, real-time anomaly
+  detection and AI-assisted customer services.
+A Comprehensive portfolio of offerings75
+Our offerings encompass various aspects of modern digital society, as described below:
+We offer consumers:
+•  Digital Connectivity (4G, 5G, JioFiber, JioAirFiber): Mobile and fixed broadband services provided by
+  RJIL to subscribers as per their connectivity plans;
+•  Digital Entertainment (JioTV+, JioSaavn, JioGames, JioHotstar): Video/music streaming and cloud
+  gaming provided by the Company, RJIL and Saavn Media Limited bundled with connectivity plans;
+•  Cloud and Productivity (JioAICloud, JioPC): Cloud storage and virtual PC services provided by the
+  Company to subscribers on bundled or standalone basis;
+•  Smart Home and IoT (Jio Set-top-box, JioHome): Connected devices enabling home automation. “IoT”
+  (Internet of Things) refers to a network of connected devices and sensors that collect, exchange and act
+  on data with minimal human intervention. Provided by the Company and RJIL on device sale or
+  subscription basis; and
+•  AI Products (JioBrain, Google AI Pro): AI assistants and personalised digital experiences provided by
+  the Company and Jio Haptik Technologies Limited in partnership with third parties and offered as
+  bundled with the connectivity plans.
+We offer businesses:
+•  Enterprise Connectivity (JioBusiness, Internet Leased Line (“ILL”)76, MPLS77, VPN78): Broadband and
+  leased line connectivity provided by RJIL on a contract-based subscription model;
+•  Enterprise IoT (JioThings, CPaaS): IoT solutions, or “internet of things” solutions for smart metering,
+  fleet management and industrial monitoring provided by Jio Things Limited and RJIL on device sale or
+  subscription basis;
+•  Cloud and Security (Managed Wi-Fi, Private 5G, Software-Defined Wide Area Network (“SD-
+  WAN”) 79 ): Enterprise cloud, Wi-Fi, and security solutions provided by the Company and RJIL in
+  partnership with Microsoft and Google Cloud on subscription basis;
+•  Managed Services (Managed Network Operations Centre (“NoC”), unified communications): End-to-
+  end managed information and communication services provided by the Company under contracts; and
+•  Enterprise AI (JioBrain): AI enterprise suite for forecasting, automation and network optimisation
+  provided by the Company on subscription/ usage basis.
+75  The Company operates as a single operating segment. Except for digital connectivity (which constitutes substantially all revenue),
+  standalone revenue contributions for individual products are not separately disclosed as they are bundled with or subsumed within
+  connectivity services.
+76  A dedicated internet connection that provides guaranteed, uncontended private bandwidth between a customer's premises and the
+  internet point of presence (“PoP”) of service provider.
+77  A private network technology that routes data between multiple locations using dedicated pathways, enabling businesses to prioritise
+  traffic and securely connect their sites.
+78  A restricted-use logical computer network constructed from physical network system resources using tunneling, encryption,
+  security controls, and endpoint address translation.
+79  A technology that uses software-based controls decoupled from hardware to manage and optimise the routing of network traffic across
+  a wide area network. It allows organisations to connect their branch offices, data centres, and cloud applications using a combination
+  of transport services - including MPLS, broadband internet, and 4G/5G - while centrally managing the entire network through a single
+  interface.
+  200
+A market leader in digital connectivity services
+We have been at the forefront of digital adoption in India by making access to digital services ubiquitous through
+our digital connectivity network. Since our launch in 2016, we fundamentally reshaped digital connectivity for
+India, and created an all-internet protocol-led 4G network for consumers to seamlessly access digital services. In
+Fiscal 2026, ~60% of India’s wireless data traffic was on our network, and as of June 30, 2026, we were the largest
+digital connectivity player with ~1.4 times the 4G+5G subscribers compared to the second largest player in India.
+Furthe [...truncated]
+
+===== OUR PROMOTERS AND PROMOTER GROUP =====
+[not found]
+
+===== RISK FACTORS =====
+SECTION II – RISK FACTORS
+An investment in the Equity Shares involves a high degree of risk. You should carefully consider all the information
+in this Red Herring Prospectus, including the risks and uncertainties described below, before making an
+investment in the Equity Shares.
+We have described the risks and uncertainties that we believe are material, but these risks and uncertainties may
+not be the only risks relevant to us, the Equity Shares, or the industry in which we operate. Unless specified or
+quantified in the relevant risk factors below, we are not able to quantify the financial or other implications of any
+of the risks mentioned in this section. If any or a combination of the following risks actually occur, or if any of the
+risks that are currently not known or deemed to be not relevant or material now actually occur or become material
+in the future, our business, cash flows, prospects, reputation, financial condition and results of operations could
+suffer, the trading price of the Equity Shares could decline, and you may lose all or part of your investment. For
+more details on our business and operations, see “Our Business”, “Industry Overview”, “Key Regulations and
+Policies in India”, “Restated Consolidated Financial Information” and “Management’s Discussion and Analysis
+of Financial Condition and Results of Operations” on pages 196, 152, 235, 320 and 436, respectively, as well as
+other financial information included elsewhere in this Red Herring Prospectus. In making an investment decision,
+you must rely on your own examination of our Company and the terms of the Issue, including the merits and risks
+involved, and you should consult your tax, financial and legal advisors about the consequences of investing in the
+Issue. Prospective investors should pay particular attention to the fact that the Company is incorporated under
+the laws of India and is subject to a legal and regulatory environment which may differ in various respects from
+that of other countries.
+This Red Herring Prospectus also contains forward-looking statements that involve risks, assumptions, estimates
+and uncertainties. Our actual results could differ materially from those anticipated in these forward-looking
+statements as a result of certain factors described below and elsewhere in this Red Herring Prospectus. For
+details, see “Forward-Looking Statements” on page 29.
+Unless otherwise indicated, industry and market data used in this section have been derived from the Analysys
+Mason Report, which has been commissioned and paid for by us exclusively in connection with the Issue for the
+purposes of understanding the industry in which we operate. The Analysys Mason Report will form part of the
+material documents for inspection, and a copy of the Analysys Mason Report is available on the website of the
+Company at www.jio.com/about/investor-relations/. The data included herein include excerpts from the Analysys
+Mason Report and such excerpts may have been re-ordered by us for the purposes of presentation. There are no
+parts, data or information which may be relevant for the proposed Issue, from the Analysys Mason Report, that
+have been left out or changed in any manner. Unless otherwise indicated, all financial, operational, industry and
+other related information derived from the Analysys Mason Report and included herein with respect to any
+particular year, refers to such information for the relevant Fiscal. For further details, please see “Risk Factors –
+36. We have paid for and commissioned from Analysys Mason an industry report (“Analysys Mason Report”).
+Information relating to the digital connectivity and services industry in this Red Herring Prospectus has been
+obtained from this Analysys Mason Report. There can be no assurance that such third-party statistical, financial
+and other industry information is either complete or accurate.” on page 60.
+Unless otherwise indicated or unless context requires otherwise, the financial information in this section has been
+derived from the Restated Consolidated Financial Information. For further details, see “Restated Consolidated
+Financial Information” on page 320. Our financial year commences on April 1 and ends on March 31 of the
+subsequent year, and references to a particular financial year are to the 12 months ended March 31 of that year.
+The risk factors have been ordered on the basis of their materiality as deemed by us. Unless the context otherwise
+indicates or implies or unless otherwise specified, references to “Reliance Group” in this section refer to the
+Promoter together with its subsidiaries, joint ventures and associates, on a consolidated basis.
+INTERNAL RISKS
+1.  Reliance Jio Infocomm Limited (“RJIL”) holds telecommunication licence and spectrum across different
+  bands which are critical for its operations. Any inability to maintain or renew such licences or to
+  successfully bid for any spectrum required for our operations, could have a material adverse impact on
+  our business, financial condition and results of operations.
+The unified licence for providing telecom services held by RJIL across circles in India is due for renewal in
+October 2033. Further, the spectrum held by RJIL is valid for a period of 20 years with the majority of the spectrum
+expiring between 2041 and 2042. For details, see “Government and Other Approvals” and “Our Business – Our
+  30
+  Spectrum Holdings” on pages 475 and 221, respectively. This licence and spectrum are subject to licence terms,
+  ongoing regulatory review and approvals, and may be subject to inspections, prescribed performance standards
+  and periodic compliance reporting, each of which may require significant expenditure. The terms of the licence
+  and spectrum are subject to varying interpretations, and the licensor retains the unilateral right to amend the
+  existing licence conditions as well as the conditions for our participation in future spectrum auctions. While the
+  telecommunication licence or spectrum held by RJIL have not been revoked or cancelled, there is no assurance
+  that such an event would not occur in the future. Further, bidding for new spectrum or replacing existing spectrum
+  with another spectrum could require significant capital expenditure, and there is no assurance that we would be
+  successful in bidding for the spectrum. In addition, there continues to be uncertainty as to the fees and costs of the
+  grant and any limitations or other terms that may be imposed upon successful bids. While the DoT seeks to conduct
+  spectrum auctions every year and usually offers an option to extend the spectrum validity period in case of a delay,
+  there is no assurance that such auctions will take place in a timely manner or that an option to extend will be
+  offered. The DoT has imposed minimum rollout obligations with specified timelines. Non-compliance with such
+  obligations may attract penalties and withdrawal of spectrum allocations. Except for a delay in the 26 GHz
+  spectrum band rollout obligations in Fiscal 2026, which was on account of a hardware supply gap in radio
+  equipment operating in this band, there have been no other instances of delay or non-compliance in minimum
+  rollout obligations. While we completed the rollout obligations pertaining to this spectrum band in Fiscal 2026
+  itself, we have provided for potential liquidated damages aggregating to ₹106 million in our books of account for
+  Fiscal 2026 for the delayed rollout. Future acquisitions or renewals of licence and spectrum may also require
+  substantial fees and adherence to network build-out requirements. RJIL may need to raise additional financing
+  through borrowings or offerings to obtain or renew the licence or spectrum, and there can be no assurance that
+  such funding will be available on satisfactory terms, or at all, and an inability to do so, could have a material
+  adverse impact on our business, financial condition and results of operations. For details in relation to the spectrum
+  auction process and other applicable regulations, see “Key Regulations and Policies in India” on page 235.
+2.  We have entered into various agreements with the Promoter, Reliance Retail Limited and other Reliance Group
+  entities for various aspects of our business. Any disruption in the services under these agreements could have
+  an adverse impact on our business, financial condition and results of operations.
+  As of the date of this Red Herring Prospectus, the Promoter owns 66.43% of the pre-Issue Equity Share capital of
+  the Company. We have entered into various non-exclusive agreements with the Promoter and Reliance Retail
+  Limited, a subsidiary of the Promoter, and Sanmina-SCI India Private Limited, a joint venture entity of the
+  Promoter, for certain key aspects of our business. The following table provides an overview of our significant
+  transactions with the Promoter, Reliance Retail Limited and Sanmina-SCI India Private Limited, for the
+  periods/Fiscals indicated.
+  Parent(1)/ fellow  Three months ended June 30,  Fiscal
+  Particulars  subsidiary / joint venture  2026  2025  2026  2025  2024
+  of the Parent  (in ₹ million, unless otherwise indicated)
+  Parent(1) (A)  19,440  14,237  39,040  37,099  62,246
+  As a percentage of Cash
+  Purchase of  46.46%  11.82%  11.42%  8.38%  11.63%
+  Capex (B = A/U)
+  Property,
+  Reliance Retail Limited (C)  750  2,352  5,867  14,720  9,458
+  Plant and
+  As a percentage of Cash
+  Equipment  1.79%  1.95%  1.72%  3.33%  1.77%
+  Capex (D = C/ U)
+  and Other
+  Intangible  Sanmina-SCI India Private
+  414  192  5,339  5,190  1,107
+  Assets  Limited (E)
+  As a percentage of Cash
+  0.99%  0.16%  1.56%  1.17%  0.21%
+  Capex (F = E/ U)
+  Parent(1) (G)  9,322  7,972  36,442  35,997  35,449
+  As a percentage of Revenue
+  Revenue  2.38%  2.28%  2.48%  2.81%  3.24%
+  from Operations (H = G/ V)
+  from
+  Reliance Retail Limited (I)  3,001  4,279  16,374  10,416  7,244
+  Operations
+  As a percentage of Revenue
+  0.77%  1.22%  1.11%  0.81%  0.66%
+  from Operations (J = I/ V)
+  Revenue
+  Received in  Reliance Retail Limited  292,480  271,663  1,129,351  1,023,958  890,587
+  Advance(2)
+  Parent(1) (K)  5,797  7,520  26,254  29,614  23,364
+  Professional  As a percentage of Total
+  1.95%  2.88%  2.40%  3.14%  2.87%
+  Fees  Expenses (L = K/ W)
+  Reliance Retail Limited (M)  1,082  3,232  7,671  6,730  4,601
+  31
+  Parent(1)/ fellow  Three months ended June 30,  Fiscal
+  Particulars  subsidiary / joint venture  2026  2025  2026  2025  2024
+  of the Parent  (in ₹ million, unless otherwise indicated)
+  As a percentage of Total
+  0.36%  1.24%  0.70%  0.71%  0.57%
+  Expenses (N = M/ W)
+  Network  Parent(1) (O)  3,131  4,312  18,761  15,807  15,388
+  Operating  As a percentage of Total
+  1.05%  1.65%  1.71%  1.68%  1.89%
+  Expenses  Expenses (P = O/ W)
+  Parent(1) (Q)  -  -  -  6,299  9,449
+  As a percentage of Total
+  Selling and  -  -  -  0.67%  1.16%
+  Expenses (R = Q/ W)
+  Distribution
+  Reliance Retail Limited (S)  10,527  11,858  43,551  35,158  30,008
+  Expenses
+  As a percentage of Total
+  3.54%  4.54%  3.98%  3.73%  3.69%
+  Expenses (T = S/ W)
+  Cash Capex(3) (U)  41,838  120,481  341,843  442,680  535,096
+  Revenue from Operations (V)  391,729  350,323  1,468,853  1,282,184  1,095,581
+  Total Expenses (W)  297,708  261,350  1,094,060  942,057  813,674
+Notes:
+(1) Parent, in this table, means the Promoter.
+(2) Recharge vouchers sold to Reliance Retail Limited are accounted as ‘Advance against services’ which is disclosed as a related party
+  transaction under the head ‘Revenue received in advance’. When Reliance Retail Limited or its distributor/ sub-distributor further sells
+  the vouchers to our customers by way of recharge to the digital connectivity services, RJIL recognises such transfer as ‘Deferred
+  revenue’ and thereafter, based on the type of tariff plan, it is accounted as operating revenues in the profit & loss account. In light of
+  the above, revenue received in advance has not been presented as a percentage of revenue from operations.
+(3) Cash Capex refers to the cash outflow towards expenditure for property, plant and equipment, spectrum and other intangible assets less
+  proceeds from disposal of property, plant and equipment and other intangible assets.
+Some of the above arrangements are described below:
+•  RJIL has entered into long-term agreements with the Promoter to avail project execution services on an
+  EPC basis for telecom projects. These projects are undertaken based on detailed project execution plans
+  submitted to RJIL and typically require the service provider to provide project execution services
+  including erection, commissioning and installation services. Although alternative providers exist, we
+  believe that leveraging our relationship with the Promoter for EPC projects offers scale benefits.
+•  We have long-term agreements with the Promoter for business support services that the Promoter
+  provides to us, including for access to its data centres, network infrastructure, human resources, and
+  back-office, among others.
+•  We have a long-term agreement with the Promoter for managed IT services that we provide to the
+  Promoter. Any material breach of the agreement or statement of work issued as per the agreement may
+  result in a termination of such arrangement by the Promoter, which could significantly impact our
+  business, financial condition and results of operations.
+•  RJIL has a long-term master agreement with Reliance Retail Limited, a subsidiary of the Promoter, for
+  the supply of certain premise equipment and other devices by Reliance Retail Limited to RJIL in
+  accordance with the specifications provided by RJIL.
+•  RJIL has a master distribution agreement and a master collection agreement with Reliance Retail
+  Limited. Reliance Retail Limited is the sole distributor of our pre-paid connectivity services, and our
+  revenue from pre-paid connectivity services constituted 76.37%, 77.88%, 77.08%, 78.57% and 79.35%
+  of our consolidated Revenue from Operations for the three months ended June 30, 2026 and 2025, and
+  Fiscals 2026, 2025 and 2024, respectively. For further details, see “Risk Factors – 3. Reliance Retail
+  Limited (“RRL”) is the sole distributor of our pre-paid connectivity services and provides channel
+  distribution, marketing and promotional activities services to us. Any disruption in our arrangement with
+  RRL would adversely impact our business, financial condition and results of operations” on page 33.
+•  Reliance Strategic Business Ventures Limited (RSBVL), a subsidiary of Reliance Industries Limited
+  (RIL), formed a joint venture with Sanmina Corporation in 2022 to create a high-tech electronic
+  manufacturing hub in India. RSBVL holds a 50.10% stake in Sanmina-SCI India Private Limited
+  (SCIPL) to manufacture 5G networking equipment, among others. We do not have any long-term
+  arrangement with SCIPL and place purchase orders with them, from time to tim [...truncated]
+
+===== MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF =====
+MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF
+  OPERATIONS
+The following discussion is intended to convey the management’s perspective on our financial condition and
+results of operations for the three months ended June 30, 2026 and 2025, and Fiscals 2026, 2025, and 2024. This
+section should be read together with “Risk Factors”, “Industry Overview”, “Our Business”, and “Restated
+Consolidated Financial Information” on pages 30, 152, 196 and 320, respectively. Unless otherwise stated or the
+context requires otherwise, the financial information in this section has been derived from the Restated
+Consolidated Financial Information. Our financial year ends on March 31 of each year. Accordingly, references
+to “Fiscal 2026”, “Fiscal 2025” and “Fiscal 2024” are to the 12-month period ended March 31 of the relevant
+year, and references to the “three months ended June 30, 2026” and the “three months ended June 30, 2025” are
+to the respective three-month periods then ended.
+This section contains certain forward-looking statements that involve risks and uncertainties. Our actual results
+may differ materially from those anticipated in these forward-looking statements because of certain factors, such
+as the risks set forth in the chapters entitled “Risk Factors” and “Forward-Looking Statements” on pages 30 and
+29, respectively. The Restated Consolidated Financial Information is prepared in accordance with the recognition
+and measurement principles of Indian Accounting Standard (Ind AS), specified under Section 133 of the
+Companies Act, 2013 read with the Companies (Indian Accounting Standards) Rules, 2015 and the other
+accounting principles generally accepted in India. Ind AS differs in certain respects from IFRS and U.S. GAAP
+and other accounting principles with which prospective investors may be familiar. Please also see “Risk Factors
+– External Risks – 54. Significant differences exist between Ind AS and other accounting principles, such as IFRS
+and U.S. GAAP, which may be material to investors’ assessment of our financial condition” on page 67.
+Unless otherwise indicated, industry and market data used in this section have been derived from the Analysys
+Mason Report, which has been commissioned and paid for by us exclusively in connection with the Issue for the
+purposes of understanding the industry in which we operate. The Analysys Mason Report will form part of the
+material documents for inspection, and a copy of the Analysys Mason Report is available on the website of the
+Company at www.jio.com/about/investor-relations/. The data included herein include excerpts from the Analysys
+Mason Report and such excerpts may have been re-ordered by us for the purposes of presentation. There are no
+parts, data or information which may be relevant for the proposed Issue, from the Analysys Mason Report, that
+have been left out or changed in any manner. Unless otherwise indicated, all financial, operational, industry and
+other related information derived from the Analysys Mason Report and included herein with respect to any
+particular year, refers to such information for the relevant Fiscal. For further details, please see “Risk Factors –
+36. We have paid for and commissioned from Analysys Mason an industry report (“Analysys Mason Report”).
+Information relating to the digital connectivity and services industry in this Red Herring Prospectus has been
+obtained from this Analysys Mason Report. There can be no assurance that such third-party statistical, financial
+and other industry information is either complete or accurate” and “Industry Overview” on pages 60 and 152,
+respectively.
+Unless the context otherwise indicates or implies or unless otherwise specified, references to “Reliance Group”
+in this section refer to the Promoter together with its subsidiaries, joint ventures and associates, on a consolidated
+basis.
+Overview
+We are a technology platform, built on proprietary digital technology and pan-India digital connectivity as the
+foundational layer, driving digital transformation in India. Since our inception, we have played a pivotal role in
+democratising access to digital connectivity and digital services in India. Jio Platforms’ digital connectivity forms
+one of the fundamental pillars of India’s growing digital economy, which is expected to reach $1.4 trillion (₹125.8
+trillion) by Fiscal 2031, as per the Analysys Mason Report. Our Subsidiary, Reliance Jio Infocomm Limited
+(“RJIL”), served 533.3 million customers in India, as of June 30, 2026. A combination of mobile, fixed broadband
+and digital services across a unified platform, together with data and customer personalisation, positions us as a
+comprehensive digital gateway for accessing the internet, digital services and emerging technologies, including
+artificial intelligence (“AI”).
+Our platform is built on five integrated layers (i) Digital products and services – our consumer applications and
+enterprise solutions, (ii) Digital connectivity – including our in-house developed network core, platforms and
+  436
+devices; (iii) Phygital86 access at scale – our phygital distribution network; (iv) Deep customer insights – the
+customer data and analytics we process; and (v) Proprietary technology – comprising our intellectual property
+portfolio and licensed trademarks. Our digital products and services are delivered on our platform services layer,
+which provides a single unified interface for consumers and businesses to access connectivity, compute, content,
+undertake financial services and utilise AI capabilities. Our digital connectivity, which forms the foundation layer,
+delivers pan-India reach to over 99% of the population for wireless broadband as of June 30, 2026. Building on
+this connectivity, our phygital architecture enables us to rapidly design, deploy and scale new digital services
+while maintaining operational efficiency and consistent customer experience across all touchpoints. As a result,
+our large and highly engaged customer base generates more data, which we can then leverage to improve our
+platforms and enhance customer experience and satisfaction. Underpinning this ecosystem, our proprietary
+technology capabilities are deployed across network, device engineering, software and operating systems and
+digital applications, collectively powering our digital connectivity business.
+Our financial performance should be evaluated in the context of our positioning as a technology platform. Our
+platform creates multiple monetisation layers from our portfolio of offerings across digital connectivity and digital
+services, including entertainment, cloud, managed services, IoT 87 and CPaaS. This multi-layered revenue
+architecture, combined with our proprietary technology stack and vertically integrated cost structure, underpins
+our EBITDA margins.
+Principal Factors Affecting our Financial Condition and Results of Operations
+Large base of increasing customers with growing engagement
+Our large customer base generates recurring revenues for our platform, and our market leadership helps us
+capitalise on network effects by delivering reliable and enhanced customer experience to our customers. As of
+June 30, 2026, RJIL had a customer base of 533.3 million. We continue to enhance the quality of our digital
+services and expand our offerings to our customers to deliver consistent customer growth at scale. For example,
+in the three months ended June 30, 2026 and during Fiscal 2026, 8.9 million and 36.2 million customers were
+added on a net basis, respectively.
+Note: Total customer base refers to total customers of our licensed entity, i.e., RJIL, as of the end of an exit quarter.
+86 Physical and digital.
+87 IoT or Internet of Things refers to a network of connected devices and sensors that collect, exchange and act on data, often with minimal human intervention.
+  437
+Key drivers for our growing customer base are as follows:
+•  Launch of Jio 5G in Fiscal 2023 led to many of our existing customers adopting 5G and new consumers
+  subscribing to our 5G offering for a differentiated 5G value proposition and experience. For the three
+  months ended June 30, 2026, and Fiscal 2026, our 5G customer base grew by 16.4 million and 77.6
+  million, respectively. The growth of our 5G customer base for the Fiscals is demonstrated below.
+•  Launch of our entry-level, smart feature-phone JioBharat in 2023, which is designed and engineered by
+  us and sold by Reliance Retail Limited, has helped in transitioning existing 2G network feature phone
+  users to our 4G network.
+•  Launch of JioAirFiber in Fiscal 2024 accelerated our fixed broadband customer growth. Since the launch
+  of our JioAirFiber services, our fixed broadband customers have increased from 11.2 million as of March
+  31, 2024, to 28.6 million as of June 30, 2026. We captured 61.73% of India’s net fixed broadband
+  customer additions for the three months ended June 30, 2026, as per the Analysys Mason Report. As of
+  June 30, 2026, we had 14.0 million JioAirFiber customers.
+  438
+Our continuous efforts to increase value proposition to users through integrating content with other digital services
+have also enabled us to increase the average revenue per user (“ARPU”). See “ - Increase in ARPU” on this page
+below.
+During the quarter ended June 30, 2026, per capita data consumption reached 43.7 GB per month from 37.0 GB
+per month during the quarter ended June 30, 2025. Our strategy focuses on creating a virtuous cycle of engagement
+and monetisation, where higher usage drives adoption of additional services, reinforcing customer stickiness and
+lifetime value for our customers. We are also able to effectively integrate digital services with our digital
+connectivity subscription plans and launch new products and services, which continues to drive customer growth
+and engagement.
+Increase in ARPU
+Our ARPU has consistently increased from Fiscal 2024 to the three months ended June 30, 2026, due to a
+combination of factors such as, (i) industry-wide tariff increase, as per the Analysys Mason Report, including in
+the second quarter of Fiscal 2025; (ii) higher consumer engagement on our platform, as we are able to offer them
+high quality connectivity and a suite of digital services; and (iii) consumers’ willingness to upgrade to higher data
+allowance packs as they perceive more value in such plans as reflected in the ARPU increase between March
+2025 and March 2026. These plans include features such as unlimited 5G data allowance, access to integrated
+over-the-top (“OTT”) content and digital services, such as those featuring JioHotstar, which includes seasonal
+live-sports events and new content releases. Additional features in our plans encourage consumers to upgrade and
+recharge at higher denominations, while integrated benefits reduce customer churn. In the three months ended
+June 30, 2026, our ARPU increased by 3.26% to ₹215.6 as compared to ₹208.8 in the three months ended June
+30, 2025. The increase in our ARPU is further demonstrated below.
+Note:
+(1) ARPU refers to the average monthly revenue generated from each customer, calculated by dividing total revenue from operations of the
+  licensed entity, i.e., RJIL for the exit quarter of the reference period, by the average number of customers for the same exit quarter,
+  divided by three.
+Network cost efficiencies
+We have made significant investments in developing proprietary technology and creating a future-proof network.
+We created our network for pan-India deployment which is backed by long-term contracts with passive network
+infrastructure service providers that provide predictability in our costs even as we scale our operations. Further,
+we have brought in operating leverage in our network operations, by leveraging technology and process
+automation leading to optimisation of repairs and maintenance cost. The sustained decrease in our network
+  439
+operating expenses as a percentage of our revenue from operations is demonstrated in [...truncated]
+
+===== OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS =====
+[not found]
+
+===== OFFER STRUCTURE =====
+ISSUE STRUCTURE
+The Issue comprises a fresh issue of up to 270,000,000 Equity Shares of face value of ₹10 each for cash at a price
+of ₹[●] per Equity Share, aggregating up to ₹[●] million by the Company.
+The Issue includes a reservation of up to [●] Equity Shares of face value of ₹10 each for cash at a price of ₹[●]
+per Equity Share, aggregating up to ₹5,000 million, for subscription by Eligible Employees and a reservation of
+up to [●] Equity Shares of face value of ₹10 each for cash at a price of ₹[●] per Equity Share, aggregating up to
+₹25,000 million for subscription by Eligible RIL Shareholders. The Issue less the Employee Reservation Portion
+and RIL Shareholders Reservation Portion is the Net Issue. The Issue and Net Issue shall constitute [●]% and
+[●]% of the post-Issue paid-up Equity Share capital of the Company, respectively. For further details, see “The
+Issue” on page 72.
+The Issue is being made in compliance with Rule 19(2)(b) of the SCRR, and under the Book Building Process in
+compliance with Regulation 6(1) and Regulation 31 of the SEBI ICDR Regulations.
+  Eligible  Eligible RIL
+  Particulars  QIB(1)  NIIs  RIIs
+  Employees#  Shareholders##
+ Number of Equity  Up to [●] Equity  Up to [●] Equity  Not more than [●]  Not less than [●]  Not less than [●]
+ Shares of face  Shares of face  Shares of face  Equity Shares of  Equity Shares of  Equity Shares of
+ value of ₹10 each  value of ₹10 each.  value of ₹10 each.  face value of ₹10  face value of ₹10  face value of ₹10
+ available  for  each.  each.  each.
+ Allotment  or
+ allocation*(2)
+ Percentage  of  [●]% of the Issue.  [●]% of the  Not more than  Not less than 15%  Not less than 35%
+ Issue  size  Issue.  50% of the Net  of the Net Issue  of the Net Issue
+ available  for  Issue shall be  shall be available  will be available
+ Allotment  or  available  for  for allocation. a)  for allocation.
+ allocation.  allocation to QIB  One-third of the
+  Bidders. Up to  Non-Institutional
+  5% of the Net  Portion shall be
+  QIB Portion will  reserved  for
+  be available for  Bidders with a
+  Allocation  Bid size of more
+  proportionately to  than  ₹200,000
+  Mutual  Funds  and  up  to
+  only.  Mutual  ₹1,000,000; and
+  Funds  b) two-thirds of
+  participating in  the  Non-
+  the Mutual Fund  Institutional
+  Portion will also  Portion shall be
+  be eligible for  reserved  for
+  allocation in the  Bidders with a
+  remaining  Net  Bid size of more
+  QIB Portion. The  than ₹1,000,000.
+  unsubscribed  Provided that the
+  portion in the  unsubscribed
+  Mutual  Fund  portion in either
+  Portion will be  of  the  sub-
+  reinstated to the  categories
+  Net QIB Portion.  specified above
+  may be allocated
+  to Bidders in the
+  other  sub-
+  category of NIIs,
+  subject to valid
+  Bids  being
+  received at or
+  above the Issue
+  Price.
+ Basis  of  Proportionate#.  Proportionate,  Proportionate,  The Allotment of  The allotment to
+ Allotment**  While  Eligible  subject  to  subject  to  Equity Shares to  each RII shall not
+  Employees  are  minimum Bid Lot  minimum Bid Lot  each NII shall not  be less than the
+  permitted to Bid  and availability of  as  follows  be less than the  minimum  Bid
+  up to ₹500,000  Equity Shares in  (excluding  the  minimum NIIs  Lot, subject to
+  529
+  Eligible  Eligible RIL
+Particulars  QIB(1)  NIIs  RIIs
+  Employees#  Shareholders##
+  (net of Employee  the  RIL  Anchor Investor  Bid size, subject  availability  of
+  Discount), for the  Shareholder  Portion):  to availability in  Equity Shares in
+  purpose  of  Reservation  a)  up to  the  Non-  the Retail Portion
+  determining  Portion.  [●] Equity Shares  Institutional  and the remaining
+  whether  the  of face value of  Portion, and the  available Equity
+  Employee  ₹10 each shall be  remainder, if any,  Shares if any,
+  Reservation  available  for  shall be Allotted  shall be allotted
+  Portion is under-  allocation on a  on  a  on  a
+  subscribed  or  proportionate  proportionate  proportionate
+  oversubscribed,  basis to Mutual  basis  in  basis.
+  all  the  Bids  Funds only; and  accordance with
+  received would  b)  up to  the  conditions
+  be capped at  [●] Equity Shares  specified  in
+  ₹200,000 (net of  of face value of  Schedule XIII to
+  Employee  ₹10 each shall be  the SEBI ICDR
+  Discount).  available  for  Regulations. The
+  allocation on a  Equity  Shares
+  In the event, the  proportionate  available  for
+  Employee  basis to all QIBs,  allocation to NIIs
+  Reservation  including Mutual  under the Non-
+  Portion is under-  Funds receiving  Institutional
+  subscribed, the  allocation as per  Portion shall be
+  value  of  (a) above  subject to the
+  allocation to an  Up to 60% of Net  following:
+  Eligible  QIB Portion up to  a)  One-
+  Employee shall  [●] Equity Shares  third of the Non-
+  not  exceed  of face value of  Institutional
+  ₹200,000 (net of  ₹10 each may be  Portion will be
+  Employee  allocated on a  available  for
+  Discount) and the  discretionary  allocation  to
+  unsubscribed  basis to Anchor  Bidders with a
+  portion would be  Investors  of  Bid size of more
+  Allocated on a  which 40% of  than  ₹200,000
+  proportionate  such  Anchor  and  up  to
+  basis, to Eligible  Investor Portion  ₹1,000,000;
+  Employees  shall be reserved  b) Two-thirds of
+  Bidding in the  as under: (i)  the  Non-
+  Employee  33.33%  for  Institutional
+  Reservation  domestic Mutual  Portion will be
+  Portion in excess  Funds; and (ii)  available  for
+  of ₹200,000 (net  6.67% for Life  allocation  to
+  of  Employee  Insurance  Bidders with a
+  Discount),  Companies and  Bid size of more
+  subject to total  Pension Funds,  than ₹1,000,000.
+  Allotment to an  subject to valid  Provided that the
+  Eligible  Bids  being  unsubscribed
+  Employee  not  received  from  portion in either
+  exceeding  domestic Mutual  of  the
+  ₹500,000 (net of  Funds,  Life  aforementioned
+  Employee  Insurance  subcategories
+  Discount).  Companies and  may be allocated
+  Pension Funds at  to Bidders in the
+  In the event the  or above the  other  sub-
+  Employee  Anchor Investor  category of NIIs
+  Reservation  Allocation Price,  in  accordance
+  Portion  is  in  accordance  with the SEBI
+  oversubscribed,  with the SEBI  ICDR
+  then Allocation to  ICDR  Regulations.
+  Eligible  Regulations. For
+  Employees would  details, see “Issue
+  be carried out on  Procedure” on
+  a proportionate  page 534.
+  basis with all the
+  Bids  received
+  capped  at
+  530
+  Eligible  Eligible RIL
+  Particulars  QIB(1)  NIIs  RIIs
+  Employees#  Shareholders##
+  ₹200,000 (net of
+  Employee
+  Discount).
+  In all the above
+  cases,  the
+  Allocation would
+  be subject to the
+  minimum Bid Lot
+  and subject to
+  availability  of
+  Equity Shares in
+  the  Employee
+  Reservation
+  Portion.
+Basis  of  Unsubscribed Equity Shares under the  Unsubscribed  Unsubscribed  Unsubscribed
+Allotment if any  Employee Reservation Portion may be  Equity  Shares  Equity  Shares  Equity  Shares
+category is not   [...truncated]

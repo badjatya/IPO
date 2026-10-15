@@ -1,8 +1,22 @@
 {
  "name": "Jio Platforms",
- "source": "web",
- "analysed": "2026-10-14",
- "verdict": "pending",
- "verdict_text": "Watchlist",
- "summary": "Reliance's digital/telecom arm."
+ "source": "rhp",
+ "analysed": "2026-10-15",
+ "verdict": "neutral",
+ "verdict_text": "Neutral",
+ "summary": "Reliance's digital/telecom holding company: Jio (533 mn customers), JioAirFiber (14 mn), proprietary 5G stack; 100% fresh issue, ₹27,500 Cr to repay RJIL debt.",
+ "financials": "FY26 revenue ₹1,46,885 Cr (+15%), PAT ₹30,049 Cr (20.5% margin, +15%)",
+ "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+ "positives": [
+  "Operating cash flow ₹77,556 Cr in FY26 vs capex ₹34,255 Cr",
+  "Largest Indian telecom base; ₹27,500 Cr proceeds cut debt",
+  "35% retail quota"
+ ],
+ "red_flags": [
+  "₹30,213 Cr issue at ~₹10 lakh Cr market cap; ~33x P/E for mid-teens growth",
+  "Finance costs doubled to ₹8,653 Cr in FY26; ~₹1.05 lakh Cr spectrum liabilities",
+  "Industry data from company-commissioned report"
+ ],
+ "anchor": "Pending — anchor bidding 20 Oct",
+ "anchor_grade": "pending"
 }
