@@ -63,6 +63,15 @@ GRADE = {"strong": ("Strong", "#137333"), "average": ("Average", "#B06000"),
 FONT = "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;"
 
 
+def table(style="", bg=None, width="100%"):
+    """Layout table. Backgrounds go in a bgcolor attribute plus background-color: Gmail drops the
+    `background:` shorthand, which left the header's white text on a white page."""
+    attrs = f' bgcolor="{bg}"' if bg else ""
+    style = (f"background-color:{bg};" if bg else "") + style
+    return (f'<table role="presentation" width="{width}" cellpadding="0" cellspacing="0"{attrs}'
+            + (f' style="{style}"' if style else "") + ">")
+
+
 def esc(s):
     return html.escape(str(s if s is not None else ""))
 
@@ -115,7 +124,7 @@ def gmp_trend_line(ipo):
 
 def sub_by_day(t):
     """Category × bidding-day table of subscription (shown once there are 2+ days)."""
-    head = ('<tr style="background:#F1F3F4"><th></th>'
+    head = ('<tr bgcolor="#F1F3F4"><th></th>'
             + "".join(f'<th style="padding:5px 8px;font-size:11px;color:#5F6368;text-align:right">Day {x["day"]}'
                       f'<div style="font-weight:400">{esc(dt.date.fromisoformat(x["date"]).strftime("%a %d"))}</div></th>'
                       for x in t["days"]) + "</tr>")
@@ -128,9 +137,8 @@ def sub_by_day(t):
                     + "".join(f'<td style="padding:4px 8px;font-size:13px;text-align:right;{bold}">{x["times"][k]:g}x</td>'
                               for x in t["days"]) + "</tr>")
     return (f'<div style="font-size:13px;font-weight:700;color:#202124;margin:14px 0 4px">Subscription by day</div>'
-            f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
-            f'style="border:1px solid #E8EAED;border-radius:8px;border-collapse:separate;overflow:hidden">'
-            f'{head}{"".join(rows)}</table>')
+            + table("border:1px solid #E8EAED;border-radius:8px;border-collapse:separate;overflow:hidden")
+            + f'{head}{"".join(rows)}</table>')
 
 
 def phase_label(ipo, today):
@@ -151,13 +159,13 @@ def phase_label(ipo, today):
 
 def pill(text, bg, fg, size=12):
     return (f'<span style="display:inline-block;padding:3px 10px;border-radius:999px;'
-            f'background:{bg};color:{fg};font-size:{size}px;font-weight:600;line-height:1.3">{esc(text)}</span>')
+            f'background-color:{bg};color:{fg};font-size:{size}px;font-weight:600;line-height:1.3">{esc(text)}</span>')
 
 
 def fact(label, value):
-    return (f'<td style="padding:8px 10px;vertical-align:top;width:50%">'
-            f'<div style="font-size:11px;color:#5F6368;text-transform:uppercase;letter-spacing:.4px">{esc(label)}</div>'
-            f'<div style="font-size:14px;color:#202124;font-weight:600;margin-top:2px">{value}</div></td>')
+    return (f'<td valign="top" width="50%" style="padding:8px 10px">'
+            f'<div style="font-size:11px;color:#5F6368">{esc(label.upper())}</div>'
+            f'<b style="font-size:14px;color:#202124">{value}</b></td>')
 
 
 def facts_grid(pairs):
@@ -165,10 +173,9 @@ def facts_grid(pairs):
     for i in range(0, len(pairs), 2):
         cells = "".join(fact(k, v) for k, v in pairs[i:i + 2])
         if len(pairs[i:i + 2]) == 1:
-            cells += '<td style="width:50%"></td>'
+            cells += '<td width="50%"></td>'
         rows.append(f"<tr>{cells}</tr>")
-    return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
-            f'style="background:#F8F9FA;border-radius:8px;margin:12px 0">{"".join(rows)}</table>')
+    return table("border-radius:8px;margin:12px 0", "#F8F9FA") + f'{"".join(rows)}</table>'
 
 
 def sub_table(sub):
@@ -184,17 +191,16 @@ def sub_table(sub):
         bold = "font-weight:700;" if k == "total" else ""
         rows.append(
             f'<tr><td style="padding:4px 0;font-size:13px;color:#3C4043;{bold}width:90px">{label}</td>'
-            f'<td style="padding:4px 8px"><div style="background:#E8F0FE;border-radius:4px;height:10px">'
-            f'<div style="background:#1A73E8;border-radius:4px;height:10px;width:{w}%"></div></div></td>'
+            f'<td style="padding:4px 8px">{table("border-radius:4px", "#E8F0FE")}<tr><td>{table("border-radius:4px", "#1A73E8", f"{w}%")}'
+            f'<tr><td height="10" style="font-size:0;line-height:0">&nbsp;</td></tr></table></td></tr></table></td>'
             f'<td style="padding:4px 0;font-size:13px;text-align:right;{bold}width:60px">{t:g}x</td></tr>')
     return (f'<div style="font-size:13px;font-weight:700;color:#202124;margin:14px 0 4px">Live subscription</div>'
-            f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{"".join(rows)}</table>')
+            + table() + f'{"".join(rows)}</table>')
 
 
 def category_table(cats, best):
-    head = ('<tr style="background:#F1F3F4">'
-            + "".join(f'<th style="padding:6px 8px;font-size:11px;color:#5F6368;text-align:{a};'
-                      f'text-transform:uppercase;letter-spacing:.4px">{h}</th>'
+    head = ('<tr bgcolor="#F1F3F4">'
+            + "".join(f'<th align="{a}" style="padding:6px 8px;font-size:11px;color:#5F6368">{h.upper()}</th>'
                       for h, a in (("Category", "left"), ("Min", "left"),
                                    ("Amount", "right"), ("Odds", "right")))
             + "</tr>")
@@ -202,16 +208,16 @@ def category_table(cats, best):
     for c in cats:
         is_best = best and c["category"] == best
         star = ' <span style="color:#137333">★</span>' if is_best else ""
-        bg = "background:#E6F4EA;" if is_best else ""
+        bg = ' bgcolor="#E6F4EA"' if is_best else ""
+        cell = 'style="padding:6px 8px;font-size:13px"'
         rows.append(
-            f'<tr style="{bg}"><td style="padding:6px 8px;font-size:13px;font-weight:600">{esc(SHORT.get(c["category"], c["label"]))}{star}</td>'
-            f'<td style="padding:6px 8px;font-size:13px;white-space:nowrap">{c["min_lots"]} lot</td>'
-            f'<td style="padding:6px 8px;font-size:13px;text-align:right">{inr(c["min_amount"])}</td>'
-            f'<td style="padding:6px 8px;font-size:13px;text-align:right">{esc(odds(c))}</td></tr>')
+            f'<tr{bg}><td style="padding:6px 8px;font-size:13px;font-weight:600">{esc(SHORT.get(c["category"], c["label"]))}{star}</td>'
+            f'<td nowrap {cell}>{c["min_lots"]} lot</td>'
+            f'<td align="right" {cell}>{inr(c["min_amount"])}</td>'
+            f'<td align="right" {cell}>{esc(odds(c))}</td></tr>')
     return (f'<div style="font-size:13px;font-weight:700;color:#202124;margin:14px 0 4px">Where to apply</div>'
-            f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
-            f'style="border:1px solid #E8EAED;border-radius:8px;border-collapse:separate;overflow:hidden">'
-            f'{head}{"".join(rows)}</table>'
+            + table("border:1px solid #E8EAED;border-radius:8px;border-collapse:separate;overflow:hidden")
+            + f'{head}{"".join(rows)}</table>'
             + ('<div style="font-size:11px;color:#80868B;margin-top:4px">★ best category · odds appear once bidding starts</div>'
                if all(c["odds_text"] == "n/a" for c in cats) else
                '<div style="font-size:11px;color:#80868B;margin-top:4px">★ best category · odds are a conservative floor</div>'))
@@ -227,10 +233,10 @@ def odds(c):
 def bullets(items, icon, color):
     if not items:
         return ""
-    lis = "".join(f'<tr><td style="vertical-align:top;padding:2px 8px 2px 0;color:{color};font-size:14px">{icon}</td>'
+    lis = "".join(f'<tr><td valign="top" style="padding:2px 8px 2px 0;color:{color};font-size:14px">{icon}</td>'
                   f'<td style="padding:2px 0;font-size:14px;color:#3C4043;line-height:1.45">{esc(t)}</td></tr>'
                   for t in items)
-    return f'<table role="presentation" cellpadding="0" cellspacing="0" style="margin:4px 0">{lis}</table>'
+    return table("margin:4px 0", width="auto") + f'{lis}</table>'
 
 
 def best_label(ipo, v):
@@ -291,8 +297,7 @@ def card(ipo, v, today):
         g, gc = GRADE.get((v.get("anchor_grade") or "pending").lower(), GRADE["pending"])
         body.append(f'<p style="font-size:13px;color:#3C4043;margin:12px 0 0"><b>Anchor book:</b> '
                     f'<span style="color:{gc};font-weight:700">{g}</span> · {esc(v["anchor"])}</p>')
-    return (f'<tr><td style="padding:0 0 16px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
-            f'style="background:#FFFFFF;border:1px solid #E8EAED;border-radius:12px">'
+    return (f'<tr><td style="padding:0 0 16px">{table("border:1px solid #E8EAED;border-radius:12px", "#FFFFFF")}'
             f'<tr><td style="padding:18px 20px">{"".join(body)}</td></tr></table></td></tr>')
 
 
@@ -305,12 +310,11 @@ def glance(ipos, verdicts, today):
             f'<tr><td style="padding:9px 0;border-bottom:1px solid #F1F3F4;font-size:14px;font-weight:600;color:#202124">'
             f'{esc(i["name"])}<div style="font-size:12px;font-weight:400;color:#5F6368;margin-top:1px">'
             f'{esc(phase_label(i, today))} · GMP {esc(gmp_text(i, short=True))}{gmp_arrow(i)}</div></td>'
-            f'<td style="padding:9px 0 9px 8px;border-bottom:1px solid #F1F3F4;text-align:right;vertical-align:middle">'
+            f'<td align="right" valign="middle" style="padding:9px 0 9px 8px;border-bottom:1px solid #F1F3F4">'
             f'{pill(v.get("verdict_text") or vlabel, vbg, vfg, 11)}</td></tr>')
-    return (f'<tr><td style="padding:0 0 16px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
-            f'style="background:#FFFFFF;border:1px solid #E8EAED;border-radius:12px"><tr><td style="padding:16px 18px">'
-            f'<div style="font-size:12px;font-weight:700;color:#5F6368;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px">At a glance</div>'
-            f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{"".join(rows)}</table>'
+    return (f'<tr><td style="padding:0 0 16px">{table("border:1px solid #E8EAED;border-radius:12px", "#FFFFFF")}<tr><td style="padding:16px 18px">'
+            f'<div style="font-size:12px;font-weight:700;color:#5F6368;letter-spacing:.5px;margin-bottom:2px">AT A GLANCE</div>'
+            f'{table()}{"".join(rows)}</table>'
             f'</td></tr></table></td></tr>')
 
 
@@ -353,12 +357,12 @@ def render_html(rep, snap):
     errs = snap.get("errors") or {}
     src = f"Data as of {snap['generated_at'][11:16]} IST · NSE, SEBI, Investorgain, company RHPs" + \
           (f" · source errors: {esc(', '.join(errs))}" if errs else "")
-    return f"""<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8"></head><body style="margin:0;padding:0;background:#F1F3F4;{FONT}word-break:break-word;-webkit-text-size-adjust:100%">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F1F3F4"><tr><td align="center" style="padding:20px 12px">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px">
-<tr><td style="padding:0 0 16px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#1A3D7C;border-radius:12px">
+    return f"""<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8"></head><body bgcolor="#F1F3F4" style="margin:0;padding:0;background-color:#F1F3F4;{FONT}word-break:break-word;-webkit-text-size-adjust:100%">
+{table(bg="#F1F3F4")}<tr><td align="center" style="padding:20px 12px">
+{table("max-width:640px")}
+<tr><td style="padding:0 0 16px">{table("border-radius:12px", "#1A3D7C")}
 <tr><td style="padding:22px 24px">
-<div style="font-size:12px;color:#AECBFA;text-transform:uppercase;letter-spacing:1px">{esc(rep['session'])} brief · {esc(dt.date.fromisoformat(today).strftime('%A, %d %B %Y'))}</div>
+<div style="font-size:12px;color:#AECBFA;letter-spacing:1px">{esc(rep['session'])} BRIEF · {esc(dt.date.fromisoformat(today).strftime('%A, %d %B %Y').upper())}</div>
 <div style="font-size:26px;font-weight:700;color:#FFFFFF;margin-top:4px">📈 IPO Brief</div>
 <div style="font-size:14px;color:#D2E3FC;margin-top:6px">{stats} &nbsp;·&nbsp; mainboard</div>{headline}
 </td></tr></table></td></tr>
@@ -433,7 +437,10 @@ def main(argv=None):
     rep_path = pathlib.Path(argv[0])
     rep = json.loads(rep_path.read_text())
     snap = json.loads((ROOT / "data" / "latest.json").read_text())
-    rep_path.with_suffix(".html").write_text(render_html(rep, snap))
+    page = render_html(rep, snap)
+    rep_path.with_suffix(".html").write_text(page)
+    if len(page.encode()) > 95_000:
+        print(f"warning: HTML is {len(page.encode()) // 1000} KB; Gmail clips emails above ~102 KB", file=sys.stderr)
     rep_path.with_suffix(".txt").write_text(render_text(rep, snap))
     missing = [i["key"] for i in snap["ipos"] if i["key"] not in merged(rep, snap["ipos"])]
     if missing:

@@ -188,16 +188,20 @@ It prints the email subject and writes `reports/<…>.html` (designed email) and
 
 Send with the Gmail connector to the address in `config/delivery.json` (`"to"`), using the subject the
 renderer printed.
-- Look at the Gmail send tool's parameters. If it accepts HTML (e.g. an `html_body` / `htmlBody`
-  field, an `html` / `is_html` flag, or a content/mime type), send the **`.html` file contents as
-  the HTML body** and the `.txt` contents as the plain-text body if there is a separate field.
-  Otherwise send the `.txt` contents as the body. Send the file contents exactly — do not rewrite,
-  summarise or shorten them.
-- If the send fails, wait ~30 s and retry up to 3 times with the same body.
-- In your final message, say which format was sent (HTML or plain text).
+- **Always send the `.html` file as the HTML body.** The Gmail connector takes HTML (look for the
+  HTML field: e.g. `html_body` / `htmlBody`, an `html` / `is_html` flag, or a content/mime type);
+  put the `.txt` contents in the plain-text field if there is a separate one. The HTML is long
+  (~60 KB) — that is expected; send the whole file anyway. Never send the `.txt` instead because the
+  HTML is long, the run was busy, or to save time: a plain-text brief is unreadable in Gmail.
+- Send the file contents exactly — do not rewrite, summarise, shorten or reformat them.
+- If the send fails, wait ~30 s and retry up to 3 times with the same body. Only if all HTML
+  attempts fail (or the tool truly has no HTML field) send the `.txt` as the body, and say why
+  in your final message.
+- In your final message, say which format was sent (HTML or plain text), and put it in the commit
+  message in step 5.
 
 ## 5. Save
 
 ```bash
-git add data reports analysis && git commit -m "IPO brief <date> <am|pm>" && git push origin HEAD:main
+git add data reports analysis && git commit -m "IPO brief <date> <am|pm> (<HTML|plain text>)" && git push origin HEAD:main
 ```
