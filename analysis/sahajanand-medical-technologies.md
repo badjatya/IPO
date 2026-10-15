@@ -49,7 +49,7 @@ EV/EBITDA ≈ 21.6x (mcap + Mar-26 borrowings − cash) · P/B ≈ 5.5x (NAV ₹
 None — pure OFS. All proceeds (~₹475 Cr) go to the selling shareholders after offer expenses; the company receives nothing and no debt is repaid despite ₹270–320 Cr of borrowings.
 
 ## Anchor book
-**Pending** — anchor bidding is on 14 Oct; up to 60% of the QIB portion can go to anchors (one-third of that reserved for domestic MFs, 6.67% for insurers/pension funds). No allocation found in news yet. Next run: list top names, number of anchors, and grade (Strong/Average/Weak). Lock-in 50% 30 days, 50% 90 days.
+₹140 Cr from 10 anchors at ₹344 (40.7 lakh sh). Nippon Small Cap ₹39.4 Cr, DSP Healthcare ₹20.3 Cr, Invesco Pharma & Healthcare, UTI Healthcare, Allianz Global ₹15 Cr each, Loomis Sayles ₹11 Cr, Tata AIA ₹10 Cr, WhiteOak (3 funds). 74% to domestic MFs, mostly healthcare funds. Lock-in 50% 30d / 50% 90d. Grade: **Strong**.
 
 ## Red flags
 - 100% OFS with PE funds (Samara, Kotak Pre-IPO, NHPEA) among sellers — exit, no growth or debt-reduction capital

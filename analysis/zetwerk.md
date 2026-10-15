@@ -32,7 +32,7 @@ P/E not meaningful (loss-making: EPS −₹11.02 FY26). RHP says no comparable l
 Fresh ₹2,830 Cr: ₹1,300 Cr repay company borrowings, ₹860 Cr repay subsidiary borrowings, balance for unidentified acquisitions and general corporate purposes (cap 35% of gross). OFS proceeds go to sellers. Not appraised by any bank.
 
 ## Anchor book
-**Pending** — anchor bidding on 14 Oct. Grade: pending.
+₹2,251 Cr from dozens of anchors at ₹151 (14.9 Cr sh). Top: Smallcap World Fund ₹288 Cr, SBI Balanced Advantage ₹124 Cr, ICICI Pru (3 funds), HDFC MF (several), Govt Pension Fund Global & ADIA ₹75 Cr each, Mirae, Nomura, BlackRock, Goldman Sachs. 45.6% to 22 domestic MFs. Lock-in 50% 30d / 50% 90d. Grade: **Strong**.
 
 ## Red flags
 - Persistent losses (₹1,606 Cr FY26) with thin 2–3% EBITDA margin

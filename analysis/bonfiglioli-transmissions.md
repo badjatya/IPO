@@ -32,7 +32,7 @@ At ₹586: P/E ≈46x CY25 EPS (computed) vs listed peers 31.6x (Elecon) – 63.
 None for the company — entire proceeds go to the parent.
 
 ## Anchor book
-**Pending** — anchor bidding on 14 Oct. Grade: pending.
+₹759 Cr from ~50 anchors at ₹586 (1.30 Cr sh). Top: Nippon (Small Cap ₹33.6 Cr + others), SBI MF (3 schemes), ICICI Pru Innovation ₹40 Cr, HDFC MF (many), Axis, Govt Pension Fund Global, Goldman Sachs, Mirae, ADIA, PSP, Allianz, Invesco, Franklin, DSP. Lock-in 50% 30d / 50% 90d. Grade: **Strong**.
 
 ## Red flags
 - 100% OFS: parent cashing out, no growth capital

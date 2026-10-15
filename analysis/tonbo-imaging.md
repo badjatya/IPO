@@ -54,7 +54,7 @@ Priced roughly in line with the peer average (below Paras/Data Patterns/Astra, a
 None — pure OFS of 12,174,046 shares (~₹852 Cr). All proceeds go to the selling shareholders after offer expenses and taxes; the company only bears listing fees and its own advertising. No capital for working capital, which is the company's actual stress point.
 
 ## Anchor book
-**Pending** — anchor bidding is expected on the working day before opening (14 Oct); allocation of ~60% of the QIB portion (≈₹255 Cr if QIB is 50% of the offer) is normally filed with the exchanges that evening. Next run: list top names, number of anchors, and grade (Strong/Average/Weak). Note lock-in: 50% for 30 days, 50% for 90 days. Pre-IPO secondary buyers already include SBI MF funds, HDFC Life and 360 ONE, a positive sign of institutional interest.
+₹255 Cr from ~43 anchors at ₹700 (36.5 lakh sh). Top: SBI Infrastructure, ICICI Pru Smallcap, Aranda, Goldman Sachs India Equity (₹17.5 Cr each), HDFC Defence, Nippon, Kotak, BlackRock, Axis, ABSL, WhiteOak, PSP Investments. Lock-in 50% 30d / 50% 90d. Grade: **Strong**.
 
 ## Red flags
 - 100% OFS: no money to the company while working capital days have ballooned to 517 and operating cash flow is negative two years running

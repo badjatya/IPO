@@ -1,0 +1,12 @@
+{"date": "2026-10-15", "session": "AM",
+ "headline": "HD Fire closes today — Retail 8x, GMP steady ~33%, apply via Retail; Tonbo, Zetwerk, Bonfiglioli, SMT open today with strong anchor books",
+ "ipos": {
+  "hd-fire-protect": {"verdict": "apply", "verdict_text": "Apply", "best_category": "Retail", "category_note": "Closes today. GMP steady ₹83–91 (~33%). Retail 8x vs HNI ~31x, so Retail has the best odds; 1 lot per family PAN"},
+  "fusion-cx": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Small HNI", "category_note": "Day 2: Retail 1.09x, sNII 0.47x, so allotment is near-certain. GMP ₹33 (11%), up from ₹10; recheck on 16 Oct"},
+  "tonbo-imaging": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": null, "category_note": "Opens today, no subscription yet. GMP ₹500 (71%), rising. Anchor book strong (₹255 Cr: SBI, ICICI Pru, HDFC, Goldman). Fundamentals weak (falling profit, 79x P/E), so apply only for a quick listing exit. Recheck on 19 Oct"},
+  "zetwerk": {"verdict": "neutral", "verdict_text": "Neutral", "best_category": null, "category_note": "Opens today, no subscription yet. GMP ₹22 (~15%). Anchor book strong (₹2,251 Cr incl. Smallcap World, SBI, ICICI Pru) but company is loss-making. Recheck on 19 Oct"},
+  "bonfiglioli-transmissions": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": null, "category_note": "Opens today, no subscription yet. GMP ₹178 (30%). Anchor book strong (₹759 Cr, ~50 anchors). 100% OFS. Recheck on 19 Oct"},
+  "sahajanand-medical-technologies": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": null, "category_note": "Opens today, no subscription yet. GMP ₹41 (12%), steady. Anchor book strong (₹140 Cr, mostly healthcare funds). Recheck on 19 Oct"},
+  "paras-healthcare": {"verdict": "pending", "verdict_text": "Analysis pending", "best_category": null, "category_note": "Price band not announced; RHP not filed — analysis pending"}
+ },
+ "notes": ["Subscription for the 15 Oct openers is not live yet at 09:07 IST.", "Anchor allocations read from the NSE anchor letters (Bonfiglioli's is a scanned PDF, read manually; anchor count approximate)."]}
