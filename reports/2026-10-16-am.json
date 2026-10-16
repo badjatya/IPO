@@ -1,0 +1,12 @@
+{"date":"2026-10-16","session":"AM",
+"headline":"Fusion CX closes today — GMP 7.6% and falling from ₹35 peak, QIB barely bid; Tonbo GMP steady at ~71%",
+"ipos":{
+"fusion-cx":{"verdict":"neutral","verdict_text":"Neutral","best_category":"Big HNI","category_note":"Closes today. GMP falling since 13 Oct (peak ₹35, now ₹22); QIB 0.05x. bNII/sNII ≈ full allotment but ties up ₹2–10 L for ~7% — Retail (≥1 in 3) only if you'd hold"},
+"tonbo-imaging":{"verdict":"listing_gains","verdict_text":"Listing gains only","best_category":"Retail","category_note":"GMP steady ~₹500 (71%); Retail 2.35x is least subscribed — 1 lot per family PAN. Recheck on 19 Oct close"},
+"zetwerk":{"verdict":"neutral","verdict_text":"Neutral","best_category":"Retail","category_note":"GMP falling since 13 Oct (₹23 → ₹14); 0.14x subscribed so far — wait for Day 3, apply only if you'd hold"},
+"bonfiglioli-transmissions":{"verdict":"listing_gains","verdict_text":"Listing gains only","best_category":"Retail","category_note":"GMP falling since 14 Oct (₹181 → ₹140) but still ~24%; 0.36x so far — recheck 19 Oct"},
+"sahajanand-medical-technologies":{"verdict":"listing_gains","verdict_text":"Listing gains only","best_category":"Retail","category_note":"GMP ~12.5%, off ₹47 peak; 0.14x so far — recheck 19 Oct"},
+"hd-fire-protect":{"verdict":"apply","verdict_text":"Apply","best_category":"Retail","category_note":"Bids closed, 82x subscribed; allotment today, listing 21 Oct. GMP ₹82 (30%), slightly off ₹91 peak"},
+"paras-healthcare":{"category_note":"GMP falling (₹111 → ₹95); RHP not filed — analysis pending"}
+},
+"notes":[]}

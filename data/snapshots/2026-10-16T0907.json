@@ -1,0 +1,1585 @@
+{
+ "generated_at": "2026-10-16T09:07+05:30",
+ "date": "2026-10-16",
+ "ipos": [
+  {
+   "key": "fusion-cx",
+   "name": "Fusion CX",
+   "open": "2026-10-14",
+   "close": "2026-10-16",
+   "allotment": "2026-10-19",
+   "listing": "2026-10-22",
+   "price": 289.0,
+   "lot": 51,
+   "size_cr": 702.0,
+   "gmp": 22.0,
+   "gmp_pct": 7.61,
+   "gmp_low": 19.0,
+   "gmp_high": 55.0,
+   "pe": 21.62,
+   "gmp_updated": "16-Oct 7:02",
+   "url": "https://www.investorgain.com/gmp/fusion-cx-ipo/1792/",
+   "nse": {
+    "company": "Fusion CX Limited",
+    "symbol": "FUSIONCX",
+    "issue_period": [
+     "14-Oct-2026",
+     "16-Oct-2026"
+    ],
+    "price_low": 275.0,
+    "price_high": 289.0,
+    "face_value": "Re. 1 per Equity Share",
+    "lot": 51,
+    "issue_size_text": "Initial Public Offer comprising of Fresh Issue aggregating upto Rs. 5000 million and Offer for Sale aggregating upto Rs.2020 million (including Anchor reservation portion of 1,09,30,795 Equity Shares)",
+    "employee_discount": "NA",
+    "lead_managers": "Nuvama Wealth Management Limited, IIFL Capital Services Limited and Motilal Oswal Investment Advisors Limited",
+    "registrar": "KFin Technologies Limited",
+    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_FUSIONCX.zip",
+    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_FUSIONCX.zip",
+    "anchor_report_url": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_FUSIONCX.zip",
+    "subscription": {
+     "qib": {
+      "shares_offered": 7658183.0,
+      "shares_bid": 359346.0,
+      "times": 0.05
+     },
+     "nii": {
+      "shares_offered": 3829090.0,
+      "shares_bid": 4297821.0,
+      "times": 1.12
+     },
+     "bnii": {
+      "shares_offered": 2552727.0,
+      "shares_bid": 2379201.0,
+      "times": 0.93
+     },
+     "snii": {
+      "shares_offered": 1276363.0,
+      "shares_bid": 1918620.0,
+      "times": 1.5
+     },
+     "retail": {
+      "shares_offered": 2552727.0,
+      "shares_bid": 6834000.0,
+      "times": 2.68
+     },
+     "total": {
+      "shares_offered": 14040000.0,
+      "shares_bid": 11491167.0,
+      "times": 0.82
+     }
+    },
+    "series": "EQ"
+   },
+   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_FUSIONCX.zip",
+   "rhp_source": "nse",
+   "phase": "closing_today",
+   "price_high": 289.0,
+   "subscription": {
+    "qib": {
+     "shares_offered": 7658183.0,
+     "shares_bid": 359346.0,
+     "times": 0.05
+    },
+    "nii": {
+     "shares_offered": 3829090.0,
+     "shares_bid": 4297821.0,
+     "times": 1.12
+    },
+    "bnii": {
+     "shares_offered": 2552727.0,
+     "shares_bid": 2379201.0,
+     "times": 0.93
+    },
+    "snii": {
+     "shares_offered": 1276363.0,
+     "shares_bid": 1918620.0,
+     "times": 1.5
+    },
+    "retail": {
+     "shares_offered": 2552727.0,
+     "shares_bid": 6834000.0,
+     "times": 2.68
+    },
+    "total": {
+     "shares_offered": 14040000.0,
+     "shares_bid": 11491167.0,
+     "times": 0.82
+    }
+   },
+   "anchor_done": true,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 51,
+     "min_amount": 14739,
+     "subscription_x": 2.68,
+     "odds": 0.3731,
+     "odds_text": "≥1 in 3",
+     "gain_if_allotted": 1122,
+     "expected_gain": 419,
+     "return_on_blocked_pct": 2.84
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 714,
+     "min_amount": 206346,
+     "subscription_x": 1.5,
+     "odds": 0.6667,
+     "odds_text": "≥1 in 2",
+     "gain_if_allotted": 15708,
+     "expected_gain": 10472,
+     "return_on_blocked_pct": 5.07
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 68,
+     "min_shares": 3468,
+     "min_amount": 1002252,
+     "subscription_x": 0.93,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 76296,
+     "expected_gain": 76296,
+     "return_on_blocked_pct": 7.61
+    }
+   ],
+   "best_category": "bnii",
+   "analysis_file": "analysis/fusion-cx.md",
+   "needs_analysis": false,
+   "card_file": "analysis/fusion-cx.json",
+   "needs_card": false,
+   "card": {
+    "name": "Fusion CX",
+    "source": "rhp",
+    "analysed": "2026-10-12",
+    "verdict": "neutral",
+    "verdict_text": "Neutral",
+    "summary": "Customer-experience (CX/BPO) outsourcer with 40 delivery centres in 13 countries; telecom is 47% of revenue.",
+    "financials": "FY26 revenue ₹1,818 Cr (+37%), PAT ₹170 Cr (2.3x), RoNW 31%",
+    "quota": "QIB ≥75% · NII ≤15% · Retail ≤10%",
+    "positives": [
+     "Fast growth with operating cash flow ₹264 Cr above PAT ₹170 Cr",
+     "21.5x P/E vs peer average 26.7x; ₹500 Cr fresh issue, ₹276 Cr repays debt"
+    ],
+    "red_flags": [
+     "Top-10 customers ≈50% of revenue; acquisition-led growth (goodwill ₹363 Cr)",
+     "Promoters hold 96% and sell ₹202 Cr in the OFS; tiny 10% retail quota",
+     "FY26 margin jump (PAT 5.6% → 9.3%) unproven"
+    ],
+    "anchor": "₹315 Cr at ₹289; ~78% domestic MFs (Kotak, ICICI Pru, Motilal Oswal), Kotak Life, Kacholia's Bengal Finance",
+    "anchor_grade": "average"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-12",
+       "gmp": 10.0
+      },
+      {
+       "date": "2026-10-13",
+       "gmp": 33.5
+      },
+      {
+       "date": "2026-10-14",
+       "gmp": 35.0
+      },
+      {
+       "date": "2026-10-15",
+       "gmp": 17.0
+      },
+      {
+       "date": "2026-10-16",
+       "gmp": 22.0
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹10 → ₹33.5 → ₹35 → ₹17 → ₹22 since 12 Oct, falling (peak ₹35)"
+    },
+    "subscription": {
+     "days": [
+      {
+       "day": 1,
+       "date": "2026-10-14",
+       "times": {
+        "qib": 0.0,
+        "bnii": 0.31,
+        "snii": 0.47,
+        "retail": 1.09,
+        "total": 0.3
+       }
+      },
+      {
+       "day": 2,
+       "date": "2026-10-15",
+       "times": {
+        "qib": 0.05,
+        "bnii": 0.93,
+        "snii": 1.5,
+        "retail": 2.68,
+        "total": 0.82
+       }
+      }
+     ],
+     "text": "Day 1 → 2: Retail 1.09x → 2.68x · sNII 0.47x → 1.5x · bNII 0.31x → 0.93x · QIB 0x → 0.05x · Total 0.3x → 0.82x"
+    }
+   }
+  },
+  {
+   "key": "tonbo-imaging",
+   "name": "Tonbo Imaging India",
+   "open": "2026-10-15",
+   "close": "2026-10-19",
+   "allotment": "2026-10-21",
+   "listing": "2026-10-23",
+   "price": 700.0,
+   "lot": 21,
+   "size_cr": 852.18,
+   "gmp": 500.0,
+   "gmp_pct": 71.43,
+   "gmp_low": 270.0,
+   "gmp_high": 500.0,
+   "pe": 78.83,
+   "gmp_updated": "16-Oct 7:02",
+   "url": "https://www.investorgain.com/gmp/tonbo-imaging-india-ipo/2369/",
+   "nse": {
+    "company": "Tonbo Imaging India Limited",
+    "symbol": "TONBO",
+    "issue_period": [
+     "15-Oct-2026",
+     "19-Oct-2026"
+    ],
+    "price_low": 665.0,
+    "price_high": 700.0,
+    "face_value": "Rs. 2 per Equity Share",
+    "lot": 21,
+    "issue_size_text": "Initial Public Offer comprising of Offer for Sale of up to 12,174,046 Equity Shares (including Employee Reservation Portion of up to 14,000 Equity Shares and Anchor reservation portion of 36,48,013 Equity Shares)",
+    "employee_discount": "Rs. 65 per equity share to Eligible Employees",
+    "lead_managers": "JM Financial Limited and IIFL Capital Services Limited",
+    "registrar": "KFin Technologies Limited",
+    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_TONBO.zip",
+    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_TONBO.zip",
+    "anchor_report_url": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_TONBO.zip",
+    "subscription": {
+     "qib": {
+      "shares_offered": 2432009.0,
+      "shares_bid": 5225325.0,
+      "times": 2.15
+     },
+     "nii": {
+      "shares_offered": 1824007.0,
+      "shares_bid": 7737114.0,
+      "times": 4.24
+     },
+     "bnii": {
+      "shares_offered": 1216005.0,
+      "shares_bid": 4094958.0,
+      "times": 3.37
+     },
+     "snii": {
+      "shares_offered": 608002.0,
+      "shares_bid": 3642156.0,
+      "times": 5.99
+     },
+     "retail": {
+      "shares_offered": 4256017.0,
+      "shares_bid": 10007823.0,
+      "times": 2.35
+     },
+     "employee": {
+      "shares_offered": 14000.0,
+      "shares_bid": 77343.0,
+      "times": 5.52
+     },
+     "total": {
+      "shares_offered": 8526033.0,
+      "shares_bid": 23047605.0,
+      "times": 2.7
+     }
+    },
+    "series": "EQ"
+   },
+   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_TONBO.zip",
+   "rhp_source": "nse",
+   "phase": "open",
+   "price_high": 700.0,
+   "subscription": {
+    "qib": {
+     "shares_offered": 2432009.0,
+     "shares_bid": 5225325.0,
+     "times": 2.15
+    },
+    "nii": {
+     "shares_offered": 1824007.0,
+     "shares_bid": 7737114.0,
+     "times": 4.24
+    },
+    "bnii": {
+     "shares_offered": 1216005.0,
+     "shares_bid": 4094958.0,
+     "times": 3.37
+    },
+    "snii": {
+     "shares_offered": 608002.0,
+     "shares_bid": 3642156.0,
+     "times": 5.99
+    },
+    "retail": {
+     "shares_offered": 4256017.0,
+     "shares_bid": 10007823.0,
+     "times": 2.35
+    },
+    "employee": {
+     "shares_offered": 14000.0,
+     "shares_bid": 77343.0,
+     "times": 5.52
+    },
+    "total": {
+     "shares_offered": 8526033.0,
+     "shares_bid": 23047605.0,
+     "times": 2.7
+    }
+   },
+   "anchor_done": true,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 21,
+     "min_amount": 14700,
+     "subscription_x": 2.35,
+     "odds": 0.4255,
+     "odds_text": "≥1 in 2",
+     "gain_if_allotted": 10500,
+     "expected_gain": 4468,
+     "return_on_blocked_pct": 30.4
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 294,
+     "min_amount": 205800,
+     "subscription_x": 5.99,
+     "odds": 0.1669,
+     "odds_text": "≥1 in 6",
+     "gain_if_allotted": 147000,
+     "expected_gain": 24541,
+     "return_on_blocked_pct": 11.92
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 69,
+     "min_shares": 1449,
+     "min_amount": 1014300,
+     "subscription_x": 3.37,
+     "odds": 0.2967,
+     "odds_text": "≥1 in 3",
+     "gain_if_allotted": 724500,
+     "expected_gain": 214985,
+     "return_on_blocked_pct": 21.2
+    }
+   ],
+   "best_category": "retail",
+   "analysis_file": "analysis/tonbo-imaging.md",
+   "needs_analysis": false,
+   "card_file": "analysis/tonbo-imaging.json",
+   "needs_card": false,
+   "card": {
+    "name": "Tonbo Imaging India",
+    "source": "rhp",
+    "analysed": "2026-10-12",
+    "verdict": "listing_gains",
+    "verdict_text": "Listing gains only",
+    "summary": "Bengaluru defence-electronics maker: thermal imaging cores, weapon sights, targeting and missile-seeker systems; ~71% of revenue from the Indian government.",
+    "financials": "FY26 revenue ₹363 Cr (−23%), PAT ₹51 Cr (−30%); Q1 FY27 loss ₹17.7 Cr",
+    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+    "positives": [
+     "Owned, ITAR-free technology; #1 in Indian thermal imaging; ₹314 Cr order book",
+     "Defence theme; pre-IPO buyers include SBI MF, HDFC Life and 360 ONE"
+    ],
+    "red_flags": [
+     "Revenue and profit falling; operating cash flow negative two years running",
+     "Working-capital days 517; inventory tripled in two years",
+     "79x P/E on falling earnings; 100% OFS; promoters hold only 17%"
+    ],
+    "anchor": "₹255 Cr from ~43 anchors at ₹700 (36.5 lakh sh). Top: SBI Infrastructure, ICICI Pru Smallcap, Aranda, Goldman Sachs India Equity (₹17.5 Cr each), HDFC Defence, Nippon, Kotak, BlackRock, Axis, ABSL, WhiteOak, PSP Investments.",
+    "anchor_grade": "strong"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-12",
+       "gmp": 385.0
+      },
+      {
+       "date": "2026-10-13",
+       "gmp": 490.0
+      },
+      {
+       "date": "2026-10-14",
+       "gmp": 500.0
+      },
+      {
+       "date": "2026-10-15",
+       "gmp": 501.0
+      },
+      {
+       "date": "2026-10-16",
+       "gmp": 500.0
+      }
+     ],
+     "direction": "up",
+     "text": "GMP ₹385 → ₹490 → ₹500 → ₹501 → ₹500 since 12 Oct, rising"
+    },
+    "subscription": null
+   }
+  },
+  {
+   "key": "zetwerk",
+   "name": "Zetwerk",
+   "open": "2026-10-15",
+   "close": "2026-10-19",
+   "allotment": "2026-10-21",
+   "listing": "2026-10-23",
+   "price": 151.0,
+   "lot": 99,
+   "size_cr": 5012.33,
+   "gmp": 14.0,
+   "gmp_pct": 9.27,
+   "gmp_low": 14.0,
+   "gmp_high": 30.0,
+   "pe": -14.17,
+   "gmp_updated": "16-Oct 7:02",
+   "url": "https://www.investorgain.com/gmp/zetwerk-ipo/2279/",
+   "nse": {
+    "company": "Zetwerk Manufacturing Businesses Limited",
+    "symbol": "ZETWERK",
+    "issue_period": [
+     "15-Oct-2026",
+     "19-Oct-2026"
+    ],
+    "price_low": 143.0,
+    "price_high": 151.0,
+    "face_value": "Re. 1 per Equity Share",
+    "lot": 99,
+    "issue_size_text": "Initial Public offer comprising Fresh issue of aggregating up to Rs. 28,300 million and offer for sale up to 14,45,25,036 Equity Shares (Including Eligible Employee Reservation up to 7,00,000 Equity Shares and Anchor portion 14,90,88,220 Equity Shares)",
+    "employee_discount": "Rs. 14/- per equity share is being offered to Eligible Employees Bidding in the Employee Reservation Portion",
+    "lead_managers": "Kotak Mahindra Capital Company Limited, Morgan Stanley India Company Private Limited, Goldman Sachs (India) Securities Private Limited, Avendus Capital Private Limited, JM Financial Limited, HSBC Securities and Capital Markets (India) Private Limited and Pantomath Capital Advisors Private Limited",
+    "registrar": "KFin Technologies Limited",
+    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_ZETWERK.zip",
+    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_ZETWERK.zip",
+    "anchor_report_url": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_ZETWERK.zip",
+    "subscription": {
+     "qib": {
+      "shares_offered": 98917930.0,
+      "shares_bid": 16587747.0,
+      "times": 0.17
+     },
+     "nii": {
+      "shares_offered": 51269349.0,
+      "shares_bid": 3554793.0,
+      "times": 0.07
+     },
+     "bnii": {
+      "shares_offered": 34179566.0,
+      "shares_bid": 2471436.0,
+      "times": 0.07
+     },
+     "snii": {
+      "shares_offered": 17089783.0,
+      "shares_bid": 1083357.0,
+      "times": 0.06
+     },
+     "retail": {
+      "shares_offered": 34179566.0,
+      "shares_bid": 5274423.0,
+      "times": 0.15
+     },
+     "employee": {
+      "shares_offered": 700000.0,
+      "shares_bid": 159093.0,
+      "times": 0.23
+     },
+     "total": {
+      "shares_offered": 185066845.0,
+      "shares_bid": 25576056.0,
+      "times": 0.14
+     }
+    },
+    "series": "EQ"
+   },
+   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_ZETWERK.zip",
+   "rhp_source": "nse",
+   "phase": "open",
+   "price_high": 151.0,
+   "subscription": {
+    "qib": {
+     "shares_offered": 98917930.0,
+     "shares_bid": 16587747.0,
+     "times": 0.17
+    },
+    "nii": {
+     "shares_offered": 51269349.0,
+     "shares_bid": 3554793.0,
+     "times": 0.07
+    },
+    "bnii": {
+     "shares_offered": 34179566.0,
+     "shares_bid": 2471436.0,
+     "times": 0.07
+    },
+    "snii": {
+     "shares_offered": 17089783.0,
+     "shares_bid": 1083357.0,
+     "times": 0.06
+    },
+    "retail": {
+     "shares_offered": 34179566.0,
+     "shares_bid": 5274423.0,
+     "times": 0.15
+    },
+    "employee": {
+     "shares_offered": 700000.0,
+     "shares_bid": 159093.0,
+     "times": 0.23
+    },
+    "total": {
+     "shares_offered": 185066845.0,
+     "shares_bid": 25576056.0,
+     "times": 0.14
+    }
+   },
+   "anchor_done": true,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 99,
+     "min_amount": 14949,
+     "subscription_x": 0.15,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 1386,
+     "expected_gain": 1386,
+     "return_on_blocked_pct": 9.27
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 1386,
+     "min_amount": 209286,
+     "subscription_x": 0.06,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 19404,
+     "expected_gain": 19404,
+     "return_on_blocked_pct": 9.27
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 67,
+     "min_shares": 6633,
+     "min_amount": 1001583,
+     "subscription_x": 0.07,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 92862,
+     "expected_gain": 92862,
+     "return_on_blocked_pct": 9.27
+    }
+   ],
+   "best_category": "retail",
+   "analysis_file": "analysis/zetwerk.md",
+   "needs_analysis": false,
+   "card_file": "analysis/zetwerk.json",
+   "needs_card": false,
+   "card": {
+    "name": "Zetwerk",
+    "source": "rhp",
+    "analysed": "2026-10-13",
+    "verdict": "neutral",
+    "verdict_text": "Neutral",
+    "summary": "Tech-led manufacturing platform (energy, precision, capital goods) with 26 own plants and ~7,000 suppliers; ₹5,012 Cr issue.",
+    "financials": "FY26 revenue ₹15,913 Cr (+40%), adj. EBITDA 2.7%, net loss ₹1,606 Cr",
+    "quota": "QIB ≥75% · NII ≤15% · Retail ≤10%",
+    "positives": [
+     "Revenue +40% in FY26; ₹13,062 Cr manufacturing order book",
+     "₹2,160 Cr of fresh issue repays debt"
+    ],
+    "red_flags": [
+     "Loss-making every year; ₹1,606 Cr loss FY26 incl. discontinued ops",
+     "No listed peer; ~60x adj. EBITDA, thin 2.7% margin",
+     "Half the issue is OFS by VC funds; only 10% retail quota"
+    ],
+    "anchor": "₹2,251 Cr from dozens of anchors at ₹151 (14.9 Cr sh). Top: Smallcap World Fund ₹288 Cr, SBI Balanced Advantage ₹124 Cr, ICICI Pru (3 funds), HDFC MF (several), Govt Pension Fund Global & ADIA ₹75 Cr each, Mirae, Nomura, BlackRock, Goldman Sachs. 45.6% to 22 domestic MFs.",
+    "anchor_grade": "strong"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-12",
+       "gmp": 14.0
+      },
+      {
+       "date": "2026-10-13",
+       "gmp": 23.0
+      },
+      {
+       "date": "2026-10-14",
+       "gmp": 19.0
+      },
+      {
+       "date": "2026-10-15",
+       "gmp": 17.5
+      },
+      {
+       "date": "2026-10-16",
+       "gmp": 14.0
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹14 → ₹23 → ₹19 → ₹17.5 → ₹14 since 12 Oct, falling (peak ₹23)"
+    },
+    "subscription": null
+   }
+  },
+  {
+   "key": "bonfiglioli-transmissions",
+   "name": "Bonfiglioli Transmissions",
+   "open": "2026-10-15",
+   "close": "2026-10-19",
+   "allotment": "2026-10-21",
+   "listing": "2026-10-23",
+   "price": 586.0,
+   "lot": 25,
+   "size_cr": 2533.66,
+   "gmp": 140.0,
+   "gmp_pct": 23.89,
+   "gmp_low": 137.0,
+   "gmp_high": 178.0,
+   "pe": 46.32,
+   "gmp_updated": "16-Oct 7:02",
+   "url": "https://www.investorgain.com/gmp/bonfiglioli-transmissions-ipo/2124/",
+   "nse": {
+    "company": "Bonfiglioli Transmissions Limited",
+    "symbol": "BONFIG",
+    "issue_period": [
+     "15-Oct-2026",
+     "19-Oct-2026"
+    ],
+    "price_low": 558.0,
+    "price_high": 586.0,
+    "face_value": "Rs 10 per Equity Share",
+    "lot": 25,
+    "issue_size_text": "Initial Public Offer of offer for sale up to 4,32,39,042 Equity Shares (Including Eligible Employee Reservation of up to 50,000 Equity Shares and Anchor portion 1,29,56,712 Equity Shares)",
+    "employee_discount": "Rs. 29 per equity share to eligible employees",
+    "lead_managers": "Axis Capital Limited, BNP Paribas, ICICI Securities Limited and Jefferies India Private Limited",
+    "registrar": "MUFG Intime India Private Limited",
+    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_BONFIG.zip",
+    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_BONFIG.zip",
+    "anchor_report_url": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_BONFIG.zip",
+    "subscription": {
+     "qib": {
+      "shares_offered": 8637808.0,
+      "shares_bid": 517875.0,
+      "times": 0.06
+     },
+     "nii": {
+      "shares_offered": 6478357.0,
+      "shares_bid": 3819275.0,
+      "times": 0.59
+     },
+     "bnii": {
+      "shares_offered": 4318905.0,
+      "shares_bid": 2173125.0,
+      "times": 0.5
+     },
+     "snii": {
+      "shares_offered": 2159452.0,
+      "shares_bid": 1646150.0,
+      "times": 0.76
+     },
+     "retail": {
+      "shares_offered": 15116165.0,
+      "shares_bid": 6420075.0,
+      "times": 0.42
+     },
+     "employee": {
+      "shares_offered": 50000.0,
+      "shares_bid": 54250.0,
+      "times": 1.08
+     },
+     "total": {
+      "shares_offered": 30282330.0,
+      "shares_bid": 10811475.0,
+      "times": 0.36
+     }
+    },
+    "series": "EQ"
+   },
+   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_BONFIG.zip",
+   "rhp_source": "nse",
+   "phase": "open",
+   "price_high": 586.0,
+   "subscription": {
+    "qib": {
+     "shares_offered": 8637808.0,
+     "shares_bid": 517875.0,
+     "times": 0.06
+    },
+    "nii": {
+     "shares_offered": 6478357.0,
+     "shares_bid": 3819275.0,
+     "times": 0.59
+    },
+    "bnii": {
+     "shares_offered": 4318905.0,
+     "shares_bid": 2173125.0,
+     "times": 0.5
+    },
+    "snii": {
+     "shares_offered": 2159452.0,
+     "shares_bid": 1646150.0,
+     "times": 0.76
+    },
+    "retail": {
+     "shares_offered": 15116165.0,
+     "shares_bid": 6420075.0,
+     "times": 0.42
+    },
+    "employee": {
+     "shares_offered": 50000.0,
+     "shares_bid": 54250.0,
+     "times": 1.08
+    },
+    "total": {
+     "shares_offered": 30282330.0,
+     "shares_bid": 10811475.0,
+     "times": 0.36
+    }
+   },
+   "anchor_done": true,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 25,
+     "min_amount": 14650,
+     "subscription_x": 0.42,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 3500,
+     "expected_gain": 3500,
+     "return_on_blocked_pct": 23.89
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 350,
+     "min_amount": 205100,
+     "subscription_x": 0.76,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 49000,
+     "expected_gain": 49000,
+     "return_on_blocked_pct": 23.89
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 69,
+     "min_shares": 1725,
+     "min_amount": 1010850,
+     "subscription_x": 0.5,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 241500,
+     "expected_gain": 241500,
+     "return_on_blocked_pct": 23.89
+    }
+   ],
+   "best_category": "retail",
+   "analysis_file": "analysis/bonfiglioli-transmissions.md",
+   "needs_analysis": false,
+   "card_file": "analysis/bonfiglioli-transmissions.json",
+   "needs_card": false,
+   "card": {
+    "name": "Bonfiglioli Transmissions",
+    "source": "rhp",
+    "analysed": "2026-10-13",
+    "verdict": "listing_gains",
+    "verdict_text": "Listing gains only",
+    "summary": "Indian arm of Italy's Bonfiglioli: industrial gearboxes, geared motors and drives (industrial, off-highway, wind).",
+    "financials": "CY25 revenue ₹2,014 Cr (+9%), PAT ₹238 Cr (+24%), RoNW 24%, debt-free",
+    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+    "positives": [
+     "Debt-free, PAT margin 11.8% rising to 13% in H1 CY26",
+     "~46x P/E vs peer average 51.6x",
+     "35% retail quota"
+    ],
+    "red_flags": [
+     "100% OFS by parent — company gets nothing",
+     "Wind ≈27–32% of revenue; industry data from company-paid report"
+    ],
+    "anchor": "₹759 Cr from ~50 anchors at ₹586 (1.30 Cr sh). Top: Nippon (Small Cap ₹33.6 Cr + others), SBI MF (3 schemes), ICICI Pru Innovation ₹40 Cr, HDFC MF (many), Axis, Govt Pension Fund Global, Goldman Sachs, Mirae, ADIA, PSP, Allianz, Invesco, Franklin, DSP.",
+    "anchor_grade": "strong"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-12",
+       "gmp": 153.0
+      },
+      {
+       "date": "2026-10-13",
+       "gmp": 175.0
+      },
+      {
+       "date": "2026-10-14",
+       "gmp": 181.0
+      },
+      {
+       "date": "2026-10-15",
+       "gmp": 168.0
+      },
+      {
+       "date": "2026-10-16",
+       "gmp": 140.0
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹153 → ₹175 → ₹181 → ₹168 → ₹140 since 12 Oct, falling (peak ₹181)"
+    },
+    "subscription": null
+   }
+  },
+  {
+   "key": "sahajanand-medical-technologies",
+   "name": "Sahajanand Medical Technologies",
+   "open": "2026-10-15",
+   "close": "2026-10-19",
+   "allotment": "2026-10-21",
+   "listing": "2026-10-23",
+   "price": 344.0,
+   "lot": 43,
+   "size_cr": 475.48,
+   "gmp": 43.0,
+   "gmp_pct": 12.5,
+   "gmp_low": 35.0,
+   "gmp_high": 43.0,
+   "pe": 50.59,
+   "gmp_updated": "16-Oct 7:02",
+   "url": "https://www.investorgain.com/gmp/sahajanand-medical-technologies-ipo/1842/",
+   "nse": {
+    "company": "Sahajanand Medical Technologies Limited",
+    "symbol": "SMT",
+    "issue_period": [
+     "15-Oct-2026",
+     "19-Oct-2026"
+    ],
+    "price_low": 327.0,
+    "price_high": 344.0,
+    "face_value": "Re. 1 per Equity Share",
+    "lot": 43,
+    "issue_size_text": "Initial Public Offer comprising of Offer for sale upto 13,822,116 Equity Shares (Including Eligible Employees Reservation Portion of up to 2,50,000 Equity Shares and Anchor Allocation of 40,71,634 Equity Shares)",
+    "employee_discount": "NA",
+    "lead_managers": "Motilal Oswal Investment Advisors Limited, Avendus Capital Private Limited, HSBC Securities and Capital Markets (India) Private Limited , Nuvama Wealth Management Limited",
+    "registrar": "MUFG Intime India Private Limited",
+    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_SMT.zip",
+    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_SMT.zip",
+    "anchor_report_url": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_SMT.zip",
+    "subscription": {
+     "qib": {
+      "shares_offered": 2714423.0,
+      "shares_bid": 602.0,
+      "times": 0.0
+     },
+     "nii": {
+      "shares_offered": 2035818.0,
+      "shares_bid": 281564.0,
+      "times": 0.14
+     },
+     "bnii": {
+      "shares_offered": 1357212.0,
+      "shares_bid": 109994.0,
+      "times": 0.08
+     },
+     "snii": {
+      "shares_offered": 678606.0,
+      "shares_bid": 171570.0,
+      "times": 0.25
+     },
+     "retail": {
+      "shares_offered": 4750241.0,
+      "shares_bid": 1082353.0,
+      "times": 0.23
+     },
+     "employee": {
+      "shares_offered": 250000.0,
+      "shares_bid": 10965.0,
+      "times": 0.04
+     },
+     "total": {
+      "shares_offered": 9750482.0,
+      "shares_bid": 1375484.0,
+      "times": 0.14
+     }
+    },
+    "series": "EQ"
+   },
+   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_SMT.zip",
+   "rhp_source": "nse",
+   "phase": "open",
+   "price_high": 344.0,
+   "subscription": {
+    "qib": {
+     "shares_offered": 2714423.0,
+     "shares_bid": 602.0,
+     "times": 0.0
+    },
+    "nii": {
+     "shares_offered": 2035818.0,
+     "shares_bid": 281564.0,
+     "times": 0.14
+    },
+    "bnii": {
+     "shares_offered": 1357212.0,
+     "shares_bid": 109994.0,
+     "times": 0.08
+    },
+    "snii": {
+     "shares_offered": 678606.0,
+     "shares_bid": 171570.0,
+     "times": 0.25
+    },
+    "retail": {
+     "shares_offered": 4750241.0,
+     "shares_bid": 1082353.0,
+     "times": 0.23
+    },
+    "employee": {
+     "shares_offered": 250000.0,
+     "shares_bid": 10965.0,
+     "times": 0.04
+    },
+    "total": {
+     "shares_offered": 9750482.0,
+     "shares_bid": 1375484.0,
+     "times": 0.14
+    }
+   },
+   "anchor_done": true,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 43,
+     "min_amount": 14792,
+     "subscription_x": 0.23,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 1849,
+     "expected_gain": 1849,
+     "return_on_blocked_pct": 12.5
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 602,
+     "min_amount": 207088,
+     "subscription_x": 0.25,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 25886,
+     "expected_gain": 25886,
+     "return_on_blocked_pct": 12.5
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 68,
+     "min_shares": 2924,
+     "min_amount": 1005856,
+     "subscription_x": 0.08,
+     "odds": 1.0,
+     "odds_text": "full",
+     "gain_if_allotted": 125732,
+     "expected_gain": 125732,
+     "return_on_blocked_pct": 12.5
+    }
+   ],
+   "best_category": "retail",
+   "analysis_file": "analysis/sahajanand-medical-technologies.md",
+   "needs_analysis": false,
+   "card_file": "analysis/sahajanand-medical-technologies.json",
+   "needs_card": false,
+   "card": {
+    "name": "Sahajanand Medical Technologies",
+    "source": "rhp",
+    "analysed": "2026-10-12",
+    "verdict": "listing_gains",
+    "verdict_text": "Listing gains only",
+    "summary": "Surat-based maker of cardiac stents and structural-heart devices (TAVI, occluders); ~25% share of India's drug-eluting stent market, ~39% revenue from Europe.",
+    "financials": "FY26 revenue ₹1,211 Cr (+18%), PAT ₹69 Cr (5.7% margin); FY24 was a loss",
+    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+    "positives": [
+     "Real product franchise with 16% revenue CAGR and improving margins",
+     "35% retail quota helps allotment odds"
+    ],
+    "red_flags": [
+     "53x P/E vs 44x peers on thin 14% EBITDA margin",
+     "Net debt/EBITDA 4.9x; Q1 operating cash flow negative",
+     "100% OFS with PE funds exiting; Delhi Police and CBI notices seeking documents"
+    ],
+    "anchor": "₹140 Cr from 10 anchors at ₹344 (40.7 lakh sh). Nippon Small Cap ₹39.4 Cr, DSP Healthcare ₹20.3 Cr, Invesco Pharma & Healthcare, UTI Healthcare, Allianz Global ₹15 Cr each, Loomis Sayles ₹11 Cr, Tata AIA ₹10 Cr, WhiteOak (3 funds). 74% to domestic MFs, mostly healthcare funds.",
+    "anchor_grade": "strong"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-12",
+       "gmp": 40.0
+      },
+      {
+       "date": "2026-10-13",
+       "gmp": 41.0
+      },
+      {
+       "date": "2026-10-14",
+       "gmp": 37.0
+      },
+      {
+       "date": "2026-10-15",
+       "gmp": 47.0
+      },
+      {
+       "date": "2026-10-16",
+       "gmp": 43.0
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹40 → ₹41 → ₹37 → ₹47 → ₹43 since 12 Oct, falling (peak ₹47)"
+    },
+    "subscription": null
+   }
+  },
+  {
+   "key": "paras-healthcare",
+   "name": "Paras Healthcare",
+   "open": "2026-10-21",
+   "close": "2026-10-23",
+   "allotment": "2026-10-26",
+   "listing": "2026-10-28",
+   "price": 693.0,
+   "lot": 21,
+   "size_cr": 1450.0,
+   "gmp": 95.0,
+   "gmp_pct": 13.71,
+   "gmp_low": 83.0,
+   "gmp_high": 95.0,
+   "pe": 159.68,
+   "gmp_updated": "16-Oct 7:02",
+   "url": "https://www.investorgain.com/gmp/paras-healthcare-ipo/1728/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": "sebi",
+   "phase": "upcoming",
+   "price_high": 693.0,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 21,
+     "min_amount": 14553,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 1995,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 294,
+     "min_amount": 203742,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 27930,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 69,
+     "min_shares": 1449,
+     "min_amount": 1004157,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 137655,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    }
+   ],
+   "best_category": null,
+   "analysis_file": "analysis/paras-healthcare.md",
+   "needs_analysis": true,
+   "card_file": "analysis/paras-healthcare.json",
+   "needs_card": false,
+   "card": {
+    "name": "Paras Healthcare",
+    "source": "web",
+    "analysed": "2026-10-15",
+    "verdict": "pending",
+    "verdict_text": "Analysis pending",
+    "summary": "Haryana-based operator of 8 multi-specialty 'Paras Health' hospitals (Gurugram, Panchkula, Patna, Kanpur, Udaipur, Ranchi, Srinagar etc.); IPO of ~₹1,450 Cr per exchange data, RHP not filed yet."
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-15",
+       "gmp": 111.0
+      },
+      {
+       "date": "2026-10-16",
+       "gmp": 95.0
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹111 → ₹95 since 15 Oct, falling"
+    },
+    "subscription": null
+   }
+  },
+  {
+   "key": "jio-platforms",
+   "name": "Jio Platforms",
+   "open": "2026-10-21",
+   "close": "2026-10-23",
+   "allotment": "2026-10-26",
+   "listing": "2026-10-28",
+   "price": 1119.0,
+   "lot": 12,
+   "size_cr": 30213.0,
+   "gmp": 221.0,
+   "gmp_pct": 19.75,
+   "gmp_low": 148.0,
+   "gmp_high": 221.0,
+   "pe": 33.28,
+   "gmp_updated": "16-Oct 7:02",
+   "url": "https://www.investorgain.com/gmp/jio-platforms-ipo/2306/",
+   "nse": {
+    "company": "Jio Platforms Limited",
+    "symbol": "JPL",
+    "issue_period": [
+     "21-Oct-2026",
+     "23-Oct-2026"
+    ],
+    "price_low": 1065.0,
+    "price_high": 1119.0,
+    "face_value": "Rs. 10 per Equity Share",
+    "lot": 12,
+    "issue_size_text": "Initial Public Offer comprising of Fresh Issue of up to 27,00,00,000 equity shares (including Employee Reservation Portion aggregating up to Rs. 5000 million and Eligible RIL shareholders aggregating up to Rs. 25000 million)",
+    "employee_discount": "Rs. 54 per equity share to Eligible Employees",
+    "lead_managers": "Kotak Mahindra Capital Company Limited",
+    "registrar": "Kfin Technologies Limited",
+    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_JPL.zip",
+    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_JPL.zip",
+    "anchor_report_url": null,
+    "subscription": {},
+    "series": "EQ"
+   },
+   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_JPL.zip",
+   "rhp_source": "nse",
+   "phase": "upcoming",
+   "price_high": 1119.0,
+   "subscription": null,
+   "anchor_done": false,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 12,
+     "min_amount": 13428,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 2652,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 15,
+     "min_shares": 180,
+     "min_amount": 201420,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 39780,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 75,
+     "min_shares": 900,
+     "min_amount": 1007100,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 198900,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    }
+   ],
+   "best_category": null,
+   "analysis_file": "analysis/jio-platforms.md",
+   "needs_analysis": false,
+   "card_file": "analysis/jio-platforms.json",
+   "needs_card": false,
+   "card": {
+    "name": "Jio Platforms",
+    "source": "rhp",
+    "analysed": "2026-10-15",
+    "verdict": "neutral",
+    "verdict_text": "Neutral",
+    "summary": "Reliance's digital/telecom holding company: Jio (533 mn customers), JioAirFiber (14 mn), proprietary 5G stack; 100% fresh issue, ₹27,500 Cr to repay RJIL debt.",
+    "financials": "FY26 revenue ₹1,46,885 Cr (+15%), PAT ₹30,049 Cr (20.5% margin, +15%)",
+    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+    "positives": [
+     "Operating cash flow ₹77,556 Cr in FY26 vs capex ₹34,255 Cr",
+     "Largest Indian telecom base; ₹27,500 Cr proceeds cut debt",
+     "35% retail quota"
+    ],
+    "red_flags": [
+     "₹30,213 Cr issue at ~₹10 lakh Cr market cap; ~33x P/E for mid-teens growth",
+     "Finance costs doubled to ₹8,653 Cr in FY26; ~₹1.05 lakh Cr spectrum liabilities",
+     "Industry data from company-commissioned report"
+    ],
+    "anchor": "Pending — anchor bidding 20 Oct",
+    "anchor_grade": "pending"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-12",
+       "gmp": 182.5
+      },
+      {
+       "date": "2026-10-13",
+       "gmp": 218.0
+      },
+      {
+       "date": "2026-10-14",
+       "gmp": 210.0
+      },
+      {
+       "date": "2026-10-15",
+       "gmp": 219.0
+      },
+      {
+       "date": "2026-10-16",
+       "gmp": 221.0
+      }
+     ],
+     "direction": "up",
+     "text": "GMP ₹182.5 → ₹218 → ₹210 → ₹219 → ₹221 since 12 Oct, rising"
+    },
+    "subscription": null
+   }
+  },
+  {
+   "key": "hd-fire-protect",
+   "name": "HD Fire Protect",
+   "open": "2026-10-13",
+   "close": "2026-10-15",
+   "allotment": "2026-10-16",
+   "listing": "2026-10-21",
+   "price": 271.0,
+   "lot": 55,
+   "size_cr": 712.13,
+   "gmp": 82.0,
+   "gmp_pct": 30.26,
+   "gmp_low": 63.0,
+   "gmp_high": 91.0,
+   "pe": 40.69,
+   "gmp_updated": "16-Oct 7:02",
+   "url": "https://www.investorgain.com/gmp/hd-fire-protect-ipo/1902/",
+   "nse": {
+    "company": "HD Fire Protect Limited",
+    "symbol": "HDFIRE",
+    "issue_period": [
+     "13-Oct-2026",
+     "15-Oct-2026"
+    ],
+    "price_low": 258.0,
+    "price_high": 271.0,
+    "face_value": "Rs. 5 per Equity Share",
+    "lot": 55,
+    "issue_size_text": "Initial Public offer comprising of Offer for sale up to 26,284,500 Equity Shares (Including Eligible Employee Reservation up to Rs. 17.50 million and Anchor portion 78,64,008 Equity Shares)",
+    "employee_discount": "Rs. 25/- per equity share is being offered to Eligible Employees Bidding in the Employee Reservation Portion",
+    "lead_managers": "Ambit Private Limited, Anand Rathi Advisors Limited and IIFL Capital Services Limited",
+    "registrar": "MUFG Intime India Private Limited",
+    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_HDFIRE.zip",
+    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_HDFIRE.zip",
+    "anchor_report_url": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_HDFIRE.zip",
+    "subscription": {
+     "qib": {
+      "shares_offered": 5242672.0,
+      "shares_bid": 822148690.0,
+      "times": 156.82
+     },
+     "nii": {
+      "shares_offered": 3932005.0,
+      "shares_bid": 503696105.0,
+      "times": 128.1
+     },
+     "bnii": {
+      "shares_offered": 2621337.0,
+      "shares_bid": 383948785.0,
+      "times": 146.47
+     },
+     "snii": {
+      "shares_offered": 1310668.0,
+      "shares_bid": 119747320.0,
+      "times": 91.36
+     },
+     "retail": {
+      "shares_offered": 9174677.0,
+      "shares_bid": 191136165.0,
+      "times": 20.83
+     },
+     "employee": {
+      "shares_offered": 71138.0,
+      "shares_bid": 1120020.0,
+      "times": 15.74
+     },
+     "total": {
+      "shares_offered": 18420492.0,
+      "shares_bid": 1518100980.0,
+      "times": 82.41
+     }
+    },
+    "series": "EQ"
+   },
+   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_HDFIRE.zip",
+   "rhp_source": "nse",
+   "phase": "awaiting_listing",
+   "price_high": 271.0,
+   "subscription": {
+    "qib": {
+     "shares_offered": 5242672.0,
+     "shares_bid": 822148690.0,
+     "times": 156.82
+    },
+    "nii": {
+     "shares_offered": 3932005.0,
+     "shares_bid": 503696105.0,
+     "times": 128.1
+    },
+    "bnii": {
+     "shares_offered": 2621337.0,
+     "shares_bid": 383948785.0,
+     "times": 146.47
+    },
+    "snii": {
+     "shares_offered": 1310668.0,
+     "shares_bid": 119747320.0,
+     "times": 91.36
+    },
+    "retail": {
+     "shares_offered": 9174677.0,
+     "shares_bid": 191136165.0,
+     "times": 20.83
+    },
+    "employee": {
+     "shares_offered": 71138.0,
+     "shares_bid": 1120020.0,
+     "times": 15.74
+    },
+    "total": {
+     "shares_offered": 18420492.0,
+     "shares_bid": 1518100980.0,
+     "times": 82.41
+    }
+   },
+   "anchor_done": true,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 55,
+     "min_amount": 14905,
+     "subscription_x": 20.83,
+     "odds": 0.048,
+     "odds_text": "≥1 in 21",
+     "gain_if_allotted": 4510,
+     "expected_gain": 217,
+     "return_on_blocked_pct": 1.45
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 770,
+     "min_amount": 208670,
+     "subscription_x": 91.36,
+     "odds": 0.0109,
+     "odds_text": "≥1 in 91",
+     "gain_if_allotted": 63140,
+     "expected_gain": 691,
+     "return_on_blocked_pct": 0.33
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 68,
+     "min_shares": 3740,
+     "min_amount": 1013540,
+     "subscription_x": 146.47,
+     "odds": 0.0068,
+     "odds_text": "≥1 in 146",
+     "gain_if_allotted": 306680,
+     "expected_gain": 2094,
+     "return_on_blocked_pct": 0.21
+    }
+   ],
+   "best_category": "retail",
+   "analysis_file": "analysis/hd-fire-protect.md",
+   "needs_analysis": false,
+   "card_file": "analysis/hd-fire-protect.json",
+   "needs_card": false,
+   "card": {
+    "name": "HD Fire Protect",
+    "source": "rhp",
+    "analysed": "2026-10-12",
+    "verdict": "apply",
+    "verdict_text": "Apply",
+    "summary": "India's #2 fire-protection equipment maker and largest exporter (sprinklers, deluge valves, foam systems), with the most UL/FM certifications among Indian peers.",
+    "financials": "FY26 revenue ₹489 Cr (+13%), PAT ₹117 Cr, EBITDA margin 31%, debt-free",
+    "quota": "QIB 50% · NII 15% · Retail 35%",
+    "positives": [
+     "Certification moat and 30% RoE; priced at 40.7x vs peer average 63x",
+     "Strong anchor book: ₹213 Cr, 72% to HDFC/ICICI Pru/Kotak/ABSL MFs",
+     "35% retail quota helps allotment odds"
+    ],
+    "red_flags": [
+     "100% OFS — promoters selling, company gets nothing",
+     "₹196 Cr dividends to promoters in the last two years",
+     "PAT growth slowed to 6% in FY26; inventory days rising"
+    ],
+    "anchor": "₹213 Cr from 25 anchors: HDFC MF, ICICI Pru, Kotak, ABSL MF, Mirae, UTI, Allianz",
+    "anchor_grade": "strong"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-12",
+       "gmp": 83.0
+      },
+      {
+       "date": "2026-10-13",
+       "gmp": 91.0
+      },
+      {
+       "date": "2026-10-14",
+       "gmp": 90.0
+      },
+      {
+       "date": "2026-10-15",
+       "gmp": 78.0
+      },
+      {
+       "date": "2026-10-16",
+       "gmp": 82.0
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹83 → ₹91 → ₹90 → ₹78 → ₹82 since 12 Oct, falling (peak ₹91)"
+    },
+    "subscription": {
+     "days": [
+      {
+       "day": 1,
+       "date": "2026-10-13",
+       "times": {
+        "qib": 1.02,
+        "bnii": 6.76,
+        "snii": 8.96,
+        "retail": 2.84,
+        "total": 3.31
+       }
+      },
+      {
+       "day": 2,
+       "date": "2026-10-14",
+       "times": {
+        "qib": 1.42,
+        "bnii": 31.01,
+        "snii": 30.73,
+        "retail": 8.0,
+        "total": 11.01
+       }
+      },
+      {
+       "day": 3,
+       "date": "2026-10-15",
+       "times": {
+        "qib": 156.82,
+        "bnii": 146.47,
+        "snii": 91.36,
+        "retail": 20.83,
+        "total": 82.41
+       }
+      }
+     ],
+     "text": "Day 1 → 3: Retail 2.84x → 8x → 20.83x · sNII 8.96x → 30.73x → 91.36x · bNII 6.76x → 31.01x → 146.47x · QIB 1.02x → 1.42x → 156.82x · Total 3.31x → 11.01x → 82.41x"
+    }
+   }
+  }
+ ],
+ "errors": {}
+}
