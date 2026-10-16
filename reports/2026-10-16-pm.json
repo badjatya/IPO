@@ -1,0 +1,13 @@
+{"date": "2026-10-16", "session": "PM",
+ "headline": "Fusion CX closes today with GMP down to ₹6 (2%) — skip; Tonbo (GMP ~71%) and Bonfiglioli lead the open issues",
+ "ipos": {
+  "fusion-cx": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null,
+    "category_note": "GMP fell ₹35 → ₹6 since 14 Oct (2%); closes today at 3.3x — skip unless you'd hold long term"},
+  "tonbo-imaging": {"best_category": "Retail", "category_note": "GMP steady near ₹500; Retail 4.9x vs sNII 13x — Retail has the best odds. Closes 19 Oct"},
+  "zetwerk": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null,
+    "category_note": "GMP falling ₹23 → ₹6 (4%) and only 0.19x subscribed; loss-making — skip. Closes 19 Oct"},
+  "bonfiglioli-transmissions": {"best_category": "Retail", "category_note": "GMP falling since 14 Oct (₹181 → ₹122) — apply only if you'd hold; Retail 0.81x so allotment is near-certain. Closes 19 Oct"},
+  "sahajanand-medical-technologies": {"best_category": "Retail", "category_note": "GMP ₹38 (11%), choppy ₹37–47; only 0.28x subscribed, full allotment likely. Recheck 19 Oct"},
+  "paras-healthcare": {"best_category": null, "category_note": "RHP analysed: ~160x P/E vs peers 43–116x, 66% OFS; GMP falling ₹111 → ₹97. Opens 21 Oct; anchor due 20 Oct"}
+ },
+ "notes": []}
