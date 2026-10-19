@@ -1,0 +1,11 @@
+{"date": "2026-10-19", "session": "PM",
+ "headline": "4 IPOs close today; Tonbo (GMP 74%) and Bonfiglioli lead, but GMPs fell for Zetwerk, SMT and Bonfiglioli — skip Zetwerk",
+ "ipos": {
+  "tonbo-imaging": {"best_category": "Retail", "category_note": "Closes today. GMP rising since 12 Oct (₹515). Retail 21.5x, odds ≥1 in 22; 1 lot per family PAN"},
+  "zetwerk": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null, "category_note": "GMP falling since 17 Oct (₹3, peak ₹23), loss-making, Retail only 0.49x — skip"},
+  "sahajanand-medical-technologies": {"best_category": "Retail", "category_note": "GMP falling since 15 Oct (₹47 → ₹21) — apply 1 lot only if you'd hold; Retail 1.64x, odds ≥1 in 2"},
+  "bonfiglioli-transmissions": {"best_category": "Retail", "category_note": "GMP falling since 17 Oct (peak ₹181, now ₹108) but still 18%; Retail 4.1x, odds ≥1 in 4"},
+  "paras-healthcare": {"category_note": "GMP falling since 15 Oct (₹111 → ₹75); opens 21 Oct, anchor pending"},
+  "bls-polymers": {}
+ },
+ "notes": ["BLS Polymers analysed from RHP; the financial tables did not extract, so FY26 PAT is derived from the litigation threshold."]}

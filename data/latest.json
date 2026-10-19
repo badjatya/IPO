@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-19T09:07+05:30",
+ "generated_at": "2026-10-19T19:08+05:30",
  "date": "2026-10-19",
  "ipos": [
   {
@@ -17,7 +17,7 @@
    "gmp_low": 270.0,
    "gmp_high": 516.0,
    "pe": 78.83,
-   "gmp_updated": "19-Oct 6:02",
+   "gmp_updated": "19-Oct 15:37",
    "url": "https://www.investorgain.com/gmp/tonbo-imaging-india-ipo/2369/",
    "nse": {
     "company": "Tonbo Imaging India Limited",
@@ -40,38 +40,38 @@
     "subscription": {
      "qib": {
       "shares_offered": 2432009.0,
-      "shares_bid": 5258127.0,
-      "times": 2.16
+      "shares_bid": 507256575.0,
+      "times": 208.58
      },
      "nii": {
       "shares_offered": 1824007.0,
-      "shares_bid": 18612699.0,
-      "times": 10.2
+      "shares_bid": 226627989.0,
+      "times": 124.25
      },
      "bnii": {
       "shares_offered": 1216005.0,
-      "shares_bid": 10093776.0,
-      "times": 8.3
+      "shares_bid": 166303368.0,
+      "times": 136.76
      },
      "snii": {
       "shares_offered": 608002.0,
-      "shares_bid": 8518923.0,
-      "times": 14.01
+      "shares_bid": 60324621.0,
+      "times": 99.22
      },
      "retail": {
       "shares_offered": 4256017.0,
-      "shares_bid": 22311366.0,
-      "times": 5.24
+      "shares_bid": 91580013.0,
+      "times": 21.52
      },
      "employee": {
       "shares_offered": 14000.0,
-      "shares_bid": 149436.0,
-      "times": 10.67
+      "shares_bid": 568365.0,
+      "times": 40.6
      },
      "total": {
       "shares_offered": 8526033.0,
-      "shares_bid": 46331628.0,
-      "times": 5.43
+      "shares_bid": 826032942.0,
+      "times": 96.88
      }
     },
     "series": "EQ"
@@ -83,38 +83,38 @@
    "subscription": {
     "qib": {
      "shares_offered": 2432009.0,
-     "shares_bid": 5258127.0,
-     "times": 2.16
+     "shares_bid": 507256575.0,
+     "times": 208.58
     },
     "nii": {
      "shares_offered": 1824007.0,
-     "shares_bid": 18612699.0,
-     "times": 10.2
+     "shares_bid": 226627989.0,
+     "times": 124.25
     },
     "bnii": {
      "shares_offered": 1216005.0,
-     "shares_bid": 10093776.0,
-     "times": 8.3
+     "shares_bid": 166303368.0,
+     "times": 136.76
     },
     "snii": {
      "shares_offered": 608002.0,
-     "shares_bid": 8518923.0,
-     "times": 14.01
+     "shares_bid": 60324621.0,
+     "times": 99.22
     },
     "retail": {
      "shares_offered": 4256017.0,
-     "shares_bid": 22311366.0,
-     "times": 5.24
+     "shares_bid": 91580013.0,
+     "times": 21.52
     },
     "employee": {
      "shares_offered": 14000.0,
-     "shares_bid": 149436.0,
-     "times": 10.67
+     "shares_bid": 568365.0,
+     "times": 40.6
     },
     "total": {
      "shares_offered": 8526033.0,
-     "shares_bid": 46331628.0,
-     "times": 5.43
+     "shares_bid": 826032942.0,
+     "times": 96.88
     }
    },
    "anchor_done": true,
@@ -125,12 +125,12 @@
      "min_lots": 1,
      "min_shares": 21,
      "min_amount": 14700,
-     "subscription_x": 5.24,
-     "odds": 0.1908,
-     "odds_text": "≥1 in 5",
+     "subscription_x": 21.52,
+     "odds": 0.0465,
+     "odds_text": "≥1 in 22",
      "gain_if_allotted": 10815,
-     "expected_gain": 2064,
-     "return_on_blocked_pct": 14.04
+     "expected_gain": 503,
+     "return_on_blocked_pct": 3.42
     },
     {
      "category": "snii",
@@ -138,12 +138,12 @@
      "min_lots": 14,
      "min_shares": 294,
      "min_amount": 205800,
-     "subscription_x": 14.01,
-     "odds": 0.0714,
-     "odds_text": "≥1 in 14",
+     "subscription_x": 99.22,
+     "odds": 0.0101,
+     "odds_text": "≥1 in 99",
      "gain_if_allotted": 151410,
-     "expected_gain": 10807,
-     "return_on_blocked_pct": 5.25
+     "expected_gain": 1526,
+     "return_on_blocked_pct": 0.74
     },
     {
      "category": "bnii",
@@ -151,12 +151,12 @@
      "min_lots": 69,
      "min_shares": 1449,
      "min_amount": 1014300,
-     "subscription_x": 8.3,
-     "odds": 0.1205,
-     "odds_text": "≥1 in 8",
+     "subscription_x": 136.76,
+     "odds": 0.0073,
+     "odds_text": "≥1 in 137",
      "gain_if_allotted": 746235,
-     "expected_gain": 89908,
-     "return_on_blocked_pct": 8.86
+     "expected_gain": 5457,
+     "return_on_blocked_pct": 0.54
     }
    ],
    "best_category": "retail",
@@ -240,9 +240,20 @@
         "retail": 5.24,
         "total": 5.43
        }
+      },
+      {
+       "day": 3,
+       "date": "2026-10-19",
+       "times": {
+        "qib": 208.58,
+        "bnii": 136.76,
+        "snii": 99.22,
+        "retail": 21.52,
+        "total": 96.88
+       }
       }
      ],
-     "text": "Day 1 → 2: Retail 2.35x → 5.24x · sNII 5.99x → 14.01x · bNII 3.37x → 8.3x · QIB 2.15x → 2.16x · Total 2.7x → 5.43x"
+     "text": "Day 1 → 3: Retail 2.35x → 5.24x → 21.52x · sNII 5.99x → 14.01x → 99.22x · bNII 3.37x → 8.3x → 136.76x · QIB 2.15x → 2.16x → 208.58x · Total 2.7x → 5.43x → 96.88x"
     }
    }
   },
@@ -256,12 +267,12 @@
    "price": 151.0,
    "lot": 99,
    "size_cr": 5012.33,
-   "gmp": 5.0,
-   "gmp_pct": 3.31,
-   "gmp_low": 5.0,
+   "gmp": 3.0,
+   "gmp_pct": 1.99,
+   "gmp_low": 3.0,
    "gmp_high": 30.0,
    "pe": -14.17,
-   "gmp_updated": "19-Oct 6:02",
+   "gmp_updated": "19-Oct 15:37",
    "url": "https://www.investorgain.com/gmp/zetwerk-ipo/2279/",
    "nse": {
     "company": "Zetwerk Manufacturing Businesses Limited",
@@ -284,38 +295,38 @@
     "subscription": {
      "qib": {
       "shares_offered": 98917930.0,
-      "shares_bid": 19918701.0,
-      "times": 0.2
+      "shares_bid": 184717170.0,
+      "times": 1.87
      },
      "nii": {
       "shares_offered": 51269349.0,
-      "shares_bid": 6546969.0,
-      "times": 0.13
+      "shares_bid": 51803730.0,
+      "times": 1.01
      },
      "bnii": {
       "shares_offered": 34179566.0,
-      "shares_bid": 4640130.0,
-      "times": 0.14
+      "shares_bid": 41055498.0,
+      "times": 1.2
      },
      "snii": {
       "shares_offered": 17089783.0,
-      "shares_bid": 1906839.0,
-      "times": 0.11
+      "shares_bid": 10748232.0,
+      "times": 0.63
      },
      "retail": {
       "shares_offered": 34179566.0,
-      "shares_bid": 8414802.0,
-      "times": 0.25
+      "shares_bid": 16744563.0,
+      "times": 0.49
      },
      "employee": {
       "shares_offered": 700000.0,
-      "shares_bid": 264726.0,
-      "times": 0.38
+      "shares_bid": 728046.0,
+      "times": 1.04
      },
      "total": {
       "shares_offered": 185066845.0,
-      "shares_bid": 35145198.0,
-      "times": 0.19
+      "shares_bid": 253993509.0,
+      "times": 1.37
      }
     },
     "series": "EQ"
@@ -327,38 +338,38 @@
    "subscription": {
     "qib": {
      "shares_offered": 98917930.0,
-     "shares_bid": 19918701.0,
-     "times": 0.2
+     "shares_bid": 184717170.0,
+     "times": 1.87
     },
     "nii": {
      "shares_offered": 51269349.0,
-     "shares_bid": 6546969.0,
-     "times": 0.13
+     "shares_bid": 51803730.0,
+     "times": 1.01
     },
     "bnii": {
      "shares_offered": 34179566.0,
-     "shares_bid": 4640130.0,
-     "times": 0.14
+     "shares_bid": 41055498.0,
+     "times": 1.2
     },
     "snii": {
      "shares_offered": 17089783.0,
-     "shares_bid": 1906839.0,
-     "times": 0.11
+     "shares_bid": 10748232.0,
+     "times": 0.63
     },
     "retail": {
      "shares_offered": 34179566.0,
-     "shares_bid": 8414802.0,
-     "times": 0.25
+     "shares_bid": 16744563.0,
+     "times": 0.49
     },
     "employee": {
      "shares_offered": 700000.0,
-     "shares_bid": 264726.0,
-     "times": 0.38
+     "shares_bid": 728046.0,
+     "times": 1.04
     },
     "total": {
      "shares_offered": 185066845.0,
-     "shares_bid": 35145198.0,
-     "times": 0.19
+     "shares_bid": 253993509.0,
+     "times": 1.37
     }
    },
    "anchor_done": true,
@@ -369,12 +380,12 @@
      "min_lots": 1,
      "min_shares": 99,
      "min_amount": 14949,
-     "subscription_x": 0.25,
+     "subscription_x": 0.49,
      "odds": 1.0,
      "odds_text": "full",
-     "gain_if_allotted": 495,
-     "expected_gain": 495,
-     "return_on_blocked_pct": 3.31
+     "gain_if_allotted": 297,
+     "expected_gain": 297,
+     "return_on_blocked_pct": 1.99
     },
     {
      "category": "snii",
@@ -382,12 +393,12 @@
      "min_lots": 14,
      "min_shares": 1386,
      "min_amount": 209286,
-     "subscription_x": 0.11,
+     "subscription_x": 0.63,
      "odds": 1.0,
      "odds_text": "full",
-     "gain_if_allotted": 6930,
-     "expected_gain": 6930,
-     "return_on_blocked_pct": 3.31
+     "gain_if_allotted": 4158,
+     "expected_gain": 4158,
+     "return_on_blocked_pct": 1.99
     },
     {
      "category": "bnii",
@@ -395,12 +406,12 @@
      "min_lots": 67,
      "min_shares": 6633,
      "min_amount": 1001583,
-     "subscription_x": 0.14,
-     "odds": 1.0,
-     "odds_text": "full",
-     "gain_if_allotted": 33165,
-     "expected_gain": 33165,
-     "return_on_blocked_pct": 3.31
+     "subscription_x": 1.2,
+     "odds": 0.8333,
+     "odds_text": "≥1 in 1",
+     "gain_if_allotted": 19899,
+     "expected_gain": 16582,
+     "return_on_blocked_pct": 1.66
     }
    ],
    "best_category": "retail",
@@ -455,11 +466,11 @@
       },
       {
        "date": "2026-10-19",
-       "gmp": 5.0
+       "gmp": 3.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹14 → … → ₹17.5 → ₹6 → ₹5 since 12 Oct, falling (peak ₹23)"
+     "text": "GMP ₹14 → … → ₹17.5 → ₹6 → ₹3 since 12 Oct, falling (peak ₹23)"
     },
     "subscription": {
      "days": [
@@ -484,253 +495,20 @@
         "retail": 0.25,
         "total": 0.19
        }
-      }
-     ],
-     "text": "Day 1 → 2: Retail 0.15x → 0.25x · sNII 0.06x → 0.11x · bNII 0.07x → 0.14x · QIB 0.17x → 0.2x · Total 0.14x → 0.19x"
-    }
-   }
-  },
-  {
-   "key": "bonfiglioli-transmissions",
-   "name": "Bonfiglioli Transmissions",
-   "open": "2026-10-15",
-   "close": "2026-10-19",
-   "allotment": "2026-10-21",
-   "listing": "2026-10-23",
-   "price": 586.0,
-   "lot": 25,
-   "size_cr": 2533.66,
-   "gmp": 130.0,
-   "gmp_pct": 22.18,
-   "gmp_low": 129.0,
-   "gmp_high": 178.0,
-   "pe": 46.32,
-   "gmp_updated": "19-Oct 6:02",
-   "url": "https://www.investorgain.com/gmp/bonfiglioli-transmissions-ipo/2124/",
-   "nse": {
-    "company": "Bonfiglioli Transmissions Limited",
-    "symbol": "BONFIG",
-    "issue_period": [
-     "15-Oct-2026",
-     "19-Oct-2026"
-    ],
-    "price_low": 558.0,
-    "price_high": 586.0,
-    "face_value": "Rs 10 per Equity Share",
-    "lot": 25,
-    "issue_size_text": "Initial Public Offer of offer for sale up to 4,32,39,042 Equity Shares (Including Eligible Employee Reservation of up to 50,000 Equity Shares and Anchor portion 1,29,56,712 Equity Shares)",
-    "employee_discount": "Rs. 29 per equity share to eligible employees",
-    "lead_managers": "Axis Capital Limited, BNP Paribas, ICICI Securities Limited and Jefferies India Private Limited",
-    "registrar": "MUFG Intime India Private Limited",
-    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_BONFIG.zip",
-    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_BONFIG.zip",
-    "anchor_report_url": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_BONFIG.zip",
-    "subscription": {
-     "qib": {
-      "shares_offered": 8637808.0,
-      "shares_bid": 883100.0,
-      "times": 0.1
-     },
-     "nii": {
-      "shares_offered": 6478357.0,
-      "shares_bid": 8395325.0,
-      "times": 1.3
-     },
-     "bnii": {
-      "shares_offered": 4318905.0,
-      "shares_bid": 4725825.0,
-      "times": 1.09
-     },
-     "snii": {
-      "shares_offered": 2159452.0,
-      "shares_bid": 3669500.0,
-      "times": 1.7
-     },
-     "retail": {
-      "shares_offered": 15116165.0,
-      "shares_bid": 13178275.0,
-      "times": 0.87
-     },
-     "employee": {
-      "shares_offered": 50000.0,
-      "shares_bid": 83350.0,
-      "times": 1.67
-     },
-     "total": {
-      "shares_offered": 30282330.0,
-      "shares_bid": 22540050.0,
-      "times": 0.74
-     }
-    },
-    "series": "EQ"
-   },
-   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_BONFIG.zip",
-   "rhp_source": "nse",
-   "phase": "closing_today",
-   "price_high": 586.0,
-   "subscription": {
-    "qib": {
-     "shares_offered": 8637808.0,
-     "shares_bid": 883100.0,
-     "times": 0.1
-    },
-    "nii": {
-     "shares_offered": 6478357.0,
-     "shares_bid": 8395325.0,
-     "times": 1.3
-    },
-    "bnii": {
-     "shares_offered": 4318905.0,
-     "shares_bid": 4725825.0,
-     "times": 1.09
-    },
-    "snii": {
-     "shares_offered": 2159452.0,
-     "shares_bid": 3669500.0,
-     "times": 1.7
-    },
-    "retail": {
-     "shares_offered": 15116165.0,
-     "shares_bid": 13178275.0,
-     "times": 0.87
-    },
-    "employee": {
-     "shares_offered": 50000.0,
-     "shares_bid": 83350.0,
-     "times": 1.67
-    },
-    "total": {
-     "shares_offered": 30282330.0,
-     "shares_bid": 22540050.0,
-     "times": 0.74
-    }
-   },
-   "anchor_done": true,
-   "categories": [
-    {
-     "category": "retail",
-     "label": "Retail",
-     "min_lots": 1,
-     "min_shares": 25,
-     "min_amount": 14650,
-     "subscription_x": 0.87,
-     "odds": 1.0,
-     "odds_text": "full",
-     "gain_if_allotted": 3250,
-     "expected_gain": 3250,
-     "return_on_blocked_pct": 22.18
-    },
-    {
-     "category": "snii",
-     "label": "Small HNI (sNII)",
-     "min_lots": 14,
-     "min_shares": 350,
-     "min_amount": 205100,
-     "subscription_x": 1.7,
-     "odds": 0.5882,
-     "odds_text": "≥1 in 2",
-     "gain_if_allotted": 45500,
-     "expected_gain": 26765,
-     "return_on_blocked_pct": 13.05
-    },
-    {
-     "category": "bnii",
-     "label": "Big HNI (bNII)",
-     "min_lots": 69,
-     "min_shares": 1725,
-     "min_amount": 1010850,
-     "subscription_x": 1.09,
-     "odds": 0.9174,
-     "odds_text": "≥1 in 1",
-     "gain_if_allotted": 224250,
-     "expected_gain": 205734,
-     "return_on_blocked_pct": 20.35
-    }
-   ],
-   "best_category": "retail",
-   "analysis_file": "analysis/bonfiglioli-transmissions.md",
-   "needs_analysis": false,
-   "card_file": "analysis/bonfiglioli-transmissions.json",
-   "needs_card": false,
-   "card": {
-    "name": "Bonfiglioli Transmissions",
-    "source": "rhp",
-    "analysed": "2026-10-13",
-    "verdict": "listing_gains",
-    "verdict_text": "Listing gains only",
-    "summary": "Indian arm of Italy's Bonfiglioli: industrial gearboxes, geared motors and drives (industrial, off-highway, wind).",
-    "financials": "CY25 revenue ₹2,014 Cr (+9%), PAT ₹238 Cr (+24%), RoNW 24%, debt-free",
-    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
-    "positives": [
-     "Debt-free, PAT margin 11.8% rising to 13% in H1 CY26",
-     "~46x P/E vs peer average 51.6x",
-     "35% retail quota"
-    ],
-    "red_flags": [
-     "100% OFS by parent — company gets nothing",
-     "Wind ≈27–32% of revenue; industry data from company-paid report"
-    ],
-    "anchor": "₹759 Cr from ~50 anchors at ₹586 (1.30 Cr sh). Top: Nippon (Small Cap ₹33.6 Cr + others), SBI MF (3 schemes), ICICI Pru Innovation ₹40 Cr, HDFC MF (many), Axis, Govt Pension Fund Global, Goldman Sachs, Mirae, ADIA, PSP, Allianz, Invesco, Franklin, DSP.",
-    "anchor_grade": "strong"
-   },
-   "needs_anchor_update": false,
-   "trend": {
-    "gmp": {
-     "points": [
-      {
-       "date": "2026-10-12",
-       "gmp": 153.0
       },
       {
-       "date": "2026-10-13",
-       "gmp": 175.0
-      },
-      {
-       "date": "2026-10-14",
-       "gmp": 181.0
-      },
-      {
-       "date": "2026-10-15",
-       "gmp": 168.0
-      },
-      {
-       "date": "2026-10-16",
-       "gmp": 122.0
-      },
-      {
+       "day": 3,
        "date": "2026-10-19",
-       "gmp": 130.0
-      }
-     ],
-     "direction": "down",
-     "text": "GMP ₹153 → … → ₹168 → ₹122 → ₹130 since 12 Oct, falling (peak ₹181)"
-    },
-    "subscription": {
-     "days": [
-      {
-       "day": 1,
-       "date": "2026-10-15",
        "times": {
-        "qib": 0.06,
-        "bnii": 0.5,
-        "snii": 0.76,
-        "retail": 0.42,
-        "total": 0.36
-       }
-      },
-      {
-       "day": 2,
-       "date": "2026-10-16",
-       "times": {
-        "qib": 0.1,
-        "bnii": 1.09,
-        "snii": 1.7,
-        "retail": 0.87,
-        "total": 0.74
+        "qib": 1.87,
+        "bnii": 1.2,
+        "snii": 0.63,
+        "retail": 0.49,
+        "total": 1.37
        }
       }
      ],
-     "text": "Day 1 → 2: Retail 0.42x → 0.87x · sNII 0.76x → 1.7x · bNII 0.5x → 1.09x · QIB 0.06x → 0.1x · Total 0.36x → 0.74x"
+     "text": "Day 1 → 3: Retail 0.15x → 0.25x → 0.49x · sNII 0.06x → 0.11x → 0.63x · bNII 0.07x → 0.14x → 1.2x · QIB 0.17x → 0.2x → 1.87x · Total 0.14x → 0.19x → 1.37x"
     }
    }
   },
@@ -744,12 +522,12 @@
    "price": 344.0,
    "lot": 43,
    "size_cr": 475.48,
-   "gmp": 25.0,
-   "gmp_pct": 7.27,
+   "gmp": 21.0,
+   "gmp_pct": 6.1,
    "gmp_low": 15.0,
    "gmp_high": 43.0,
    "pe": 50.59,
-   "gmp_updated": "19-Oct 6:02",
+   "gmp_updated": "19-Oct 15:37",
    "url": "https://www.investorgain.com/gmp/sahajanand-medical-technologies-ipo/1842/",
    "nse": {
     "company": "Sahajanand Medical Technologies Limited",
@@ -772,38 +550,38 @@
     "subscription": {
      "qib": {
       "shares_offered": 2714423.0,
-      "shares_bid": 602.0,
-      "times": 0.0
+      "shares_bid": 16520299.0,
+      "times": 6.09
      },
      "nii": {
       "shares_offered": 2035818.0,
-      "shares_bid": 634379.0,
-      "times": 0.31
+      "shares_bid": 17430695.0,
+      "times": 8.56
      },
      "bnii": {
       "shares_offered": 1357212.0,
-      "shares_bid": 310374.0,
-      "times": 0.23
+      "shares_bid": 12983033.0,
+      "times": 9.57
      },
      "snii": {
       "shares_offered": 678606.0,
-      "shares_bid": 324005.0,
-      "times": 0.48
+      "shares_bid": 4447662.0,
+      "times": 6.55
      },
      "retail": {
       "shares_offered": 4750241.0,
-      "shares_bid": 2208781.0,
-      "times": 0.46
+      "shares_bid": 7810778.0,
+      "times": 1.64
      },
      "employee": {
       "shares_offered": 250000.0,
-      "shares_bid": 18834.0,
-      "times": 0.08
+      "shares_bid": 48848.0,
+      "times": 0.2
      },
      "total": {
       "shares_offered": 9750482.0,
-      "shares_bid": 2862596.0,
-      "times": 0.29
+      "shares_bid": 41810620.0,
+      "times": 4.29
      }
     },
     "series": "EQ"
@@ -815,38 +593,38 @@
    "subscription": {
     "qib": {
      "shares_offered": 2714423.0,
-     "shares_bid": 602.0,
-     "times": 0.0
+     "shares_bid": 16520299.0,
+     "times": 6.09
     },
     "nii": {
      "shares_offered": 2035818.0,
-     "shares_bid": 634379.0,
-     "times": 0.31
+     "shares_bid": 17430695.0,
+     "times": 8.56
     },
     "bnii": {
      "shares_offered": 1357212.0,
-     "shares_bid": 310374.0,
-     "times": 0.23
+     "shares_bid": 12983033.0,
+     "times": 9.57
     },
     "snii": {
      "shares_offered": 678606.0,
-     "shares_bid": 324005.0,
-     "times": 0.48
+     "shares_bid": 4447662.0,
+     "times": 6.55
     },
     "retail": {
      "shares_offered": 4750241.0,
-     "shares_bid": 2208781.0,
-     "times": 0.46
+     "shares_bid": 7810778.0,
+     "times": 1.64
     },
     "employee": {
      "shares_offered": 250000.0,
-     "shares_bid": 18834.0,
-     "times": 0.08
+     "shares_bid": 48848.0,
+     "times": 0.2
     },
     "total": {
      "shares_offered": 9750482.0,
-     "shares_bid": 2862596.0,
-     "times": 0.29
+     "shares_bid": 41810620.0,
+     "times": 4.29
     }
    },
    "anchor_done": true,
@@ -857,12 +635,12 @@
      "min_lots": 1,
      "min_shares": 43,
      "min_amount": 14792,
-     "subscription_x": 0.46,
-     "odds": 1.0,
-     "odds_text": "full",
-     "gain_if_allotted": 1075,
-     "expected_gain": 1075,
-     "return_on_blocked_pct": 7.27
+     "subscription_x": 1.64,
+     "odds": 0.6098,
+     "odds_text": "≥1 in 2",
+     "gain_if_allotted": 903,
+     "expected_gain": 551,
+     "return_on_blocked_pct": 3.72
     },
     {
      "category": "snii",
@@ -870,12 +648,12 @@
      "min_lots": 14,
      "min_shares": 602,
      "min_amount": 207088,
-     "subscription_x": 0.48,
-     "odds": 1.0,
-     "odds_text": "full",
-     "gain_if_allotted": 15050,
-     "expected_gain": 15050,
-     "return_on_blocked_pct": 7.27
+     "subscription_x": 6.55,
+     "odds": 0.1527,
+     "odds_text": "≥1 in 7",
+     "gain_if_allotted": 12642,
+     "expected_gain": 1930,
+     "return_on_blocked_pct": 0.93
     },
     {
      "category": "bnii",
@@ -883,12 +661,12 @@
      "min_lots": 68,
      "min_shares": 2924,
      "min_amount": 1005856,
-     "subscription_x": 0.23,
-     "odds": 1.0,
-     "odds_text": "full",
-     "gain_if_allotted": 73100,
-     "expected_gain": 73100,
-     "return_on_blocked_pct": 7.27
+     "subscription_x": 9.57,
+     "odds": 0.1045,
+     "odds_text": "≥1 in 10",
+     "gain_if_allotted": 61404,
+     "expected_gain": 6416,
+     "return_on_blocked_pct": 0.64
     }
    ],
    "best_category": "retail",
@@ -943,11 +721,11 @@
       },
       {
        "date": "2026-10-19",
-       "gmp": 25.0
+       "gmp": 21.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹40 → … → ₹47 → ₹38 → ₹25 since 12 Oct, falling (peak ₹47)"
+     "text": "GMP ₹40 → … → ₹47 → ₹38 → ₹21 since 12 Oct, falling (peak ₹47)"
     },
     "subscription": {
      "days": [
@@ -972,9 +750,275 @@
         "retail": 0.46,
         "total": 0.29
        }
+      },
+      {
+       "day": 3,
+       "date": "2026-10-19",
+       "times": {
+        "qib": 6.09,
+        "bnii": 9.57,
+        "snii": 6.55,
+        "retail": 1.64,
+        "total": 4.29
+       }
       }
      ],
-     "text": "Day 1 → 2: Retail 0.23x → 0.46x · sNII 0.25x → 0.48x · bNII 0.08x → 0.23x · QIB 0x → 0x · Total 0.14x → 0.29x"
+     "text": "Day 1 → 3: Retail 0.23x → 0.46x → 1.64x · sNII 0.25x → 0.48x → 6.55x · bNII 0.08x → 0.23x → 9.57x · QIB 0x → 0x → 6.09x · Total 0.14x → 0.29x → 4.29x"
+    }
+   }
+  },
+  {
+   "key": "bonfiglioli-transmissions",
+   "name": "Bonfiglioli Transmissions",
+   "open": "2026-10-15",
+   "close": "2026-10-19",
+   "allotment": "2026-10-21",
+   "listing": "2026-10-23",
+   "price": 586.0,
+   "lot": 25,
+   "size_cr": 2533.66,
+   "gmp": 108.0,
+   "gmp_pct": 18.43,
+   "gmp_low": 108.0,
+   "gmp_high": 178.0,
+   "pe": 46.32,
+   "gmp_updated": "19-Oct 15:37",
+   "url": "https://www.investorgain.com/gmp/bonfiglioli-transmissions-ipo/2124/",
+   "nse": {
+    "company": "Bonfiglioli Transmissions Limited",
+    "symbol": "BONFIG",
+    "issue_period": [
+     "15-Oct-2026",
+     "19-Oct-2026"
+    ],
+    "price_low": 558.0,
+    "price_high": 586.0,
+    "face_value": "Rs 10 per Equity Share",
+    "lot": 25,
+    "issue_size_text": "Initial Public Offer of offer for sale up to 4,32,39,042 Equity Shares (Including Eligible Employee Reservation of up to 50,000 Equity Shares and Anchor portion 1,29,56,712 Equity Shares)",
+    "employee_discount": "Rs. 29 per equity share to eligible employees",
+    "lead_managers": "Axis Capital Limited, BNP Paribas, ICICI Securities Limited and Jefferies India Private Limited",
+    "registrar": "MUFG Intime India Private Limited",
+    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_BONFIG.zip",
+    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_BONFIG.zip",
+    "anchor_report_url": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_BONFIG.zip",
+    "subscription": {
+     "qib": {
+      "shares_offered": 8637808.0,
+      "shares_bid": 702126125.0,
+      "times": 81.29
+     },
+     "nii": {
+      "shares_offered": 6478357.0,
+      "shares_bid": 197172575.0,
+      "times": 30.44
+     },
+     "bnii": {
+      "shares_offered": 4318905.0,
+      "shares_bid": 152720475.0,
+      "times": 35.36
+     },
+     "snii": {
+      "shares_offered": 2159452.0,
+      "shares_bid": 44452100.0,
+      "times": 20.58
+     },
+     "retail": {
+      "shares_offered": 15116165.0,
+      "shares_bid": 62358350.0,
+      "times": 4.13
+     },
+     "employee": {
+      "shares_offered": 50000.0,
+      "shares_bid": 268400.0,
+      "times": 5.37
+     },
+     "total": {
+      "shares_offered": 30282330.0,
+      "shares_bid": 961925450.0,
+      "times": 31.77
+     }
+    },
+    "series": "EQ"
+   },
+   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_BONFIG.zip",
+   "rhp_source": "nse",
+   "phase": "closing_today",
+   "price_high": 586.0,
+   "subscription": {
+    "qib": {
+     "shares_offered": 8637808.0,
+     "shares_bid": 702126125.0,
+     "times": 81.29
+    },
+    "nii": {
+     "shares_offered": 6478357.0,
+     "shares_bid": 197172575.0,
+     "times": 30.44
+    },
+    "bnii": {
+     "shares_offered": 4318905.0,
+     "shares_bid": 152720475.0,
+     "times": 35.36
+    },
+    "snii": {
+     "shares_offered": 2159452.0,
+     "shares_bid": 44452100.0,
+     "times": 20.58
+    },
+    "retail": {
+     "shares_offered": 15116165.0,
+     "shares_bid": 62358350.0,
+     "times": 4.13
+    },
+    "employee": {
+     "shares_offered": 50000.0,
+     "shares_bid": 268400.0,
+     "times": 5.37
+    },
+    "total": {
+     "shares_offered": 30282330.0,
+     "shares_bid": 961925450.0,
+     "times": 31.77
+    }
+   },
+   "anchor_done": true,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 25,
+     "min_amount": 14650,
+     "subscription_x": 4.13,
+     "odds": 0.2421,
+     "odds_text": "≥1 in 4",
+     "gain_if_allotted": 2700,
+     "expected_gain": 654,
+     "return_on_blocked_pct": 4.46
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 350,
+     "min_amount": 205100,
+     "subscription_x": 20.58,
+     "odds": 0.0486,
+     "odds_text": "≥1 in 21",
+     "gain_if_allotted": 37800,
+     "expected_gain": 1837,
+     "return_on_blocked_pct": 0.9
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 69,
+     "min_shares": 1725,
+     "min_amount": 1010850,
+     "subscription_x": 35.36,
+     "odds": 0.0283,
+     "odds_text": "≥1 in 35",
+     "gain_if_allotted": 186300,
+     "expected_gain": 5269,
+     "return_on_blocked_pct": 0.52
+    }
+   ],
+   "best_category": "retail",
+   "analysis_file": "analysis/bonfiglioli-transmissions.md",
+   "needs_analysis": false,
+   "card_file": "analysis/bonfiglioli-transmissions.json",
+   "needs_card": false,
+   "card": {
+    "name": "Bonfiglioli Transmissions",
+    "source": "rhp",
+    "analysed": "2026-10-13",
+    "verdict": "listing_gains",
+    "verdict_text": "Listing gains only",
+    "summary": "Indian arm of Italy's Bonfiglioli: industrial gearboxes, geared motors and drives (industrial, off-highway, wind).",
+    "financials": "CY25 revenue ₹2,014 Cr (+9%), PAT ₹238 Cr (+24%), RoNW 24%, debt-free",
+    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+    "positives": [
+     "Debt-free, PAT margin 11.8% rising to 13% in H1 CY26",
+     "~46x P/E vs peer average 51.6x",
+     "35% retail quota"
+    ],
+    "red_flags": [
+     "100% OFS by parent — company gets nothing",
+     "Wind ≈27–32% of revenue; industry data from company-paid report"
+    ],
+    "anchor": "₹759 Cr from ~50 anchors at ₹586 (1.30 Cr sh). Top: Nippon (Small Cap ₹33.6 Cr + others), SBI MF (3 schemes), ICICI Pru Innovation ₹40 Cr, HDFC MF (many), Axis, Govt Pension Fund Global, Goldman Sachs, Mirae, ADIA, PSP, Allianz, Invesco, Franklin, DSP.",
+    "anchor_grade": "strong"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-12",
+       "gmp": 153.0
+      },
+      {
+       "date": "2026-10-13",
+       "gmp": 175.0
+      },
+      {
+       "date": "2026-10-14",
+       "gmp": 181.0
+      },
+      {
+       "date": "2026-10-15",
+       "gmp": 168.0
+      },
+      {
+       "date": "2026-10-16",
+       "gmp": 122.0
+      },
+      {
+       "date": "2026-10-19",
+       "gmp": 108.0
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹153 → … → ₹168 → ₹122 → ₹108 since 12 Oct, falling (peak ₹181)"
+    },
+    "subscription": {
+     "days": [
+      {
+       "day": 1,
+       "date": "2026-10-15",
+       "times": {
+        "qib": 0.06,
+        "bnii": 0.5,
+        "snii": 0.76,
+        "retail": 0.42,
+        "total": 0.36
+       }
+      },
+      {
+       "day": 2,
+       "date": "2026-10-16",
+       "times": {
+        "qib": 0.1,
+        "bnii": 1.09,
+        "snii": 1.7,
+        "retail": 0.87,
+        "total": 0.74
+       }
+      },
+      {
+       "day": 3,
+       "date": "2026-10-19",
+       "times": {
+        "qib": 81.29,
+        "bnii": 35.36,
+        "snii": 20.58,
+        "retail": 4.13,
+        "total": 31.77
+       }
+      }
+     ],
+     "text": "Day 1 → 3: Retail 0.42x → 0.87x → 4.13x · sNII 0.76x → 1.7x → 20.58x · bNII 0.5x → 1.09x → 35.36x · QIB 0.06x → 0.1x → 81.29x · Total 0.36x → 0.74x → 31.77x"
     }
    }
   },
@@ -988,12 +1032,12 @@
    "price": 693.0,
    "lot": 21,
    "size_cr": 1450.0,
-   "gmp": 92.0,
-   "gmp_pct": 13.28,
-   "gmp_low": 83.0,
+   "gmp": 75.0,
+   "gmp_pct": 10.82,
+   "gmp_low": 75.0,
    "gmp_high": 96.0,
    "pe": 159.68,
-   "gmp_updated": "19-Oct 6:02",
+   "gmp_updated": "19-Oct 15:37",
    "url": "https://www.investorgain.com/gmp/paras-healthcare-ipo/1728/",
    "nse": {
     "company": "Paras Healthcare Limited",
@@ -1032,7 +1076,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 1932,
+     "gain_if_allotted": 1575,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -1045,7 +1089,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 27048,
+     "gain_if_allotted": 22050,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -1058,7 +1102,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 133308,
+     "gain_if_allotted": 108675,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -1104,11 +1148,11 @@
       },
       {
        "date": "2026-10-19",
-       "gmp": 92.0
+       "gmp": 75.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹111 → ₹97 → ₹92 since 15 Oct, falling"
+     "text": "GMP ₹111 → ₹97 → ₹75 since 15 Oct, falling"
     },
     "subscription": null
    }
@@ -1123,12 +1167,12 @@
    "price": 1119.0,
    "lot": 12,
    "size_cr": 30213.0,
-   "gmp": 250.0,
-   "gmp_pct": 22.34,
+   "gmp": 251.0,
+   "gmp_pct": 22.43,
    "gmp_low": 148.0,
-   "gmp_high": 250.0,
+   "gmp_high": 251.0,
    "pe": 33.28,
-   "gmp_updated": "19-Oct 6:02",
+   "gmp_updated": "19-Oct 15:37",
    "url": "https://www.investorgain.com/gmp/jio-platforms-ipo/2306/",
    "nse": {
     "company": "Jio Platforms Limited",
@@ -1167,7 +1211,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 3000,
+     "gain_if_allotted": 3012,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -1180,7 +1224,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 45000,
+     "gain_if_allotted": 45180,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -1193,7 +1237,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 225000,
+     "gain_if_allotted": 225900,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -1251,12 +1295,89 @@
       },
       {
        "date": "2026-10-19",
-       "gmp": 250.0
+       "gmp": 251.0
       }
      ],
      "direction": "up",
-     "text": "GMP ₹182.5 → … → ₹219 → ₹222 → ₹250 since 12 Oct, rising"
+     "text": "GMP ₹182.5 → … → ₹219 → ₹222 → ₹251 since 12 Oct, rising"
     },
+    "subscription": null
+   }
+  },
+  {
+   "key": "bls-polymers",
+   "name": "BLS Polymers",
+   "open": "2026-10-27",
+   "close": "2026-10-29",
+   "allotment": "2026-10-30",
+   "listing": "2026-11-03",
+   "price": 150.0,
+   "lot": 100,
+   "size_cr": 255.0,
+   "gmp": 20.0,
+   "gmp_pct": 13.33,
+   "gmp_low": 20.0,
+   "gmp_high": 20.0,
+   "pe": 25.0,
+   "gmp_updated": "19-Oct 15:37",
+   "url": "https://www.investorgain.com/gmp/bls-polymers-ipo/1849/",
+   "nse": null,
+   "rhp_url": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1792388466880.pdf",
+   "rhp_source": "sebi",
+   "phase": "upcoming",
+   "price_high": 150.0,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 100,
+     "min_amount": 15000,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 2000,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 1400,
+     "min_amount": 210000,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 28000,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 67,
+     "min_shares": 6700,
+     "min_amount": 1005000,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 134000,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    }
+   ],
+   "best_category": null,
+   "analysis_file": "analysis/bls-polymers.md",
+   "needs_analysis": true,
+   "card_file": "analysis/bls-polymers.json",
+   "needs_card": true,
+   "card": null,
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": null,
     "subscription": null
    }
   },
@@ -1275,7 +1396,7 @@
    "gmp_low": 63.0,
    "gmp_high": 91.0,
    "pe": 40.69,
-   "gmp_updated": "19-Oct 6:02",
+   "gmp_updated": "19-Oct 15:37",
    "url": "https://www.investorgain.com/gmp/hd-fire-protect-ipo/1902/",
    "nse": null,
    "rhp_url": null,
@@ -1434,12 +1555,12 @@
    "price": 289.0,
    "lot": 51,
    "size_cr": 702.0,
-   "gmp": 19.0,
-   "gmp_pct": 6.57,
+   "gmp": 20.0,
+   "gmp_pct": 6.92,
    "gmp_low": 10.0,
    "gmp_high": 55.0,
    "pe": 21.62,
-   "gmp_updated": "19-Oct 6:02",
+   "gmp_updated": "19-Oct 15:37",
    "url": "https://www.investorgain.com/gmp/fusion-cx-ipo/1792/",
    "nse": null,
    "rhp_url": null,
@@ -1458,7 +1579,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 969,
+     "gain_if_allotted": 1020,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -1471,7 +1592,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 13566,
+     "gain_if_allotted": 14280,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -1484,7 +1605,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 65892,
+     "gain_if_allotted": 69360,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -1541,11 +1662,11 @@
       },
       {
        "date": "2026-10-19",
-       "gmp": 19.0
+       "gmp": 20.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹10 → … → ₹17 → ₹6 → ₹19 since 12 Oct, falling (peak ₹35)"
+     "text": "GMP ₹10 → … → ₹17 → ₹6 → ₹20 since 12 Oct, falling (peak ₹35)"
     },
     "subscription": {
      "days": [

@@ -1,0 +1,12 @@
+{
+  "name": "BLS Polymers Limited",
+  "source": "rhp",
+  "analysed": "2026-10-19",
+  "verdict": "listing_gains", "verdict_text": "Listing gains only",
+  "summary": "Goa-based maker of custom polymer compounds for power/telecom cables and 3LPE pipeline coating; ₹255 Cr fresh issue.",
+  "financials": "FY26 revenue ₹349 Cr (+6% on FY25), PAT about ₹27 Cr; full P&L not extracted.",
+  "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+  "positives": ["100% fresh issue, no promoter selling", "CPSE enlistments are a barrier to entry", "Wire and cable demand from power and telecom"],
+  "red_flags": ["Top 5 customers 53.5% of FY26 revenue", "Single Goa plant; untraceable records and shareholders", "Growth is single-digit; ₹89.5 Cr of proceeds go to working capital"],
+  "anchor": "Anchor bidding 26 Oct; not yet out", "anchor_grade": "pending"
+}
