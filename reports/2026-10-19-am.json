@@ -1,0 +1,13 @@
+{"date": "2026-10-19", "session": "AM",
+ "headline": "Tonbo, Zetwerk, Bonfiglioli, Sahajanand close today — Tonbo Retail (5.2x, GMP ~74%) and Bonfiglioli Retail (0.87x, GMP 22%) are the best; skip Zetwerk",
+ "ipos": {
+  "tonbo-imaging": {"best_category": "Retail", "category_note": "GMP rising to ₹515 (74%); Retail 5.2x vs sNII 14x — Retail has the best odds. Closes today"},
+  "zetwerk": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null,
+    "category_note": "GMP falling ₹23 → ₹5 (3%) and only 0.19x subscribed; loss-making — skip. Closes today"},
+  "bonfiglioli-transmissions": {"best_category": "Retail", "category_note": "GMP falling since 14 Oct (₹181 → ₹130) — apply only if you'd hold; Retail 0.87x so allotment is near-certain. Closes today"},
+  "sahajanand-medical-technologies": {"best_category": "Retail", "category_note": "GMP falling ₹47 → ₹25 (7%); only 0.29x subscribed, full allotment likely — apply only if you'd hold. Closes today"},
+  "paras-healthcare": {"best_category": null, "category_note": "GMP falling ₹111 → ₹92; ~160x P/E, 66% OFS. Opens 21 Oct; anchor due 20 Oct"},
+  "fusion-cx": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null,
+    "category_note": "Bids closed at ~3.3x; GMP choppy (₹35 peak → ₹19) — allotment 19 Oct, lists 22 Oct; hold only if allotted and long-term minded"}
+ },
+ "notes": []}
