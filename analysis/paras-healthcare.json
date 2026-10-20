@@ -7,8 +7,16 @@
  "summary": "Operator of 8 Paras Health tertiary/quaternary hospitals (2,211 beds) across North India, Bihar, Jharkhand and J&K.",
  "financials": "FY26 revenue ₹1,606 Cr (+24%), PAT ₹44 Cr after losses in FY24 and FY25; borrowings ₹854 Cr plus ₹540 Cr leases.",
  "quota": "not found in RHP extract",
- "positives": ["Revenue +24% in FY26; Q1 FY27 revenue ₹470 Cr vs ₹368 Cr a year earlier", "Large regional bed base with ~74% revenue from CONGOR specialties", "₹375 Cr of the fresh issue goes to debt repayment"],
- "red_flags": ["P/E ~160x vs listed peers 43–116x on thin FY26 profit", "66% of the issue is OFS (promoter ₹300 Cr, Commelina ₹650 Cr)", "RHP flags untraceable historical corporate records and RoC filings"],
- "anchor": "Pending: anchor bidding 20 Oct 2026",
- "anchor_grade": "pending"
+ "positives": [
+  "Revenue +24% in FY26; Q1 FY27 revenue ₹470 Cr vs ₹368 Cr a year earlier",
+  "Large regional bed base with ~74% revenue from CONGOR specialties",
+  "₹375 Cr of the fresh issue goes to debt repayment"
+ ],
+ "red_flags": [
+  "P/E ~160x vs listed peers 43–116x on thin FY26 profit",
+  "66% of the issue is OFS (promoter ₹300 Cr, Commelina ₹650 Cr)",
+  "RHP flags untraceable historical corporate records and RoC filings"
+ ],
+ "anchor": "Strong: ₹652.5 Cr from ~40 anchors incl. ADIA, SBI MF, ICICI Pru Life, HDFC MF, BlackRock (19 Oct 2026)",
+ "anchor_grade": "strong"
 }

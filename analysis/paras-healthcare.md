@@ -29,7 +29,7 @@ Peer P/E (RHP) 42.9–116.4, average 67.8. At ₹693, P/E on FY26 EPS ₹4.34 is
 Fresh ₹500 Cr: ₹320.9 Cr repay company borrowings, ₹54.1 Cr into subsidiary PMHPL (Srinagar) for debt repayment, balance general corporate (≤25%). OFS ₹950 Cr (66% of issue) goes to selling holders.
 
 ## Anchor book
-**Pending** — anchor allocation not out yet; no news found.
+**Strong** — ₹652.5 Cr raised (94.16 lakh shares at ₹693) on 19 Oct 2026 from ~40+ anchors. Top names: Abu Dhabi Investment Authority (10.7%), SBI MF funds (multi-asset 9.96%, infrastructure 7.7%, healthcare 5.4%, balanced hybrid 4.6%, dividend yield 3.1%), ICICI Pru Life (5.4%), HDFC MF (small cap 4.1%, pharma & healthcare 3.1%), BlackRock Global Funds (3.6–3.7%), Eastspring Dragon Peacock (3.1%), WhiteOak funds, Kotak, Edelweiss, Baroda BNP Paribas. Lock-in: 50% 30 days, 50% 90 days.
 
 ## Red flags
 - P/E ~160x vs peers 43–116x; losses in FY24 and FY25, FY26 profit only ₹44 Cr.

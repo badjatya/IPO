@@ -28,7 +28,7 @@ Snapshot P/E 33.3 at upper band. Peer table (Bharti Airtel etc.) not extracted: 
 Up to ₹27,500 Cr to prepay RJIL borrowings (ECBs with ANZ, BofA, BNP etc., mostly USD/JPY term loans); rest general corporate purposes (cap 25% of gross proceeds). Money goes to the company, not sellers.
 
 ## Anchor book
-**Pending** — anchor bidding the working day before opening (20 Oct).
+**Strong** — ₹8,110 Cr raised (7.25 crore shares at ₹1,119) on 19 Oct 2026. Top names: LIC ₹499 Cr (6.2%), New World Fund (Capital Group) ₹487 Cr (6.0%), BNP Paribas ODI ₹303 Cr (3.7%), EuPac Fund ₹156 Cr, Fidelity funds (Contrafund ₹123 Cr, Blue Chip Growth ₹71 Cr and others), BlackRock Global Funds (multiple, ~₹37 Cr top), American Funds/Capital Group trusts. Lock-in: 50% 30 days, 50% 90 days.
 
 ## Red flags
 Huge size (₹30,213 Cr) and ₹10 lakh Cr valuation leave little room; growth mid-teens; heavy spectrum-related liabilities and rising finance costs; industry data from a company-commissioned report; 100% proceeds go to debt repayment, not growth.

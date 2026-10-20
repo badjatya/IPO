@@ -1,0 +1,11 @@
+{"date": "2026-10-20", "session": "AM",
+ "headline": "Jio Platforms & Paras open tomorrow — Jio GMP rising (₹245), Paras GMP falling; Tonbo Retail 21.5x, allotment 21 Oct",
+ "ipos": {
+  "jio-platforms": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Retail", "category_note": "Opens 21 Oct. GMP ₹245 (~22%) and rising, anchor book strong (₹8,110 Cr). Valuation full — apply 1 lot per PAN for the listing pop; 35% retail quota makes allotment plausible. Recheck subscription on 23 Oct."},
+  "paras-healthcare": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null, "category_note": "GMP falling since 15 Oct (₹111 → ₹78) on ~160x P/E and 66% OFS. Anchor book is strong (₹652 Cr), so only a small listing-gain play; skip unless GMP recovers."},
+  "tonbo-imaging": {"best_category": "Retail", "category_note": "Closed 19 Oct: Retail 21.5x, sNII 99x, bNII 137x, QIB 209x. GMP ₹510 (73%) rising. Retail odds ≥1 in 22 — least-subscribed category. Allotment 21 Oct, listing 23 Oct."},
+  "zetwerk": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null, "category_note": "Closed 19 Oct at 1.37x total, Retail only 0.49x. GMP ₹3.5 (2%) falling since 12 Oct (peak ₹23) — skip. Listing 23 Oct."},
+  "sahajanand-medical-technologies": {"best_category": "Retail", "category_note": "Closed 19 Oct: Retail 1.64x, total 4.3x. GMP falling to ₹24 (7%) from ₹47 — listing gains only; Retail odds ≥1 in 2. Listing 23 Oct."},
+  "bonfiglioli-transmissions": {"best_category": "Retail", "category_note": "Closed 19 Oct: Retail 4.1x, QIB 81x, total 31.8x. GMP ₹127 (22%) off the ₹181 peak, falling — listing gains only; Retail odds ≥1 in 4. Listing 23 Oct."}
+ },
+ "notes": ["Anchor lists for Jio Platforms and Paras Healthcare read from NSE anchor allocation PDFs (Jio's is a scan, top ~27 names read manually)."]}
