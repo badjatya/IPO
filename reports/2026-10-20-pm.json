@@ -1,0 +1,15 @@
+{"date": "2026-10-20", "session": "PM",
+ "headline": "Jio & Paras open tomorrow — Jio GMP rising to ₹254, Paras GMP falling to ₹60; Tonbo allotment 21 Oct",
+ "ipos": {
+  "jio-platforms": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Retail", "category_note": "Opens 21 Oct. GMP ₹254 (~23%) and rising since 13 Oct. Valuation full — 1 lot per PAN for the listing pop. Recheck subscription on 23 Oct."},
+  "paras-healthcare": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null, "category_note": "Opens 21 Oct. GMP falling since 15 Oct (₹111 → ₹60) at ~160x P/E and 66% OFS — skip unless GMP recovers."},
+  "eaaa-alternatives": {"category_note": "Opens 26 Oct; price band not announced, RHP analysis pending."},
+  "sfc-environmental-technologies": {"category_note": "Opens 27 Oct; price band not announced, RHP analysis pending."},
+  "tonbo-imaging": {"best_category": "Retail", "category_note": "Closed 19 Oct: Retail 21.5x. GMP ₹515 (74%), steady. Allotment 21 Oct, listing 23 Oct."},
+  "zetwerk": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null, "category_note": "Closed 1.37x, Retail 0.49x. GMP ₹2.5 falling since 13 Oct — skip. Listing 23 Oct."},
+  "sahajanand-medical-technologies": {"best_category": "Retail", "category_note": "Closed: Retail 1.64x. GMP ₹25 (7%) falling from ₹47 — listing gains only. Listing 23 Oct."},
+  "bonfiglioli-transmissions": {"best_category": "Retail", "category_note": "Closed: Retail 4.1x. GMP ₹128 (22%) off ₹181 peak — listing gains only. Listing 23 Oct."},
+  "hd-fire-protect": {"best_category": "Retail", "category_note": "Lists 21 Oct. GMP ₹61 (22.5%), down from ₹91. Retail 20.8x."},
+  "fusion-cx": {"category_note": "Lists 22 Oct. GMP ₹20 (7%), recovering from ₹6 low."}
+ },
+ "notes": ["EAAA and SFC cards are web stubs (RHP not filed); figures from news/DRHP summaries."]}
