@@ -1,0 +1,36 @@
+{
+ "hd-fire-protect": {
+  "name": "HD Fire Protect",
+  "symbol": "HDFIRE",
+  "listing_date": "2026-10-21",
+  "issue_price": 271,
+  "listing_price": 335,
+  "day_close": 306.75,
+  "day_high": 340,
+  "day_low": 301.5,
+  "listing_gain_pct": 23.62,
+  "close_gain_pct": 13.19,
+  "gmp_eve": 61.0,
+  "gmp_eve_pct": 22.51,
+  "gmp_eve_snapshot": "2026-10-20T19:09+05:30",
+  "gmp_eve_updated": "20-Oct 16:37",
+  "gmp_miss_pts": 1.11,
+  "verdict": "apply",
+  "verdict_text": "Apply",
+  "best_category": "Retail",
+  "verdict_report": "2026-10-15-am.json",
+  "anchor_grade": "strong",
+  "pe": 40.69,
+  "size_cr": 712.13,
+  "subscription": {
+   "qib": 156.82,
+   "snii": 91.36,
+   "bnii": 146.47,
+   "retail": 20.83,
+   "total": 82.41
+  },
+  "subscription_source": "nse ipo-detail 2026-10-21",
+  "price_source": "nse",
+  "recorded_at": "2026-10-21T19:08+05:30"
+ }
+}
