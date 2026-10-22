@@ -1,0 +1,9 @@
+{"date": "2026-10-22", "session": "AM",
+ "headline": "Paras Healthcare GMP collapsed ₹111 → ₹25 — avoid; Jio closes tomorrow, Retail only 0.51x",
+ "ipos": {
+  "paras-healthcare": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null,
+    "category_note": "GMP falling since 15 Oct (₹111 → ₹25, 3.6%) on P/E ~160 — skip; closes 23 Oct"},
+  "jio-platforms": {"verdict": "neutral", "verdict_text": "Neutral", "best_category": "Retail",
+    "category_note": "GMP ₹246 (22%) off peak ₹273, drifting down. Retail only 0.51x so full allotment; bigger HNI categories gain less. Closes 23 Oct — recheck then"}
+ },
+ "notes": ["Fusion CX lists today; listing-day prices not out yet, will be scored next run."]}
