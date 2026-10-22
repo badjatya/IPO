@@ -1,0 +1,1877 @@
+
+===== THE OFFER =====
+the Offer
+Designated Intermediaries  Collectively, the members of the Syndicate, Sub-Syndicate or agents, SCSBs (other than in
+  relation to RIBs using the UPI Mechanism), Registered Brokers, CDPs and RTAs, who are
+  authorised to collect Bid cum Application Forms from the relevant Bidders, in relation to
+  the Offer.
+  In relation to ASBA Forms submitted by RIBs and Non-Institutional Bidders Bidding with
+  an application size of up to ₹0.50 million (not using the UPI mechanism) by authorising an
+  SCSB to block the Bid Amount in the ASBA Account, Designated Intermediaries shall
+  mean SCSBs.
+  In relation to ASBA Forms submitted by UPI Bidders where the Bid Amount will be
+  blocked upon acceptance of UPI Mandate Request by such UPI Bidders using the UPI
+  Mechanism, Designated Intermediaries shall mean Syndicate, Sub-Syndicate / agents,
+  Registered Brokers, CDPs, SCSBs and RTAs.
+  In relation to ASBA Forms submitted by QIBs and Non-Institutional Bidders with an
+  application size of more than ₹0.50 million (not using the UPI Mechanism), Designated
+  Intermediaries shall mean Syndicate, Sub-Syndicate / agents, SCSBs, Registered Brokers,
+  the CDPs and RTAs
+Designated RTA Locations  Such locations of the RTAs where Bidders can submit the ASBA Forms to RTAs.
+  The details of such Designated RTA Locations, along with names and contact details of the
+  RTAs eligible to accept ASBA Forms are available on the respective websites of the Stock
+  Exchanges (www.bseindia.com and www.nseindia.com) and updated from time to time
+Designated SCSB Branches  Such branches of the SCSBs which shall collect the ASBA Forms, a list of which is
+  available  on  the  website  of  SEBI  at
+  http://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognised=yes or at such other
+  website as may be prescribed by SEBI from time to time
+Designated Stock Exchange  National Stock Exchange of India Limited
+  11
+  Term  Description
+Draft Red Herring Prospectus / The draft red herring prospectus dated August 25, 2025 read in conjunction with
+DRHP  corrigendum dated December 11, 2025, filed with the SEBI and Stock Exchanges and issued
+  in accordance with the SEBI ICDR Regulations, which did not contain complete particulars
+  of the price at which the Equity Shares will be Allotted and the size of the Offer, including
+  any addenda or corrigenda thereto
+Eligible FPIs  FPIs from such jurisdictions outside India where it is not unlawful to make an offer /
+  invitation under the Offer and in relation to whom the Bid cum Application Form and this
+  Red Herring Prospectus constitutes an invitation to purchase the Equity Shares offered
+  thereby
+Eligible NRI(s)  NRI(s) eligible to invest under Schedule 3 and Schedule 4 of the FEMA Rules, from
+  jurisdictions outside India where it is not unlawful to make an offer or invitation under the
+  Offer and in relation to whom the ASBA Form and this Red Herring Prospectus constitutes
+  an invitation to subscribe to or to purchase the Equity Shares offered hereby
+Escrow Account(s)  The ‘no-lien’ and ‘non-interest bearing’ account(s) opened with the Escrow Collection
+  Bank(s) and in whose favour the Anchor Investors will transfer money through direct credit
+  / NEFT / RTGS / NACH in respect of the Bid Amount when submitting a Bid
+Escrow Collection Bank(s)  The Bank which is a clearing member and registered with SEBI as bankers to an issue under
+  the Securities and Exchange Board of India (Bankers to an Issue) Regulations, 1994, and
+  with whom the Escrow Account will be opened, in this case being ICICI Bank Limited
+First Bidder / Sole Bidder  Bidder whose name shall be mentioned in the Bid cum Application Form or the Revision
+  Form and in case of joint Bids, whose name shall also appear as the first holder of the
+  beneficiary account held in joint names
+Floor Price  The lower end of the Price Band, subject to any revision(s) thereto, at or above which the
+  Offer Price and the Anchor Investor Offer Price will be finalised and below which no Bids
+  will be accepted
+Fresh Issue  The fresh issue component of the Offer comprising of an issuance by our Company of up
+  to [●] Equity Shares of face value of ₹2 each at ₹[●] per Equity Share (including a premium
+  of ₹[●] per Equity Share) aggregating up to ₹1,500.00 million
+Fugitive Economic Offender  An individual who is declared a fugitive economic offender under Section 12 of the Fugitive
+  Economic Offenders Act, 2018
+General Information Document The General Information Document for investing in public issues prepared and issued in
+/ GID  accordance with the SEBI circular no. SEBI/HO/CFD/DIL1/CIR/P/2020/37 dated March
+  17, 2020, suitably modified and updated pursuant to, among others, SEBI master circular
+  no. HO/49/14/14(2)2026-CFD-POD2/I/4518/2026 dated February 9, 2026 and the UPI
+  Circulars, as amended from time to time. The General Information Document shall be
+  available on the websites of the Stock Exchanges and the BRLMs
+Gross Proceeds  The Offer proceeds from the Fresh Issue that will be available to our Company
+IIFL  IIFL Capital Services Limited (formerly known as IIFL Securities Limited)
+JM  JM Financial Limited
+Mobile App(s)  The  mobile  applications  listed  on  the  website  of  SEBI  at
+  https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=4
+  3 or such other website as may be updated from time to time, which may be used by UPI
+  Bidders to submit Bids using the UPI Mechanism as provided under ‘Annexure A’ for the
+  SEBI circular no. SEBI/HO/CFD/DIL2/CIR/P/2019/85 dated July 26, 2019
+Minimum NIB Application Size Bid amount of more than ₹0.20 million in the specified lot size
+Monitoring Agency  CARE Ratings Limited, being a credit rating agency registered with SEBI
+Monitoring Agency Agreement The agreement dated October 5, 2026 entered into between our Company and the
+  Monitoring Agency
+Mutual Fund  Mutual funds registered with SEBI under the Securities and Exchange Board of India
+  (Mutual [...truncated]
+
+===== SUMMARY OF RESTATED FINANCIAL INFORMATION =====
+SUMMARY FINANCIAL INFORMATION
+The following tables set forth the summary financial information derived from our Restated Consolidated
+Financial Information as at and for the three months period ended June 30, 2026 and June 30, 2025 and for the
+Financial Years ended March 31, 2026, March 31, 2025 and March 31, 2024. The summary financial information
+presented below should be read in conjunction with “Restated Consolidated Financial Information”, on page 402
+and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” on page 516.
+Summary derived from our Restated Consolidated Financial Information
+Restated Consolidated Balance Sheet
+  (in ₹ million, unless otherwise specified)
+  As at
+  Particulars  June 30, 2026  June 30, 2025  March 31,  March 31,  March 31,
+  2026  2025  2024
+ ASSETS
+ Non-current assets
+ Property, plant and equipment  628.92  698.71  655.92  675.51  611.09
+ Right-of-use assets  656.24  540.99  488.47  557.47  128.46
+ Capital work-in-progress  82.96  50.87  68.06  50.04  67.33
+ Investment property  55.16  67.99  58.89  71.04  144.80
+ Goodwill  303.22  28.08  303.22  28.08  28.08
+ Other Intangible Assets  1.97  58.72  16.21  72.60  127.20
+ Financial assets
+ (i) Investments  219.77  92.26  217.71  87.79  48.69
+ (ii) Loans  108.84  101.14  109.11  101.07  80.00
+ (iii) Trade Receivables  502.66  517.30  514.08  523.25  533.78
+ (iv) Other financial assets  217.80  333.25  227.84  205.90  159.60
+ Deferred tax assets (net)  128.34  97.22  119.05  87.93  87.46
+ Income tax assets (net)  134.94  130.95  82.24  67.14  30.97
+ Other non - current assets  280.00  185.33  259.33  157.08  63.29
+ Total Non-Current Assets  3,320.82  2,902.82  3,120.13  2,684.89  2,110.75
+  Current assets
+ Inventories  1,423.00  1,128.15  1,251.40  975.83  1,084.08
+  Financial assets
+ (i) Loans  194.18  179.27  194.50  180.32  201.98
+ (ii) Trade receivables  4,608.46  2,759.52  6,087.64  4,350.46  3,411.36
+ (iii) Cash and cash equivalents  200.67  315.23  405.06  375.44  77.32
+ (iv) Bank balances other than (iii)  1,202.44  1,007.06  1,163.14  985.07  1,808.74
+ above
+ (v) Other Financial Asset  287.39  223.52  275.60  181.93  141.46
+ Other Current Assets  1,008.64  289.85  736.80  260.78  213.73
+ Total Current Assets  8,924.79  5,902.60  10,114.15  7,309.84  6,938.66
+ Total Assets  12,245.61  8,805.42  13,234.27  9,994.73  9,049.41
+ EQUITY AND LIABILITIES
+ Equity
+ Equity share capital  186.82  186.82  186.82  186.82  62.27
+ Other equity  7,868.06  6,288.32  7,854.91  6,300.00  5,280.68
+ Total equity attributable to the  8,054.88  6,475.14  8,041.73  6,486.82  5,342.96
+ owners of the Parent
+ Non Controlling Interests  197.05  142.77  197.30  140.77  268.50
+ Total Equity  8,251.94  6,617.91  8,239.03  6,627.59  5,611.45
+ Liabilities
+ Non-current liabilities
+ Financial liabilities
+ (i) Borrowings  364.84  469.18  390.89  494.93  461.05
+ (ii) Lease liabilities  571.51  462.62  420.12  475.58  104.82
+ Provisions  64.77  68.20  63.20  58.24  62.46
+ Deferred tax liabilities (net)  80.96  86.58  82.32  90.44  83.15
+ Total non-current liabilities  1,082.08  1,086.59  956.54  1,119.19  711.49
+  92
+  As at
+  Particulars  June 30, 2026  June 30, 2025  March 31,  March 31,  March 31,
+  2026  2025  2024
+Current liabilities
+Financial liabilities
+(i) Borrowings  1,682.81  206.40  1,565.47  342.14  930.52
+(ii) Lease liabilities  82.87  57.83  69.92  55.93  28.02
+(iii) Trade payables
+Total outstanding dues of micro  68.88  86.71  117.66  138.87
+  217.40
+and small enterprises
+Total outstanding dues of creditors  682.62  488.61  1,585.02  792.83
+other than micro and small  889.74
+enterprises
+(iv) Other financial liabilities  90.30  92.85  158.28  278.28  230.16
+Other current liabilities  272.86  168.00  508.21  581.00  328.63
+Provisions  7.84  0.00  8.34  0.24  1.00
+Current tax liabilities (net)  23.40  0.51  25.79  58.67  101.00
+Total current liabilities  2,911.59  1,100.93  4,038.70  2,247.95  2,726.48
+Total liabilities  3,993.67  2,187.51  4,995.24  3,367.14  3,437.96
+Total equity and liabilities  12,245.61  8,805.42  13,234.27  9,994.73  9,049.41
+  93
+Restated Consolidated Statement of Profit & Loss
+  (in ₹ million, unless otherwise specified)
+  For the three  For the three  For the year ended
+  months period  months period
+  Particulars  March 31,  March 31,  March 31,
+  ended  ended
+  2026  2025  2024
+  June 30, 2026  June 30, 2025
+Income
+Revenue from operations  1,339.44  677.93  8,036.29  6,978.58  6,574.95
+Other income  39.52  33.33  176.43  291.06  190.71
+Impairment gain on financial  0.03  0.17  0.01  -
+assets  1.79
+Total income  1,379.00  711.44  8,212.73  7,269.63  6,767.44
+Expenses
+Purchases of Stock-in-trade  324.64  112.36  1,898.89  1,274.64  2,055.52
+Cost of Material Consumed  277.95  267.84  1,556.21  1,767.43  1,220.24
+Project Cost  321.50  43.82  759.75  287.49  261.66
+Changes in inventories  (95.77)  (111.24)  (199.72)  93.40  (162.69)
+Employee benefits expense  222.93  176.46  842.47  729.98  600.00
+Finance costs  53.94  29.31  148.64  133.71  88.26
+Depreciation and amortization  64.74  63.63  278.46  178.41
+expense  124.58
+Impairment loss on financial  0.38  0.13  8.36  7.46
+assets  2.78
+Other expenses  189.29  138.43  812.21  743.38  666.69
+Total expenses  1,359.59  720.74  6,105.27  5,215.91  4,857.04
+Restated Profit before share of  19.40  (9.30)  2,107.46  2,053.73  1,910.40
+profit of joint ventures and
+associate
+Add: Share of profit/(loss) of  2.10  4.50  7.42  (1.34)  24.06
+joint ventures and associate (Net)
+Restated Profit before tax  21.51  (4.80)  2,114.88  2,052.39  1,934.47
+Tax expense
+Current tax  18.91  11.15  566.40  534.99  505.46
+Deferred tax  (9.96)  (13.15)  (22.13)  6.82  (11.01)
+MAT Credit  (2.28)  -  (31.52)  (9.50)  (1.72)
+Total tax expense  6.67  (1.99)  512.75  532.31  492.74
+Restated Profit after Tax  14.84  (2.81)  1,602.13  1,520.08  1,441.73
+Restated Profit for the period/
+year attributable to:
+- Owners of the Parent  15.11  (13.06)  1,543.61  1,440.60  1,416.07
+- Non-controlling interests  (0.27)  10.25  58.52  79.49  25.66
+Other comprehensive income
+(OCI)
+Items that will not be
+subsequently reclassified to
+profit or loss
+Remeasurement gain/(loss) of the  (3.66)  1.20  1.16  (3.93)  (5.11)
+defined benefit plans
+Income taxes related to items that  0.82  (0.27)  (0.06)  0.96  1.33
+will not be reclassified to profit or
+loss
+Share of other comprehensive  (0.04)  (0.03)  0.00  -  -
+income  (Remeasurement
+gain/(loss) of the defined benefit
+plans) of associates accounted for
+using the equity method (Net)
+Items that may be reclassified to
+profit or loss
+  94
+  For the three  For the three  For the year ended
+  months period  months period
+  Particulars  March 31,  March 31,  March 31,
+  ended  ended
+  2026  2025  2024
+  June 30, 2026  June 30, 2025
+Exchange  differences  on  0.95  3.50  13.36  1.41  9.66
+translating  the  financial
+statements of foreign operations
+Restated Total other  (1.93)  4.40  14.45  (1.56)  5.88
+comprehensive income/(loss)
+Other  comprehensive
+income/(loss) for the period /
+year attributable to:
+- Owners of the Parent  (1.96)  4.05  13.97  (1.95)  7.11
+- Non-controlling interests  0.03  0.36  0.48  0.38  (1.23)
+Total comprehensive income  12.91  1.59  1,616.58  1,518.52  1,447.61
+for the period / year
+Total comprehensive income
+for  the period / year
+attributable to:
+- Owners of the Parent  13.15  (9.01)  1,557.58  1,438.65  1,423.18
+- Non-controlling interests  (0.24)  10.61  59.00  79.87  24.43
+Earnings per Equity Share of
+face value of ₹2 each fully paid
+up:
+Basic earnings per share (₹) (not  0.16  (0.14)  16.52  15.42  15.16
+annualised for June 30, 2026, and
+for June 30, 2025)
+Diluted earnings per share (₹) (not  0.16  (0.14)  16.52  15.42  15.16
+annualised for June 30, 2026, and
+for June 30, 2025)
+  95
+Restated statement of cash flows
+  (in ₹ million, unless otherwise specified)
+  For the three  For the three  For the year ended
+  months  months
+  Particulars  March 31,  March 31,  March 31,
+  period ended  period ended
+  2026  2025  2024
+  June 30, 2026  June 30, 2025
+ Cash flows from operating activities
+ Profit for the period before tax  21.51  (4.80)  2,114.88  2,052.39  1,934.47
+ Adjustments for :
+ Depreciation and amortization expenses  64.74  63.63  278.46  178.41  124.58
+ Finance costs  53.94  29.31  148.64  133.71  88.26
+ Interest income on fixed deposit  (20.21)  (21.41)  (87.79)  (111.45)  (109.65)
+ Interest income on loans given  (7.68)  (7.14)  (28.53)  (40.01)  (9.72)
+ Bad debts written off  -  -  -  0.48  10.09
+ Impairment gain/loss on financial asset  0.35  (0.05)  8.35  7.46  1.00
+ Exchange differences on translation of  0.98  3.31  12.57  1.36  9.94
+ foreign operations
+ Net (gain)/loss on fair valuation of  -  -  -  -  (11.72)
+ Mutual Funds
+ Net (gain)/loss on sale of Fixed Assets  (1.48)  -  (15.27)  (56.30)  (16.42)
+ Net (gain)/loss on sale of Investment  (0.87)  (0.60)  (5.71)  (39.61)  (16.63)
+ Property
+ Net (gain)/loss on Termination of Lease  -  (0.22)  (0.22)  (1.26)  -
+ Share of (profit)/ loss of the joint  (2.10)  (4.50)  (7.42)  1.34  (24.06)
+ ventures and associate (Net)
+ Operating profit before working  109.15  57.55  2,417.96  2,126.51  1,980.14
+ capital changes
+ Working capital adjustments:
+ (Decrease)/ increase in other current  (235.35)  (412.99)  (72.78)  252.36  107.47
+ liabilities
+ (Decrease)/ increase in trade payables  (951.18)  (356.38)  770.98  (175.44)  29.43
+ (Decrease)/ increase in other financial  (68.12)  (182.95)  (117.29)  106.82  83.81
+ liabilities
+ (Decrease)/ increase in provisions  (1.82)  10.63  14.17  (7.96)  (11.99)
+ Decrease/ (increase) in inventories  (171.60)  (152.32)  (275.57)  108.25  (345.99)
+ Decrease/ (increase) in trade  1,490.25  1,596.93  (1,736.36)  (936.52)  (1,709.69)
+ receivables
+ Decrease/ (increase) in other financial  (19.81)  (49.32)  (110.35)  (74.10)  (153.74)
+ assets
+ Decrease/ (increase) in other current  (271.85)  (29.07)  (476.02)  (47.06)  (110.40)
+ assets
+ Decrease/ (increase) in non-current  (20.67)  (28.25)  (102.24)  (93.79)  (41.22)
+ assets
+ Adjustments on account of acquisition  -  -  29.44  -  471.13
+ of subsidiary
+ Cash generated from operations  (141.00)  453.82  341.93  1,259.07  298.95
+ Income taxes paid (net of refunds)  (72.42)  (133.12)  (599.96)  (603.98)  (415.89)
+ Net cash from operating activities (A)  (213.42)  320.70  (258.02)  655.09  (116.94)
+ Cash flows from investing activities
+ Purchase of property, plant and  (19.54)  (59.92)  (162.80)  (309.50)  (276.08)
+ equipment and intangible assets
+ (including under development)
+ Sale of property, plant and equipment  3.40  -  29.63  173.01  34.49
+ and intangible assets
+ Sale of investment property  3.92  2.80  14.64  107.28  48.00
+ Investment in Mutual Fund (Net)  -  -  -  -  201.94
+ Consideration paid on acquisition of  -  (11.28)  (334.48)  (185.13)  (151.96)
+ subsidiary
+ Investment in Equity Instrument  0.04  0.03  (122.50)  (40.43)  -
+ Investments in fixed deposits (Net)  (21.23)  (141.60)  (183.33)  810.99  (609.36)
+ Interest received on fixed deposits  20.21  21.41  87.79  111.45  109.65
+ Loans given (Net)  0.59  0.98  (22.22)  0.59  (137.91)
+ Interest received on loans given  7.68  7.14  28.53  40.01  9.72
+ Net cash generated from/(used in)  (4.93)  (180.44)  (664.73)  708.27  (771.52)
+  96
+  For the three  For the three  For the year ended
+  months  months
+  Particulars  March 31,  March 31,  March 31,
+  period ended  period ended
+  2026  2025  2024
+  June 30, 2026  June 30, 2025
+ investing activities (B)
+ Cash flows from financing activities
+ Dividend Paid  -  -  (5.88)  (317.25)  (97.33)
+ Proceeds from Borrowing - Non  (26.05)  (25.75)  (104.04)  33.88  457.15
+ Current
+ Proceeds from Borrowing - Current  117.34  (135.74)  1,223.34  (588.38)  470.33
+ Interest paid on Borrowing - Non  (24.83)  (14.32)  (73.45)  (64.76)  (32.39)
+ Current
+ Interest paid on Borrowing - Current  (17.77)  (3.76)  (31.92)  (32.11)  (47.04)
+ Repayment of lease liability  (23.39)  (9.67)  (40.09)  (59.60)  (20.56)
+ Interest paid on lease liability  (11.33)  (11.23)  (43.27)  (37.02)  (8.79)
+ Net cash flow used in financing  13.96  (200.48)  924.68  (1,065.25)  721.37
+ activities (C)
+ Net increase(decrease) in cash and  (204.39)  (60.21)  1.93  298.12  (167.08)
+ cash equivalents (A)+(B)+(C)
+ Cash and cash equivalent at the  405.06  375.44  375.44  77.32  226.48
+ beginning of the period/ year
+ Add: Upon acquisition of Subsidiary  -  -  27.69  -  17.94
+ Cash and cash equivalents at the end  200.67  315.23  405.06  375.44  77.32
+ of the period / year
+ Components of Cash and cash
+ equivalents for period / year
+ Cash in hand  0.91  0.90  1.06  0.86  1.57
+ Balances with bank  98.31  314.33  163.86  224.59  75.75
+ Cheque in hand  101.46  -  240.15  150.00  -
+ Total cash and cash equivalents  200.67  315.23  405.06  375.44  77.32
+Change in liability arising from Financing Activities
+  (in ₹ million, unless otherwise specified)
+ Particular  April 1, 2026  Net Cashflow  Others*  June 30, 2026
+ Borrowings - Non-current  390.89  (26.05)  -  364.84
+ Borrowings - Current  1,565.47  117.34  -  1,682.81
+ Lease Liability  490.04  (23.39)  187.73  654.37
+ Total  2,446.40  67.89  187.73  2,702.03
+ Particular  April 1, 2025  Net Cashflow  Others*  June 30, 2025
+ Borrowings - Non-current  494.93  (25.75)  -  469.18
+ Borrowings - Current  342.14  (135.74)  -  206.40
+ Lease Liability  531.51  (9.67)  (1.38)  520.46
+ Total  1,368.57  (171.16)  (1.38)  1,196.03
+ Particular  April 1, 2025  Net Cashflow  Others*  March 31, 2026
+ Borrowings - Non-current  494.93  (104.04)  -  390.89
+ Borrowings - Current  342.14  1,223.34  -  1,565.47
+ Lease Liability  531.51  (40.09)  (1.38)  490.04
+ Total  1,368.57  1,079.21  (1.38)  2,446.40
+ Particular  April 1, 2024  Net Cashflow  Others*  March 31, 2025
+ Borrowings - Non-current  461.05  33.88  -  494.93
+ Borrowings - Current  930.52  (588.38)  -  342.14
+ Lease Liability  132.85  (59.60)  458.26  531.51
+ Total  1,524.42  (61 [...truncated]
+
+===== CAPITAL STRUCTURE =====
+CAPITAL STRUCTURE
+The share capital of our Company as on the date of this Red Herring Prospectus is set forth below:
+  (In ₹, except share data)
+  Aggregate value at face  Aggregate value at
+  value  Offer Price*
+A  AUTHORIZED SHARE CAPITAL(1)
+  125,000,000 Equity Shares of face value of ₹2 each  250,000,000  -
+B  ISSUED, SUBSCRIBED AND PAID-UP CAPITAL BEFORE THE OFFER
+  93,411,270 Equity Shares of face value of ₹2 each  186,822,540  -
+C  PRESENT OFFER IN TERMS OF THIS RED HERRING PROSPECTUS
+  Offer of up to [●] Equity Shares of face value ₹2 each  [●]  [●]
+  aggregating up to ₹[●] million(2)(3)
+  Which includes:
+  Fresh Issue of up to [●] Equity Shares of face value ₹2 each  [●]  [●]
+  aggregating up to ₹1,500.00 million(2)^
+  Offer for Sale of up to 15,682,750 Equity Shares of face value  [●]  [●]
+  ₹2 each by the Selling Shareholders aggregating up to ₹[●]
+  million(3)
+D  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL AFTER THE OFFER +
+  [●] Equity Shares of face value ₹2 each *  [●]  -
+E  SECURITIES PREMIUM ACCOUNT
+  Before the Offer (in ₹ million)  Nil
+  After the Offer (in ₹ million)*  [●]
++
+  Assuming full subscription of the Offer.
+*  To be updated upon finalization of the Offer Price, and subject to the Basis of Allotment.
+(1)
+  For details in relation to the changes in the authorised share capital of our Company in the last 10 years, see “History and Certain
+  Corporate Matters – Amendments to the Memorandum of Association” on page 343.
+(2)
+  Our Board has authorized the Offer, pursuant to their resolution dated March 21, 2025. Our Shareholders have authorized the Fresh
+  Issue pursuant to special resolution passed at the extraordinary general meeting dated April 15, 2025.
+(3)
+  The Selling Shareholders confirm that the Offered Shares are eligible to be offered for sale in the Offer in accordance with the provisions
+  of the SEBI ICDR Regulations. The Selling Shareholders have confirmed and authorized their participation in the Offer for Sale. Further,
+  our Board has taken on record the consents of the Selling Shareholders for participation in the Offer for Sale pursuant to its resolution
+  dated September 25, 2026. For details on authorization of the Selling Shareholders in relation to their respective portion of the Offered
+  Shares, see “Other Regulatory and Statutory Disclosures” on page 566.
+  127
+  Notes to the Capital Structure
+  1. Equity share capital history of our Company
+  The issuance of equity shares since incorporation until the date of this Red Herring Prospectus, by our Company had been undertaken in accordance with the provisions of the
+  Companies Act, 1956, or the Companies Act, 2013, as applicable. The following table sets forth the history of the equity share capital of our Company:
+ Date of  Details of shareholders and equity shares allotted / reduced  Reason for /  Number Face  Issue  Form of  Cumulative Cumulative Number Category of
+allotment  nature of  of equity value  price /  consideration number of  paid-up  of  Shareholder
+  /  allotment /  shares  per reduction  equity  equity  Allottees
+reduction  reduction  allotted / equity price per  shares  share
+of shares  reduced share  equity  capital (in
+  (₹)  share (₹)  ₹)
+March 29, Allotment of 171,000 equity shares to Enviropro Water Tech Private  Initial  450,000  10  10  Cash  450,000  4,500,000  5 Promoter and
+  2005 Limited, 45,000 equity shares to Sandeep Sudhakar Asolkar, 4,000 subscription to  public
+  equity shares to Aparna Vivek Kapoor, 185,000 equity shares to SFC  the  shareholders
+  Umwelttechnik GmbH and 45,000 equity shares to Gunnar Memorandum of
+  Demoulin.  Association(2)
+March 28, Allotment of 410,000 equity shares to Enviropro Water Tech Private Further issue of  1,030,000  10  10  Cash  1,480,000  14,800,000  5 Promoter and
+  2007 Limited, 115,000 equity shares to Sandeep Sudhakar Asolkar, 55,000 equity shares  public
+  equity shares to Aparna Vivek Kapoor, 400,000 equity shares to SFC  shareholders
+  Umwelttechnik GmbH and 50,000 equity shares to Gunnar
+  Demoulin.
+ January Allotment of 10,000 equity shares to Sandeep Sudhakar Asolkar, and Further issue of  20,000  10  10  Cash  1,500,000  15,000,000  2 Promoter and
+28, 2008 10,000 equity shares to Aparna Vivek Kapoor.  equity shares  public
+  shareholders
+March 31, Allotment of 153,078 equity shares to SFC Umwelttechnik GmbH Further issue of  189,751  10  23  Cash  1,689,751  16,897,510  2  Public
+  2008 and 36,673 equity shares to Gunnar Demoulin.  equity shares  shareholders
+  Allotment of 1,099,249 equity shares to Enviropro Water Tech Further issue of 1,310,249  10  10  Cash  3,000,000  30,000,000  3 Promoter and
+  Private Limited, 130,000 equity shares to Sandeep Sudhakar Asolkar equity shares(2)  public
+  and 81,000 equity shares to Aparna Vivek Kapoor.  shareholders
+Septembe Allotment of 1,700,000 equity shares to Enviropro Water Tech Further issue of 2,000,000  10  10  Cash  5,000,000  50,000,000  3 Promoter and
+ r 2, 2008 Private Limited, 200,000 equity shares to Sandeep Sudhakar Asolkar, equity shares  public
+  and 100,000 equity shares to Aparna Vivek Kapoor.  shareholders
+Septembe Allotment of 850,000 equity shares to Enviropro Water Tech Private Further issue of 1,000,000  10  10  Cash  6,000,000  60,000,000  3 Promoter and
+r 15, 2008 Limited, 100,000 equity shares to Sandeep Sudhakar Asolkar, and equity shares  public
+  50,000 equity shares to Aparna Vivek Kapoor.  shareholders
+March 10, Reduction of 4,800,000 equity shares held by Enviropro Water Tech  Allotment  (4,800,000  10  - Other than cash  1,200,000  12,000,000  -  Public
+  2023 Private Limited  pursuant to the  )  shareholder
+  July 24, Allotment of equity shares was as follows:  Scheme of  5,027,418  10  - Other than cash  6,227,418  62,274,180  110 Promoter and
+  2023  Amalgamation(  public
+  1) (2)
+  shareholders
+  128
+ Date of  Details of shareholders and equity shares allotted / reduced  Reason for /  Number Face  Issue  Form of  Cumulative Cumulative Number Category of
+allotment  nature of  of equity value  price /  consideration number of  paid-up  of  Shareholder
+  /  allotment /  shares  per reduction  equity  equity  Allottees
+reduction  reduction  allotted / equity price per  shares  share
+of shares  reduced share  equity  capital (in
+  (₹)  share (₹)  ₹)
+  S. No.  Name of allottee  Equity shares
+  allotted
+  1.  Alprishi Realtors LLP  62,125
+  2.  Ashtapad Trading LLP  4,375
+  3.  Hardik Suresh Matalia  2,450
+  4.  Karan Balkrishna Shah  2,188
+  5.  Ketan Arvind Shah (held jointly with  2,100
+  Arvind Kantilal Shah)
+  6.  Manish Mavji Dedhia  2,188
+  7.  Damji Manek Gada  2,188
+  8.  Dina Damji Gada  2,188
+  9.  Kruti Sagar Sheth  2,100
+  10.  Taral V Nagda  2,100
+  11.  Dipti Pankaj Gosrani  2,100
+  12.  Parag Bipinchandra Shah  2,450
+  13.  Sheetal Dugar  93,625
+  14.  Elixir Commercial and Advisory Services  2,800
+  LLP
+  15.  Suvarna Mayank Shah (held jointly with  4,375
+  Mayank Pravinchandra Shah)
+  16.  Bina Vidyut Shah  2,800
+  17.  Kirti Mavji Malde (HUF)  2,275
+  18.  Bhagyashree Anil Sawant  875
+  19.  Anil Bhavanji Shah (held jointly with  31,063
+  Darshana Anil Shah)
+  20.  Arvind Kanji Chheda (held jointly with  8,750
+  Ranjan Arvind Chheda)
+  21.  Neelam Ashok Chheda  4,375
+  22.  Bhaveshkumar Bachubhai Mehta  54,250
+  23.  Bhavesh Dhirajlal Sheth (held jointly with  1,313
+  Rita Bhavesh Sheth)
+  24.  Intellect Endeavours LLP  7,000
+  25.  Chandrakant Vallabhaji Gogri (held  46,725
+  jointly with Jaya Chandrakant Gogri)
+  26.  Dhanvallabh Ventures Fund - Scheme I  93,013
+  27.  Jaya Chandrakant Gogri (held jointly with  221,120
+  129
+ Date of  Details of shareholders and equity shares allotted / reduced  Reason for /  Number Face  Issue  Form of  Cumulative Cumulative Number Category of
+allotment  nature of  of equity value  price /  consideration number of  paid-up  of  Shareholder
+  /  allotment /  shares  per reduction  equity  equity  Allottees
+reduction  reduction  allotted / equity price per  shares  share
+of shares  reduced share  equity  capital (in
+  (₹)  share (₹)  ₹)
+  Chandrakant Vallabhaji Gogri and Hetal
+  Gogri Gala)
+  28.  Narendra Murji Dedhia (held jointly with  11,813
+  Dina Narendra Dedhia)
+  29.  Devesh Rajesh Kabra  1,750
+  30.  Dinesh Devchand Ghalla (held jointly with  2,625
+  Priti Dinesh Ghalla)
+  31.  Harit Pragji Shah (held jointly with  7,000
+  Jayshree Harit Shah)
+  32.  Jayshree Harit Shah (held jointly with  26,250
+  Harit Pragji Shah)
+  33.  Vicky Hemchand Gala (held jointly with  9,188
+  Beena Vicky Gala)
+  34.  Rupal Bharat Pasad  1,313
+  35.  Indira Madan Dedhia (held jointly with  3,500
+  Madan Dhanji Dedhia)
+  36.  Kalpen Madan Dedhia (held jointly with  4,375
+  Deepali Kalpen Dedhia)
+  37.  Kinnari Kartik Dedhia (held jointly with  4,375
+  Kartik Kantilal Dedhia)
+  38.  Ishan Sudhir Gosar  1,750
+  39.  Jayesh Lakhamshi Haria  2,625
+  40.  Hemlata Rasiklal Gala  1,313
+  41.  Jiggar L Savla  1,313
+  42.  Ketan Dharshi Savla (held jointly with  1,313
+  Rekha Ketan Savla)
+  43.  Kiran Dhiren Gogri  4,813
+  44.  Kirit Ratilal Mehta (held jointly with Smita  875
+  Kirit Mehta)
+  45.  Mandakini Komal Shah (held jointly with  1,925
+  Komalbhai Muljibhai Shah)
+  46.  Nemin Mahesh Savadia (held jointly with  5,250
+  Mahesh Mathuradas Savadia)
+  47.  Mahesh Premji Vikam  9,275
+  48.  Rashmi Kiran Nandu  2,625
+  49.  Malay Kiran Nandu  1,750
+  130
+ Date of  Details of shareholders and equity shares allotted / reduced  Reason for /  Number Face  Issue  Form of  Cumulative Cumulative Number Category of
+allotment  nature of  of equity value  price /  consideration number of  paid-up  of  Shareholder
+  /  allotment /  shares  per reduction  equity  equity  Allottees
+reduction  reduction  allotted / equity price per  shares  share
+of shares  reduced share  equity  capital (in
+  (₹)  share (₹)  ₹)
+  50.  Mangal Viram Gadhavi (held jointly with  1,750
+  Palubhai Virambhai Gadhavi)
+  51.  Manoj Mulji Chheda  5,250
+  52.  Mansukh Premji Gala  1,313
+  53.  Chandni Milan Maheshwari  1,313
+  54.  Maya M Savla (held jointly with Mulesh  11,375
+  Manilal Savla)
+  55.  Maitry Nikhil Shah  1,750
+  56.  Neeta Navin Nagda  3,938
+  57.  Navin Chapshi Shah  4,375
+  58.  Neerav Dhirajlal Gala  1,750
+  59.  Alpa Jayesh Keniya  875
+  60.  Palubhai Virambhai Gadhavi (held jointly  1,750
+  with Mangal Viram Gadhavi)
+  61.  Paresh S Kariya (held jointly with Purvi P  6,563
+  Karia)
+  62.  Paresh Shashikant Shah (held jointly with  1,313
+  Varsha Paresh Shah)
+  63.  Nikhil Holdings Private Limited  17,500
+  64.  Parindu Bansilal Gogri Trust  9,363
+  65.  Parul Yogesh Nahar  18,550
+  66.  Krishna Yogesh Nahar  4,550
+  67.  Pravin Jakhubhai Nandu  875
+  68.  Pravinchandra Valji Rambhia (held jointly  1,313
+  with Dhaval P Rambhia)
+  69.  Priyank Mukesh Dedhia (held jointly with  2,188
+  Mukesh Dhirajlal Dedhia)
+  70.  Purnima Paresh Satra (held jointly with  875
+  Paresh Maganlal Satra)
+  71.  Rishita Jatin Karani  4,813
+  72.  Sangoi Nirav Ramnik  1,313
+  73.  Aar Em Ventures LLP  36,750
+  74.  Sagar Mahesh Tanna  1,750
+  75.  Parul Samir Shah (held jointly with Samir  3,063
+  Pragji Shah)
+  76.  Sandeep Gupta  1,750
+  131
+ Date of  Details of shareholders and equity shares allotted / reduced  Reason for /  Number Face  Issue  Form of  Cumulative Cumulative Number Category of
+allotment  nature of  of equity value  price /  consideration number of  paid-up  of  Shareholder
+  /  allotment /  shares  per reduction  equity  equity  Allottees
+reduction  reduction  allotted / equity price per  shares  share
+of shares  reduced share  equity  capital (in
+  (₹)  share (₹)  ₹)
+  77.  Santosh Shantilal Vora (held jointly with  13,563
+  Shantilal Shivji Vora and Kanchan
+  Shantilal Vora)
+  78.  Shantilal Shivji Vora (held jointly with  13,563
+  Kanchan Shantilal Vora)
+  79.  Kanchan Shantilal Vora (held jointly with  13,563
+  Shantilal Shivji Vora)
+  80.  Rachi Santosh Vora (held jointly with  13,563
+  Santosh Shantilal Vor [...truncated]
+
+===== OBJECTS OF THE OFFER =====
+OBJECTS OF THE OFFER
+The Offer comprises of a Fresh Issue of [●] Equity Shares, aggregating to ₹1,500.00 million by our Company and an
+Offer for Sale of 15,682,750 Equity Shares aggregating to ₹[●] million by the Selling Shareholders, subject to
+finalization of Basis of Allotment. For details, see “The Offer” on page 90.
+Offer for Sale
+Each of the Selling Shareholders will be entitled to its respective portion of the proceeds of the Offer for Sale after
+deducting agreed proportion of the Offer expenses and relevant taxes thereon. Our Company will not receive any
+proceeds from the Offer for Sale by the Selling Shareholders and the proceeds from the Offer for Sale will not form
+part of the Net Proceeds. For further details, see “– Offer expenses” on page 179.
+For details on the authorisation of the Selling Shareholders in relation to the Offered Shares, see “Other Regulatory
+and Statutory Disclosures – Authority for the Offer” on page 566.
+Fresh Issue
+Our Company proposes to utilise the Net Proceeds from the Fresh Issue towards funding the following objects:
+1.  Prepayment of all or a portion of certain outstanding borrowings availed by our Company and our wholly owned
+  Subsidiary, namely Vasudha Waste Treatment Private Limited;
+2.  Funding our working capital requirements; and
+3.  General corporate purposes.
+  (collectively, referred to herein as the “Objects”)
+In addition, our Company expects to receive the benefits of listing of Equity Shares on the Stock Exchanges including
+enhancing our visibility and our brand image among our existing and potential customers and creating a public market
+for our Equity Shares in India.
+The main objects and objects incidental and ancillary to the main objects, as set out in our Memorandum of
+Association, enable our Company to undertake our existing business activities and the activities for which funds are
+being raised by us through the Fresh Issue. Further, the main objects and objects incidental and ancillary to the main
+objects, of our wholly owned Subsidiary, enables it to undertake the activities towards which the loans proposed to be
+prepaid / repaid from the Net Proceeds were utilized. We confirm that the activities which we have been carrying out
+till date are in accordance with the objects clause of our Memorandum of Association.
+Net Proceeds
+After deducting the Offer related expenses from the Gross Proceeds, we estimate the net proceeds of the Fresh Issue
+to be ₹[●] million (“Net Proceeds”). The details of the proceeds from the Fresh Issue are summarized in the following
+table:
+  (in ₹ million)
+  Particulars  Total estimated cost
+  Gross proceeds from the Fresh Issue  Up to 1,500.00
+  (Less) Offer related expenses in relation to the Fresh Issue(1)(2)  [●]
+  Net Proceeds (2)  [●]
+(1)  For details with respect to sharing of fees and expenses amongst our Company and the Selling Shareholders, please refer to “– Offer Expenses”
+  on page 179.
+(2)  To be finalised upon determination of the Offer Price and updated in the Prospectus prior to filing with RoC.
+Utilisation of Net Proceeds
+The Net Proceeds are proposed to be utilised in accordance with the details provided in the following table:
+  (in ₹ million)
+  168
+  Particulars  Estimated amount
+  Prepayment of all or a portion of certain outstanding borrowings availed by our Company and  422.28
+  our wholly owned Subsidiary, namely Vasudha Waste Treatment Private Limited
+  Funding our working capital requirements  749.17
+  General corporate purposes (1)  [●]
+  Total (1)  [●]
+(1)
+  To be finalised upon determination of the Offer Price and updated in the Prospectus prior to filing with the RoC. The amount to be utilised for
+  general corporate purposes shall not exceed 25% of the gross proceeds from the Fresh Issue.
+Proposed Schedule of Implementation and Deployment of Net Proceeds
+We propose to deploy the Net Proceeds towards the Objects in accordance with the estimated schedule of
+implementation and deployment of funds as set forth below:
+  (in ₹ million)
+  Amount which will be  Estimated deployment
+  Particulars  financed from Net  of Net Proceeds in
+  Proceeds  Fiscal 2027
+  Prepayment of all or a portion of certain outstanding borrowings availed  422.28  422.28
+  by our Company and our wholly owned Subsidiary, namely Vasudha
+  Waste Treatment Private Limited
+  Funding our working capital requirements  749.17  749.17
+  General corporate purposes (1)  [●]  [●]
+  Net Proceeds (1)(2)  [●]  [●]
+(1)  To be finalised upon determination of the Offer Price and updated in the Prospectus prior to filing with RoC. The amount utilised for general
+  corporate purposes shall not exceed 25% of the Gross Proceeds.
+The aforesaid fund requirements, deployment of funds and the intended use of the Net Proceeds as described in this
+Red Herring Prospectus, are approved by our board pursuant to its resolution dated October 19, 2026 and are based
+on our current business plan, management estimates, prevailing market conditions, current circumstances of our
+business and other commercial considerations, which are subject to change and may not be within the control of our
+management. However, such fund requirements and deployment of funds have not been appraised by any external
+agency or any bank or financial institution or any other independent agency. See “Risk Factors – The objects of the
+Fresh Issue for which the funds are being raised have not been appraised by any bank or financial institutions. Any
+variation in the utilization of our Net Proceeds as disclosed in this Red Herring Prospectus would be subject to certain
+compliance requirements, including prior Shareholders’ approval” on page 80. Our historical expenditure may not
+be reflective of our future expenditure plans. We may have to revise our funding requirements and deployment, as
+required, on account of a variety of factors such as our financial and market condition, our business and growth
+strategies, competitive landscape, general factors affecting our results of operations, financial condition and access to
+capital and other external factors such as changes in the business environment or regulatory climate and interest or
+exchange rate fluctuations, which may not be within the control of our management. This may entail rescheduling or
+revising the proposed utilisation of the Net Proceeds and changing the allocation of funds from its planned allocation
+at the discretion of our management, subject to compliance with applicable laws.
+Subject to applicable law, if the actual utilisation towards any of the Objects is lower than the proposed deployment,
+such balance will be used for funding other existing Objects, if necessary and/or towards general corporate purposes
+to the extent that the total amount to be utilized towards general corporate purposes will not exceed 25% of the Gross
+Proceeds in accordance with Regulation 7(2) of the SEBI ICDR Regulations. Further, in the event that estimated
+utilization out of the Net Proceeds in a scheduled Fiscal being not undertaken in its entirety, the remaining Net
+Proceeds shall be utilized in subsequent Fiscals, as may be decided by our Company, in accordance with applicable
+laws. Any such change in our plans may require rescheduling of our expenditure programs and increasing or
+decreasing expenditure for a particular object vis-à-vis the utilization of Net Proceeds.
+Subject to applicable law, in case of a shortfall in raising requisite capital from the Net Proceeds or an increase in the
+total estimated cost of the Objects, business considerations may require us to explore a range of options including
+utilising our internal accruals and seeking additional debt from existing and future lenders. We believe that such
+alternate arrangements would be available to fund any such shortfalls. Further, in case of variations in the actual
+utilisation of funds earmarked for the purposes set forth above, increased fund requirements for a particular purpose
+  169
+may be financed by surplus funds, if any, available in respect of the other purposes for which funds are being raised
+in the Offer. To the extent our Company is unable to utilise any portion of the Net Proceeds towards the
+aforementioned Objects, per the estimated scheduled of deployment specified above, our Company shall deploy the
+Net Proceeds in subsequent Fiscal towards the aforementioned Objects.
+Details of the Objects
+1.  Prepayment of all or a portion of certain outstanding borrowings availed by our Company and our wholly
+  owned Subsidiary, namely Vasudha Waste Treatment Private Limited
+Our Company and our wholly owned Subsidiary, Vasudha Waste Treatment Private Limited have entered into various
+financing arrangements from time to time, with various lenders. The financing arrangements entered into by us include
+inter alia term loans and working capital facilities (fund based and non-fund based). As of July 31, 2026, the
+outstanding principal borrowings of our Company’s together with our Subsidiaries’ (fund based and non-fund based),
+on a consolidated basis, aggregated to ₹2,531.02 million. For further details in relation to our borrowings, see
+“Financial Indebtedness” on page 550. Pursuant to a share purchase agreement dated June 17, 2026 amongst our
+Company, Hindustan Waste Treatment Private Limited and Vasudha Waste Treatment Private Limited (“SPA”), our
+Company has agreed to sell and transfer 100% of the equity share capital of Vasudha Waste Treatment Private Limited
+to our wholly owned Subsidiary, Hindustan Waste Treatment Private Limited. However, the transfer of shares to be
+undertaken pursuant to the SPA shall be completed at a later stage. For further details, please see “History and Certain
+Corporate Matters - Details regarding acquisition or divestment of business or undertakings” on page 345.
+Our Company proposes to utilise an estimated amount of up to ₹422.28 million from the Net Proceeds towards pre-
+payment of all or a portion of certain term loans availed by our Company, and one of our wholly owned Subsidiary,
+Vasudha Waste Treatment Private Limited. Given the nature of these borrowings and the terms of prepayment, the
+aggregate outstanding amounts under these borrowings may vary from time to time and we may, in accordance with
+the relevant repayment schedule, repay or refinance some of the borrowings set out below, prior to Allotment or avail
+of additional credit facilities. If at the time of Allotment, any of the below mentioned loans are repaid or refinanced
+or if any additional credit facilities are availed or drawn down or further disbursements under the existing facilities
+are availed by our Company, and Vasudha Waste Treatment Private Limited, then our Company may utilise the Net
+Proceeds for prepayment of any such refinanced facilities or any additional facilities / disbursements obtained by our
+Company and Vasudha Waste Treatment Private Limited. In the event our Board deems appropriate, the amount
+allocated for estimated schedule of deployment of Net Proceeds may be repaid by our Company in the subsequent
+Fiscal.
+For the purposes of the Offer, our Company and Vasudha Waste Treatment Private Limited have obtained necessary
+consent from its lenders, as is respectively required under the relevant facility documentation for undertaking activities
+in relation to this Offer and for the deployment of the Net Proceeds towards the objects set out in this section.
+The selection of borrowings proposed to be prepaid or repaid amongst our borrowing arrangements availed will be
+based on various factors, including (i) cost of the borrowing, including applicable interest rates, (ii) any conditions
+attached to the borrowings restricting our ability to prepay / repay the borrowings and time taken to fulfil, or obtain
+waivers for fulfilment of such conditions, (iii) receipt of consents for prepayment from the respective lenders, (iv)
+terms and conditions of such consents and waivers, (v) levy of any prepayment penalties and the quantum thereo [...truncated]
+
+===== BASIS OF OFFER PRICE =====
+BASIS FOR OFFER PRICE
+The Floor Price, Price Band and the Offer Price will be determined by our Company, in consultation
+with the Book Running Lead Managers, on the basis of assessment of market demand for the Equity
+Shares offered through the Book Building Process and on the basis of the qualitative and quantitative
+factors as described below. The face value of the Equity Shares is ₹2 each, and the Offer Price is [●]
+times the face value at the lower end of the Price Band and [●] times the face value at the higher end of
+the Price Band. The financial information included herein is derived from our Restated Consolidated
+Financial Information. The Prospective Investors should also refer to “Risk Factors”, “Our Business”,
+“Restated Consolidated Financial Information”, and “Management’s Discussion and Analysis of
+Financial Condition and Results of Operations” on pages 28, 298, 402 and 516, respectively, to have an
+informed view before making an investment decision.
+Qualitative factors
+Some of the qualitative factors and our strengths which form the basis for computing the Offer Price are:
+•  Technology driven market leadership as a key player in the wastewater treatment market:
+  With 728 installations in the WWT segment, particularly in sewage treatment plants (“STPs”), we
+  hold over 80% market share in sequencing batch reactor (“SBR”) technology, a key wastewater
+  treatment method in India, as of July 31, 2026. (Source: F&S Report). Set forth are the details of the
+  treatment capacity facilitated by our technology as at and for the three months period ended June
+  30, 2026 and past three fiscal years:
+  Details of wastewater treatment  No. of wastewater
+  Treatment capacity
+  capacity facilitated by our  treatment installations
+  (in MLD)
+  technology (on cumulative basis)
+  As at June 30, 2026  724  17,464.61
+  As at March 31, 2026  705  17,144.01
+  As at March 31, 2025  639  15,209.45
+  As at March 31, 2024  577  13,906.98
+•  Vertical integration through constant innovation and use of technology:
+  Our approach to vertical integration involves the development and manufacture of key components
+  used in our C-Tech and OREX technologies by augmenting our in-house manufacturing capabilities,
+  thereby reducing our dependence on third parties for procurement of key technologies for our
+  business operations. With over 20 years of experience in wastewater treatment technology, we've
+  strengthened our manufacturing through 1. In-house production; 2. Strategic partnerships; and 3.
+  Acquisitions;
+•  Well-positioned to capture market opportunities in the solid waste treatment segment:
+  We are among the market leaders in the municipal solid waste space basis our operational results
+  and comprehensive solutions. (Source: F&S Report). We have an established track record in the
+  SWT segment, and have designed, built and are operating two integrated SWT facilities in Goa for
+  the Goa Waste Management Corporation on public-private partnership and turnkey model to treat
+  municipal solid waste, enabling generation of biogas, compost and recovery of recyclables, with a
+  combined treatment capacity of 350 tons per day (“TPD”), with an additional handling capacity of
+  75 TPD resulting in our aggregate treatment capacity of up to 425 TPD.
+•  High proportion of repeat business with strong order book:
+  We maintain strong, long-standing relationships with our customers, as evidenced by recurring
+  business engagements. The revenue from our repeated customers are as follows:
+  Financial Year / Period  Revenue from repeat  Revenue from repeat customers
+  customers  as a % of revenue from
+  (in ₹ million)  operations
+  Three months ended June 30,  625.40  97.41%
+  2026
+  183
+  Financial Year / Period  Revenue from repeat  Revenue from repeat customers
+  customers  as a % of revenue from
+  (in ₹ million)  operations
+  FY 2026  5,140.40  91.98%
+  FY 2025  4,039.74  85.18%
+  FY 2024  4,691.84  89.96%
+  As on June 30, 2026, our Total Order Book (WWT, WRR and SWT segments) stood at ₹15,700.65
+  million.
+•  Track record of consistent performance and strong financial profile:
+  We believe that our focus on efficient utilisation of resources has led to deliver revenue growth and
+  consistent profitability. A summary of our financial performance is as follows:
+  (in ₹ million, unless otherwise stated)
+  Unit  Three  Three  Fiscal  Fiscal 2025  Fiscal 2024
+  months  months  2026 / As  / As at  / As at
+  Particulars  ended / As  ended / As  at March  March 31,  March 31,
+  at June 30,  at June  31, 2026  2025  2024
+  2026  30, 2025
+  Revenue  from  in ₹  1,339.44  677.93  8,036.29  6,978.58  6,574.95
+  Operations  million
+  PAT  in ₹  14.84  (2.81)  1,602.13  1,520.08  1,441.73
+  million
+  PAT Margin  %  1.11  (0.41)  19.94  21.78  21.93
+  Net worth  in ₹  8,054.88  6,475.14  8,041.73  6,486.82  5,342.96
+  million
+  Net Debt / Equity  X  0.08  (0.10)  0.05  (0.08)  (0.09)
+  times
+•  Proven management experience and leadership.
+  We are anchored by a strong management team, comprising our Promoters, Board of Directors, Key
+  Managerial Personnel and Senior Management, whose extensive industry experience and leadership
+  have been pivotal in steering us towards sustained growth and market leadership. For details, see
+  “Our Management” on page 367.
+For further details, see “Our Business – Competitive Strengths” on page 311.
+Quantitative factors
+Some of the quantitative factors, which may form the basis for computing the Offer Price are as follows:
+I.  Basic and diluted earnings per share (“EPS”) (as adjusted for changes in capital on a
+  consolidated basis)
+Based on / derived from the Restated Consolidated Financial Information:
+  Diluted EPS (in
+  Financial Year / Period ended  Basic EPS (in ₹)  Weight
+  ₹)
+  March 31, 2026  16.52  16.52  3
+  March 31, 2025  15.42  15.42  2
+  March 31, 2024  15.16  15.16  1
+  Weighted Average  15.93  15.93
+  Three months ended June 30, 2026*  0.16  0.16  -
+  Three months ended June 30, 2025*  (0.14)  (0.14)  -
+  * Not annualized
+Notes:
+ i. The face value of each Equity Share is ₹2. Pursuant to resolution passed by our Board at their meeting dated August 14, 2024
+  and resolution passed by the Shareholders at the annual general meeting dated September 5, 2024, our Company has sub-
+  divided the face value of its equity shares from ₹10 each into Equity Shares of ₹2 each. Basic EPS and Diluted EPS for all the
+  period / year have been derived post the impact of split of equity shares.
+  184
+ ii. Our Company has pursuant to the Board resolution dated August 14, 2024 and resolution passed by the Shareholders at the
+  annual general meeting dated September 5, 2024 allotted 62,274,180 Equity Shares through a bonus issuance (“Bonus
+  Shares”) in the ratio of two Equity Shares for every one Equity Share held by the Shareholders as on the record date (i.e.,
+  September 4, 2024). Basic EPS and Diluted EPS for all the period / year have been considered post the impact of the issue of
+  Bonus Shares in accordance with Ind AS 33 - Earnings per share notified under the Companies (Indian Accounting Standards)
+  Rules of 2015 (as amended).
+iii. EPS has been calculated in accordance with the Indian Accounting Standard 33 – “Earnings per share notified under the
+  Companies (Indian Accounting Standards) Rules of 2015 (as amended)”.
+iv. Basic EPS = Restated profit for the period / year attributable to equity shareholders of the Company divided by weighted
+  average number of equity shares outstanding during the period / year considering the impact of the Scheme of Amalgamation.
+ v. Diluted EPS = Restated profit for the period / year attributable to equity shareholders of the Company divided by weighted
+  average number of equity shares outstanding during the period / year adjusted for the effects of all dilutive potential equity
+  shares, if any considering the impact of the Scheme of Amalgamation.
+II. Price / Earning (“P/E”) ratio in relation to the Price Band of ₹[●] to ₹[●] per Equity Share (of
+  face value of ₹2 each):
+  Particulars  P/E ratio at Floor Price  P/E ratio at Cap Price
+  (number of times)*  (number of times)*
+  Based on basic EPS as per the Restated
+  Consolidated Financial Information for  [●]  [●]
+  Fiscal 2026
+  Based on diluted EPS as per the Restated
+  Consolidated Financial Information for  [●]  [●]
+  Fiscal 2026
+*To be computed after finalisation of the Price Band.
+III. Industry peer group P/E ratio
+Based on the peer group information (excluding our Company) which has been given below:
+  Particulars  Industry P/E
+  Highest  220.77
+  Lowest  31.34
+  Average  101.38
+Notes:
+ i. The highest and lowest industry P/E shown above is based on the peer set provided below under “Comparison with listed
+  industry peers”. The industry average has been calculated as the arithmetic average P/E of the peer set provided below.
+ii. P/E figures for the peer are computed based on closing market price as on October 16, 2026 on BSE, divided by Diluted EPS
+  (on consolidated basis) based on the financial results declared by the peers for the Financial Year ending March 31, 2026
+  submitted to the stock exchanges.
+IV. Return on Net Worth attributable to the owners of our Company (“RoNW”) on a consolidated
+  basis
+As derived from the Restated Consolidated Financial Information:
+  Financial Year / Period ended  RoNW (%)  Weightage
+ March 31, 2026  21.25  3
+ March 31, 2025  24.36  2
+ March 31, 2024  30.46  1
+ Weighted Average  23.82
+ Three months ended June 30, 2026*  0.19  -
+ Three months ended June 30, 2025*  (0.20)  -
+*Not annualized
+Notes:
+i. Return on Net Worth (%) = Profit after tax attributable to owners / Average Net worth (Average Net Worth is calculated as
+  the arithmetic average of the opening and closing balance of Net Worth).
+ii. Net Worth = Aggregate value of the paid-up share capital and all reserves created out of the profits and securities premium
+  account and debit or credit balance of profit and loss account, after deducting the aggregate value of the accumulated losses,
+  deferred expenditure and miscellaneous expenditure not written off, as per the Restated Consolidated Financial Information,
+  but does not include reserves created out of revaluation of assets, write-back of depreciation and amalgamation.
+iii. In respect of any period which is not a full financial year, Average Net Worth is calculated as the arithmetic average of the
+  closing balance of Net Worth as at the end of the relevant period, and the closing balance of Net Worth as at the end of the
+  immediately preceding Fiscal.
+  185
+V. Net Asset Value (“NAV”) per Equity Share (of face value of ₹2 each) on a consolidated basis
+As derived from the Restated Consolidated Financial Information
+  As at  NAV per Equity Share (in ₹)
+June 30, 2026  86.23
+March 31, 2026  86.09
+After the completion of the Offer:
+  (i) At Floor Price  [●]
+  (ii) At Cap Price  [●]
+Offer Price (1)  [●]
+(1) Offer Price per Equity Share will be determined on conclusion of the Book Building Process.
+(2) Net asset value per share = Net worth (excluding Non-Controlling Interest) as restated / weighted average number of equity
+  shares outstanding at the end of the period / year adjusted for the subdivision of the equity shares and issue of bonus shares,
+  in accordance with principles of Ind AS 33
+(3) The figures disclosed above are based on the Restated Consolidated Financial Information of our Company.
+VI. Comparison of accounting ratios with listed industry peers
+The following is the comparison with our peer group companies listed in India and engaged in the same
+line of business as that of our Company:
+  Name of  Face  Closing  Revenue from  EPS (₹)  NAV  P/E  RoNW
+  Company  Value  price on  Operation, for  (%)
+  October 16,  Fiscal 2026
+  2026
+  (₹ Per  (₹ Per  (in ₹ million)  Basic  Diluted  (₹ per
+  Equity  Equity  share)
+  Share)  Share)
+ SFC
+ Environmental
+  2.00  N.A.  8,036.29  16.52  16.52  86.09  N.A.  21.25
+ Technologies
+ Limited
+ Listed Peers
+ Thermax  2.00  3,325.75  106,941.50  63.95  63.94  492.55  52.01x  13.74
+ Limited
+ (“Thermax”)
+ Praj Industries  2.00  287.00  31,678.83  1.30  1.30  71.22  220.77x  1.77
+ Limited
+ (“Praj”)
+ Ion Exchange  1.00  377.20  29,148.41  12.03  12.03  91.30  31.34x  11.20
+ (India)
+ Limited
+ (“Ion”)
+Notes:
+(i) All the financial information for listed industry peers mentioned above is on a consolidated basis (unless otherwise available
+  only on standalone basis) and is sourced from the annual reports as available of the respective company for the relevant
+  year ended March 31, 2026.
+(ii) P/E Ratio has been computed based on the closing market price of equity shares on BSE on October 16, 2026, divided by the
+  Diluted EPS for the Fiscal 2026.
+(iii) Return on Net Worth (%) = Profit after tax attributable to owners / Average Net Worth (Average Net Worth is calculated as
+  the arithmetic average of opening and closing balance of Net Worth).
+(iv) Net Worth = Aggregate value of the paid-up share capital and all reserves created out of the profits and securities premium
+  account and debit or credit balance of profit and loss account, after deducting the aggregate value of the accumulated losses,
+  deferred expenditure and miscellaneous expenditure not written off, as per the Restated Consolidated Financial Information
+  / audited consolidated financial information (as applicable), but does not include reserves created out of revaluation of
+  assets, write-back of depreciation and amalgamation.
+(v) Net asset value per share = Net worth (excluding Non-Controlling Interest) / weighted average number of equity shares
+  outstanding at the end of the year adjusted for the subdivision of the equity shares and issue of bonus shares, if any, in
+  accordance with principles of Ind AS 33.
+VII. Key performance indicators (“KPIs”)
+The KPIs disclosed below have been used historically by our Company to understand and analyse its
+business performance, which in result, help us in analysing the growth of business in comparison to our
+peers. Our Company considers that the KPIs set forth below are the ones that may have a bearing for
+  186
+arriving at the basis for the Offer Price. The KPIs disclosed below have been approved and confirmed
+by a resolution of our Audit Committee dated October 19, 2026. Further, the members of the Audit
+Committee have confirmed that there are no KPIs pertaining to our Company that have been disclosed
+to any investors at any point of time during the three years period prior to the date of filing of this Red
+Herring Prospectus.
+The KPIs disclosed herein below have been verified and certified by (i) our Chief Financial Officer
+pursuant to a certificate dated October 19, 2026; (ii) M/s H H Dedhia & Associates, Chartered
+Accountants, pursuant to a certificate dated October 19, 2026, which has been included as part of the
+“Material Contracts and Documents for Inspection” on page 637.
+The management of our Company has prepared a note that, among other matters, takes on record GAAP,
+Non-GAAP and operational measures identified as KPIs along with the rationale for the classification of
+each of these KPIs under GAAP, Non-GAAP and operational measures along with the rationale for such
+classification. The note was placed before the members of our Audit Committee prior to the resolution
+dated October 19, 2026, approving and confirming the KPIs disclosed below.
+Our Company confirms that it shall continue to disclose all the KPIs disclosed in this section, (a) at least
+once a year after the date of listing of the Equity Shares on the Stock Exchanges; (b) till complete
+utilisation of the proceeds of the Fresh Issue as disclosed in “Objects of the Offer” on page 168,
+whichever is later, or for such other duration as may be required under the SEBI ICDR Regulations. We
+have described and defined the KPIs, as applicable, in “Definitions and Abbreviations - Key Performance
+Indicators” on page 20. Bidders are encouraged to review the Ind AS financial measures and not to rely
+on any single financial metric to evaluate our business. For further details, see “Risk Factors - The
+information included in this Red Herring Prospectus in relation to our listed peers may not be
+comparable and it may be difficult to benchmark and evaluate our financial performance against other
+operators who operate in the same industry as us.” on page 75.
+The list of our KPIs along with brief explanation of the relevance of the KPI for our business
+operations are set forth below:
+Description on the historic use of the KPIs by our Company to analyse, track or monitor the
+operational and/or financial performance of our Company
+In evaluating our business, we consider and use certain KPIs, as presented below, as a supplemental
+measure to review and assess our financial and operating performance. The presentation of these KPIs is
+not intended to be considered in isolation or as a substitute for the Restated Consolidated Financial
+Information. Some of these KPIs are not defined under Ind AS and are not presented in accordance with
+Ind AS. These KPIs have limitations as analytical tools. Further, these KPIs may differ from the similar
+information used by other companies, including peer companies, and hence their comparability may be
+limited. Therefore, these KPIs should not be considered in isolation or construed as an alternative to Ind
+AS measures or as an indicator of our operating performance, liquidity, profitability or results of
+operation. Although these KPIs are not a measure of performance calculated in accordance with
+applicable accounting standards, our Company’s management believes that it provides an additional tool
+for investors to use in evaluating our operating results and trends and in comparing our financial results
+with other companies in our industry.
+Set out below are explanations for how the KPIs listed above have been used by the management
+historically to analyse, track or monitor the operational and/or financial performance of our Company.
+  Explanation
+Revenue from Operations Revenue from operations is used by our management to track the revenue generated
+  from the overall business and help assess the overall financial performance of our
+  Company and also represents the scale of our business.
+Operating EBITDA  Operating EBITDA is calculated as profit before tax, depreciation and amortisation
+  expense and finance costs less share of profit of joint ventures / associate and other
+  income as per the Restated Consolidated Financial Information.
+Operating EBITDA Margin Operating EBITDA margin track operational efficiency and operational profitability
+  of the business. They assist in tracking the operational margin profile of our business
+  benchmarked against our historical performance and against our peers. Operating
+  187
+  Explanation
+  EBITDA Margin (%) is calculated as Operating EBITDA divided by revenue from
+  operations * 100.
+PAT  Profit for the period / year track overall profitability of the business. PAT represents
+  total profit after tax for the period / year as per the Restated Consolidated Financial
+  Information.
+PAT Margin  PAT Margin (%) track overall profitability of the business. They assist in tracking
+  the overall margin profile of our business benchmarked against our historical
+  performance and against our peers. PAT margin is calculated as PAT divided by
+  revenue from operations * 100.
+Return on Equity (ROE)  ROE is calculated as total profit after tax for the period / year divided by average
+  total equity. RoE is used by the management to track how efficiently our Company
+  generates profits from shareholders’ funds.
+Return on Capital Employed ROCE is used by the management to track how efficiently our Company generates
+(ROCE)  earnings from the capital employed in the business and how well it is converting its
+  total capital to generate profits. ROCE is calculated as a percentage of earnings
+  before interest and taxes / total equity plus total borrowings plus deferred tax
+  liabilities minus deferred tax assets as per the Restated Consolidated Financial
+  Information. EBIT is calculated as profit before tax and share of profit of joint
+  ventures / associate plus finance costs
+Net Debt  Net Debt is calculated as total debt reduced by cash and cash equivalents and bank
+  balances other than cash and cash equivalents.
+Net Worth  Net worth shall mean the aggregate value of the paid-up share capital and all reserves
+  created out of the profits and securities premium account and debit or credit balance
+  of profit and loss account, after deducting the aggregate value of the accumulated
+  losses, deferred expenditure and miscellaneous expenditure not written off, as per the
+  Restated Consolidated Financial Information, but does not include reserves created
+  out of revaluation of assets, write-back of depreciation and amalgamation
+Net Debt /Equity  The net debt / equity ratio is used by the management to track whether our Company
+  can repay its obligations if they were all due today and whether our Company is able
+  to take on more debt. Net debt / equity is calculated as net debt divided by total equity.
+Fixed Asset Turnover Ratio Fixed asset turnover is calculated as revenue from operations divided by average
+  property, plant and equipment.(PP&E)
+Cash Conversion Cycle  Cash conversion cycle is computed as trade receivables days plus inventory days
+  minus trade payable days; Wherein, trade receivable days is calculated as average
+  trade receivables divided by revenue from operations multiplied by 365 for financial
+  years; Inventory Days is calculated as average inventory divided by cost of goods
+  sold multiplied by 365 for financial years; and trade payable days is calculated as
+  average trade payables divided by cost of goods sold multiplied by 365 for financial
+  years. Days for three months period is calculated as 365/4
+Total Order Book  Total Order Book comprises of estimated value of the unexecuted portions of existing
+  contracts or orders (including long term operation & maintenance contracts/orders),
+  as well as the estimated value of new projects supported by letters of award (LOAs),
+  letters of intent (LoIs), memorandum of understanding (MoUs), or other similar
+  commitments from our customers. It represents business that is considered firm or
+  likely to fructify in the foreseeable future, based on the current status of customer
+  engagement. Our Total Order Book comprises the aggregate of order book for our
+  Wastewater Treatment, Wastewater Recycling & Reuse and Solid Waste Treatment
+  segments.
+Number  of  treatment Number of treatment installations (on cumulative basis) (in numbers) represents the
+installations (on cumulative total number of wastewater treatment plant installations, on a cumulative basis,
+basis) (in numbers)  facilitated by our Company’s technology
+Treatment  capacity  in Treatment capacity in million litres per day (on cumulative basis) facilitated by our
+million litres per day (on Company’s technology (in MLD) represents the total MLD of treatment capacity for
+cumulative basis) facilitated wastewater treatment plants on a cumulative basis facilitated by our Company’s
+by  our  Company’s technology.
+technology (in MLD)
+Details of KPIs as at and for the periods ended June 30, 2026 and June 30, 2025 and as at and for
+the financial years ended March 31, 2026, March 31, 2025 and March 31, 2024:
+  KPIs  Unit  June 30,  June 30,  Fiscal 2026  Fiscal  Fiscal 2024
+  2026  2025  2025
+ Revenue from  ₹ (in  1,339.44  677.93  8,036.29  6,978.58  6,574.95
+ Operations1  million)
+ Operating EBITDA2  ₹ (in  98.56  50.31  2,358.12  2,074.80  1,932.54
+  188
+  KPIs  Unit  June 30,  June 30,  Fiscal 2026  Fiscal  Fiscal 2024
+  2026  2025  2025
+  million)
+ Operating  EBITDA  %  7.36%  7.42%  29.34%  29.73%  29.39%
+ Margin3
+ PAT4  ₹ (in  14.84  -2.81  1,602.13  1,520.08  1,441.73
+  million)
+ PAT Margin5  %  1.11%  -0.41%  19.94%  21.78%  21.93%
+ ROE6  %  0.18%*  -0.04%*  21.55%  24.84%  29.80%
+ ROCE7  %  0.72%*  0.27%*  22.21%  29.29%  28.56%
+ Net Debt8  ₹ (in  644.54  -646.71  388.16  -523.45  -494.49
+  million)
+ Net worth9  ₹ (in  8,054.88  6,475.14  8,041.73  6,486.82  5,342.96
+  million)
+ Net Debt/ Equity10  X  0.08  -0.10  0.05  -0.08  -0.09
+ Fixed Asset Turnover11  X  2.08*  0.99*  12.07  10.85  13.25
+ Cash  Conversion  Days  411  636  242  232  156
+ cycle12&14
+ Total Order Book13  ₹ (in  15,700.65  10,736.44  15,745.21  5,603.86  7,852.34
+  million)
+ Number of treatment  Number  724  654  705  639  577
+ installations  (on
+ cumulative basis15
+ Treatment capacity in  MLD  17,464.61  15,381.24  17,144.01  15,209.45  13,906.98
+ million litres per day (on
+ cumulative  basis)
+ facilitated by SFC’s
+ Technology16
+*Not annualized;
+1) Revenue from operations is calculated as revenue from sale of products, services and other operating revenue
+2) Operating EBITDA is calculated as profit before tax, depreciation an [...truncated]
+
+===== OUR BUSINESS =====
+OUR BUSINESS
+Unless otherwise stated, references in this section to “we”, “our” or “us” (including in the context of any financial
+information) are to our Company, on a consolidated basis. To obtain a complete understanding of our Company and
+business, prospective investors should read this section along with “Risk Factors”, “Industry Overview”, “Restated
+Consolidated Financial Information”, “Other Financial Information” and “Management’s Discussion and Analysis
+of Financial Condition and Results of Operations” on pages 28, 208, 402, 513 and 516, respectively, as well as
+financial and other information contained in this Red Herring Prospectus as a whole. Additionally, please refer to
+“Definitions and Abbreviations” on page 6 for definitions of certain terms used in this section.
+The industry information contained in this section is derived from the industry report titled “Industry Report on Indian
+STP, Tertiary Treatment, MSW Management, and Biogas Market” dated September 23, 2026 which is exclusively
+prepared for the purposes of the Offer and issued by Frost & Sullivan and is commissioned and paid for by our
+Company (“F&S Report”). Frost & Sullivan was appointed pursuant to engagement letter dated February 28, 2024,
+as extended on May 26, 2025. We commissioned and paid for the F&S Report for the purposes of confirming our
+understanding of the industry specifically for the purposes of the Offer. The F&S Report is available on the website
+of our Company at https://www.sfcenvironment.com/investors/financial-highlights/industry-reports. Unless otherwise
+indicated, financial, operational, industry and other related information derived from the F&S Report and included
+herein with respect to any particular year refers to such information for the relevant calendar year. For further
+information, please see “Certain Conventions, Use of Financial Information and Market Data and Currency of
+Presentation – Industry and Market Data” on page 23.
+We have included certain non-GAAP financial measures and other performance indicators relating to our financial
+performance and business in this Red Herring Prospectus, each of which are supplemental measures of our
+performance and liquidity and are not required by, or presented in accordance with Ind AS, Indian GAAP, IFRS or
+U.S. GAAP. Such measures and indicators are not defined under Ind AS, IFRS or U.S. GAAP, and therefore, should
+not be viewed as substitutes for performance, liquidity or profitability measures under Ind AS, IFRS or U.S. GAAP.
+In addition, such measures and indicators are not standardized terms, and a direct comparison of these measures and
+indicators between companies may not be possible. Other companies may calculate these measures and indicators
+differently from us, limiting their usefulness as a comparative measure. Although such measures and indicators are
+not a measure of performance calculated in accordance with applicable accounting standards, our Company’s
+management believes that they are useful to an investor in evaluating us as they are widely used measures to evaluate
+a company’s operating performance. For risks relating to non-GAAP measures, see “Risk Factors – The information
+included in this Red Herring Prospectus in relation to our listed peers may not be comparable and it may be difficult
+to benchmark and evaluate our financial performance against other operators who operate in the same industry as
+us.” on page 75.
+Some of the information set out in this section, especially information with respect to our business plans and strategies,
+contain forward-looking statements that involve risks and uncertainties. You should read “Forward Looking
+Statements” on page 26 for a discussion of the risks and uncertainties related to those statements and “Risk Factors”
+on page 28 for a discussion of certain factors that may affect our business, financial condition or results of operations.
+Our actual results may differ materially from those expressed in or implied by these forward-looking statements.
+Our financial year ends on March 31 of every year, so all references to a particular financial year are to the twelve-
+month period ended March 31 of that year. Unless otherwise indicated or unless the context requires otherwise, the
+financial information included herein is based on our Restated Consolidated Financial Information included in this
+Red Herring Prospectus. For further information, see “Restated Consolidated Financial Information” on page 402.
+OVERVIEW
+We are an environmental technology company offering efficient technologies and comprehensive engineering
+solutions in the field of wastewater treatment (“WWT”), wastewater recycling & reuse (“WRR”) and solid waste
+treatment (“SWT”).
+Wastewater Treatment (WWT)
+  298
+Incorporated in 2005, our core operations include providing design, technology, manufacturing, supply and
+supervision for installation and commissioning of equipment for the treatment of wastewater. Our proprietary
+technology for wastewater treatment is C-Tech, which is an advanced technology for treating sewage and effluents.
+(Source: F&S Report) With 728 installations commissioned in the WWT segment, as of July 31, 2026, particularly in
+sewage treatment plants (“STPs”), we hold over 80% market share in sequencing batch reactor (“SBR”) technology,
+a key wastewater treatment method in India. (Source: F&S Report) Our technologies facilitate the treatment of
+17,511.11 million litres per day (“MLD”) of wastewater, as of July 31, 2026. (Source: F&S Report) Set forth are the
+details of the treatment capacity facilitated by our technology as at and for the three months period ended June 30,
+2026 and past three fiscal years:
+  No. of wastewater
+ Details of wastewater treatment capacity facilitated by our technology  Treatment capacity
+  treatment
+  (on cumulative basis)  (in MLD)
+  installations
+ As at June 30, 2026  724  17,464.61
+ As at March 31, 2026  705  17,144.01
+ As at March 31, 2025  639  15,209.45
+ As at March 31, 2024  577  13,906.98
+Our SBR technology: C-Tech has been implemented in the large-scale SBR-based STPs in India, including one of the
+largest STP under development, which has a treatment capacity of 424 MLD wastewater, as of July 31, 2026. (Source:
+F&S Report) In addition to our C-Tech package, we offer high-efficiency turbo blowers for aeration in wastewater
+treatment, fibre disc filters for efficient removal of suspended solids from wastewater and solar sludge drying systems
+to efficiently dry sludge from wastewater and solid waste treatment using solar energy. Additionally, our Company
+has entered into an exclusive supply agreement with DSP Singapore Holdings Pte Ltd (“DuPont”) in August 2024
+along with an amendment agreement in June 2025 for membrane aerated biofilm reactor technology (OXYFAS &
+OXYFILM), which are used to enhance efficiency and capacity of existing wastewater treatment plant, particularly
+for overloaded or outdated facilities.
+Wastewater Recycling and Reuse (WRR)
+Building on our secondary wastewater treatment capabilities, we have recently expanded into tertiary treatment
+solutions. Our wastewater recycling and reuse offerings include design, engineering, manufacturing, procuring,
+supply, installation and commissioning of projects / plants based on ultrafiltration (UF), closed circuit reverse osmosis
+(CCRO), and membrane bioreactor technologies (MBR). We have entered into an exclusive supply agreement with
+DSP Singapore Holdings Pte Ltd (“DuPont”) for the exclusive distribution in India of certain WRR components in
+the municipal wastewater treatment plants market viz.: (i) membranes for submerged UF (Modules L20N V2 & S10N
+V2), (ii) CCRO technology, and (iii) B50N MBR modules (MBR).
+Leveraging our established leadership and distribution network in WWT and an exclusive supply arrangement with
+DuPont, we have expanded into the WRR segment as an extension of our core business. The WRR segment is expected
+to witness significant growth, driven by increasing water scarcity and government initiatives focused on water
+conservation in India. (Source: F&S Report) Following our expansion into the WRR segment, our order book for the
+WRR segment stood at ₹5,610.72 million as on August 31, 2026.
+Solid Waste Treatment (SWT)
+Our Company offers technology solutions for SWT plants comprising of design, engineering, financing, construction,
+supply and installation, commissioning, performance run, turnkey solutions and operations and maintenance
+(“O&M”). We are among the market leaders in the municipal solid waste space basis our operational results and
+comprehensive solutions. (Source: F&S Report) Our principal technology for solid waste treatment is the Organic
+Extraction (“OREX”) technology. OREX is our proprietary technology, designed to efficiently separate biodegradable
+organics from inorganic materials and lignocellulosic fibres from mixed municipal waste. (Source: F&S Report) We
+are among the select few players who have leveraged global technology in the municipal solid waste space and
+transformed it to be suitable for Indian needs. (Source: F&S Report) We have designed, built and are operating two
+integrated SWT facilities in Goa for Goa Waste Management Corporation (“GWMC”) on public-private partnership
+and turnkey model, with a combined treatment capacity of 350 tons per day (“TPD”), with an additional handling
+capacity of 75 TPD resulting in our aggregate treatment capacity of up to 425 TPD, to treat municipal solid waste,
+  299
+enabling generation of biogas, electricity, compost and recovery of recyclables. Operating continuously for over 10
+years, our plant at Saligao, North Goa holds the distinction of being one of the longest-operating integrated SWT-
+based biogas plant in India. (Source: F&S Report)
+In India, the compressed biogas (“CBG”) blending obligation mandates oil marketing companies to blend CBG into
+their fuel infrastructure and mandates the OGMCs to set up projects for CBG production from organic waste and
+biomass. (Source: F&S Report) Towards this initiative, through our wholly-owned subsidiary, HWTPL, we have
+secured orders from a government-owned oil company for the engineering, procurement, commissioning and
+operation & maintenance for a period of 10 years, of: (i) a 125 TPD unsegregated MSW based compressed biogas
+(CBG) plant for commercial use at Tinsukia, Assam in April 2025; and (ii) a 300 TPD segregated MSW based
+compressed biogas plant for commercial use at Bhubaneswar, Odisha in May 2025, for cumulative orders worth
+₹5,017.00 million.
+In addition, we are engaged in ongoing collaborations with oil marketing companies for our SWT business, including:
+(i) executing joint venture agreement with an Indian city gas distribution company, to jointly explore opportunities
+  to setup compressed biogas (“CBG”) and waste to energy (“WtE”) plants. Further, we have incorporated a joint
+  venture, Hind Oil Biofuels Private Limited pursuant to a joint venture agreement executed amongst our
+  Subsidiary, HWTPL and a wholly owned subsidiary of an Indian oil and gas company for setting up and
+  operating CBG and WtE plants;
+(ii) entering into an MoU with an Indian oil and natural gas conglomerate to set up municipal solid waste plants for
+  producing compressed biogas; and
+(iii) provisional selection as a joint venture partner for setting up CBG plant up to 1,000 TPD segregated organic
+  municipal solid waste in Mumbai.
+In 2023, we strategically expanded our portfolio by entering the agro-based biogas / compressed biogas projects,
+enhancing the breadth of our offerings. Our Subsidiary, Pentagen Biofuels Private Limited has entered into a term
+sheet in 2025 for the acquisition of a bio-gas facility based on agricultural residues in Hoshiarpur, Punjab. In addition,
+our Subsidiary, Pentagen Biofuels Private Limited has acquired a land area admeasuring 7.73 hectares in Nanded,
+Maharashtra for establishing a plant for the conversion of agricultural waste into biogas.
+Our operating divisions
+(i)  Waste water treatment
+Our proprietary technology for wastewater treatment is C-Tech, which is an advanced technology for treating sewage
+and effluents. (Source: F&S Report) C-Tech is the latest generation SBR process, employed extensively for treating
+both domestic sewage and industrial effluents to achieve recyclable quality water with low life cycle cost, and has
+installations in many countries, including the UK, Germany, Poland, Austria, China, Russia, Australia, Vietnam and
+Malaysia. (Source: F&S Report) Our C-Tech technology package includes design and engineering solutions, the
+technology installation, and supply of key equipment such as decanters, diffusers, air blowers, fibre disc filters, solar
+sludge drying system along with programmable logic controller (“PLC”) / supervisory control and data acquisition
+(“SCADA”) based automation solutions. Furthermore, we also provide O&M services and other associated
+accessories to our customers. A primary advantage of the C-Tech system, as compared to other conventional
+technologies, is that it offers an efficient method of cyclic activated sludge treatment, that produces a recyclable quality
+effluent in a single step. (Source: F&S Report)
+Advanced Sequencing Batch Reactor (SBR) Technologies Comparison (1,000 MLD Plant)
+  Treatment Efficiency  Footprint  Operational  Sludge Management
+  Technology  Nutrient Removal
+  (BOD / COD) (%)  (Hectares)  Complexity  (Typical)
+  Requires periodic
+  Moderate (Nitrogen &
+  BOD: 85-90  wasting (around 5-
+  Conventional SBR  Phosphorus require  8-12  Moderate
+  COD: 90-95  10% of treated
+  additional processes)
+  effluent)
+  Similar to
+  Modified Ludzack-  BOD: 85-90  High for Nitrogen;
+  8-12  Moderate  conventional SBR
+  Ettinger (MLE)  COD: 90-95  Low for Phosphorus
+  (periodic wasting)
+  300
+  Treatment Efficiency  Footprint  Operational  Sludge Management
+  Technology  Nutrient Removal
+  (BOD / COD) (%)  (Hectares)  Complexity  (Typical)
+ Intermittent Cycle  Moderate (Partial  Similar to
+  BOD: 85-90
+ Extended Aeration  biological Nitrogen  8-12  Moderate  conventional SBR
+  COD: 90-95
+  System (ICEAS)  removal possible)  (periodic wasting)
+  High  Requires periodic
+  C-Tech (Cyclic  BOD: 90-95  High (Nitrogen &
+  5-8  (Automated  wasting (around 2-5%
+  Activated Sludge)  COD: 95-98  Phosphorus removal)
+  operation)  of treated effluent)
+(Source: F&S Report)
+Our Company’s C-Tech technology generates sludge having one of the best sludge volume index (“SVI”), offering
+up to 98% biochemical oxygen demand (“BOD”) removal efficiency in a single step. (Source: F&S Report) The
+treatment efficiency of SBR technologies is measured by BOD and chemical oxygen demand (“COD”) removal rates.
+It is a versatile technology that effectively handles seasonal, and diurnal quantity and quality variations as compared
+to other competing technologies by automatically sensing the water and oxygen levels. C-Tech is a versatile
+technology that effectively handles seasonal, diurnal and quality variations compared to conventional technologies by
+automatically adjusting water level, decanting rate and air supply, and has successfully been implemented to treat
+wastewater from refineries / pharmaceutical / petrochemical / textile industries. (Source: F&S Report) Energy cost
+comprises of almost 80% of the O&M cost of STP. C-Tech technology offers up to 40% savings in power consumption
+as compared to other conventional technologies, thereby reducing the overall O&M cost of the STP. (Source: F&S
+Report) C-Tech requires up to 50% lesser area as compared to other conventional technologies and it is easy to expand
+the capacity of the C-Tech STP to meet future needs owing to C-Tech’s modular construction. C-Tech plants can be
+designed to generate power from primary sludge settled and removed in primary clarifiers through the use of anaerobic
+digesters which generates methane-rich biogas which is fed to gas engines for the generation of electricity. C-Tech’s
+low-maintenance cost is underscored by the use of corrosion-resistant materials like stainless steel or unplasticized
+polyvinyl chloride (“uPVC”) for its underwater components, significantly extending the lifespan of the plants while
+minimizing maintenance needs. C-Tech uses the latest automation technology, using the PLC / SCADA systems. The
+process automation is designed for operation without manual intervention and the performance of the STP is
+independent of the operators’ skill. (Source: F&S Report) C-Tech technology introduced three path-breaking
+innovations, namely bacterial selection by using selectors prior to main treatment, concurrent nitrification and
+denitrification, and biological phosphorus removal by unique process designed based on simply switching air on and
+off, thereby facilitating the efficient removal of both carbon and nutrients (nitrogen and phosphorus) in a single
+treatment step, while also generating sludge with very low SVI, which results in excellent settling of suspended solids
+giving a crystal clear outlet with low suspended solids (<10 ppm) and BOD (< 5-10 ppm). (Source: F&S Report)
+Our C-Tech system is comprised of several critical process components that collectively enhance its functionality and
+efficiency. Key components include the selector, dissolved oxygen (“DO”) meter, decanter, diffusers, air blowers,
+submersible pumps for sludge recycle and sludge wasting (“SW”), and the PLC / SCADA systems for automated
+control. These standard components required for setting up a C-Tech project are customised and manufactured (either
+in-house or outsourced) as per the technical specifications of the respective projects. The design of C-Tech is unique
+and specifically customised for each C-Tech installation. The C-Tech controller automatically calculates the oxygen
+uptake rate (“OUR”) and the quantity of wastewater to be treated, and accordingly adjusts the air supply and decanting
+rate. The operational cycle of C-Tech involves three main phases: filling & aeration, settling, and decanting. During
+the fill & aerate phase, wastewater is introduced into the basin where it is aerated along with the biomass for a set
+period. This is followed by the settling phase, where the biomass is allowed to settle under optimal conditions. The
+final phase of decanting involves the withdrawal of the clear supernatant of the treated wastewater, which thereafter
+meets all regulatory norms and is suitable for low-end recycling applications. The excess sludge generated in the
+process is periodically removed from the system to maintain the mixed liquor suspended solids (“MLSS”) levels in
+the C-Tech basin. It is then dewatered and dried after which it can be used as a soil conditioner. This operation lasts
+for about 3-4 hours after which the system is ready to again take a new batch of wastewater for treatment. All the three
+phases described above comprise a cycle of treatment which is repeated continuously in various C-Tech basins.
+C-Tech process diagram
+  301
+Recently, our Company has entered into an exclusive supply agreement with Dupont for membrane aerated biofilm
+reactor (OXYFAS & OXYFILM), which is used to enhance wastewater treatment plant capacity and efficiency,
+particularly for overloaded or outdated facilities.
+WWT Business Model
+The completion of order / order timelines depends on various factors such as time taken by the customer (i.e.
+Engineering, Procurement and Construction (“EPC”) contractor), to obtain necessary approvals, clear the site for the
+project and secure necessary funding. Furthermore, once the order is received by our Company, supplies are delivered
+to the customer over a period of six to 12 months, depending on the project construction schedule of the customer.
+Set forth below is an explanation along with a flow chart explaining the business process cycle of our Company: The
+municipalities / urban local bodies invite bids from EPC companies for wastewater treatment projects. Our Company
+in partnership with these EPC companies, offers technical expertise and cost estimates to assist in bid preparation.
+EPC companies / bidders submit their bids. Thereafter, the municipality / urban local body, after evaluation of the
+bids, award the tender to the bidders. Once these EPC companies win the tender, our Company supply them C-Tech
+technology equipment and installation services. Our Company designs and engineers the C-Tech system or entire
+sewage treatment plant as per the order and submits it to the EPC company. Upon receipt of manufacturing clearance,
+our Company procures and manufactures proprietary components as per the order. After completion of inspection, our
+Company delivers the product / components. Subsequently, based on the scope of work, our Company also provides
+erection, installation and commissioning services. Our Company also provides spares to the EPC companies, which
+handle the operation and maintenance of the sewage treatment plant.
+Our target customers are EPC companies who bid for STP projects, serving ultimately municipalities and government
+agencies that award these projects. Our Company provides technologies, design & engineering, and equipment for
+  302
+wastewater treatment (predominantly STPs) plant projects. By partnering during the pre-tendering stage with EPC
+companies (bidders) involved in these projects, we ensure that our technology and solutions are integral to their project
+proposals. This strategic approach helps our Company to become the designated supplier of C-Tech technology,
+equipment and installation services in case the bidder is selected for the project. We have established strong
+relationships with EPC companies that bid on STP projects by offering them technical support and competitive pricing
+to ensure that they include our solutions in their proposals. Notably, we have sustained repeat business from and have
+provided services to prominent industry players, including Enviro Control Private Limited, Vishvaraj Enviro [...truncated]
+
+===== OUR PROMOTERS AND PROMOTER GROUP =====
+OUR PROMOTERS AND PROMOTER GROUP
+The Promoters of our Company are Sandeep Sudhakar Asolkar, Priya Sandeep Asolkar, Prachiti Sandeep Asolkar and
+Saketchandrasingh Pratapsingh Dhandoriya.
+As on the date of this Red Herring Prospectus, our Promoters collectively hold 40,019,595 Equity Shares, representing
+42.84% of the pre-Offer issued, subscribed and paid-up Equity Share capital of our Company, on a fully diluted basis.
+For details, please see “Capital Structure – Details of Shareholding of our Promoters and members of the Promoter
+Group in the Company – Build-up of the Promoters, members of Promoter Group and Selling Shareholders
+shareholding in our Company” on page 150.
+Details of our Promoters
+1.  Sandeep Sudhakar Asolkar
+  Sandeep Sudhakar Asolkar, aged 57 years, is one of our Promoters and
+  is also the Chairman and Managing Director on our Board. For the
+  complete profile of Sandeep Sudhakar Asolkar along with details of his
+  date of birth, personal address, educational qualifications, professional
+  experience, position / posts held in the past, directorships held, and
+  business and financial activities, other directorships, other ventures and
+  special achievements, see “Our Management – Board of Directors” on
+  page 367.
+  His permanent account number is ABPPA3294E.
+  As on date of this Red Herring Prospectus, Sandeep Sudhakar Asolkar
+  individually holds 13,500,000 Equity Shares representing 14.45% of the
+  issued, subscribed and paid-up equity share capital of our Company, on
+  a fully diluted basis. Further, he jointly holds 18,085,470 Equity Shares
+  along with Priya Sandeep Asolkar, one of our Promoters, representing
+  19.36% of the issued, subscribed and paid-up equity share capital of our
+  Company, on a fully diluted basis.
+2.  Priya Sandeep Asolkar
+  Priya Sandeep Asolkar, aged 57 years, is one of our Promoters. Details
+  of her date of birth and address are as follows:
+  Date of Birth: November 6, 1968
+  Address: 27, Udaygiri, opposite Telecom Factory, Deonar, Mumbai 400
+  088, Maharashtra, India
+  Priya Sandeep Asolkar holds a bachelor’s degree in engineering (civil)
+  from Sardar Patel College of Engineering, University of Bombay. She
+  has previously worked with Development Consultants Limited as senior
+  design engineer (civil), Sterling Engineering Consultancy Services
+  Private Limited in her capacity as design engineer, N. N. Purandare
+  Consultants as junior design engineer and with Atlanta Construction Co.
+  (India) Limited as an assistant engineer. Further, she has previously
+  provided engineering consultancy services as a consultant to our
+  Company.
+  392
+  Priya Sandeep Asolkar is a director of the following companies:
+  1.  Asolkar Tradecraft Private Limited.
+  Her permanent account number is ABPPA3341Q.
+  As on the date of this Red Herring Prospectus, Priya Sandeep Asolkar
+  together with Sandeep Sudhakar Asolkar, holds 18,085,470 Equity
+  Shares, representing 19.36% of the issued, subscribed and paid-up equity
+  share capital of our Company, on a fully diluted basis.
+3.  Prachiti Sandeep Asolkar
+  Prachiti Sandeep Asolkar, aged 30 years, is one of our Promoters and is
+  also the Executive Director of our Company. For the complete profile of
+  Prachiti Sandeep Asolkar along with details of her educational
+  qualifications, professional experience, position / posts held in the past,
+  directorships held, and business and financial activities, other
+  directorships, other ventures and special achievements, see “Our
+  Management – Board of Directors” on page 367.
+  Her permanent account number is BSDPA4217R.
+  As on date of this Red Herring Prospectus, Prachiti Sandeep Asolkar does
+  not hold any Equity Shares of our Company.
+4.  Saketchandrasingh Pratapsingh Dhandoriya
+  Saketchandrasingh Pratapsingh Dhandoriya, aged 52 years, is one of
+  our Promoters and is also the Executive Director on our Board. For the
+  complete profile of Saketchandrasingh Pratapsingh Dhandoriya along
+  with details of his date of birth, personal address, educational
+  qualifications, professional experience, position / posts held in the past,
+  directorships held, and business and financial activities, other
+  directorships, other ventures and special achievements, see “Our
+  Management – Board of Directors” on page 367.
+  His permanent account number is ABTPD9924C.
+  As on the date of this Red Herring Prospectus, Saketchandrasingh
+  Pratapsingh Dhandoriya holds 8,434,125 Equity Shares, representing
+  9.03% of the issued, subscribed and paid-up equity share capital of our
+  Company, on a fully diluted basis.
+Our Company confirms that the permanent account number, bank account number, Aadhaar number, driving license
+number and passport number, as applicable, of our Promoters was submitted to the Stock Exchanges at the time of
+filing the Draft Red Herring Prospectus.
+  393
+Change in control of our Company
+Pursuant to a board resolution dated October 27, 2023, our Company had identified Sandeep Sudhakar Asolkar, Priya
+Sandeep Asolkar and Saketchandrasingh Pratapsingh Dhandoriya as the promoters of our Company, and they were
+also identified as the promoters of our Company in the annual returns filed by our Company for Fiscal 2023 and Fiscal
+2024. Subsequently, pursuant to the board resolution dated August 11, 2025, our Company has identified Sandeep
+Sudhakar Asolkar, Priya Sandeep Asolkar, Prachiti Sandeep Asolkar and Saketchandrasingh Pratapsingh Dhandoriya
+as the Promoters of our Company. However, there has not been any change in the control of our Company in the five
+years immediately preceding the date of this Red Herring Prospectus.
+Interests of Promoters
+Our Promoters are interested in our Company to the extent that they are the Promoters of our Company and to the
+extent of their respective shareholding in our Company and the dividends payable, if any, and any other distributions
+in respect of their respective shareholding in our Company. Sandeep Sudhakar Asolkar, Saketchandrasingh
+Pratapsingh Dhandoriya and Prachiti Sandeep Asolkar are also interested through their directorships in our Company,
+the shareholding of their relatives or the shareholding of entities in which our Promoters are interested, in our
+Company. For details of the shareholding of our Promoters in our Company, see “Capital Structure” on page 127.
+Additionally, some of our Promoters are also nominee shareholders on behalf of our Company in certain of our
+Subsidiaries.
+Further, our Promoters are also directors on the boards or are shareholders, kartas, trustees, proprietors, members or
+partners of entities with which our Company has had related party transactions and may be deemed to be interested to
+the extent of the payments made by our Company, if any, to these entities. For further details of interest of our
+Promoters in our Company, see “Other Financial Information – Related Party Transactions” on page 514.
+Sandeep Sudhakar Asolkar may also be deemed to be interested to the extent of remuneration, benefits, reimbursement
+of expenses, sitting fees and commission payable to him as the Chairman and Managing Director on our Board. For
+further details, see “Our Management – Interest of Directors” on page 374. Further, Saketchandrasingh Pratapsingh
+Dhandoriya may also be deemed to be interested to the extent of remuneration, benefits, reimbursement of expenses,
+sitting fees and commission payable to him as the Executive Director on our board and as the director on the board of
+our Subsidiaries, being, Pentagen Biofuels Private Limited, Hindustan Waste Treatment Private Limited and Vasudha
+Waste Treatment Private Limited and on the board of our Joint Venture, Hind Oil Biofuels Private Limited. Prachiti
+Sandeep Asolkar may also be deemed to be interested to the extent of remuneration, benefits, reimbursement of
+expenses, sitting fees and commission payable to her as the Executive Director.
+None of our Promoters have any interest, whether direct or indirect, in any property [...truncated]
+
+===== RISK FACTORS =====
+SECTION II – RISK FACTORS
+An investment in Equity Shares involves a high degree of risk. Prospective investors should carefully consider all
+the information in this Red Herring Prospectus, including the risks and uncertainties described below, before
+making an investment in Equity Shares. The risks and uncertainties described in this section are not the only risks
+that we currently face. Additional risks and uncertainties not presently known to us or that we currently deem
+immaterial may also have an adverse effect on our business. If any or a combination of the following risks, or
+other risks that are not currently known or are now deemed immaterial, actually occurs, our business, financial
+condition, results of operations and cash flows could suffer, the price of our Equity Shares could decline, and you
+may lose all or part of your investment.
+The financial and other related implications of the risks concerned, wherever quantifiable, have been disclosed
+in the risk factors mentioned below. However, there are risks where the effect is not quantifiable and hence have
+not been disclosed in the applicable risk factors. Prospective investors should read this section together with “Our
+Business”, “Industry Overview” and “Management’s Discussions and Analysis of Financial Condition and
+Results of Operations” on pages 298, 208 and 516, respectively, as well as the other financial and statistical
+information contained in this Red Herring Prospectus. In making an investment decision, prospective investors
+are required to rely on their own examination of us and the terms of the Offer, including the merits and risks
+involved. You should consult your tax, financial and legal advisors about the particular consequences to you of
+an investment in our Equity Shares. Potential investors should pay particular attention to the fact that our
+Company is incorporated under the laws of India and is subject to legal and regulatory environment which may
+differ in certain respects from that of other countries.
+This Red Herring Prospectus also contains forward-looking statements that involve risks and uncertainties where
+actual results could materially differ from those anticipated in these forward-looking statements. For further
+details, see “Forward-Looking Statements” on page 26.
+Unless the context requires otherwise, the financial information used in this section is derived from our Restated
+Consolidated Financial Information on page 402. Our fiscal year ends on March 31 of each year, and references
+to a particular fiscal are to the twelve months ended March 31 of that year.
+The industry information contained in this section is derived from the industry report titled “Industry Report on
+Indian STP, Tertiary Treatment, MSW Management, and Biogas Market” dated September 23, 2026 which is
+exclusively prepared for the purposes of the Offer and issued by Frost & Sullivan and is commissioned and paid
+for by our Company (“F&S Report”). Frost & Sullivan was appointed pursuant to engagement letter dated
+February 28, 2024, as extended on May 26, 2025. We commissioned and paid for the F&S Report for the purposes
+of confirming our understanding of the industry specifically for the purposes of the Offer. The F&S Report is
+available on the website of our Company at https://www.sfcenvironment.com/investors/financial-
+highlights/industry-reports. Unless otherwise indicated, financial, operational, industry and other related
+information derived from the F&S Report and included herein with respect to any particular year refers to such
+information for the relevant calendar year. The data included herein includes excerpts from the F&S Report which
+may have been re-arranged by us for the purposes of presentation. Frost and Sullivan is not, and has not in the
+past, been engaged or interested in the formation, or promotion, or management of our Company. Further, it is
+an independent agency and neither our Company, nor our Promoters, Directors, Key Managerial Personnel,
+Senior Management, Promoters and Subsidiaries, nor the BRLMs are a related party to Frost and Sullivan as per
+the definition of “related party” under the Companies Act, 2013 and the SEBI Listing Regulations. For details,
+see “Certain Conventions, Use of Financial Information and Market Data and Currency of Presentation –
+Industry and Market Data” on page 22.
+Internal Risk Factors
+1.  Our revenues and operations are dependent upon technology. Failure of these technologies, failure to
+  upgrade or innovate these technologies or failure to identify and develop new technologies could have an
+  adverse impact on our results of operations. Our products may be displaced by newer technology and any
+  inability or failure to adapt to technological developments, the evolving competitive landscape or industry
+  trends could harm our business and competitiveness.
+As part of our wastewater treatment portfolio, we provide the C-Tech technology package, which is a sequencing
+batch reactor technology; as part of our wastewater reuse and recycle portfolio, we provide ultrafiltration, closed
+circuit reverse osmosis and membrane bioreactor technologies; and as part of our solid waste treatment portfolio,
+we offer the OREX technology. While our Company and the wastewater treatment industry in India has not
+  28
+experienced any sudden instance of technological disruption in the recent past, (Source: F&S Report) there can
+be no assurance that technological changes in the future shall not displace our current business offerings. Third
+parties may succeed in developing or marketing technologies and products that are more effective than those
+developed or marketed by us, or that would make our technology obsolete or non-competitive. Accordingly, our
+success will depend, in part, on our ability to respond quickly to technological changes. We may not have the
+resources to do this. Failure to conduct research and development, innovate and focus on new technologies that
+provide superior alternatives to traditional / existing environmental technologies and service offerings may
+negatively impact our financial results. For example, as per the F&S Report, SBR is a key wastewater treatment
+technology in India, representing about 28% to 30% of installed capacity for municipal and industrial plants. In
+case the adoption of the SBR technology in the relevant market does not increase, or is replaced by alternate
+technologies, it will have an adverse impact of our growth prospects.
+Our technology systems are critical to our operations. Malfunctions of these technologies which are mechanical
+in nature, including disruptions due to wear and tear, natural or man-made disasters (e.g. terrorism or cyber
+intrusion) or equipment failure, could interrupt operations, create incremental operational and safety risks or
+negatively impact our service to our customers and our business reputation. System failures could also impede
+our ability to collect and report operational data timely or comply with regulations associated with our operations.
+The identification of new and emerging technologies may be a risk and an opportunity to our business. Research
+and development of new technologies may require significant spending which may negatively impact our
+operating results and cash flows. Failure to innovate and focus on new technologies that provide superior
+alternatives to traditional / existing environmental technologies and service offerings may negatively impact our
+financial results and could have an adverse impact on our results of operations.
+2.  We derive a substantial portion of our revenues from the WWT and SWT segments which together
+  accounted for 88.22%, 84.98%, 84.34% and 87.40% of our consolidated revenue from operations in the
+  three months period ended June 30, 2026, Fiscals 2026, 2025 and 2024, respectively. We are significantly
+  dependent on projects, contracts or works awarded or funded by government entities, either directly or
+  through our private customers. Our revenue from operations directly or indirectly attributable to
+  government entities or government tenders represented 91.97%, 92.35%, 92.40% and 95.72% of our
+  consolidated revenue from the WWT segment for the three months period ended June 30, 2026, Fiscals
+  2026, 2025 and 2024, respectively and 100.00% in the three months period ended June 30, 2026 and
+  100.00% of our consolidated revenue from SWT segment for each of the Fiscals 2026, 2025 and 2024.
+  Any reduction or termination in such projects or adverse change in government policies could adversely
+  affect our business, results of operations and financial condition.
+We derive a substantial portion of our revenues from WWT and SWT segment which together accounted for
+₹1,181.64, ₹6,829.20, ₹5,885.67 million and ₹5,746.23 million representing 88.22%, 84.98%, 84.34% and
+87.40% of our consolidated revenue from operations in three months period ended June 30, 2026, and Fiscals
+2026, 2025 and 2024, respectively. Our primary customers in these segments are a mix of private and
+governmental entities.
+In the WWT segment, our target customers are private EPC companies who bid for STP projects, serving
+ultimately municipalities and other government entities that award these projects. Our business and revenues from
+the WWT segment are dependent, directly and indirectly, on projects, contracts or work awarded or funded by the
+Government of India i.e., the central government, state governments and various local government bodies,
+including municipalities, statutory and regulatory authorities, departments and agencies thereof, and public sector
+undertakings or government-controlled entities (collectively referred to as the “Government Entities”). During
+the three months period ended June 30, 2026, and Fiscals 2026, 2025 and 2024, revenue generated from our WWT
+business that was directly or indirectly attributable to projects, contracts or work awarded or funded by such
+Government Entities accounted for ₹597.02 million¸ ₹5,012.53 million, ₹4,335.69 million and ₹5,019.70 million
+representing 91.97%, 92.35%, 92.40% and 95.72% respectively, of our consolidated revenue from the WWT
+segment.
+In the SWT segment, our business is substantially dependent on projects or contracts awarded or funded by
+Government Entities (including oil marketing companies). We are currently operating two SWT projects in Goa
+for the Goa Waste Management Corporation, a Government of Goa undertaking under concession agreements
+issued to VWTPL for the South Goa Plant for a period of 11.5 years from the date when VWTPL took over the
+project site for the completion of construction work in 1.5 years and an operational period of 10 years, and to
+HWTPL for the North Goa Plant for a period of 10 years. While we were able to extend the concession period for
+a period of one year until August 20, 2027 or until the subsequent operator assumes the operations and
+  29
+maintenance responsibility following completion of the transition process, whichever is earlier, upon expiry of
+such period for the North Goa Plant, these concession agreements do not provide for automatic renewal upon
+expiry of the respective concession periods. Under the concession agreement for the North Goa Plant, the
+concessioning authority may invite bids for the operation and maintenance of the North Goa Plant for a further
+period of 10 years, and HWTPL has the option to offer an amount matching the best evaluated and selected bid,
+in which case HWTPL will be entitled to the concession for such further period on the terms of such bid and such
+revised terms as may be specified by the concessioning authority. As on the date of this Red Herring Prospectus,
+no tender has been issued in this regard. However, there can be no assurance that we will be able to renew our
+existing concession agreements for the North Goa Plant and the South Goa Plant. Further, our Subsidiary,
+Hindustan Waste Treatment Private Limited has secured awards from a public sector oil marketing company for
+the engineering, procurement, commissioning and operation & maintenance for a period of 10 years, of: (i) a 125
+TPD unsegregated MSW based compressed biogas (CBG) plant for commercial use at Tinsukia, Assam in April
+2025; and (ii) a 300 TPD segregated MSW based compressed biogas plant for commercial use at Bhubaneswar,
+Odisha in May 2025. During the three months period ended June 30, 2026 and Fiscals 2026, 2025 and 2024,
+revenue generated, directly or indirectly, from our SWT projects or contracts awarded or funded by the
+Government Entities accounted for ₹532.51 million, ₹1,401.63 million, ₹1,193.56 million and ₹501.88 million,
+respectively representing 100.00% of our consolidated revenue from SWT segment generated during the three
+months period ended June 30, 2026 and 100.00% of our consolidated revenue from SWT segment during each of
+the three fiscals.
+Accordingly, our business and consequently our revenues of WWT and SWT segment are influenced by
+Government policies, budgetary allocations and the timing of tendering and award of such projects. Any reduction,
+delay or change in Government focus or expenditure on wastewater and solid waste infrastructure development
+may adversely affect our business, financial condition, results of operations and cash flows.
+We are exposed to various additional risks inherent in doing business with Government Entities, primarily in the
+case of our SWT and WWT segments, given that the projects are executed directly or indirectly through our
+private customers, which may adversely affect our business, results of operations and financial condition. These
+risks include:
+•  execution of the detailed definitive documentation and agreements with the governmental agencies may take
+  a significant amount of time and cause delays;
+•  delays in payment due to the time taken to complete internal processes of such entities and agencies;
+•  contracts with government agencies are awarded to the lowest bidder that meets the technical conditions of
+  the tender, which makes winning such tenders difficult. In addition, if we have to lower our pricing in order
+  to win tenders, it may exert pressure on our margins;
+•  the tender process is long and may be subject to significant delays and/or renegotiation of the terms of the
+  bid or lowering the price for products and services included in the tender;
+•  political and economic factors such as pending elections, changes in leadership among key governmental
+  decision makers, changes or delays in the implementation of government policies, revisions to tax policies
+  and reduced tax revenues can affect the number and terms of new government contracts signed; and
+•  any disinvestment by the GoI of its shareholding in such entities could result in a change in business
+  operations of such entities, which may impact existing or future business arrangements between our
+  Company and such entities.
+The growth of our business mainly depends on our ability to obtain [...truncated]
+
+===== MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF =====
+MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF
+  OPERATIONS
+The following discussion is intended to convey management’s perspective on our financial condition and results of
+operations for the three months period ended June 30, 2026 and June 30, 2025 and for the Fiscals 2026, 2025 and
+2024. You should read the following discussion and analysis of our financial condition and results of operations in
+conjunction with our Restated Consolidated Financial Information as of and for the three months period ended June
+30, 2026 and June 30, 2025 and for the Fiscals 2026, 2025 and 2024, including the related annexures.
+Unless otherwise indicated or context otherwise requires, the financial information for the three months period ended
+June 30, 2026 and June 30, 2025 and for the Fiscals 2026, 2025 and 2024, included herein is derived from the Restated
+Consolidated Financial Information, included in this Red Herring Prospectus. For further information, see “Restated
+Consolidated Financial Information” and “Summary Financial Information” on pages 402 and 92.
+Our Fiscal year ends on March 31 of each year. Accordingly, all references to a particular Fiscal are to the 12-month
+period ended March 31 of that year. The financial information for the three months ended June 30, 2026 and June 30,
+2025, has not been annualized, unless otherwise specified. The financial information for the three months ended June
+30, 2026 and June 30, 2025 is not comparable with financial information for Fiscals 2026, 2025 and 2024.
+The industry information contained in this section is derived from the industry report titled “Industry Report on Indian
+STP, Tertiary Treatment, MSW Management, and Biogas Market” dated September 23, 2026 which is exclusively
+prepared for the purposes of the Offer and issued by Frost & Sullivan and is commissioned and paid for by our
+Company (“F&S Report”). Frost & Sullivan was appointed pursuant to the engagement letter dated February 28,
+2024, as extended on May 26, 2025. We commissioned and paid for the F&S Report for the purposes of confirming
+our understanding of the industry specifically for the purposes of the Offer. The F&S Report is available on the website
+of our Company at https://www.sfcenvironment.com/investors/financial-highlights/industry-reports. Unless otherwise
+indicated, financial, operational, industry and other related information derived from the F&S Report and included
+herein with respect to any particular year refers to such information for the relevant calendar year. For further
+information, please see “Certain Conventions, Use of Financial Information and Market Data and Currency of
+Presentation – Industry and Market Data” on page 23.
+This discussion contains forward-looking statements that involve risks and uncertainties and reflects our current view
+with respect to future events and financial performance. Actual results may differ from those anticipated in these
+forward-looking statements as a result of factors such as those set forth under “Forward-Looking Statements” and
+“Risk Factors” on pages 26 and 28, respectively.
+OVERVIEW
+For an overview of our business, please see “Our Business - Overview” on page 298.
+SIGNIFICANT FACTORS AFFECTING OUR FINANCIAL CONDITION AND RESULTS OF
+OPERATIONS
+Ability to effectively execute and expand our Order book
+Our order book and the new projects that we have bid for and will continue to bid for in the future will have an effect
+on the revenues we will earn in the future.
+Wastewater Treatment (WWT) Segment: As of August 31, 2026, we had an order book in WWT segment of ₹ 6,410.31
+million, which amounted to 118.11% of our revenue from operations from WWT segment for Fiscal 2026. As of
+March 31, 2026, March 31, 2025 and March 31, 2024, we had an order book in the WWT segment of ₹5,710.84
+million, ₹4,597.53 million and ₹6,564.47 million, which amounted to 105.22%, 97.98% and 125.17% of our revenue
+from operations from the WWT segment, during the respective periods.
+Solid Waste Treatment (SWT) Segment: As of August 31, 2026, we had an order book in SWT segment of ₹ 4,545.41
+million, which amounted to 324.29% of our revenue from operations from SWT segment for Fiscal 2026. As of March
+  516
+31, 2026, March 31, 2025 and March 31, 2024, we had an order book in the SWT segment of ₹ 5,025.16 million, ₹
+1,006.34 million and ₹1,287.87 million, which amounted to 358.52%, 84.31% and 256.61% of our revenue from
+operations from the SWT segment, during the respective periods.
+Wastewater Recycling and Reuse (WRR) Segment: The order book building for the new WRR segment has started
+from Fiscal 2026 on receipt of our first WRR order in July 2025. As of August 31, 2026, we had an order book in
+WRR segment of ₹ 5,610.72 million, which amounted to 3,948.43% of our revenue from operations from WRR
+segment for Fiscal 2026. As of March 31, 2026, we had an order book in WRR segment of ₹ 5,009.22 million, which
+amounted to 3,525.13% of our revenue from operations from the WRR segment for Fiscal 2026.
+Our order book, the likelihood of the completion of contracts reflected in our order book and the period over which
+such contracts are likely to be executed, may vary significantly based on the product or service, and various factors
+that may affect our operations or the time period within which we are able to execute such contracts. Even where a
+project proceeds as scheduled, it is possible that contracting parties may default or delay and fail to pay amounts owed.
+Any delay, cancellation or payment default could adversely affect our cash flow position, revenues and/or profit. Many
+of these factors may be beyond our control.
+Accordingly, the realization of our order book and the effect on our results of operations may vary significantly
+depending on the nature of such contracts, actual performance of such contracts, as well as the stage of completion of
+such contracts as of the relevant reporting date as it is impacted by applicable accounting principles affecting revenue
+and cost recognition. The value of the orders we receive and our ability to execute them in a timely manner therefore
+impacts our future performance. As we expand our order book, the modified terms of payments for new projects may
+necessitate higher working capital requirements and therefore impact our financial performance. Any cancellation of
+orders or termination of projects under construction by our customers may result in a reduction of our future revenue.
+Any delay in payments that are due and payable to us will affect our operations and have an impact on our cash flows.
+This may result in an increase in our working capital borrowings thereby affecting our business and results of
+operations.
+Maintaining our customer relationships
+We believe that our continued relationship with our customers plays a significant role in determining our continued
+success and results of operations. Our relationship with these customers have thus been gradually strengthened by
+proving our reliability and quality over a period of time. The demand for our services and products from our customers
+has a significant impact on our results of operations and financial condition. Over the years, we have successfully
+executed a diverse portfolio of projects spanning various capacities and geographical locations. Set out below are
+details of our revenue attributable to repeat customers for the periods mentioned:
+  Revenue from repeat  Revenue from new
+  Revenue from repeat
+  Financial Year  customers as a % of revenue  customers as a % of revenue
+  customers (in ₹ million)
+  from operations  from operations
+ Three months ended June 30,  625.40  97.41%  2.59%
+ 2026
+ FY 2026  5,140.40  91.98%  8.02%
+ FY 2025  4,039.74  85.18%  14.82%
+ FY 2024  4,691.84  89.96%  10.04%
+Note: Revenues from repeat customers refer to the revenue generated from customers from whom our Company has derived revenues in any of the
+three preceding fiscal years for the respective financial year (on standalone basis).
+In the event that we lose any of our major customers or if the amount of business we receive from them is reduced for
+any reason, our cash flows and results of operations may be affected. Our arrangements with our customers also
+require us to meet certain standards and performance obligations and our failure to meet such specifications could
+result in a reduction of business from them, termination of contracts or additional costs and penalties, all of which
+may adversely impact our results of operations and financial condition.
+Technology and process innovation
+Over the years, we have developed a suite of proprietary technologies and engineering solutions. Our technology
+  517
+prowess and proficiency help us improve our service delivery and maintain and improve our margins and profitability.
+Our ability to stay abreast of such changes and provide commercially viable and marketable solutions to our customers
+plays a significant role in determining the attractiveness of our offering to customers. Our future success will depend
+substantially on our ability to respond to new technologies.
+Management of our costs, including those of our raw materials cost management through backward and forward
+integration
+Our ability to profitably expand our execution capabilities is dependent on our ability to efficiently manage our
+corresponding increase in expenditures and achieve timely completion and commissioning of our projects. We believe
+that our backward integration strategy will further enhance our operations and increase profitability by development
+and manufacture of key components, to achieve cost savings and improve profit margins. By increasing our backward
+integration measures, we will be in a position to control the quality and availability of materials which in turn will
+reduce reliance on external suppliers and enhance our ability to negotiate more favorable pricing from customers.
+We depend on external suppliers for our materials and components required and typically purchase materials and
+components on a purchase order basis and place such orders with them in advance on the basis of our anticipated
+requirements. As a result, the success of our business is significantly dependent on maintaining good relationships
+with our materials and component suppliers. Further, we source raw materials from a number of international suppliers
+as well as from vendors in India. Our supply arrangements are subject to price volatility caused by various factors
+such as market fluctuation, currency fluctuations, climatic and environmental conditions, production and
+transportation cost, changes in domestic as well as international government policies, and regulatory and trade
+sanctions. Changes in import duties also impact our cost of materials consumed and consequently operating margins.
+If we cannot fully offset increases in material prices with increases in the prices for our services and products, we will
+experience lower margins.
+Our execution capabilities
+Our projects for SWT segment are typically awarded through a competitive bidding process. This process therefore
+involves pre-qualifying for bids based on the company’s technical and financial strengths, and an evaluation of the
+nature and value of contracts executed in the past to determine a company’s eligibility to bid for new projects. Further,
+the ability to strategically partner with other players also determines the outcome of pre-qualification and consequently
+the award of projects.
+While evaluating our performance in contracts previously executed, our project management capabilities are also
+assessed. This would require continuing and improving on our project management practices which includes amongst
+others efficient equipment and material sourcing, good communication between the site office and head office, and
+project planning and monitoring to suit the projects under execution. Our ability to continue implementation of such
+practices as our busine [...truncated]
+
+===== OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS =====
+[not found]
+
+===== OFFER STRUCTURE =====
+OFFER STRUCTURE
+The Offer is of up to [●] Equity Shares of face value of ₹2 each for cash at a price of ₹[●] per Equity Share
+(including a premium of ₹[●] per Equity Share) aggregating up to ₹[●] million comprising of a Fresh Issue of
+up to [●] Equity Shares of face value of ₹2 each aggregating up to ₹1,500.00 million by our Company and an
+Offer of Sale of up to 15,682,750 Equity Shares of face value of ₹2 each aggregating up to ₹[●] million by the
+Selling Shareholders.
+The Offer shall constitute [●]% of the post-Offer paid-up Equity Share capital of our Company.
+The Offer is being made through Book Building Process, in compliance with Regulation 6(1) of the SEBI ICDR
+Regulations.
+  Particulars  QIBs (1)  Non-Institutional Bidders  Retail Individual Bidders
+Number  of Not more than [●] Equity Not less than [●] Equity Shares of Not less than [●] Equity Shares of
+Equity Shares Shares of face value of ₹2 face value of ₹2 each available face value of ₹2 each available
+available  for each  for allocation or Offer less for allocation or Offer less
+Allotment  /  allocation to QIB Bidders and allocation to QIB Bidders and
+  * (2)
+allocation  Retail Individual Bidders  Non-Institutional Bidders
+Percentage of Not more than 50% of the Offer Not less than 15% of the Offer or Not less than 35% of the Offer or
+Offer  Size size shall be available for the Offer less allocation to QIB the Offer less allocation to QIB
+available  for allocation to QIB Bidders. Bidders and Retail Individual Bidders and Non-Institutional
+Allotment  / However, up to 5% of the Net Bidders will be available for Bidders
+allocation  QIB Portion will be available allocation, out of which:
+  for allocation proportionately to
+  Mutual Funds only. Mutual a) one third of Non -Institutional
+  Funds participating in the Portion shall be reserved for
+  Mutual Fund Portion will also Bidders with application size of
+  be eligible for allocation in the more than ₹0.20 million and up to
+  remaining balance Net QIB ₹1.00 million; and
+  Portion. The unsubscribed
+  portion in the Mutual Fund b) two third of Non -
+  Portion will be added to the Net Institutional Portion shall be
+  QIB Portion  reserved  for  Bidders  with
+  application size of more than ₹1.00
+  million,
+  provided that the unsubscribed
+  portion in either of such sub-
+  categories may be allocated to
+  Bidders `in the other sub - category
+  of Non - Institutional Bidders.
+Basis  of Proportionate  as  follows The Equity Shares available for The allotment to each Retail
+Allotment  / (excluding the Anchor Investor allocation to Non-Institutional Individual Bidder shall not be less
+allocation  if Portion):  Bidders under the Non-Institutional than the minimum Bid Lot,
+respective  Portion, shall be subject to the subject to availability of Equity
+category  is a) Up to [●] Equity Shares of following:  Shares in the Retail Portion and
+oversubscribed*  face value of ₹2 each shall  the remaining available Equity
+  be available for allocation (i) one-third of Non-Institutional Shares if any, shall be allotted on
+  on a proportionate basis to  Portion will be available for a proportionate basis. For details,
+  Mutual Funds only; and  allocation to Bidders with an see “Offer Procedure” on page
+  application size of more than 594.
+  b) Up to [●] Equity Shares of  ₹0.20 million and up to ₹1.00
+  face value of ₹2 each shall  million, and
+  be available for allocation (ii) two-thirds of the Non-
+  on a proportionate basis to  Institutional Portion will be
+  all QIBs, including Mutual  available for allocation to
+  Funds receiving allocation  Bidders with application size of
+  as per (a) above  more than ₹1.00 million,
+  provided that the unsubscribed
+  c) Up to [●] Equity Shares of portion in either of the
+  face value of ₹2 each aforementioned sub-categories may
+  (comprising of up to 60% be allocated to Bidders in the other
+  of the QIB Portion) may be sub-category of Non-Institutional
+  allocated on a discretionary Bidders.
+  590
+  Particulars  QIBs (1)  Non-Institutional Bidders  Retail Individual Bidders
+  basis to Anchor Investors
+  40% of the Anchor Investor The Allotment to each Non-
+  Portion shall be reserved as Institutional Bidder shall not be less
+  under (i) 33.33% shall be than the minimum application size,
+  available for allocation to subject to the availability of Equity
+  domestic Mutual Funds; Shares in the Non-Institutional
+  and (ii) 6.67% for Life Portion, and the remaining Equity
+  Insurance Companies and Shares, if any, shall be allotted on a
+  Pension Funds, subject to proportionate basis. For details, see
+  valid Bids being received “Offer Procedure” on page 594.
+  from domestic Mutual
+  Funds, Life Insurance
+  Companies and Pension
+  Funds at or above the
+  Anchor Investor Allocation
+  Price. In the event of under-
+  subscription in (ii) above,
+  the allocation may be made
+  to domestic Mutual Funds.
+Minimum Bid  Such number of Equity Shares For  Non-Institutional  Bidder [●] Equity Shares
+  in multiples of [●] Equity applying under (i) One-third of the
+  Shares, that the Bid Amount Non-Institutional Category such
+  exceeds ₹0.20 million  number of Equity Shares in
+  multiples of [●] Equity Shares such
+  that the Bid Amount exceeds ₹0.20
+  million  For  Non-Institutional
+  Bidder applying under (ii) Two-
+  thirds of the Non-Institutional
+  Category such number of Equity
+  Shares in multiples of [●] Equity
+  Shares such that the Bid Amount
+  exceeds ₹1.00 million
+Maximum Bid Such number of Equity Shares Such number of Equity Shares in Such number of Equity Shares in
+  in multiples of [●] Equity multiples of [●] Equity Shares not multiples of [●] Equity Shares so
+  Shares not exceeding the size of exceeding the size of the Offer that the Bid Amount does not
+  the Offer (excluding the Anchor (excluding the QIB Portion), exceed ₹0.20 million
+  Portion), subject to applicable subject to limits prescribed under
+  limits under applicable law  applicable law
+Bid Lot  [●] Equity Shares and in multiples of [●] Equity Shares thereafter
+Mode  of Compulsorily in dematerialised form
+allotment
+Allotment Lot [●] Equity Shares of face value of ₹2 each and in multiples of one Equity Shares of face value of ₹2 each
+  thereafter for QIBs and RIBs. For NIBs allotment shall not be less than the minimum non-institutional
+  application size.
+Trading Lot  One Equity Share
+Who  can Public financial institutions (as Resident  Indian  individuals, Resident Indian individuals,
+apply(3)(5)  specified in Section 2(72) of the Eligible NRIs, HUFs (in the name Eligible NRIs and HUFs (in the
+  Companies Act), scheduled of the karta), companies, corporate name of the karta)
+  commercial banks, Mutual bodies,  scientific  institutions
+  Funds, Eligible FPIs, VCFs, societies and trusts and any
+  AIFs, FVCIs registered with individuals, corporate bodies and
+  SEBI, multilateral and bilateral family offices which are re-
+  development  financial categorised as category II FPIs and
+  ins [...truncated]

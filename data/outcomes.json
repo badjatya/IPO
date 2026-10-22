@@ -32,5 +32,39 @@
   "subscription_source": "nse ipo-detail 2026-10-21",
   "price_source": "nse",
   "recorded_at": "2026-10-21T19:08+05:30"
+ },
+ "fusion-cx": {
+  "name": "Fusion CX",
+  "symbol": "FUSIONCX",
+  "listing_date": "2026-10-22",
+  "issue_price": 289,
+  "listing_price": 305,
+  "day_close": 289.65,
+  "day_high": 312.95,
+  "day_low": 284.35,
+  "listing_gain_pct": 5.54,
+  "close_gain_pct": 0.22,
+  "gmp_eve": 17.0,
+  "gmp_eve_pct": 5.88,
+  "gmp_eve_snapshot": "2026-10-21T19:08+05:30",
+  "gmp_eve_updated": "21-Oct 18:02",
+  "gmp_miss_pts": -0.34,
+  "verdict": "neutral",
+  "verdict_text": "Neutral",
+  "best_category": "Big HNI",
+  "verdict_report": "2026-10-16-am.json",
+  "anchor_grade": "average",
+  "pe": 21.62,
+  "size_cr": 702.0,
+  "subscription": {
+   "qib": 2.98,
+   "snii": 3.44,
+   "bnii": 3.7,
+   "retail": 3.93,
+   "total": 3.33
+  },
+  "subscription_source": "nse ipo-detail 2026-10-22",
+  "price_source": "nse",
+  "recorded_at": "2026-10-22T19:09+05:30"
  }
 }

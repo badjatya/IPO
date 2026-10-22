@@ -1,1 +1,12 @@
-{"name": "SFC Environmental Technologies", "source": "web", "analysed": "2026-10-20", "verdict": "pending", "verdict_text": "Analysis pending", "summary": "Wastewater and solid-waste treatment technology and engineering firm (proprietary C-Tech cyclic activated sludge process) serving large institutional and industrial clients.", "financials": "Reported FY26 revenue about ₹804 Cr; sources conflict, verify against RHP.", "quota": "not found — RHP pending", "positives": ["Proprietary treatment technology and a large order book (figures vary by source)"], "red_flags": ["Debt about ₹253 Cr as of July 2026", "Part of the issue is an offer for sale by promoters"], "anchor": "Pending", "anchor_grade": "pending"}
+{
+  "name": "SFC Environmental Technologies Limited",
+  "source": "rhp",
+  "analysed": "2026-10-22",
+  "verdict": "listing_gains", "verdict_text": "Listing gains only",
+  "summary": "Wastewater and solid-waste treatment technology firm (C-Tech SBR process, over 80% SBR market share per F&S) with 728 installations.",
+  "financials": "FY26 revenue ₹804 Cr (+15%), PAT about ₹160 Cr (flat vs FY25); Q1 FY27 revenue ₹134 Cr; net worth ₹825 Cr.",
+  "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+  "positives": ["Market leader in SBR sewage treatment technology", "Repeat customers 92% of FY26 revenue", "Cheap at P/E about 19"],
+  "red_flags": ["Trade receivables ₹609 Cr (76% of FY26 revenue) and rising", "Profit flat in FY26 despite 15% revenue growth", "Only ₹150 Cr fresh; most of the issue is OFS by selling shareholders"],
+  "anchor": "Anchor bidding 26 Oct; not yet out", "anchor_grade": "pending"
+}

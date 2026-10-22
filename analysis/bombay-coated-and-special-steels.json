@@ -1,0 +1,12 @@
+{
+  "name": "Bombay Coated and Special Steels Limited",
+  "source": "web",
+  "analysed": "2026-10-22",
+  "verdict": "pending", "verdict_text": "Analysis pending",
+  "summary": "Mumbai steel processing centre that slits and cuts coated steel coils for appliance, HVAC and auto makers; JSW Steel authorised partner since 2021.",
+  "financials": "Not extracted; RHP not filed yet.",
+  "quota": "not found",
+  "positives": ["Authorised JSW Steel service partner", "Proceeds earmarked mainly for debt reduction"],
+  "red_flags": ["Home appliances about 83% of revenue (six months to Sep 2025)", "Top 10 customers about 68% of revenue"],
+  "anchor": "Not yet announced", "anchor_grade": "pending"
+}

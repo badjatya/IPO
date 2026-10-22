@@ -1,1 +1,12 @@
-{"name": "EAAA India Alternatives", "source": "web", "analysed": "2026-10-20", "verdict": "pending", "verdict_text": "Analysis pending", "summary": "Edelweiss group's alternative asset manager (infrastructure, real estate and private credit funds) earning management, advisory and performance fees.", "financials": "Total income about ₹787 Cr in FY25 vs ₹584 Cr in FY24 (DRHP summary); performance fees are volatile.", "quota": "not found — RHP pending", "positives": ["AUM about ₹6,550 Cr-scale platform across several alternative asset classes (per DRHP)"], "red_flags": ["100% offer for sale: no money to the company", "Performance-linked income is volatile"], "anchor": "Pending", "anchor_grade": "pending"}
+{
+  "name": "EAAA India Alternatives Limited",
+  "source": "rhp",
+  "analysed": "2026-10-22",
+  "verdict": "neutral", "verdict_text": "Neutral",
+  "summary": "Edelweiss group's alternative asset manager (infrastructure, real estate, private credit) earning management, advisory and performance fees; 100% offer for sale.",
+  "financials": "FY26 revenue ₹870 Cr (+30%), PAT ₹265 Cr (+15%); Q1 FY27 revenue ₹276 Cr, PAT ₹81 Cr; net worth ₹1,076 Cr.",
+  "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+  "positives": ["Fast revenue growth (FY24 ₹493 Cr to FY26 ₹870 Cr)", "Asset-light fee model with ROE of about 25%", "Debt-light balance sheet against ₹1,160 Cr equity"],
+  "red_flags": ["100% OFS by promoter ESIPL: no money to the company, promoter holding 89.6% pre-issue", "Profit leans on unrealised fair-value gains (₹290 Cr in FY26); operating cash flow is lumpy", "P/E about 41 on FY26 for a cyclical fee business"],
+  "anchor": "Anchor bidding 23 Oct is not yet confirmed; pending", "anchor_grade": "pending"
+}

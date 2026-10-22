@@ -1,0 +1,10 @@
+{"date": "2026-10-22", "session": "PM",
+ "headline": "Jio Platforms: Retail only 0.97x on Day 2, GMP ₹240 but off its ₹273 peak. Paras GMP collapsed to ₹12, skip",
+ "ipos": {
+  "jio-platforms": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Retail",
+    "category_note": "Retail 0.97x still undersubscribed, so full allotment likely. GMP falling from ₹273 peak, apply only for listing gain. Closes 23 Oct."},
+  "paras-healthcare": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null,
+    "category_note": "GMP crashed ₹111 to ₹12 (1.7%) at P/E ~160; QIB 0.06x. Skip. Closes 23 Oct."},
+  "sfc-environmental-technologies": {"category_note": "GMP falling ₹31 to ₹21 since 21 Oct; opens 27 Oct, recheck then."}
+ },
+ "notes": ["Fusion CX listed +6% (GMP said +6%); our call: Neutral"]}
