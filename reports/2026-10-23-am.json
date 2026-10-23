@@ -1,0 +1,10 @@
+{"date": "2026-10-23", "session": "AM",
+ "headline": "Jio and Paras close today. Jio GMP ₹240 (21%) with Retail 1.0x: apply 1 lot for listing gain. Paras stays a skip",
+ "ipos": {
+  "jio-platforms": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Retail",
+    "category_note": "Retail 1.0x after Day 2, last-day rush likely cuts odds. GMP ₹240 off ₹273 peak, flat since yesterday. 1 lot per family PAN, apply only for listing gain."},
+  "paras-healthcare": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null,
+    "category_note": "GMP ₹13 (1.9%) at P/E ~160, QIB 0.06x, total 0.24x on Day 2. Skip."},
+  "sfc-environmental-technologies": {"category_note": "GMP falling ₹31 to ₹21 since 21 Oct; opens 27 Oct, recheck then."}
+ },
+ "notes": ["Tonbo, Zetwerk, Bonfiglioli, Sahajanand list today; listing-day prices not out yet, will be scored next run."]}
