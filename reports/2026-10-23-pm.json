@@ -1,0 +1,13 @@
+{"date": "2026-10-23", "session": "PM",
+ "headline": "Jio Platforms closes today — Retail 1.71x, GMP ₹257 (+23%): apply in Retail; Paras Healthcare GMP collapsed to ₹11, avoid",
+ "ipos": {
+  "jio-platforms": {"verdict": "listing_gains", "verdict_text": "Apply for listing gains", "best_category": "Retail",
+    "category_note": "GMP rising to ₹257 (~23%) since 16 Oct; Retail only 1.71x so odds ≥1 in 2. Apply 1 lot per family PAN; bids close today."},
+  "paras-healthcare": {"verdict": "avoid", "verdict_text": "Avoid", "best_category": null,
+    "category_note": "GMP fell ₹97 → ₹11 since 16 Oct (1.6%) at P/E ~160; Retail 1.26x. Skip."},
+  "sfc-environmental-technologies": {"best_category": null,
+    "category_note": "GMP falling (₹31 → ₹21 since 21 Oct); opens 27 Oct — apply only if you'd hold; recheck after anchors."},
+  "bls-polymers": {"category_note": "GMP rising ₹18 → ₹38 since 19 Oct; opens 27 Oct, recheck then."},
+  "m-k-sons-fine-jewels": {"category_note": "No GMP yet; opens 28 Oct. Recheck after anchors and GMP."}
+ },
+ "notes": ["Listed since last run: Tonbo Imaging +66% (GMP said +63%; our call: Listing gains only). Zetwerk +5% (GMP said +1%; Avoid). Bonfiglioli Transmissions +0% (GMP said +13%; Listing gains only). Sahajanand Medical Technologies +8% (GMP said +5%; Listing gains only).", "M.K. Sons Fine Jewels analysed from RHP today (new card, Neutral)."]}

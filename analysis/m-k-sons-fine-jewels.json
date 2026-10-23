@@ -1,0 +1,12 @@
+{
+  "name": "M.K. Sons Fine Jewels Limited",
+  "source": "rhp",
+  "analysed": "2026-10-23",
+  "verdict": "neutral", "verdict_text": "Neutral",
+  "summary": "Mumbai/Ahmedabad retail jeweller (gold, diamond, CZ) with 5 showrooms; ₹275 Cr issue, ~80% fresh.",
+  "financials": "FY26 revenue ₹539 Cr (+53%), EBITDA ₹83 Cr (15.4%), PAT ₹52 Cr (+123%); P/E ~13.4x at upper band vs peer avg 20.3x.",
+  "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+  "positives": ["P/E ~13x vs listed jewellery peers averaging ~20x", "Revenue ₹217 Cr to ₹539 Cr and PAT ₹8 Cr to ₹52 Cr in two years", "Fresh issue mostly funds a new showroom's inventory and ₹30 Cr debt repayment"],
+  "red_flags": ["Growth and margin jump (gross margin 9% to 19%) with the same 5 stores; Q1 EBITDA margin 23%", "Inventory days 122 to 333; net operating cycle 321 days", "Promoter selling ₹55 Cr via OFS; business only moved into the company in Mar 2025; Mumbai/Ahmedabad concentration"],
+  "anchor": "Anchor bidding 27 Oct; not yet out", "anchor_grade": "pending"
+}

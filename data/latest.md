@@ -1,40 +1,40 @@
-# IPO numbers – 2026-10-23 (as of 09:07 IST)
+# IPO numbers – 2026-10-23 (as of 19:08 IST)
 
 ## Paras Healthcare — closing today
 - Dates: open 2026-10-21 · close 2026-10-23 · allotment 2026-10-26 · listing 2026-10-28
 - Price band: ₹660–693 · lot 21 shares · size ₹1450 Cr · P/E 159.68
-- GMP: ₹13 (1.88%) · anchor allocation: done (https://nsearchives.nseindia.com/content/ipo/ANCHOR_PARASHLTH.zip)
-- GMP ₹97 → … → ₹35 → ₹12 → ₹13 since 16 Oct, falling
+- GMP: ₹11 (1.59%) · anchor allocation: done (https://nsearchives.nseindia.com/content/ipo/ANCHOR_PARASHLTH.zip)
+- GMP ₹97 → … → ₹35 → ₹12 → ₹11 since 16 Oct, falling
 - Cached call (rhp, 2026-10-16): Listing gains only · anchor strong · Operator of 8 Paras Health tertiary/quaternary hospitals (2,211 beds) across North India, Bihar, Jharkhand and J&K.
 - Issue: Initial Public Offer comprising of Fresh Issue aggregating upto Rs. 5000 million and Offer for Sale aggregating upto Rs. 9,500 million (including Anchor reservation portion of 94,15,584 Equity Shares)
 - Lead managers: JM Financial Limited, BofA Securities India Limited, Nuvama Wealth Management Limited · registrar: MUFG Intime India Private Limited
-- Subscription: QIB 0.06x · NII 0.19x · BNII 0.18x · SNII 0.2x · RETAIL 0.83x · TOTAL 0.24x
-- Subscription by day: Day 1 → 2: Retail 0.48x → 0.83x · sNII 0.09x → 0.2x · bNII 0.04x → 0.18x · QIB 0x → 0.06x · Total 0.1x → 0.24x
+- Subscription: QIB 2.86x · NII 0.46x · BNII 0.41x · SNII 0.56x · RETAIL 1.26x · TOTAL 1.92x
+- Subscription by day: Day 1 → 3: Retail 0.48x → 0.83x → 1.26x · sNII 0.09x → 0.2x → 0.56x · bNII 0.04x → 0.18x → 0.41x · QIB 0x → 0.06x → 2.86x · Total 0.1x → 0.24x → 1.92x
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
-| Retail | 1 lot (21 sh) | ₹14,553 | full | ₹273 | 1.88% |
-| Small HNI (sNII) | 14 lot (294 sh) | ₹2.04 L | full | ₹3,822 | 1.88% |
-| Big HNI (bNII) | 69 lot (1449 sh) | ₹10.04 L | full | ₹18,837 | 1.88% |
+| Retail | 1 lot (21 sh) | ₹14,553 | ≥1 in 1 | ₹183 | 1.26% |
+| Small HNI (sNII) | 14 lot (294 sh) | ₹2.04 L | full | ₹3,234 | 1.59% |
+| Big HNI (bNII) | 69 lot (1449 sh) | ₹10.04 L | full | ₹15,939 | 1.59% |
 
-Best category by return on capital: **retail**
+Best category by return on capital: **snii**
 
 ## Jio Platforms — closing today
 - Dates: open 2026-10-21 · close 2026-10-23 · allotment 2026-10-26 · listing 2026-10-28
 - Price band: ₹1065–1119 · lot 12 shares · size ₹30213 Cr · P/E 33.28
-- GMP: ₹240 (21.45%) · anchor allocation: done (https://nsearchives.nseindia.com/content/ipo/ANCHOR_JPL.zip)
-- GMP ₹222 → … → ₹249 → ₹240 → ₹240 since 16 Oct, falling (peak ₹273)
+- GMP: ₹257 (22.97%) · anchor allocation: done (https://nsearchives.nseindia.com/content/ipo/ANCHOR_JPL.zip)
+- GMP ₹222 → … → ₹249 → ₹240 → ₹257 since 16 Oct, rising
 - Cached call (rhp, 2026-10-15): Neutral · anchor strong · Reliance's digital/telecom holding company: Jio (533 mn customers), JioAirFiber (14 mn), proprietary 5G stack; 100% fresh issue, ₹27,500 Cr to repay RJIL debt.
 - Issue: Initial Public Offer comprising of Fresh Issue of up to 27,00,00,000 equity shares (including Employee Reservation Portion aggregating up to Rs. 5,000 million, Eligible RIL shareholders portion aggregating up to Rs. 25,000 million and Anchor reservation portion of 7,24,74,066 equity shares)
 - Lead managers: Kotak Mahindra Capital Company Limited · registrar: Kfin Technologies Limited
-- Subscription: QIB 6.24x · NII 4.45x · BNII 5.11x · SNII 3.12x · RETAIL 1.0x · EMPLOYEE 1.37x · SHAREHOLDER 2.95x · TOTAL 3.17x
-- Subscription by day: Day 1 → 2: Retail 0.51x → 1x · sNII 1.03x → 3.12x · bNII 1.31x → 5.11x · QIB 4.74x → 6.24x · Total 1.77x → 3.17x
+- Subscription: QIB 37.22x · NII 9.91x · BNII 11.31x · SNII 7.12x · RETAIL 1.71x · EMPLOYEE 1.87x · SHAREHOLDER 5.37x · TOTAL 12.45x
+- Subscription by day: Day 1 → 3: Retail 0.51x → 1x → 1.71x · sNII 1.03x → 3.12x → 7.12x · bNII 1.31x → 5.11x → 11.31x · QIB 4.74x → 6.24x → 37.22x · Total 1.77x → 3.17x → 12.45x
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
-| Retail | 1 lot (12 sh) | ₹13,428 | full | ₹2,880 | 21.45% |
-| Small HNI (sNII) | 15 lot (180 sh) | ₹2.01 L | ≥1 in 3 | ₹13,846 | 6.87% |
-| Big HNI (bNII) | 75 lot (900 sh) | ₹10.07 L | ≥1 in 5 | ₹42,270 | 4.2% |
+| Retail | 1 lot (12 sh) | ₹13,428 | ≥1 in 2 | ₹1,804 | 13.43% |
+| Small HNI (sNII) | 15 lot (180 sh) | ₹2.01 L | ≥1 in 7 | ₹6,497 | 3.23% |
+| Big HNI (bNII) | 75 lot (900 sh) | ₹10.07 L | ≥1 in 11 | ₹20,451 | 2.03% |
 
 Best category by return on capital: **retail**
 
@@ -52,6 +52,20 @@ Best category by return on capital: **retail**
 | Small HNI (sNII) | 14 lot (350 sh) | ₹2.05 L | n/a | - | - |
 | Big HNI (bNII) | 69 lot (1725 sh) | ₹10.11 L | n/a | - | - |
 
+## Zetwerk — listing today
+- Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
+- Price band: ₹151 (upper) · lot 99 shares · size ₹5012.33 Cr · P/E -14.17
+- GMP: ₹1.2 (0.79%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹6 → ₹3.5 → ₹2 → ₹1.2 since 16 Oct, falling
+- Cached call (rhp, 2026-10-13): Neutral · anchor strong · Tech-led manufacturing platform (energy, precision, capital goods) with 26 own plants and ~7,000 suppliers; ₹5,012 Cr issue.
+- Subscription by day: Day 1 → 3: Retail 0.15x → 0.25x → 0.49x · sNII 0.06x → 0.11x → 0.63x · bNII 0.07x → 0.14x → 1.2x · QIB 0.17x → 0.2x → 1.87x · Total 0.14x → 0.19x → 1.37x
+
+| Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
+|---|---|---|---|---|---|
+| Retail | 1 lot (99 sh) | ₹14,949 | n/a | - | - |
+| Small HNI (sNII) | 14 lot (1386 sh) | ₹2.09 L | n/a | - | - |
+| Big HNI (bNII) | 67 lot (6633 sh) | ₹10.02 L | n/a | - | - |
+
 ## Sahajanand Medical Technologies — listing today
 - Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
 - Price band: ₹344 (upper) · lot 43 shares · size ₹475.48 Cr · P/E 50.59
@@ -66,25 +80,11 @@ Best category by return on capital: **retail**
 | Small HNI (sNII) | 14 lot (602 sh) | ₹2.07 L | n/a | - | - |
 | Big HNI (bNII) | 68 lot (2924 sh) | ₹10.06 L | n/a | - | - |
 
-## Zetwerk — listing today
-- Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
-- Price band: ₹151 (upper) · lot 99 shares · size ₹5012.33 Cr · P/E -14.17
-- GMP: ₹1 (0.66%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹6 → ₹3.5 → ₹2 → ₹1 since 16 Oct, falling
-- Cached call (rhp, 2026-10-13): Neutral · anchor strong · Tech-led manufacturing platform (energy, precision, capital goods) with 26 own plants and ~7,000 suppliers; ₹5,012 Cr issue.
-- Subscription by day: Day 1 → 3: Retail 0.15x → 0.25x → 0.49x · sNII 0.06x → 0.11x → 0.63x · bNII 0.07x → 0.14x → 1.2x · QIB 0.17x → 0.2x → 1.87x · Total 0.14x → 0.19x → 1.37x
-
-| Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
-|---|---|---|---|---|---|
-| Retail | 1 lot (99 sh) | ₹14,949 | n/a | - | - |
-| Small HNI (sNII) | 14 lot (1386 sh) | ₹2.09 L | n/a | - | - |
-| Big HNI (bNII) | 67 lot (6633 sh) | ₹10.02 L | n/a | - | - |
-
 ## Tonbo Imaging India — listing today
 - Dates: open 2026-10-15 · close 2026-10-19 · allotment 2026-10-21 · listing 2026-10-23
 - Price band: ₹700 (upper) · lot 21 shares · size ₹852.18 Cr · P/E 78.83
-- GMP: ₹450 (64.29%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹500 → … → ₹512 → ₹438 → ₹450 since 16 Oct, falling (peak ₹515)
+- GMP: ₹452 (64.57%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹500 → … → ₹512 → ₹438 → ₹452 since 16 Oct, falling (peak ₹515)
 - Cached call (rhp, 2026-10-12): Listing gains only · anchor strong · Bengaluru defence-electronics maker: thermal imaging cores, weapon sights, targeting and missile-seeker systems; ~71% of revenue from the Indian government.
 - Subscription by day: Day 1 → 3: Retail 2.35x → 5.24x → 21.52x · sNII 5.99x → 14.01x → 99.22x · bNII 3.37x → 8.3x → 136.76x · QIB 2.15x → 2.16x → 208.58x · Total 2.7x → 5.43x → 96.88x
 
@@ -138,8 +138,28 @@ Best category by return on capital: **retail**
 | Small HNI (sNII) | 14 lot (630 sh) | ₹2.08 L | n/a | - | - |
 | Big HNI (bNII) | 68 lot (3060 sh) | ₹10.10 L | n/a | - | - |
 
+## M.K.Sons Fine Jewels — upcoming
+- Dates: open 2026-10-28 · close 2026-10-30 · allotment 2026-11-02 · listing 2026-11-04
+- Price band: ₹153–162 · lot 91 shares · size ₹275.4 Cr · P/E 13.36
+- GMP: - · anchor allocation: not yet
+- Cached call: none — write the card
+- Issue: Initial Public offering comprising of Fresh issue up to 1,36,00,000 Equity Shares and offer for sale up to 34,00,000 Equity shares
+- Lead managers: Aryaman Financial Services Limited · registrar: Bigshare Services Private Limited
+
+| Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
+|---|---|---|---|---|---|
+| Retail | 1 lot (91 sh) | ₹14,742 | n/a | - | - |
+| Small HNI (sNII) | 14 lot (1274 sh) | ₹2.06 L | n/a | - | - |
+| Big HNI (bNII) | 68 lot (6188 sh) | ₹10.02 L | n/a | - | - |
+
 ## Bombay Coated and Special Steels — upcoming
 - Dates: open 2026-10-29 · close 2026-11-02 · allotment 2026-11-03 · listing 2026-11-05
-- Price band: not announced · lot ? shares · size ₹183.06 Cr · P/E -
-- GMP: - · anchor allocation: unknown (not on NSE yet)
+- Price band: ₹82 (upper) · lot 182 shares · size ₹183.06 Cr · P/E 10.88
+- GMP: ₹8 (9.76%) · anchor allocation: unknown (not on NSE yet)
 - Cached call (web, 2026-10-22): Analysis pending · anchor pending · Mumbai steel processing centre that slits and cuts coated steel coils for appliance, HVAC and auto makers; JSW Steel authorised partner since 2021.
+
+| Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
+|---|---|---|---|---|---|
+| Retail | 1 lot (182 sh) | ₹14,924 | n/a | - | - |
+| Small HNI (sNII) | 14 lot (2548 sh) | ₹2.09 L | n/a | - | - |
+| Big HNI (bNII) | 68 lot (12376 sh) | ₹10.15 L | n/a | - | - |
