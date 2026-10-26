@@ -1,0 +1,34 @@
+{
+ "date": "2026-10-26",
+ "session": "AM",
+ "headline": "EAAA India Alternatives opens today (to 28 Oct): P/E 41, GMP only ₹33 (2%), 100% OFS — listing gains slim, Neutral; Jio & Paras allot today",
+ "ipos": {
+  "eaaa-alternatives": {
+   "verdict": "neutral",
+   "verdict_text": "Neutral",
+   "best_category": null,
+   "category_note": "GMP just ₹33 (~2%) at P/E ~41 and 100% OFS; strong ₹360 Cr anchor book helps but skip unless you'd hold. Recheck subscription on 28 Oct."
+  },
+  "jio-platforms": {
+   "category_note": "Allotment today (26 Oct), listing 28 Oct. GMP ₹247 (~22%) slipped from peak ₹273; final subscription 12.45x at Day 3."
+  },
+  "paras-healthcare": {
+   "category_note": "Allotment today, listing 28 Oct. GMP faded to ₹9 (1.3%); expect a flat listing."
+  },
+  "sfc-environmental-technologies": {
+   "category_note": "Opens 27 Oct. GMP back up to ₹32 (~10%) after dip to ₹21; recheck after anchors."
+  },
+  "bls-polymers": {
+   "category_note": "Opens 27 Oct. GMP rising to ₹38 (~25%) since 19 Oct; recheck after anchors."
+  },
+  "m-k-sons-fine-jewels": {
+   "category_note": "Opens 28 Oct. GMP ₹7 (~4%); recheck after anchors."
+  },
+  "bombay-coated-and-special-steels": {
+   "category_note": "Opens 29 Oct. GMP ₹8 (~10%); RHP analysis still pending."
+  }
+ },
+ "notes": [
+  "EAAA anchor book confirmed from NSE filing: ₹360 Cr, 26 anchors, graded Strong."
+ ]
+}

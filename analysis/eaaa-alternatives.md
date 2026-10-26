@@ -26,7 +26,7 @@ P/E ≈ 40.6 on FY26 PAT. Peer table not extracted here (price band only just an
 None to the company; all to ESIPL after expenses.
 
 ## Anchor book
-**Pending** — anchor bidding not out yet.
+**Strong** — ₹360 Cr raised from 26 anchors at ₹1,665 (21.62 lakh shares, bidding 23 Oct). Top names: SBI MF Midcap ₹38 Cr, ICICI Pru Smallcap ₹38 Cr, HDFC Flexi Cap ₹31.7 Cr (+ HDFC Large & Mid ₹6.3 Cr), Nippon Small Cap ₹19 Cr and Banking & Financial Services ₹19 Cr, Carnelian Bharat Amritkaal ₹20.5 Cr, Kotak Infinity Hybrid ₹15.5 Cr, Bandhan Innovation / HSBC Flexi Cap / Abakkus Small Cap ₹16 Cr each, Schroders (2 funds) ₹18.4 Cr, Government Pension Fund Global ₹10 Cr, Goldman Sachs ODI ₹5 Cr. Lock-in 50% 30 days, 50% 90 days.
 
 ## Red flags
 100% OFS; promoter at 89.6%; earnings quality (unrealised gains); related-party/group dependence; valuation.
