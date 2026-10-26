@@ -1,0 +1,1266 @@
+
+===== THE OFFER =====
+[not found]
+
+===== SUMMARY OF RESTATED FINANCIAL INFORMATION =====
+SUMMARY OF FINANCIAL INFORMATION
+The following tables set forth the summary financial information derived from our Restated Financial Information. The
+summary of financial information presented below has been prepared in accordance with Ind AS for the three months period
+ended June 30, 2026 and for the financial years ended on March 31, 2026, March 31, 2025 and March 31, 2024 restated in
+accordance with the SEBI ICDR Regulations and are presented in the section. The summary financial information presented
+below should be read in conjunction with “Restated Financial Information” and “Management’s Discussion and Analysis
+of Financial Condition and Results of Operations” beginning on pages 312 and 408, respectively.
+  [The remainder of this page has intentionally been left blank]
+  83
+  RESTATED STATEMENT OF ASSETS AND LIABILITIES
+  (₹ in million)
+Sr.  Particulars  As at June  As at March  As at March  As at March
+No.  30, 2026  31, 2026  31, 2025  31, 2024
+A)  ASSETS
+I  Non-Current assets
+  (a) Property, Plant and Equipment  1,664.72  1,641.98  1,183.24  1,160.76
+  (b) Capital WIP  69.94  54.54  54.71  0.00
+  (c) Right-of-Use Assets  133.81  144.07  190.72  8.06
+  (d) Financial assets:
+  i) Investments  0.00  0.00  0.00  0.00
+  ii) Other Financial Assets  14.47  13.82  91.67  0.47
+  (e) Other Non - Current Assets  0.15  1.32  62.01  0.00
+  Total Non-Current assets (I)  1,883.10  1,855.74  1,582.35  1,169.29
+II  Current Assets
+  (a) Inventories  1,254.60  1,893.27  1,157.27  843.20
+  (b) Financial assets
+  i) Trade Receivables  1,654.10  1,289.22  1,367.29  1,061.51
+  ii) Cash and cash equivalents  91.69  109.31  20.35  1.41
+  iii) Bank balance other than ii) above  29.04  83.21  126.23  194.54
+  iv) Other financial assets  17.54  17.71  15.84  16.68
+  (c) Other current assets  331.03  464.30  296.84  215.45
+  (d) Current tax assets (net)  0.00  1.91  15.88  0.00
+  Total Current Assets (II)  3,377.99  3,858.92  2999.70  2332.79
+  Total Assets (I+II)  5,261.08  5,714.66  4582.05  3502.08
+B)  EQUITY AND LIABILITIES
+I  Equity
+  (a) Equity share capital  405.00  405.00  99.00  99.00
+  (b) Other equity  961.15  810.81  731.47  444.59
+  Total equity (I)  1,366.15  1,215.81  830.47  543.59
+  Liabilities
+II  Non-Current Liabilities
+  (a) Financial liabilities:
+  i) Borrowings  641.68  522.89  392.25  406.91
+  ii) Lease liabilities  94.58  103.84  142.86  6.46
+  (b) Provisions  9.62  7.76  8.82  4.68
+  (c) Deferred tax liabilities (Net)  70.80  63.80  41.30  27.56
+  Total Non-Current Liabilities (II)  816.68  698.28  585.23  445.61
+III  Current liabilities
+  (a) Financial liabilities:
+  i) Borrowings  2,095.22  2,861.65  2,377.36  1,934.69
+  ii) Lease liabilities  35.68  34.80  33.70  2.31
+  iii) Trade payables total outstanding dues of
+  1) Micro enterprises and small enterprises  79.50  47.33  51.66  47.98
+  2) Other than micro enterprises and small  780.16  813.16  677.99  512.67
+  enterprises.
+  (b) Provisions  9.18  10.20  6.62  1.14
+  (c) Current tax liabilities (net)  20.37  0.00  0.00  1.05
+  (d) Other current liabilities  58.12  33.45  19.02  13.04
+  Total Current Liabilities (II)  3,078.24  3,800.57  3,166.35  2,512.88
+  Total Equity & Liabilities (I+II)  5,261.08  5,714.66  4,582.05  3,502.08
+  84
+  RESTATED STATEMENT OF PROFIT AND LOSS
+  (₹ in million)
+Particulars  For the period ended/For the year ended
+  June 30, 2026  March 31, 2026 March 31, 2025 March 31, 2024
+A) Income
+a) Revenue from operations  3,970.80  12,668.18  10,557.07  7,552.59
+b) Other Income  4.66  30.07  29.38  101.53
+Total Income (A)  3,975.47  12,698.25  10,586.45  7,654.12
+B) Expenses
+a) Cost of Material Consumed  3,301.74  11,123.75  9,497.07  6,571.11
+b) Changes in inventories of Finished  153.57  75.95  (218.38)  52.43
+  goods and Work-in-Progress
+c) Employee benefits expense  50.14  124.96  84.25  73.19
+d) Finance costs  86.25  357.08  312.35  259.63
+e) Depreciation and amortisation  33.69  126.01  86.29  51.49
+  expense
+f) Other expenses  143.62  482.63  453.22  364.21
+Total expenses (B)  3,769.00  12,290.37  10,214.80  7,372.06
+Profit before tax C=(A+B)  206.46  407.88  371.65  282.06
+Tax expense
+a) Current tax  48.57  80.37  70.96  56.97
+b) Tax impact for earlier years / period  -  (0.13)  0.28  0.06
+c) Deferred tax  7.14  22.25  13.69  13.65
+Total tax expense (D)  55.71  102.49  84.93  70.68
+Profit for the period/year E=(C-D)  150.75  305.39  286.72  211.38
+Other comprehensive income
+Items that will not be reclassified to
+profit and loss
+a) Remeasurement gain/(loss) of post-  (0.55)  0.99  0.21  (0.31)
+  employment defined benefit plan
+b) Income tax relating to above  0.14  (0.25)  (0.05)  0.08
+Total  Other  comprehensive  (0.41)  0.74  0.16  (0.23)
+income/(loss) for the period / year (net
+of tax) (F)
+Total comprehensive income for the  150.34  306.13  286.88  211.15
+period / year G=(E+F)
+Earnings per share (Face value of
+INR 10/- per equity share)
+Basic (₹)  3.72  7.64  7.24  5.34
+Diluted (₹)  3.72  7.64  7.24  5.34
+  85
+  RESTATED CASH FLOW STATEMENT
+  (₹ in Million)
+Sr.  For the period ended/For the year ended
+No  June 30, 2026  March 31,  March 31,  March 31,
+  Particulars
+  2026  2025  2024
+A)  Cash flows from  operating
+  activities:
+  Profit before tax  206.46  407.88  371.65  282.06
+  Adjustments for:
+  Depreciation  and  amortisation  33.69  126.01  86.29  51.49
+  expense
+  Loss on sale of property, plant and  0.14  0.30  --  --
+  equipment including intangible
+  assets (net of loss on assets
+  scrapped/written off)
+  Expected Credit Loss  0.00  0.00  0.01  1.16
+  Asset Written off  -  4.68  -  -
+  Interest income  (0.22)  (11.08)  (13.43)  (16.78)
+  Finance costs  86.25  357.08  312.35  259.63
+  Operating profit before changes in  326.33  884.89  756.87  577.56
+  non- current/current assets and
+  liabilities
+  Adjustments for:
+  Decrease/(Increase) in inventories  638.67  (736.00)  (314.08)  26.77
+  Decrease/(Increase)  in  trade  (364.88)  78.07  (305.79)  (259.33)
+  receivables
+  Decrease/(Increase) in other financial  133.44  (169.32)  (80.56)  (87.41)
+  assets and other assets
+  Increase/(Decrease) in trade payables  (0.82)  130.82  169.02  (96.63)
+  Increase/(Decrease)  in  Non-  36.97  (20.00)  183.61  10.90
+  current/current financial and other
+  liabilities/ provisions
+  Cash generated from operations  769.71  168.44  409.07  171.86
+  Income taxes paid (net of refund)  (46.66)  (66.27)  (88.17)  (56.99)
+  Net cash from operating activities  723.05  102.17  320.90  114.87
+B)  Cash  flows  from  investing
+  activities:
+  (62.03)  (548.02)  (346.14)  (493.14)
+  Purchase of capital assets
+  0.32  5.12  --  --
+  Proceeds from sale of capital assets
+  Changes in Other Non-current  (0.65)  77.85  (91.20)  --
+  Financial assets
+  1.17  60.69  (62.01)  --
+  Changes in Other Non-current assets
+  86
+  Fixed/restricted deposits with banks  54.17  43.02  68.30  (52.14)
+  (placed)/realised (net)
+  0.22  11.08  13.43  16.78
+  Interest received
+  Net cash from/(used in) investing  (6.80)  (350.27)  (417.62)  (528.50)
+  activities
+C)  Cash flows from financing
+  activities:
+  Proceeds from issue of equity shares  --  79.21  --  --
+  (net of issue expenses)
+  166.30  571.67  154.89  323.84
+  Proceeds from long term borrowings
+  (Repayments) from long term  (47.51)  (441.04)  (169.56)  (873.26)
+  borrowings
+  (766.43)  484.30  442.68  1,204.68
+  Proceeds from short term borrowings
+  (86.25)  (357.08)  (312.35)  (259.63)
+  Interest paid
+  Net cash from/ (used in) financing  (733.88)  337.06  115.66  395.63
+  activities
+  Net increase/(decrease) in cash and  (17.62)  88.96  18.94  (18.00)
+  cash equivalents
+  109.31  20.35  1.41  19.41
+  Opening cash and cash equivalents
+  91.69  109.31  20.35  1.41
+  Closing cash and cash equivalents
+  87
+
+===== CAPITAL STRUCTURE =====
+CAPITAL STRUCTURE
+The share capital of our Company, as of the date of this Red Herring Prospectus, is set forth below:
+  (in ₹, except share data, unless otherwise stated)
+  Sr.  Particulars  Aggregate value at Aggregate Value
+  No.  face value  at Issue Price*
+  A.  AUTHORIZED SHARE CAPITAL(1)
+  65,000,000 Equity Shares of face value of ₹10 each  65,00,00,000  -
+  -
+  B.  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL BEFORE THE ISSUE
+  40,500,091 Equity Shares of face value of ₹10 each issued and fully 405,000,910  -
+  paid up
+  C.  PRESENT ISSUE IN TERMS OF THIS RED HERRING PROSPECTUS
+  Issue of up to [●] Equity Shares aggregating up to ₹1,830.57 million(2)  [●]  [●]
+  D.  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL AFTER THE ISSUE*
+  [●] Equity Shares bearing face value of ₹10 each  [●]  [●]
+  E.  SECURITIES PREMIUM ACCOUNT
+  Before the Issue (as on the date of this Red Herring Prospectus)  7,02,10,000
+  After the Issue  [●]
+* To be included upon finalisation of the Issue Price and subject to the Basis of Allotment.
+(1)  For details in relation to changes in the authorized share capital of our Company in the last 10 years, see “History and Certain
+  Corporate Matters – Amendments to the Memorandum of Association in the last 10 years” on page 281.
+(2)  The Issue has been authorised by our Board pursuant to resolutions passed at their meeting held January 03, 2026, and by our
+  Shareholders pursuant to a special resolution dated January 07, 2026.
+Class of Shares
+The Company has only one class of share capital i.e., Equity Shares of face value of ₹10 each. All the issued Equity Shares
+are fully paid-up as on the date of this Red Herring Prospectus. Our Company has no outstanding convertible instruments
+as on the date of this Red Herring Prospectus.
+Notes to the Capital Structure
+1.  Share capital history of our Company
+  [The remainder of this page has intentionally been left blank]
+  99
+(1) Primary issuance of equity shares of our Company:
+ Date of  Nature of allotment  Name(s) of allottee(s) and details of  Number  Face  Issue  Nature of  Cumulative  Cumulative
+ Allotment  equity shares allotted per allottee  of  value  price  consideration  number  of  paid-up equity
+  equity  per equity  per equity  equity shares  share capital
+  shares  share (₹)  share (₹)  (in ₹)
+  allotted
+ December  Initial subscription to  50,000 Equity Shares were allotted to  100,000  10  10.00  Cash  100,000  1,000,000.00
+ 26, 2019  the Memorandum of  Vijaykumar Himatrai Gupta, 25,000
+  Association  Equity Shares were allotted to Nitin
+  Vijaykumar Gupta, and 25,000 equity
+  shares were allotted to Bhawna Nitin
+  Gupta
+ March 9,  Private Placement(1)  2,450,000 Equity Shares were allotted to  2,450,000  10  10.00  Other  than  2,550,000  25,500,000.00
+ 2021  Vijaykumar Himatrai Gupta  Cash
+ March 9,  Rights Issue  1,975,000 Equity Shares were allotted to  2,450,000  10  10.00  Cash  5,000,000  50,000,000.00
+ 2021  Nitin Vijaykumar Gupta, and 475,000
+  Equity Shares were allotted to Bhawna
+  Nitin Gupta
+ March 8,  Rights Issue  2,450,000 Equity Shares were allotted to  4,900,000  10  10.00  Cash  9,900,000  99,000,000.00
+ 2023  Vijaykumar Himatrai Gupta, 1,960,000
+  Equity Shares were allotted to Nitin
+  Vijaykumar Gupta, 490,000 Equity Shares
+  were allotted to Bhawna Nitin Gupta
+ July  8,  Bonus Issue (in the  14,850,000 Equity Shares were allotted to  29,700,000  10  NA  Other  than  39,600,000  3,96,000,000.00
+ 2025  ratio of 3 equity  Vijaykumar Himatrai Gupta, 11,879,880  Cash
+  shares for every 1  Equity Shares were allotted to Nitin
+  equity share held) (2)  Vijaykumar Gupta, 2,970,000 Equity
+  Shares were allotted to Bhawna Nitin
+  Gupta, 30 Equity Shares were allotted to
+  Sunita Vijaykumar Gupta, 30 Equity
+  Shares were allotted to Ruchi Vijaykumar
+  Gupta, 30 Equity Shares were allotted to
+  Vipin Sharma, 30 Equity Shares were
+  allotted to Lokesh Chandra Lavti
+ October  Private Placement (3)  114,000 Equity Shares were allotted to  900,091  10  88.00  Cash  40,500,091  405,000,910.00
+ 28, 2025  Manish Dhirajlala Kansara, 113,637
+  Equity Shares were allotted to Moneyplant
+  SME Fund, 113,636 Equity Shares were
+  allotted to Priti Suresh Shah, 100,000
+  Equity Shares were allotted to Rural
+  Date of  Nature of allotment  Name(s) of allottee(s) and details of  Number  Face  Issue  Nature of  Cumulative  Cumulative
+  Allotment  equity shares allotted per allottee  of  value  price  consideration  number  of  paid-up equity
+  equity  per equity  per equity  equity shares  share capital
+  shares  share (₹)  share (₹)  (in ₹)
+  allotted
+  Engineering Co. Private Limited, 60,000
+  Equity Shares were allotted to Ashok
+  Shreekrishna Beharay 57,000 Equity
+  Shares were allotted to Ketankumar
+  Jerajbhai Hingrajiya, 57,000 Equity Shares
+  were allotted to Ritaben Ketanbhai
+  Hingrajiya, 57,000 Equity Shares were
+  allotted to Chhaganbhai Gandubhai Tilala,
+  57,000 Equity Shares were allotted to
+  Vipul Kishorbhai Vachhani, 57,000 Equity
+  Shares were allotted to Chhaganbhai
+  Gandubhai Tilalal, 57,000 Equity Shares
+  were allotted to Savitri Karnany, 56,818
+  Equity Shares were allotted to Jayasudha
+  Swaminathan Iyer
+Note:
+(1)  Pursuant to the Business Transfer Agreement dated January 29, 2021 (“BTA”) executed with Mr. Vijaykumar Himatrai Gupta, proprietor of M/s. Bombay Steels, the Company allotted 2,450,000
+  equity shares to one of its Promoters, Mr. Vijaykumar Himatrai Gupta, at a value of ₹10.00 per share, as per the Share Valuation Report issued by Ms. Inampudi Bindu Madhavi, Registered
+  Valuer, dated January 22, 2021.
+(2)  Bonus issuance of 29,700,000 Equity Shares of face value of ₹10 each of our Company was made pursuant to resolutions of the Board and Shareholders each dated June 21, 2025, out of the
+  reserves and surplus of the Company.
+(3)  The private placement was originally approved as a pre-IPO placement pursuant to a resolution of the Board dated October 07, 2025. Subsequently, the pre-IPO placement was reclassified as
+  a private placement pursuant to the resolution of the IPO Committee dated October 29, 2025.
+Except as stated below, our Company has made the above-mentioned issuances and allotments of Equity Shares from the date of its incorporation until the date of filing of this Red
+Herring Prospectus, in compliance with the relevant provisions of the Companies Act, 2013.
+a)  Our Company acquired the running business of M/s. Bombay Steels pursuant to a Business Transfer Agreement dated January 29, 2021 (“BTA”), executed with Mr.
+  Vijaykumar Himatrai Gupta, proprietor of M/s. Bombay Steels and one of the Promoters of our Company. Pursuant to the terms of the BTA, our Company issued and allotted
+  2,450,000 Equity Shares to Mr. Vijaykumar Himatrai Gupta. For further details, see “Risk Factors – We have experienced certain discrepancies in our statutory filings with
+  the Registrar of Companies (“RoC”) and other non-compliances under the Companies Act, 2013 in the past. We cannot assure that regulatory authorities will not initiate
+  inquiries, proceedings or other actions against us in the future. Any such proceedings or actions, if initiated, may result in the imposition of penalties, fines or other regulatory
+  measures, which could adversely affect our business, financial condition, results of operations and reputation” on page 44.
+(2) Secondary transactions of equity shares of our Company.
+  101
+The secondary transfers of Equity Shares by our Promoters and members of Promoter Group, since incorporation of our Company is set forth below:
+ Date  of Number  of Details  of  Details  of  Nature  of  Face value  Transfer  Nature of  Percentage of  Percentage  of
+ transfer of Equity Shares transferor  transferee  transfer  per equity  price  per  considerat  the pre- Issue  the post-Issue
+ Equity  transferred  share (₹)  equity share  ion  equity share  equity  share
+ Shares  (₹)  capital (%)  capital (%)
+ Promoter - Nitin Vijaykumar Gupta
+ January 15,  10 Nitin Vijaykumar  Sunita Vijaykumar  Transfer by way  10.00  Nil  NA  Negligible  [●]
+ 2025  Gupta*  Gupta*  of gift
+ January 15,  10 Nitin Vijaykumar  Vipin Sharma  Transfer by way  10.00  Nil  NA  Negligible  [●]
+ 2025  Gupta*  of gift
+ January 20,  10 Nitin Vijaykumar  Ruchi Vijaykumar  Transfer by way  10.00  Nil  NA  Negligible  [●]
+ 2025  Gupta*  Gupta*  of gift
+ January 20,  10 Nitin Vijaykumar  Lokesh  Chandra  Transfer by way  10.00  Nil  NA  Negligible  [●]
+ 2025  Gupta*  Lavti  of gift
+ August 29,  1,58,40,000 Vijaykumar  Nitin Vijaykumar  Transfer by way  10.00  Nil  NA  39.11  [●]
+ 2025  HimatraiGupta*  Gupta*  of gift
+ Promoter – Vijaykumar Himatrai Gupta
+ August 29,  (15,840,000) Vijaykumar  Nitin Vijaykumar  Transfer by way  10.00  Nil  NA  (39.11)  [●]
+ 2025  HimatraiGupta*  Gupta*  of gift
+*Comprising of Promoters and members of the Promoter Group
+(3) Preference Share capital
+As on the date of this Red Herring Prospectus, our Company does not have any outstanding preference shares.
+  [The remainder of this page has intentionally been left blank]
+  102
+2.  Issue of Equity Shares at a price lower than the Issue Price during the preceding one year
+The Issue Price shall be determined by our Company, in consultation with the BRLM and in accordance with the SEBI
+ICDR Regulations after the Bid / Issue Closing Date. Except as disclosed below, our Company has not issued any equity
+shares during a period of one year preceding the date of this Red Herring Prospectus:
+ Date  of  Nature  of  Name(s) of allottee(s) and  Number  Face  Issue  Nature of
+ allotment  allotment  details of equity shares  of equity  value per  price per  consideration
+  allotted per allottee  shares  equity  equity
+  allotted  share (₹)  share (₹)
+ October  Private  114,000 Equity Shares were  900,091  10.00  88.00  Cash
+ 28, 2025  Placement*  allotted to Manish Dhirajlala
+  Kansara, 113,637 Equity Shares
+  were allotted to Moneyplant
+  SME Fund, 113,636 Equity
+  Shares were allotted to Priti
+  Suresh Shah, 100,000 Equity
+  Shares were allotted to Rural
+  Engg Co Pvt Ltd, 60,000 Equity
+  Shares were allotted to Ashok
+  Shreekrishna Beharay 57,000
+  Equity Shares were allotted to
+  Ketankumar  Jerajbhai
+  Hingrajia, 57,000 Equity Shares
+  were allotted to Reetaben
+  Ketankumar Hingrajia, 57,000
+  Equity Shares were allotted to
+  Changela  Hiteshkumar
+  Mahendrabhai, 57,000 Equity
+  Shares were allotted to Vipul
+  Kishorbhai Vachhani, 57,000
+  Equity Shares were allotted to
+  Chhaganbhai Gandubhai Tilalal,
+  57,000 Equity Shares were
+  allotted to Savitri Karnany,
+  56,818 Equity Shares were
+  allotted  to  Jayasudha
+  Swaminathan Iyer
+*The private placement was originally approved as a pre-IPO placement pursuant to a resolution of the Board dated October 07, 2025.
+Subsequently, the pre-IPO placement was reclassified as a private placement pursuant to the resolution of the IPO Committee dated
+October 29, 2025.
+3.  Equity shares issued through bonus issue or for consideration other than cash
+Except as disclosed below, our Company has not issued any equity shares through bonus issue or for consideration other
+than cash, since incorporation.
+ Date  of  Nature  of  Name(s) of allottee(s) and  Number  Face  Issue  Nature of
+ allotment  allotment  details of equity shares  of equity  value per  price per  consideration
+  allotted per allottee  shares  equity  equity
+  allotted  share (₹)  share (₹)
+ March  9,  Private  2,450,000 Equity Shares were  2,450,000  10.00  10.00  Other  than
+ 2021  Placement  allotted to Vijaykumar Himatrai  Cash
+  Gupta
+ July  8,  Bonus Issue  14,850,000 Equity Shares were  29,700,000  10.00  NA  Other  than
+ 2025  (in the ratio  allotted to Vijaykumar Himatrai  Cash
+  of 3 equity  Gupta,  11,879,880  Equity
+  shares  for  Shares were allotted to Nitin
+  every  1  Vijaykumar Gupta, 2,970,000
+  equity share  Equity Shares were allotted to
+  held)  Bhawna Nitin Gupta, 30 Equity
+ Date  of  Nature  of  Name(s) of allotte [...truncated]
+
+===== OBJECTS OF THE OFFER =====
+OBJECTS OF THE ISSUE
+The Issue comprises a Fresh Issue of up to [●] Equity Shares of face value of ₹10 each of our Company for cash at an issue
+price of ₹ [●] per Equity Share, aggregating up to ₹1,830.57 million. For details, please see “The Issue” on page 81.
+Requirement of funds
+Our Company proposes to utilise the net proceeds of the Issue, i.e. gross proceeds of the Issue less the Issue expenses
+apportioned to our Company (“Net Proceeds”) towards funding the following objects:
+1.  Repayment/pre-payment, in full or in part, of certain borrowings availed by our Company;
+2.  Financing the cost towards acquisition of capital equipment under existing lease arrangements with Siemens Financial
+  Services Private Limited; and
+3.  General corporate purposes.
+(collectively, referred to herein as “Objects”)
+In addition to the above Objects, we expect to receive the benefits of listing of the Equity Shares on the Stock Exchanges,
+which include enhancement of our Company’s visibility and brand image and creation of a public market for our Equity
+Shares in India, among others.
+The main objects and objects which are necessary for the furtherance of the main objects set out in our Memorandum of
+Association enable us to undertake: (i) our existing business activities and other activities set out therein; and (ii) the
+activities proposed to be funded from the Net Proceeds.
+We confirm that the activities which we have been carrying out till date are in accordance with the objects clause of our
+Memorandum of Association. The objects of the Issue have not been appraised by any bank or financial institution or any
+external agency. While a monitoring agency has been appointed for monitoring the utilization of the Net Proceeds and
+submitting its report on a quarterly basis, in accordance with Regulation 41 of the SEBI ICDR Regulations, the proposed
+utilization of the Net Proceeds is based on current circumstances of our business, internal management estimates, prevailing
+market conditions and are subject to changes in external circumstances or costs, such as financial and market conditions,
+market feedback and demand of our projects, competition, business strategy and interest rate fluctuations, which may not
+be within our control. or in other financial condition, business or strategy.
+The Net Proceeds
+The details of the Net Proceeds are summarised in the following table:
+  (₹ in million)
+  Particulars  Estimated Amount^
+  Gross Proceeds of the Issue (“Gross Proceeds”)  Up to 1,830.57
+  (Less) Issue related Expenses (1)(2)  [●]
+  Net Proceeds (1)  [●]
+^ Subject to full subscription to the Issue.
+(1)  To be finalised upon determination of the Issue Price and updated in the Prospectus prior to the filing with the RoC.
+(2)  For details, see “– Issue Expenses” on page 105 of this Red Herring Prospectus.
+Utilisation of Net Proceeds
+The Net Proceeds are proposed to be utilised in accordance with the details provided in the following table:
+  (₹ in million)
+  Sr.  Particulars  Estimated Amount
+  No.
+  1.  Repayment/pre-payment, in full or in part, of certain borrowings availed by our Company  1,250.00
+  2.  Financing the cost towards acquisition of capital equipment under existing lease  157.70
+  arrangements with Siemens Financial Services Private Limited
+  3.  General corporate purposes (1)(2)  [●]
+  117
+  Sr.  Particulars  Estimated Amount
+  No.
+  Total(1)  [●]
+(1)  To be finalised upon determination of the Issue Price and updated in the Prospectus prior to filing with the RoC. The amount utilised
+  for general corporate purposes shall not exceed 25% of the Gross Proceeds in accordance with SEBI ICDR Regulations.
+(2)  The proceeds proposed to be utilised for general corporate purposes shall not be utilised for repayment of loans given to our
+  Company by our Promoters or Directors.
+Proposed schedule of implementation and deployment of Net Proceeds
+We propose to deploy the Net Proceeds towards the Objects in accordance with the estimated schedule of implementation
+and deployment of funds as follows:
+  (₹ in million)
+ Sr.  Particulars  Total  Amount  Amount to be
+ No.  estimated cost which will be deployed from
+  financed from the Net Proceeds
+  Net Proceeds  in FY 2027
+ 1.  Repayment / pre-payment, in full or in part, of certain  1,250.00  1,250.00  1,250.00
+  borrowings availed by our Company
+ 2.  Financing the cost towards acquisition of capital  157.70  157.70  157.70
+  equipment under existing lease arrangements with
+  Siemens Financial Services Private Limited
+ 3.  General Corporate Purposes (1)  [●]  [●]  [●]
+  Total  [●]  [●]  [●]
+(1) To be finalised upon determination of the Issue Price and updated in the Prospectus prior to filing with the RoC. The
+  amount utilised for general corporate purposes shall not exceed 25% of the Gross Proceeds.
+The aforesaid fund requirements, deployment of funds and the intended use of the Net Proceeds as described in this Red
+Herring Prospectus are based on our current business plan, management estimates, current market conditions, and other
+commercial and technical factors including interest rates and other charges, and other financing arrangements entered into
+by us. The deployment of funds described herein has not been appraised by any bank or financial institution or any other
+independent agency. We may have to revise these estimates on account of a variety of factors such as our financial and
+market condition, business and strategy, competition and other external factors such as changes in the business environment
+and interest, inflation or exchange rate fluctuations, which may not be within the control of our management. This may
+entail rescheduling the proposed utilisation of the Net Proceeds and changing the deployment of funds from its planned
+deployment at the discretion of our management, subject to compliance with applicable law. Further See “Risk Factors –
+Our funding requirements and proposed deployment of the Net Proceeds of the Issue have not been appraised by any bank
+or financial institution, and any delays, cost overruns or changes in the proposed utilisation may adversely affect our
+business, financial condition, results of operations and cash flows.” on page 30.
+In the event that the estimated utilisation of the Net Proceeds in a scheduled fiscal year is not completely met due to the
+reasons stated above, such funds shall be utilised in the next fiscal year, as may be determined by our Company, in
+accordance with applicable law. In case the actual utilisation towards any of the Objects is lower than the proposed
+deployment such balance will be used towards general corporate purposes to the extent that the total amount to be utilised
+towards general corporate purposes will not exceed 25% of the Gross Proceeds in accordance with Regulation 7(2) of the
+SEBI ICDR Regulations.
+Further, in case of variations in the actual utilisation of funds earmarked for the purposes set forth above, increased fund
+requirements for a particular purpose may be financed by surplus funds, if any, available in respect of the other purposes
+for which funds are being raised in the Issue. In the event that the estimated utilisation of the Net Proceeds in a scheduled
+Financial Year is not completely met, due to the reasons stated above, the same shall be utilised in the next Fiscal Year, as
+may be determined by our Company in accordance with applicable laws. The estimated schedule of deployment of Net
+Proceeds is indicative and our management may vary the amount to be utilized in a particular Fiscal at its discretion.
+Means of Finance
+The fund requirements of the Objects detailed above are intended to be entirely funded from the Net Proceeds and internal
+accruals. Accordingly, our Company confirms that there is no requirement to make firm arrangements of finance through
+verifiable means towards at least 75% of the stated means of finance, excluding the amount to be raised from the Issue and
+internal accruals, as required under Regulation 7(1)(e) of the SEBI ICDR Regulations.
+  118
+Details of the Objects of the Issue
+1.  Repayment/pre-payment, in full or in part, of certain borrowings availed by our Company
+Our Company has entered into various borrowing arrangements with banks and other financial institutions, including
+borrowings in the form of terms loans and working capital facilities. As on August 31, 2026, our Company’s aggregate
+outstanding borrowings was ₹ 3,024.28 million. For further details, including indicative terms and conditions, see
+“Financial Indebtedness” on page 463.
+Our Company intends to utilise an aggregate amount of ₹1,250.00 million from the Net Proceeds towards repayment/
+prepayment of all or a portion of certain outstanding borrowings availed by our Company, including accrued interest
+thereon.
+Given the nature of these borrowings and the terms of repayment or pre-payment, the aggregate outstanding amounts under
+these borrowings may vary from time to time and our Company may, in accordance with the relevant repayment schedule,
+repay or refinance some of our existing borrowings or avail of additional credit facilities. In terms of our Company’s
+borrowing arrangements, prepayment of certain indebtedness may attract prepayment charges. Such prepayment charges,
+as applicable, will also be funded out of the Net Proceeds. If the Net Proceeds are insufficient for payment of pre-payment
+penalty, interest or other related costs, as applicable, such payment shall be met through the internal accruals of our
+Company. If at the time of the Red Herring Prospectus, any of the below-mentioned loans were repaid in part or full or
+refinanced or if any additional credit facilities were availed or drawn down or if the limits under the working capital
+borrowings are increased, then our Company may utilise the Net Proceeds for part or full pre-payment / repayment of any
+such refinanced facilities or repayment of any additional facilities obtained by our Company and details of such borrowings
+were included in this Red Herring Prospectus. However, the aggregate amount to be utilised from the Net Proceeds towards
+repayment or pre-payment of certain of our borrowings (including refinanced or additional facilities availed, if any), in part
+or full, would not exceed ₹1,250.00 million.
+We believe that such repayment or prepayment will help reduce our outstanding indebtedness and debt servicing costs and
+enable utilisation of the internal accruals for further investment towards business growth and expansion. Additionally, we
+anticipate that our improved financial leverage will enhance our ability to raise further resources in the future to fund our
+potential business development opportunities and plans to grow and expand our business. Further, repayment/prepayment
+of the loans will add to the profitability of our Company due to reduced finance cost and also the improvement in the debt-
+to-equity ratio of our Company is intended to enable us to raise further resources in the future to fund potential business
+development opportunities and plans to grow and expand our business in the future. For further details, see “Our Business
+– Our Strategies – Improving the debt profile of our Company” on page 251.
+The selection of borrowings proposed to be prepaid or repaid amongst our borrowing arrangements availed will be based
+on various factors, including (i) commercial considerations including, among others, the amount of the loan outstanding,
+rate of interest and the remaining tenor of the loan, (ii) any conditions attached to the borrowings restricting our ability to
+prepay/ repay the borrowings and time taken to fulfil, or obtain waivers for fulfilment of such conditions, (iii) cost of the
+borrowing, including applicable interest rates (iii) receipt of consents for prepayment/repayment from the respective lenders
+and terms and conditions of such consents and waivers and (v) levy of any prepayment penalties/premium and the quantum
+thereof and other related costs and (vii) natu [...truncated]
+
+===== BASIS OF OFFER PRICE =====
+[not found]
+
+===== OUR BUSINESS =====
+OUR BUSINESS
+Some of the information in this section, including information with respect to our business plans and strategies, contain
+forward-looking statements that involve risks and uncertainties. You should read the section entitled “Forward-Looking
+Statements” on page 29, for a discussion of the risks and uncertainties related to those statements and also the sections
+entitled “Risk Factors”, “Industry Overview”, “Summary of Financial Information” and “Management’s Discussion and
+Analysis of Financial Condition and Results of Operations” on pages 30, 143, 83 and 408, respectively, as well as financial
+and other information contained in this Red Herring Prospectus as a whole, for a discussion of certain factors that may
+affect our business, financial condition or results of operations. Our actual results may differ materially from those
+expressed in or implied by these forward-looking statements.
+Our Company’s financial or fiscal year commences on April 1 and ends on March 31 of the subsequent year. Accordingly,
+references to a “Fiscal” or “fiscal year” are to the 12-month period ended March 31 of the relevant year. Unless otherwise
+stated or the context otherwise requires, the financial information included in this section is based on our Restated
+Financial Information included in this Red Herring Prospectus. For further information, see “Summary of Financial
+Information” on page 83. Also see, “Definitions and Abbreviations” on page 1, for certain terms used in this section.
+Unless the context otherwise requires, references in this section to “our Company”, “we”, “us”, or “our” refer to Bombay
+Coated and Special Steels Limited.
+We have also included various operational and financial performance indicators in this Red Herring Prospectus, some of
+which have not been derived from our Restated Financial Information. The manner of calculation and presentation of some
+of the operational and financial performance indicators, and the assumptions and estimates used in such calculation, may
+vary from that used by other companies in India and other jurisdictions.
+Unless otherwise indicated, industry and market data used in this section have been derived from the report titled “Indian
+Steel Service Industry” dated September 25, 2026 (the “CareEdge Report”), prepared and released by CARE Analytics
+and Advisory Private Limited, which has been exclusively commissioned and paid for by our Company, for the purpose of
+understanding the industry in which we operate, in connection with the Issue. A copy of the CareEdge Report shall be
+available on the website of our Company at https://www.bcsspl.in/investor/ipo-documents from the date of this Red Herring
+Prospectus till the Bid/ Issue Closing Date. Unless otherwise indicated, financial, operational, industry and other related
+information derived from the CareEdge Report and included herein with respect to any particular year refers to such
+information for the relevant financial / calendar year. For further details, see “Certain Conventions, Use of Financial
+Information and Market Data and Currency of Presentation – Industry and Market Data” and “Risk Factors – The industry
+related disclosure in this Red Herring Prospectus has been derived from the CareEdge Report which we have commissioned
+and purchased and any reliance on such information for making an investment decision in the Issue is subject to inherent
+risks.” on pages 26 and 68, respectively.
+Overview
+We are a steel processing centre engaged in the business of converting steel coils into value-added processed steel products.
+Our core competencies include precision slitting, cut-to-length processing, shearing, and embossing of steel coils into slit
+coils, embossed slit coils, blanks, embossed blanks and sheared blanks (collectively referred to as “Processed Steel
+Products”). We cater to a diversified customer base comprising Original Equipment Manufacturers (OEMs) and Original
+Design Manufacturers (ODMs).
+Our Company, being a Steel Processing Centre (“SPC”), operate as an intermediary between primary steel producers and
+end-users by providing value-added processing services. For the home and commercial appliances sector, we process coated
+steel coils and hot-rolled steel coils into Processed Steel Products used in the manufacture of various appliances. For the
+general engineering sector, we undertake specialized processing of non-coated and galvanised plain coils into blanks, used
+in automotive manufacturing, pharmaceutical cleanroom infrastructure, electrical equipment, and ventilation systems. In
+addition to manufacturing Processed Steel Products, we also perform logistics and inventory management functions. By
+maintaining adequate inventory levels and offering just-in-time delivery solutions, we ensure timely and efficient supply
+of processed steel products to customers across urban as well as remote locations, thereby enhancing supply chain efficiency
+and cost optimization. (Source: CareEdge Report)
+One of the Promoters of our Company, Mr. Vijaykumar Himatrai Gupta, commenced operations in 1983 as a steel trader
+under the sole proprietorship M/s. Bombay Steels. In 2012, the business expanded into steel processing with the
+establishment of the Bhiwandi facility, followed by the execution of a service partnership agreement with JSW Steel Coated
+Products Limited (“JSWSCPL”) in 2018. Subsequently, on January 29, 2021, our Company entered into a Business
+Transfer Agreement to acquire the running business of M/s. Bombay Steels on a going-concern basis. This acquisition
+consolidated over four decades of trading and processing experience into the operations of our Company. Thereafter, our
+Company has entered into a phase of rapid expansion and added steel processing facilities across key manufacturing regions
+  239
+of India. We expanded our operations by establishing new manufacturing facilities in the West, North and South of India.
+Our steel processing facilities are strategically located across key industrial regions in India, enabling us to serve a wide
+spectrum of industries with efficiency and just in time deliveries. For further details see ‘Our Business – Manufacturing
+Facilities’ on page 261.
+Since 2021, our Company has been an authorised service partner of JSW Steel Coated Products Limited and/or its holding
+Company (“JSWSCPL”), pursuant to an agreement for the regular supply of steel coils. We procure steel coils from
+JSWSCPL as well as other suppliers and process them using advanced engineering techniques and high-precision
+machinery to manufacture Processed Steel Products. Our long-standing and strong supplier relationships ensure stability
+and reliability in sourcing, enabling us to efficiently and consistently meet customer requirements. (Source: CareEdge
+Report)
+We are a multi-location steel processing centre with manufacturing facilities located at Wada and Bhiwandi in Maharashtra,
+Ghiloth in Rajasthan, and Sri City in Andhra Pradesh. Our facilities are equipped with steel processing infrastructure,
+including slitting lines, cut-to-length lines, shearing lines, and embossing lines, designed to achieve operational precision
+and efficiency. These manufacturing facilities are spread across four strategically located sites in India, aggregating a total
+area of 42,209 square meters, and are ISO 9001:2015 certified for the processing, marketing, and supply of Processed Steel
+Products. Further, our Ghiloth facility in Rajasthan and Sri City in facility Andhra Pradesh has been recognized as a GEM-
+4 certified green facility.
+The locations of our manufacturing facilities have been selected with reference to proximity to customer delivery points.
+Certain facilities are located near the manufacturing locations of customers such as Western Refrigeration Private Limited,
+Amber Enterprises India Limited, PG Technoplast Private Limited, EPack Durable Limited, Kruger Ventilation Industries
+(India) Private Limited, among others. This proximity enables reduction in logistics time and transportation costs, facilitates
+operational efficiencies, and supports timely fulfilment of customer requirements. In addition, the clustering of certain
+facilities within the same state allows for inter-facility movement of materials, thereby reducing freight time and costs as
+components undergo sequential processing.
+We operate with an aggregate installed processing capacity of 1,23,153 MTPA, computed on a quarterly basis for Fiscal
+2027, across slitting, cut-to-length, shearing and embossing operations, as of June 30, 2026. Our installed capacity has
+increased at a compound annual growth rate (“CAGR”) of approximately 23.83% between Fiscal 2024 and Fiscal 2026,
+reflecting our continued focus on capacity expansion and operational scalability. For further details see ‘Our Business –
+Installed Capacity and Capacity Utilization’ on page 261. Further, our long-standing authorised partnership with JSW Steel
+Coated Products Limited since 2021 provides us with reliable access to quality raw materials and supports our ability to
+service a diversified customer base, positioning us well for sustained growth in the steel processing industry.
+We have established long-standing relationships with a diverse set of customers. Our focus on quality, value proposition,
+timely delivery of our products and the price competitiveness of our offerings has enabled us to maintain long-term
+relationships with our customers. In Fiscal Years 2026, 2025 and 2024, as well as for the three months period ended June
+30, 2026, we served 178, 261, 252 and 225 and customers, respectively. These customers span multiple industries, including
+consumer durables and home appliances, electrical equipment and components, automotive and auto components, HVAC
+and refrigeration, electronics and electrical manufacturing services, industrial engineering and capital goods, steel
+processing and metal fabrication, infrastructure, renewable energy and power equipment, FMCG and packaging, as well as
+general manufacturing and industrial trading enterprises. Such diversification of our customer base across industries reduces
+our dependence on any single customer or industry segment. (Source: CareEdge Report)
+Our customer-centric approach enables us to provide tailored solutions that align with both functional and aesthetic
+expectations, and just in time deliveries of Processed Steel Products aligns with the requirements of our customers. Our
+customer base includes several OEMs and ODMs operating in India, including Haier Appliances India Private Limited IFB
+Refrigeration Limited, Dixon Electro Manufacturing Private Limited, Amber Enterprises India Limited, Western
+Refrigeration Private Limited, PG Technoplast Private Limited, EPack Durable Limited Kruger Ventilation Industries
+(India) Private Limited, Elegant Coatings Private Limited and Magnum MI Steel Private Limited.
+Our Promoters, Board of Directors, and senior management have been instrumental in the growth of our business and have
+enabled us to capitalize on market opportunities and better serve our customers, with collective experience spanning
+operations, business development, and customer relationship management. Our Promoter and Chairman-cum-Whole-Time
+Director, Mr. Vijaykumar Himatrai Gupta, has over 40 years of experience in the steel industry and provides guidance in
+formulating our long-term business strategies and business development initiatives, having played a pivotal role in steering
+the growth and development of our Company. Our Promoter and Managing Director, Mr. Nitin Vijaykumar Gupta, has
+approximately 20 years of experience in the steel industry and is responsible for overseeing the day-to-day operations of
+the Company, as well as providing guidance on strategy formulation, business development, and customer relationships.
+Our workforce is a critical asset to our operations and comprised 160 permanent employees and 4 retainership employees
+  240
+as of June 30, 2026, who form the backbone of our business by driving innovation, ensuring quality, and maintaining the
+standards expected by our customers.
+Our Market Opportunity
+As per the CareEdge Report, there exists a substantial market opportunity for our Company, which can be clearly
+demonstrated from the following:
+Role of Steel Processing Centres:
+Steel Processing Centres (“SPCs”) in India are witnessing significant growth, driven by rising steel consumption across
+diverse end-use sectors such as automotive, construction, infrastructure and manufacturing. As India continues to accelerate
+its industrialisation and infrastructure development, SPCs are emerging as a critical link between large-scale steel producers
+and end-users, providing essential services including steel slitting, cut-to-length, blanking, splitting, inventory management,
+and timely distribution. These services enable industries to access steel in the precise forms and quantities required, thereby
+improving efficiency, reducing waste, and optimising supply chains.
+The growing demand for steel arising from infrastructure development, supported by government initiatives and
+urbanisation, has contributed to the increasing relevance of SPCs. In parallel, expansion in the automotive and
+manufacturing sectors has resulted in greater demand for processed steel products that meet specific technical and
+dimensional requirements. By customising steel products and reducing dependence on in-house processing by end-users,
+SPCs support improved manufacturing efficiency, reduced material wastage and optimised supply chains. The increasing
+adoption of just-in-time (“JIT”) delivery models, particularly in the automotive and consumer durables sectors, has further
+reinforced the importance of SPCs in ensuring timely availability of processed steel inputs.
+Growth of Key Service Segments:
+•  Cut to Length: The market size of Cut to Length service type grew at a CAGR of 8.3% from CY20 to CY25, reaching
+  a market size of USD 1,707 million by CY25. It is further projected to grow at a CAGR of 6.8% from CY26 to CY30
+  reaching a market size of USD 2,337 million by CY30.
+•  Slitting: The market size of Slitting service type grew at a CAGR of 8.7% from CY20 to CY25, reaching a market
+  size of USD 1,501 million by CY25. It is further projected to grow at a CAGR of 7.2% from CY26 to CY30 reaching
+  a market size of USD 2,095 million by CY30.
+•  Blanking: The market size of the Blanking service type grew at a CAGR of 8.7% from CY20 to CY25 reaching a
+  market size of USD 892 million by CY25. It is further projected to grow at a CAGR of 7.4% from CY26 to CY30
+  reaching market size of USD 1,250 million by CY30.
+•  Splitting: The market size of Splitting service type grew at a CAGR of 8.8% from CY20 to CY25 reaching a market
+  size of USD 379 million by CY25. It is further projected to grow at a CAGR of 7.4% from CY26 to CY30 reaching
+  market size of USD 531 million by CY30.
+•  Others: The market size of Other service types including shearing, embossing, and surface treatment such as pickling
+  and oiling, galvanizing, nickel plating, chrome plating, phosphating, etc. grew at a CAGR of 6.4% from CY20 to CY25
+  reaching a market size of USD 344 million by CY25. It is further projected to grow at a CAGR of 5.0% from CY26 to
+  CY30 reaching market size of USD 433 million by CY30.
+The steady growth across all service segments highlights the increasing importance of SPCs in supporting India’s industrial
+ecosystem.
+Key Drivers of Opportunity:
+•  Growing Demand from Construction and Automotive Industries: The construction and automotive sectors are
+  major consumers of steel, driving the demand for Steel Processing Centres. Steel is critical for applications such as
+  structural framing in construction and car components in automotive production. As both industries expand, the need
+  for Steel Processing Centres to supply customised steel products, with reduced lead times and processing, continues to
+  rise.
+•  Technological Advancements in Steelmaking: Technological innovations are reshaping the steel industry, enabling
+  more efficient steel production and processing. These advancements lead to lower production costs, making steel more
+  241
+  accessible for various industries. The development of new equipment and steelmaking processes is also enhancing the
+  productivity of Steel Processing Centres, enabling them to serve their customers more efficiently and cost-effectively.
+•  Increased Utilisation of Steel Across Multiple Sectors: Steel’s versatility has driven its increased use in various
+  sectors, including biotechnology, energy, shipbuilding, and manufacturing. Its role in heavy industries, construction,
+  and machinery is expanding as demand for robust, temperature-resistant materials rises. Steel Processing Centres are
+  essential for supplying specialised steel products, contributing to their growing market presence.
+•  Globalisation and Competitive Market Expansion: Globalisation has opened new opportunities for Steel Processing
+  Centres to cater to international markets. As the global demand for steel rises, centres are increasingly competing for
+  customers worldwide. This global reach encourages service centres to improve operational efficiency, adopt advanced
+  technologies, and offer better services at competitive prices, ultimately benefiting customers.
+•  Rise of Local Manufacturing and Industrialisation: The shift toward local manufacturing, combined with rapid
+  industrialisation, has boosted the demand for Steel Processing Centres. The establishment of new centres in emerging
+  markets allows them to cater to local manufacturing needs. Additionally, the growing preference for steel in industries
+  such as mining, construction, and chemicals further drives the demand for Steel Processing Centre services.
+•  Expansion of India's Consumer Electronics and Appliances Sector Driving Steel Demand: The consumer
+  electronics and appliances sector in India is witnessing significant expansion, fuelled by rising incomes, technological
+  innovation, and growing domestic demand. As the country positions itself as a major player in the global market for
+  products like smartphones, white goods, and air conditioners, the need for high-quality materials, particularly steel,
+  continues to rise. Steel plays a crucial role in the production of key components such as frames and internal structures,
+  which are integral to the manufacturing of these consumer products. This increased demand for durable, reliable
+  materials supports the broader industrial landscape.
+Key Performance Indicators
+The following table sets forth certain key financial and operational performance indicators for the periods indicated below:
+  Particulars^  For the Period  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  ended June 30,
+  2026*
+  Revenue From operations (₹ in millions) (1)  3,970.80  12,668.18  10,557.07  7,552.59
+  PBT (₹ in millions) (2)  206.46  407.88  371.65  282.06
+  PAT (₹ in millions) (3)  150.75  305.39  286.72  211.38
+  EBIT (₹ in millions) (4)  292.72  764.97  684.01  541.69
+  EBIT Margin (in %) (5)  7.37%  6.04%  6.48%  7.17%
+  Adjusted EBITDA (₹ in millions) (6)  321.74  860.90  740.92  491.65
+  Adjusted EBITDA Margin (in %) (7)  8.10%  6.80%  7.02%  6.51%
+  PBT Margin (in %) (8)  5.20%  3.22%  3.52%  3.73%
+  PAT Margin (in %) (9)  3.80%  2.41%  2.72%  2.80%
+  Return on Equity (RoE) (in %) (10)  11.65%  29.92%  41.76%  48.20%
+  Return on Capital Employed (in %) (11)  7.01%  16.40%  18.78%  18.60%
+  Return on Assets (in %) (12)  2.75%  5.93%  7.09%  6.81%
+  Debt to Equity Ratio (in Times) (13)  2.00  2.78  3.33  4.31
+  Debt Service Coverage Ratio (in Times) (14)  1.44  1.75  1.77  1.98
+  Net Fixed Asset Turnover Ratio (in Times)  2.39  7.72  8.92  6.51
+  (15)
+  Current Ratio (in Times) (16)  1.10  1.02  0.95  0.93
+  Net Working Capital Days (in Day) (17)  58  70  63  66
+  Property, plant and equipment (₹ million) (18)  1,664.72  1,641.98  1,183.24  1,160.76
+  Operational KPIs
+  No. of Manufacturing Facilities (in numbers)  4  4  4  4
+  (19)
+  Installed Capacity Metric Tons (MT) (20)
+  Slitting  59,505  2,38,020  1,87,020  1,76,958
+  242
+ Particulars^  For the Period  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  ended June 30,
+  2026*
+ Cut to Length  50,481  1,84,324  1,35,924  95,063
+ Embossing  11,700  34,200  21,600  21,600
+ Shearing  1,467  5,867  5,867  7,920
+ Actual Production Metric Tons (MT) (21)
+ Slitting  37,989  1,44,258  1,18,566  82,576
+ Cut to Length  30,116  1,08,276  96,169  52,995
+ Embossing  3,567  15,965  13,759  5,630
+ Shearing  705  3,512  4,307  3,764
+ Capacity Utilization (in %)(22)
+ Slitting  63.84%  60.61%  63.40%  46.66%
+ Cut to Length  59.66%  58.74%  70.75%  55.75%
+ Embossing  30.49%  46.68%  63.70%  26.06%
+ Shearing  48.06%  59.86%  73.41%  47.53%
+* Figures for period ended June 30, 2026 are not annualised.
+^The above details have been certified by Shah, Shah & Shah, Chartered Accountants, pursuant to their certificate dated September 25,
+2026 and has been included in “Material Contracts and Documents for Inspection – Material Documents” on page 584.
+Notes:
+  1)  Revenue from operation means revenue from operating activities
+  2)  PBT means Profit before taxes expense
+  3)  PAT represents total net profit after tax for the year.
+  4)  EBIT means Earnings before interest and taxes expense, arrived at by obtaining the profit before tax for the year and adding
+  back finance costs.
+  5)  EBIT Margin is calculated as EBIT as a percentage of revenue from operations.
+  6)  Adjusted EBITDA means Earnings before interest, taxes, depreciation and amortisation expense, arrived at by obtaining the
+  profit before tax for the year and adding back finance costs and depreciation and amortisation expenses and adjusted by other
+  income
+  7)  Adjusted EBITDA Margin is calculated as Adjusted EBITDA as a percentage of revenue from operations.
+  8)  PBT Margin is calculated as PBT as a percentage of reven [...truncated]
+
+===== OUR PROMOTERS AND PROMOTER GROUP =====
+OUR PROMOTERS AND PROMOTER GROUP
+Our Promoters
+The Promoters of our Company are Vijaykumar Himatrai Gupta, Nitin Vijaykumar Gupta and Bhawna Nitin Gupta.
+As on the date of this Red Herring Prospectus, our Promoters collectively hold 39,599,840 Equity Shares of face value of
+₹10 each, equivalent to 97.78% of the issued, subscribed and paid-up Equity Share capital of our Company, on a fully
+diluted basis. For details, please see “Capital Structure – Details of Shareholding of our Promoters, members of the
+Promoter Group and Selling Shareholders - Equity Shareholding of the Promoters” on page 104.
+A.  Details of our Promoters are as follows:
+  Vijaykumar Himatrai Gupta,
+  Vijaykumar Himatrai Gupta, aged 76 years, born on October 13, 1950, is one of
+  our Promoters and is also the Chairman-cum-Whole Time Director on our Board.
+  For the complete profile of Vijaykumar Himatrai Gupta along with details of his
+  date of birth, residential address, educational qualifications, professional
+  experience, position / posts held in the past, directorships held, and business and
+  financial activities, other directorships, other ventures and special achievements,
+  see “Our Management – Board of Directors” on page 286.
+  His permanent account number is AABPG8011G.
+  As on date of this Red Herring Prospectus, Vijaykumar Himatrai Gupta holds
+  3,960,000 Equity Shares of face value of ₹10 each, representing 9.78% of the
+  issued, subscribed and paid-up equity share capital of our Company.
+  Nitin Vijaykumar Gupta
+  Nitin Vijaykumar Gupta, aged 46 years, born on August 19, 1980, is one of our
+  Promoters and is also the Managing Director on our Board. For the complete
+  profile of Nitin Vijaykumar Gupta along with details of his date of birth,
+  residential address, educational qualifications, professional experience, position
+  / posts held in the past, directorships held, and business and financial activities,
+  other directorships, other ventures and special achievements, see “Our
+  Management – Board of Directors” on page 286.
+  His permanent account number is ADBPG7575J
+  As on date of this Red Herring Prospectus, Nitin Vijaykumar Gupta holds
+  31,679,840 Equity Shares of face value of ₹10 each, representing 78.22% of the
+  issued, subscribed and paid-up equity share capital of our Company.
+  Bhawna Nitin Gupta
+  Bhawna Nitin Gupta, aged 46 years, born on June 07, 1980, is one of our
+  Promoters and is also the Whole Time Director on our Board. For the complete
+  profile of Bhawna Nitin Gupta along with details of her date of birth, residential
+  address, educational qualifications, professional experience, position / posts held
+  in the past, directorships held, and business and financial activities, other
+  directorships, other ventures and special achievements, see “Our Management –
+  Board of Directors” on page 286.
+  Her permanent account number is AFWPJ3061P
+  As on date of this Red Herring Prospectus, Bhawna Nitin Gupta holds 3,960,000
+  Equity Shares of face value of ₹10 each, representing 9.78% of the issued,
+  subscribed and paid-up equity share capital of our Company.
+  306
+Our Company confirms that the permanent account number, bank account numbers, passport number, Aadhaar card number
+and driving license number, (if any), of our Promoters will be submitted to Stock Exchanges at the time of filing of this
+Red Herring Prospectus.
+Change in control of our Company
+There has not been any change in the control of our Company as per Section 2(27) of the Companies Act, 2013, in the five
+(5) years immediately preceding the date of this Red Herring Prospectus.
+Other ventures of our Promoters
+Other than disclosed in “– Entities forming a part of our Promoter Group” on page 309 and in “Our Management – Board
+of Directors” on page 286, our Promoters are not involved in any other ventures. None of our Promoters have any interest
+in any ventures that is involved in any activities similar to those conducted by our Company.
+Interest of Promoters
+(a) Our Promoters are interested in our Company to the extent of: (i) having promoted the Company; (ii) their respective
+  shareholdings in the Company and, where relevant, those of their relatives; and (iii) any dividends or other distributions
+  payable on the Equity Shares held by them or their relatives; (iii) in case of Vijaykumar Himatrai Gupta, to the extent
+  of being the Chairman and a Whole time Director of our Company and the remuneration or reimbursement of expenses
+  and benefits payable by our Company to him, (iv) in case of Nitin Vijaykumar Gupta, to the extent of being the
+  Managing Director of our Company and the remuneration or reimbursement of expenses and benefits payable by our
+  Company to him, (v) in case of Bhawna Nitin Gupta, to the extent of being a Whole-time Director of our Company
+  and the remuneration or reimbursement of expenses and benefit payable by our Company to her, (vi) of being
+  subscribers to the Memorandum of Association. For details of the Promoters’ shareholding in our Company, see
+  “Capital Structure – History of the share capital held by our Promoters in our Company – Build-up of our Promoters’
+  shareholding in our Company” on page 246. For further details, see “Our Management” and “Restated Financial
+  Information – Note 40 – Related Party Transactions” on page 286 and 312, respectively.
+(b) Our Promoters have no interest in any property acquired by our Company during the three years preceding the date of
+  this Red Herring Prospectus, or proposed to be acquired, or in any transaction by our Company for acquisition of land,
+  construction of building or supply of machinery.
+(c) No sum has been paid or agreed to be paid to our Promoters or to any firm or company in which our Promoters are a
+  member, in cash or shares or otherwise by any person either to induce such person to become, or to qualify such person
+  as a director, or otherwise for services rendered by such Promoters or by such firm or company in connection with the
+  promotion or formation of our Company.
+(d) Our Company has not given any advance to our Promoters.
+(e) There is no conflict of interest between our Promoters and the suppliers of raw materials and third-party service
+  providers, which are crucial for the operations of our Company.
+(f) Except as disclosed below, there are no conflicts of interest between our Promoters or members of our Promoter Group
+  and the lessors/ owners of immovable properties (which are crucial for the operations of our Company).
+  (iii) Property located at Office No. 401, 4th Floor, Royal Chambers, Opposite Clum Millenium, JVPD, Juhu 400 049,
+  Tehsil Andheri, Mumbai 400 049, Maharashtra, India which is taken on leave and license by our Company from
+  one of our Promoter, Vijaykumar Himatrai Gupta and our Promoter Group member, Sunita Vijaykumar Gupta
+  w.e.f. January 1, 2026 to December 31, 2030 at ₹ 0.05 million per month.
+  (iv) Property located at Godown No. Unit No. 1 and 2, Building no. 182-189, Survey No. 27, Hissa No. 9 Paiki, Indian
+  Industrial Complex, Mankoli, Bhiwandi 421 302, District Thane, Maharashtra, India which is taken on leave and
+  license by our Company from our Promoters Nitin Vijaykumar Gupta w.e.f. January 1, 2026 to December 31,
+  2030 at a rent of ₹ 0.08 million per month.
+Payment or benefits to our Promoters or our Promoter Group members
+As included in “Restated Financial Information - Note 40 – Related Party Transactions” on page 312, there has been no
+payment or benefits by our Company to our Promoters or any of the members of the Promoter Group during the two (2)
+years preceding the date of this Red Herring Prospectus nor is there any intention to pay or give any benefit to our Promoters
+  307
+or Promoter Group as on the date of this Red Herring Prospectus.
+Companies or firms with which our Promoters have disassociated in the last three years
+Our Promoters have not disassociated themselves from any companies or firms during the three immediately [...truncated]
+
+===== RISK FACTORS =====
+SECTION II - RISK FACTORS
+An investment in equity shares involves a high degree of risk. Prospective investors should carefully consider all the
+information in this Red Herring Prospectus, including the risks and uncertainties described below, before making an
+investment in our Equity Shares.
+The risks described below are not the only ones relevant to us or our Equity Shares, the industry in which we operate or to
+India and other jurisdictions we operate in. Additional risks and uncertainties, not currently known to us or that we
+currently do not deem material may also adversely affect our business, results of operations, financial condition and cash
+flows. If any or a combination of the following risks, or other risks that are not currently known or are not currently deemed
+material, actually occur, our business, results of operations, financial condition and cash flows could be adversely affected,
+the price of our Equity Shares could decline, and investors may lose all or part of their investment. In order to obtain a
+more detailed understanding of our Company and our business, prospective investors should read this section in
+conjunction with “Our Business”, “Industry Overview”, “Management’s Discussion and Analysis of Financial Condition
+and Results of Operations” and “Restated Financial Information” on pages 239, 143, 408 and 312, respectively, as well
+as the other financial information contained in this Red Herring Prospectus. In making an investment decision, prospective
+investors must rely on their own examination of us and our business and the terms of the Issue including the merits and
+risks involved.
+In making an investment decision, prospective investors should consult their tax, financial and legal advisors about the
+particular consequences of investing in the Issue and rely on their own examinations of us and the terms of the Issue,
+including the merits and the risks involved. Unless specified or quantified in the relevant risk factors below, we are unable
+to quantify the financial or other impact of any of the risks described in this section. Prospective investors in our Equity
+Shares should pay particular attention to the fact that our Company is incorporated under the laws of India and is subject
+to a legal and regulatory environment in India, which may differ in certain respects from that of other countries.
+This Red Herring Prospectus also contains certain forward-looking statements that involve risks, assumptions, estimates
+and uncertainties. Our actual results could differ from those anticipated in these forward-looking statements as a result of
+certain factors, including the considerations described below and elsewhere in this Red Herring Prospectus. For further
+information, see “Forward-Looking Statements” on page 29.
+Unless the context otherwise requires, in this section, references to “we”, “us” and “our” refer to our Company and its
+Associates on a consolidated basis while “our Company” or “the Company”, refers to our Company on a standalone basis.
+Our financial or fiscal year ends on March 31 of each calendar year. Accordingly, references to a “Fiscal” or “fiscal
+year” are to the 12-month period ended March 31 of the relevant year. Unless otherwise stated or the context otherwise
+requires, the consolidated financial information included in this section is based on our Restated Financial Information
+included in this Red Herring Prospectus. For further information, see “Summary of Financial Information” on page 83.
+We have also included various operational and financial performance indicators in this Red Herring Prospectus, some of
+which have not been derived from our Restated Financial Information. The manner of calculation and presentation of some
+of the operational and financial performance indicators, and the assumptions and estimates used in such calculation, may
+vary from that used by other companies in India and other jurisdictions.
+Unless otherwise indicated, industry and market data used in this section have been derived from the report titled “Indian
+Steel Service Industry” dated September 25, 2026 (the “CareEdge Report”), prepared and released by CARE Analytics
+and Advisory Private Limited, which has been exclusively commissioned and paid for by our Company, for the purpose of
+understanding the industry in which we operate, in connection with the Issue. A copy of the CareEdge Report shall be
+available on the website of our Company at https://www.bcsspl.in/investor/ipo-documents from the date of this Red Herring
+Prospectus till the Bid/ Issue Closing Date. Unless otherwise indicated, financial, operational, industry and other related
+information derived from the CareEdge Report and included herein with respect to any particular year refers to such
+information for the relevant financial / calendar year. For further details, see, “Certain Conventions, Presentation of
+Financial, Industry and Market Data and Currency of Presentation – Industry and Market Data” on page 26.
+INTERNAL RISKS
+1.  We are substantially dependent on a single supplier, JSW Steel Coated Products Limited and/or its holding
+  Company (“JSWSCPL”), for the supply of steel coils, which constitute a key raw material for our operations. For
+  the three months period ended June 30, 2026, and for the Fiscal 2026, Fiscal 2025 and Fiscal 2024, we sourced
+  approximately 85.13%, 86.65%, 90.61% and 84.58%, respectively, of our total steel coil requirements from
+  JSWSCPL. This high level of supplier concentration exposes us to significant risks, and any disruption in the supply
+  of steel coils from JSWSCPL could materially and adversely affect our business, results of operations and financial
+  condition.
+  30
+We have been an authorised service partner of JSW Steel Coated Products Limited and/or its holding Company
+(“JSWSCPL”) since 2021. For further details of our service partner arrangement, see “History and Certain Corporate
+Matters – Other Material Agreements” on page 284. Under this arrangement, we procure steel coils from JSWSCPL and
+undertake further value-added processing using high-precision engineering and machinery to manufacture processed steel
+products, which are supplied to OEMs and ODMs in the home and commercial appliances and general engineering sectors.
+These customers require processed steel products that meet specific technical and quality specifications, and our ability to
+meet such requirements in a timely and cost-effective manner is closely linked to the continuity of supplies from JSWSCPL.
+Any adverse change in our relationship with JSWSCPL, including reduction in supply volumes, changes in commercial
+terms, modification, non-renewal or termination of our authorised service partner status, or operational disruptions at
+JSWSCPL, could adversely affect our production schedules, increase our raw material costs, delay customer deliveries and
+negatively impact our revenue and profitability.
+Further, as an authorised service partner of JSWSCPL, we are subject to restrictions relating to the procurement of
+galvanized plain coils/sheets and corrugated/profiled sheets, colour-coated coils/sheets and corrugated/profiled sheets, and
+galvalume plain coils/sheets and corrugated/profiled sheets from suppliers other than JSWSCPL. These restrictions limit
+our ability to diversify our supplier base for such steel products. If we were to source such products from alternative
+suppliers, we may risk losing our authorised service partner status with JSWSCPL, which could significantly impair our
+sourcing arrangements, customer relationships and business model. Although we have not experienced any disruption in
+our relationship with JSWSCPL in the past, we cannot assure you that this relationship will continue on existing terms or
+at all.
+Our service partner arrangement with JSWSCPL does not grant us any exclusive territorial rights or sole service partner
+status. JSWSCPL is entitled to appoint additional authorised service partners, including within our operating regions of
+western, northern and southern India. The appointment of competing authorised service partners in our operating regions
+could dilute our market position, reduce our bargaining power, intensify competition for customers and exert downward
+pressure on pricing. In addition, JSWSCPL may expand its authorised service partner network or establish or expand its
+own steel processing facilities, which could result in a reduction in volumes supplied to us and adversely affect our revenue
+and profitability.
+Set out below is the bifurcation of the total Steel Coils sourced from JSWSCPL and other suppliers for the three months
+period ended June 30, 2026 and for the Fiscals 2026, 2025 and 2024:
+  (in ₹ million except for percentages)
+  For the period ended/ For the year ended
+  June 30, 2026  March 31, 2026  March 31, 2025  March 31, 2024
+  Total  %  of Total  %  of Total  % of total Total  % of total
+ Particulars  Steel  total  Steel  total  Steel Coils purchases Steel  purchases
+  Coils  purchase Coils  purchase  (%)  Coils  (%)
+  s  s
+  (%)  (%)
+  10,342.0  84.58
+ JSWSCPL  2,397.74  85.13  86.65  8,691.82  90.61  5,579.44
+  7
+  15.42
+ Other suppliers  418.90  14.87  1,593.63  13.35  900.94  9.39  1,017.34
+  11,935.7
+Total Purchases  2,816.64  100.00  100.00  9,592.76  100.00  6,596.78  100.00
+  0
+As on June 30, 2026, 85.13% of our steel coil procurement was linked to supplies from JSWSCPL. This concentration
+exposes us to risks arising from changes in JSWSCPL’s business strategy, operational disruptions, regulatory
+developments, force majeure events or deterioration in our commercial relationship with JSWSCPL. Any such events could
+materially and adversely affect our business, results of operations and financial condition.
+Further, the service partner agreement dated April 1, 2025, entered into with JSW Steel Coated Products Limited and/or its
+holding Company (“JSWSCPL”) contains certain obligations and restrictions that may impact our business operations and
+financial performance. These include, inter alia, (i) minimum purchase quantity commitments on a quarterly and/or monthly
+basis, which may increase our working capital requirements and expose us to inventory-related risks; (ii) termination
+provisions pursuant to which JSWSCPL may terminate the agreement if our Company commits any act deemed, at
+JSWSCPL’s discretion, to be prejudicial to its interests, brand name or products; and (iii) requirements to maintain
+prescribed inventory levels. Additionally, JSWSCPL is entitled to terminate the agreement without assigning any reason
+  31
+by providing three months’ prior notice. Further, our Company has entered into an Adoptive Statement dated May 23, 2025
+(“Adoptive Statement”) with the holding Company of JSW Steel Coated Products Limited. As per the Adoptive Statement,
+all the provisions of the Service Provider Agreement shall apply mutatis mutandis to the Adoptive Statement in relation to
+the services availed/ to be availed by the Company from JSW Steel Coated Products Limited and the holding Company of
+JSW Steel Coated Products Limited. The exercise of any such rights could materially and adversely affect our business,
+results of operations and financial condition.
+2. We have experienced certain discrepancies in our statutory filings with the Registrar of Companies (“RoC”) and other
+non-compliances under the Companies Act, 2013 in the past. We cannot assure that regulatory authorities will not
+initiate inquiries, proceedings or other actions against us in the future. Any such proceedings or actions, if initiated,
+may result in the imposition of penalties, fines or other regulatory measures, which could adversely affect our business,
+financial condition, results of operations and reputation.
+Pursuant to a Business Transfer Agreement dated January 29, 2021 (“BTA”), our Company acquired the business of M/s.
+Bombay Steels from Mr. Vijaykumar Himatrai Gupta, the proprietor of M/s. Bombay Steels and one of the Promoters of
+our Company. In accordance with the terms of the BTA, the Company issued and allotted 24,50,000 equity shares to Mr.
+Vijaykumar Himatrai Gupta in lieu of the balance consideration of ₹87.61 million, on a private placement basis. The
+shareholders of the Company approved the said issue and allotment at their meeting held on February 24, 2021, and the
+Board of Directors approved the allotment at its meeting held on March 9, 2021.
+However, we inadvertently failed to file Form MGT-14 with the RoC in respect of the said private placement, as required
+under the Companies Act, 2013. Further, while filing Form PAS-3 in respect of the said allotment, we erroneously selected
+the mode of allotment as “Rights Issue” instead of “Issue of Shares for Consideration Other Than Cash.”
+In order to rectify the aforesaid errors, we have filed a revised Form PAS-3 with the necessary corrections and have also
+filed Form MGT-14 along with an adjudication application before the Registrar of Companies (“RoC”). In connection with
+the adjudication proceedings, we received observations from the RoC dated November 12, 2025, to which we submitted
+our response on December 5, 2025. Further, we filed a separate adjudication application on January 6, 2026 in respect of
+the delay in filing Form MGT-14. The said adjudication application is currently pending before the RoC. In the event the
+Company is aggrieved by the order passed by the Registrar of Companies (“RoC”), it shall file an appeal before the Regional
+Director (“RD”) under Section 454 of the Companies Act, 2013, and, if necessary, pursue the matter further before the
+appropriate appellate forums up to the court of last appeal. For further information, see “History and Certain Corporate
+Matters – Details regarding material acquisitions or divestments of business/ undertakings, mergers, amalgamation, any
+revaluation of assets, etc. in the last ten years” on page 283.
+Further, pursuant to a communication dated March 11, 2026 received from the RoC, our Company filed an application with
+the RoC on May 13, 2026 seeking the marking as defective/cancellation of the original Form PAS-3 bearing SRN
+T08474322 dated March 12, 2021, while retaining the revised and corrected Form PAS-3 bearing SRN AB6835518 dated
+September 15, 2025 on record. The said application is currently pending before the RoC.
+Additionally, there were instances of delays in filing certain statutory forms with the Registrar of Companies (“RoC”) up
+to June 30, 2026. We have undertaken corrective measures, including filing the requisite forms and paying the applicable
+additional fees. As a result, the frequency and extent of such delays have reduced significantly. Details of the statutory
+forms filed with delays during the preceding five years are set out below.
+ Sr.  Form  Details of the delayed filing
+ No.
+ 1.  Form CHG-1  Form CHG-1, in respect of Creation/Modification of Charge vide board resolution dated
+  01.03.2021, was filed on 01.07.2021 with additional fee [...truncated]
+
+===== MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF =====
+MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF
+  OPERATIONS
+Unless otherwise stated, references in this section to the “we”, “our” or “us”, “Company” or “our Company” means
+“Bombay Coated and Special Steels Limited”. To obtain a complete understanding of our Company and our business,
+prospective investors should read this section in conjunction with “Risk Factors”, “Industry Overview”, “Financial
+Information” and “Our Business” on pages 30, 143, 312 and 239, respectively, as well as financial and other information
+contained in this Red Herring Prospectus as a whole. Additionally, please refer to “Definitions and Abbreviations” on
+page 1 for certain terms used in this section.
+Unless otherwise indicated, industry and market data used in this section have been derived from the report titled “Indian
+Steel Service Industry” dated September 25, 2026 (the “CareEdge Report”), prepared and released by CARE Analytics
+and Advisory Private Limited, which has been exclusively commissioned and paid for by our Company, for the purpose of
+understanding the industry in which we operate, in connection with the Issue. A copy of the CareEdge Report shall be
+available on the website of our Company at https://www.bcsspl.in/investor/ipo-documents from the date of this Red Herring
+Prospectus till the Bid/ Issue Closing Date. Unless otherwise indicated, financial, operational, industry and other related
+information derived from the CareEdge Report and included herein with respect to any particular year refers to such
+information for the relevant financial / calendar year. For further details, see “Certain Conventions, Use of Financial
+Information and Market Data and Currency of Presentation – Industry and Market Data” and “Risk Factors – The industry
+related disclosure in this Red Herring Prospectus has been derived from the CareEdge Report which we have commissioned
+and purchased and any reliance on such information for making an investment decision in the Issue is subject to inherent
+risks.” on pages 26 and 68, respectively.
+Overview
+We are a steel processing centre engaged in the business of converting steel coils into value-added processed steel products.
+Our core competencies include precision slitting, cut-to-length processing, shearing, and embossing of steel coils into slit
+coils, embossed slit coils, blanks, embossed blanks and sheared blanks (collectively referred to as “Processed Steel
+Products”). We cater to a diversified customer base comprising Original Equipment Manufacturers (OEMs) and Original
+Design Manufacturers (ODMs).
+Our Company, being a Steel Processing Centre (“SPC”), operate as an intermediary between primary steel producers and
+end-users by providing value-added processing services. For the home and commercial appliances sector, we process coated
+steel coils and hot-rolled steel coils into Processed Steel Products used in the manufacture of various appliances. For the
+general engineering sector, we undertake specialized processing of non-coated and galvanised plain coils into blanks, used
+in automotive manufacturing, pharmaceutical cleanroom infrastructure, electrical equipment, and ventilation systems. In
+addition to manufacturing Processed Steel Products, we also perform logistics and inventory management functions. By
+maintaining adequate inventory levels and offering just-in-time delivery solutions, we ensure timely and efficient supply
+of processed steel products to customers across urban as well as remote locations, thereby enhancing supply chain efficiency
+and cost optimization. (Source: CareEdge Report)
+One of the Promoters of our Company, Mr. Vijaykumar Himatrai Gupta, commenced operations in 1983 as a steel trader
+under the sole proprietorship M/s. Bombay Steels. In 2012, the business expanded into steel processing with the
+establishment of the Bhiwandi facility, followed by the execution of a service partnership agreement with JSW Steel Coated
+Products Limited (“JSWSCPL”) in 2018. Subsequently, on January 29, 2021, our Company entered into a Business
+Transfer Agreement to acquire the running business of M/s. Bombay Steels on a going-concern basis. This acquisition
+consolidated over four decades of trading and processing experience into the operations of our Company. Thereafter, our
+Company has entered into a phase of rapid expansion and added steel processing facilities across key manufacturing regions
+of India. We expanded our operations by establishing new manufacturing facilities in the West, North and South of India.
+Our steel processing facilities are strategically located across key industrial regions in India, enabling us to serve a wide
+spectrum of industries with efficiency and just in time deliveries. For further details see ‘Our Business – Manufacturing
+Facilities’ on page 261.
+Since 2021, our Company has been an authorised service partner of JSW Steel Coated Products Limited and/or its holding
+Company (“JSWSCPL”), pursuant to an agreement for the regular supply of steel coils. We procure steel coils from
+JSWSCPL as well as other suppliers and process them using advanced engineering techniques and high-precision
+machinery to manufacture Processed Steel Products. Our long-standing and strong supplier relationships ensure stability
+and reliability in sourcing, enabling us to efficiently and consistently meet customer requirements. (Source: CareEdge
+Report)
+We are a multi-location steel processing centre with manufacturing facilities located at Wada and Bhiwandi in Maharashtra,
+Ghiloth in Rajasthan, and Sri City in Andhra Pradesh. Our facilities are equipped with steel processing infrastructure,
+  408
+including slitting lines, cut-to-length lines, shearing lines, and embossing lines, designed to achieve operational precision
+and efficiency. These manufacturing facilities are spread across four strategically located sites in India, aggregating a total
+area of 42,209 square meters, and are ISO 9001:2015 certified for the processing, marketing, and supply of Processed Steel
+Products. Further, our Ghiloth facility in Rajasthan and Sri City in facility Andhra Pradesh has been recognized as a GEM-
+4 certified green facility.
+The locations of our manufacturing facilities have been selected with reference to proximity to customer delivery points.
+Certain facilities are located near the manufacturing locations of customers such as Western Refrigeration Private Limited,
+Amber Enterprises India Limited, PG Technoplast Private Limited, EPack Durable Limited, Kruger Ventilation Industries
+(India) Private Limited, among others. This proximity enables reduction in logistics time and transportation costs, facilitates
+operational efficiencies, and supports timely fulfilment of customer requirements. In addition, the clustering of certain
+facilities within the same state allows for inter-facility movement of materials, thereby reducing freight time and costs as
+components undergo sequential processing.
+We operate with an aggregate installed processing capacity of 1,23,153 MTPA, computed on a quarterly basis for Fiscal
+2027, across slitting, cut-to-length, shearing and embossing operations, as of June 30, 2026. Our installed capacity has
+increased at a compound annual growth rate (“CAGR”) of approximately 23.83% between Fiscal 2024 and Fiscal 2026,
+reflecting our continued focus on capacity expansion and operational scalability. For further details see ‘Our Business –
+Installed Capacity and Capacity Utilization’ on page 261. Further, our long-standing authorised partnership with JSW Steel
+Coated Products Limited since 2021 provides us with reliable access to quality raw materials and supports our ability to
+service a diversified customer base, positioning us well for sustained growth in the steel processing industry.
+We have established long-standing relationships with a diverse set of customers. Our focus on quality, value proposition,
+timely delivery of our products and the price competitiveness of our offerings has enabled us to maintain long-term
+relationships with our customers. In Fiscal Years 2026, 2025 and 2024, as well as for the three months period ended June
+30, 2026, we served 178, 261, 252 and 225 customers, respectively. These customers span multiple industries, including
+consumer durables and home appliances, electrical equipment and components, automotive and auto components, HVAC
+and refrigeration, electronics and electrical manufacturing services, industrial engineering and capital goods, steel
+processing and metal fabrication, infrastructure, renewable energy and power equipment, FMCG and packaging, as well as
+general manufacturing and industrial trading enterprises. Such diversification of our customer base across industries reduces
+our dependence on any single customer or industry segment. (Source: CareEdge Report)
+Our customer-centric approach enables us to provide tailored solutions that align with both functional and aesthetic
+expectations, and just in time deliveries of Processed Steel Products aligns with the requirements of our customers. Our
+customer base includes several OEMs and ODMs operating in India, including Haier Appliances India Private Limited,
+IFB Refrigeration Limited, Dixon Electro Manufacturing Private Limited, Amber Enterprises India Limited, Western
+Refrigeration Private Limited, PG Technoplast Private Limited, EPack Durable Limited, Kruger Ventilation Industries
+(India) Private Limited, Elegant Coatings Private Limited, Magnum MI Steel Private Limited.
+Our Promoters, Board of Directors, and senior management have been instrumental in the growth of our business and have
+enabled us to capitalize on market opportunities and better serve our customers, with collective experience spanning
+operations, business development, and customer relationship management. Our Promoter and Chairman-cum-Whole-Time
+Director, Mr. Vijaykumar Himatrai Gupta, has over 40 years of experience in the steel industry and provides guidance in
+formulating our long-term business strategies and business development initiatives, having played a pivotal role in steering
+the growth and development of our Company. Our Promoter and Managing Director, Mr. Nitin Vijaykumar Gupta, has
+approximately 20 years of experience in the steel industry and is responsible for overseeing the day-to-day operations of
+the Company, as well as providing guidance on strategy formulation, business development, and customer relationships.
+Our workforce is a critical asset to our operations and comprised 160 permanent employees and (4) four retainership
+employees as of June 30, 2026, who form the backbone of our business by driving innovation, ensuring quality, and
+maintaining the standards expected by our customers.
+Our Market Opportunity
+As per the CareEdge Report, there exists a substantial market opportunity for our Company, which can be clearly
+demonstrated from the following:
+Role of Steel Processing Centres:
+Steel Processing Centres (“SPCs”) in India are witnessing significant growth, driven by rising steel consumption across
+diverse end-use sectors such as automotive, construction, infrastructure and manufacturing. As India continues to accelerate
+its industrialisation and infrastructure development, SPCs are emerging as a critical link between large-scale steel producers
+and end-users, providing essential services including steel slitting, cut-to-length, blanking, splitting, inventory management,
+  409
+and timely distribution. These services enable industries to access steel in the precise forms and quantities required, thereby
+improving efficiency, reducing waste, and optimising supply chains.
+The growing demand for steel arising from infrastructure development, supported by government initiatives and
+urbanisation, has contributed to the increasing relevance of SPCs. In parallel, expansion in the automotive and
+manufacturing sectors has resulted in greater demand for processed steel products that meet specific technical and
+dimensional requirement [...truncated]
+
+===== OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS =====
+[not found]
+
+===== OFFER STRUCTURE =====
+ISSUE STRUCTURE
+The Issue is being made through the Book Building Process. The Initial Public Offer is of up to [●] Equity Shares of face
+value of ₹ 10 each for cash at a price of ₹ [●] per Equity Share (including a premium of ₹ [●] per Equity Share) aggregating
+up to ₹ 1,830.57 million by our Company. The issue shall constitute [●] % of the post-Issue paid-up Equity Share capital
+of our Company.
+This Issue is being made through the Book Building Process, in compliance with Regulation 6(1) and 31 of the SEBI ICDR
+Regulations.
+ Particulars  QIBs(1)  Non-Institutional Bidders  Retail Individual Bidders
+ Number of Equity Shares  Not more than [●] Equity  Not less than [●] Equity  Not less than [●] Equity
+ available for Allotment/  Shares of face value of ₹10  Shares of face value of ₹10  Shares of face value of ₹10
+ allocation* (2)  each  each available for allocation  each  available  for
+  or Issue less allocation to  allocation or Issue less
+  QIB Bidders and Retail  allocation to QIB Bidders
+  Individual Bidders  and  Non-Institutional
+  Bidders
+ Percentage of Issue Size  Not more than 50% of the  Not less than 15% of the  Not less than 35% of the
+ available for Allotment /  Issue size shall be available  Issue, or the Issue less  Issue, or the Issue less
+ allocation  for allocation to QIB  allocation to QIB Bidders  allocation to QIB Bidders
+  Bidders. However, 5% of the  and  Retail  Individual  and  Non-Institutional
+  Net QIB Portion will be  Bidders, subject to the  Bidders
+  available for allocation  following:
+  proportionately to Mutual
+  Funds only. Mutual Funds  (i) one-third of the Non-
+  participating in the Mutual  Institutional  Portion
+  Fund Portion will also be  shall be reserved for
+  eligible for allocation in the  Bidders  with  an
+  remaining balance Net QIB  application size of more
+  Portion. The unsubscribed  than ₹0.20 million and
+  portion in the Mutual Fund  up to ₹1.00 million, and
+  Portion will be available for
+  allocation to other QIBs in  (ii) two-third of the Non-
+  the Net QIB Portion  Institutional  Portion
+  shall be reserved for
+  Bidders with application
+  size of more than ₹1.00
+  million, provided that
+  the unsubscribed portion
+  in  either  of  the
+  aforementioned  sub-
+  categories  may  be
+  allocated to Bidders in
+  the other sub-category of
+  Non-  Institutional
+  Bidders.
+ Basis of Allotment/  Proportionate as  follows  The [●] Equity Shares of face  The Allotment to each
+ allocation if respective  (excluding  the  Anchor  value of ₹10 each available  Retail Individual Bidder
+ category  is  Investor Portion):  for allocation to Non-  shall not be less than the
+ oversubscribed*  Institutional Bidders under  minimum Bid Lot, subject
+  (a) Up to [●] Equity Shares  the  Non-  Institutional  to availability of Equity
+  of face value of ₹10 each  Portion, shall be subject to  Shares in the Retail Portion
+  shall be available for  the following:  and the remaining available
+  allocation  on  a  Equity Shares if any, shall
+  proportionate basis to  (i) one-third of the Non-  be  allotted  on  a
+  Mutual Funds only; and  Institutional  Portion  proportionate basis. For
+  shall be reserved for  details,  see  “Issue
+  (b) Up to [●] Equity Shares  Bidders  with  an  Procedure” on page 502.
+  of face value of ₹10 each  application size of more
+  shall be available for  than ₹0.20 million and
+  498
+Particulars  QIBs(1)  Non-Institutional Bidders  Retail Individual Bidders
+  allocation  on  a  up to ₹1.00 million, and
+  proportionate basis to all
+  QIBs, including Mutual  (ii) two-third of the Non-
+  Funds  receiving  Institutional  Portion
+  allocation as per (a)  shall be reserved for
+  above  Bidders with application
+  size of more than ₹1.00
+  Up to [●] Equity Shares of  million,
+  face value of ₹10 each may
+  be  allocated  on  a  provided  that  the
+  discretionary basis to Anchor  unsubscribed portion in
+  Investors of which one-third  either of the aforementioned
+  shall be available for  sub-categories  may  be
+  allocation to Mutual Funds  allocated to Bidders in the
+  only, subject to valid Bid  other sub-category of Non-
+  received from Mutual Funds  Institutional Bidders.
+  at or above the Anchor
+  Investor Allocation Price  The Allotment to each Non-
+  Institutional Bidder shall not
+  be less than the minimum
+  application size, subject to
+  the availability of Equity
+  Shares  in  the  Non-
+  Institutional Portion, and the
+  remaining Equity Shares, if
+  any, shall be allotted on a
+  proportionate basis. For
+  details,  see  “Issue
+  Procedure” on page 443.
+Minimum Bid  Such number of Equity Such number of Equity [●] Equity Shares of face
+  Shares in multiples of [●] Shares in multiples of [●] value of ₹10 each
+  Equity Shares of face value Equity Shares of face value
+  of ₹10 each, that the Bid of ₹10 each that the Bid
+  Amount  exceeds  ₹0.20 Amount exceeds ₹0.20
+  million  million
+Maximum Bid  Such number of Equity Such number of Equity Such number of Equity
+  Shares in multiples of [●] Shares in multiples of [●] Shares in multiples of [●]
+  Equity Shares of face value Equity Shares of face value Equity Shares of face value
+  of ₹10 each not exceeding the of ₹10 each not exceeding the of ₹10 each so that the Bid
+  size of the Issue, subject to size of the Issue (excluding Amount does not exceed
+  applicable  limits  under the QIB Portion), subject to ₹0.20 million
+  applicable law  limits prescribed under
+  applicable law
+Bid Lot  [●] Equity Shares of face value of ₹10 each and in multiples of [●] Equity Shares of face
+  value of ₹10 each thereafter
+Mode of allotment  Compulsorily in dematerialised form
+Allotment Lot  A minimum of [●] Equity Shares of face value of ₹10 each and in multiples of [●] Equity
+  Shares of face value of ₹10 each thereafter
+Trading Lot  One Equity Share
+Who can apply (3)(5)  Public financial institutions Resident Indian individuals,  Resident  Indian
+  (as specified in Section 2(72) Eligible NRIs, HUFs (in the individuals, Eligible NRIs
+  of the Companies Act), name  of  the  Karta), and HUFs (in the name of
+  scheduled commercial banks, companies, corporate bodies, the Karta)
+  Mutual Funds, Eligible FPIs scientific  institutions,
+  other  than  individuals, societies and trusts and any
+  corporate bodies and family individuals, corporate bodies
+  offices, VCFs, AIFs, FVCIs and family offices which are
+  registered  with  SEBI, recategorized as category II
+  multilateral and bilateral FPIs and registered with
+  499
+  Particulars  QIBs(1)  Non-Institutional Bidders  Retail Individual Bidders
+  development  financial SEBI
+  institutions, state industrial
+  development  corporation,
+  insurance  companies
+  registered with IRDAI,
+  provident funds (subject to
+  applicable  law)  with
+  minimum corpus of ₹250
+  million, pension funds with
+  minimum corpus of ₹250
+  million registered with the
+  Pension Fund Regulatory and
+  Development  Authority
+  established under sub-section
+  (1) of secti [...truncated]

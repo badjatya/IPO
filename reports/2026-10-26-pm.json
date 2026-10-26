@@ -1,0 +1,27 @@
+{
+ "date": "2026-10-26",
+ "session": "PM",
+ "headline": "EAAA open (Day 1 total 0.10x): GMP ₹35 (2%) at P/E 41, still Neutral; BLS Polymers & SFC open tomorrow",
+ "ipos": {
+  "eaaa-alternatives": {
+   "verdict": "neutral",
+   "verdict_text": "Neutral",
+   "best_category": null,
+   "category_note": "Day 1: Retail 0.02x, total 0.10x; GMP steady ₹35 (~2%) at P/E ~41, 100% OFS — skip unless you'd hold. Recheck on 28 Oct."
+  },
+  "sfc-environmental-technologies": {
+   "category_note": "Opens 27 Oct. GMP falling from peak ₹32 to ₹27 (~8%) — apply only if you'd hold; recheck after anchors."
+  },
+  "bls-polymers": {
+   "category_note": "Opens 27 Oct. GMP rising to ₹40 (~27%); anchor list not yet found — recheck after anchors."
+  },
+  "bombay-coated-and-special-steels": {
+   "verdict": "listing_gains",
+   "verdict_text": "Listing gains only",
+   "category_note": "Opens 29 Oct. GMP ₹9 (~11%), P/E ~11 but thin margins; RHP analysis done."
+  }
+ },
+ "notes": [
+  "BLS Polymers anchor allocation: NSE file is an image PDF and web search found nothing; left pending."
+ ]
+}
