@@ -1,0 +1,35 @@
+{
+ "date": "2026-10-28",
+ "session": "PM",
+ "headline": "EAAA closed 4.06x but Retail only 0.73x, GMP ~1% — avoid; BLS Polymers 21x, GMP ₹47 (31%) is the strongest; SFC GMP down to ₹13",
+ "ipos": {
+  "eaaa-alternatives": {
+   "verdict": "avoid",
+   "verdict_text": "Avoid",
+   "best_category": null,
+   "category_note": "Closed: total 4.06x, Retail 0.73x (QIB 10x). GMP ₹24 (~1.4%) on a 100% OFS at P/E ~41 — skip. Allotment 29 Oct."
+  },
+  "sfc-environmental-technologies": {
+   "verdict": "neutral",
+   "verdict_text": "Neutral",
+   "best_category": "Retail",
+   "category_note": "GMP falling since 21 Oct (₹32 → ₹13, ~4%) — apply only if you'd hold; Day 2 total 0.15x, Retail 0.2x. Closes 29 Oct; 1 lot per family PAN."
+  },
+  "bls-polymers": {
+   "best_category": "Retail",
+   "category_note": "Day 2 total 21x, Retail 18.5x, sNII 62x; GMP rising to ₹47 (~31%). Retail has best return on capital — listing gains only: weak anchors and customer concentration. Closes 29 Oct; 1 lot per family PAN."
+  },
+  "m-k-sons-fine-jewels": {
+   "best_category": "Retail",
+   "category_note": "Day 1 total 0.4x, Retail 0.13x; GMP ₹12 (~7%) rising. Anchor book weak (no domestic MFs) — be cautious. Closes 30 Oct; 1 lot per family PAN."
+  },
+  "bombay-coated-and-special-steels": {
+   "category_note": "Opens 29 Oct. GMP ₹9 (~11%) steady. Anchor book weak (₹54 Cr, small AIFs) — listing gains only."
+  }
+ },
+ "notes": [
+  "Jio Platforms listed +21% (GMP said +23%); our call: Listing gains only",
+  "Paras Healthcare listed +4% (GMP said +2%); our call: Avoid",
+  "Bombay Coated anchor list read from the NSE anchor letter (web search had none)."
+ ]
+}

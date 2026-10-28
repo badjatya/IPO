@@ -1,12 +1,22 @@
 {
-  "name": "Bombay Coated and Special Steels Limited",
-  "source": "rhp",
-  "analysed": "2026-10-26",
-  "verdict": "listing_gains", "verdict_text": "Listing gains only",
-  "summary": "Mumbai steel processing centre that slits and cuts coated steel coils for appliance, HVAC and auto makers; JSW Steel authorised partner since 2021.",
-  "financials": "FY26 revenue ₹1,267 Cr (+20%), PAT ₹30.5 Cr (+6%, 2.4% margin); debt/equity 2.8x.",
-  "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
-  "positives": ["100% fresh issue; ₹125 Cr goes to debt repayment", "Debt/equity down from 4.3x (FY24) to 2.0x (Jun 2026)", "Issue P/E ~11"],
-  "red_flags": ["Thin margins (PAT 2.4%); finance cost eats most of EBIT", "Dependence on JSW Steel; capacity only ~60% used", "ROE falling from 48% to 30%"],
-  "anchor": "Anchor bidding 28 Oct; not yet out", "anchor_grade": "pending"
+ "name": "Bombay Coated and Special Steels Limited",
+ "source": "rhp",
+ "analysed": "2026-10-26",
+ "verdict": "listing_gains",
+ "verdict_text": "Listing gains only",
+ "summary": "Mumbai steel processing centre that slits and cuts coated steel coils for appliance, HVAC and auto makers; JSW Steel authorised partner since 2021.",
+ "financials": "FY26 revenue ₹1,267 Cr (+20%), PAT ₹30.5 Cr (+6%, 2.4% margin); debt/equity 2.8x.",
+ "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+ "positives": [
+  "100% fresh issue; ₹125 Cr goes to debt repayment",
+  "Debt/equity down from 4.3x (FY24) to 2.0x (Jun 2026)",
+  "Issue P/E ~11"
+ ],
+ "red_flags": [
+  "Thin margins (PAT 2.4%); finance cost eats most of EBIT",
+  "Dependence on JSW Steel; capacity only ~60% used",
+  "ROE falling from 48% to 30%"
+ ],
+ "anchor": "₹54.1 Cr from 6 small AIFs/funds (IMAP Catalyst ₹20 Cr, LRSD ₹14 Cr); no MFs or insurers",
+ "anchor_grade": "weak"
 }

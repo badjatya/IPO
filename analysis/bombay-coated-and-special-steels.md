@@ -28,7 +28,7 @@ Issue P/E 10.9 per data feed; "Basis of Offer Price" not found in RHP extract. L
 ₹125 Cr to repay borrowings (total borrowings ₹302.4 Cr at 31 Aug 2026); balance to Siemens Financial lease equipment purchase and general corporate purposes. Deleveraging.
 
 ## Anchor book
-**Pending** — anchor bidding the working day before opening (28 Oct).
+₹54.1 Cr raised from 6 anchors at ₹82 (65,97,500 shares; allocated 28 Oct, NSE anchor letter). **Weak** grade: no domestic MFs, insurers or pension funds. IMAP India Capital Investment Trust – Catalyst New India Fund ₹20.0 Cr (37%), LRSD Capital ₹14.1 Cr (26%), and ₹5.0 Cr each to Aarth AIF Growth Fund, Ekamya Pragati Scheme-I, Amitsg Ventures Trust and Religo Commodities Ventures Trust. Lock-in 50% 30 days, 50% 90 days.
 
 ## Red flags
 Thin margins and high leverage; heavy dependence on JSW Steel as supplier; underused capacity; ROE falling.
