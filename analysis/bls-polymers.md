@@ -21,7 +21,7 @@ Snapshot shows P/E 25. At the ₹150 upper band the market cap is about ₹930 C
 ₹77.6 Cr Goa capex (₹11.8 Cr already spent, to be recouped), ₹89.5 Cr working capital, rest general corporate purposes (up to 25%). Fresh issue, so money goes to the company.
 
 ## Anchor book
-**Pending**: anchor bidding is the working day before opening (26 Oct).
+Total ₹76.5 Cr from 7 anchors at ₹150 (51,00,000 shares, 30% of the issue). Top names: Nakshatra Bharat Vantage Fund Scheme III ₹16.5 Cr, Vikasa India EIF I ₹14.7 Cr, Nakshatra Bharat Vantage Fund ₹10.3 Cr, Venus Investments VCC ₹10.0 Cr, Radiant Global Fund ₹10.0 Cr, Pine Oak Global Fund ₹10.0 Cr, Innovative Vision Fund ₹5.0 Cr. Grade: **Weak** — small AIFs/offshore funds only; Nakshatra funds hold 35% of the book; no mutual funds or insurers. Lock-in 50% 30 days, 50% 90 days.
 
 ## Red flags
 Customer concentration (top 5 = 53.5% of FY26 revenue); untraceable corporate records and shareholders; single plant; working-capital heavy (₹89.5 Cr of proceeds); government revenue only ₹1 Cr in FY26.

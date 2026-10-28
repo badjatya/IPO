@@ -8,5 +8,5 @@
   "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
   "positives": ["P/E ~13x vs listed jewellery peers averaging ~20x", "Revenue ₹217 Cr to ₹539 Cr and PAT ₹8 Cr to ₹52 Cr in two years", "Fresh issue mostly funds a new showroom's inventory and ₹30 Cr debt repayment"],
   "red_flags": ["Growth and margin jump (gross margin 9% to 19%) with the same 5 stores; Q1 EBITDA margin 23%", "Inventory days 122 to 333; net operating cycle 321 days", "Promoter selling ₹55 Cr via OFS; business only moved into the company in Mar 2025; Mumbai/Ahmedabad concentration"],
-  "anchor": "Anchor bidding 27 Oct; not yet out", "anchor_grade": "pending"
+  "anchor": "Anchors ₹82.6 Cr, 9 offshore/small funds, no domestic MFs (weak grade)", "anchor_grade": "weak"
 }

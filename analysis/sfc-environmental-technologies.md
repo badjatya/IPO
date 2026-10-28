@@ -26,7 +26,7 @@ P/E ≈ 19 on FY26: cheap on paper; peers not extracted.
 ₹42.2 Cr debt prepayment, ₹74.9 Cr working capital, balance general corporate purposes (≤25%). OFS proceeds go to sellers.
 
 ## Anchor book
-**Pending** — anchor bidding on 26 Oct.
+Total ₹200.3 Cr from 17 anchors at ₹330 (60,68,460 shares). Top names: SBI Infrastructure Fund ₹37.5 Cr, Nippon India Small Cap Fund ₹27.3 Cr, ICICI Pru Manufacturing Fund ₹26.0 Cr, Quant MF (two funds) ₹34.2 Cr, Nippon Power & Infra ₹10.2 Cr, Sundaram Small Cap ₹10.0 Cr, Edelweiss Life Insurance ₹10.0 Cr, Government Pension Fund Global ₹6.8 Cr, Bank of India MF funds ₹10.0 Cr. Grade: **Strong** — mostly domestic MFs, an insurer and a sovereign fund. Lock-in 50% 30 days, 50% 90 days.
 
 ## Red flags
 High receivables and working-capital strain; flat PAT; majority OFS; promoter stake falls.

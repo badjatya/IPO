@@ -8,5 +8,5 @@
   "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
   "positives": ["Market leader in SBR sewage treatment technology", "Repeat customers 92% of FY26 revenue", "Cheap at P/E about 19"],
   "red_flags": ["Trade receivables ₹609 Cr (76% of FY26 revenue) and rising", "Profit flat in FY26 despite 15% revenue growth", "Only ₹150 Cr fresh; most of the issue is OFS by selling shareholders"],
-  "anchor": "Anchor bidding 26 Oct; not yet out", "anchor_grade": "pending"
+  "anchor": "Anchors ₹200.3 Cr, 17 funds led by SBI MF, Nippon, ICICI Pru, Quant (strong grade)", "anchor_grade": "strong"
 }

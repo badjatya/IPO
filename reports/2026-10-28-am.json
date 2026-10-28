@@ -1,0 +1,9 @@
+{"date":"2026-10-28","session":"AM",
+ "headline":"EAAA closes today at 0.18x with GMP ₹11 — avoid; BLS Polymers 5.0x, GMP ₹44 (weak anchors); SFC GMP falling to ₹17",
+ "ipos":{
+  "eaaa-alternatives":{"verdict":"avoid","verdict_text":"Avoid","best_category":null,"category_note":"Closes today. GMP falling since 25 Oct (₹35 → ₹11, 0.7%); Day 2 total 0.18x, 100% OFS at P/E ~41 — skip."},
+  "sfc-environmental-technologies":{"best_category":"Retail","category_note":"GMP falling since 21 Oct (₹32 → ₹17, ~5%) — apply only if you'd hold; Day 2 total 0.06x. Anchors strong (₹200 Cr). Closes 29 Oct; 1 lot per family PAN."},
+  "bls-polymers":{"best_category":"Retail","category_note":"Day 2 total 5.0x, Retail 4.3x; GMP rising to ₹44 (~29%). Retail has best return on capital — listing gains only: weak anchor book (₹76.5 Cr, small AIFs) and customer concentration. Closes 29 Oct; 1 lot per family PAN."},
+  "m-k-sons-fine-jewels":{"category_note":"Opens today, closes 30 Oct. GMP ₹10 (~6%). Anchor book weak: ₹82.6 Cr from offshore/small funds, no domestic MFs — be cautious."}
+ },
+ "notes":["Anchor lists read from NSE anchor letters (web search had none); BLS Polymers and M.K. Sons graded Weak, SFC Strong.","Jio Platforms and Paras Healthcare listing-day prices not out yet; retried next run."]}

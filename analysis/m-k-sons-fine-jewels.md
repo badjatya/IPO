@@ -29,7 +29,7 @@ FY26 EPS ₹12.13 → P/E ≈ 13.4x at ₹162. Listed peers (RHP, 9 Oct 2026): M
 Fresh issue: ₹152.8 Cr for inventory of 1 new Maharashtra showroom and expansion of a Gujarat showroom; ₹30 Cr debt repayment; rest general corporate (≤25%). OFS (~₹55 Cr) goes to the promoter.
 
 ## Anchor book
-**Pending** — anchor bidding is the working day before opening (27 Oct).
+Total ₹82.6 Cr from 9 anchors at ₹162 (51,00,000 shares). Top names: Venus Investment VCC ₹17.0 Cr, Advent Global Fund ₹16.0 Cr, Goldman Sachs Bank Europe ₹9.6 Cr, Khandelwal Finance ₹10.0 Cr, Tiger Strategies Fund ₹10.0 Cr, Arnesta, Zeal Global, Compact Structure and Nexus funds ₹5.0 Cr each. Grade: **Weak** — offshore/small funds and an NBFC; no allocation to domestic MFs, insurers or pension funds. Lock-in 50% 30 days, 50% 90 days.
 
 ## Red flags
 - Revenue +53% FY26 and gross margin doubling with an unchanged 5-store base; Q1 EBITDA margin 23% is unusually high for jewellery retail.
