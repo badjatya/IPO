@@ -87,8 +87,10 @@ export function buildAuth(): ReturnType<typeof betterAuth> {
       },
     },
     advanced: {
-      // Our auth-table ids are uuid columns with database defaults; tell Better
-      // Auth not to generate its own text ids (review item 2).
+      // generateId: "uuid" makes Better Auth generate its own ids for the auth
+      // tables, as UUIDs that fit the uuid columns (review item 2). The
+      // columns' database defaults are only a fallback for the rows the app
+      // inserts itself (code review round 1 finding 8).
       database: { generateId: "uuid" },
     },
   };

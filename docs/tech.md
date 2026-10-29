@@ -24,7 +24,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Database | PostgreSQL on Neon (free tier) | Running | [0010](adr/0010-postgresql-on-neon.md) |
 | ORM and migrations | Drizzle ORM, drizzle-kit migrations, on Neon's serverless driver | Running | [0025](adr/0025-drizzle-on-neon-serverless-driver.md) |
 | Auth | Better Auth (Drizzle adapter), sessions in Postgres; email and password, admin invites only | Running | [0028](adr/0028-better-auth-invite-only.md) |
-| Account email | Resend: invites and password resets only | Running | [0028](adr/0028-better-auth-invite-only.md) |
+| Account email | Resend: invites and password resets only | Decided — no real email yet: H07's account and verified domain aren't done, and the first real invite is a manual check after 010 merges | [0028](adr/0028-better-auth-invite-only.md) |
 | UI components and styling | shadcn/ui (Base UI) with Tailwind CSS v4; rules in [design.md](design.md) | Running | [0020](adr/0020-shadcn-ui.md) |
 | Charts | shadcn/ui `chart` on Recharts, added with the first chart page | Decided | [0027](adr/0027-shadcn-charts-on-recharts.md) |
 | Sync | GitHub Actions: import on push | Decided | [0011](adr/0011-git-as-the-hand-off.md) |
@@ -74,7 +74,7 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Anthropic: Claude Code routine | IPO research only | Personal Claude Pro plan (existing; nothing extra paid) | Running |
 | Google: Gemini API | Ask | Free tier: per-project quotas (check AI Studio); prompts may be used by Google | Decided |
 | GitHub | Repo, Actions (import, CI, stock worker) | Free: about 2,000 Actions minutes a month for a private repo (third-party sources; check GitHub's billing page) | Repo and CI running; import and stock worker decided |
-| Resend | Account emails: invites and password resets | Free tier; needs a verified sending domain | Running |
+| Resend | Account emails: invites and password resets | Free tier; needs a verified sending domain | Decided — H07's account and verified domain aren't done; first real invite is a manual check after 010 merges |
 | Neon | PostgreSQL; branch per test run and preview | Free: 1 GB per project, 100 compute-hours a month, pauses when idle | Decided |
 | App host | Next.js | Not chosen yet | Open |
 
