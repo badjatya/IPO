@@ -4,7 +4,7 @@ import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { afterAll, describe, expect, it } from "vitest";
+import { afterAll, beforeEach, describe, expect, it } from "vitest";
 import { and, eq, sql } from "drizzle-orm";
 import * as schema from "@/db/schema";
 import { poolDb } from "@/lib/db";
@@ -27,10 +27,11 @@ import { runImport } from "@/lib/import/run";
 // (e) re-running an already-imported range changes nothing;
 // (f) spot-checks of known rows;
 // (g) an unchanged ipo_analyses row is not rewritten (its content_sha matches
-//     the file, and re-importing leaves its xmin alone).
+//     the file, and re-importing the commit that introduced it re-applies the
+//     analysis with unchanged content, leaving its xmin alone);
 // The whole-repo rebuild (a, b, f) reads the real checkout's HEAD tree, which
-// works in CI's shallow clone (no history walk). Per-commit tests (c, d, e, g)
-// use throwaway temp repos. No report.commit_sha assertion against the real
+// works in CI's shallow clone (no history walk). Per-commit tests (c, d, e, g,
+// h, i) use throwaway temp repos. No report.commit_sha assertion against the real
 // checkout: a shallow clone gives the graft commit.
 
 const root = repoRoot(process.cwd());
@@ -96,17 +97,22 @@ async function expectedResearchCounts() {
   let verdicts = 0;
   for (const path of files) {
     const kind = classifyResearchFile(path);
-    const doc = JSON.parse(readFileAt(root, sha, path)) as {
-      ipos?: Array<{ key?: string; subscription?: Record<string, unknown> }>;
-    };
+    // Only the JSON kinds are parsed. The analysis `<key>.md` files carry
+    // `---` front matter and are not JSON (their rows come from the file list
+    // below); parsing every file here threw on them, so the check compared
+    // nothing.
     if (kind === "snapshot") {
+      const doc = JSON.parse(readFileAt(root, sha, path)) as {
+        ipos?: Array<{ key?: string; subscription?: Record<string, unknown> }>;
+      };
       for (const entry of doc.ipos ?? []) {
         keys.add(entry.key ?? "");
         snapshots++;
         subscriptions += Object.keys(entry.subscription ?? {}).length;
       }
     } else if (kind === "report") {
-      verdicts += Object.keys((doc as { ipos?: Record<string, unknown> }).ipos ?? {}).length;
+      const doc = JSON.parse(readFileAt(root, sha, path)) as { ipos?: Record<string, unknown> };
+      verdicts += Object.keys(doc.ipos ?? {}).length;
     }
   }
   return {
@@ -251,6 +257,25 @@ describe("import: whole-repo rebuild on the branch", () => {
 });
 
 describe("import: per-commit runs against a temp repo", () => {
+  // The whole-repo tests above leave this branch's research rows behind (27
+  // reports, 141 verdicts, 13 cards ...). These tests assert absolute counts,
+  // so each starts from an empty research database: delete the research tables
+  // child first, and `imports` too, so no leftover ok row interferes with a
+  // run's range. App tables are left alone (schema-rules runs in parallel on
+  // the same branch).
+  beforeEach(async () => {
+    const branch = db();
+    await branch.delete(schema.ipoSubscriptions);
+    await branch.delete(schema.ipoSnapshots);
+    await branch.delete(schema.ipoVerdicts);
+    await branch.delete(schema.reports);
+    await branch.delete(schema.ipoCards);
+    await branch.delete(schema.ipoAnalyses);
+    await branch.delete(schema.ipoOutcomes);
+    await branch.delete(schema.ipos);
+    await branch.delete(schema.imports);
+  });
+
   it("(c) a bad commit leaves no rows and fails the run; a fixed commit imports and flips its row to ok", async () => {
     const { repo, git } = makeRepo();
     const snapshotA = JSON.stringify({
@@ -391,7 +416,7 @@ describe("import: per-commit runs against a temp repo", () => {
       ipos: [{ key: "sfc-environmental-technologies", name: "SFC", phase: "closing_today" }],
     }));
     write(repo, "analysis/sfc-environmental-technologies.md", md);
-    commitAll(git, "a: snapshot + analysis");
+    const a = commitAll(git, "a: snapshot + analysis");
 
     const first = await runImport({ root: repo, db: db(), from: null });
     expect(first.ok).toBe(true);
@@ -400,8 +425,8 @@ describe("import: per-commit runs against a temp repo", () => {
     expect(rows[0]!.contentSha).toBe(createHash("sha256").update(md).digest("hex"));
     expect(rows[0]!.rhpTextPath).toBe("analysis/rhp/sfc-environmental-technologies.txt");
 
-    // A later commit touches only a snapshot; re-importing every commit leaves
-    // the analysis row untouched (its xmin — the row's last write — is stable).
+    // A later commit touches only a snapshot, so the analysis row's xmin (its
+    // last write) is stable before the re-apply below.
     write(repo, "data/snapshots/2026-10-29T1913.json", JSON.stringify({
       generated_at: "2026-10-29T19:13+05:30",
       ipos: [{ key: "sfc-environmental-technologies", name: "SFC", phase: "closing_today", gmp: 8 }],
@@ -418,11 +443,21 @@ describe("import: per-commit runs against a temp repo", () => {
     };
     const before = await xmin();
 
+    // Re-import commit a, whose analysis file is unchanged, so applyFile runs
+    // on the same `.md` — a run with 0 new commits would never re-apply it.
+    // The stored content_sha equals the incoming one, the skip's setWhere
+    // fires, and the row's xmin does not move: that is the "unchanged content
+    // is not rewritten" guarantee.
+    await db().delete(schema.imports).where(eq(schema.imports.commitSha, a));
     const third = await runImport({ root: repo, db: db(), from: null });
     expect(third.ok).toBe(true);
-    expect(third.commitsImported).toBe(0);
+    expect(third.commitsImported).toBe(1); // a again; b stays skipped as ok
     expect(await xmin()).toBe(before);
-    const after = await db().select({ contentSha: schema.ipoAnalyses.contentSha }).from(schema.ipoAnalyses);
+
+    const after = await db()
+      .select({ contentSha: schema.ipoAnalyses.contentSha })
+      .from(schema.ipoAnalyses)
+      .where(eq(schema.ipoAnalyses.ipoKey, "sfc-environmental-technologies"));
     expect(after[0]!.contentSha).toBe(createHash("sha256").update(md).digest("hex"));
   }, 180_000);
 
