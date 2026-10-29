@@ -105,3 +105,9 @@ Round 1's findings stay closed. The failure below is a new one, which the first 
 ### Plan and docs
 
 No new deviations. Add finding 6 under "Changes during build". Approval needs a green `db` job. The human will push the fix, or run `npm run test:db` with the key.
+
+## Responses (DeepSeek)
+
+| # | Response | Commit |
+| --- | --- | --- |
+| 6 | **Fixed.** The lookup is now the pure helper `findDefaultBranch(branches)`, matching `branch.default === true`, with an offline suite in `web/tests/neon-branch.test.ts` against a fixture in the API v2 Branch shape — including a regression test that the old `is_default` spelling (which the API never sends) does *not* match. The "no default branch found" error now lists every branch it saw as `` `name [default: …]` ``, so a future field mismatch shows up in the job log. The create-response fields the harness reads next were checked against the API v2 reference: `branch.id`, `connection_uris[].connection_uri` (returned when the create request makes an endpoint, per round 1 finding 5), `endpoints[].host` and `roles[].name`/`.password` (returned at creation) are all documented shapes; the fallback's extra reads (`connection_parameters`, `branch.database_name`) degrade to the correct `neondb` default for a fresh schema-only branch, so nothing else needed changing. The failed run had created no branch, so there was nothing to clean up. Offline re-run: `npm test` 25 passed (4 new), typecheck/lint clean, `drizzle-kit generate` a no-op, Python 227 OK — see plan.md Verification. The green `npm run test:db` that proves the Done-when still needs the next push (CI `db` job) or a human run with `NEON_API_KEY`. | `106c406` |

@@ -131,10 +131,11 @@ Both open items from the first draft are now decided; nothing remains open for t
 7. **Code-review round 1, finding 1: 0001 regenerated, not patched.** The composite keys were declared as `.primaryKey()` on each column, so drizzle-kit emitted one `PRIMARY KEY` clause per column and Postgres rejects the table. The fix declares each composite key once via `primaryKey({ columns: [...] })` in the table's extra config (the column-level `.references()` stay). Because nothing has ever applied the migrations (test:db has never run), I regenerated `0001` instead of adding a follow-up migration — a follow-up could never run, since the broken 0001 fails before the journal advances: removed the stale `0001` and seed artifacts, ran `drizzle-kit generate` (new `0001_cute_exodus.sql` with `CONSTRAINT "…_pk" PRIMARY KEY(…)` table constraints), recreated the seed custom migration as `0002_outstanding_lyja.sql` (identical content). `generate` is a no-op afterwards, so the drift check stays green.
 8. **Code-review round 1, findings 2, 4, 5: host, arch row, naming.** The harness's API host was `https://neon.tech/api/v2`, which 308-redirects to `neon.com` (404) and drops the `Authorization` header on the redirect — now `https://console.neon.tech/api/v2`. `docs/arch.md`'s Database row now keeps both statuses (test branches **Running**, preview branches **Decided** with D11). `WORKTREE_ROOT` renamed to `WEB_ROOT` (it points at `web/`), and `?connection_uris=true` dropped from the create-branch call (the API returns `connection_uris` whenever it creates an endpoint).
 9. **Code-review round 1, finding 3: primary-key shape test.** `web/tests/db/schema-shape.test.ts` gained a test reading `pg_constraint` (`contype = 'p'`) with `pg_get_constraintdef`: exactly one PK row per table and db.md's columns for each — composite for the seven natural-key tables, single-column for the rest, `id` for the identity/uuid tables.
+10. **Code-review round 2, finding 6: default-branch lookup.** The first real CI `db` run exposed that the Neon API v2 Branch object marks the default branch with `default: true` — there is no `is_default` field, so `branches.find((branch) => branch.is_default === true)` never matched and the harness died before creating a branch. The lookup is now the pure, offline-tested helper `findDefaultBranch(branches)` matching `branch.default === true` (fixture in the API's documented shape, including a test that the old `is_default` spelling does *not* match), and the "no default branch found" error now lists every branch it saw (`name [default: …]`) so the next field mismatch shows up in the job log. The create-response fields the harness reads next — `branch.id`, `connection_uris[].connection_uri`, `endpoints[].host`, `roles[].name`/`.password` — were checked against the API v2 reference and all match its documented shapes (the fallback's extra reads degrade to the correct `neondb` default). No branch was created by the failed run, so nothing needed cleaning up.
 
 ## Verification
 
-- **Offline (this build step):** all commands below ran in the task worktree and are pasted from real output. Re-run after the code-review round 1 fixes (composite primary keys, API host, PK shape test).
+- **Offline (this build step):** all commands below ran in the task worktree and are pasted from real output. Re-run after the code-review round 2 fix (default-branch lookup, finding 6).
 
   ```text
   $ npm run typecheck            (web/)
@@ -143,11 +144,12 @@ Both open items from the first draft are now decided; nothing remains open for t
 
   $ npm run lint                 (web/)
   Found 0 warnings and 0 errors.
-  Finished in 59ms on 24 files with 250 rules using 12 threads.   (exit 0)
+  Finished in 44ms on 24 files with 250 rules using 12 threads.   (exit 0)
 
   $ npm test                     (web/)
   Test Files  4 passed (4)   — env-example, neon-branch helpers, layout, schema
-  Tests       21 passed (21)  — tests/db/** excluded, no db test ran
+  Tests       25 passed (25)  — neon-branch helpers now 14 tests, incl. the new
+                                findDefaultBranch suite; tests/db/** excluded
   (exit 0)
 
   $ npm run test:db              (web/, no NEON_API_KEY/NEON_PROJECT_ID here)
@@ -161,12 +163,14 @@ Both open items from the first draft are now decided; nothing remains open for t
   (exit 1, as designed: a stray local run can never reach a real branch)
 
   $ npx drizzle-kit generate     (web/; config loads with no DATABASE_URL_UNPOOLED)
-  No schema changes, nothing to migrate 😴   (second run = no-op; the regenerated 0001 and
-  recreated 0002 leave the drift check green)
+  No config path provided, using default 'drizzle.config.ts'   →   23 tables, …
+  No schema changes, nothing to migrate 😴   (a no-op; the drift check stays green)
+
+  $ git status --porcelain web/db   (repo root) → empty
 
   $ python3 -m unittest discover -s tests   (repo root)
-  Ran 227 tests in 0.534s
+  Ran 227 tests in 0.536s
   OK
   ```
 
-- **Real branch — required before code review is approved:** the build step has no `NEON_API_KEY`, so `npm run test:db` cannot run here (it refuses, above). It gets a green run: either the human runs `cd web && npm run test:db` locally with `NEON_API_KEY` set (output pasted here), or the human pushes the branch so the CI `db` job runs it (the run link goes here). Until one of those is green, the Done-when — "migrations build the full schema on an empty Neon branch" — is unproven. This is also the run that proves findings 1 and 2 are actually fixed. The `web` job's new schema-drift step gets its green run on the same push.
+- **Real branch — required before code review is approved:** the build step has no `NEON_API_KEY`, so `npm run test:db` cannot run here (it refuses, above). The first push after round 1 (71a4291) did run the CI `db` job — run 40935844323 — which got past authentication and the branch list, then failed on the round-2 finding: the API marks the default branch `default: true`, not `is_default`, so the harness stopped before creating anything. Finding 6 fixes that lookup, and the next push (or a human `cd web && npm run test:db` with the key) is the green run that proves the Done-when — "migrations build the full schema on an empty Neon branch" — and lands the status labels. The `web` job (with the schema-drift step) and `tests` were green on that run already. The green run's output or link goes here.
