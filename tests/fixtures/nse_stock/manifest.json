@@ -1,0 +1,555 @@
+{
+  "captured_by": "local",
+  "files": [
+    {
+      "captured_at": "2026-10-29T11:46:08+00:00",
+      "captured_by": "local",
+      "endpoint": "results_standalone",
+      "fields": [
+        {
+          "found": true,
+          "name": "period_end",
+          "path": "resCmpData[].re_to_dt"
+        },
+        {
+          "found": true,
+          "name": "revenue",
+          "path": "resCmpData[].re_net_sale"
+        },
+        {
+          "found": true,
+          "name": "other_income",
+          "path": "resCmpData[].re_oth_inc_new"
+        },
+        {
+          "found": true,
+          "name": "expenses",
+          "path": "resCmpData[].re_oth_tot_exp"
+        },
+        {
+          "found": true,
+          "name": "net_profit",
+          "path": "resCmpData[].re_net_profit"
+        },
+        {
+          "found": true,
+          "name": "eps",
+          "path": "resCmpData[].re_basic_eps_for_cont_dic_opr"
+        },
+        {
+          "found": false,
+          "name": "ebitda",
+          "path": "resCmpData[].re_ebitda"
+        },
+        {
+          "found": false,
+          "name": "filing_link",
+          "path": "resCmpData[].re_filing_link"
+        }
+      ],
+      "fixture": "results_standalone.json",
+      "lists": [
+        {
+          "original_rows": 5,
+          "path": "resCmpData",
+          "saved_rows": 5
+        }
+      ],
+      "original_bytes": 14525,
+      "rows": 5,
+      "run_url": null,
+      "saved_bytes": 17588,
+      "unit": "unit not stated",
+      "url": "https://www.nseindia.com/api/results-comparision?symbol=RELIANCE"
+    },
+    {
+      "captured_at": "2026-10-29T11:46:08+00:00",
+      "captured_by": "local",
+      "endpoint": "results_consolidated",
+      "fields": [
+        {
+          "found": true,
+          "name": "period_end",
+          "path": "resCmpData[].re_to_dt"
+        },
+        {
+          "found": true,
+          "name": "revenue",
+          "path": "resCmpData[].re_net_sale"
+        },
+        {
+          "found": true,
+          "name": "other_income",
+          "path": "resCmpData[].re_oth_inc_new"
+        },
+        {
+          "found": true,
+          "name": "expenses",
+          "path": "resCmpData[].re_oth_tot_exp"
+        },
+        {
+          "found": true,
+          "name": "net_profit",
+          "path": "resCmpData[].re_net_profit"
+        },
+        {
+          "found": true,
+          "name": "eps",
+          "path": "resCmpData[].re_basic_eps_for_cont_dic_opr"
+        },
+        {
+          "found": false,
+          "name": "ebitda",
+          "path": "resCmpData[].re_ebitda"
+        },
+        {
+          "found": false,
+          "name": "filing_link",
+          "path": "resCmpData[].re_filing_link"
+        }
+      ],
+      "fixture": "results_consolidated.json",
+      "lists": [
+        {
+          "original_rows": 5,
+          "path": "resCmpData",
+          "saved_rows": 5
+        }
+      ],
+      "original_bytes": 14525,
+      "rows": 5,
+      "run_url": null,
+      "saved_bytes": 17588,
+      "unit": "unit not stated",
+      "url": "https://www.nseindia.com/api/results-comparision?symbol=RELIANCE&consolidated=true"
+    },
+    {
+      "captured_at": "2026-10-29T11:46:08+00:00",
+      "captured_by": "local",
+      "endpoint": "results_filings",
+      "fields": [
+        {
+          "found": true,
+          "name": "period_start",
+          "path": "[].fromDate"
+        },
+        {
+          "found": true,
+          "name": "period_end",
+          "path": "[].toDate"
+        },
+        {
+          "found": true,
+          "name": "consolidated",
+          "path": "[].consolidated"
+        },
+        {
+          "found": true,
+          "name": "audited",
+          "path": "[].audited"
+        },
+        {
+          "found": true,
+          "name": "filed_at",
+          "path": "[].filingDate"
+        },
+        {
+          "found": true,
+          "name": "xbrl_link",
+          "path": "[].xbrl"
+        },
+        {
+          "found": false,
+          "name": "details_link",
+          "path": "[].resultDetailedDataLink"
+        }
+      ],
+      "fixture": "results_filings.json",
+      "lists": [
+        {
+          "original_rows": 130,
+          "path": "$",
+          "saved_rows": 20
+        }
+      ],
+      "original_bytes": 101760,
+      "rows": 130,
+      "run_url": null,
+      "saved_bytes": 18529,
+      "unit": "unit not stated",
+      "url": "https://www.nseindia.com/api/corporates-financial-results?index=equities&period=Quarterly&symbol=RELIANCE"
+    },
+    {
+      "captured_at": "2026-10-29T11:46:08+00:00",
+      "captured_by": "local",
+      "endpoint": "announcements",
+      "fields": [
+        {
+          "found": true,
+          "name": "symbol",
+          "path": "[].symbol"
+        },
+        {
+          "found": true,
+          "name": "subject",
+          "path": "[].desc"
+        },
+        {
+          "found": true,
+          "name": "announced_at",
+          "path": "[].an_dt"
+        },
+        {
+          "found": true,
+          "name": "title",
+          "path": "[].attchmntText"
+        },
+        {
+          "found": true,
+          "name": "attachment",
+          "path": "[].attchmntFile"
+        },
+        {
+          "found": true,
+          "name": "exchange_ref",
+          "path": "[].seq_id"
+        },
+        {
+          "found": true,
+          "name": "industry",
+          "path": "[].smIndustry"
+        }
+      ],
+      "fixture": "announcements.json",
+      "lists": [
+        {
+          "original_rows": 3374,
+          "path": "$",
+          "saved_rows": 20
+        }
+      ],
+      "original_bytes": 2910087,
+      "rows": 3374,
+      "run_url": null,
+      "saved_bytes": 17530,
+      "unit": "unit not stated",
+      "url": "https://www.nseindia.com/api/corporate-announcements?index=equities&symbol=RELIANCE"
+    },
+    {
+      "captured_at": "2026-10-29T11:46:08+00:00",
+      "captured_by": "local",
+      "endpoint": "announcements_market",
+      "fields": [
+        {
+          "found": true,
+          "name": "symbol",
+          "path": "[].symbol"
+        },
+        {
+          "found": true,
+          "name": "subject",
+          "path": "[].desc"
+        },
+        {
+          "found": true,
+          "name": "announced_at",
+          "path": "[].an_dt"
+        },
+        {
+          "found": true,
+          "name": "title",
+          "path": "[].attchmntText"
+        },
+        {
+          "found": true,
+          "name": "attachment",
+          "path": "[].attchmntFile"
+        },
+        {
+          "found": true,
+          "name": "exchange_ref",
+          "path": "[].seq_id"
+        },
+        {
+          "found": true,
+          "name": "industry",
+          "path": "[].smIndustry"
+        }
+      ],
+      "fixture": "announcements_market.json",
+      "lists": [
+        {
+          "original_rows": 3484,
+          "path": "$",
+          "saved_rows": 20
+        }
+      ],
+      "original_bytes": 2432858,
+      "rows": 3484,
+      "run_url": null,
+      "saved_bytes": 16168,
+      "unit": "unit not stated",
+      "url": "https://www.nseindia.com/api/corporate-announcements?index=equities&from_date=23-10-2026&to_date=29-10-2026"
+    },
+    {
+      "captured_at": "2026-10-29T11:46:08+00:00",
+      "captured_by": "local",
+      "endpoint": "shareholding",
+      "fields": [
+        {
+          "found": true,
+          "name": "as_on",
+          "path": "[].date"
+        },
+        {
+          "found": true,
+          "name": "submitted_at",
+          "path": "[].submissionDate"
+        },
+        {
+          "found": true,
+          "name": "promoter",
+          "path": "[].pr_and_prgrp"
+        },
+        {
+          "found": true,
+          "name": "public",
+          "path": "[].public_val"
+        },
+        {
+          "found": true,
+          "name": "employee_trusts",
+          "path": "[].employeeTrusts"
+        },
+        {
+          "found": false,
+          "name": "fii",
+          "path": "[].fii"
+        },
+        {
+          "found": false,
+          "name": "dii",
+          "path": "[].dii"
+        },
+        {
+          "found": true,
+          "name": "xbrl_link",
+          "path": "[].xbrl"
+        }
+      ],
+      "fixture": "shareholding.json",
+      "lists": [
+        {
+          "original_rows": 23,
+          "path": "$",
+          "saved_rows": 20
+        }
+      ],
+      "original_bytes": 43031,
+      "rows": 23,
+      "run_url": null,
+      "saved_bytes": 35779,
+      "unit": "unit not stated",
+      "url": "https://www.nseindia.com/api/corporate-share-holdings-master?index=equities&symbol=RELIANCE"
+    },
+    {
+      "captured_at": "2026-10-29T11:46:08+00:00",
+      "captured_by": "local",
+      "endpoint": "pledges",
+      "fields": [
+        {
+          "found": false,
+          "name": "symbol",
+          "path": "data[].symbol"
+        },
+        {
+          "found": true,
+          "name": "company",
+          "path": "data[].comName"
+        },
+        {
+          "found": true,
+          "name": "shares_held",
+          "path": "data[].totPromoterHolding"
+        },
+        {
+          "found": true,
+          "name": "shares_pledged",
+          "path": "data[].numSharesPledged"
+        },
+        {
+          "found": true,
+          "name": "pledged_pct_of_total",
+          "path": "data[].percSharesPledged"
+        },
+        {
+          "found": true,
+          "name": "promoter_pct",
+          "path": "data[].percPromoterHolding"
+        },
+        {
+          "found": true,
+          "name": "promoter_shares_pct",
+          "path": "data[].percPromoterShares"
+        },
+        {
+          "found": true,
+          "name": "quarter_end",
+          "path": "data[].shp"
+        },
+        {
+          "found": true,
+          "name": "disclosed_at",
+          "path": "data[].broadcastDt"
+        }
+      ],
+      "fixture": "pledges.json",
+      "lists": [
+        {
+          "original_rows": 1,
+          "path": "comNameList",
+          "saved_rows": 1
+        },
+        {
+          "original_rows": 1,
+          "path": "data",
+          "saved_rows": 1
+        }
+      ],
+      "original_bytes": 670,
+      "rows": 1,
+      "run_url": null,
+      "saved_bytes": 869,
+      "unit": "unit not stated",
+      "url": "https://www.nseindia.com/api/corporate-pledgedata?index=equities&symbol=ADANIENT"
+    },
+    {
+      "captured_at": "2026-10-29T11:46:08+00:00",
+      "captured_by": "local",
+      "endpoint": "pledges_market",
+      "fields": [
+        {
+          "found": false,
+          "name": "symbol",
+          "path": "data[].symbol"
+        },
+        {
+          "found": true,
+          "name": "company",
+          "path": "data[].comName"
+        },
+        {
+          "found": true,
+          "name": "shares_held",
+          "path": "data[].totPromoterHolding"
+        },
+        {
+          "found": true,
+          "name": "shares_pledged",
+          "path": "data[].numSharesPledged"
+        },
+        {
+          "found": true,
+          "name": "pledged_pct_of_total",
+          "path": "data[].percSharesPledged"
+        },
+        {
+          "found": true,
+          "name": "promoter_pct",
+          "path": "data[].percPromoterHolding"
+        },
+        {
+          "found": true,
+          "name": "promoter_shares_pct",
+          "path": "data[].percPromoterShares"
+        },
+        {
+          "found": true,
+          "name": "quarter_end",
+          "path": "data[].shp"
+        },
+        {
+          "found": true,
+          "name": "disclosed_at",
+          "path": "data[].broadcastDt"
+        }
+      ],
+      "fixture": "pledges_market.json",
+      "lists": [
+        {
+          "original_rows": 1555,
+          "path": "comNameList",
+          "saved_rows": 20
+        },
+        {
+          "original_rows": 1558,
+          "path": "data",
+          "saved_rows": 20
+        }
+      ],
+      "original_bytes": 972529,
+      "rows": 1558,
+      "run_url": null,
+      "saved_bytes": 16037,
+      "unit": "unit not stated",
+      "url": "https://www.nseindia.com/api/corporate-pledgedata?index=equities"
+    },
+    {
+      "captured_at": "2026-10-29T11:46:08+00:00",
+      "captured_by": "local",
+      "endpoint": "equity_list",
+      "fields": [
+        {
+          "found": true,
+          "name": "SYMBOL",
+          "path": "SYMBOL"
+        },
+        {
+          "found": true,
+          "name": "NAME OF COMPANY",
+          "path": "NAME OF COMPANY"
+        },
+        {
+          "found": true,
+          "name": "SERIES",
+          "path": "SERIES"
+        },
+        {
+          "found": true,
+          "name": "DATE OF LISTING",
+          "path": "DATE OF LISTING"
+        },
+        {
+          "found": true,
+          "name": "PAID UP VALUE",
+          "path": "PAID UP VALUE"
+        },
+        {
+          "found": true,
+          "name": "MARKET LOT",
+          "path": "MARKET LOT"
+        },
+        {
+          "found": true,
+          "name": "ISIN NUMBER",
+          "path": "ISIN NUMBER"
+        },
+        {
+          "found": true,
+          "name": "FACE VALUE",
+          "path": "FACE VALUE"
+        }
+      ],
+      "fixture": "equity_list.csv",
+      "lists": [],
+      "original_bytes": 185023,
+      "rows": 2620,
+      "run_url": null,
+      "saved_bytes": 185023,
+      "unit": "unit not stated",
+      "url": "https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv"
+    }
+  ],
+  "generated_at": "2026-10-29T11:46:08+00:00",
+  "run_url": null
+}

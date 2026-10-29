@@ -41,7 +41,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | --- | --- |
 | Language | Python 3; standard library only (`urllib`, `http.cookiejar`, `json`, `gzip`, `zipfile`, `subprocess`, `statistics`, `zoneinfo`, `html`) |
 | External tools | `pdftotext` from poppler-utils; `pypdf` only if `pdftotext` is missing |
-| Entry points | `python3 -m ipo_agent.<module>`: `snapshot`, `quiet`, `rhp`, `outcomes`, `trends`, `email_render` |
+| Entry points | `python3 -m ipo_agent.<module>`: `snapshot`, `quiet`, `rhp`, `outcomes`, `trends`, `email_render`; `nse_stock_smoke` is a development probe, not a routine entry point |
 | Packaging | None needed; the routine's setup script installs only poppler-utils and `pypdf` ([SETUP.md](../SETUP.md)) |
 | Runtime | Claude Code cloud environment; network allowlist for NSE, NSE archives, Investorgain, SEBI and BSE |
 | Schedule | Weekdays 09:07 and 19:07 IST |
@@ -98,7 +98,7 @@ Names are planned; values are never committed.
 | `opencode.json`, `.opencode/` | DeepSeek's permissions, planner agent, workflow commands | Running |
 | `tests/` | Agent tests | Decided |
 | `web/` | Next.js app, migrations, import script | Proposed (same repo; [arch.md § Open questions](arch.md#9-open-questions)) |
-| `.github/workflows/` | Import and CI | Decided |
+| `.github/workflows/` | Import, CI and the NSE stock smoke test | Decided |
 
 ## Local setup
 
@@ -110,6 +110,7 @@ python3 -m ipo_agent.quiet AM               # quiet run, or prints why Claude is
 python3 -m ipo_agent.rhp <SYMBOL|url>       # extract RHP sections
 python3 -m ipo_agent.outcomes --no-fetch    # listing scorecard
 python3 -m ipo_agent.email_render reports/<date>-<am|pm>.json
+python3 -m ipo_agent.nse_stock_smoke --dry-run   # print the NSE stock smoke URLs without calling NSE
 ```
 
 Scheduled routine setup: [SETUP.md](../SETUP.md). The web app (`web/`) needs Node.js 20.9 or later:

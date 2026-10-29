@@ -400,6 +400,6 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | Gemini free quotas and grounding for the chosen model (read in AI Studio) | Quotas, platform cap, news step | Week 1 |
 | App host | Deployment, secrets | Week 4 |
 | Auth library and ORM | Accounts, schema migrations | Week 1 |
-| Confirmed NSE endpoints for quotes and filings | Stock worker | Week 1 |
+| NSE stock data still unconfirmed after task 003: quote (403 locally and from a GitHub runner), consolidated results, FII/DII split, EBITDA and filing link in results. Confirmed endpoints: [data-sources.md](data-sources.md#nse-stock-data) | Stock worker | Task 014 |
 | Backups for app-owned data (Neon free tier keeps a short history) | Users, watchlists | Before real users |
 | Same repo or separate repo for the app | Import Action, CI, worker | Week 1 |

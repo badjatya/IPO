@@ -1,0 +1,38 @@
+name: NSE stock smoke test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["task/003-*"]
+    paths:
+      - "ipo_agent/nse_stock_smoke.py"
+      - ".github/workflows/nse-stock-smoke.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nse-stock-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run the NSE stock probe
+        run: python3 -m ipo_agent.nse_stock_smoke --save tests/fixtures/nse_stock --json-out nse-smoke.json --capture-source github-runner
+      - name: Upload the probe output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nse-stock-smoke
+          path: |
+            nse-smoke.json
+            tests/fixtures/nse_stock/
+          if-no-files-found: warn
+          retention-days: 14
