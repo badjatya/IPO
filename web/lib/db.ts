@@ -1,5 +1,7 @@
 import { neon, type NeonQueryFunction } from "@neondatabase/serverless";
+import { Pool } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
+import { drizzle as drizzlePool, type NeonDatabase } from "drizzle-orm/neon-serverless";
 import { parseEnv } from "@neon/env";
 import * as schema from "@/db/schema";
 import config from "@/neon";
@@ -24,4 +26,28 @@ export function db() {
     database = drizzle(sql(), { schema });
   }
   return database;
+}
+
+// Neon's WebSocket `Pool`, exposed for the one place an interactive transaction is needed: the
+// import (task 008), which writes one transaction per commit (ADR-0025). `pg` stays a
+// devDependency for the test harness only. Node 22+ provides the global WebSocket the Pool needs,
+// so no neonConfig.webSocketConstructor override. One pool, cached like `db()`.
+let pool: Pool | undefined;
+let poolDatabase: NeonDatabase<typeof schema> | undefined;
+
+export function poolDb() {
+  if (!poolDatabase) {
+    const { postgres } = parseEnv(config, ["DATABASE_URL"]);
+    pool = new Pool({ connectionString: postgres.databaseUrl });
+    poolDatabase = drizzlePool(pool, { schema });
+  }
+  return poolDatabase;
+}
+
+export async function closePool() {
+  if (pool) {
+    await pool.end();
+    pool = undefined;
+    poolDatabase = undefined;
+  }
 }
