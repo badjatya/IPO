@@ -236,3 +236,32 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - Added `.opencode/agents/planner.md` (can only edit `docs/tasks/`) and four commands, one per workflow step.
   - Checked opencode's docs for the permission format: the last matching rule wins, `*` matches across folders, and edit patterns are relative to the project root.
 - **Not verified live:** Claude Code loads hooks when a session starts, so they haven't run in a real session yet. The tests feed them the same JSON Claude Code sends.
+
+### 2026-10-29 (later): Task roadmap
+
+- **Human asked for:** every task from here to a finished system, step by step, each with a description, whether it's done, and what it depends on, in a file DeepSeek can plan from and Claude can review against.
+- **AI did:**
+  - Wrote `docs/tasks/ROADMAP.md`:
+    - 26 tasks with IDs matching their task folders, each with a slug, its dependencies, owner, done-when checks, docs to read and the `/plan-task` line
+    - 13 human decisions (D01–D13), one gate (G1: does NSE answer from GitHub's runners) and 6 setup steps (H01–H06)
+    - milestones M1 (IPO side live, a complete submission on its own), M2 (stock side) and M3 (complete)
+  - Checked that every dependency points to an earlier task (so there are no cycles), that the summary table, the task entries and the graph agree, and that every link resolves.
+  - Changed `/plan-task` and `AGENTS.md` so a roadmap task keeps its roadmap ID instead of taking the next free number.
+- **AI flagged for a human decision:**
+  - **D09:** the stock worker needs a Postgres driver and a Gemini client, and neither is in the standard library. ADR-0002 binds only `ipo_agent/`. Also, `tech.md` says one Gemini module is shared by the TypeScript app and the Python worker, which can't work.
+  - **D10:** no doc sets the alert thresholds.
+  - The watchlist's 50-stock cap is hard-coded in `db.md`, against rule 6.
+  - The docs don't say whether IPO pages need sign-in.
+  - Two Decided items weren't built: AI provenance in the routine's cards and reports, and the "documents are data" rule in `ROUTINE.md`. Both are now task 004.
+
+### 2026-10-29 (later): A worktree per task
+
+- **Human asked for:** each task to get its own git branch and worktree, named by task ID, so several tasks can be worked on at once and Claude can review each one easily.
+- **AI did:**
+  - Checked opencode's docs. Started inside a git worktree, opencode takes the worktree as the project root and reads that worktree's `opencode.json`, so the path-based deny rules keep working there. Agent permissions override global ones, and the last matching rule wins.
+  - Changed `/plan-task` to run from the main checkout and create `task/NNN-slug` with its worktree at `.worktrees/NNN-slug/` (gitignored).
+  - Changed `/revise-plan`, `/build-task` and `/respond-review` to run only in a session opened inside that worktree. Each one checks first.
+  - Changed Claude's `review-plan` and `review-code` skills to read, test and commit inside the worktree, and never check out a task branch in the main checkout.
+  - Added a deny rule for `.worktrees/*` to the main checkout's opencode permissions, because path rules like `analysis/*` don't match inside a nested worktree. The planner gets a narrow exception for `.worktrees/*/docs/tasks/*`.
+  - Closed a gap: `git -C <path> push` slipped past the `git push*` deny rule.
+  - Dry-ran creating and removing a worktree; `git status` stayed clean.

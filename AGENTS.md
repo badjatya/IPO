@@ -32,18 +32,18 @@ Read these before planning, as far as your task touches them:
 
 ## Task workflow
 
-Every task lives in `docs/tasks/NNN-short-slug/`, where `NNN` is the next free number. The full workflow and the templates are in [docs/tasks/README.md](docs/tasks/README.md).
+Every task lives in `docs/tasks/NNN-short-slug/`, where `NNN` is the task's ID in [docs/tasks/ROADMAP.md](docs/tasks/ROADMAP.md), or the next unused number for a task that isn't in it. The roadmap lists every task with its dependencies and status. Only the human or Claude edits it, on `main`. The full workflow and the templates are in [docs/tasks/README.md](docs/tasks/README.md).
+
+**One branch and one worktree per task.** Each task's branch `task/NNN-short-slug` is checked out in its own git worktree at `.worktrees/NNN-short-slug/` (gitignored). The main checkout stays on `main`. Several tasks can therefore be planned, built and reviewed at the same time, with one opencode session per worktree. Never check out a task branch in the main checkout or in another task's worktree.
 
 In opencode, each step is a command:
 
-- `/plan-task <task>` runs on the `planner` agent, which can only edit `docs/tasks/`.
-- `/revise-plan NNN`
-- `/build-task NNN`
-- `/respond-review NNN`
+- `/plan-task <task>`: run from the main checkout. It creates the branch and the worktree. It runs on the `planner` agent, which can only edit `docs/tasks/`.
+- `/revise-plan NNN`, `/build-task NNN`, `/respond-review NNN`: run in an opencode session opened inside the task's worktree (`cd .worktrees/NNN-short-slug && opencode`). Each command stops if it isn't.
 
-The project's `opencode.json` denies `git push` and edits to the routine's files.
+The project's `opencode.json` denies `git push` and edits to the routine's files. In the main checkout it also denies edits under `.worktrees/`, because its path rules only match inside the session's own worktree.
 
-1. **Plan.** DeepSeek creates the branch `task/NNN-short-slug` from `main`, copies `docs/tasks/templates/plan.md` into the task folder and fills it in. It writes no code in this step. It sets `status: plan-review`, commits the plan and stops.
+1. **Plan.** DeepSeek creates the branch `task/NNN-short-slug` from `main` together with its worktree, copies `docs/tasks/templates/plan.md` into the task folder in the worktree and fills it in. It writes no code in this step. It sets `status: plan-review`, commits the plan and stops.
    - Use opencode's plan agent to think. Switch to the build agent only to save the plan file.
    - If a plugin or skill (such as superpowers) wants to save plans somewhere else, save them in the task folder instead.
 2. **Plan review.** Claude writes `plan-review.md` in the task folder, with a verdict of **Approved** or **Changes requested**.
@@ -52,7 +52,7 @@ The project's `opencode.json` denies `git push` and edits to the routine's files
 5. **Code review.** Claude writes `code-review.md` with findings and a verdict. On **Changes requested**, DeepSeek fixes the findings, answers each one in `code-review.md` under "Responses", and sets `status: code-review` again.
 6. **Done.** Claude approves, the human merges, and the status becomes `done`.
 
-**Each agent commits only its own step's files, and only on the task branch.** No agent pushes. The human pushes and merges.
+**Each agent commits only its own step's files, and only on the task branch, in the task's worktree.** No agent pushes. The human pushes, merges and removes the worktree.
 
 ## Project rules
 

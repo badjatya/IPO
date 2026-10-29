@@ -4,6 +4,9 @@
     "bash": {
       "*": "allow",
       "git push*": "deny",
+      "git -C * push*": "deny",
+      "git worktree remove*": "ask",
+      "git worktree prune*": "ask",
       "git merge*": "ask",
       "git rebase*": "ask",
       "git reset --hard*": "ask",
@@ -26,7 +29,8 @@
       "CLAUDE.md": "deny",
       ".claude/*": "deny",
       "opencode.json": "deny",
-      ".opencode/*": "deny"
+      ".opencode/*": "deny",
+      ".worktrees/*": "deny"
     }
   }
 }

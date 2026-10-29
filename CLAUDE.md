@@ -27,8 +27,8 @@ Coding is split between agents ([ADR-0019](docs/adr/0019-deepseek-builds-claude-
 
 When asked to review a task, use the `/review-plan NNN` or `/review-code NNN` skill. They follow these steps:
 
-1. Read `AGENTS.md` (the rules both agents enforce), `docs/tasks/README.md` (the reviewer guide, statuses and severities), and the task folder `docs/tasks/NNN-*/`.
+1. Work in the task's worktree `.worktrees/NNN-*/` (branch `task/NNN-*`); never check out a task branch in the main checkout. Read `AGENTS.md` (the rules both agents enforce), `docs/tasks/README.md` (the reviewer guide, statuses and severities), and the task folder `docs/tasks/NNN-*/` there.
 2. Write `plan-review.md` or `code-review.md` from `docs/tasks/templates/`, as a new round section. Never rewrite an earlier round.
-3. Set the `status:` line in the task's `plan.md`, and commit only the review file and that status change on the task branch. Don't push.
+3. Set the `status:` line in the task's `plan.md`, and commit only the review file and that status change in the worktree (`git -C .worktrees/NNN-*`). Don't push.
 
 Don't build a task assigned to DeepSeek unless the human asks. Put fixes in the review as findings.
