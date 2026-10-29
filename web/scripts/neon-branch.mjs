@@ -16,8 +16,8 @@ import { spawnSync } from "node:child_process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { dirname, resolve } from "node:path";
 
-const API = "https://neon.tech/api/v2";
-const WORKTREE_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const API = "https://console.neon.tech/api/v2";
+const WEB_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 // --- pure helpers (offline-tested in tests/neon-branch.test.ts) -----------------
 
@@ -151,7 +151,7 @@ async function main() {
 
     // Migrate over the direct connection (PgBouncer breaks session state).
     const migrate = spawnSync("npx", ["--no-install", "drizzle-kit", "migrate"], {
-      cwd: WORKTREE_ROOT,
+      cwd: WEB_ROOT,
       env: { ...process.env, DATABASE_URL_UNPOOLED: unpooledUri },
       stdio: "inherit",
     });
@@ -165,7 +165,7 @@ async function main() {
       "npx",
       ["--no-install", "vitest", "run", "--config", "vitest.db.config.mts"],
       {
-        cwd: WORKTREE_ROOT,
+        cwd: WEB_ROOT,
         env: { ...process.env, DATABASE_URL: pooledUri, NEON_TEST_BRANCH_ID: branchId },
         stdio: "inherit",
       },
@@ -198,7 +198,7 @@ async function main() {
     const branch = { name: branchName, parent_id: defaultBranch.id, init_source: "schema-only" };
     if (withExpiry) branch.expires_at = expiryStamp();
     return api(
-      `/projects/${projectId}/branches?connection_uris=true`,
+      `/projects/${projectId}/branches`,
       { method: "POST", body: JSON.stringify({ branch, endpoints: [{ type: "read_write" }] }) },
       apiKey,
     );
