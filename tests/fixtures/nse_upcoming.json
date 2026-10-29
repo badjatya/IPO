@@ -1,0 +1,16 @@
+[
+  {
+    "symbol": "ACME",
+    "companyName": "Acme Industries Limited",
+    "series": "EQ",
+    "issueStartDate": "30-Oct-2026",
+    "issueEndDate": "03-Nov-2026"
+  },
+  {
+    "symbol": "BETA",
+    "companyName": "Beta Corp Limited",
+    "series": "EQ",
+    "issueStartDate": "02-Nov-2026",
+    "issueEndDate": "04-Nov-2026"
+  }
+]

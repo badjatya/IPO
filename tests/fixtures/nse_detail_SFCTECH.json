@@ -1,0 +1,24 @@
+{
+  "companyName": "SFC Environmental Technologies Limited",
+  "issueInfo": {
+    "dataList": [
+      {"title": "", "value": ""},
+      {"title": "Symbol", "value": "SFCTECH"},
+      {"title": "Issue Period", "value": "27-Oct-2026 to 29-Oct-2026"},
+      {"title": "Price Range", "value": "Rs. 313 to Rs. 330"},
+      {"title": "Bid Lot", "value": "45 Equity Shares"},
+      {"title": "Face Value", "value": "Rs. 2 per Equity Share"},
+      {"title": "Red Herring Prospectus", "value": "https://nsearchives.nseindia.com/content/ipo/RHP_SFCTECH.zip"},
+      {"title": "Anchor Allocation Report", "value": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_SFCTECH.zip"}
+    ]
+  },
+  "bidDetails": [
+    {"category": "Qualified Institutional Buyers", "noOfSharesOffered": "4,045,641", "noOfsharesBid": "6,120", "noOfTime": "0.00"},
+    {"category": "Non Institutional Investors", "noOfSharesOffered": "3,034,231", "noOfsharesBid": "714,465", "noOfTime": "0.24"},
+    {"category": "Non Institutional Investors more than ten lakh", "noOfSharesOffered": "2,022,821", "noOfsharesBid": "376,560", "noOfTime": "0.19"},
+    {"category": "Non Institutional Investors between two lakh and ten lakh", "noOfSharesOffered": "1,011,410", "noOfsharesBid": "337,905", "noOfTime": "0.33"},
+    {"category": "Retail Individual Investors", "noOfSharesOffered": "7,079,872", "noOfsharesBid": "1,435,005", "noOfTime": "0.20"},
+    {"category": "Total", "noOfSharesOffered": "14,159,744", "noOfsharesBid": "2,155,590", "noOfTime": "0.15"},
+    {"category": "Foreign Institutional Investors", "noOfSharesOffered": "", "noOfsharesBid": "5", "noOfTime": "0"}
+  ]
+}

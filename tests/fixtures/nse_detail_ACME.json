@@ -1,0 +1,15 @@
+{
+  "companyName": "Acme Industries Limited",
+  "issueInfo": {
+    "dataList": [
+      {"title": "", "value": ""},
+      {"title": "Symbol", "value": "ACME"},
+      {"title": "Issue Period", "value": "30-Oct-2026 to 03-Nov-2026"},
+      {"title": "Price Range", "value": "Rs. 245 to Rs. 250"},
+      {"title": "Bid Lot", "value": "60 Equity Shares"}
+    ]
+  },
+  "bidDetails": [
+    {"category": "Total", "noOfSharesOffered": "100000", "noOfsharesBid": "0", "noOfTime": "0"}
+  ]
+}
