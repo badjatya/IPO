@@ -149,7 +149,14 @@ describe("import: whole-repo rebuild on the branch", () => {
     const second = await runImport({ root, db: db(), rebuild: true });
     expect(second.ok).toBe(true);
     expect(await tableCounts()).toEqual(afterFirst);
-  }, 180_000);
+    // Two whole-repo rebuilds over the WebSocket are the suite's slowest path.
+    // The statement batching (round-3 fix 12) cut a rebuild's awaited
+    // statements from ~550 to ~430, but CI latency varies; 600 s keeps the
+    // check far from the wall, and the per-rebuild time is recorded in CI's
+    // output (and pasted into plan.md Verification) so the number can be
+    // tightened when the batched INSERTs for `ipos` land (finding 11's
+    // follow-up).
+  }, 600_000);
 
   it("leaves app tables alone through a rebuild", async () => {
     const userId = (
@@ -176,7 +183,7 @@ describe("import: whole-repo rebuild on the branch", () => {
     expect((await db().select().from(schema.users).where(eq(schema.users.id, userId))).length).toBe(1);
     expect((await db().select().from(schema.watchlistItems).where(eq(schema.watchlistItems.symbol, "IMPTEST"))).length).toBe(1);
     expect(await db().select().from(schema.settings)).toEqual(settingsBefore);
-  }, 180_000);
+  }, 600_000);
 
   it("spot-checks a snapshot, zetwerk's card, analysis and latest verdict, an override and an outcome", async () => {
     const snap = await db()

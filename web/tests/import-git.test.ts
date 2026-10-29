@@ -9,6 +9,7 @@ import {
   firstParentHistory,
   headSha,
   lastCommitTouching,
+  lastCommitsTouching,
   listResearchFilesAtHead,
   mainlineCommitsAfter,
   readFileAt,
@@ -211,5 +212,23 @@ describe("lastCommitTouching", () => {
     expect(lastCommitTouching(repo, REPORT)).toBe(c3);
     expect(lastCommitTouching(repo, CARD)).toBe(c1);
     expect(lastCommitTouching(repo, SIDE_SNAPSHOT)).toBe(side);
+  });
+});
+
+describe("lastCommitsTouching", () => {
+  it("matches per-file lastCommitTouching results in one git log pass", () => {
+    // The batched form must agree with the per-file form on every path — for
+    // the files the side branch brought in through the --no-ff merge (whose
+    // merge commit lists no paths of its own) as much as for the rest.
+    const files = listResearchFilesAtHead(repo);
+    const touchedBy = lastCommitsTouching(repo, files);
+    for (const path of files) {
+      expect(touchedBy.get(path)).toBe(lastCommitTouching(repo, path));
+    }
+    expect(touchedBy.size).toBe(files.length);
+  });
+
+  it("leaves a path no commit touched absent from the result", () => {
+    expect(lastCommitsTouching(repo, ["analysis/never-existed.json"]).size).toBe(0);
   });
 });
