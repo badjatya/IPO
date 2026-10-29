@@ -37,3 +37,22 @@ The items below are about the test harness's limits and one mis-filed "decision"
 - **design.md:** changing the "Sign-in, admin settings" row to plain labelled inputs is within the plan's remit, because design.md says "the task that builds the page confirms or changes it", and 010's pages already use plain inputs. That's fine.
 - **GET without the origin check** is fine: it changes nothing, and it's same-origin JSON behind the session cookie.
 - **No upper bounds:** none are in db.md, and none may be invented (rule 6). The validator's lower bounds come straight from db.md's table.
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Approved
+
+**Read:** the revised plan.md (Revisions row 1) against round 1's five items.
+
+### Changes requested
+
+None.
+
+### Notes
+
+- **Item 1:** the block adds no sign-in calls. It reuses `adminCookie` and a file-level `userCookie` that the role-check test assigns, and sits between the role-check test and the rate-limit test. The plan states the bucket budget and the reason.
+- **Item 2:** "Decisions needed" reads "None". The D08 statement now lives in Approach and Risks, and the 404 test still proves the cap row stays absent.
+- **Item 3:** the page converts with `Number(...)` and blocks empty or non-numeric input. The page test asserts `typeof value === "number"` on the exact posted body.
+- **Item 4:** a row with an unknown key renders read-only with the label and no input, and has a page test.
+- **Item 5:** the done-when 403 is mapped to the API. The page path's redirect is 010's layout, already tested.
+- **For the build:** keep the role-check test's existing assertions as they are when you add the `userCookie` assignment. Push nothing; Claude pushes the branch for CI's `db` job at code review.
