@@ -6,7 +6,7 @@
 
 ## Context
 
-Roadmap decision D09: where the stock worker's Python code lives, and how it takes dependencies. Task 003 proved the NSE stock endpoints; the worker (task 018) will run on GitHub Actions ([ADR-0018](adr/0018-stock-worker-on-github-actions.md)) and write to the app's Postgres, and the analyses will be written by Gemini. The IPO routine's standard-library rule ([ADR-0002](adr/0002-standard-library-only-agent.md)) binds `ipo_agent/` only, so the worker's code can do things `ipo_agent/` cannot — but the fetcher layer (task 014) needs no third-party packages.
+Roadmap decision D09: where the stock worker's Python code lives, and how it takes dependencies. Task 003 proved the NSE stock endpoints; the worker (task 018) will run on GitHub Actions ([ADR-0018](0018-stock-worker-on-github-actions.md)) and write to the app's Postgres, and the analyses will be written by Gemini. The IPO routine's standard-library rule ([ADR-0002](0002-standard-library-only-agent.md)) binds `ipo_agent/` only, so the worker's code can do things `ipo_agent/` cannot — but the fetcher layer (task 014) needs no third-party packages.
 
 There is also a Gemini wrinkle: [tech.md](../tech.md) said "one module that the app (Ask) and the stock worker share". The app is TypeScript (`web/lib/`), the worker is Python, so one module cannot serve both sides.
 

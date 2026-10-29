@@ -59,7 +59,7 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Data access | Drizzle ORM; drizzle-kit for versioned migrations ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Decided |
 | Database driver | `@neondatabase/serverless`: HTTP for queries, WebSocket `Pool` for interactive transactions; connection in `web/lib/db.ts` ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
 | Auth | An auth library for Next.js with a Postgres adapter; Google sign-in or password (no emailed links, because the app sends no email) | Open |
-| AI | Google Gen AI SDK for the Gemini API, server side only, behind one module that the app (Ask) and the stock worker share | Decided |
+| AI | Google Gen AI SDK for the Gemini API, server side only, one module per side: the app's is TypeScript in `web/lib/`, the worker's is Python in `stock_worker/` (020) ([ADR-0026](adr/0026-stock-worker-code-location.md)) | Decided |
 | UI | shadcn/ui components in `web/components/ui/`, Tailwind CSS v4, theme in `web/app/globals.css`; see [design.md](design.md) | Running |
 | Charts | GMP and subscription trends, results trends, the track record | Open |
 | Tests | Vitest, React Testing Library, jsdom; tests in `web/tests/` ([ADR-0024](adr/0024-vitest-for-app-tests.md)) | Running |
