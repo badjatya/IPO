@@ -53,7 +53,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [002](#002--ci-workflow) | CI workflow | 1 | 001 | Done |
 | [003](#003--nse-stock-data-spike) | NSE stock-data spike and runner smoke test | 1 | — | Done |
 | [004](#004--routine-provenance-and-documents-as-data) | Routine provenance and documents-as-data | 1 | 001 | **Ready** |
-| [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | **Ready** |
+| [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | Done |
 | [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | **Ready** |
 | [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Blocked |
 | [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | Blocked |
@@ -91,7 +91,7 @@ flowchart LR
         T002[002 CI]:::done
         T003[003 NSE spike]:::done
         T004[004 provenance]:::ready
-        T005[005 figures check]:::ready
+        T005[005 figures check]:::done
     end
     subgraph wk2 ["Week 2: web app, IPO side"]
         T006[006 scaffold]:::ready
@@ -289,7 +289,7 @@ Make the routine's cards and reports carry `ai_model`, `ai_prompt_version` and `
 | | |
 | --- | --- |
 | Slug | `005-figures-check` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | 001, 002 |
 | Owner | DeepSeek plans and builds the script and the CI job; any hook change in `.claude/` is applied by the human |
 | Milestone | M1 |
@@ -300,6 +300,11 @@ A standard-library script that checks that every ₹ figure in `analysis/<key>.m
 - **Watch for:** crore and lakh, commas, rounding, and figures written in words. Analyses written from web search before the RHP (card `source: web`) are skipped. Whether a low score fails CI or only reports is a decision for the plan.
 - **Read:** [ai.md § Guardrails and § Evals](../ai.md#guardrails), `ROUTINE.md` analysis template, a few files in `analysis/`.
 - **Start:** `/run-task 005`
+- **Result:** merged 2026-10-29. This was the first task run through `/run-task`.
+  - **Who did what:** DeepSeek (OpenRouter) planned and built it, and Claude reviewed it. It took two plan rounds and two code rounds. DeepSeek's four steps cost $0.30.
+  - **What it adds:** `ipo_agent/figures_check.py` and its tests, the CI step, and the report-only post-write hook. Claude applied the hook change at the human's request.
+  - **First run:** 54 of 316 ₹ figures found (17%) across 13 analyses.
+  - **Follow-up:** reading the RHP tables' unit headers is listed under "Optional" below.
 
 ## Week 2: web app and the IPO side
 
@@ -680,6 +685,7 @@ Final product name across the app and docs, a sweep of status labels (every buil
 
 | Item | Where | Would depend on |
 | --- | --- | --- |
+| Figures check reads RHP table unit headers ("(₹ million)", "(₹ in lakhs)"), so bare table cells become candidates and the share rises honestly. For example, zetwerk's ₹6,508 Cr appears in its RHP only as `65,075.72` under "(₹ million)" | [005 code review](005-figures-check/code-review.md) | 005 (done) |
 | Analysis quality review: a second Claude pass grades each analysis against the template | [ai.md § Evals](../ai.md#evals) | 005 |
 | Regression set: replay past IPOs after an instruction change and compare calls and figures | [ai.md § Evals](../ai.md#evals) | 001, 005 |
 | Changes to `ROUTINE.md` reviewed through a PR | [ai.md § Human review](../ai.md#human-review-in-the-product) | 002 (done) |

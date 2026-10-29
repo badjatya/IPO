@@ -345,3 +345,21 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - Added the `/run-task NNN` skill. It runs the loop and stops for the human on decisions, setup steps, packages to install, a third round without approval, a broken write rule, and `merge-ready`.
   - Removed `opencode.json` and `.opencode/`. Superseded ADR-0019 with ADR-0021, and updated `AGENTS.md`, `CLAUDE.md`, the task guide, the roadmap and the docs.
 - **Notable finding:** an advisor model pointed out that file-tool rules can't stop code run through `python3 -m unittest`, which can write anywhere. The driver now checks every changed path and commit after each step. It also replaces the API key in every tool result and blocks a step whose files hold it, because such a script could read `.env.local`. The docs describe these checks, Claude's review and "only the human pushes" as the boundary, not the file tools.
+
+### 2026-10-29 (later): Task 005, figures check
+
+- **Asked:** the human started `/run-task 005`. Later the human asked Claude to do the rest as well: the `.claude/` hook, the merge, the push and the roadmap.
+- **Rounds:**
+  - **Plan:** two rounds. The human chose report-only when the plan asked.
+  - **Code:** two rounds.
+  - **Cost:** DeepSeek's steps cost $0.30 in total: plan $0.017, revise $0.009, build $0.205, respond $0.071.
+- **Notable findings:**
+  - **Plan review:** the planned hook printed its report to stderr and exited 0. Claude Code never shows that to Claude, so the report would have been invisible. It now uses `additionalContext`.
+  - **Plan review:** rounding tolerance now comes from the digits written, and price-band ranges count both ends.
+  - **Code review, Blocker:** a "USD" guard dropped most rupee figures written in prose.
+  - **Code review, Major:** `Rs.` matched the end of words like "peers.".
+  - **DeepSeek's correction:** DeepSeek showed that fixing the guard left the total unchanged at 54/316. Claude reran it and confirmed.
+- **Result:** the guardrail and the eval are Running. Across 13 analyses, 54 of 316 ₹ figures were found in the RHP text (17%).
+- **Learned:**
+  - The two-model loop caught real bugs on both sides. DeepSeek's build was solid apart from one over-broad guard.
+  - The driver blocked DeepSeek from running its own CI command, so the driver now allows the agent's offline commands.
