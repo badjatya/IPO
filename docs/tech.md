@@ -23,9 +23,10 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Web language | TypeScript, strict mode | Running | [0023](adr/0023-typescript-strict.md) |
 | Database | PostgreSQL on Neon (free tier) | Running | [0010](adr/0010-postgresql-on-neon.md) |
 | ORM and migrations | Drizzle ORM, drizzle-kit migrations, on Neon's serverless driver | Running | [0025](adr/0025-drizzle-on-neon-serverless-driver.md) |
-| Auth | Auth library for Next.js, sessions in Postgres | Open | — |
+| Auth | Better Auth (Drizzle adapter), sessions in Postgres; email and password, admin invites only | Running | [0028](adr/0028-better-auth-invite-only.md) |
+| Account email | Resend: invites and password resets only | Decided — no real email yet: H07's account and verified domain aren't done, and the first real invite is a manual check after 010 merges | [0028](adr/0028-better-auth-invite-only.md) |
 | UI components and styling | shadcn/ui (Base UI) with Tailwind CSS v4; rules in [design.md](design.md) | Running | [0020](adr/0020-shadcn-ui.md) |
-| Charts | Not chosen yet | Open | — |
+| Charts | shadcn/ui `chart` on Recharts, added with the first chart page | Decided | [0027](adr/0027-shadcn-charts-on-recharts.md) |
 | Sync | GitHub Actions: import on push | Decided | [0011](adr/0011-git-as-the-hand-off.md) |
 | In-app AI (Ask) | Gemini API, free tier | Decided (model Open) | [0014](adr/0014-gemini-free-api-for-ask.md) |
 | Email | Admin's brief only, through the Gmail connector; no email to users | Decided | [0015](adr/0015-email-to-admin-only.md) |
@@ -57,12 +58,12 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Framework | Next.js: server-rendered pages for IPOs, track record and stocks; API routes for the watchlist, analysis requests and progress, Ask, admin settings and worker dispatch | Decided |
 | Language | TypeScript, with strict mode ([ADR-0023](adr/0023-typescript-strict.md)) | Running |
 | Data access | Drizzle ORM; drizzle-kit for versioned migrations ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
-| Database driver | `@neondatabase/serverless`: HTTP for queries, WebSocket `Pool` for interactive transactions; connection in `web/lib/db.ts` (`db()` one-shot, `poolDb()` the transaction client, ADR-0025) | Running |
+| Database driver | `@neondatabase/serverless`: HTTP for queries, WebSocket `Pool` for interactive transactions; connection in `web/lib/db.ts` (`db()` one-shot, `poolDb()` the transaction client, [ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
 | Import script | `web/lib/import/` + `web/scripts/import.ts`, run with `tsx`: turns the repo's research files into rows, one transaction per commit, with a rebuild command ([db.md § Import and rebuild](db.md#import-and-rebuild)) | Running |
-| Auth | An auth library for Next.js with a Postgres adapter; Google sign-in or password (no emailed links, because the app sends no email) | Open |
+| Auth | Better Auth with its Drizzle adapter and database sessions. Email and password only; sign-up is off and the admin invites users. Invite and reset links are sent with the `resend` SDK behind a small mail module that tests replace ([ADR-0028](adr/0028-better-auth-invite-only.md)) | Running |
 | AI | Google Gen AI SDK for the Gemini API, server side only, one module per side: the app's is TypeScript in `web/lib/`, the worker's is Python in `stock_worker/` (020) ([ADR-0026](adr/0026-stock-worker-code-location.md)) | Decided |
 | UI | shadcn/ui components in `web/components/ui/`, Tailwind CSS v4, theme in `web/app/globals.css`; see [design.md](design.md) | Running |
-| Charts | GMP and subscription trends, results trends, the track record | Open |
+| Charts | shadcn/ui `chart` (`web/components/ui/chart.tsx`, added by the first chart task) on Recharts, coloured by the `--chart-*` tokens; client components fed plain arrays by server pages. For GMP and subscription trends, results trends and the track record ([ADR-0027](adr/0027-shadcn-charts-on-recharts.md)) | Decided |
 | Tests | Vitest, React Testing Library, jsdom; tests in `web/tests/` ([ADR-0024](adr/0024-vitest-for-app-tests.md)) | Running |
 | Lint and type check | oxlint (`npm run lint`), `tsc --noEmit` (`npm run typecheck`) | Running |
 | Product name and disclaimer | `web/lib/site.ts`: the name is a placeholder until D13; the footer shows the disclaimer on every page | Running |
@@ -74,12 +75,13 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Anthropic: Claude Code routine | IPO research only | Personal Claude Pro plan (existing; nothing extra paid) | Running |
 | Google: Gemini API | Ask | Free tier: per-project quotas (check AI Studio); prompts may be used by Google | Decided |
 | GitHub | Repo, Actions (import, CI, stock worker) | Free: about 2,000 Actions minutes a month for a private repo (third-party sources; check GitHub's billing page) | Repo and CI running; import and stock worker decided |
+| Resend | Account emails: invites and password resets | Free tier; needs a verified sending domain | Decided — H07's account and verified domain aren't done; first real invite is a manual check after 010 merges |
 | Neon | PostgreSQL; branch per test run and preview | Free: 1 GB per project, 100 compute-hours a month, pauses when idle | Decided |
 | App host | Next.js | Not chosen yet | Open |
 
 ## Configuration and secrets
 
-Names are planned; values are never committed. The app's variables are listed, empty, in `web/.env.example`; a test keeps that file in step with this table.
+Names; values are never committed. The app's variables are listed, empty, in `web/.env.example`; a test keeps that file in step with this table. `AUTH_SECRET`, `RESEND_API_KEY` and `EMAIL_FROM` are required in production (task 010 fails fast at server start without them); locally and in tests, a missing mail key means print-mode email and a dev-only `AUTH_SECRET` fallback.
 
 | Variable | Used by | Purpose |
 | --- | --- | --- |
@@ -88,7 +90,10 @@ Names are planned; values are never committed. The app's variables are listed, e
 | `NEON_API_KEY` | CI | Neon API key scoped to the project, so CI can create a database branch per test run (Actions secret) |
 | `NEON_PROJECT_ID` | CI | The Neon project, `dark-field-33023581` (Actions variable, not secret) |
 | `GEMINI_API_KEY` | App, stock worker | Ask; stock analyses and summaries |
-| `AUTH_SECRET` | App | Session signing |
+| `AUTH_SECRET` | App | Session signing; required in production (missing → the server fails at start) |
+| `RESEND_API_KEY` | App | Sends invite and password-reset emails; required in production |
+| `EMAIL_FROM` | App | The from-address for account emails, on the domain verified in Resend; required in production |
+| `AUTH_URL` | App | The app's public URL — Better Auth's `baseURL` and the same-origin target for the app's own cookie-authenticated routes (task 010) |
 | `GITHUB_DISPATCH_TOKEN` | App | Fine-grained token that can only dispatch the stock worker workflow |
 | `config/delivery.json` | Routine | The admin's email address for the brief (running) |
 | `OPENROUTER_API_KEY` | Dev tooling: `.claude/deepseek/deepseek.py` | DeepSeek through OpenRouter. In the main checkout's `.env.local` (gitignored); never in CI (running) |
@@ -99,7 +104,7 @@ Names are planned; values are never committed. The app's variables are listed, e
 | Path | Contents | Status |
 | --- | --- | --- |
 | `ipo_agent/` | Python research agent | Running |
-| `stock_worker/` | NSE stock fetchers (014): quote probe, results, announcements, shareholding, pledges; standard library, reusing `ipo_agent/net.py` | New in 014 ([ADR-0026](adr/0026-stock-worker-code-location.md)) |
+| `stock_worker/` | NSE stock fetchers (014): quote probe, results, announcements, shareholding, pledges; alert rules (016: `stock_worker/alerts.py` — pure change detection, no network); standard library, reusing `ipo_agent/net.py` | New in 014; alert rules in 016 ([ADR-0026](adr/0026-stock-worker-code-location.md), [ADR-0029](adr/0029-alert-thresholds-and-severities.md)) |
 | `analysis/`, `reports/`, `data/` | Research output (system of record) | Running |
 | `docs/` | Project, architecture, stack, database, AI, sources, ADRs, plan | Running |
 | `CLAUDE.md`, `ROUTINE.md` | Instructions for Claude (routine and reviewer) | Running |
@@ -107,7 +112,7 @@ Names are planned; values are never committed. The app's variables are listed, e
 | `docs/tasks/` | Task plans, reviews and responses | Running |
 | `.claude/` | Claude Code skills, subagents, hooks, the DeepSeek driver (`.claude/deepseek/`), and their tests | Running |
 | `tests/` | Agent tests (`python3 -m unittest discover -s tests`, saved fixtures only) | Running |
-| `web/` | Next.js app, the Drizzle schema (`web/db/schema.ts`) and its checked-in migrations (`web/db/migrations/`); the import script (`web/lib/import/`, CLI `web/scripts/import.ts`) | Running ([ADR-0022](adr/0022-web-app-in-same-repo.md)) |
+| `web/` | Next.js app, the Drizzle schema (`web/db/schema.ts`) and its checked-in migrations (`web/db/migrations/`); accounts: Better Auth config and guards (`web/lib/auth.ts`, `web/lib/auth-guard.ts`), the single mail module (`web/lib/mail.ts`), the sign-in / forgot-password / reset-password pages, the admin invite page and route, and the first-admin CLI (`web/scripts/first-admin.mjs`); the import script (`web/lib/import/`, CLI `web/scripts/import.ts`) | Running ([ADR-0022](adr/0022-web-app-in-same-repo.md)) |
 | `.github/workflows/` | CI (`ci.yml`) and the NSE stock smoke test (`nse-stock-smoke.yml`) running; the import Action decided | Running / Decided |
 
 ## Local setup

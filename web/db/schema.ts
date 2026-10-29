@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { desc } from "drizzle-orm";
+import { desc, relations } from "drizzle-orm";
 import {
   bigint,
   boolean,
@@ -433,7 +433,69 @@ export const users = pgTable("users", {
   email: citext("email").notNull().unique(),
   name: text("name"),
   role: text("role").notNull().default("user"),
+  emailVerified: boolean("email_verified").notNull().default(false),
+  image: text("image"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+// Better Auth's tables (ADR-0028), task 010. The 1.7.14 model fields, snake_case,
+// in this repo's convention: camelCase property keys, snake_case columns. Ids are
+// `uuid` with a `defaultRandom()` default so the rows Better Auth writes (which
+// never carry an id with `advanced.database.generateId: "uuid"` + the Postgres
+// adapter, which reports `supportsUUIDs`) get the database-generated uuid.
+// `account.password` is the credential hash store — never `users`.
+export const session = pgTable("session", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  token: text("token").notNull().unique(),
+  userId: uuid("user_id")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+  expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+  ipAddress: text("ip_address"),
+  userAgent: text("user_agent"),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const account = pgTable(
+  "account",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    accountId: text("account_id").notNull(),
+    providerId: text("provider_id").notNull(),
+    password: text("password"),
+    accessToken: text("access_token"),
+    refreshToken: text("refresh_token"),
+    idToken: text("id_token"),
+    accessTokenExpiresAt: timestamp("access_token_expires_at", { withTimezone: true }),
+    refreshTokenExpiresAt: timestamp("refresh_token_expires_at", { withTimezone: true }),
+    scope: text("scope"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [uniqueIndex("account_provider_id_account_id_unique").on(table.providerId, table.accountId)],
+);
+
+export const verification = pgTable("verification", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  identifier: text("identifier").notNull(),
+  value: text("value").notNull(),
+  expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+// Better Auth's database rate-limit store (`rateLimit.storage: "database"`).
+// `last_request` holds `Date.now()` milliseconds as a bigint, never a timestamp.
+export const rateLimit = pgTable("rate_limit", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  key: text("key").notNull().unique(),
+  count: integer("count").notNull(),
+  lastRequest: bigint("last_request", { mode: "number" }).notNull(),
 });
 
 export const watchlistItems = pgTable(
@@ -556,3 +618,24 @@ export const imports = pgTable("imports", {
 export const watchedSymbols = pgView("watched_symbols", {
   symbol: text("symbol").notNull(),
 }).as(sql`select distinct ${watchlistItems.symbol} from ${watchlistItems}`);
+
+// ---------------------------------------------------------------------------
+// Relations for Better Auth's Drizzle adapter (task 010)
+// ---------------------------------------------------------------------------
+// Better Auth's adapter loads sessions and users with relational queries
+// (db.query.*.findFirst({ with: ... })), so the joined tables need relations.
+// The `with` keys it builds are the plural of the joined model — "users" for a
+// session→user join, "accounts" for a user→account join — so the relation
+// *names* follow that, even though each is a one-to-one/one-to-many over users.
+// Nothing else in the app uses these relations.
+export const userRelations = relations(users, ({ many }) => ({
+  accounts: many(account),
+}));
+
+export const sessionRelations = relations(session, ({ one }) => ({
+  users: one(users, { fields: [session.userId], references: [users.id] }),
+}));
+
+export const accountRelations = relations(account, ({ one }) => ({
+  users: one(users, { fields: [account.userId], references: [users.id] }),
+}));

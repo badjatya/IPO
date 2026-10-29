@@ -58,13 +58,13 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Done |
 | [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | **Ready** |
 | [009](#009--import-action) | Import Action on push | 2 | 002, 008, H02 | Blocked |
-| [010](#010--accounts) | Accounts: sign-up, sign-in, roles | 2 | 007, D04 | Blocked |
+| [010](#010--accounts) | Accounts: invite-only sign-in, roles | 2 | 007, D04 | Done |
 | [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | Blocked |
 | [012](#012--track-record-page) | Track record page | 2 | 008, D06 | Blocked |
-| [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | Blocked |
+| [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | **Ready** |
 | [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | Done |
 | [015](#015--stock-universe) | Stock universe | 2 | 008, 014 | Blocked |
-| [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | **Ready** |
+| [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | Done |
 | [017](#017--watchlist) | Watchlist | 3 | 010, 015 | Blocked |
 | [018](#018--stock-worker-scheduled-numbers-and-alerts) | Stock worker, scheduled: numbers and alerts | 3 | 007, 014, 015, 016, G1, H02 | Blocked |
 | [019](#019--stock-pages) | Stock pages | 3 | 017, 018, D06 | Blocked |
@@ -75,6 +75,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [024](#024--security-review-and-fixes) | Security review and fixes | 4 | 013, 022, 023 | Blocked |
 | [025](#025--hosting-environments-and-backups) | Hosting, environments and backups | 4 | 009–013, D11, D12, H05 | Blocked |
 | [026](#026--submission-package) | Submission package | 4 | 024, 025, D13 | Blocked |
+| [027](#027--xbrl-shareholding-parsing-fiidii) | XBRL shareholding parsing (FII/DII) | 3 | 014, 016 | **Ready** |
 
 ## Dependency graph
 
@@ -98,7 +99,7 @@ flowchart LR
         T007[007 schema]:::done
         T008[008 import script]:::ready
         T009[009 import Action]
-        T010[010 accounts]
+        T010[010 accounts]:::done
         T011[011 IPO pages]
         T012[012 track record]
         T013[013 admin settings]
@@ -106,13 +107,14 @@ flowchart LR
     subgraph stocks ["Weeks 2–3: stock side"]
         T014[014 stock fetchers]:::done
         T015[015 stock universe]:::m2
-        T016[016 alert rules]:::ready
+        T016[016 alert rules]:::done
         T017[017 watchlist]:::m2
         T018[018 worker: scheduled]:::m2
         T019[019 stock pages]:::m2
         T020[020 Gemini + summaries]:::m2
         T021[021 worker: on request]:::m2
         T022[022 requests + loading]:::m2
+        T027[027 XBRL FII/DII]:::ready
     end
     subgraph wk4 ["Week 4: Ask, hardening, launch"]
         T023[023 Ask]
@@ -130,7 +132,8 @@ flowchart LR
     T003 --> T014
     T014 --> T015 & T016 & T018
     T015 --> T017 & T018
-    T016 --> T018
+    T016 --> T018 & T027
+    T014 --> T027
     T017 --> T019
     T018 --> T019 & T020
     T020 --> T021
@@ -151,13 +154,13 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 | D01 | App in the same repo (`web/`) or a separate repo | Decided: same repo, `web/` ([ADR-0022](../adr/0022-web-app-in-same-repo.md)) | 006 | [x] |
 | D02 | TypeScript (strict) for the web app | Decided: TypeScript, strict ([ADR-0023](../adr/0023-typescript-strict.md)) | 006 | [x] |
 | D03 | ORM and migration tool (Drizzle or Prisma) | Decided: Drizzle with drizzle-kit, on Neon's serverless driver ([ADR-0025](../adr/0025-drizzle-on-neon-serverless-driver.md)) | 007 | [x] |
-| D04 | Auth library, and Google sign-in or password (no emailed links, [ADR-0015](../adr/0015-email-to-admin-only.md)) | Open | 010 | [ ] |
+| D04 | Auth library, and Google sign-in or password | Decided by the human on 2026-10-30: Better Auth, email and password, no public sign-up; the admin invites users, and invite and password-reset links go out through Resend ([ADR-0028](../adr/0028-better-auth-invite-only.md), superseding ADR-0015 for those two emails) | 010 | [x] |
 | D05 | UI components and styling | Decided: shadcn/ui with Tailwind CSS ([ADR-0020](../adr/0020-shadcn-ui.md)) | 006 | [x] |
-| D06 | Charts library | Open | 011, 012, 019 | [ ] |
+| D06 | Charts library | Decided by the human on 2026-10-30: shadcn/ui's `chart` component on Recharts, added with `npx shadcn@latest add chart` by the first task that draws a chart ([ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)) | 011, 012, 019 | [x] |
 | D07 | App test runner | Decided: Vitest with React Testing Library ([ADR-0024](../adr/0024-vitest-for-app-tests.md)) | 006 | [x] |
 | D08 | Gemini model(s), free-tier quotas and search grounding, read in AI Studio. Sets the default for `analysis_daily_limit_platform` and confirms `ask_daily_limit_per_user` | Open ([db.md § settings](../db.md#settings)). Task 007 seeded no row for the cap; while it's missing the gate is closed and no analysis is dispatched (human, 2026-10-30) | 020, 021, 023 | [ ] |
 | D09 | Stock worker code: where it lives (new package or inside `ipo_agent/`) and its dependencies. It needs a Postgres driver and a Gemini client, and neither is in the standard library. [ADR-0002](../adr/0002-standard-library-only-agent.md) binds only `ipo_agent/`. Also, [tech.md](../tech.md#web-platform) says one Gemini module is shared by the app and the worker, which can't be one module across TypeScript and Python | Decided by the human at 014's plan review (2026-10-29): a new top-level package `stock_worker/`, importing `ipo_agent/net.py`; standard library in 014, later pinned packages through the package's own requirements file (Postgres driver in 018, Gemini SDK in 020); one Gemini module per side, TypeScript in `web/lib/` and Python in `stock_worker/`. Recorded in [ADR-0026](../adr/0026-stock-worker-code-location.md), accepted by the human on 2026-10-30 (option A) | 014, 020 | [x] |
-| D10 | Alert thresholds (pledge up, promoter holding down, FII and DII moves) and severities, and whether they live in `settings` or code | Not in the docs | 016 | [ ] |
+| D10 | Alert thresholds (pledge up, promoter holding down, FII and DII moves) and severities, and whether they live in `settings` or code | Decided by the human at 016's plan review (2026-10-30): pledge up ≥ 1.00 pp, promoter holding down ≥ 2.00 pp, FII/DII move ≥ 1.00 pp either way, quarter on quarter; `results` → info, `announcement`/`fii_move`/`dii_move` → watch, `pledge_up`/`promoter_down` → warning; held in code (`stock_worker/alerts.py`), no `settings` rows. Recorded in [ADR-0029](../adr/0029-alert-thresholds-and-severities.md), accepted by the human on 2026-10-30 | 016 | [x] |
 | D11 | App host | Open | 025 | [ ] |
 | D12 | Backups for app-owned data (users, watchlists) | Open ([arch.md § 9](../arch.md#9-open-questions)) | 025 | [ ] |
 | D13 | Product name | Open ([plan.md](../plan.md#open-decisions)); the app uses a placeholder until then | 026 | [ ] |
@@ -173,8 +176,9 @@ Accounts and secrets that only the human can create. Values never go into git ([
 | H02 | Add `DATABASE_URL` as a GitHub Actions secret (for the import Action and the stock worker) | 009, 018 | [ ] |
 | H03 | Create the Gemini API key in AI Studio; add `GEMINI_API_KEY` to the local environment and as an Actions secret | 020, 023 | [ ] |
 | H04 | Create a fine-grained `GITHUB_DISPATCH_TOKEN` that can only dispatch the stock worker workflow | 022 | [ ] |
-| H05 | Create the host account and set its environment: `DATABASE_URL`, `GEMINI_API_KEY`, `AUTH_SECRET`, `GITHUB_DISPATCH_TOKEN` | 025 | [ ] |
+| H05 | Create the host account and set its environment: `DATABASE_URL`, `GEMINI_API_KEY`, `AUTH_SECRET`, `RESEND_API_KEY`, `EMAIL_FROM`, `GITHUB_DISPATCH_TOKEN` | 025 | [ ] |
 | H06 | Create a Neon API key and add it as an Actions secret, so CI can create a database branch per test run ([db.md § Migrations](../db.md#migrations-and-environments)). Done 2026-10-29: key `github-actions-ci`, scoped to the project, in the `NEON_API_KEY` secret; `NEON_PROJECT_ID` is an Actions variable | 007 | [x] |
+| H07 | Create a Resend account and API key, and verify a sending domain; put `RESEND_API_KEY` and `EMAIL_FROM` in `web/.env.local`. Until a domain is verified, Resend's test sender delivers only to the account owner's address. 010's tests don't need it (the mail module is replaced in tests); a real invite does. 010 is merged; its last done-when check, a real invite arriving, waits on this step | 010 (manual check), 025 | [ ] |
 
 ## Already in place
 
@@ -186,7 +190,7 @@ Nothing below needs a task. Evidence is in the repo.
 | Research output as the system of record | `analysis/`, `reports/`, `data/` |
 | Docs: project, architecture, stack, database, AI design, data sources, plan, journal | `docs/`, commit `c1e113d` |
 | UI design rules: component kit, theme, status colours, number formats, layout | `docs/design.md`, commit `33c5a73` |
-| ADRs 0001–0026 | `docs/adr/` |
+| ADRs 0001–0029 | `docs/adr/` |
 | Two-agent workflow: rules, statuses, reviewer guide, templates | `AGENTS.md`, `docs/tasks/`, commit `fecb83d` |
 | Claude Code guardrails: push guard, card and report schema check on write, with tests | `.claude/hooks/guard.py`, `.claude/hooks/test_guard.py` |
 | Claude Code skills and subagents | `.claude/skills/`, `.claude/agents/` |
@@ -414,16 +418,17 @@ A GitHub Actions workflow that runs the import on every push to `main` that touc
 | | |
 | --- | --- |
 | Slug | `010-accounts` |
-| Status | Blocked |
+| Status | Done |
 | Depends on | 007, D04 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
 
-Sign-up and sign-in with the library and method chosen in D04, with sessions in Postgres and `users.role`. Includes a way to make the first admin, route guards, rate limits on sign-in, CSRF protection, and every user query scoped to the signed-in user.
+Invite-only accounts with Better Auth ([ADR-0028](../adr/0028-better-auth-invite-only.md)): email and password sign-in, sessions in Postgres through the Drizzle adapter, and `users.role`. **No public sign-up.** An admin invites a user by email, and the user gets a one-time link, sent through Resend, to set their password. Users can reset a forgotten password by an emailed link. Includes a way to make the first admin, an admin-only invite form (a minimal one; the settings page is 013), route guards, rate limits on sign-in and reset requests, CSRF protection, and every user query scoped to the signed-in user.
 
-- **Done when:** a user can sign up, sign in and out; admin-only routes refuse other users; tests cover scoping and the role check.
-- **Watch for:** the app sends no email ([ADR-0015](../adr/0015-email-to-admin-only.md)), so there are no magic links and no reset emails. The first-admin mechanism is for the plan to propose. No user data goes in git.
-- **Read:** [db.md § users](../db.md#users), [arch.md § 7.1](../arch.md#71-security-and-trust-boundaries).
+- **Done when:** sign-up is refused; an admin can invite a user, and the invited user can set a password, sign in and sign out; an invite or reset link works once and expires; "forgot password" doesn't reveal whether an account exists; admin-only routes refuse other users; tests cover scoping, the role check, invite and reset with the mail module replaced; db.md, tech.md and arch.md mark accounts as Running.
+- **Watch for:** db.md's `users` columns stay (`uuid` id, `citext` email, `role`), with Better Auth mapped onto them, and its tables come in through a drizzle-kit migration. Tests never call Resend. Account emails carry only the link, never research. The first-admin mechanism is for the plan to propose, and it must not be a public route. The app sends no other email (no alert digests). No user data goes in git. DeepSeek can't run `npm install`, so `/run-task` stops for the human to add `better-auth` and `resend`.
+- **Built (merged 2026-10-30):** Better Auth 1.7.14 on the Drizzle adapter, with `users` mapped as Better Auth's user model and four auth tables (`session`, `account`, `verification`, `rate_limit`) in migration `0003`. It adds sign-in, forgot-password and reset-password pages, the admin-only invite page and `POST /api/admin/invite`, a proxy cookie check behind the authoritative guards (`lib/auth-guard.ts`: `requireAdmin`, `assertSameOrigin`), print-mode mail outside production, and database rate limits. The first admin is `node web/scripts/first-admin.mjs <email>`, then `/forgot-password` ([ADR-0030](../adr/0030-first-admin-bootstrap.md)). The Neon-branch auth suite (`web/tests/db/auth.test.ts`) passes in CI. Still pending: a real invite through Resend, after H07.
+- **Read:** [ADR-0028](../adr/0028-better-auth-invite-only.md), [db.md § users](../db.md#users), [arch.md § 7.1](../arch.md#71-security-and-trust-boundaries), [tech.md § Configuration](../tech.md#configuration-and-secrets).
 - **Start:** `/run-task 010`
 
 ### 011 · IPO pages
@@ -436,11 +441,12 @@ Sign-up and sign-in with the library and method chosen in D04, with sessions in 
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
 
-**Today:** IPOs that are open, closing or upcoming, with the latest numbers, card and call. **IPO detail:** the analysis, card, verdict history, GMP and subscription trends (charts from D06), allotment odds and anchor book. Both show the "as of" time from `imports` and the GMP caveat.
+**Today:** IPOs that are open, closing or upcoming, with the latest numbers, card and call. **IPO detail:** the analysis, card, verdict history, GMP and subscription trends (charts per [ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)), allotment odds and anchor book. Both show the "as of" time from `imports` and the GMP caveat.
 
 - **Done when:** both pages render from imported data; the shown call is the day's verdict or else the card's; tests cover the queries in [db.md § Access patterns](../db.md#access-patterns).
 - **Watch for:** the app displays numbers; it doesn't recompute odds or prices ([AGENTS.md](../../AGENTS.md) rule 1). Whether IPO pages need sign-in isn't in the docs; list it under "Decisions needed".
-- **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md), a recent `reports/*.html` email for the content.
+- **Charts (D06):** shadcn's `chart` on Recharts ([ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)). The first of 011, 012 and 019 to be built runs `npx shadcn@latest add chart`; the others reuse `web/components/ui/chart.tsx`.
+- **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md), [design.md](../design.md), a recent `reports/*.html` email for the content.
 - **Start:** `/run-task 011`
 
 ### 012 · Track record page
@@ -456,7 +462,8 @@ Sign-up and sign-in with the library and method chosen in D04, with sessions in 
 Every IPO call against how it listed, from `ipo_outcomes`: a per-IPO table, the average listing gain by verdict, the average GMP miss, and the correlations listed in db.md.
 
 - **Done when:** the page matches `python3 -m ipo_agent.outcomes --no-fetch` for the same data; it warns when the sample is small, as the scorecard does.
-- **Read:** [ADR-0007](../adr/0007-listing-scorecard-as-eval.md), [db.md § ipo_outcomes](../db.md#ipo_outcomes), `ipo_agent/outcomes.py`.
+- **Charts (D06):** shadcn's `chart` on Recharts ([ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)). The first of 011, 012 and 019 to be built runs `npx shadcn@latest add chart`; the others reuse `web/components/ui/chart.tsx`.
+- **Read:** [ADR-0007](../adr/0007-listing-scorecard-as-eval.md), [db.md § ipo_outcomes](../db.md#ipo_outcomes), `ipo_agent/outcomes.py`, [design.md](../design.md).
 - **Start:** `/run-task 012`
 
 ### 013 · Admin settings page
@@ -464,7 +471,7 @@ Every IPO call against how it listed, from `ipo_outcomes`: a per-IPO table, the 
 | | |
 | --- | --- |
 | Slug | `013-admin-settings` |
-| Status | Blocked |
+| Status | Ready |
 | Depends on | 010 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -472,6 +479,7 @@ Every IPO call against how it listed, from `ipo_outcomes`: a per-IPO table, the 
 An admin-only page that lists the `settings` rows and edits one at a time. Each value is checked against the app's list of known keys and types, and `updated_by` and `updated_at` are recorded.
 
 - **Done when:** an admin can change a value; a bad value is refused; a non-admin gets 403; tests cover all three.
+- **From 010:** guard the page and its route with `requireAdmin` and `assertSameOrigin` from `web/lib/auth-guard.ts`; the app's own routes are outside Better Auth's origin check. The admin layout (`web/app/admin/layout.tsx`) already checks the session and role for every `/admin/*` page. The Neon tests' `api()` helper in `web/tests/db/auth.test.ts` shows how to sign in and send `Origin` in tests.
 - **Read:** [db.md § settings](../db.md#settings), [AGENTS.md](../../AGENTS.md) rule 6.
 - **Start:** `/run-task 013`
 
@@ -536,7 +544,7 @@ Load NSE's list of listed equities into `stocks` (symbol, ISIN, name, industry, 
 | | |
 | --- | --- |
 | Slug | `016-alert-rules` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | 014, D10 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M2 |
@@ -545,6 +553,7 @@ Pure Python functions that compare a stock's latest filings with earlier ones, a
 
 - **Done when:** every rule has tests, including the first quarter on record and missing data (no alert); the same input never raises the same alert twice.
 - **D10 gates approval, not planning:** the plan lays out the thresholds and severities with a recommendation under "Decisions needed", and the human settles D10 at plan review.
+- **Built (merged 2026-10-30):** `stock_worker/alerts.py`. `compute_alerts(symbol, fetched, stored, existing_keys, thresholds)` covers the four change rules and `results`; `announcement_alert` is called by 020's rating step. A stock's first run raises no alerts, and only records new against `stored` can alert. FII/DII parsing went to task 027. D10 is recorded in ADR-0029 (accepted 2026-10-30).
 - **From 014:** the shareholding fetcher returns `fii_pct` and `dii_pct` as `None`, because the FII/DII split exists only in the XBRL filing. The `fii_move` and `dii_move` rules can't fire until something parses that XBRL: this task, or a separate task the plan proposes. Results are standalone only; never compare them with consolidated figures.
 - **Read:** [plan.md § Watchlist signals](../plan.md#watchlist-signals), [db.md § alerts and § shareholding](../db.md#alerts).
 - **Start:** `/run-task 016`
@@ -583,6 +592,9 @@ The GitHub Actions stock worker, scheduled twice each weekday, **without AI yet*
 - **From 014:**
   - **The fetchers:** `stock_worker.fetchers.fetch_all` returns each source's records and an `errors` list. The `since` filter on announcements takes a stored run time (a `datetime`, or a string with an offset).
   - **No quote source:** `fetch_quote` always raises `SourceError`, so `stock_quotes` stays empty. The plan must either confirm a quote source (NSE's `/api/NextApi/…` paths are the untried candidate), with one deliberate probe as in 014, or say that stock prices stay unavailable.
+- **From 016:**
+  - **Alerts:** call `stock_worker.alerts.compute_alerts` per symbol with `fetched=` (this run's results, shareholding and pledges, pledges already resolved to the symbol) and `stored=` (**every** stored record for those three series, in the 014 parsed shapes; a stored `shareholding` row with `promoter_pledged_pct` becomes one shareholding record plus one pledge record), plus `existing_keys=` (the symbol's stored alert keys). Insert the returned rows with `dedupe_key` as the conflict target. An incomplete `stored` set makes old quarters look new and bursts stale alerts, so the plan must test it.
+  - **FII/DII:** `fii_move`/`dii_move` alerts fire only after task 027 merges.
 - **Watch for:** the worker reads symbols only, no user data. It pushes only to `main` with no force. One run should stay well within free Actions minutes.
 - **Read:** [arch.md § 4.2](../arch.md#42-stock-worker-decided), [ADR-0018](../adr/0018-stock-worker-on-github-actions.md), [db.md](../db.md).
 - **Start:** `/run-task 018`
@@ -602,7 +614,8 @@ Stock detail: quote, the last 8 quarterly results with a trend chart, the last 4
 - **Done when:** the page renders from the stock tables; tests cover the queries in [db.md § Access patterns](../db.md#access-patterns).
 - **Watch for:** no buy, sell or hold wording anywhere ([ADR-0012](../adr/0012-research-not-advice.md)).
 - **From 014:** there's no confirmed quote source yet (see 018), so the page must show price and valuation as "not available" when `stock_quotes` has no row, never an estimate.
-- **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md).
+- **Charts (D06):** shadcn's `chart` on Recharts ([ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)). The first of 011, 012 and 019 to be built runs `npx shadcn@latest add chart`; the others reuse `web/components/ui/chart.tsx`.
+- **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md), [design.md](../design.md).
 - **Start:** `/run-task 019`
 
 ### 020 · Gemini client and filing summaries
@@ -619,6 +632,7 @@ The worker's Gemini client (model from D08, built as D09 says) and its first job
 
 - **Done when:** tests with a stubbed client cover each prompt; every AI column has its provenance filled; a quota error leaves the filing unsummarised for the next run.
 - **Watch for:** filing text goes into prompts as quoted data, never as instructions, and no user text at all (rules 4 and 5). No tools except search grounding. Gemini quotes numbers but never produces them.
+- **From 016:** the announcement alert fires from the rating step, not from `compute_alerts`. After Gemini writes `importance` for each of the run's **new** announcements (rate only those, never re-rate stored ones), call `stock_worker.alerts.announcement_alert` and persist the returned row (`dedupe_key` as the conflict target) with `detail` and the `ai_*` provenance. `promoter_pledged_pct` is a share of the promoter holding, not of total equity; the alert-explanation prompt must say so ([ADR-0029](../adr/0029-alert-thresholds-and-severities.md)).
 - **Read:** [ai.md](../ai.md), [ADR-0017](../adr/0017-gemini-for-stocks-claude-for-ipos.md), [db.md § Sizing and retention](../db.md#sizing-and-retention).
 - **Start:** `/run-task 020`
 
@@ -661,6 +675,23 @@ The app side of analysis on request. "Get analysis" runs the one transaction in 
   - Dispatching needs the worker workflow on `main` (021 merged).
 - **Read:** [arch.md § 5.3](../arch.md#53-a-user-asks-for-a-stock-analysis-decided), [db.md § analysis_requests](../db.md#analysis_requests), [ADR-0017](../adr/0017-gemini-for-stocks-claude-for-ipos.md).
 - **Start:** `/run-task 022`
+
+### 027 · XBRL shareholding parsing (FII/DII)
+
+| | |
+| --- | --- |
+| Slug | `027-xbrl-fii-dii` |
+| Status | **Ready** |
+| Depends on | 014, 016 |
+| Owner | DeepSeek plans and builds |
+| Milestone | M2 |
+
+Fetch and parse the shareholding XBRL filing that 014 records as `shareholding.source_url`, and fill `fii_pct` and `dii_pct` from it, so 016's `fii_move` and `dii_move` rules can fire. Added at 016's plan review (the human chose a separate task over folding XBRL into 016).
+
+- **Done when:** a parser fills `fii_pct`/`dii_pct` from saved XBRL fixtures with exact values (half-up, 2 dp, as `numeric(7,2)`); a filing without the split leaves them `None`, never estimated; 016's FII/DII rules fire on the parsed records in a test.
+- **Watch for:** standard library only in `stock_worker/` unless the plan names a pinned package ([ADR-0026](../adr/0026-stock-worker-code-location.md)). Capture the fixtures with one deliberate, budgeted live run, as 014 did; tests never call NSE.
+- **Read:** [data-sources.md § NSE stock data](../data-sources.md#nse-stock-data), [db.md § shareholding](../db.md#shareholding), `stock_worker/shareholding.py`, `stock_worker/alerts.py`.
+- **Start:** `/run-task 027`
 
 ## Week 4: Ask, hardening, launch
 

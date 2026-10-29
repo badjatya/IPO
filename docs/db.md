@@ -1,6 +1,6 @@
 # Database
 
-PostgreSQL on Neon ([ADR-0010](adr/0010-postgresql-on-neon.md)). The schema below is **Running**: task 007 built it from `web/db/schema.ts` into the checked-in migrations in `web/db/migrations/`, and the database tests run against a real, disposable Neon branch per run (§ [Migrations and environments](#migrations-and-environments)). The auth tables will take whatever shape the auth library needs, which is still **Open** (task 010).
+PostgreSQL on Neon ([ADR-0010](adr/0010-postgresql-on-neon.md)). The schema below is **Running**: task 007 built it from `web/db/schema.ts` into the checked-in migrations in `web/db/migrations/`, and the database tests run against a real, disposable Neon branch per run (§ [Migrations and environments](#migrations-and-environments)). The auth tables are Better Auth's ([ADR-0028](adr/0028-better-auth-invite-only.md)), built by task 010, and accounts are **Running**: invite-only sign-in, sessions in Postgres, one-time emailed invite and reset links, and `rate_limit` for database-backed rate limiting.
 
 The design starts from data that exists today. Every research table below maps to a JSON file the routine already writes; the mapping is in [§ Where the data comes from](#where-the-data-comes-from).
 
@@ -284,9 +284,9 @@ Index: `(symbol, period_end desc)`.
 | `filed_at` | `timestamptz` | yes | |
 | `source_url` | `text` | yes | |
 
-Quarter-on-quarter changes come from a SQL window over this table. Python's alert rules use the same comparison.
+Quarter-on-quarter changes come from a SQL window over this table. Python's alert rules use the same comparison, implemented in `stock_worker/alerts.py` (016).
 
-`fii_pct`/`dii_pct` come later from XBRL parsing (016/018); 014's fetcher leaves them missing, never estimated ([data-sources.md](data-sources.md#nse-stock-data)).
+`fii_pct`/`dii_pct` come later from XBRL parsing (task 027, settled at 016's round-1 review); 016 ships the `fii_move`/`dii_move` rules that consume them, silent until then; 014's fetcher leaves them missing, never estimated ([data-sources.md](data-sources.md#nse-stock-data)).
 
 ### `announcements`
 
@@ -314,30 +314,86 @@ Alerts belong to a stock, not to a user. Users see the alerts of the stocks they
 | `id` | `bigint` identity | PK | |
 | `symbol` | `text` | no | FK → `stocks` |
 | `kind` | `alert_kind` | no | |
-| `severity` | `severity` | no | |
+| `severity` | `severity` | no | From the settled severity map ([ADR-0029](adr/0029-alert-thresholds-and-severities.md)) |
 | `title` | `text` | no | e.g. "Promoter pledge up from 4% to 11%" (numbers from Python) |
-| `detail` | `text` | yes | Gemini's explanation |
+| `detail` | `text` | yes | Gemini's explanation, written in 020 and left `NULL` by the rules |
 | `dedupe_key` | `text` | no | Unique, e.g. `HDFCBANK:pledge_up:2026-09-30` |
-| `source_table`, `source_id` | `text` | yes | The row that triggered it |
+| `source_table`, `source_id` | `text` | yes | The row that triggered it — see the `source_id` forms below |
 | `created_at` | `timestamptz` | no | |
 
 Index: `(symbol, created_at desc)`.
+
+The rules that produce these rows are pure functions in `stock_worker/alerts.py` (016): `pledge_up` rise ≥ 1.00 pp → `warning`, `promoter_down` fall ≥ 2.00 pp → `warning`, `fii_move`/`dii_move` absolute move ≥ 1.00 pp → `watch`, `results` → `info`, `announcement` → `watch` — the settled D10 values, held in code with **no `settings` rows**. Titles and every number in them are built by Python from stated fields ("not available" for gaps); the `announcement` rule is not part of `compute_alerts` — 020's rating step calls `announcement_alert` once per announcement it has just rated, after Gemini writes `importance`.
+
+`pledge_up` also covers a stock's **first-ever pledge on record** (code review round 1, finding 1): NSE's pledge data lists only companies with a pledge disclosure, so the first pledge row has no earlier record to compare with — it fires at the same 1.00 pp threshold with a title that states only what the record states ("Promoter pledge on record for the first time: 25% of promoter holding"), never an invented 0% baseline, and only when the stock is not on first sight (some shareholding history is stored). The quarter must also be **on or after the latest stored shareholding quarter**: when the pledge series starts later than the shareholding series (a pledge fetch failed on the stock's first run, or the worker brings pledges in after shareholding), older fetched pledge quarters are baseline history — they raise no alert (code review round 2, finding 4).
+
+`dedupe_key` forms: `<SYMBOL>:<kind>:<quarter_end>` for `pledge_up`/`promoter_down`/`fii_move`/`dii_move` (e.g. `HDFCBANK:pledge_up:2026-09-30`), `<SYMBOL>:results:<period_end>`, `<SYMBOL>:announcement:<exchange_ref>`.
+
+`source_id` holds the triggering row's natural key, scoped by the alert's `symbol`: `shareholding` → its `quarter_end`, `quarterly_results` → its `period_end`, `announcements` → its `exchange_ref` — never the `announcements.id` bigint, which the pure module never sees.
 
 ## App tables
 
 ### `users`
 
-The final shape follows the auth library (**Open**). These are the fields the app itself needs.
+Better Auth owns the rest of the shape ([ADR-0028](adr/0028-better-auth-invite-only.md)); task 010 maps its user model onto these fields, which the app itself needs. The original columns are unchanged (`id`, `email`, `name`, `role`, `created_at`); task 010 added the three projection columns below. `role` is read and written through Better Auth's `user.additionalFields` mapping (`input: false`, so a client can never set it), and there are **no** ban or impersonation fields — the admin plugin is not used, the app's only admin concept is `role = 'admin'`.
 
 | Column | Type | Null | Notes |
 | --- | --- | --- | --- |
-| `id` | `uuid` | PK | |
+| `id` | `uuid` | PK | `gen_random_uuid()` default |
 | `email` | `citext` | no | Unique |
 | `name` | `text` | yes | |
 | `role` | `text` | no | `user` or `admin`; default `user`. Only an admin can change `settings` |
 | `created_at` | `timestamptz` | no | |
+| `email_verified` | `boolean` | no | Default `false` (task 010) |
+| `image` | `text` | yes | Better Auth's field; unused so far (task 010) |
+| `updated_at` | `timestamptz` | no | Default `now()` (task 010) |
 
-Plus the auth library's own tables (sessions, accounts). Users get no email from the app ([ADR-0015](adr/0015-email-to-admin-only.md)), so sign-in can't rely on emailed links.
+### `session`, `account`, `verification`, `rate_limit` — Better Auth's tables
+
+Better Auth's own tables, built by task 010 through a generated drizzle-kit migration; the Drizzle adapter maps its model onto them (all ids are `uuid`, matching `users.id`, because `advanced.database.generateId: "uuid"` makes Better Auth write `uuid`s). Passwords live **only** as hashes in `account.password`, never in `users`. There is no public sign-up: the admin invites each user, and the app emails only invite and password-reset links — both are Better Auth's one-time reset token ([ADR-0028](adr/0028-better-auth-invite-only.md)).
+
+`session` — one row per live session.
+
+| Column | Type | Null | Notes |
+| --- | --- | --- | --- |
+| `id` | `uuid` | PK | |
+| `token` | `text` | no | Unique; the session cookie's signed value |
+| `user_id` | `uuid` | no | FK → `users` (cascade delete) |
+| `expires_at` | `timestamptz` | no | |
+| `ip_address`, `user_agent` | `text` | yes | Seen at sign-in |
+| `created_at`, `updated_at` | `timestamptz` | no | |
+
+`account` — connected logins; the `credential` provider's row holds the password hash.
+
+| Column | Type | Null | Notes |
+| --- | --- | --- | --- |
+| `id` | `uuid` | PK | |
+| `user_id` | `uuid` | no | FK → `users` (cascade delete) |
+| `account_id`, `provider_id` | `text` | no | Unique `(provider_id, account_id)` |
+| `password` | `text` | yes | The credential hash; null for OAuth rows |
+| `access_token`, `refresh_token`, `id_token` | `text` | yes | OAuth tokens; unused so far |
+| `access_token_expires_at`, `refresh_token_expires_at` | `timestamptz` | yes | |
+| `scope` | `text` | yes | |
+| `created_at`, `updated_at` | `timestamptz` | no | |
+
+`verification` — the one-time-token store. Both invite and reset links are reset-password tokens: `identifier = 'reset-password:<token>'`, `value = <user id>`. A row is deleted on use, so a link works once; re-inviting deletes the user's outstanding rows first, voiding the old link.
+
+| Column | Type | Null | Notes |
+| --- | --- | --- | --- |
+| `id` | `uuid` | PK | |
+| `identifier` | `text` | no | e.g. `reset-password:<token>` |
+| `value` | `text` | no | The user id the token grants |
+| `expires_at` | `timestamptz` | no | 24 hours for both invite and reset tokens |
+| `created_at`, `updated_at` | `timestamptz` | no | |
+
+`rate_limit` — Better Auth's database rate-limit store (`rateLimit.storage: "database"`), keyed by client IP and path.
+
+| Column | Type | Null | Notes |
+| --- | --- | --- | --- |
+| `id` | `uuid` | PK | |
+| `key` | `text` | no | Unique; `<ip>:<path>` |
+| `count` | `integer` | no | Requests in the current window |
+| `last_request` | `bigint` | no | `Date.now()` **milliseconds**, never a timestamp (1.7.14's `lastRequest`) |
 
 ### `watchlist_items`
 
@@ -543,6 +599,6 @@ Estimates for planning only. Neon's free tier is 1 GB per project ([ADR-0010](ad
 
 - Schema changes are versioned migrations, checked in alongside the app. They are written with drizzle-kit and run over the direct (unpooled) connection ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)).
 - **Where they live.** The schema is written once, in TypeScript, at `web/db/schema.ts`; the table migration in `web/db/migrations/` is **generated** by drizzle-kit and never hand-edited. The custom migrations in the same folder carry the `citext` extension (created first, so the tables can use it), the `settings` seed rows, and the `watched_symbols` view if a drizzle version can't generate it. A later schema change adds a new migration — never edits a generated file — and the CI `web` job's schema-drift step fails a change to `schema.ts` that ships no migration.
-- **Insert defaults.** Where the tables above list no default for a column, the schema fills the time columns (`created_at`, `queued_at`, `requested_at`, `recorded_at`, `added_at`, `at`, `updated_at`) with `default now()`, and `users.id` / `analysis_jobs.id` (the bare `uuid` keys) with `default gen_random_uuid()` (core Postgres 13+, no extension).
+- **Insert defaults.** Where the tables above list no default for a column, the schema fills the time columns (`created_at`, `queued_at`, `requested_at`, `recorded_at`, `added_at`, `at`, `updated_at`) with `default now()`, and the bare `uuid` keys (`users.id`, `analysis_jobs.id`, and the four auth tables' ids) with `default gen_random_uuid()` (core Postgres 13+, no extension).
 - **Neon branches:** each test run gets its own branch from the main database, and the branch is deleted afterwards. Tests run against real Postgres, not a mock. Built in task 007: `npm run test:db` in `web/` (`web/scripts/neon-branch.mjs`) creates a short-lived, schema-only branch from the project's default branch, drops and recreates `public` so the migrations build the full schema from nothing, runs `drizzle-kit migrate` over the branch's unpooled URL, runs the rule and shape tests over the pooled URL, and deletes exactly that branch, refusing ever to touch the default branch or `dev`. The CI `db` job runs it on every push and pull request (`NEON_API_KEY` secret, `NEON_PROJECT_ID` variable).
 - **Seed data:** importing the repo's existing files gives a realistic dataset from day one — `npm run import -- --rebuild` in `web/` fills the research tables from the repo (that is the import's own job, task 008; the row counts are derived from the repo by the import's tests, never hard-coded).

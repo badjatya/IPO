@@ -8,6 +8,7 @@ import { sql } from "@/lib/db";
 // drizzle's naming never bitrots the checks.
 
 const baseTables = [
+  "account",
   "ai_questions",
   "alerts",
   "analysis_job_events",
@@ -23,13 +24,16 @@ const baseTables = [
   "ipo_verdicts",
   "ipos",
   "quarterly_results",
+  "rate_limit",
   "reports",
+  "session",
   "settings",
   "shareholding",
   "stock_analyses",
   "stock_quotes",
   "stocks",
   "users",
+  "verification",
   "watchlist_items",
 ];
 
@@ -57,6 +61,7 @@ function unquoted(definition: string) {
 // for the rest, `id` for the identity and uuid tables. These are what make
 // re-importing the same file update the same row (db.md principle 2).
 const primaryKeys: Record<string, string[]> = {
+  account: ["id"],
   ai_questions: ["id"],
   alerts: ["id"],
   analysis_job_events: ["id"],
@@ -72,13 +77,16 @@ const primaryKeys: Record<string, string[]> = {
   ipo_verdicts: ["report_date", "session", "ipo_key"],
   ipos: ["key"],
   quarterly_results: ["symbol", "period_end", "consolidated"],
+  rate_limit: ["id"],
   reports: ["report_date", "session"],
+  session: ["id"],
   settings: ["key"],
   shareholding: ["symbol", "quarter_end"],
   stock_analyses: ["symbol"],
   stock_quotes: ["symbol"],
   stocks: ["symbol"],
   users: ["id"],
+  verification: ["id"],
   watchlist_items: ["user_id", "symbol"],
 };
 
@@ -89,7 +97,7 @@ function parsePkColumns(definition: string): string[] {
 }
 
 describe("schema shape on a real branch", () => {
-  it("has exactly the 23 db.md tables in public", async () => {
+  it("has exactly the 27 db.md tables in public", async () => {
     const rows = await sql()`
       select table_name
       from information_schema.tables
@@ -119,6 +127,69 @@ describe("schema shape on a real branch", () => {
       select table_name from information_schema.views where table_schema = 'public'
     `;
     expect(rows.map((row) => row.table_name)).toContain("watched_symbols");
+  });
+
+  it("has the auth tables with Better Auth's 1.7.14 fields (task 010)", async () => {
+    const rows = await sql()`
+      select table_name, column_name, data_type
+      from information_schema.columns
+      where table_schema = 'public' and table_name in ('session', 'account', 'verification', 'rate_limit')
+    `;
+    const byTable: Record<string, string[]> = {};
+    for (const row of rows as { table_name: string; column_name: string }[]) {
+      (byTable[row.table_name] ??= []).push(row.column_name);
+    }
+    expect(byTable.session!.toSorted()).toEqual([
+      "created_at",
+      "expires_at",
+      "id",
+      "ip_address",
+      "token",
+      "updated_at",
+      "user_agent",
+      "user_id",
+    ]);
+    expect(byTable.account!.toSorted()).toEqual([
+      "access_token",
+      "access_token_expires_at",
+      "account_id",
+      "created_at",
+      "id",
+      "id_token",
+      "password",
+      "provider_id",
+      "refresh_token",
+      "refresh_token_expires_at",
+      "scope",
+      "updated_at",
+      "user_id",
+    ]);
+    expect(byTable.verification!.toSorted()).toEqual([
+      "created_at",
+      "expires_at",
+      "id",
+      "identifier",
+      "updated_at",
+      "value",
+    ]);
+    expect(byTable.rate_limit!.toSorted()).toEqual(["count", "id", "key", "last_request"]);
+  });
+
+  it("users keeps db.md's columns and gains email_verified, image and updated_at (task 010)", async () => {
+    const rows = await sql()`
+      select column_name from information_schema.columns
+      where table_schema = 'public' and table_name = 'users'
+    `;
+    const columns = (rows as { column_name: string }[]).map((r) => r.column_name).toSorted();
+    // db.md's original columns stay exactly as they are…
+    expect(columns).toEqual(
+      expect.arrayContaining(["id", "email", "name", "role", "created_at"]),
+    );
+    // …and the Better Auth projection joins them (review item 2).
+    expect(columns).toEqual(
+      expect.arrayContaining(["email_verified", "image", "updated_at"]),
+    );
+    expect(columns).toHaveLength(8);
   });
 
   it("has the partial unique indexes that carry the rules", async () => {

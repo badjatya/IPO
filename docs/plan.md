@@ -12,7 +12,7 @@ The product grows from an IPO email into a **multi-user research app for Indian 
 | Track record | Every IPO call against how it actually listed | Data in `data/outcomes.json`; needs a page |
 | Stock watchlist | Each user picks listed stocks and gets quarterly results, an announcements digest, and shareholding and pledge changes, with alerts | To build |
 | Stock analysis on request | Full company analysis by Gemini, started in the background with a live loading screen; saved and shared; every request counts against the quota | To build ([ADR-0017](adr/0017-gemini-for-stocks-claude-for-ipos.md)) |
-| Web app | Sign-up and login, per-user watchlist, IPO and stock pages, track record | To build |
+| Web app | Invite-only login, per-user watchlist, IPO and stock pages, track record | To build |
 | SME IPOs | — | **Out of scope for now** (decided 2026-10-29) |
 | Payments | — | **None in phase 1** (decided 2026-10-29). One free tier for every user: 5 Ask questions a day, 3 new stock analyses a month |
 
@@ -49,14 +49,16 @@ Architecture decisions are recorded one per file in [adr/](adr/README.md), and s
 
 - The stock worker runs on GitHub Actions ([ADR-0018](adr/0018-stock-worker-on-github-actions.md)).
 
-Still open: auth library, ORM, Gemini model for Ask, host ([arch.md § Open questions](arch.md#9-open-questions)).
+- Accounts: Better Auth, email and password, admin invites only, invite and reset links through Resend ([ADR-0028](adr/0028-better-auth-invite-only.md), superseding ADR-0015 for those two emails).
+
+Still open: Gemini model for Ask, host ([arch.md § Open questions](arch.md#9-open-questions)).
 
 ## Week by week
 
 | Week | Dates | Build |
 | --- | --- | --- |
 | 1 | 29 Oct – 4 Nov | `tests/` for the existing code; `.claude/` skills, subagents and hooks; ADRs; database schema (users, watchlists, stocks, filings, alerts); NSE fetchers for quotes, results, announcements and shareholding, with tests |
-| 2 | 5 – 11 Nov | Web app: sign-up, login, watchlist add/remove; IPO pages; track record page; stock pages showing the Python data |
+| 2 | 5 – 11 Nov | Web app: invite-only login, watchlist add/remove; IPO pages; track record page; stock pages showing the Python data |
 | 3 | 12 – 18 Nov | Gemini stock worker: results summary, announcements digest, shareholding and pledge alerts; shared per-stock cache; on-demand stock analysis with the loading screen and quotas; admin settings page; worker smoke-tested against NSE |
 | 4 | 19 – 27 Nov | "Ask about this stock or IPO"; security review; hosting; `project.md`, `architecture.md`, form text; demo video |
 
@@ -449,3 +451,70 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - For database code, only a real run counts. Four of the five code-review blockers were invisible offline.
   - Write catalog assertions against what Postgres reports (`pg_get_expr`, column lists), not against the migration text.
   - Push a task branch with `git push origin <branch>`. A bare `git push` from the main checkout pushed `main` instead, once.
+
+### 2026-10-30: D06, charts library
+
+- **Asked:** the human asked Claude to settle D06 while another session ran a task.
+- **AI did:**
+  - Claude checked the shadcn registry: there's a `base-nova` `chart` component on Recharts 3.8.0.
+  - Claude checked the alternatives' peer dependencies: Tremor accepts only React 18, so it was dropped.
+  - Claude put three options to the human: shadcn chart on Recharts, hand-written SVG, and visx.
+- **Human decision:** shadcn chart on Recharts, the recommended option ([ADR-0027](adr/0027-shadcn-charts-on-recharts.md)).
+- **Docs:** tech.md, design.md and arch.md § Decisions now name the choice. arch.md also gains the missing 0025 and 0026 rows. On the roadmap, D06 is ticked; 011, 012 and 019 stay Blocked on their other dependencies.
+
+### 2026-10-30: D04, accounts
+
+- **Asked:** the human asked Claude to start task 010 with email and password login, admin invites only (no sign-up), and invite emails through Resend.
+- **AI did:**
+  - Claude found that sending invites conflicts with [ADR-0015](adr/0015-email-to-admin-only.md), which said the app emails no user.
+  - Claude checked the packages' peer dependencies: `better-auth` 1.7.14 accepts Next 16, React 19 and drizzle-orm 0.45, and `resend` is at 6.35.0.
+  - Claude put the auth library to the human: Better Auth, Auth.js or Neon Auth. It also asked whether "forgot password" should email a reset link, since that path comes almost free with invites.
+- **Human decisions:** Better Auth and self-serve reset by email, both the recommended options ([ADR-0028](adr/0028-better-auth-invite-only.md), superseding ADR-0015 for invite and reset emails only).
+- **Docs:** tech.md, db.md and arch.md name the choice. `web/.env.example` gains `RESEND_API_KEY` and `EMAIL_FROM`. On the roadmap, D04 is ticked, H07 (Resend account and domain) is added, and 010 is rewritten for invites and marked Ready.
+
+### 2026-10-30: Task 016, change detection and alert rules
+
+- **Asked:** the human asked Claude to start 016 ("you can pick task 16 right"), then to merge it and resolve the merge conflict.
+- **Rounds:**
+  - Three plan rounds and three code rounds.
+  - DeepSeek's six steps cost $0.16.
+  - One fix step was stopped by the driver (exit 3) for changing the ADR number in two lines of the approved plan's Doc updates. Claude's finding had asked for that edit, and the human accepted it.
+- **Human decisions:**
+  - **D10:** pledge up ≥ 1 pp, promoter holding down ≥ 2 pp, FII/DII move ≥ 1 pp; results info, pledge/promoter warning, the rest watch; held in code ([ADR-0029](adr/0029-alert-thresholds-and-severities.md), accepted 2026-10-30).
+  - **FII/DII:** XBRL parsing is a separate task 027.
+  - Each time, the human took the recommended option.
+- **AI did:**
+  - DeepSeek planned and built `stock_worker/alerts.py` (six pure rules, the `compute_alerts` orchestrator) and 46 fixture-only tests.
+  - Claude reviewed each step, and ran each edge case through the code by hand before recording it.
+  - Claude merged the branch and resolved the conflicts in `docs/arch.md` and the ADR index (main had added ADRs 0027 and 0028 meanwhile).
+- **Notable findings:**
+  - **History as news.** As first planned, a new stock's first run would have alerted every threshold crossing back to 2022, and 020 would have paid Gemini to explain each one. The rules now take `stored` and `fetched` and alert only what's new.
+  - **Dead announcement rule.** arch.md computes alerts (step 3) before Gemini rates importance (step 4), so the rule could never see a rated announcement. Hand-fed test values hid this. 020's rating step now calls it.
+  - **First-ever pledge.** NSE lists only companies with a pledge, so going from no pledge to 25% had nothing to compare with and was silent. The fix's first version then alerted a whole backfilled pledge history; quarters before the latest stored shareholding quarter are now baseline.
+  - **ADR numbering.** Two other sessions took 0027 and 0028 while 016 was in review, so its ADR became 0029.
+- **Learned:**
+  - For change detection, ask "what does the first run see?" and "what if one source failed last run?" at plan review. Both bugs were in the calling convention, not in the comparisons.
+  - Check a rule's inputs against the order of steps in arch.md, not only against the test fixtures.
+  - Reserve an ADR number late: parallel sessions take them.
+
+### 2026-10-30: Task 010, accounts
+
+- **Asked:** the human asked Claude to merge 010 once it finished and then start 013, and left it running overnight.
+- **Rounds:**
+  - Three plan rounds and four code rounds; the fourth went one past `/run-task`'s three-round stop, recorded in the review.
+  - DeepSeek's eight steps cost about $0.68.
+  - The `/run-task` session stalled overnight at `code-review`. A second Claude session took over the review, pushed the task branch so CI's `db` job could run (the human was asleep), and merged it.
+- **Human decisions:** at plan review, the first admin is a CLI script and invite and reset links share one 24-hour expiry ([ADR-0030](adr/0030-first-admin-bootstrap.md)).
+- **AI did:**
+  - DeepSeek planned and built Better Auth on the Drizzle adapter: four auth tables, the auth pages, the admin invite page and route, layered guards, print-mode mail, database rate limits, the first-admin script, and an offline suite plus a Neon-branch suite.
+  - Claude reviewed each step, checked each claim against the installed `better-auth` 1.7.14 source, and added the `AUTH_URL` line to `web/.env.example` (DeepSeek's tools can't write `.env*` files).
+- **Notable findings:**
+  - **Driver call shape.** The first-admin script called `@neondatabase/serverless` 1.x as a plain function, which the driver refuses, so no admin could ever be made. The offline test covered only the SQL text.
+  - **`__Secure-` cookie.** The proxy looked for the plain cookie name only; behind any `https` URL every admin request would have been bounced to sign-in.
+  - **Open redirect.** `next=//evil.example` on the sign-in page.
+  - **Reset link misread.** A `[token]` page was built for a link Better Auth's own endpoint already serves. The fix tests the emailed link itself.
+  - **Neon suite never ran.** It first failed on vitest's 5 s timeout, which hid every later failure behind a missing admin cookie. Vitest also sets `TEST=true`, which made Better Auth skip its origin and CSRF checks, so the forged-Origin test had never tested anything.
+  - **ADR numbering again.** 010's ADR-0029 collided with 016's at merge and became ADR-0030.
+- **Learned:**
+  - A review can't approve database code on offline tests; push the branch early so the `db` job runs in round 1.
+  - Test frameworks set environment flags that libraries read. When a security check "passes" in tests, assert that it is switched on.
