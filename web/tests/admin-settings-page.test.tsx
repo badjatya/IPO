@@ -5,7 +5,7 @@ import AdminSettingsPage from "@/app/admin/settings/page";
 // The page is tested with fetch mocked (invite-page pattern): the mount GET
 // answer, then the POST answer per test. The admin layout's guard is 010's and
 // is covered by its own tests, so the page itself carries no guard.
-const fetchMock = vi.hoisted(() => vi.fn<() => Promise<Response>>());
+const fetchMock = vi.hoisted(() => vi.fn<(url: string, init?: RequestInit) => Promise<Response>>());
 
 const seededRow = {
   key: "ask_daily_limit_per_user",
@@ -97,7 +97,7 @@ describe("admin settings page", () => {
     // The posted body is exactly { key, value } and value is a real number,
     // not the input's string.
     const [, postArgs] = fetchMock.mock.calls[1];
-    const body = JSON.parse((postArgs as { body: string }).body) as { key: string; value: unknown };
+    const body = JSON.parse(postArgs?.body as string) as { key: string; value: unknown };
     expect(body).toEqual({ key: "ask_daily_limit_per_user", value: 7 });
     expect(typeof body.value).toBe("number");
 
