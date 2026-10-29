@@ -1,9 +1,9 @@
 """Task 014's one deliberate live probe: find a working NSE quote source.
 
 Run once by the human after the build — ``python3 -m stock_worker.probe`` —
-under a hard call budget (``MAX_CALLS = 6``: 1 prime + up to 4 candidate
-fetches + 1 consolidated re-check), stopping at the first working candidate.
-It tries, in fixed order:
+under a hard call budget (``MAX_CALLS = 6``: 1 prime + up to 3 candidate
+fetches + 2 re-checks: standalone and consolidated), stopping at the first
+working candidate. It tries, in fixed order:
 
 1. ``stock_page_embedded`` — the quote JSON embedded in the stock page
    (``get-quotes/equity?symbol=X``, the page that primed the run). Parses the
@@ -14,9 +14,10 @@ It tries, in fixed order:
 3. ``trade_info`` — ``/api/quote-equity?symbol=X&section=trade_info``.
 4. ``cookie_order`` — ``/api/quote-equity?symbol=X`` with the stock page primed.
 
-The same run re-checks ``results-comparision?consolidated=true`` once under the
-same prime, comparing the body with the committed ``results_standalone.json``
-fixture, and records identical/distinct/no-baseline.
+The same run fetches ``results-comparision?symbol=X`` and its
+``…&consolidated=true`` variant back to back under the same prime and records
+``identical`` or ``distinct`` from that pair only — the committed fixtures are
+never consulted for this comparison.
 
 When a quote source answers, the probe saves ``quote.json`` (top-level lists
 trimmed to 20 rows) and upserts its ``manifest.json`` entry — the **only** two
@@ -42,7 +43,7 @@ BASE = "https://www.nseindia.com"
 DEFAULT_SYMBOL = "RELIANCE"
 DEFAULT_SAVE = Path(__file__).resolve().parents[1] / "tests" / "fixtures" / "nse_stock"
 FIXTURE_MAX_ROWS = 20
-MAX_CALLS = 6  # 1 prime + up to 4 candidate fetches + 1 consolidated re-check
+MAX_CALLS = 6  # 1 prime + up to 3 candidate fetches + 2 re-checks (standalone, consolidated)
 
 # The fixed candidate order. ``url`` is None for the embedded candidate (it
 # parses the prime's own body), "from-stock-page" for the NextApi route (read
@@ -76,6 +77,10 @@ def stock_page(symbol):
 
 def consolidated_url(symbol):
     return f"{BASE}/api/results-comparision?symbol={symbol}&consolidated=true"
+
+
+def standalone_url(symbol):
+    return f"{BASE}/api/results-comparision?symbol={symbol}"
 
 
 def trim_for_fixture(data):
@@ -168,17 +173,27 @@ def _try_candidate(candidate_id, url, symbol, prime_html, client, budget):
             return None, "unprobed: the stock page carries no _next/data URL"
         budget.spend()
         body = client.get(_full_url(route), referer=stock_page(symbol), accept="application/json")
-        return _parse_candidate_body(body), f"nextapi route {route}"
+        payload, error = _parse_candidate_body(body)
+        if error is not None:
+            return None, f"{error} ({_full_url(route)})"
+        return payload, f"nextapi route {route}"
     budget.spend()
+    target = url.format(symbol=symbol)
     body = client.get(
-        _full_url(url.format(symbol=symbol)),
+        _full_url(target),
         referer=stock_page(symbol),
         accept="application/json",
     )
-    return _parse_candidate_body(body), url.format(symbol=symbol)
+    payload, error = _parse_candidate_body(body)
+    if error is not None:
+        return None, f"{error} ({target})"
+    return payload, target
 
 
 def _parse_candidate_body(body):
+    """The candidate's body as (payload, error); ``payload`` is a dict only
+    when the body is JSON with ``priceInfo.lastPrice``, else ``None`` with the
+    reason as ``error``."""
     try:
         payload = json.loads(body.decode("utf-8") if isinstance(body, bytes) else body)
     except ValueError as exc:
@@ -232,21 +247,36 @@ def run(client, symbol, save_dir, budget):
         outcome["quote_payload"] = payload
         break
 
-    # Consolidated re-check: one call under the same prime, compared with the
-    # committed standalone fixture (read-only; never overwritten).
+    # Consolidated re-check: standalone and consolidated bodies fetched back to
+    # back under the same prime; identical/distinct is recorded only from that
+    # pair (the committed fixtures are read-only and never consulted here).
     budget.spend()
     try:
         body = client.get(
-            consolidated_url(symbol), referer=stock_page(symbol), accept="application/json"
+            standalone_url(symbol), referer=stock_page(symbol), accept="application/json"
         )
-        fetched = json.loads(body.decode("utf-8") if isinstance(body, bytes) else body)
+        standalone = json.loads(body.decode("utf-8") if isinstance(body, bytes) else body)
     except Exception as exc:
-        outcome["consolidated"] = {"result": "failed", "note": f"{type(exc).__name__}: {exc}"}
+        outcome["consolidated"] = {
+            "result": "failed",
+            "note": f"standalone fetch: {type(exc).__name__}: {exc}",
+        }
     else:
-        baseline_path = save_dir / "results_standalone.json" if save_dir else None
-        if baseline_path is not None and baseline_path.exists():
-            baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
-            if fetched == baseline:
+        budget.spend()
+        try:
+            body = client.get(
+                consolidated_url(symbol),
+                referer=stock_page(symbol),
+                accept="application/json",
+            )
+            fetched = json.loads(body.decode("utf-8") if isinstance(body, bytes) else body)
+        except Exception as exc:
+            outcome["consolidated"] = {
+                "result": "failed",
+                "note": f"consolidated fetch: {type(exc).__name__}: {exc}",
+            }
+        else:
+            if fetched == standalone:
                 outcome["consolidated"] = {
                     "result": "identical",
                     "note": "the endpoint still returns the standalone body",
@@ -256,11 +286,6 @@ def run(client, symbol, save_dir, budget):
                     "result": "distinct",
                     "note": "a distinct consolidated body answered (parsing it is 6b/016's job)",
                 }
-        else:
-            outcome["consolidated"] = {
-                "result": "no baseline",
-                "note": "no results_standalone.json next to the save dir to compare",
-            }
 
     if outcome["quote_payload"] is not None and save_dir is not None:
         _save_quote_fixture(save_dir, outcome, symbol)
@@ -332,8 +357,9 @@ def dry_run_lines(symbol):
             lines.append(f"{candidate_id}\t(_next/data/<buildId> route read from the prime page)")
         else:
             lines.append(f"{candidate_id}\t{url.format(symbol=symbol)}")
+    lines.append(f"standalone re-check\t{standalone_url(symbol)}")
     lines.append(f"consolidated re-check\t{consolidated_url(symbol)}")
-    lines.append(f"max calls: {MAX_CALLS} (1 prime + up to 4 candidate fetches + 1 consolidated)")
+    lines.append(f"max calls: {MAX_CALLS} (1 prime + up to 3 candidate fetches + 2 re-checks)")
     return lines
 
 

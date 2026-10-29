@@ -118,6 +118,9 @@ class DryRunTests(NoNetworkCase):
             lines,
         )
         self.assertIn(
+            f"standalone re-check\t{probe.standalone_url('RELIANCE')}", lines
+        )
+        self.assertIn(
             f"consolidated re-check\t{probe.consolidated_url('RELIANCE')}", lines
         )
         self.assertTrue(
@@ -129,14 +132,19 @@ class RunTests(NoNetworkCase):
     def test_embedded_candidate_wins_without_extra_fetches(self):
         routes = {
             probe.stock_page("RELIANCE"): quote_html(),
-            probe.consolidated_url("RELIANCE"): "{}",  # no baseline in this dir
+            probe.standalone_url("RELIANCE"): "{}",
+            probe.consolidated_url("RELIANCE"): "{}",
         }
         client = FakeClient(routes)
         outcome = probe.run(client, "RELIANCE", None, probe.CallBudget(probe.MAX_CALLS))
         self.assertEqual(outcome["quote_source"], "stock_page_embedded")
-        # prime + consolidated re-check only — the embedded candidate fetched nothing.
-        self.assertEqual(len(client.calls), 2)
-        self.assertEqual(outcome["consolidated"]["result"], "no baseline")
+        # prime + standalone + consolidated re-checks only — the embedded
+        # candidate fetched nothing.
+        self.assertEqual(len(client.calls), 3)
+        self.assertEqual(outcome["consolidated"]["result"], "identical")
+        # The recorded payload is the parsed dict itself, never a nested pair.
+        self.assertIsInstance(outcome["quote_payload"], dict)
+        self.assertEqual(outcome["quote_payload"]["priceInfo"]["lastPrice"], "1234.50")
 
     def test_trade_info_answers_when_embedded_and_nextapi_fail(self):
         html = "<html>no embedded quote, no _next/data</html>"
@@ -145,6 +153,7 @@ class RunTests(NoNetworkCase):
             probe.CANDIDATES[2][1].format(symbol="RELIANCE"): json.dumps(
                 {"priceInfo": {"lastPrice": "99.90", "pChange": "1.10"}}
             ),
+            probe.standalone_url("RELIANCE"): "{}",
             probe.consolidated_url("RELIANCE"): "{}",
         }
         outcome = probe.run(
@@ -154,6 +163,8 @@ class RunTests(NoNetworkCase):
         self.assertEqual(len(outcome["candidates"]), 3)
         self.assertIn("no embedded quote JSON", outcome["candidates"][0]["error"])
         self.assertIn("unprobed", outcome["candidates"][1]["error"])
+        self.assertIsInstance(outcome["quote_payload"], dict)
+        self.assertEqual(outcome["quote_payload"]["priceInfo"]["lastPrice"], "99.90")
 
     def test_nextapi_is_tried_when_the_page_carries_the_route(self):
         html = '<script>window.__N = "/_next/data/XYZ/en/quote/RELIANCE.json";</script>'
@@ -161,28 +172,111 @@ class RunTests(NoNetworkCase):
         routes = {
             probe.stock_page("RELIANCE"): html,
             probe.BASE + route: json.dumps({"priceInfo": {"lastPrice": "88.00"}}),
+            probe.standalone_url("RELIANCE"): "{}",
             probe.consolidated_url("RELIANCE"): "{}",
         }
         outcome = probe.run(
             FakeClient(routes), "RELIANCE", None, probe.CallBudget(probe.MAX_CALLS)
         )
         self.assertEqual(outcome["quote_source"], "nextapi")
+        self.assertIsInstance(outcome["quote_payload"], dict)
 
-    def test_consolidated_recheck_records_identical_against_the_fixture(self):
-        standalone = load("results_standalone.json")
+    def test_non_json_200_body_is_a_candidate_failure_and_moves_on(self):
+        # A 200 that is not a quote must not count as success: trade_info's
+        # "Access Denied" HTML is a failed candidate, and cookie_order answers.
+        html = "<html>no embedded quote, no _next/data</html>"
+        routes = {
+            probe.stock_page("RELIANCE"): html,
+            probe.CANDIDATES[2][1].format(symbol="RELIANCE"): "<html>Access Denied</html>",
+            probe.CANDIDATES[3][1].format(symbol="RELIANCE"): json.dumps(
+                {"priceInfo": {"lastPrice": "42.00"}}
+            ),
+            probe.standalone_url("RELIANCE"): "{}",
+            probe.consolidated_url("RELIANCE"): "{}",
+        }
+        outcome = probe.run(
+            FakeClient(routes), "RELIANCE", None, probe.CallBudget(probe.MAX_CALLS)
+        )
+        self.assertEqual(outcome["quote_source"], "cookie_order")
+        trade_info = outcome["candidates"][2]
+        self.assertFalse(trade_info["ok"])
+        self.assertIn("not JSON", trade_info["error"])
+        self.assertIsNone(trade_info["source"])
+        self.assertIsInstance(outcome["quote_payload"], dict)
+        self.assertEqual(outcome["quote_payload"]["priceInfo"]["lastPrice"], "42.00")
+
+    def test_json_without_last_price_is_a_candidate_failure_and_moves_on(self):
+        html = "<html>no embedded quote, no _next/data</html>"
+        routes = {
+            probe.stock_page("RELIANCE"): html,
+            probe.CANDIDATES[2][1].format(symbol="RELIANCE"): json.dumps({"error": "nope"}),
+            probe.CANDIDATES[3][1].format(symbol="RELIANCE"): json.dumps(
+                {"priceInfo": {"lastPrice": "42.00"}}
+            ),
+            probe.standalone_url("RELIANCE"): "{}",
+            probe.consolidated_url("RELIANCE"): "{}",
+        }
+        outcome = probe.run(
+            FakeClient(routes), "RELIANCE", None, probe.CallBudget(probe.MAX_CALLS)
+        )
+        self.assertEqual(outcome["quote_source"], "cookie_order")
+        trade_info = outcome["candidates"][2]
+        self.assertFalse(trade_info["ok"])
+        self.assertIn("no priceInfo.lastPrice", trade_info["error"])
+
+    def test_all_candidates_failing_writes_no_quote_json(self):
+        html = "<html>no embedded quote, no _next/data</html>"
+        routes = {
+            probe.stock_page("RELIANCE"): html,
+            probe.CANDIDATES[2][1].format(symbol="RELIANCE"): "<html>Access Denied</html>",
+            probe.CANDIDATES[3][1].format(symbol="RELIANCE"): json.dumps({"error": "nope"}),
+            probe.standalone_url("RELIANCE"): "{}",
+            probe.consolidated_url("RELIANCE"): "{}",
+        }
         with tempfile.TemporaryDirectory() as directory:
             save = Path(directory)
-            (save / "results_standalone.json").write_text(
-                json.dumps(standalone), encoding="utf-8"
-            )
-            routes = {
-                probe.stock_page("RELIANCE"): quote_html(),
-                probe.consolidated_url("RELIANCE"): json.dumps(standalone),
-            }
             outcome = probe.run(
                 FakeClient(routes), "RELIANCE", save, probe.CallBudget(probe.MAX_CALLS)
             )
-            self.assertEqual(outcome["consolidated"]["result"], "identical")
+            self.assertIsNone(outcome["quote_source"])
+            self.assertIsNone(outcome["quote_payload"])
+            self.assertFalse((save / "quote.json").exists())
+            self.assertFalse((save / "manifest.json").exists())
+
+    def test_consolidated_recheck_records_identical_for_equal_bodies(self):
+        body = json.dumps({"resCmpData": [{"x": 1}]})
+        routes = {
+            probe.stock_page("RELIANCE"): quote_html(),
+            probe.standalone_url("RELIANCE"): body,
+            probe.consolidated_url("RELIANCE"): body,
+        }
+        outcome = probe.run(
+            FakeClient(routes), "RELIANCE", None, probe.CallBudget(probe.MAX_CALLS)
+        )
+        self.assertEqual(outcome["consolidated"]["result"], "identical")
+
+    def test_consolidated_recheck_records_distinct_for_different_bodies(self):
+        routes = {
+            probe.stock_page("RELIANCE"): quote_html(),
+            probe.standalone_url("RELIANCE"): json.dumps({"resCmpData": [{"x": 1}]}),
+            probe.consolidated_url("RELIANCE"): json.dumps(
+                {"resCmpData": [{"x": 1}, {"y": 2}]}
+            ),
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            # A saved results_standalone.json must not influence the outcome:
+            # only the pair fetched in this run decides.
+            save = Path(directory)
+            (save / "results_standalone.json").write_text(
+                json.dumps({"resCmpData": [{"completely": "different"}]}),
+                encoding="utf-8",
+            )
+            outcome = probe.run(
+                FakeClient(routes), "RELIANCE", save, probe.CallBudget(probe.MAX_CALLS)
+            )
+            self.assertEqual(outcome["consolidated"]["result"], "distinct")
+            # The fixture is read-only and remains byte-identical.
+            self.assertIn('"completely": "different"', (save / "results_standalone.json").read_text())
 
     def test_run_writes_only_quote_json_and_manifest(self):
         seed_names = (
@@ -219,6 +313,9 @@ class RunTests(NoNetworkCase):
             }
             routes = {
                 probe.stock_page("RELIANCE"): quote_html(),
+                probe.standalone_url("RELIANCE"): json.dumps(
+                    load("results_standalone.json")
+                ),
                 probe.consolidated_url("RELIANCE"): json.dumps(
                     load("results_standalone.json")
                 ),
