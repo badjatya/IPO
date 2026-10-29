@@ -303,7 +303,7 @@ A standard-library script that checks that every ₹ figure in `analysis/<key>.m
 - **Result:** merged 2026-10-29. This was the first task run through `/run-task`.
   - **Who did what:** DeepSeek (OpenRouter) planned and built it, and Claude reviewed it. It took two plan rounds and two code rounds. DeepSeek's four steps cost $0.30.
   - **What it adds:** `ipo_agent/figures_check.py` and its tests, the CI step, and the report-only post-write hook. Claude applied the hook change at the human's request.
-  - **First run:** 54 of 316 ₹ figures found (17%) across 13 analyses.
+  - **First run:** 54 of 316 ₹ figures found (17%) across 13 analyses. The same result came from the first CI run on `main` ([run 40888585359](https://github.com/badjatya/IPO/actions/runs/40888585359)), with every step green.
   - **Follow-up:** reading the RHP tables' unit headers is listed under "Optional" below.
 
 ## Week 2: web app and the IPO side
