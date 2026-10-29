@@ -424,3 +424,28 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - Read a live probe's code before a human runs it: the success path had never been tested with a body that fails.
   - Check derived formulas against the fixture's own totals (here, total income − total expenses = PBT), not against the field names.
   - A step that writes a plan's outcome back into the approved part of the plan is caught by the driver. A one-line roadmap note like this is easy to accept, but the human has to look first.
+
+### 2026-10-30: Task 007, database schema and migrations
+
+- **Asked:** the human asked Claude to start task 007 with `/run-task 007`, then, after the third code round, to fix the open items and merge.
+- **Rounds:**
+  - Two plan rounds and four code rounds.
+  - DeepSeek's six steps cost $0.18.
+  - The human installed the packages (`drizzle-orm`; `drizzle-kit` and `pg` as dev dependencies) and pushed the branch so the CI `db` job could run on a real Neon branch.
+- **Human decisions:**
+  - **Platform cap:** `analysis_daily_limit_platform` stays unseeded until D08.
+  - **While unset:** the gate is closed, so no new or refreshed analysis is dispatched.
+  - Both times, the human took the recommended option.
+- **AI did:**
+  - DeepSeek planned and built the Drizzle schema (12 enums, 23 tables, the view), the migrations, the Neon-branch harness, 15 database tests and the CI jobs.
+  - Claude reviewed each step and read each CI failure from the job log before recording it.
+- **Notable findings:**
+  - **Plan.** As first written, the database tests would have run against the `dev` branch whenever `DATABASE_URL` was set. They also relied on a 7-day branch expiry that `web/neon.ts` only applies to `neon checkout`, not to branches made through the API.
+  - **Composite keys.** `.primaryKey()` on each column made drizzle-kit emit one `PRIMARY KEY` per column, which Postgres rejects. No table could have been built. The offline checks (type check, generate twice) passed throughout.
+  - **API host.** The harness called `neon.tech/api/v2`, which redirects to a 404 and drops the auth header.
+  - **Default branch.** It looked for `is_default`; the API's field is `default`.
+  - **Assertions.** On the first run that reached the database, 8 of the 15 tests failed on their own assertions. Drizzle wraps Postgres errors (`.cause`). Postgres reformats index and FK definitions. `array_agg` over `name` returns an array type the driver doesn't parse.
+- **Learned:**
+  - For database code, only a real run counts. Four of the five code-review blockers were invisible offline.
+  - Write catalog assertions against what Postgres reports (`pg_get_expr`, column lists), not against the migration text.
+  - Push a task branch with `git push origin <branch>`. A bare `git push` from the main checkout pushed `main` instead, once.

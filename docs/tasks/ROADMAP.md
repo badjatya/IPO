@@ -55,8 +55,8 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [004](#004--routine-provenance-and-documents-as-data) | Routine provenance and documents-as-data | 1 | 001 | Done |
 | [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | Done |
 | [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | Done |
-| [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | **Ready** |
-| [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | Blocked |
+| [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Done |
+| [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | **Ready** |
 | [009](#009--import-action) | Import Action on push | 2 | 002, 008, H02 | Blocked |
 | [010](#010--accounts) | Accounts: sign-up, sign-in, roles | 2 | 007, D04 | Blocked |
 | [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | Blocked |
@@ -95,8 +95,8 @@ flowchart LR
     end
     subgraph wk2 ["Week 2: web app, IPO side"]
         T006[006 scaffold]:::done
-        T007[007 schema]:::ready
-        T008[008 import script]
+        T007[007 schema]:::done
+        T008[008 import script]:::ready
         T009[009 import Action]
         T010[010 accounts]
         T011[011 IPO pages]
@@ -155,7 +155,7 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 | D05 | UI components and styling | Decided: shadcn/ui with Tailwind CSS ([ADR-0020](../adr/0020-shadcn-ui.md)) | 006 | [x] |
 | D06 | Charts library | Open | 011, 012, 019 | [ ] |
 | D07 | App test runner | Decided: Vitest with React Testing Library ([ADR-0024](../adr/0024-vitest-for-app-tests.md)) | 006 | [x] |
-| D08 | Gemini model(s), free-tier quotas and search grounding, read in AI Studio. Sets the default for `analysis_daily_limit_platform` and confirms `ask_daily_limit_per_user` | Open ([db.md § settings](../db.md#settings)) | 020, 021, 023 | [ ] |
+| D08 | Gemini model(s), free-tier quotas and search grounding, read in AI Studio. Sets the default for `analysis_daily_limit_platform` and confirms `ask_daily_limit_per_user` | Open ([db.md § settings](../db.md#settings)). Task 007 seeded no row for the cap; while it's missing the gate is closed and no analysis is dispatched (human, 2026-10-30) | 020, 021, 023 | [ ] |
 | D09 | Stock worker code: where it lives (new package or inside `ipo_agent/`) and its dependencies. It needs a Postgres driver and a Gemini client, and neither is in the standard library. [ADR-0002](../adr/0002-standard-library-only-agent.md) binds only `ipo_agent/`. Also, [tech.md](../tech.md#web-platform) says one Gemini module is shared by the app and the worker, which can't be one module across TypeScript and Python | Decided by the human at 014's plan review (2026-10-29): a new top-level package `stock_worker/`, importing `ipo_agent/net.py`; standard library in 014, later pinned packages through the package's own requirements file (Postgres driver in 018, Gemini SDK in 020); one Gemini module per side, TypeScript in `web/lib/` and Python in `stock_worker/`. Recorded in [ADR-0026](../adr/0026-stock-worker-code-location.md), accepted by the human on 2026-10-30 (option A) | 014, 020 | [x] |
 | D10 | Alert thresholds (pledge up, promoter holding down, FII and DII moves) and severities, and whether they live in `settings` or code | Not in the docs | 016 | [ ] |
 | D11 | App host | Open | 025 | [ ] |
@@ -193,6 +193,7 @@ Nothing below needs a task. Evidence is in the repo.
 | DeepSeek through OpenRouter: a driver with four steps (plan, revise, build, respond), file tools that keep to the write rules, a post-step check, and the `/run-task` loop. Replaced opencode on 2026-10-29 ([ADR-0021](../adr/0021-deepseek-on-openrouter.md)) | `.claude/deepseek/`, `.claude/skills/run-task/` |
 | Web app scaffold: Next.js App Router, strict TypeScript, shadcn/ui on Tailwind CSS v4, disclaimer footer, Vitest tests, oxlint, a `web` CI job (task 006) | `web/`, commits `c835c42`, `33c5a73`, task 006 |
 | Neon linked to the app: `web/neon.ts` branch policy (`dev` kept, other new branches expire in 7 days), the serverless driver in `web/lib/db.ts`, and a `GET /api/health/db` check. Done outside a task on 2026-10-29; task 007 builds on it ([ADR-0025](../adr/0025-drizzle-on-neon-serverless-driver.md)) | `web/neon.ts`, `web/lib/db.ts`, `web/app/api/health/db/route.ts` |
+| Database schema: every db.md table, enum and index in Drizzle, checked-in migrations, the three decided `settings` rows, `db()` over the one Neon connection, and the Neon-branch tests in a CI `db` job (task 007) | `web/db/`, `web/scripts/neon-branch.mjs`, `web/tests/db/`, task 007 |
 
 ---
 
@@ -350,7 +351,7 @@ A bare app already exists in `web/` (commits c835c42 and 33c5a73): Next.js with 
 | | |
 | --- | --- |
 | Slug | `007-db-schema` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | 006, D03, H01, H06 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -362,13 +363,24 @@ Every table, enum and index in [db.md](../db.md), written as versioned migration
 - **Watch for:** `analysis_daily_limit_platform` has no default yet (D08). The plan must say how the app behaves while it's unset, without inventing a number. The auth library's own tables come in 010.
 - **Read:** [db.md](../db.md), [ADR-0010](../adr/0010-postgresql-on-neon.md), [ADR-0011](../adr/0011-git-as-the-hand-off.md).
 - **Start:** `/run-task 007`
+- **Result:** merged 2026-10-30. Two plan rounds and four code rounds; DeepSeek's six steps cost $0.18. Merged by Claude at the human's request.
+  - **Human decisions:** `analysis_daily_limit_platform` stays unseeded until D08, and while it's missing the gate is closed (no new or refreshed analysis is dispatched). db.md records both, in § settings and in the "Start the worker" access pattern.
+  - **What it adds:**
+    - `web/db/schema.ts`: 12 enums, 23 tables, the `watched_symbols` view; `citext` for `users.email`; `now()` and `gen_random_uuid()` insert defaults
+    - `web/db/migrations/`: a custom `citext` migration, the generated tables migration, and a custom seed migration (three rows, no cap row)
+    - `db()` in `web/lib/db.ts`: Drizzle over the existing cached client
+    - `npm run test:db` (`web/scripts/neon-branch.mjs`): a schema-only branch per run, emptied, migrated, tested over the pooled URL, then deleted; refuses the default branch and `dev`
+    - 15 database tests (rules and schema shape) and 8 new offline tests
+    - CI: a schema-drift step in the `web` job and a new `db` job
+  - **Packages:** `drizzle-orm`; `drizzle-kit` and `pg` as dev dependencies (installed by the human).
+  - **CI:** the `db` job passed on the task branch ([run 40938843128](https://github.com/badjatya/IPO/actions/runs/40938843128)): migrations applied to an empty branch, 15 of 15 tests passed, and the branch was deleted.
 
 ### 008 · Import script: git to database
 
 | | |
 | --- | --- |
 | Slug | `008-import-script` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 007 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
