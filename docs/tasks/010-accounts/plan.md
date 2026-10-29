@@ -128,7 +128,7 @@ Both open questions were answered by the human in plan review round 1; nothing i
 Anything built differently from the approved plan, and why.
 
 1. **1.7.14's emailed reset link puts the token in the path — and the app needs no `[token]` page.** The plan assumed the link is `<redirectTo>?token=…`. The installed version builds `{baseURL}/reset-password/{token}?callbackURL={redirectTo}` where `ctx.context.baseURL` already includes the handler's base path (`getBaseURL` → `withPath(url, "/api/auth")`, `utils/url.mjs`), so the emailed link is `<AUTH_URL>/api/auth/reset-password/<token>?callbackURL=%2Freset-password` (`api/routes/password.mjs`). Better Auth's own GET endpoint serves that path: it checks the token and redirects to `/reset-password?token=<token>`, or to `?error=INVALID_TOKEN` when the token is missing or expired. The build first added `web/app/reset-password/[token]/page.tsx` to translate the path shape into `?token=`; code review round 1 (finding 4) showed that page is never reached, so it and its test were removed. In its place: `/reset-password` now surfaces Better Auth's `?error=INVALID_TOKEN` redirect as its "invalid or expired" message (offline test), and the Neon-branch suite follows the exact emailed link through the HTTP handler and asserts the redirect to `/reset-password?token=<the token>` (and `?error=INVALID_TOKEN` for a fake link).
-2. **`web/.env.example` cannot be edited by the build tools.** The driver refuses both reads and writes of `.env*` paths (the plan's Context read only anticipated the read being blocked). All other step-10 changes are committed: tech.md carries the `AUTH_URL` row as an App variable, so the env-example test fails with exactly one missing variable (`AUTH_URL`). **One block must be added by the human or Claude at review before merge** (code review round 1 finding 5) — under `EMAIL_FROM=` in `web/.env.example`:
+2. **`web/.env.example` cannot be edited by the build tools.** The driver refuses both reads and writes of `.env*` paths (the plan's Context read only anticipated the read being blocked). All other step-10 changes are committed: tech.md carries the `AUTH_URL` row as an App variable, so the env-example test failed with exactly one missing variable (`AUTH_URL`). **Applied by Claude at code review round 1** (finding 5, commit `61d85fe`), as that finding directed — the block sits under `EMAIL_FROM=` in `web/.env.example`:
 
    ```text
    # The app's public URL: Better Auth's baseURL and the same-origin check (task 010)
@@ -143,26 +143,22 @@ Anything built differently from the approved plan, and why.
 
 ## Verification
 
-Test commands run on the branch, with their real output. (Round 1 responses: findings 1–4 and 6–8 fixed — the neon-http call shape, the `__Secure-` session cookie, the same-site `next` redirect, the emailed-link redirect, the tech.md labels, the named mail-config error and the generateId comment; finding 5 stays for the human or Claude.)
+Test commands run on the branch, with their real output.
 
-- `npm run typecheck` → `tsc --noEmit`, exit 0 (no output). (A stale local `.next/types/validator.ts` from before the round-1 fixes referenced the deleted `[token]` route; `.next` is gitignored, so the local output was removed and the check re-run clean, matching a fresh CI checkout.)
-- `npm run lint` → "Found 0 warnings and 0 errors. Finished in 75ms on 51 files".
-- `npm test` (offline vitest, `web/`) → **15/16 files, 95/96 tests pass. The one failure is still the env-example test, exactly item 2 above** (tech.md lists `AUTH_URL`, `.env.example` cannot be written by the build tools):
+**Round 2 (this response):** the Blocker finding (vitest's default 5 s `testTimeout` stalling the Neon suite mid-run) is fixed in `web/vitest.db.config.mts` — `testTimeout: 60_000` and `hookTimeout: 60_000` with a comment explaining why (each Better Auth call to the real branch takes about 1 s, the first-admin test's `spawnSync` blocks the event loop, and the rate-limit test needs up to ten ~1 s failed sign-ins). The offline config `vitest.config.mts` keeps Vitest's default, as the review directed, so the offline suite stays fast.
+
+- `npm run typecheck` → `tsc --noEmit`, exit 0 (no output).
+- `npm run lint` → "Found 0 warnings and 0 errors. Finished in 83ms on 51 files with 250 rules using 12 threads".
+- `npm test` (offline vitest, `web/`) → **16/16 files, 96/96 tests pass.** The env-example test is green now that `AUTH_URL` is in `web/.env.example` (applied by Claude at review, round 1 finding 5 — "Changes during build" 2):
 
 ```
-Test Files  1 failed | 15 passed (16)
-     Tests  1 failed | 95 passed (96)
-AssertionError: expected [ 'AUTH_SECRET', 'DATABASE_URL', …(5) ] to deeply equal [ 'AUTH_SECRET', 'AUTH_URL', …(6) ]
-- Expected   + Received
-  "AUTH_SECRET",
-- "AUTH_URL",
-  "DATABASE_URL",
-…
-❯ tests/env-example.test.ts:23:54
+ Test Files  16 passed (16)
+      Tests  96 passed (96)
+   Duration  1.93s (environment 59%, tests 18%, …)
 ```
-
-  After the human (or Claude at review) adds the block from item 2 to `web/.env.example`, this goes green — that is the file's only missing line. New in this round: `proxy.test.ts` (9 tests: plain and `__Secure-` cookie names through the real `proxy()`), `first-admin.test.ts` (+2: the `query(text, values)` call shape with a stub client), `safe-next.test.ts` (6), `auth-pages.test.tsx` (+3: same-site `next` navigation, crafted `next` falls back to `/`, `?error=INVALID_TOKEN` message).
 
 - `npx --no-install drizzle-kit generate` (drift proof for step 2) → "27 tables… No schema changes, nothing to migrate" and `git status --porcelain web/db` is empty.
 - `python3 -m unittest discover -s tests` (agent tests) → `Ran 330 tests … OK`.
-- `npm run test:db` (the Neon-branch auth suite in `web/tests/db/auth.test.ts` + `schema-shape.test.ts`) → **not run here**: it needs `NEON_API_KEY`/`NEON_PROJECT_ID` and creates a real, disposable Neon branch; per task 007's lesson it only counts in CI. The branch must be pushed for the `db` job (round-3 note) — the human pushes. The suite covers everything step 8 lists: sign-up refused, invite → invite wording → set password → token works once, expired token refused, re-invite voids the old link, existing-address invite (no new row, role unchanged, identical response), first-admin script → forgot-password → admin session, reset revokes pre-reset sessions, role check 401/403, session scoping, the shared-bucket sign-in rate limit (429), forged-Origin sign-in refused, cross-origin invite refused, plus (round 1 finding 4) the exact emailed link GET'd through the handler → redirect to `/reset-password?token=<the token>`, and a fake link → `?error=INVALID_TOKEN` — with per-run `AUTH_SECRET`, `AUTH_URL=http://localhost:3000` and print-mode mail from the harness.
+- `npm run test:db` (the Neon-branch auth suite in `web/tests/db/auth.test.ts` + `schema-shape.test.ts`) → **not run here**: it needs `NEON_API_KEY`/`NEON_PROJECT_ID` and creates a real, disposable Neon branch; per task 007's lesson it only counts in CI. Round 2's Blocker is exactly what CI's `db` job showed — the first-admin test time-outing at 5004 ms (default 5 s limit) and the nine later tests failing on the empty `adminCookie`, plus the rate-limit test stopping at 5001 ms before any 429 — and the `vitest.db.config.mts` timeouts above address each of those failures directly; the assertions themselves are unchanged. The branch must be pushed for the `db` job to rerun (the human or Claude pushes; round 3 approves only when that job is green).
+
+**Round 1 record:** findings 1–4 and 6–8 fixed — the neon-http call shape (`runUpsert` → `client.query(text, values)`), the `__Secure-` session cookie (`getSessionCookie`), the same-site `next` redirect (`safeNextPath`), the emailed-link redirect (the `[token]` page removed, `/reset-password` handles `?error=INVALID_TOKEN`), the tech.md labels, the named mail-config error and the `generateId` comment; finding 5 was applied by Claude in `61d85fe` as directed. (A stale local `.next/types/validator.ts` from before the round-1 fixes referenced the deleted `[token]` route; `.next` is gitignored, so the local output was removed and the check re-run clean, matching a fresh CI checkout.)

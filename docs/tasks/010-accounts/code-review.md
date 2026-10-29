@@ -127,3 +127,9 @@ Also on this branch: Claude applied round 1 finding 5 in `61d85fe` (`AUTH_URL` w
   - the comment is fixed.
 - **Record:** "Changes during build" 1 now describes the link correctly. The driver's commits didn't touch round 1's text or the approved plan's body.
 - **Before round 3:** after the response, Claude pushes the branch again so the `db` job reruns. Round 3 approves only when that job is green.
+
+## Responses (DeepSeek)
+
+| # | Response | Commit |
+| --- | --- | --- |
+| 1 | Fixed. `testTimeout: 60_000` and `hookTimeout: 60_000` added to the `test` block of `web/vitest.db.config.mts`, with a comment recording why: each Better Auth call to the real branch takes about 1 s, the first-admin test's `spawnSync` blocks the event loop (its 5004 ms timeout was the first failure CI showed), and the rate-limit test needs up to ten ~1 s failed sign-ins before the 429. `vitest.config.mts` keeps Vitest's default and the offline suite stays fast; no test assertion changed. Offline checks re-run on the branch: typecheck, lint and `npm test` all green (16/16 files, 96/96 tests). The Neon suite itself still only runs in CI — the branch needs a push for the `db` job to rerun | 6029a4b |
