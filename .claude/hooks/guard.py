@@ -5,9 +5,12 @@
                           pushes to any remote other than `origin`.
     guard.py post-write   PostToolUse on Write/Edit: check IPO cards (analysis/<key>.json)
                           and verdict files (reports/<date>-<am|pm>.json) against their
-                          schemas (ipo_agent/cards.py, ipo_agent/email_render.py).
+                          schemas (ipo_agent/cards.py, ipo_agent/email_render.py). For an
+                          analysis (analysis/<key>.md), report the ₹ figures not found in
+                          its RHP text (ipo_agent/figures_check.py); this never blocks.
 
-Exit 2 means "blocked / fix this" and stderr goes to Claude. These hooks also run inside
+Exit 2 means "blocked / fix this" and stderr goes to Claude. The figures report exits 0 and
+reaches Claude as `additionalContext` JSON on stdout, since Claude never sees stderr on exit 0. These hooks also run inside
 the scheduled IPO routine, so any bug in the hook itself exits 0: a broken guard must
 never stop a run.
 """
@@ -31,6 +34,8 @@ LIVE_WORDS = re.compile(r"\bGMP\b|\btoday\b|\btomorrow\b|\b(?:over)?subscribed\b
 
 CARD_PATH = re.compile(r"^analysis/[^/]+\.json$")
 REPORT_PATH = re.compile(r"^reports/(\d{4}-\d{2}-\d{2})-(am|pm)\.json$")
+ANALYSIS_PATH = re.compile(r"^analysis/([^/]+)\.md$")
+REPO = Path(__file__).resolve().parents[2]
 
 
 def push_problems(command):
@@ -150,6 +155,29 @@ def file_problems(rel_path, text):
     return card_problems(data)
 
 
+def figures_feedback(root, key):
+    """The figures check's report for analysis/<key>.md, or "" when there is nothing to say.
+
+    Report only (task 005): a skipped or fully found analysis says nothing, and a broken
+    check is ignored, so this can never stop the routine.
+    """
+    try:
+        if str(REPO) not in sys.path:
+            sys.path.insert(0, str(REPO))
+        from ipo_agent.figures_check import check_key
+        result = check_key(root, key)
+    except Exception as e:
+        print(f"guard: figures check could not run for {key}: {e!r}", file=sys.stderr)
+        return ""
+    if result.skipped or not result.missing:
+        return ""
+    lines = [f"figures: analysis/{key}.md: {result.found}/{result.total} ₹ figures found in the "
+             "RHP text; not found:"]
+    lines += [f"  - {fig}: check it against the RHP, or say it came from NSE, web or arithmetic"
+              for fig in result.missing]
+    return "\n".join(lines)
+
+
 def main(mode):
     event = json.load(sys.stdin)
     tool_input = event.get("tool_input") or {}
@@ -164,6 +192,13 @@ def main(mode):
         except ValueError:
             return 0
         if not path.exists():
+            return 0
+        analysis = ANALYSIS_PATH.match(rel.as_posix())
+        if analysis:
+            report = figures_feedback(root, analysis.group(1))
+            if report:
+                print(json.dumps({"hookSpecificOutput": {"hookEventName": "PostToolUse",
+                                                         "additionalContext": report}}))
             return 0
         problems = file_problems(str(rel), path.read_text(encoding="utf-8"))
         target = str(rel)

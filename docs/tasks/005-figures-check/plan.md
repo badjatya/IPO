@@ -209,6 +209,12 @@ Anything built differently from the approved plan, and why.
 - **A trailing comma after a figure is punctuation, not the number.** "At ₹693, P/E …" produced a figure rendered "₹693," in the missing list (the digit regex is greedy over commas). The comma is now stripped from the number (`num.rstrip(",")`) on both the analysis and RHP sides; the count was unaffected. Covered by `test_trailing_comma_is_punctuation`.
 - **The foreign-currency guard was narrowed (code-review round 1, finding 1).** The plan's Approach says bare unit-carrying numbers are candidates ("so '28,300.00 million' still matches without a prefix"). The build implemented that with a "Latin letter + space right before the number" guard meant to exclude "USD 1.00 million" — but that guard was far too wide: it dropped rupee amounts in prose ("of 7,756.07 lakhs", "aggregating up to 28,300.00 million") and, being blind to "$ ", let real foreign currency through (jio's "US$ 5 million" and "US$ 25 million" were candidates). The guard now skips a bare unit-carrying number only when a non-rupee currency marker — `USD`, `US$`, `$`, `EUR` or `GBP`, with optional space — comes right before it. On the saved data the candidate pool changes (26 net) but no found/missing outcome does: none of the restored prose-preceded candidates coincides with an analysis figure within tolerance, nor do the two wrongly-kept US$ ones. The rerun therefore reports the same overall share, 54/316 (17%), which is now the fixed code's true number. Covered by `test_bare_unit_number_after_prose_word_is_a_candidate` and `test_foreign_currency_bare_number_is_not_a_candidate`. Also from that round (finding 2): "Rs." must not follow a letter, or the "rs." at the end of "peers."/"sectors." reads as a prefix — covered by `test_rs_at_word_end_is_no_prefix` and `test_rs_at_word_end_is_no_candidate`.
 - Everything else matches the plan. All 13 repo analyses have cards with `"source": "rhp"`, so the integration run checks all 13 (0 skipped); the plan's example "bls-polymers: 3/15" was illustrative — the real line is 3/20.
+- **Step 6 was applied by Claude Code at the human's request** (2026-10-29), on this branch before the merge, instead of by the human. It differs from the plan's diff in three ways:
+  - The `sys.path` insert sits inside `figures_feedback`, so the other hook paths don't pay for it.
+  - Each missing line says "check it against the RHP, or say it came from NSE, web or arithmetic".
+  - Two hook tests were added in `test_guard.py`. One checks that a missing figure comes back as `additionalContext` JSON with exit 0. The other checks that a fully found or web-sourced analysis stays quiet.
+
+  Because the hook is now in place, the ai.md guardrail row is **Running** for the hook too.
 
 ## Verification
 
@@ -269,3 +275,14 @@ TOTAL: 54/316 ₹ figures found (17%) across 13 analyses (0 skipped)
 ```
 
 Exit code 0 throughout; the run completes even with a 0% key (sahajanand-medical-technologies: 1/32) and a low overall share — that is the point of Option A (report only). The numbers quoted in `docs/ai.md` (13 analyses, 54/316, 17%, 2026-10-29) are exactly this run's. The overall share is unchanged from the first build run on the buggy guard: the code-review round-1 fixes restored 26 candidates (and removed two wrongly-kept US$ ones) but none of them coincides with an analysis figure within tolerance, so every per-analysis found/total is identical — the guard is now correct by construction (see "Changes during build"). The GitHub `--all` run is recorded after the human pushes the branch, as in task 002; the first run on `main` after the merge is recorded in the roadmap's 005 entry.
+
+Step 6, run by Claude after applying the hook:
+
+```text
+$ python3 -m unittest discover -s .claude/hooks
+Ran 19 tests in 0.502s
+OK
+$ echo '{"tool_input":{"file_path":"analysis/bls-polymers.md"}}' | CLAUDE_PROJECT_DIR=$PWD python3 .claude/hooks/guard.py post-write
+{"hookSpecificOutput": {"hookEventName": "PostToolUse", "additionalContext": "figures: analysis/bls-polymers.md: 3/20 ₹ figures found in the RHP text; not found:\n  - ₹150: ..."}}
+exit 0
+```
