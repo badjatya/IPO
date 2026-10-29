@@ -62,7 +62,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | Blocked |
 | [012](#012--track-record-page) | Track record page | 2 | 008, D06 | Blocked |
 | [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | Blocked |
-| [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | **Ready** |
+| [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | Done |
 | [015](#015--stock-universe) | Stock universe | 2 | 008, 014 | Blocked |
 | [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | Blocked |
 | [017](#017--watchlist) | Watchlist | 3 | 010, 015 | Blocked |
@@ -104,7 +104,7 @@ flowchart LR
         T013[013 admin settings]
     end
     subgraph stocks ["Weeks 2–3: stock side"]
-        T014[014 stock fetchers]:::ready
+        T014[014 stock fetchers]:::done
         T015[015 stock universe]:::m2
         T016[016 alert rules]:::m2
         T017[017 watchlist]:::m2
@@ -156,7 +156,7 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 | D06 | Charts library | Open | 011, 012, 019 | [ ] |
 | D07 | App test runner | Decided: Vitest with React Testing Library ([ADR-0024](../adr/0024-vitest-for-app-tests.md)) | 006 | [x] |
 | D08 | Gemini model(s), free-tier quotas and search grounding, read in AI Studio. Sets the default for `analysis_daily_limit_platform` and confirms `ask_daily_limit_per_user` | Open ([db.md § settings](../db.md#settings)) | 020, 021, 023 | [ ] |
-| D09 | Stock worker code: where it lives (new package or inside `ipo_agent/`) and its dependencies. It needs a Postgres driver and a Gemini client, and neither is in the standard library. [ADR-0002](../adr/0002-standard-library-only-agent.md) binds only `ipo_agent/`. Also, [tech.md](../tech.md#web-platform) says one Gemini module is shared by the app and the worker, which can't be one module across TypeScript and Python | Not in the docs; likely a new ADR | 014, 020 | [ ] |
+| D09 | Stock worker code: where it lives (new package or inside `ipo_agent/`) and its dependencies. It needs a Postgres driver and a Gemini client, and neither is in the standard library. [ADR-0002](../adr/0002-standard-library-only-agent.md) binds only `ipo_agent/`. Also, [tech.md](../tech.md#web-platform) says one Gemini module is shared by the app and the worker, which can't be one module across TypeScript and Python | Decided by the human at 014's plan review (2026-10-29): a new top-level package `stock_worker/`, importing `ipo_agent/net.py`; standard library in 014, later pinned packages through the package's own requirements file (Postgres driver in 018, Gemini SDK in 020); one Gemini module per side, TypeScript in `web/lib/` and Python in `stock_worker/`. Recorded in [ADR-0026](../adr/0026-stock-worker-code-location.md), **Proposed** until the human accepts it | 014, 020 | [ ] |
 | D10 | Alert thresholds (pledge up, promoter holding down, FII and DII moves) and severities, and whether they live in `settings` or code | Not in the docs | 016 | [ ] |
 | D11 | App host | Open | 025 | [ ] |
 | D12 | Backups for app-owned data (users, watchlists) | Open ([arch.md § 9](../arch.md#9-open-questions)) | 025 | [ ] |
@@ -186,7 +186,7 @@ Nothing below needs a task. Evidence is in the repo.
 | Research output as the system of record | `analysis/`, `reports/`, `data/` |
 | Docs: project, architecture, stack, database, AI design, data sources, plan, journal | `docs/`, commit `c1e113d` |
 | UI design rules: component kit, theme, status colours, number formats, layout | `docs/design.md`, commit `33c5a73` |
-| ADRs 0001–0025 | `docs/adr/` |
+| ADRs 0001–0026 (0026 Proposed) | `docs/adr/` |
 | Two-agent workflow: rules, statuses, reviewer guide, templates | `AGENTS.md`, `docs/tasks/`, commit `fecb83d` |
 | Claude Code guardrails: push guard, card and report schema check on write, with tests | `.claude/hooks/guard.py`, `.claude/hooks/test_guard.py` |
 | Claude Code skills and subagents | `.claude/skills/`, `.claude/agents/` |
@@ -470,7 +470,7 @@ An admin-only page that lists the `settings` rows and edits one at a time. Each 
 | | |
 | --- | --- |
 | Slug | `014-stock-fetchers` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | 003, D09 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M2 |
@@ -487,6 +487,19 @@ Fetchers and parsers for the endpoints confirmed in 003: quote, quarterly result
   - **Pledges:** `promoter_pledged_pct` is computed as `numSharesPledged / totPromoterHolding × 100`; NSE's `percSharesPledged` is a share of all shares. Pledge rows carry no symbol, only the company name.
 - **Read:** [data-sources.md](../data-sources.md), [arch.md § 4.2](../arch.md#42-stock-worker-decided), [ADR-0001](../adr/0001-python-for-exact-work-claude-for-judgement.md).
 - **Start:** `/run-task 014`
+- **Result:** merged 2026-10-30.
+  - **Who did what:** DeepSeek (OpenRouter) planned and built it, and Claude reviewed it: two plan rounds and three code rounds. DeepSeek's five steps cost $0.25. The last fix step was stopped by the driver (exit 3) for editing one Doc-updates line of the approved plan; the human accepted the edit.
+  - **Human decisions:** D09 (above). EBITDA is operating EBITDA, excluding other income: revenue − (total expenses − finance costs − depreciation).
+  - **What it adds:** `stock_worker/` with a module per source. Each returns records keyed by the `db.md` columns, amounts in ₹ crore, missing fields as `None`, and `fetch_all` keeps going when one source fails. Also the one-off quote probe, and 103 tests on 003's fixtures.
+  - **Gaps from 003, settled:**
+    - **Units:** results are in ₹ lakh, confirmed by RELIANCE's own note text, and converted to crore in the parser.
+    - **EBITDA:** derived from four stated fields only.
+    - **Filings:** `filed_at` and the filing link come only from the `Non-Consolidated` filing for the same quarter.
+    - **Pledges:** the pledge share is computed in code.
+  - **Still open:** see the notes on 016, 018 and 019.
+    - **Quote:** the human's probe run (2026-10-30) found no source. Both `quote-equity` variants return 403, and the stock page carries no quote JSON. NSE's `/api/NextApi/…` paths were not tried and are the next candidate.
+    - **Consolidated results:** `results-comparision` ignores `consolidated=true` (confirmed in the same run). The `Consolidated` filings' XBRL is the likely source.
+    - **FII/DII split:** only in the XBRL filing, not parsed yet.
 
 ### 015 · Stock universe
 
@@ -519,6 +532,7 @@ Load NSE's list of listed equities into `stocks` (symbol, ISIN, name, industry, 
 Pure Python functions that compare a stock's latest filings with earlier ones, and raise alerts (pledge up, promoter holding down, FII or DII move, new results, important announcement) using the thresholds from D10. Each alert's title and numbers come from Python, with a `dedupe_key`.
 
 - **Done when:** every rule has tests, including the first quarter on record and missing data (no alert); the same input never raises the same alert twice.
+- **From 014:** the shareholding fetcher returns `fii_pct` and `dii_pct` as `None`, because the FII/DII split exists only in the XBRL filing. The `fii_move` and `dii_move` rules can't fire until something parses that XBRL: this task, or a separate task the plan proposes. Results are standalone only; never compare them with consolidated figures.
 - **Read:** [plan.md § Watchlist signals](../plan.md#watchlist-signals), [db.md § alerts and § shareholding](../db.md#alerts).
 - **Start:** `/run-task 016`
 
@@ -553,6 +567,9 @@ The GitHub Actions stock worker, scheduled twice each weekday, **without AI yet*
 
 - **Done when:** a manual run fills the stock tables for watched symbols; a second run with nothing new changes nothing; a commit from the worker imports with no changes to the rows.
 - **From 003:** market-wide announcements (with a `from_date`/`to_date` range) and market-wide pledges both answered, so one call per run can replace one call per watched stock. Market-wide pledge rows have no symbol and need a name-to-symbol match.
+- **From 014:**
+  - **The fetchers:** `stock_worker.fetchers.fetch_all` returns each source's records and an `errors` list. The `since` filter on announcements takes a stored run time (a `datetime`, or a string with an offset).
+  - **No quote source:** `fetch_quote` always raises `SourceError`, so `stock_quotes` stays empty. The plan must either confirm a quote source (NSE's `/api/NextApi/…` paths are the untried candidate), with one deliberate probe as in 014, or say that stock prices stay unavailable.
 - **Watch for:** the worker reads symbols only, no user data. It pushes only to `main` with no force. One run should stay well within free Actions minutes.
 - **Read:** [arch.md § 4.2](../arch.md#42-stock-worker-decided), [ADR-0018](../adr/0018-stock-worker-on-github-actions.md), [db.md](../db.md).
 - **Start:** `/run-task 018`
@@ -571,6 +588,7 @@ Stock detail: quote, the last 8 quarterly results with a trend chart, the last 4
 
 - **Done when:** the page renders from the stock tables; tests cover the queries in [db.md § Access patterns](../db.md#access-patterns).
 - **Watch for:** no buy, sell or hold wording anywhere ([ADR-0012](../adr/0012-research-not-advice.md)).
+- **From 014:** there's no confirmed quote source yet (see 018), so the page must show price and valuation as "not available" when `stock_quotes` has no row, never an estimate.
 - **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md).
 - **Start:** `/run-task 019`
 

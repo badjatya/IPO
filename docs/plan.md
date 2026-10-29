@@ -398,3 +398,29 @@ One entry per working session: what we asked the AI to do, what it did, what a h
 - **Learned:**
   - A scaffold's newest defaults (TypeScript 7 here) can be ahead of the tooling around them. Run lint early, not only the build.
   - The `/run-task` driver needs `.env.local` in the main checkout. Check for it before starting a task.
+
+### 2026-10-30: Task 014, NSE stock fetchers
+
+- **Asked:** the human asked Claude to start task 014 with `/run-task 014`, then to run the live quote probe, then to merge.
+- **Rounds:**
+  - Two plan rounds and three code rounds.
+  - DeepSeek's five steps cost $0.25.
+  - The last fix step was stopped by the driver (exit 3) for editing one line of the approved plan's Doc updates. The human looked at it and accepted it.
+- **Human decisions:**
+  - **D09:** a new top-level `stock_worker/` package, standard library now, pinned dependencies later (ADR-0026, Proposed).
+  - **EBITDA:** operating EBITDA, excluding other income.
+  - Each time, the human took the recommended option.
+- **AI did:**
+  - DeepSeek planned and built one parser per NSE source: results, announcements, shareholding, pledges. Each returns records keyed by the `db.md` columns. It also built the one-off quote probe and 103 fixture-only tests.
+  - Claude reviewed each step against the fixtures and reproduced each bug before recording it.
+- **Notable findings:**
+  - **EBITDA.** The plan's first formula left finance costs subtracted. The fixture showed that `re_oth_tot_exp` is total expenses including interest and depreciation (total income − it = PBT).
+  - **Units.** DeepSeek first gated every fetch on a "Rs N crore" note in the company's text. Few companies write one, so most stocks would have stored no results. The unit (₹ lakh) is now confirmed once for the endpoint.
+  - **Filings join.** NSE lists a standalone and a consolidated filing for each quarter, and the plan's join could have given standalone figures the consolidated filing's time and link.
+  - **Probe false success.** A nested `(payload, error)` pair made any 200 count as a quote source. An "Access Denied" page would have been recorded as the working endpoint. This was caught before the human's live run.
+  - **`since` compared as text.** A UTC timestamp kept older IST rows.
+  - **Live probe (human, 2026-10-30):** no quote source; `quote-equity` returns 403 in both variants. `consolidated=true` is ignored (confirmed in the same run).
+- **Learned:**
+  - Read a live probe's code before a human runs it: the success path had never been tested with a body that fails.
+  - Check derived formulas against the fixture's own totals (here, total income − total expenses = PBT), not against the field names.
+  - A step that writes a plan's outcome back into the approved part of the plan is caught by the driver. A one-line roadmap note like this is easy to accept, but the human has to look first.
