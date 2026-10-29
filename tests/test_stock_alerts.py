@@ -691,6 +691,95 @@ class FirstPledgeTests(NoNetworkCase):
         self.assertEqual(alert["title"], "Promoter pledge up from 2% to 5%")
 
 
+class LatePledgeSeriesTests(NoNetworkCase):
+    """Code review round 2, finding 4: the first-pledge case must not alert
+    the whole fetched pledge history.
+
+    ``stored_pl`` empty with ``stored_sh`` not is also the state after a
+    pledge fetch that failed on the stock's first run (shareholding
+    succeeded), or when 018 brings pledges in later than shareholding. The
+    next run then fetches the full pledge history, and without a baseline
+    cut the oldest fetched quarter would fire "first time" and each later
+    one a rise — the history-as-news burst. So pledge quarters *before* the
+    latest stored shareholding quarter are baseline history: they raise no
+    alert but still serve as ``prev_pl``. Only a new pledge quarter *on or
+    after* the latest stored shareholding quarter can alert — the rise rule
+    once an earlier pledge is on record (including one from the baseline
+    history), otherwise the "first time" rule (round 1, finding 1).
+    """
+
+    def test_late_pledge_history_raises_no_stale_alerts(self):
+        # (a) The reviewer's case: shareholding stored for four quarters
+        # 2025-09-30 -> 2026-06-30, then pledges fetched for the same four
+        # quarters (5, 8, 12, 12%). Without a baseline cut, 2025-09-30
+        # ("first time"), 2025-12-31 and 2026-03-31 would all burst — two of
+        # those quarters are a year old. Only 2026-06-30 (the latest stored
+        # shareholding quarter) is eligible, and it is a 0 pp move against
+        # 2026-03-31, so nothing fires.
+        stored = {"shareholding": [
+            sh("2025-09-30", 50.00, filed_at="2025-10-16"),
+            sh("2025-12-31", 50.00, filed_at="2026-01-16"),
+            sh("2026-03-31", 50.00, filed_at="2026-04-16"),
+            sh("2026-06-30", 50.00, filed_at="2026-07-16"),
+        ]}
+        fetched = {"pledges": [
+            pl("2025-09-30", 5.00, disclosed_at="2025-10-16"),
+            pl("2025-12-31", 8.00, disclosed_at="2026-01-16"),
+            pl("2026-03-31", 12.00, disclosed_at="2026-04-16"),
+            pl("2026-06-30", 12.00, disclosed_at="2026-07-16"),
+        ]}
+        self.assertEqual(compute(fetched=fetched, stored=stored), [])
+
+    def test_round_one_first_pledge_case_still_fires_once(self):
+        # (b) Round 1's case is unchanged under the new gate: shareholding
+        # stored for 2026-06-30, then a first-ever pledge at 25% for a new
+        # 2026-09-30 quarter (on or after the latest stored shareholding
+        # quarter) — exactly one alert with the "first time" title.
+        fetched = {
+            "shareholding": [sh("2026-09-30", 48.00, filed_at="2026-10-21")],
+            "pledges": [pl("2026-09-30", 25.00, disclosed_at="2026-10-21")],
+        }
+        stored = {"shareholding": [sh("2026-06-30", 48.00, filed_at="2026-07-16")]}
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        alert = result[0]
+        self.assertEqual(alert["kind"], "pledge_up")
+        self.assertEqual(
+            alert["title"],
+            "Promoter pledge on record for the first time: 25% of promoter holding",
+        )
+        self.assertEqual(alert["dedupe_key"], "RELIANCE:pledge_up:2026-09-30")
+
+    def test_new_quarter_after_baseline_history_fires_a_rise_not_first_time(self):
+        # (c) Once the baseline pledge history is on record (here fetched in
+        # the same run), a genuinely new 2026-09-30 pledge fires the ordinary
+        # rise rule against 2026-06-30: an earlier pledge is now on record
+        # (12%, from the baseline history), so 12% -> 15% is a 3 pp rise —
+        # never the "first time" title.
+        stored = {"shareholding": [
+            sh("2025-09-30", 50.00, filed_at="2025-10-16"),
+            sh("2025-12-31", 50.00, filed_at="2026-01-16"),
+            sh("2026-03-31", 50.00, filed_at="2026-04-16"),
+            sh("2026-06-30", 50.00, filed_at="2026-07-16"),
+        ]}
+        fetched = {"pledges": [
+            pl("2025-09-30", 5.00, disclosed_at="2025-10-16"),
+            pl("2025-12-31", 8.00, disclosed_at="2026-01-16"),
+            pl("2026-03-31", 12.00, disclosed_at="2026-04-16"),
+            pl("2026-06-30", 12.00, disclosed_at="2026-07-16"),
+            pl("2026-09-30", 15.00, disclosed_at="2026-10-21"),
+        ]}
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        alert = result[0]
+        self.assertEqual(alert["kind"], "pledge_up")
+        self.assertEqual(alert["title"], "Promoter pledge up from 12% to 15%")
+        self.assertNotIn("first time", alert["title"])
+        self.assertEqual(alert["dedupe_key"], "RELIANCE:pledge_up:2026-09-30")
+        self.assertEqual(alert["source_table"], "shareholding")
+        self.assertEqual(alert["source_id"], "2026-09-30")
+
+
 class FixtureIntegrationTests(NoNetworkCase):
     """Step 5: the 014 parsers run over the saved ``tests/fixtures/nse_stock/``
     fixtures end to end. No live sites, no AI APIs."""
