@@ -3,7 +3,7 @@ import { users, verification } from "@/db/schema";
 import { getAuth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { assertSameOrigin, AuthError, authErrorResponse, requireAdmin } from "@/lib/auth-guard";
-import { assertMailConfig } from "@/lib/mail";
+import { assertMailConfig, MailNotConfiguredError } from "@/lib/mail";
 
 // Admin-only invite (ADR-0028): create the user row (never a password) and let
 // Better Auth's reset-password mechanism issue the one-time link, whose hook
@@ -76,7 +76,8 @@ export async function POST(request: Request): Promise<Response> {
     return await handleInvite(request);
   } catch (error) {
     if (error instanceof AuthError) return authErrorResponse(error);
-    if (error instanceof Error && error.message.includes("account email is not configured")) {
+    // Checked by class, not by message text (code review round 1 finding 7).
+    if (error instanceof MailNotConfiguredError) {
       return Response.json({ error: "email is not configured" }, { status: 500 });
     }
     return Response.json({ error: "internal error" }, { status: 500 });

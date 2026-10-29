@@ -18,6 +18,19 @@ export interface AccountEmail {
 }
 
 /**
+ * Production cannot deliver account email. A named class, not a message-text
+ * match: the invite route answers 500 on `instanceof`, so rewording the
+ * message can never silently turn it into an "internal error" (code review
+ * round 1 finding 7).
+ */
+export class MailNotConfiguredError extends Error {
+  constructor(missing: string[]) {
+    super(`account email is not configured (missing ${missing.join(", ")})`);
+    this.name = "MailNotConfiguredError";
+  }
+}
+
+/**
  * Throws when the app cannot deliver account email in this environment.
  * Outside production a missing key falls back to print mode, so only
  * production actually needs the config (review item 5; round 2 item 4: called
@@ -29,7 +42,7 @@ export function assertMailConfig(): void {
   if (!process.env.RESEND_API_KEY) missing.push("RESEND_API_KEY");
   if (!process.env.EMAIL_FROM) missing.push("EMAIL_FROM");
   if (missing.length > 0) {
-    throw new Error(`account email is not configured (missing ${missing.join(", ")})`);
+    throw new MailNotConfiguredError(missing);
   }
 }
 
