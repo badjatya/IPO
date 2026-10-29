@@ -111,4 +111,11 @@ python3 -m ipo_agent.outcomes --no-fetch    # listing scorecard
 python3 -m ipo_agent.email_render reports/<date>-<am|pm>.json
 ```
 
-Scheduled routine setup: [SETUP.md](../SETUP.md). The web app's setup will be added here once it exists.
+Scheduled routine setup: [SETUP.md](../SETUP.md). The web app (`web/`) needs Node.js 20.9 or later:
+
+```bash
+cd web
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build and type check
+```
