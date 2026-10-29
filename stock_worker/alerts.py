@@ -190,3 +190,66 @@ def dii_move_alert(symbol, prev, curr, threshold_pp):
         symbol, "dii_move", prev, curr, "dii_pct",
         threshold_pp, "absolute", "DII holding",
     )
+
+
+def _value_cr(value):
+    """A crore amount for a results title: ``₹<grouped> cr`` when stated,
+    "not available" when missing — the unit has nothing to hang on to."""
+    number = format_cr(value)
+    if number == NOT_AVAILABLE:
+        return NOT_AVAILABLE
+    return f"{number} cr"
+
+
+def results_alert(symbol, record, has_earlier):
+    """A new standalone results filing for a quarter that has an earlier
+    quarter on record — the quarter that starts a symbol's record is the
+    baseline, not an event. Only stated fields go into the title; revenue and
+    PAT are the crore amounts the filing states, or "not available". Silent
+    when ``period_end`` is missing (the record cannot be keyed).
+    """
+    period_end = (record or {}).get("period_end")
+    if period_end is None or not has_earlier:
+        return None
+    return {
+        "kind": "results",
+        "severity": SEVERITIES["results"],
+        "title": (
+            f"Quarterly results for {period_end}: "
+            f"revenue {_value_cr(record.get('revenue_cr'))}, "
+            f"PAT {_value_cr(record.get('pat_cr'))}"
+        ),
+        "detail": None,
+        "dedupe_key": dedupe_key(symbol, "results", period_end),
+        "source_table": "quarterly_results",
+        "source_id": period_end,
+    }
+
+
+def announcement_alert(symbol, record):
+    """The announcement rule — for 020's rating step (arch.md Mode 1 step 4).
+
+    Not part of ``compute_alerts``: the candidates are computed at step 3,
+    before Gemini writes ``importance`` at step 4, so the orchestrator can
+    never see a rated announcement. 020 calls this once per announcement it
+    has just rated, after writing ``importance``. Only ``high``/``medium``
+    fire (any other value — including `None`, the 018 fetch state — is not
+    important and alerts nothing, never an error); a record without an
+    ``exchange_ref`` cannot be keyed and alerts nothing. The title is the
+    announcement's own title as NSE stated it (data, quoted as-is).
+    """
+    record = record or {}
+    if record.get("importance") not in ("high", "medium"):
+        return None
+    exchange_ref = record.get("exchange_ref")
+    if not exchange_ref:
+        return None
+    return {
+        "kind": "announcement",
+        "severity": SEVERITIES["announcement"],
+        "title": record.get("title") or NOT_AVAILABLE,
+        "detail": None,
+        "dedupe_key": dedupe_key(symbol, "announcement", exchange_ref),
+        "source_table": "announcements",
+        "source_id": exchange_ref,
+    }

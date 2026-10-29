@@ -241,5 +241,134 @@ class ChangeRuleTests(NoNetworkCase):
         )
 
 
+class ResultsRuleTests(NoNetworkCase):
+    """Step 3: the ``results`` existence rule."""
+
+    def test_later_quarter_of_a_two_quarter_input_fires_with_the_exact_title(self):
+        earlier = rs("2026-06-30", 12000.00, 900.00)
+        later = rs("2026-09-30", 12826.00, 872.00)
+        self.assertIsNone(alerts.results_alert("RELIANCE", earlier, has_earlier=False))
+        alert = alerts.results_alert("RELIANCE", later, has_earlier=True)
+        self.assertEqual(alert["kind"], "results")
+        self.assertEqual(alert["severity"], "info")
+        self.assertEqual(
+            alert["title"],
+            "Quarterly results for 2026-09-30: revenue ₹12,826 cr, PAT ₹872 cr",
+        )
+        self.assertEqual(alert["dedupe_key"], "RELIANCE:results:2026-09-30")
+        self.assertEqual(alert["source_table"], "quarterly_results")
+        self.assertEqual(alert["source_id"], "2026-09-30")
+        self.assertIsNone(alert["detail"])
+
+    def test_one_quarter_input_fires_nothing(self):
+        self.assertIsNone(
+            alerts.results_alert("RELIANCE", rs("2026-09-30", 12826.00, 872.00),
+                                 has_earlier=False)
+        )
+
+    def test_missing_revenue_or_pat_renders_not_available(self):
+        alert = alerts.results_alert("RELIANCE", rs("2026-06-30", None, 872.00),
+                                     has_earlier=True)
+        self.assertEqual(
+            alert["title"],
+            "Quarterly results for 2026-06-30: revenue not available, PAT ₹872 cr",
+        )
+        both = alerts.results_alert("RELIANCE", rs("2026-06-30"), has_earlier=True)
+        self.assertEqual(
+            both["title"],
+            "Quarterly results for 2026-06-30: revenue not available, PAT not available",
+        )
+
+    def test_missing_period_end_is_silent(self):
+        self.assertIsNone(
+            alerts.results_alert("RELIANCE", rs(None, 12826.00, 872.00),
+                                 has_earlier=True)
+        )
+
+
+class AnnouncementRuleTests(NoNetworkCase):
+    """Step 3: the ``announcement`` rule — a pure function called by 020's
+    rating step (round-2 review, item 6), never by ``compute_alerts``."""
+
+    def test_fires_only_for_high_or_medium_importance(self):
+        title = "Board meeting outcome"
+        self.assertIsNone(alerts.announcement_alert("RELIANCE", ann("106833561", None, title)))
+        for importance in ("low", "routine"):
+            self.assertIsNone(
+                alerts.announcement_alert("RELIANCE", ann("106833561", importance, title))
+            )
+        for importance in ("high", "medium"):
+            alert = alerts.announcement_alert("RELIANCE", ann("106833561", importance, title))
+            self.assertIsNotNone(alert)
+            self.assertEqual(alert["dedupe_key"], "RELIANCE:announcement:106833561")
+            self.assertEqual(alert["severity"], "watch")
+
+    def test_rated_later_flow_raises_exactly_one_alert(self):
+        # The 018 fetch state (importance None) alerts nothing; once 020 rates
+        # the same record high and calls the rule, exactly one alert appears,
+        # with the pinned key (the unique dedupe index guards duplicates).
+        record = ann("106833561", None, "Board meeting outcome")
+        self.assertIsNone(alerts.announcement_alert("RELIANCE", record))
+        record["importance"] = "high"
+        alert = alerts.announcement_alert("RELIANCE", record)
+        self.assertIsNotNone(alert)
+        self.assertEqual(alert["kind"], "announcement")
+        self.assertEqual(alert["title"], "Board meeting outcome")
+        self.assertEqual(alert["dedupe_key"], "RELIANCE:announcement:106833561")
+        self.assertEqual(alert["source_table"], "announcements")
+        self.assertEqual(alert["source_id"], "106833561")
+        self.assertIsNone(alert["detail"])
+
+    def test_missing_exchange_ref_is_silent(self):
+        self.assertIsNone(alerts.announcement_alert("RELIANCE", ann(None, "high")))
+        self.assertIsNone(alerts.announcement_alert("RELIANCE", {}))
+
+    def test_any_importance_outside_the_enum_is_silent_never_an_error(self):
+        self.assertIsNone(
+            alerts.announcement_alert("RELIANCE", ann("106833561", "CRITICAL"))
+        )
+
+    def test_source_table_and_source_id_form_for_each_of_the_six_kinds(self):
+        # Review round 1, item 5: one line in db.md § alerts pins the
+        # source_id form per source_table; this test pins the same forms for
+        # all six kinds. source_id is the natural key (quarter_end,
+        # period_end, exchange_ref), scoped by the alert's symbol — never the
+        # announcements.id bigint.
+        thresholds = alerts.DEFAULT_THRESHOLDS
+        alerts_by_kind = {
+            "pledge_up": alerts.pledge_up_alert(
+                "RELIANCE", pl("2026-06-30", 4), pl("2026-09-30", 11),
+                thresholds["pledge_up"]),
+            "promoter_down": alerts.promoter_down_alert(
+                "RELIANCE", sh("2026-06-30", 52.1), sh("2026-09-30", 48.9),
+                thresholds["promoter_down"]),
+            "fii_move": alerts.fii_move_alert(
+                "RELIANCE", sh("2026-06-30", fii=14.2), sh("2026-09-30", fii=16.1),
+                thresholds["fii_move"]),
+            "dii_move": alerts.dii_move_alert(
+                "RELIANCE", sh("2026-06-30", dii=30.0), sh("2026-09-30", dii=32.0),
+                thresholds["dii_move"]),
+            "results": alerts.results_alert(
+                "RELIANCE", rs("2026-09-30", 12826.00, 872.00), has_earlier=True),
+            "announcement": alerts.announcement_alert(
+                "RELIANCE", ann("106833561", "high")),
+        }
+        expected = {
+            "pledge_up": ("shareholding", "2026-09-30", "RELIANCE:pledge_up:2026-09-30"),
+            "promoter_down": ("shareholding", "2026-09-30", "RELIANCE:promoter_down:2026-09-30"),
+            "fii_move": ("shareholding", "2026-09-30", "RELIANCE:fii_move:2026-09-30"),
+            "dii_move": ("shareholding", "2026-09-30", "RELIANCE:dii_move:2026-09-30"),
+            "results": ("quarterly_results", "2026-09-30", "RELIANCE:results:2026-09-30"),
+            "announcement": ("announcements", "106833561", "RELIANCE:announcement:106833561"),
+        }
+        for kind, alert in alerts_by_kind.items():
+            table, source_id, key = expected[kind]
+            self.assertEqual(alert["kind"], kind)
+            self.assertEqual(alert["source_table"], table)
+            self.assertEqual(alert["source_id"], source_id)
+            self.assertEqual(alert["dedupe_key"], key)
+            self.assertIsNone(alert["detail"])
+
+
 if __name__ == "__main__":
     unittest.main()
