@@ -22,6 +22,13 @@
       "when": 1793299953432,
       "tag": "0002_outstanding_lyja",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1793304638047,
+      "tag": "0003_zippy_dexter_bennett",
+      "breakpoints": true
     }
   ]
 }

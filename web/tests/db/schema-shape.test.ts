@@ -40,7 +40,7 @@ const enums: Record<string, string[]> = {
   card_source: ["rhp", "web"],
   rhp_source: ["nse", "sebi"],
   report_session: ["AM", "PM"],
-  sub_category: ["qib", "nii", "snii", "bnii", "retail", "employee", "total"],
+  sub_category: ["qib", "nii", "snii", "bnii", "retail", "employee", "shareholder", "total"],
   importance: ["high", "medium", "low", "routine"],
   job_status: ["queued", "running", "done", "failed"],
   analysis_served: ["saved", "new", "refresh"],

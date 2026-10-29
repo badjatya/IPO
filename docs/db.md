@@ -55,7 +55,7 @@ An IPO that lists **becomes a stock** (`stocks.ipo_key`). A user can move from "
 | `card_source` | `rhp`, `web` | Card schema |
 | `rhp_source` | `nse`, `sebi` | Snapshot |
 | `report_session` | `AM`, `PM` | Report schema |
-| `sub_category` | `qib`, `nii`, `snii`, `bnii`, `retail`, `employee`, `total` | NSE subscription |
+| `sub_category` | `qib`, `nii`, `snii`, `bnii`, `retail`, `employee`, `shareholder`, `total` | NSE subscription (the `shareholder` category appears for eligible RIL shareholders in the Jio Platforms issue; added 2026-10-30) |
 | `importance` | `high`, `medium`, `low`, `routine` | Gemini's rating of an announcement |
 | `job_status` | `queued`, `running`, `done`, `failed` | On-demand analysis jobs |
 | `analysis_served` | `saved`, `new`, `refresh` | What an analysis request got |

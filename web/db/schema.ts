@@ -57,6 +57,7 @@ export const subCategory = pgEnum("sub_category", [
   "bnii",
   "retail",
   "employee",
+  "shareholder",
   "total",
 ]);
 
