@@ -1,6 +1,6 @@
 ---
 task: 003-nse-stock-spike
-status: approved
+status: code-review
 branch: task/003-nse-stock-spike
 assigned_by: Vijay
 planner: DeepSeek (opencode)
@@ -272,7 +272,7 @@ The tests run with the existing command, `python3 -m unittest discover -s tests`
 | Added `KNOWN_GAPS` for EBITDA and filing links in `results-comparision`, `resultDetailedDataLink` in `results_filings`, FII/DII in `shareholding`, the missing `symbol` in pledges, and the missing `quote` fixture | The plan requires a missing column to be explicit, not silently passing. The gap list is asserted by the fixture test |
 | Stripped whitespace from CSV header names in `summarise` only; the saved CSV is unchanged | `EQUITY_L.csv` has spaces after commas (`NAME OF COMPANY, SERIES`). Field coverage needed the stripped names; the fixture keeps the exact bytes NSE returned |
 | Recorded that `results-comparision?consolidated=true` returned a byte-identical body to standalone | The plan says to record an ignored/rejected parameter and never infer consolidated numbers. Both fixtures are kept; `data-sources.md` marks consolidated results **not confirmed** |
-| Local run returned `G1 candidate: PARTIAL` (nine of ten data calls answered; `quote` 403) | The probe exits 1 when a required data call fails. The runner result is still awaited; the build does not fill it in |
+| Local run returned `G1 candidate: PARTIAL` (nine of ten data calls answered; `quote` 403) | The probe exits 1 when a required data call fails. The runner run [40869763010](https://github.com/badjatya/IPO/actions/runs/40869763010) returned the same result, recorded under "Verification" |
 
 ## Verification
 
@@ -326,11 +326,30 @@ equity_list              True    185023   2620 unit not stated
 G1 candidate: PARTIAL
 ```
 
-The third command makes exactly the 12 live requests and is not part of the unit tests. The runner result is still awaited: the human pushes the task branch and supplies the run URL and its `G1 candidate:` line. This section will then record:
+The third command makes exactly the 12 live requests and is not part of the unit tests.
+
+Runner result, from the human's push of `task/003-nse-stock-spike` (recorded by Claude Code at the human's request, because opencode was unavailable):
 
 ```text
-Runner: <run URL>
-G1 candidate: <PASS|PARTIAL|FAIL>
+Runner: https://github.com/badjatya/IPO/actions/runs/40869763010
+G1 candidate: PARTIAL
 ```
 
-and `docs/data-sources.md` will carry the same line as "observed on run `<URL>`". Neither line is filled before the human supplies it.
+```text
+endpoint                 ok       bytes   rows unit               error
+prime_home               False        0   None unit not stated    HTTPError: HTTP Error 403: Forbidden
+prime_stock              True    147260   None unit not stated
+quote                    False        0   None unit not stated    HTTPError: HTTP Error 403: Forbidden
+results_standalone       True     14525      5 unit not stated
+results_consolidated     True     14525      5 unit not stated
+results_filings          True    101760    130 unit not stated
+announcements            True   2904372   3367 unit not stated
+announcements_market     True   2461231   3525 unit not stated
+shareholding             True     43031     23 unit not stated
+pledges                  True       670      1 unit not stated
+pledges_market           True    972529   1558 unit not stated
+equity_list              True    185023   2620 unit not stated
+G1 candidate: PARTIAL
+```
+
+The runner answered the same nine data calls as the local run, and `quote` failed with the same 403 in both places. The job is red because the probe exits 1 when a required call fails. The committed fixtures stay the local ones; the runner's copies are in the run's `nse-stock-smoke` artifact.
