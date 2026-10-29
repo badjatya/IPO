@@ -58,10 +58,10 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Done |
 | [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | **Ready** |
 | [009](#009--import-action) | Import Action on push | 2 | 002, 008, H02 | Blocked |
-| [010](#010--accounts) | Accounts: invite-only sign-in, roles | 2 | 007, D04 | **Ready** |
+| [010](#010--accounts) | Accounts: invite-only sign-in, roles | 2 | 007, D04 | Done |
 | [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | Blocked |
 | [012](#012--track-record-page) | Track record page | 2 | 008, D06 | Blocked |
-| [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | Blocked |
+| [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | **Ready** |
 | [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | Done |
 | [015](#015--stock-universe) | Stock universe | 2 | 008, 014 | Blocked |
 | [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | Done |
@@ -99,7 +99,7 @@ flowchart LR
         T007[007 schema]:::done
         T008[008 import script]:::ready
         T009[009 import Action]
-        T010[010 accounts]
+        T010[010 accounts]:::done
         T011[011 IPO pages]
         T012[012 track record]
         T013[013 admin settings]
@@ -178,7 +178,7 @@ Accounts and secrets that only the human can create. Values never go into git ([
 | H04 | Create a fine-grained `GITHUB_DISPATCH_TOKEN` that can only dispatch the stock worker workflow | 022 | [ ] |
 | H05 | Create the host account and set its environment: `DATABASE_URL`, `GEMINI_API_KEY`, `AUTH_SECRET`, `RESEND_API_KEY`, `EMAIL_FROM`, `GITHUB_DISPATCH_TOKEN` | 025 | [ ] |
 | H06 | Create a Neon API key and add it as an Actions secret, so CI can create a database branch per test run ([db.md § Migrations](../db.md#migrations-and-environments)). Done 2026-10-29: key `github-actions-ci`, scoped to the project, in the `NEON_API_KEY` secret; `NEON_PROJECT_ID` is an Actions variable | 007 | [x] |
-| H07 | Create a Resend account and API key, and verify a sending domain; put `RESEND_API_KEY` and `EMAIL_FROM` in `web/.env.local`. Until a domain is verified, Resend's test sender delivers only to the account owner's address. 010's tests don't need it (the mail module is replaced in tests); a real invite does | 010 (manual check), 025 | [ ] |
+| H07 | Create a Resend account and API key, and verify a sending domain; put `RESEND_API_KEY` and `EMAIL_FROM` in `web/.env.local`. Until a domain is verified, Resend's test sender delivers only to the account owner's address. 010's tests don't need it (the mail module is replaced in tests); a real invite does. 010 is merged; its last done-when check, a real invite arriving, waits on this step | 010 (manual check), 025 | [ ] |
 
 ## Already in place
 
@@ -418,7 +418,7 @@ A GitHub Actions workflow that runs the import on every push to `main` that touc
 | | |
 | --- | --- |
 | Slug | `010-accounts` |
-| Status | Ready |
+| Status | Done |
 | Depends on | 007, D04 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -427,6 +427,7 @@ Invite-only accounts with Better Auth ([ADR-0028](../adr/0028-better-auth-invite
 
 - **Done when:** sign-up is refused; an admin can invite a user, and the invited user can set a password, sign in and sign out; an invite or reset link works once and expires; "forgot password" doesn't reveal whether an account exists; admin-only routes refuse other users; tests cover scoping, the role check, invite and reset with the mail module replaced; db.md, tech.md and arch.md mark accounts as Running.
 - **Watch for:** db.md's `users` columns stay (`uuid` id, `citext` email, `role`), with Better Auth mapped onto them, and its tables come in through a drizzle-kit migration. Tests never call Resend. Account emails carry only the link, never research. The first-admin mechanism is for the plan to propose, and it must not be a public route. The app sends no other email (no alert digests). No user data goes in git. DeepSeek can't run `npm install`, so `/run-task` stops for the human to add `better-auth` and `resend`.
+- **Built (merged 2026-10-30):** Better Auth 1.7.14 on the Drizzle adapter, with `users` mapped as Better Auth's user model and four auth tables (`session`, `account`, `verification`, `rate_limit`) in migration `0003`. It adds sign-in, forgot-password and reset-password pages, the admin-only invite page and `POST /api/admin/invite`, a proxy cookie check behind the authoritative guards (`lib/auth-guard.ts`: `requireAdmin`, `assertSameOrigin`), print-mode mail outside production, and database rate limits. The first admin is `node web/scripts/first-admin.mjs <email>`, then `/forgot-password` ([ADR-0030](../adr/0030-first-admin-bootstrap.md)). The Neon-branch auth suite (`web/tests/db/auth.test.ts`) passes in CI. Still pending: a real invite through Resend, after H07.
 - **Read:** [ADR-0028](../adr/0028-better-auth-invite-only.md), [db.md § users](../db.md#users), [arch.md § 7.1](../arch.md#71-security-and-trust-boundaries), [tech.md § Configuration](../tech.md#configuration-and-secrets).
 - **Start:** `/run-task 010`
 
@@ -470,7 +471,7 @@ Every IPO call against how it listed, from `ipo_outcomes`: a per-IPO table, the 
 | | |
 | --- | --- |
 | Slug | `013-admin-settings` |
-| Status | Blocked |
+| Status | Ready |
 | Depends on | 010 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -478,6 +479,7 @@ Every IPO call against how it listed, from `ipo_outcomes`: a per-IPO table, the 
 An admin-only page that lists the `settings` rows and edits one at a time. Each value is checked against the app's list of known keys and types, and `updated_by` and `updated_at` are recorded.
 
 - **Done when:** an admin can change a value; a bad value is refused; a non-admin gets 403; tests cover all three.
+- **From 010:** guard the page and its route with `requireAdmin` and `assertSameOrigin` from `web/lib/auth-guard.ts`; the app's own routes are outside Better Auth's origin check. The admin layout (`web/app/admin/layout.tsx`) already checks the session and role for every `/admin/*` page. The Neon tests' `api()` helper in `web/tests/db/auth.test.ts` shows how to sign in and send `Origin` in tests.
 - **Read:** [db.md § settings](../db.md#settings), [AGENTS.md](../../AGENTS.md) rule 6.
 - **Start:** `/run-task 013`
 

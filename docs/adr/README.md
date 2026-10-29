@@ -35,6 +35,7 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0027](0027-shadcn-charts-on-recharts.md) | shadcn/ui charts, on Recharts, for the web app | 2026-10-30 | Accepted |
 | [0028](0028-better-auth-invite-only.md) | Better Auth, invite-only password sign-in, account emails through Resend | 2026-10-30 | Accepted |
 | [0029](0029-alert-thresholds-and-severities.md) | Alert thresholds and severities in code (D10); FII/DII parsing is task 027 | 2026-10-30 | Accepted |
+| [0030](0030-first-admin-bootstrap.md) | First admin is a CLI script; one 24-hour expiry for invite and reset links | 2026-10-30 | Accepted |
 
 ## Adding one
 

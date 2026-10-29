@@ -496,3 +496,25 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - For change detection, ask "what does the first run see?" and "what if one source failed last run?" at plan review. Both bugs were in the calling convention, not in the comparisons.
   - Check a rule's inputs against the order of steps in arch.md, not only against the test fixtures.
   - Reserve an ADR number late: parallel sessions take them.
+
+### 2026-10-30: Task 010, accounts
+
+- **Asked:** the human asked Claude to merge 010 once it finished and then start 013, and left it running overnight.
+- **Rounds:**
+  - Three plan rounds and four code rounds; the fourth went one past `/run-task`'s three-round stop, recorded in the review.
+  - DeepSeek's eight steps cost about $0.68.
+  - The `/run-task` session stalled overnight at `code-review`. A second Claude session took over the review, pushed the task branch so CI's `db` job could run (the human was asleep), and merged it.
+- **Human decisions:** at plan review, the first admin is a CLI script and invite and reset links share one 24-hour expiry ([ADR-0030](adr/0030-first-admin-bootstrap.md)).
+- **AI did:**
+  - DeepSeek planned and built Better Auth on the Drizzle adapter: four auth tables, the auth pages, the admin invite page and route, layered guards, print-mode mail, database rate limits, the first-admin script, and an offline suite plus a Neon-branch suite.
+  - Claude reviewed each step, checked each claim against the installed `better-auth` 1.7.14 source, and added the `AUTH_URL` line to `web/.env.example` (DeepSeek's tools can't write `.env*` files).
+- **Notable findings:**
+  - **Driver call shape.** The first-admin script called `@neondatabase/serverless` 1.x as a plain function, which the driver refuses, so no admin could ever be made. The offline test covered only the SQL text.
+  - **`__Secure-` cookie.** The proxy looked for the plain cookie name only; behind any `https` URL every admin request would have been bounced to sign-in.
+  - **Open redirect.** `next=//evil.example` on the sign-in page.
+  - **Reset link misread.** A `[token]` page was built for a link Better Auth's own endpoint already serves. The fix tests the emailed link itself.
+  - **Neon suite never ran.** It first failed on vitest's 5 s timeout, which hid every later failure behind a missing admin cookie. Vitest also sets `TEST=true`, which made Better Auth skip its origin and CSRF checks, so the forged-Origin test had never tested anything.
+  - **ADR numbering again.** 010's ADR-0029 collided with 016's at merge and became ADR-0030.
+- **Learned:**
+  - A review can't approve database code on offline tests; push the branch early so the `db` job runs in round 1.
+  - Test frameworks set environment flags that libraries read. When a security check "passes" in tests, assert that it is switched on.
