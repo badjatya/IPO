@@ -1,4 +1,4 @@
-import { eq, getTableColumns, sql } from "drizzle-orm";
+import { and, eq, getTableColumns, notInArray, sql } from "drizzle-orm";
 import {
   ipoAnalyses,
   ipoCards,
@@ -11,7 +11,7 @@ import {
 } from "@/db/schema";
 import { parseAnalysisDocument } from "./analysis";
 import { parseCardDocument } from "./card";
-import { classifyResearchFile, researchKey } from "./files";
+import { classifyResearchFile, researchKey, type ResearchKind } from "./files";
 import { changedPaths, headSha, lastCommitTouching, listResearchFilesAtHead, readFilesAt } from "./git";
 import { recordFailed, recordOk } from "./log";
 import { parseOutcomesDocument } from "./outcomes";
@@ -96,8 +96,15 @@ async function applyFile(tx: ImportTx, path: string, content: string, reportComm
     case "snapshot": {
       const rows = parseSnapshotDocument(JSON.parse(content), path);
       await upsertIpos(tx, rows.ipos);
-      await tx.insert(ipoSnapshots).values(rows.snapshots).onConflictDoNothing();
-      await tx.insert(ipoSubscriptions).values(rows.subscriptions).onConflictDoNothing();
+      // A snapshot may have no subscription data at all (10 of the repo's 35
+      // snapshots) or an empty `ipos` array; Drizzle's `.values([])` throws, so
+      // skip an empty insert.
+      if (rows.snapshots.length > 0) {
+        await tx.insert(ipoSnapshots).values(rows.snapshots).onConflictDoNothing();
+      }
+      if (rows.subscriptions.length > 0) {
+        await tx.insert(ipoSubscriptions).values(rows.subscriptions).onConflictDoNothing();
+      }
       break;
     }
     case "card": {
@@ -125,6 +132,24 @@ async function applyFile(tx: ImportTx, path: string, content: string, reportComm
     case "report": {
       const { report, verdicts } = parseReportDocument(JSON.parse(content), path);
       if (reportCommitSha !== null) report.commitSha = reportCommitSha;
+      // The report owns every verdict of its (report_date, session): drop the
+      // entries a rewritten file no longer carries, so per-commit mode
+      // converges to exactly the file, matching the rebuild. The parser
+      // guarantees `reportDate`/`session` are present (it throws otherwise)
+      // and every verdict carries its `ipoKey` from the file; the schema types
+      // them nullable, hence the non-null assertions.
+      const keptKeys = verdicts.map((verdict) => verdict.ipoKey!);
+      const sessionMatch = and(
+        eq(ipoVerdicts.reportDate, report.reportDate!),
+        eq(ipoVerdicts.session, report.session!),
+      );
+      if (keptKeys.length === 0) {
+        await tx.delete(ipoVerdicts).where(sessionMatch);
+      } else {
+        await tx
+          .delete(ipoVerdicts)
+          .where(and(sessionMatch, notInArray(ipoVerdicts.ipoKey, keptKeys)));
+      }
       await tx.insert(reports).values(report).onConflictDoUpdate({
         target: [reports.reportDate, reports.session],
         set: replacedSet(reports, report, ["reportDate", "session"]),
@@ -139,6 +164,15 @@ async function applyFile(tx: ImportTx, path: string, content: string, reportComm
     }
     case "outcome": {
       const rows = parseOutcomesDocument(JSON.parse(content));
+      // data/outcomes.json owns every ipo_outcomes row: drop the keys a
+      // rewritten file no longer carries, so per-commit mode converges to
+      // exactly the file, matching the rebuild.
+      const keptKeys = rows.map((row) => row.ipoKey);
+      if (keptKeys.length === 0) {
+        await tx.delete(ipoOutcomes);
+      } else {
+        await tx.delete(ipoOutcomes).where(notInArray(ipoOutcomes.ipoKey, keptKeys));
+      }
       for (const row of rows) {
         await tx.insert(ipoOutcomes).values(row).onConflictDoUpdate({
           target: ipoOutcomes.ipoKey,
@@ -202,24 +236,41 @@ async function deleteFileRows(tx: ImportTx, path: string): Promise<void> {
  * stops there and the next run can retry.
  */
 export async function importCommit(db: ImportDb, root: string, sha: string): Promise<CommitOutcome> {
+  // `git diff` lists a commit's files in path order (`analysis/` < `data/` <
+  // `reports/`), which is not the foreign-key order: a routine run that
+  // analyses a newly listed IPO adds its card, analysis and report in the same
+  // commit as the snapshot that first creates the `ipos` row. Apply the
+  // deletions first (each `deleteFileRows` removes its own children), then the
+  // upserts in FK order — snapshot (which upserts `ipos`) before card,
+  // analysis, report and outcome.
+  const kindOrder: Record<ResearchKind, number> = {
+    snapshot: 0,
+    card: 1,
+    analysis: 2,
+    report: 3,
+    outcome: 4,
+  };
   const research = changedPaths(root, sha).filter((change) => classifyResearchFile(change.path) !== null);
+  const byKind = (a: (typeof research)[number], b: (typeof research)[number]) =>
+    kindOrder[classifyResearchFile(a.path)!] - kindOrder[classifyResearchFile(b.path)!];
+  const deletions = research.filter((change) => change.status === "D").toSorted(byKind);
+  const upserts = research.filter((change) => change.status !== "D").toSorted(byKind);
   const files = research.length;
   const startedAt = new Date();
   try {
     await db.transaction(async (tx) => {
       await tx.execute(sql.raw(`select pg_advisory_xact_lock(${ADVISORY_LOCK_KEY})`));
+      for (const change of deletions) {
+        await deleteFileRows(tx, change.path);
+      }
       const contents = await readFilesAt(
         root,
         sha,
-        research.filter((change) => change.status !== "D").map((change) => change.path),
+        upserts.map((change) => change.path),
       );
-      for (const change of research) {
-        if (change.status === "D") {
-          await deleteFileRows(tx, change.path);
-        } else {
-          // Reports record the commit that changed them; other kinds ignore it.
-          await applyFile(tx, change.path, contents[change.path], sha);
-        }
+      for (const change of upserts) {
+        // Reports record the commit that changed them; other kinds ignore it.
+        await applyFile(tx, change.path, contents[change.path], sha);
       }
       await recordOk(tx, { sha, files, startedAt, finishedAt: new Date() });
     });

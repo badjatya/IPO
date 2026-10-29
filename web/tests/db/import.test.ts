@@ -425,6 +425,102 @@ describe("import: per-commit runs against a temp repo", () => {
     const after = await db().select({ contentSha: schema.ipoAnalyses.contentSha }).from(schema.ipoAnalyses);
     expect(after[0]!.contentSha).toBe(createHash("sha256").update(md).digest("hex"));
   }, 180_000);
+
+  it("(h) an edit that drops an entry removes its rows, matching a rebuild", async () => {
+    const { repo, git } = makeRepo();
+    write(repo, "data/snapshots/2026-10-29T0907.json", JSON.stringify({
+      generated_at: "2026-10-29T09:07+05:30",
+      ipos: [
+        { key: "sfc-environmental-technologies", name: "SFC", phase: "closing_today" },
+        { key: "bls-polymers", name: "BLS", phase: "closing_today" },
+      ],
+    }));
+    write(repo, "data/outcomes.json", JSON.stringify({
+      "sfc-environmental-technologies": { symbol: "SFCTECH", listing_date: "2026-11-04", issue_price: 330, listing_price: 350 },
+      "bls-polymers": { symbol: "BLS", listing_date: "2026-11-04", issue_price: 200, listing_price: 210 },
+    }));
+    write(repo, "reports/2026-10-29-pm.json", JSON.stringify({
+      date: "2026-10-29",
+      session: "PM",
+      headline: "x",
+      ipos: {
+        "sfc-environmental-technologies": { verdict: "listing_gains", verdict_text: "Listing gains only" },
+        "bls-polymers": { verdict: "listing_gains", verdict_text: "Listing gains only" },
+      },
+      notes: [],
+    }));
+    commitAll(git, "a: snapshot + report with two IPOs + two outcomes");
+
+    const first = await runImport({ root: repo, db: db(), from: null });
+    expect(first.ok).toBe(true);
+    const afterFirst = await tableCounts();
+    expect(afterFirst.verdicts).toBe(2);
+    expect(afterFirst.outcomes).toBe(2);
+
+    // b rewrites the report without one IPO and outcomes.json without one key.
+    write(repo, "reports/2026-10-29-pm.json", JSON.stringify({
+      date: "2026-10-29",
+      session: "PM",
+      headline: "x",
+      ipos: { "bls-polymers": { verdict: "listing_gains", verdict_text: "Listing gains only" } },
+      notes: [],
+    }));
+    write(repo, "data/outcomes.json", JSON.stringify({
+      "bls-polymers": { symbol: "BLS", listing_date: "2026-11-04", issue_price: 200, listing_price: 210 },
+    }));
+    commitAll(git, "b: report and outcomes drop one IPO each");
+
+    const second = await runImport({ root: repo, db: db(), from: null });
+    expect(second.ok).toBe(true);
+    const afterSecond = await tableCounts();
+    expect(afterSecond.verdicts).toBe(1);
+    expect(afterSecond.outcomes).toBe(1);
+    const sfcVerdict = await db()
+      .select()
+      .from(schema.ipoVerdicts)
+      .where(eq(schema.ipoVerdicts.ipoKey, "sfc-environmental-technologies"));
+    expect(sfcVerdict).toHaveLength(0);
+
+    // Per-commit mode now converges to exactly the file state, like a rebuild.
+    const rebuilt = await runImport({ root: repo, db: db(), rebuild: true });
+    expect(rebuilt.ok).toBe(true);
+    expect(await tableCounts()).toEqual(afterSecond);
+  }, 180_000);
+
+  it("(i) one commit can first introduce an IPO with its card, analysis and report", async () => {
+    const { repo, git } = makeRepo();
+    // A single commit whose paths git lists in path order (analysis/ < data/ <
+    // reports/), where the snapshot first creates the ipos row that the card's
+    // and verdict's foreign keys need — the real shape of the routine commits
+    // the review reproduced (ffdb3cb, 6632e26, 07abccd, f35a790, 6962cca).
+    write(repo, "analysis/m-k-sons-fine-jewels.md", "# M K Sons Fine Jewels\n\nAnalysis text.\n");
+    write(
+      repo,
+      "analysis/m-k-sons-fine-jewels.json",
+      JSON.stringify({ name: "M K Sons", source: "rhp", verdict: "neutral", verdict_text: "Neutral", anchor_grade: "strong" }),
+    );
+    write(repo, "data/snapshots/2026-10-23T1908.json", JSON.stringify({
+      generated_at: "2026-10-23T19:08+05:30",
+      ipos: [{ key: "m-k-sons-fine-jewels", name: "M K Sons", phase: "open" }],
+    }));
+    write(repo, "reports/2026-10-23-pm.json", JSON.stringify({
+      date: "2026-10-23",
+      session: "PM",
+      headline: "x",
+      ipos: { "m-k-sons-fine-jewels": { verdict: "neutral", verdict_text: "Neutral" } },
+      notes: [],
+    }));
+    commitAll(git, "a: snapshot, card, analysis and report in one commit");
+
+    const result = await runImport({ root: repo, db: db(), from: null });
+    expect(result.ok).toBe(true);
+    const counts = await tableCounts();
+    expect(counts.ipos).toBe(1);
+    expect(counts.cards).toBe(1);
+    expect(counts.analyses).toBe(1);
+    expect(counts.reports).toBe(1);
+    expect(counts.verdicts).toBe(1);
+  }, 180_000);
 });
 
 describe("import: CLI", () => {
@@ -432,5 +528,15 @@ describe("import: CLI", () => {
     const result = runCli(["--root", root], { DATABASE_URL: "" });
     expect(result.status).not.toBe(0);
     expect(result.stdout + result.stderr).toContain("DATABASE_URL is not set");
+  });
+
+  it("exits with usage (code 2) when a value flag has no value", () => {
+    // Without the check, `--from` would read `undefined` and silently run the
+    // default command (a rebuild, for an empty imports table) on the repo root.
+    for (const args of [["--from"], ["--root"], ["--from", "--rebuild"], ["--root", "--rebuild"]]) {
+      const result = runCli(args, { DATABASE_URL: "postgres://unused" });
+      expect(result.status).toBe(2);
+      expect(result.stdout + result.stderr).toContain("usage");
+    }
   });
 });
