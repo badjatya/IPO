@@ -407,7 +407,7 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - DeepSeek's five steps cost $0.25.
   - The last fix step was stopped by the driver (exit 3) for editing one line of the approved plan's Doc updates. The human looked at it and accepted it.
 - **Human decisions:**
-  - **D09:** a new top-level `stock_worker/` package, standard library now, pinned dependencies later (ADR-0026, Proposed).
+  - **D09:** a new top-level `stock_worker/` package, standard library now, pinned dependencies later (ADR-0026, accepted 2026-10-30).
   - **EBITDA:** operating EBITDA, excluding other income.
   - Each time, the human took the recommended option.
 - **AI did:**

@@ -1,6 +1,6 @@
 # ADR-0026: Stock worker code lives in `stock_worker/`, standard library first
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-30)
 - **Decided:** 2026-10-29 · **Recorded:** 2026-10-30
 - **Deciders:** Vijay · **Drafted with:** DeepSeek (deepseek-v4-flash-0731, OpenRouter) in task 014; reviewed by Claude Code
 
@@ -28,7 +28,7 @@ tech.md's "one module shared by the app and the worker" becomes one module per s
 - `ipo_agent/` stays the IPO routine, untouched; ADR-0002's standard-library rule binds it alone.
 - 014 ships a calibrated, tested fetcher layer nothing calls yet: `stock_worker/` with `results.py`, `announcements.py`, `shareholding.py`, `pledges.py`, the quote probe (`probe.py`), and `fetchers.py` orchestration.
 - 018 adds the Postgres driver through the package's own requirements file; 020 adds the Gemini SDK the same way. Each such task names its dependencies in its plan.
-- The human accepts this ADR to tick D09 on the roadmap.
+- The human accepted this ADR on 2026-10-30 (option A), ticking D09 on the roadmap.
 
 ## AI involvement
 

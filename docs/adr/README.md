@@ -31,7 +31,7 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0023](0023-typescript-strict.md) | TypeScript in strict mode for the web app | 2026-10-29 | Accepted |
 | [0024](0024-vitest-for-app-tests.md) | Vitest and Testing Library for the web app's tests | 2026-10-29 | Accepted |
 | [0025](0025-drizzle-on-neon-serverless-driver.md) | Drizzle ORM on Neon's serverless driver | 2026-10-29 | Accepted |
-| [0026](0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | 2026-10-30 | Proposed |
+| [0026](0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | 2026-10-30 | Accepted |
 
 ## Adding one
 
