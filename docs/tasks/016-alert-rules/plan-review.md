@@ -60,3 +60,42 @@ Settled by the human at this review, 2026-10-30. Each one is the plan's recommen
 - **Pledge title wording.** `promoter_pledged_pct` is a share of the promoter holding, not of total equity. db.md's example "Promoter pledge up from 4% to 11%" leaves that out. Keeping the db.md wording is fine, but say in the ADR what the percentage is a share of, so 020's explanation prompt can state it correctly.
 - **Results.** The plan already stays within one consolidation series, and its `results` title uses only stated fields with "not available" for gaps. Both are good. Keep them through the item 1 rework.
 - **Step 7** lists the `.claude/hooks` and `.claude/deepseek` suites as well as `tests/`. Good. Paste all three.
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Read:** plan.md (revision 1), docs/arch.md § 4.2 Mode 1, the RELIANCE `shareholding.json` fixture parsed through `shareholding.parse`
+
+**Round 1 items:**
+
+| # | Item | Checked |
+| --- | --- | --- |
+| 1 | Only what's new | `fetched`/`stored` split; first sight raises nothing; a change rule pairs the new quarter with the latest earlier quarter on record; 018's contract warns about an incomplete `stored` set. Done, apart from announcements (item 6 below) |
+| 2 | Pledge path | Option (a): the orchestrator joins pledges to shareholding on `quarter_end`, both one-sided cases are tested, and ADANIENT is its own case. Done |
+| 3 | Dedupe rule | Per-series timestamp, `None` sorts older, and an order-independent tie-break, all tested. Done |
+| 4 | Decisions written in | Approach § 5 table, steps 1 and 6, ADR-0027 Proposed, `settings` contingencies dropped. Done |
+| 5 | `source_id` | Each form is in db.md and pinned per kind. Done |
+
+### Changes requested
+
+6. **The `announcement` rule can never fire.**
+   - **The order of steps.** arch.md § 4.2 Mode 1 computes alert candidates at step 3 (Python). It rates importance at step 4 (Gemini). So when 018 calls `compute_alerts`, every announcement that's new in this run still has `importance = None`.
+   - **The rule blocks the only other path.** Approach § 3 also says an announcement already on record "never re-alerts, even when 020 sets its importance afterwards". So there's no other route either: the rule is dead by construction, not just "silent until 020".
+   - **The tests hide it.** They feed `importance` by hand, so they'd pass while the rule is unreachable in production.
+   - **Change.** Make the rule reachable once an announcement has been rated, and state who calls it. The simplest fit for the arch.md order:
+     - `announcement_alert(symbol, record)` stays pure.
+     - It's called for each announcement the run's rating step has just rated: 020's step 4, after Gemini writes `importance`. That's still one alert per `exchange_ref`, guarded by the dedupe key.
+     - `compute_alerts` handles only the change rules and `results`.
+     - § 6's contract, the `ai.md` Alert-explanation line and the roadmap note for **020** say this.
+   - **Or another route.** If you'd rather have `compute_alerts` take announcements whose importance has just been set, the newness test has to change too, and you need to say what triggers the second call.
+   - **Either way:** add a test that a fetched announcement with `importance = None`, rated later, raises exactly one alert through whichever path you choose.
+
+7. **Pin exact outcomes in step 5(b).**
+   - **The gap.** "At most one change alert from the new shareholding quarter pair" would pass with zero or one alerts, so it doesn't test the rule.
+   - **What the fixture gives.** Parsed through `shareholding.parse`, its last two quarters are 2026-06-30 at 50.48% and 2026-09-30 at 50.44% promoter holding, with FII/DII `None`. That's a 0.04 pp fall, so case (b) should raise exactly **one** `results` alert and **zero** change alerts.
+   - **Change.** Assert those exact counts and keys. Put a threshold-crossing pair in a synthetic case, not the fixture.
+
+### Notes
+
+- **Leave § 6's line about the incomplete `stored` set for 018.** It's the right warning. That task's tests should cover it.
