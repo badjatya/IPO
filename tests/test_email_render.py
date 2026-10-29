@@ -133,6 +133,32 @@ class RenderTests(NoNetworkCase):
     def test_best_label_understands_card_names(self):
         self.assertEqual(email_render.best_label(ipo(best_category=None), {"best_category": "Big HNI"}), "Big HNI")
 
+    def test_provenance_fields_do_not_change_the_output(self):
+        # ROUTINE.md "Provenance": reports carry ai_model, ai_prompt_version and ai_written_at
+        # at the top level. The renderers read only known keys, so a report with the fields
+        # must render byte-identically to the same report without them.
+        plain = report()
+        with_fields = {**report(), "ai_model": "claude-sonnet-5-5", "ai_prompt_version": "1",
+                       "ai_written_at": "2026-10-29T05:31:02Z"}
+        snap = snapshot(f"{TODAY}T09:07+05:30", [ipo()])
+        self.assertEqual(email_render.render_html(with_fields, snap),
+                         email_render.render_html(plain, snap))
+        self.assertEqual(email_render.render_text(with_fields, snap),
+                         email_render.render_text(plain, snap))
+        self.assertEqual(email_render.subject(with_fields, snap["ipos"]),
+                         email_render.subject(plain, snap["ipos"]))
+
+    def test_quiet_shaped_report_renders(self):
+        # quiet.py writes "generated": "quiet" with no provenance fields (code-written,
+        # not AI-written); such a report must still render.
+        rep = {**report(), "generated": "quiet", "carried_from": "2026-10-29-am"}
+        snap = snapshot(f"{TODAY}T09:07+05:30", [ipo()])
+        page = email_render.render_html(rep, snap)
+        text = email_render.render_text(rep, snap)
+        self.assertIn("not investment advice", page)
+        self.assertIn("not investment advice", text)
+        self.assertIn("Acme Industries", page)
+
 
 class SubjectTests(NoNetworkCase):
     def test_counts_open_upcoming_and_closing(self):

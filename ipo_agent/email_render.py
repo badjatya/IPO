@@ -12,6 +12,10 @@ Verdict file (written by Claude each run), keyed by snapshot `key`:
 {
   "date": "2026-10-12", "session": "PM",
   "headline": "optional one-line takeaway",
+  # Provenance, copied verbatim from ROUTINE.md's "Provenance" section (ai_model is the
+  # model ID your system prompt says you are running as):
+  "ai_model": "claude-sonnet-5-5", "ai_prompt_version": "1",
+  "ai_written_at": "2026-10-12T05:31:02Z",        # run `date -u +%Y-%m-%dT%H:%M:%SZ`
   "ipos": {
     "<key>": {
       "verdict": "apply|listing_gains|avoid|neutral|pending",  # optional if the card's still holds
@@ -30,6 +34,9 @@ Verdict file (written by Claude each run), keyed by snapshot `key`:
   },
   "notes": ["optional footer notes"]
 }
+Quiet-run files, written by quiet.py ("generated": "quiet"), carry no provenance: they are
+code-written, not AI-written. The renderers ignore the fields either way — a report renders
+identically with or without them (tests pin this).
 """
 
 import datetime as dt
