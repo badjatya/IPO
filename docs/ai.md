@@ -166,4 +166,5 @@ flowchart LR
 | `.claude/agents/`: `rhp-analyst`, `verdict-reviewer` | **Running** | Narrow subagents: one drafts an analysis from RHP text and lists where each figure came from; one checks a verdict file against the day's numbers, read-only |
 | `.claude/settings.json` hooks | **Running** | Guardrails above, enforced by the harness instead of by instruction; tests in `.claude/hooks/test_guard.py` |
 | `opencode.json`, `.opencode/agents/planner.md`, `.opencode/commands/` | **Running** | DeepSeek's permissions, planning-only agent, and the commands `/plan-task`, `/revise-plan`, `/build-task`, `/respond-review` |
-| `tests/` + CI | **Decided** | Python `unittest` for the agent, app tests against a Neon branch |
+| Agent `tests/` | **Running** | Python `unittest` for the agent, saved fixtures only, no network |
+| CI | **Decided** | GitHub Actions; app tests against a Neon branch |

@@ -30,7 +30,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | In-app AI (Ask) | Gemini API, free tier | Decided (model Open) | [0014](adr/0014-gemini-free-api-for-ask.md) |
 | Email | Admin's brief only, through the Gmail connector; no email to users | Decided | [0015](adr/0015-email-to-admin-only.md) |
 | Hosting | Not chosen yet; local until week 4 | Open | — |
-| Agent tests | Python `unittest` | Decided | — |
+| Agent tests | Python `unittest`; run with `python3 -m unittest discover -s tests` | Running | — |
 | App tests | Test runner not chosen yet; database tests on Neon branches | Open | — |
 | CI | GitHub Actions | Decided | — |
 | Dev tooling | DeepSeek in opencode (plans and builds); Claude Code, Opus 5.5 (reviews plans and code) | Running | [0019](adr/0019-deepseek-builds-claude-reviews.md) |
@@ -96,7 +96,7 @@ Names are planned; values are never committed.
 | `docs/tasks/` | Task plans, reviews and responses | Running |
 | `.claude/` | Claude Code skills, subagents, hooks and their tests | Running |
 | `opencode.json`, `.opencode/` | DeepSeek's permissions, planner agent, workflow commands | Running |
-| `tests/` | Agent tests | Decided |
+| `tests/` | Agent tests (`python3 -m unittest discover -s tests`, saved fixtures only) | Running |
 | `web/` | Next.js app, migrations, import script | Proposed (same repo; [arch.md § Open questions](arch.md#9-open-questions)) |
 | `.github/workflows/` | Import and CI | Decided |
 
