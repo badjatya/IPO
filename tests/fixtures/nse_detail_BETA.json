@@ -1,0 +1,13 @@
+{
+  "companyName": "Beta Corp Limited",
+  "issueInfo": {
+    "dataList": [
+      {"title": "", "value": ""},
+      {"title": "Symbol", "value": "BETA"},
+      {"title": "Issue Period", "value": "02-Nov-2026 to 04-Nov-2026"},
+      {"title": "Price Range", "value": "Rs. 100 to Rs. 105"},
+      {"title": "Bid Lot", "value": "100 Equity Shares"}
+    ]
+  },
+  "bidDetails": []
+}
