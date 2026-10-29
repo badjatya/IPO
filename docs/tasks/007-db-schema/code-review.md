@@ -55,3 +55,53 @@ OK
 | 3 | **Fixed.** `web/tests/db/schema-shape.test.ts` now reads `pg_constraint` (`contype = 'p'`) with `pg_get_constraintdef`: exactly one PK row per table, and per-table column lists against db.md — composite for the seven natural-key tables, single-column for the rest, `id` for the identity/uuid tables. | `c1dafeb` |
 | 4 | **Fixed.** `docs/arch.md` § 6 Database row keeps both: test-run branches **Running** (the `db` job), preview branches **Decided** (with the host, D11). | `5e0c686` |
 | 5 | **Fixed.** Renamed `WORKTREE_ROOT` → `WEB_ROOT` (it is `web/`) and dropped `?connection_uris=true` from the create-branch call; the `pickConnectionUri` fallback stays. | `3e5cea5` |
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff 1ce9501..71a4291` (the round 1 fixes), pushed as `task/007-db-schema` at `71a4291`
+
+**Tests:**
+
+```text
+Claude, in the worktree:
+$ cd web && npm test               → Test Files 4 passed (4), Tests 21 passed (21)
+$ npm run typecheck                → exit 0
+$ npm run lint                     → exit 0
+$ npx drizzle-kit generate         → No schema changes, nothing to migrate 😴; git status --porcelain db → empty
+$ python3 -m unittest discover -s tests → Ran 227 tests, OK
+
+CI run 40935844323 (https://github.com/badjatya/IPO/actions/runs/40935844323), push of 71a4291:
+tests: success
+web:   success   (includes the new schema-drift step)
+db:    failure
+
+db job, "Database tests on a Neon branch":
+> node scripts/neon-branch.mjs
+test:db failed: Error: no default branch found; refusing to guess where to fork from
+    at main (file:///home/runner/work/IPO/IPO/web/scripts/neon-branch.mjs:105:11)
+##[error]Process completed with exit code 1.
+```
+
+**Round 1 fixes:**
+
+| # | Fix | Checked |
+| --- | --- | --- |
+| 1 | Composite keys | One table-level `CONSTRAINT … PRIMARY KEY(…)` per table; 23 primary keys for 23 tables; no table has two; the seed migration is byte-identical |
+| 2 | API host | Now reaches the Neon API: the run got past authentication to the branch list |
+| 3 | Primary keys | The new shape test checks one primary key per table with db.md's columns |
+| 4 | arch.md | Database row restored, preview branches **Decided** |
+| 5 | Naming | `WEB_ROOT`, and no query string |
+
+Round 1's findings stay closed. The failure below is a new one, which the first real run exposed.
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 6 | Blocker | `web/scripts/neon-branch.mjs:103` | `branches.find((branch) => branch.is_default === true)` finds nothing. Neon's API v2 Branch object marks the default branch with `default: true` (`primary` is the older, deprecated name). There is no `is_default` field. The list call succeeded, so the project's branches came back, but none matched. The harness stops before creating a branch, so the `db` job can't pass, and the Done-when is still unproven. No branch was created, so nothing needs cleaning up. | Match on `branch.default === true`. Move it into a pure helper (e.g. `findDefaultBranch(branches)`) with an offline test that uses a fixture in the API's documented shape. When nothing matches, make the error list the branches it saw (name and `default`), so the next mismatch shows up in the log. Check the other fields the harness reads from the create response (`branch.id`, `connection_uris[].connection_uri`, `endpoints[].host`, `roles[]`) against the API reference while you're there, because this is the first run that reaches them. |
+
+### Plan and docs
+
+No new deviations. Add finding 6 under "Changes during build". Approval needs a green `db` job. The human will push the fix, or run `npm run test:db` with the key.
