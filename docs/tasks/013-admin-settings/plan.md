@@ -1,6 +1,6 @@
 ---
 task: 013-admin-settings
-status: approved
+status: code-review
 branch: task/013-admin-settings
 assigned_by: Vijay
 planner: DeepSeek deepseek-v4-flash-0731 (OpenRouter)
