@@ -99,3 +99,22 @@ Settled by the human at this review, 2026-10-30. Each one is the plan's recommen
 ### Notes
 
 - **Leave § 6's line about the incomplete `stored` set for 018.** It's the right warning. That task's tests should cover it.
+
+## Round 3 (2026-10-30)
+
+**Verdict:** Approved
+
+**Read:** plan.md (revision 2), the RELIANCE results fixture parsed through `results.parse_results` (periods 2023-12-31 → 2024-12-31)
+
+**Round 2 items:**
+
+| # | Item | Checked |
+| --- | --- | --- |
+| 6 | Announcement rule reachable | `announcement_alert` stays pure and isn't called by `compute_alerts`. 020's rating step calls it after `importance` is written. § 6, the ai.md line, step 6 and the roadmap note for 020 all say so, and a "rated later" test pins the flow. Done |
+| 7 | Exact outcomes in 5(b) | One alert, `RELIANCE:results:2024-12-31`, and zero change alerts (a 0.04 pp promoter fall). The threshold-crossing pair is in step 4's synthetic tests. I checked both fixture values against the parsers. Done |
+
+No setup step or package is needed. The human settled D10 and the FII/DII scoping in round 1, and nothing is left open.
+
+### Notes
+
+- **Name the rating set in the 020 note.** The re-rate risk row relies on 020 rating only the run's new announcements. When the roadmap note for 020 goes in, say so there too, so 020's plan keeps it.
