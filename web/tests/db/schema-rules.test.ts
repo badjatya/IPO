@@ -31,14 +31,37 @@ async function insertStock(symbol: string) {
   await db().insert(stocks).values({ symbol, name: `Stock ${symbol}`, active: true });
 }
 
-/** Resolves to the Postgres error a violating statement throws, or undefined. */
+/** Resolves to the Postgres error a violating statement throws; fails the test if it succeeds. */
 async function captureViolation(promise: Promise<unknown>) {
+  let error: unknown;
   try {
     await promise;
-    return undefined;
-  } catch (error) {
-    return error as { code?: string; message?: string };
+  } catch (caught) {
+    error = caught;
   }
+  // Every call site expects a constraint violation, so a successful statement is
+  // a test failure — a dropped index must not read as the generic "undefined".
+  if (error === undefined) {
+    throw new Error("expected a constraint violation, but the statement succeeded");
+  }
+  // drizzle-orm wraps driver errors in DrizzleQueryError (message "Failed query: …");
+  // the Postgres error, with code / constraint / message, is its cause
+  // (@neondatabase/serverless throws NeonDbError with those fields).
+  const inner = (error as { cause?: unknown }).cause ?? error;
+  return inner as { code?: string; constraint?: string; message?: string };
+}
+
+/** A 23505 unique-violation error that names the expected index (constraint field or message). */
+function expectUniqueViolation(
+  error: { code?: string; constraint?: string; message?: string },
+  indexName: string,
+) {
+  expect(error.code).toBe("23505");
+  const namesIndex = error.constraint === indexName || (error.message ?? "").includes(indexName);
+  expect(
+    namesIndex,
+    `expected the violation to name index "${indexName}", got constraint=${error.constraint} message=${error.message}`,
+  ).toBe(true);
 }
 
 async function partialUniqueIndexName(table: string) {
@@ -77,8 +100,7 @@ describe("schema rules on a real branch", () => {
     const violation = await captureViolation(
       db().insert(analysisJobs).values({ symbol, status: "queued", reason: "new" }),
     );
-    expect(violation?.code).toBe("23505");
-    expect(violation?.message).toContain(indexName);
+    expectUniqueViolation(violation, indexName);
   });
 
   it("fails a queued job while another is running for the same stock", async () => {
@@ -90,8 +112,7 @@ describe("schema rules on a real branch", () => {
     const violation = await captureViolation(
       db().insert(analysisJobs).values({ symbol, status: "queued", reason: "new" }),
     );
-    expect(violation?.code).toBe("23505");
-    expect(violation?.message).toContain(indexName);
+    expectUniqueViolation(violation, indexName);
   });
 
   it("allows a new queued job once the previous one is done", async () => {
@@ -104,11 +125,13 @@ describe("schema rules on a real branch", () => {
     await db().update(analysisJobs).set({ status: "done" }).where(eq(analysisJobs.id, job.id));
 
     await db().insert(analysisJobs).values({ symbol, status: "queued", reason: "refresh" });
-    const [queued] = await db()
+    const statuses = await db()
       .select({ status: analysisJobs.status })
       .from(analysisJobs)
       .where(eq(analysisJobs.symbol, symbol));
-    expect(queued.status).toBe("queued");
+    // Both rows exist — the new queued job against the done one — whichever
+    // order the select happens to return them in.
+    expect(statuses.map((row) => row.status).toSorted()).toEqual(["done", "queued"]);
   });
 
   it("rejects a duplicate alert dedupe_key (23505)", async () => {
@@ -126,8 +149,7 @@ describe("schema rules on a real branch", () => {
 
     const indexName = await uniqueIndexNameFor("alerts", "dedupe_key");
     const violation = await captureViolation(db().insert(alerts).values(values));
-    expect(violation?.code).toBe("23505");
-    expect(violation?.message).toContain(indexName);
+    expectUniqueViolation(violation, indexName);
   });
 
   it("rejects a duplicate announcement exchange_ref (23505)", async () => {
@@ -145,8 +167,7 @@ describe("schema rules on a real branch", () => {
 
     const indexName = await uniqueIndexNameFor("announcements", "exchange_ref");
     const violation = await captureViolation(db().insert(announcements).values(values));
-    expect(violation?.code).toBe("23505");
-    expect(violation?.message).toContain(indexName);
+    expectUniqueViolation(violation, indexName);
   });
 
   it("returns each watched symbol once across users in watched_symbols", async () => {
