@@ -49,10 +49,10 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 
 | ID | Task | Week | Depends on | Status |
 | --- | --- | --- | --- | --- |
-| [001](#001--agent-test-suite) | Agent test suite | 1 | — | **In progress** |
-| [002](#002--ci-workflow) | CI workflow | 1 | 001 | Blocked |
+| [001](#001--agent-test-suite) | Agent test suite | 1 | — | Done |
+| [002](#002--ci-workflow) | CI workflow | 1 | 001 | **Ready** |
 | [003](#003--nse-stock-data-spike) | NSE stock-data spike and runner smoke test | 1 | — | Done |
-| [004](#004--routine-provenance-and-documents-as-data) | Routine provenance and documents-as-data | 1 | 001 | Blocked |
+| [004](#004--routine-provenance-and-documents-as-data) | Routine provenance and documents-as-data | 1 | 001 | **Ready** |
 | [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | Blocked |
 | [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | Blocked |
 | [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Blocked |
@@ -87,10 +87,10 @@ flowchart LR
     classDef done fill:#e0e0e0,stroke:#757575
 
     subgraph wk1 ["Week 1: foundation"]
-        T001[001 agent tests]:::ready
-        T002[002 CI]
+        T001[001 agent tests]:::done
+        T002[002 CI]:::ready
         T003[003 NSE spike]:::done
-        T004[004 provenance]
+        T004[004 provenance]:::ready
         T005[005 figures check]
     end
     subgraph wk2 ["Week 2: web app, IPO side"]
@@ -202,7 +202,7 @@ Nothing below needs a task. Evidence is in the repo.
 | | |
 | --- | --- |
 | Slug | `001-agent-tests` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | — |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -214,13 +214,18 @@ Nothing below needs a task. Evidence is in the repo.
 - **Watch for:** parser fixtures (saved HTML and JSON) go under `tests/fixtures/`, because DeepSeek can't write to `data/`. Network calls are stubbed at `net.py`.
 - **Read:** AGENTS.md § Building, [arch.md § 4.1](../arch.md#41-ipo-routine-running), [ADR-0002](../adr/0002-standard-library-only-agent.md).
 - **Start:** `/plan-task Task 001 from docs/tasks/ROADMAP.md`
+- **Result:** merged 2026-10-29.
+  - **The suite:** 169 tests in `tests/`, with hand-built fixtures in `tests/fixtures/` (provenance in their README).
+  - **No network:** every test case inherits `NoNetworkCase`, which blocks DNS and socket connects.
+  - **On `main`:** with task 003's tests, `python3 -m unittest discover -s tests` runs 188 tests in under a second, with no network.
+  - **Bugs found:** none.
 
 ### 002 · CI workflow
 
 | | |
 | --- | --- |
 | Slug | `002-ci` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 001 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -229,6 +234,9 @@ A GitHub Actions workflow that runs on every push and pull request. It runs the 
 
 - **Done when:** CI passes on the task branch and on `main`; `ai.md` marks Schema check as Running; `tech.md` marks CI as Running.
 - **Watch for:** the routine pushes to `main` twice a day, so CI must be fast and read-only. Later tasks add jobs (005, 006).
+- **Already true after 001:** `python3 -m unittest discover -s tests` takes under a second and needs no network.
+  - The NSE smoke workflow from task 003 (`.github/workflows/nse-stock-smoke.yml`) does call NSE.
+  - So CI runs the test suite only, not that workflow's probe.
 - **Read:** [tech.md](../tech.md), [ai.md § Evals](../ai.md#evals).
 - **Start:** `/plan-task Task 002 from docs/tasks/ROADMAP.md`
 
@@ -259,7 +267,7 @@ Confirm the NSE endpoints for quotes, quarterly results (standalone and consolid
 | | |
 | --- | --- |
 | Slug | `004-routine-provenance` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 001 |
 | Owner | DeepSeek plans and builds the Python side. The changes to `ROUTINE.md` and `.claude/hooks/` go in the plan as exact diffs, and **the human applies them** (DeepSeek can't edit those paths) |
 | Milestone | M1 |

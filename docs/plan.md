@@ -285,3 +285,34 @@ One entry per working session: what we asked the AI to do, what it did, what a h
 - **Learned:**
   - Check field meanings against the fixture's own numbers, not just its field names.
   - When Claude both fixes and reviews, the review records that it isn't independent.
+
+### 2026-10-29 (later): Task 001, agent test suite
+
+- **Asked:** DeepSeek to plan and build task 001, and Claude Code to review the plan and the code. When opencode stopped working, the human asked Claude to fix the code-review findings and merge.
+- **Rounds:** three plan rounds and two code rounds.
+- **Plan review, what changed:**
+  - **Round 1:**
+    - A network guard that would actually fail. The first design raised an error that the agent's own `except Exception` handlers swallowed.
+    - The saved report paired with its own snapshot, not `data/latest.json`.
+    - A smoke test that couldn't overwrite committed email files.
+    - A list of every root and default argument to redirect.
+    - Provenance for hand-built fixtures.
+  - **Round 2:** Claude's own round-1 suggestion was incomplete. Patching only `socket.connect` misses DNS: with no network, the lookup fails first with an ordinary `URLError`, and the guard records nothing. Claude showed this with a probe, and the guard now blocks `getaddrinfo` too.
+- **AI did:**
+  - DeepSeek built 167 tests over ten modules, with hand-built fixtures.
+  - Claude ran the suite normally and inside a no-network namespace (`unshare -rn`).
+  - Claude reviewed the tests and found five issues, then fixed them at the human's request:
+    - a snapshot test that would fail from late October 2027, because `build` reads the real clock;
+    - the "NSE overrides Investorgain" rule untested, because both fixtures used the same price and lot;
+    - a fixture with text prices where NSE sends numbers, as `data/outcomes.json` shows;
+    - a guard self-test that skipped the HTTP client;
+    - a docstring with wrong advice about default arguments.
+  - Claude merged the task. On `main`, 188 tests pass (with task 003's).
+- **How the fixes were checked:**
+  - **Clock:** the build tests pass with the clock frozen in 2026, 2027 and 2030.
+  - **Precedence:** with the precedence reversed in a scratch copy of the code, the new test fails.
+- **Not taken up:** Claude offered to capture one real page from each source for the parser fixtures. That option was left open, so the fixtures stay hand-built and labelled.
+- **Learned:**
+  - A safety net needs its own test, run through the real code path. A guard that is only called directly proves little.
+  - Tests that depend on the clock pass today and fail in a year. Freeze the clock wherever code stamps the time.
+  - The same reviewer finding, fixing and approving is not an independent check. The review says so.
