@@ -45,3 +45,29 @@ The scope, the module list, the three kinds of test and the doc updates are righ
 - **`expectedFailure` hides more than the bug.** It also passes if the test errors for an unrelated reason, such as a broken fixture or a `KeyError`. For each one, record in "Bugs found" the assertion message it fails with today. Mark something as a bug only when a doc or code comment states the intended behaviour. Where intent isn't written down, pin the current behaviour and list the question for the human.
 - **The `sys.path` insertion is harmless but redundant** when run from the repo root: `-m` puts the current directory on `sys.path`, and `discover -s tests` adds `tests/`. Keep it if it lets a single file run on its own (`python3 tests/test_x.py`), as `.claude/hooks/test_guard.py` does.
 - **Step 12's `git diff` check** should also confirm that `git status --short data/ analysis/ reports/` is empty after the suite runs, as Risks says.
+
+## Round 2 (2026-10-29)
+
+**Verdict:** Changes requested
+
+**Read:** plan.md (revision 1, commit `07095f3`), the round-1 items above, `ipo_agent/trends.py:12-13` (the weekday-holiday docstring step 3 now quotes), `ipo_agent/net.py`.
+
+Every round-1 item is addressed:
+- **Item 1:** the guard records every attempt, `tearDown` asserts the list is empty, and every `build` test asserts the exact `errors` dict.
+- **Items 2 and 3:** the saved report is paired with `2026-10-29T0907.json`, and the email smoke test never calls `main`.
+- **Item 4:** "Test isolation" lists every root and default that has to be redirected.
+- **Item 5:** step 3 pins the behaviour `trends.py` documents, step 6 names the real SEBI cases, and step 11 uses a temp `outcomes.json` and a date-safe assertion.
+- **Item 6:** `tests/fixtures/README.md` records provenance.
+
+One gap is left. It is in the guard design I suggested in round 1.
+
+### Changes requested
+
+1. **The guard must also block DNS: patch `socket.getaddrinfo` as well as `socket.socket.connect`.** `urllib` resolves the host name through `socket.create_connection` → `getaddrinfo` before it calls `connect`. With no network, which is the task's Done-when condition, the lookup fails first. It raises an ordinary `URLError`, which `Client.get` retries (with `time.sleep`) and then re-raises, and `build`, `NSE._prime` and `outcomes.update` swallow it. `connect` is never reached, so the attempt list stays empty and the guard passes. I checked this with `Client(retries=0).get("https://no-such-host.invalid/")` under a patched `socket.socket.connect` that raises a `BaseException` subclass. The result was `URLError: Name or service not known` and **0 recorded attempts**. On a machine with network, the lookup itself is a live call that happens before `connect` is blocked.
+
+   Change "Test isolation" and step 1 so `NoNetworkCase` patches both `socket.getaddrinfo` and `socket.socket.connect`, and has each record the host or address and raise `NoNetworkAttempt`. Step 1's self-test then has two cases: an unresolvable host (`*.invalid`) and a literal IP. Both must be recorded and must raise `NoNetworkAttempt`, not `URLError`. *Why:* the Done-when says "passes with no network access", and in that environment a guard that misses DNS sees nothing.
+
+### Notes
+
+- That is the only change. With it made, the plan is ready to approve.
+- An `expectedFailure` test that trips `NoNetworkAttempt` would count as an expected failure. The "Bugs found" rule (record the assertion message it fails with today) already covers this. When the build fills that section, check that each message is an `AssertionError` on the point being tested.
