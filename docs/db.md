@@ -9,7 +9,7 @@ The design starts from data that exists today. Every research table below maps t
 1. **Two owners.** **Research tables** are a copy of git and can be rebuilt by replaying the repo ([ADR-0011](adr/0011-git-as-the-hand-off.md)). **App tables** (users, watchlists, Ask history, analysis jobs and requests, platform settings) exist only here.
 2. **Natural keys for research data.** IPO key (`zetwerk`), NSE symbol (`HDFCBANK`), report date + session, the exchange's filing ID. Re-importing the same file updates the same row, so imports are idempotent.
 3. **Columns for what we query, `jsonb` only for what we display whole.** Verdict, subscription and financial figures are typed columns because the track record and trends filter and aggregate them. The allotment table per snapshot is `jsonb`: it's derived, always shown whole, and never filtered.
-4. **AI output is labelled.** Every column an AI writes sits next to provenance columns: `ai_model`, `ai_prompt_version` and `ai_written_at`. `ai_model` names the provider and model (e.g. `claude-sonnet-5.5` for IPOs, `gemini-…` for stocks, [ADR-0017](adr/0017-gemini-for-stocks-claude-for-ipos.md)), so anyone can see which text came from which AI and instruction version.
+4. **AI output is labelled.** Every column an AI writes sits next to provenance columns: `ai_model`, `ai_prompt_version` and `ai_written_at`. `ai_model` names the model that actually wrote the file, copied as the ID the writer's system prompt gives it — the ID as stamped, not the display name (e.g. `claude-sonnet-5-5` for IPOs, `gemini-…` for stocks, [ADR-0017](adr/0017-gemini-for-stocks-claude-for-ipos.md)) — so anyone can see which text came from which AI and instruction version.
 5. **Money in `numeric`, never `float`.** Prices in rupees as `numeric(12,2)`; issue sizes and financials in ₹ crore as `numeric(14,2)`; percentages as `numeric(7,2)`.
 6. **Times in `timestamptz`, dates in `date`.** Values are stored with their time zone and shown in IST.
 7. **Ownership in every user query.** Every app table has `user_id`, and every query filters on it.
@@ -167,12 +167,14 @@ One row per run: the brief's headline and notes.
 | `notes` | `text[]` | no | Default `{}` |
 | `quiet` | `boolean` | no | `true` when the file has `"generated": "quiet"` (written by `quiet.py`, not Claude) |
 | `carried_from` | `text` | yes | For quiet runs: the earlier report whose calls were carried forward |
+| `ai_model`, `ai_prompt_version` | `text` | yes | Provenance; absent on quiet runs (code-written); a quiet report's carried calls carry it on the `carried_from` report |
+| `ai_written_at` | `timestamptz` | yes | |
 | `commit_sha` | `text` | yes | The commit that added it |
 | `source_file` | `text` | no | `reports/<date>-<am\|pm>.json` |
 
 ### `ipo_verdicts`
 
-The day's call per IPO, from the report. Only the fields that changed are present; the app shows `coalesce(verdict, card.verdict)`.
+The day's call per IPO, from the report. Only the fields that changed are present; the app shows `coalesce(verdict, card.verdict)`. Provenance sits on the report (`reports`); verdicts inherit it from their report.
 
 | Column | Type | Null | Notes |
 | --- | --- | --- | --- |
@@ -472,8 +474,9 @@ Field mapping for the IPO files (current JSON → column):
 | `gmp`, `gmp_pct`, `gmp_low`, `gmp_high`, `gmp_updated`, `pe`, `phase` | `ipo_snapshots` columns |
 | `subscription.<category>.{shares_offered, shares_bid, times}` | one `ipo_subscriptions` row per category |
 | `categories` | `ipo_snapshots.allotment` |
-| card `source`, `analysed`, `verdict`, `verdict_text`, `summary`, `financials`, `quota`, `positives`, `red_flags`, `anchor`, `anchor_grade` | `ipo_cards` columns (`analysed` → `analysed_on`) |
+| card `source`, `analysed`, `verdict`, `verdict_text`, `summary`, `financials`, `quota`, `positives`, `red_flags`, `anchor`, `anchor_grade` | `ipo_cards` columns (`analysed` → `analysed_on`); `ai_model`, `ai_prompt_version`, `ai_written_at` → the card's provenance columns (absent on old cards) |
 | report `date`, `session`, `headline`, `notes`, `generated`, `carried_from` | `reports` (`generated == "quiet"` → `quiet`) |
+| report `ai_model`, `ai_prompt_version`, `ai_written_at` | `reports` provenance columns (absent on quiet runs) |
 | report `ipos.<key>.{verdict, verdict_text, best_category, category_note}`; other keys → `overrides` | `ipo_verdicts` |
 | outcomes `<key>.*`; `subscription.{qib, snii, bnii, retail, total}` | `ipo_outcomes` (`sub_*` columns) |
 
@@ -488,7 +491,7 @@ Snapshot fields used only inside the routine (`needs_analysis`, `needs_card`, `n
   - Verdicts are replaced per (report, IPO).
   - A row whose `content_sha` hasn't changed is skipped.
 - **Rebuild:** truncate the research tables and replay every file in the repo. App tables are untouched, because they don't come from git.
-- **AI provenance on import:** `ai_model` and `ai_prompt_version` are read from the files once the routine and the stock worker write them (planned). Older files import with nulls.
+- **AI provenance on import:** `ai_model`, `ai_prompt_version` and `ai_written_at` are read from the files when present: the routine's cards and reports have carried them since task 004; `analysis/<key>.md` and the stock worker's files are still planned (020/021). Older files import with nulls.
 
 ## Access patterns
 
