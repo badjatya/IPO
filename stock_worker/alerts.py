@@ -106,3 +106,87 @@ def _group_thousands(integer):
         integer = integer[:-3]
     parts.append(integer)
     return ",".join(reversed(parts))
+
+
+def _change_alert(symbol, kind, prev, curr, field, threshold_pp, mode, label):
+    """The comparison behind the four shareholder change rules.
+
+    Each takes ``(symbol, prev, curr, threshold_pp)`` and compares the new
+    quarter (``curr``) with the latest quarter on record before it (``prev``;
+    the orchestrator supplies both after its ``quarter_end`` join).
+    ``mode`` is ``"up"`` (a rise of at least ``threshold_pp`` fires, the
+    pledge rule), ``"down"`` (a fall of at least ``threshold_pp`` fires, the
+    promoter rule) or ``"absolute"`` (an absolute move of at least
+    ``threshold_pp`` fires, FII/DII). Comparison is ``Decimal``, never float;
+    a move exactly equal to the threshold fires ("at least" semantics). A
+    ``None`` value on either side — including a missing record — yields no
+    alert: missing is missing, never an estimate. The alert is keyed on the
+    current quarter's ``quarter_end``; a quarter that cannot be keyed alerts
+    nothing.
+    """
+    prev_value = (prev or {}).get(field)
+    curr_value = (curr or {}).get(field)
+    quarter_end = (curr or {}).get("quarter_end")
+    if prev_value is None or curr_value is None or quarter_end is None:
+        return None
+    delta = curr_value - prev_value
+    if mode == "up":
+        if delta < threshold_pp:
+            return None
+        direction = "up"
+    elif mode == "down":
+        if delta > -threshold_pp:
+            return None
+        direction = "down"
+    else:
+        if abs(delta) < threshold_pp:
+            return None
+        direction = "up" if delta > 0 else "down"
+    return {
+        "kind": kind,
+        "severity": SEVERITIES[kind],
+        "title": (
+            f"{label} {direction} from {format_pct(prev_value)}% "
+            f"to {format_pct(curr_value)}%"
+        ),
+        "detail": None,
+        "dedupe_key": dedupe_key(symbol, kind, quarter_end),
+        "source_table": "shareholding",
+        "source_id": quarter_end,
+    }
+
+
+def pledge_up_alert(symbol, prev, curr, threshold_pp):
+    """New quarter's ``promoter_pledged_pct`` up by at least ``threshold_pp``
+    percentage points vs the previous pledge on record."""
+    return _change_alert(
+        symbol, "pledge_up", prev, curr, "promoter_pledged_pct",
+        threshold_pp, "up", "Promoter pledge",
+    )
+
+
+def promoter_down_alert(symbol, prev, curr, threshold_pp):
+    """New quarter's ``promoter_pct`` down by at least ``threshold_pp``
+    percentage points vs the previous shareholding on record."""
+    return _change_alert(
+        symbol, "promoter_down", prev, curr, "promoter_pct",
+        threshold_pp, "down", "Promoter holding",
+    )
+
+
+def fii_move_alert(symbol, prev, curr, threshold_pp):
+    """``fii_pct`` moved by at least ``threshold_pp`` percentage points,
+    either direction, vs the previous shareholding on record."""
+    return _change_alert(
+        symbol, "fii_move", prev, curr, "fii_pct",
+        threshold_pp, "absolute", "FII holding",
+    )
+
+
+def dii_move_alert(symbol, prev, curr, threshold_pp):
+    """``dii_pct`` moved by at least ``threshold_pp`` percentage points,
+    either direction, vs the previous shareholding on record."""
+    return _change_alert(
+        symbol, "dii_move", prev, curr, "dii_pct",
+        threshold_pp, "absolute", "DII holding",
+    )

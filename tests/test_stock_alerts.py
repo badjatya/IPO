@@ -119,5 +119,127 @@ class ContractTests(NoNetworkCase):
         )
 
 
+class ChangeRuleTests(NoNetworkCase):
+    """Step 2: the four shareholder change rules — direct calls over records
+    in the 014 parsed shapes."""
+
+    THRESHOLDS = alerts.DEFAULT_THRESHOLDS
+
+    def test_pledge_up_fires_with_the_exact_db_md_style_title(self):
+        alert = alerts.pledge_up_alert(
+            "RELIANCE", pl("2026-06-30", 4), pl("2026-09-30", 11),
+            self.THRESHOLDS["pledge_up"],
+        )
+        self.assertEqual(alert["kind"], "pledge_up")
+        self.assertEqual(alert["severity"], "warning")
+        self.assertEqual(alert["title"], "Promoter pledge up from 4% to 11%")
+        self.assertEqual(alert["dedupe_key"], "RELIANCE:pledge_up:2026-09-30")
+        self.assertEqual(alert["source_table"], "shareholding")
+        self.assertEqual(alert["source_id"], "2026-09-30")
+        self.assertIsNone(alert["detail"])
+
+    def test_promoter_down_fires_with_the_exact_title(self):
+        alert = alerts.promoter_down_alert(
+            "RELIANCE", sh("2026-06-30", 52.1), sh("2026-09-30", 48.9),
+            self.THRESHOLDS["promoter_down"],
+        )
+        self.assertEqual(alert["title"], "Promoter holding down from 52.1% to 48.9%")
+        self.assertEqual(alert["severity"], "warning")
+        self.assertEqual(alert["kind"], "promoter_down")
+
+    def test_fii_move_is_direction_aware(self):
+        up = alerts.fii_move_alert(
+            "RELIANCE", sh("2026-06-30", fii=14.2), sh("2026-09-30", fii=16.1),
+            self.THRESHOLDS["fii_move"],
+        )
+        self.assertEqual(up["title"], "FII holding up from 14.2% to 16.1%")
+        self.assertEqual(up["severity"], "watch")
+        down = alerts.fii_move_alert(
+            "RELIANCE", sh("2026-06-30", fii=16.1), sh("2026-09-30", fii=14.2),
+            self.THRESHOLDS["fii_move"],
+        )
+        self.assertEqual(down["title"], "FII holding down from 16.1% to 14.2%")
+
+    def test_dii_move_is_direction_aware(self):
+        up = alerts.dii_move_alert(
+            "RELIANCE", sh("2026-06-30", dii=30.0), sh("2026-09-30", dii=32.0),
+            self.THRESHOLDS["dii_move"],
+        )
+        self.assertEqual(up["title"], "DII holding up from 30% to 32%")
+        self.assertEqual(up["severity"], "watch")
+        down = alerts.dii_move_alert(
+            "RELIANCE", sh("2026-06-30", dii=32.0), sh("2026-09-30", dii=30.0),
+            self.THRESHOLDS["dii_move"],
+        )
+        self.assertEqual(down["title"], "DII holding down from 32% to 30%")
+
+    def test_below_threshold_is_silent_for_every_rule(self):
+        self.assertIsNone(
+            alerts.pledge_up_alert("R", pl("2026-06-30", 4), pl("2026-09-30", Decimal("4.99")),
+                                   self.THRESHOLDS["pledge_up"])
+        )
+        self.assertIsNone(
+            alerts.promoter_down_alert("R", sh("2026-06-30", 52), sh("2026-09-30", Decimal("50.01")),
+                                       self.THRESHOLDS["promoter_down"])
+        )
+        self.assertIsNone(
+            alerts.fii_move_alert("R", sh("2026-06-30", fii=14.2), sh("2026-09-30", fii=14.5),
+                                  self.THRESHOLDS["fii_move"])
+        )
+        self.assertIsNone(
+            alerts.dii_move_alert("R", sh("2026-06-30", dii=30.0), sh("2026-09-30", dii=29.5),
+                                  self.THRESHOLDS["dii_move"])
+        )
+
+    def test_a_move_exactly_at_the_threshold_fires(self):
+        self.assertIsNotNone(
+            alerts.pledge_up_alert("R", pl("2026-06-30", 4), pl("2026-09-30", 5),
+                                   self.THRESHOLDS["pledge_up"])
+        )
+        self.assertIsNotNone(
+            alerts.promoter_down_alert("R", sh("2026-06-30", 52), sh("2026-09-30", 50),
+                                       self.THRESHOLDS["promoter_down"])
+        )
+        self.assertIsNotNone(
+            alerts.fii_move_alert("R", sh("2026-06-30", fii=14.2), sh("2026-09-30", fii=15.2),
+                                  self.THRESHOLDS["fii_move"])
+        )
+        self.assertIsNotNone(
+            alerts.dii_move_alert("R", sh("2026-06-30", dii=30.0), sh("2026-09-30", dii=31.0),
+                                  self.THRESHOLDS["dii_move"])
+        )
+
+    def test_missing_value_on_either_side_is_silent(self):
+        # Missing on the previous record, or on the current one — including
+        # the real-data steady state: fii_pct/dii_pct are always None on
+        # 014's shareholding rows, so fii_move/dii_move stay silent (the
+        # "missing data, no alert" test, forward-compatible until task 027).
+        self.assertIsNone(
+            alerts.pledge_up_alert("R", pl("2026-06-30"), pl("2026-09-30", 11),
+                                   self.THRESHOLDS["pledge_up"])
+        )
+        self.assertIsNone(
+            alerts.pledge_up_alert("R", pl("2026-06-30", 4), pl("2026-09-30"),
+                                   self.THRESHOLDS["pledge_up"])
+        )
+        self.assertIsNone(
+            alerts.fii_move_alert("R", sh("2026-06-30"), sh("2026-09-30"),
+                                  self.THRESHOLDS["fii_move"])
+        )
+        self.assertIsNone(
+            alerts.dii_move_alert("R", sh("2026-06-30"), sh("2026-09-30"),
+                                  self.THRESHOLDS["dii_move"])
+        )
+        self.assertIsNone(
+            alerts.promoter_down_alert("R", sh("2026-06-30"), sh("2026-09-30", 48.9),
+                                       self.THRESHOLDS["promoter_down"])
+        )
+        # A missing record on either side is equally silent.
+        self.assertIsNone(
+            alerts.promoter_down_alert("R", None, sh("2026-09-30", 48.9),
+                                       self.THRESHOLDS["promoter_down"])
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
