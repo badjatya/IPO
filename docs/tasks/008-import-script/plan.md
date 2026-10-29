@@ -144,6 +144,7 @@ Anything built differently from the approved plan, and why.
    - A commit's changes are applied in FK order (deletions first, then snapshot → card → analysis → report → outcome) instead of `git diff`'s path order — this is the plan's own "foreign-key order" promise, which the first build did not keep.
    - An edited report or `data/outcomes.json` drops the entries the new version no longer carries (leftover verdicts/outcomes), which the plan's convergence claim needed; skipped empty snapshot/subscription inserts let the 10 no-subscription snapshots import.
    - `--from`/`--root` without a value exit with usage (code 2) instead of silently running the default command.
+8. **Review round 3: batched upserts and timeouts (finding 12).** A whole-repo rebuild ran ~110 s on CI because every verdict and outcome row was its own awaited statement over the WebSocket, plus a `git log` process per file for `reports.commit_sha`; test (a)'s two rebuilds hit the 180 s timeout and kept the `db` job red. `applyFile` now upserts a whole report's verdicts in one statement and the whole of `data/outcomes.json` in one — a new `commonReplacedSet` builds the per-conflicting-row SET (`excluded.<col>`, with nulls for columns no row carries and `coalesce` for a NOT NULL column some rows carry) that the per-row `replacedSet` it replaces produced, exactly — and `rebuild` gets every path's last commit from one `git log --name-only` pass (`lastCommitsTouching`) instead of a process per file. `ipos` deliberately stays one statement per row: a common `coalesce(excluded.<col>, ipos.<col>)` SET cannot preserve the present-and-non-null merge for `anchor_done` — Drizzle fills a column a row lacks with the SQL `default` keyword, so the excluded value is the column's *evaluated default* (`false`), not null, and a later snapshot entry carrying `anchor_done: null` (common in the repo's files) would silently reset a true value. "Keep old when absent" for a NOT NULL defaulted column is inexpressible in one `INSERT ... ON CONFLICT` statement; an INSERT batch + UPDATE-from-VALUES merge would batch it exactly, and that stays a finding-11 follow-up. Tests (a) and (b) — the two that run whole-repo rebuilds — get 600 s timeouts (a few times even the old per-rebuild figure, with headroom for the twice-weekly growth), and the measured per-rebuild time is pasted into Verification from CI's next run.
 
 ## Verification
 
@@ -243,4 +244,21 @@ Round 1's CI `db` job caught the three blockers the first respond step fixed (fi
 - (9) the temp-repo tests now start from an empty research database: a `beforeEach` deletes the eight research tables child first plus `imports`, so tests (d), (g), (h) and (i)'s absolute counts (`is(1)`, `is(2)`) no longer see the whole-repo rebuild's rows (27 reports, 141 verdicts, 13 cards). App tables are left alone (schema-rules runs in parallel).
 - (10) test (g) filters its final select on `ipo_key` and now actually exercises the content-sha skip: it deletes commit a's `imports` row and re-imports, so `applyFile` re-runs on the same `.md` (a 0-commit run re-applies nothing) and the assertion checks the row's `xmin` did not move.
 
-Claude pushes this branch after the respond step so the `db` job re-runs, and pastes the run result into the next review round. The suite's tests: (a) rebuild twice → identical counts matching the repo's files, (b) app rows survive, (c) bad commit leaves no rows + failed-row upsert retry, (d) deleted report's rows go with it, (e) re-running a complete range changes nothing, (f) spot-checks of known rows, (g) an unchanged analysis is not rewritten (re-apply with unchanged content leaves its xmin alone), (h) an edit that drops an entry removes its rows and matches a rebuild (new), (i) one commit can first introduce an IPO with its card, analysis and report (new), plus the CLI value-flag check (new).
+Claude pushes this branch after the respond step so the `db` job re-runs, and pastes the run result into the next review round.
+
+**Round-3 respond step (finding 12 — the batching).** Everything runnable here, after the verdict/outcome batching and the single-pass `commit_sha` lookup:
+
+```text
+$ npm test
+ Test Files  7 passed (7)          # +2: import-apply (3), lastCommitsTouching (2)
+      Tests  62 passed (62)        # was 57; the db suite stays excluded
+$ npm run typecheck                # clean
+$ npm run lint                     # Found 0 warnings and 0 errors (41 files)
+$ npx --no-install drizzle-kit generate
+No schema changes, nothing to migrate 😴
+$ python3 -m unittest discover -s tests
+Ran 330 tests in 0.561s
+OK
+```
+
+The rebuild's statement count drops from ~550 awaited statements to ~430 — a whole report's verdicts (143 rows across 27 reports) upsert in one statement, `data/outcomes.json`'s rows in one, and one `git log --name-only` pass replaces 54 `git log -1` processes. `ipos` stays one statement per row (why, in Changes during build 8). Tests (a) and (b) now allow 600 s. The per-rebuild time is measured by CI itself — its output prints each test's duration — and will be pasted here by Claude with the next `db` run; the new timeouts are a few times even the old ~110 s figure, so the red job should be green without relying on today's exact number. The suite's tests: (a) rebuild twice → identical counts matching the repo's files, (b) app rows survive, (c) bad commit leaves no rows + failed-row upsert retry, (d) deleted report's rows go with it, (e) re-running a complete range changes nothing, (f) spot-checks of known rows, (g) an unchanged analysis is not rewritten (re-apply with unchanged content leaves its xmin alone), (h) an edit that drops an entry removes its rows and matches a rebuild (new), (i) one commit can first introduce an IPO with its card, analysis and report (new), plus the CLI value-flag check (new).
