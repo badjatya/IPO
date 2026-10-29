@@ -57,7 +57,8 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Framework | Next.js: server-rendered pages for IPOs, track record and stocks; API routes for the watchlist, analysis requests and progress, Ask, admin settings and worker dispatch | Decided |
 | Language | TypeScript, with strict mode ([ADR-0023](adr/0023-typescript-strict.md)) | Running |
 | Data access | Drizzle ORM; drizzle-kit for versioned migrations ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
-| Database driver | `@neondatabase/serverless`: HTTP for queries, WebSocket `Pool` for interactive transactions; connection in `web/lib/db.ts` ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
+| Database driver | `@neondatabase/serverless`: HTTP for queries, WebSocket `Pool` for interactive transactions; connection in `web/lib/db.ts` (`db()` one-shot, `poolDb()` the transaction client, ADR-0025) | Running |
+| Import script | `web/lib/import/` + `web/scripts/import.ts`, run with `tsx`: turns the repo's research files into rows, one transaction per commit, with a rebuild command ([db.md § Import and rebuild](db.md#import-and-rebuild)) | Running |
 | Auth | An auth library for Next.js with a Postgres adapter; Google sign-in or password (no emailed links, because the app sends no email) | Open |
 | AI | Google Gen AI SDK for the Gemini API, server side only, one module per side: the app's is TypeScript in `web/lib/`, the worker's is Python in `stock_worker/` (020) ([ADR-0026](adr/0026-stock-worker-code-location.md)) | Decided |
 | UI | shadcn/ui components in `web/components/ui/`, Tailwind CSS v4, theme in `web/app/globals.css`; see [design.md](design.md) | Running |
@@ -106,7 +107,7 @@ Names are planned; values are never committed. The app's variables are listed, e
 | `docs/tasks/` | Task plans, reviews and responses | Running |
 | `.claude/` | Claude Code skills, subagents, hooks, the DeepSeek driver (`.claude/deepseek/`), and their tests | Running |
 | `tests/` | Agent tests (`python3 -m unittest discover -s tests`, saved fixtures only) | Running |
-| `web/` | Next.js app, the Drizzle schema (`web/db/schema.ts`) and its checked-in migrations (`web/db/migrations/`); import script to come | Running ([ADR-0022](adr/0022-web-app-in-same-repo.md)) |
+| `web/` | Next.js app, the Drizzle schema (`web/db/schema.ts`) and its checked-in migrations (`web/db/migrations/`); the import script (`web/lib/import/`, CLI `web/scripts/import.ts`) | Running ([ADR-0022](adr/0022-web-app-in-same-repo.md)) |
 | `.github/workflows/` | CI (`ci.yml`) and the NSE stock smoke test (`nse-stock-smoke.yml`) running; the import Action decided | Running / Decided |
 
 ## Local setup
@@ -129,10 +130,13 @@ Scheduled routine setup: [SETUP.md](../SETUP.md). The web app (`web/`) needs Nod
 ```bash
 cd web
 npm ci                  # install from the lockfile
-cp .env.example .env.local   # optional: nothing reads these yet
+cp .env.example .env.local   # optional: fill in only what you are working on
 npm run dev             # http://localhost:3000
 npm run lint            # oxlint
 npm run typecheck       # tsc --noEmit
 npm test                # Vitest, once; npm run test:watch to rerun on save
+npm run test:db         # the database tests on a throwaway Neon branch (needs NEON_API_KEY / NEON_PROJECT_ID)
+npm run import          # turn the repo's research files into rows (loads web/.env.local; db.md § Import and rebuild)
+npm run import -- --rebuild   # empty the IPO research tables and replay every research file at HEAD
 npm run build           # production build
 ```

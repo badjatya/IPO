@@ -86,7 +86,7 @@ One row per IPO. Key facts that change rarely, merged from Investorgain, NSE and
 | `investorgain_url` | `text` | yes | |
 | `phase` | `ipo_phase` | no | Latest phase |
 | `anchor_done` | `boolean` | no | Default `false` |
-| `updated_at` | `timestamptz` | no | |
+| `updated_at` | `timestamptz` | no | The `generated_at` of the snapshot that last updated the row — set by the import, never `now()`, so a rebuild gives identical rows. "Present" for the import's merge means key present and **non-null**: a later snapshot that lacks NSE data cannot blank earlier facts, and a field that later becomes null keeps its old value |
 
 Indexes: `(phase)`, `(listing_date)`, unique `(symbol) where symbol is not null`.
 
@@ -169,7 +169,7 @@ One row per run: the brief's headline and notes.
 | `carried_from` | `text` | yes | For quiet runs: the earlier report whose calls were carried forward |
 | `ai_model`, `ai_prompt_version` | `text` | yes | Provenance; absent on quiet runs (code-written); a quiet report's carried calls carry it on the `carried_from` report |
 | `ai_written_at` | `timestamptz` | yes | |
-| `commit_sha` | `text` | yes | The commit that added it |
+| `commit_sha` | `text` | yes | The last commit that changed the file: the imported commit in a per-commit import, `git log -1 --format=%H -- <path>` in a rebuild |
 | `source_file` | `text` | no | `reports/<date>-<am\|pm>.json` |
 
 ### `ipo_verdicts`
@@ -456,8 +456,10 @@ Bookkeeping for the import Action.
 | `commit_sha` | `text` | PK | |
 | `started_at`, `finished_at` | `timestamptz` | yes | A failed import may lack `finished_at` |
 | `status` | `text` | no | `ok` or `failed` |
-| `files` | `integer` | yes | |
-| `error` | `text` | yes | |
+| `files` | `integer` | yes | Research files the commit changed (`0` for commits that change none) |
+| `error` | `text` | yes | The failing file's error; null on `ok` |
+
+Every mainline commit the import processes records a row — including commits with no research files (`files = 0`) — so "last ok" keeps moving. An `ok` write upserts over an earlier `failed` row for the same sha (`commit_sha` is the primary key), so a commit that failed once (transiently, or after its files were fixed) imports on a later run.
 
 ## Where the data comes from
 
@@ -477,26 +479,31 @@ Field mapping for the IPO files (current JSON → column):
 | snapshot `ipos[].key`, `name`, `open`, `close`, `allotment`, `listing` | `ipos.key`, `name`, `open_date`, `close_date`, `allotment_date`, `listing_date` |
 | `price`, `nse.price_low`, `lot`, `size_cr` | `ipos.price_high`, `price_low`, `lot_size`, `issue_size_cr` |
 | `nse.symbol`, `nse.issue_size_text`, `nse.face_value`, `nse.lead_managers`, `nse.registrar` | matching `ipos` columns |
+| `rhp_url`, `rhp_source`, `url`, `anchor_done` | `ipos.rhp_url`, `rhp_source`, `investorgain_url`, `anchor_done` |
 | `gmp`, `gmp_pct`, `gmp_low`, `gmp_high`, `gmp_updated`, `pe`, `phase` | `ipo_snapshots` columns |
 | `subscription.<category>.{shares_offered, shares_bid, times}` | one `ipo_subscriptions` row per category |
 | `categories` | `ipo_snapshots.allotment` |
 | card `source`, `analysed`, `verdict`, `verdict_text`, `summary`, `financials`, `quota`, `positives`, `red_flags`, `anchor`, `anchor_grade` | `ipo_cards` columns (`analysed` → `analysed_on`); `ai_model`, `ai_prompt_version`, `ai_written_at` → the card's provenance columns (absent on old cards) |
-| report `date`, `session`, `headline`, `notes`, `generated`, `carried_from` | `reports` (`generated == "quiet"` → `quiet`) |
+| report `date`, `session`, `headline`, `notes`, `generated`, `carried_from` | `reports` (`generated == "quiet"` → `quiet = true`, keeping `carried_from` and null provenance)
 | report `ai_model`, `ai_prompt_version`, `ai_written_at` | `reports` provenance columns (absent on quiet runs) |
 | report `ipos.<key>.{verdict, verdict_text, best_category, category_note}`; other keys → `overrides` | `ipo_verdicts` |
 | outcomes `<key>.*`; `subscription.{qib, snii, bnii, retail, total}` | `ipo_outcomes` (`sub_*` columns) |
 
 Snapshot fields used only inside the routine (`needs_analysis`, `needs_card`, `needs_anchor_update`, `card_file`, `analysis_file`) are not imported.
 
-## Import and rebuild
+## Import and rebuild (Running)
 
-- **Per push:** the Action reads the commits since `imports` last succeeded, parses the changed files and upserts in **one transaction per commit**, then records the commit. Any failure rolls back that commit's changes, and the next push retries.
+Task 008 built the import script: `npm run import` in `web/` (its `--rebuild` flag is `npm run import -- --rebuild`; both load `web/.env.local` locally, the Action sets `DATABASE_URL` in the environment). It is TypeScript under `web/lib/import/` with the CLI entry `web/scripts/import.ts` run through `tsx`; the transactional writer is Drizzle over Neon's WebSocket `Pool` ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) exposed as `poolDb()` in `web/lib/db.ts`.
+
+- **Per commit, one transaction.** The default command walks main's **first-parent** history (`git rev-list --first-parent --reverse <from>..HEAD`), reads each commit's changed files with `git diff --name-status --no-renames <sha>^1 <sha>` (the empty tree for the root commit), keeps only the paths that map to research tables, and upserts **one transaction per commit**. **Every file is read from the commit itself** (`git show <sha>:<path>`, batched with `git cat-file --batch`) — never the working tree — so importing an old commit stores that commit's version under its own `imports` row and a rebuild records HEAD while reading HEAD. Side-branch commits are never applied out of order: each merge appears once, as the files it brought in (`git diff M^1 M`). Each transaction starts with `pg_advisory_xact_lock(<fixed constant>)` so a local run and the Action can't interleave.
+- **What changed, and rows that go with it.** A research file with status `D` deletes the rows that file owns in the same transaction, child first — the database converges to exactly git in per-commit mode, matching the rebuild. The routine never deletes, so this is history-curation only. (Snapshots own their `ipo_snapshots` and `ipo_subscriptions` rows; a report its `reports` + `ipo_verdicts` rows; a card, analysis or outcome file its single row. `ipos` facts come from snapshots, and are not deleted with a snapshot file.)
+- **Last ok, exactly.** The `imports` table has no sequence column, so the only sound order is git's: **last ok = the first sha in `git rev-list --first-parent HEAD` that has an `ok` row**. When the table is empty, or no `ok` sha is on the current first-parent history (rewritten history), the **default** command runs the **rebuild** instead of replaying hundreds of commits one by one, whose early file versions may fail today's validation. `--from <sha>` stays as the explicit override.
+- **Failure and retry.** A failed commit rolls back completely — no rows survive, not even from the commit's good files — records a `failed` row with the error in its own small transaction, and the run exits non-zero; the next run resumes from the last `ok`. An `ok` write upserts over that `failed` row for the same sha, so a commit that failed once imports on the run after its files are fixed (or the history is rewritten, since a bad file's commit keeps failing while it stays on main).
 - **Upsert rules:**
-  - Snapshots and subscriptions are insert-only, keyed by time.
-  - Cards, analyses, outcomes and `ipos` are replaced on the natural key.
-  - Verdicts are replaced per (report, IPO).
-  - A row whose `content_sha` hasn't changed is skipped.
-- **Rebuild:** truncate the research tables and replay every file in the repo. App tables are untouched, because they don't come from git.
+  - Snapshots and subscriptions are insert-only, keyed by time (`on conflict do nothing` on `(ipo_key, taken_at)` / `(ipo_key, taken_at, category)`).
+  - Cards, analyses, outcomes, reports, verdicts and `ipos` are **replaced on their natural keys**. The update also nulls the table's nullable columns the file no longer carries, so an edited file converges the row to its own state; `ipos` is the exception — only **present and non-null** fields merge (a later snapshot without NSE data cannot blank earlier facts, and a field that later becomes null keeps its old value), with `updated_at` set from the updating snapshot's `generated_at`, never `now()`.
+  - A row whose `content_sha` hasn't changed is skipped (`ipo_analyses`).
+- **Rebuild:** `npm run import -- --rebuild` — in one transaction, **delete** the rows of the eight IPO research tables (child first; plain `DELETE`, never `TRUNCATE ... CASCADE`, so app tables — `stocks` → `watchlist_items` — are never pulled in) and replay every research file in the repo, read from HEAD (`git ls-tree -r --name-only HEAD`, so a dirty working tree is invisible), recording HEAD as the imported commit. Snapshot files replay chronologically (their `YYYY-MM-DDTHHMM` names sort that way), so the newest merged facts win. **App tables are untouched, because they don't come from git.** Stock research tables join the rebuild in 015/018, when `data/stocks/` enters the import.
 - **AI provenance on import:** `ai_model`, `ai_prompt_version` and `ai_written_at` are read from the files when present: the routine's cards and reports have carried them since task 004; `analysis/<key>.md` and the stock worker's files are still planned (020/021). Older files import with nulls.
 
 ## Access patterns
@@ -538,4 +545,4 @@ Estimates for planning only. Neon's free tier is 1 GB per project ([ADR-0010](ad
 - **Where they live.** The schema is written once, in TypeScript, at `web/db/schema.ts`; the table migration in `web/db/migrations/` is **generated** by drizzle-kit and never hand-edited. The custom migrations in the same folder carry the `citext` extension (created first, so the tables can use it), the `settings` seed rows, and the `watched_symbols` view if a drizzle version can't generate it. A later schema change adds a new migration — never edits a generated file — and the CI `web` job's schema-drift step fails a change to `schema.ts` that ships no migration.
 - **Insert defaults.** Where the tables above list no default for a column, the schema fills the time columns (`created_at`, `queued_at`, `requested_at`, `recorded_at`, `added_at`, `at`, `updated_at`) with `default now()`, and `users.id` / `analysis_jobs.id` (the bare `uuid` keys) with `default gen_random_uuid()` (core Postgres 13+, no extension).
 - **Neon branches:** each test run gets its own branch from the main database, and the branch is deleted afterwards. Tests run against real Postgres, not a mock. Built in task 007: `npm run test:db` in `web/` (`web/scripts/neon-branch.mjs`) creates a short-lived, schema-only branch from the project's default branch, drops and recreates `public` so the migrations build the full schema from nothing, runs `drizzle-kit migrate` over the branch's unpooled URL, runs the rule and shape tests over the pooled URL, and deletes exactly that branch, refusing ever to touch the default branch or `dev`. The CI `db` job runs it on every push and pull request (`NEON_API_KEY` secret, `NEON_PROJECT_ID` variable).
-- **Seed data:** importing the repo's existing files gives a realistic dataset from day one. That's about 39 runs and 8 scored listings as of 2026-10-29.
+- **Seed data:** importing the repo's existing files gives a realistic dataset from day one — `npm run import -- --rebuild` in `web/` fills the research tables from the repo (about 40 runs and 9 scored listings as of 2026-10-30; that is the import's own job, task 008).
