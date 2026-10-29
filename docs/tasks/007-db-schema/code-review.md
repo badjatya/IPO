@@ -181,3 +181,54 @@ No change to the plan. Record findings 7-11 under "Changes during build". The `d
 | 9 | **Fixed.** The test now reads each partial unique index's table, definition and `pg_get_expr(ix.indpred, ix.indrelid)` and asserts parts instead of the definition text: the indexed column (`using btree (…)`) and predicate tokens (`status`/`queued`/`running`, `… is not null`), case-insensitively, plus the exact set of the three partial unique indexes — independent of `pg_get_indexdef`'s rewrites (schema-qualified table, `= ANY (ARRAY[…])`, paren-wrapped predicate). | `79e7d38` |
 | 10 | **Fixed.** Both composite-FK regexes now allow `\s*` before the referenced table's `(`, matching `REFERENCES ipo_snapshots(ipo_key, taken_at)` as `pg_get_constraintdef` writes it. | `79e7d38` |
 | 11 | **Fixed.** `array_agg(e.enumlabel::text order by e.enumsortorder)` — the cast makes it `text[]`, which the serverless driver parses into a JS array; `name[]` arrived as raw text, which is why the twelve keys were present on both sides but the deep-equal failed. | `79e7d38` |
+
+## Round 4 (2026-10-30)
+
+**Verdict:** Approved
+
+**Diff:** `git diff 2c32d51..58d67da` (findings 7-11), pushed as `task/007-db-schema` at `58d67da`
+
+**Tests:**
+
+```text
+Claude, in the worktree: npm test 25 passed (25); typecheck, lint clean; drizzle-kit generate no-op.
+
+CI run 40938843128 (https://github.com/badjatya/IPO/actions/runs/40938843128), push of 58d67da:
+tests: success   web: success (incl. schema drift)   db: success
+
+db job:
+test:db using branch br-winter-union-a1l9ybna (db-test-1793301514523)
+[✓] migrations applied successfully!
+ ✓ tests/db/schema-shape.test.ts (7 tests)
+ ✓ tests/db/schema-rules.test.ts (8 tests)
+     ✓ fails to queue two jobs for one stock (partial unique index, 23505)
+     ✓ fails a queued job while another is running for the same stock
+     ✓ allows a new queued job once the previous one is done
+     ✓ rejects a duplicate alert dedupe_key (23505)
+     ✓ rejects a duplicate announcement exchange_ref (23505)
+     ✓ returns each watched symbol once across users in watched_symbols
+     ✓ cascades a user delete to their watchlist items
+ Test Files  2 passed (2)
+      Tests  15 passed (15)
+test:db deleted branch br-winter-union-a1l9ybna
+```
+
+Findings 7-11 are fixed:
+
+| # | Fix |
+| --- | --- |
+| 7 | `captureViolation` fails when the statement succeeds, and asserts on `error.cause` (the Postgres error) |
+| 8 | Statuses are compared as a set |
+| 9 | Index predicates checked through `pg_get_expr`, by their parts |
+| 10 | `\s*` before `(` in the FK regex |
+| 11 | `enumlabel::text` |
+
+The `vitest/expect-expect` entry in `web/.oxlintrc.json` names `expectUniqueViolation` as an assertion function. That's a one-line config change the new helper needs, and it's within scope.
+
+The Done-when is met. The migrations build the full schema on an empty Neon branch, and the three rule-carrying constraints are tested there. The db.md labels are updated.
+
+### Plan and docs
+
+Built as approved. All eleven findings have responses, and the deviations are recorded under "Changes during build". The "Running" labels for the schema and the `db` job are now backed by a green run.
+
+The human asked Claude to merge this task once it passed (2026-10-30).
