@@ -342,7 +342,7 @@ A bare app already exists in `web/` (commits c835c42 and 33c5a73): Next.js with 
   - **Changes during build:**
     - oxlint replaces ESLint, because typescript-eslint doesn't support the TypeScript 7 the bare app ships with.
     - The app now needs Node 22.22+ or 24.15+, because of jsdom.
-  - **Still to do (human):** push `main` and check that the `web` CI job passes on its first run. It hasn't run yet.
+  - **CI:** passed on `main` ([run 40924491453](https://github.com/badjatya/IPO/actions/runs/40924491453)); the `web` job takes about 40 seconds and runs beside `tests`.
 
 ### 007 · Database schema and migrations
 
