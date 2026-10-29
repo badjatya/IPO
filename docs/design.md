@@ -103,7 +103,7 @@ Which shadcn component each part of [arch.md § 4.4](arch.md#44-nextjs-app-decid
 | Analysis loading screen (queue position, steps) | `Progress` plus a step list; `Skeleton` while loading |
 | Ask box and answer | `Textarea`, `Button`; the answer ends with the disclaimer |
 | Quota messages ("3 of 3 used this month") | `Alert` |
-| Sign-in, admin settings | `Input`, `Label`, `Button` |
+| Sign-in, admin settings | Admin pages built so far (010 invite, 013 settings) use plain labelled inputs with the `Button`; shadcn `Input`/`Label` stay Proposed until a public form needs them |
 
 ## Accessibility
 

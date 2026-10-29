@@ -111,7 +111,7 @@ Names; values are never committed. The app's variables are listed, empty, in `we
 | `docs/tasks/` | Task plans, reviews and responses | Running |
 | `.claude/` | Claude Code skills, subagents, hooks, the DeepSeek driver (`.claude/deepseek/`), and their tests | Running |
 | `tests/` | Agent tests (`python3 -m unittest discover -s tests`, saved fixtures only) | Running |
-| `web/` | Next.js app, the Drizzle schema (`web/db/schema.ts`) and its checked-in migrations (`web/db/migrations/`); accounts: Better Auth config and guards (`web/lib/auth.ts`, `web/lib/auth-guard.ts`), the single mail module (`web/lib/mail.ts`), the sign-in / forgot-password / reset-password pages, the admin invite page and route, and the first-admin CLI (`web/scripts/first-admin.mjs`); import script to come | Running ([ADR-0022](adr/0022-web-app-in-same-repo.md)) |
+| `web/` | Next.js app, the Drizzle schema (`web/db/schema.ts`) and its checked-in migrations (`web/db/migrations/`); accounts: Better Auth config and guards (`web/lib/auth.ts`, `web/lib/auth-guard.ts`), the single mail module (`web/lib/mail.ts`), the sign-in / forgot-password / reset-password pages, the admin invite page and route, the admin settings page and route (`web/app/admin/settings/page.tsx`, `web/app/api/admin/settings/route.ts`) with the settings known-keys module (`web/lib/settings.ts`), and the first-admin CLI (`web/scripts/first-admin.mjs`); import script to come | Running ([ADR-0022](adr/0022-web-app-in-same-repo.md)) |
 | `.github/workflows/` | CI (`ci.yml`) and the NSE stock smoke test (`nse-stock-smoke.yml`) running; the import Action decided | Running / Decided |
 
 ## Local setup
