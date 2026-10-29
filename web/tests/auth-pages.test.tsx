@@ -27,9 +27,13 @@ afterEach(() => {
 });
 
 // jsdom can't navigate; the pages assign to window.location after a sign-in.
+// Keep the real origin so safeNextPath can resolve same-site paths.
 function stubLocationAssign() {
   const assign = vi.fn<() => void>();
-  Object.defineProperty(window, "location", { configurable: true, value: { assign } });
+  Object.defineProperty(window, "location", {
+    configurable: true,
+    value: { assign, origin: window.location.origin },
+  });
   return assign;
 }
 
@@ -57,6 +61,29 @@ describe("sign-in page", () => {
   it("links to the forgot-password page", () => {
     render(<SignInPage />);
     expect(screen.getByRole("link", { name: /forgot your password/i })).toHaveAttribute("href", "/forgot-password");
+  });
+
+  it("navigates to a same-site `next` after a successful sign-in", async () => {
+    const assign = stubLocationAssign();
+    searchParamsMock.value = "next=/admin/invite";
+    render(<SignInPage />);
+    fireEvent.change(screen.getByLabelText("Email"), { target: { value: "a@example.com" } });
+    fireEvent.change(screen.getByLabelText("Password"), { target: { value: "a-secret" } });
+    fireEvent.click(screen.getByRole("button", { name: "Sign in" }));
+    await waitFor(() => expect(assign).toHaveBeenCalledWith("/admin/invite"));
+  });
+
+  it("never leaves the site for a crafted `next` (code review round 1 finding 3)", async () => {
+    for (const evil of ["//evil.example", "/\\evil.example", "https://evil.example"]) {
+      const assign = stubLocationAssign();
+      searchParamsMock.value = `next=${encodeURIComponent(evil)}`;
+      const { unmount } = render(<SignInPage />);
+      fireEvent.change(screen.getByLabelText("Email"), { target: { value: "a@example.com" } });
+      fireEvent.change(screen.getByLabelText("Password"), { target: { value: "a-secret" } });
+      fireEvent.click(screen.getByRole("button", { name: "Sign in" }));
+      await waitFor(() => expect(assign).toHaveBeenCalledWith("/"));
+      unmount();
+    }
   });
 });
 
@@ -127,5 +154,11 @@ describe("reset-password page", () => {
     await waitFor(() =>
       expect(screen.getByRole("alert")).toHaveTextContent("This link is invalid or has expired."),
     );
+  });
+
+  it("shows the invalid or expired message when it arrives with ?error=INVALID_TOKEN (code review round 1 finding 4)", async () => {
+    searchParamsMock.value = "error=INVALID_TOKEN";
+    render(<ResetPasswordPage />);
+    expect(screen.getByRole("alert")).toHaveTextContent("This link is invalid or has expired.");
   });
 });

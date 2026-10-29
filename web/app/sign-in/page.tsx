@@ -4,6 +4,7 @@ import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
+import { safeNextPath } from "@/lib/safe-next";
 import { Button } from "@/components/ui/button";
 
 function SignInForm() {
@@ -24,7 +25,9 @@ function SignInForm() {
       return;
     }
     const next = searchParams.get("next");
-    window.location.assign(next && next.startsWith("/") ? next : "/");
+    // Same-site only: a crafted `next` must never send a freshly signed-in
+    // user off the site (code review round 1 finding 3).
+    window.location.assign(safeNextPath(next, window.location.origin));
   }
 
   return (
