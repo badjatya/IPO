@@ -316,3 +316,17 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - A safety net needs its own test, run through the real code path. A guard that is only called directly proves little.
   - Tests that depend on the clock pass today and fail in a year. Freeze the clock wherever code stamps the time.
   - The same reviewer finding, fixing and approving is not an independent check. The review says so.
+
+### 2026-10-29 (later): Task 002, CI workflow
+
+- **Asked:** with opencode unavailable, the human asked Claude Code to do task 002, then to push, merge and update the roadmap.
+- **Rounds:** none. Claude planned and built the task in one step, and the human merged it without an independent review. The plan and the roadmap say so.
+- **AI did:**
+  - Claude wrote `.github/workflows/ci.yml`: agent tests and the schema check on every push and pull request.
+  - Before pushing, Claude checked that both suites pass from a clean worktree under UTC, IST and US time zones and the C locale. It also showed the schema step goes red on a bad card and on a report whose name doesn't match its date.
+  - Claude pushed the branch, read the runs with `gh`, merged and updated the docs.
+- **Notable finding:** the first design keyed concurrency on the branch with `cancel-in-progress` off for `main`, on the belief that every routine push would then get a run. GitHub keeps only one pending run per group, so a burst of pushes could still drop one. Runs on `main` are now grouped by commit.
+- **Result:** CI passed on the task branch ([run 40877897168](https://github.com/badjatya/IPO/actions/runs/40877897168)) and on `main` ([run 40878105228](https://github.com/badjatya/IPO/actions/runs/40878105228)). Schema check is Running in ai.md.
+- **Learned:**
+  - A CI that runs on the routine's pushes must never be a required check, or it blocks the routine.
+  - Prove a check can fail before calling it Running.

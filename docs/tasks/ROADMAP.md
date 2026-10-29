@@ -50,11 +50,11 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | ID | Task | Week | Depends on | Status |
 | --- | --- | --- | --- | --- |
 | [001](#001--agent-test-suite) | Agent test suite | 1 | — | Done |
-| [002](#002--ci-workflow) | CI workflow | 1 | 001 | **Ready** |
+| [002](#002--ci-workflow) | CI workflow | 1 | 001 | Done |
 | [003](#003--nse-stock-data-spike) | NSE stock-data spike and runner smoke test | 1 | — | Done |
 | [004](#004--routine-provenance-and-documents-as-data) | Routine provenance and documents-as-data | 1 | 001 | **Ready** |
-| [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | Blocked |
-| [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | Blocked |
+| [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | **Ready** |
+| [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | **Ready** |
 | [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Blocked |
 | [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | Blocked |
 | [009](#009--import-action) | Import Action on push | 2 | 002, 008, H02 | Blocked |
@@ -88,13 +88,13 @@ flowchart LR
 
     subgraph wk1 ["Week 1: foundation"]
         T001[001 agent tests]:::done
-        T002[002 CI]:::ready
+        T002[002 CI]:::done
         T003[003 NSE spike]:::done
         T004[004 provenance]:::ready
-        T005[005 figures check]
+        T005[005 figures check]:::ready
     end
     subgraph wk2 ["Week 2: web app, IPO side"]
-        T006[006 scaffold]
+        T006[006 scaffold]:::ready
         T007[007 schema]
         T008[008 import script]
         T009[009 import Action]
@@ -225,7 +225,7 @@ Nothing below needs a task. Evidence is in the repo.
 | | |
 | --- | --- |
 | Slug | `002-ci` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | 001 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -239,6 +239,11 @@ A GitHub Actions workflow that runs on every push and pull request. It runs the 
   - So CI runs the test suite only, not that workflow's probe.
 - **Read:** [tech.md](../tech.md), [ai.md § Evals](../ai.md#evals).
 - **Start:** `/plan-task Task 002 from docs/tasks/ROADMAP.md`
+- **Result:** merged 2026-10-29. Planned and built by Claude Code at the human's request (opencode was unavailable), and merged without an independent review.
+  - **The workflow:** `.github/workflows/ci.yml` runs `tests/` and `.claude/hooks/` (the schema check) on every push, pull request and manual dispatch. Read-only, Python 3.12, 5-minute timeout. Runs on `main` each get their own concurrency group, so no routine push is skipped.
+  - **Runs:** passed on the task branch ([run 40877897168](https://github.com/badjatya/IPO/actions/runs/40877897168)) and on `main` at the merge ([run 40878105228](https://github.com/badjatya/IPO/actions/runs/40878105228)). About 20 seconds a run.
+  - **Not a required check:** the routine pushes straight to `main`, so branch protection must not require CI.
+  - **For 005 and 006:** add their jobs or steps to `ci.yml`.
 
 ### 003 · NSE stock-data spike
 
@@ -284,7 +289,7 @@ Make the routine's cards and reports carry `ai_model`, `ai_prompt_version` and `
 | | |
 | --- | --- |
 | Slug | `005-figures-check` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 001, 002 |
 | Owner | DeepSeek plans and builds the script and the CI job; any hook change in `.claude/` is applied by the human |
 | Milestone | M1 |
@@ -303,7 +308,7 @@ A standard-library script that checks that every ₹ figure in `analysis/<key>.m
 | | |
 | --- | --- |
 | Slug | `006-web-scaffold` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 002, D01, D02, D05, D07 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -677,5 +682,5 @@ Final product name across the app and docs, a sweep of status labels (every buil
 | --- | --- | --- |
 | Analysis quality review: a second Claude pass grades each analysis against the template | [ai.md § Evals](../ai.md#evals) | 005 |
 | Regression set: replay past IPOs after an instruction change and compare calls and figures | [ai.md § Evals](../ai.md#evals) | 001, 005 |
-| Changes to `ROUTINE.md` reviewed through a PR | [ai.md § Human review](../ai.md#human-review-in-the-product) | 002 |
+| Changes to `ROUTINE.md` reviewed through a PR | [ai.md § Human review](../ai.md#human-review-in-the-product) | 002 (done) |
 | Scorecard patterns feed instruction changes | [ai.md § Human review](../ai.md#human-review-in-the-product) | 012 |
