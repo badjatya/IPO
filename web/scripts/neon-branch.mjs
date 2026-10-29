@@ -13,6 +13,7 @@
 // the project's default branch or anything named `dev`.
 
 import { spawnSync } from "node:child_process";
+import { randomBytes } from "node:crypto";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { dirname, resolve } from "node:path";
 
@@ -174,13 +175,24 @@ async function main() {
     }
 
     // Run the db tests over the pooled URL, naming the branch so the config
-    // refuses to start anywhere else.
+    // refuses to start anywhere else. The auth tests (tests/db/auth.test.ts)
+    // also need app config: a per-run AUTH_SECRET (never a real value), the
+    // AUTH_URL the links carry, and NODE_ENV=development — better-auth turns
+    // its origin checks off under a test env (they are the forged-origin
+    // tests' subject), and mail print mode must never run in production.
     const tests = spawnSync(
       "npx",
       ["--no-install", "vitest", "run", "--config", "vitest.db.config.mts"],
       {
         cwd: WEB_ROOT,
-        env: { ...process.env, DATABASE_URL: pooledUri, NEON_TEST_BRANCH_ID: branchId },
+        env: {
+          ...process.env,
+          DATABASE_URL: pooledUri,
+          NEON_TEST_BRANCH_ID: branchId,
+          AUTH_SECRET: randomBytes(32).toString("hex"),
+          AUTH_URL: "http://localhost:3000",
+          NODE_ENV: "development",
+        },
         stdio: "inherit",
       },
     );
