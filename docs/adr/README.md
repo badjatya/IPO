@@ -32,6 +32,7 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0024](0024-vitest-for-app-tests.md) | Vitest and Testing Library for the web app's tests | 2026-10-29 | Accepted |
 | [0025](0025-drizzle-on-neon-serverless-driver.md) | Drizzle ORM on Neon's serverless driver | 2026-10-29 | Accepted |
 | [0026](0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | 2026-10-30 | Accepted |
+| [0027](0027-shadcn-charts-on-recharts.md) | shadcn/ui charts, on Recharts, for the web app | 2026-10-30 | Accepted |
 
 ## Adding one
 
@@ -41,4 +42,4 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 4. Add a row above, and update [arch.md § Decisions](../arch.md#8-decisions) in the same commit.
 5. Never edit an accepted decision's outcome. Supersede it with a new ADR and set the old one's status to "Superseded by ADR-NNNN".
 
-Still to decide, each to become an ADR: ORM and migrations, auth library, charts, host.
+Still to decide, each to become an ADR: auth library, host.

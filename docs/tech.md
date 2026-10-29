@@ -25,7 +25,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | ORM and migrations | Drizzle ORM, drizzle-kit migrations, on Neon's serverless driver | Running | [0025](adr/0025-drizzle-on-neon-serverless-driver.md) |
 | Auth | Auth library for Next.js, sessions in Postgres | Open | — |
 | UI components and styling | shadcn/ui (Base UI) with Tailwind CSS v4; rules in [design.md](design.md) | Running | [0020](adr/0020-shadcn-ui.md) |
-| Charts | Not chosen yet | Open | — |
+| Charts | shadcn/ui `chart` on Recharts, added with the first chart page | Decided | [0027](adr/0027-shadcn-charts-on-recharts.md) |
 | Sync | GitHub Actions: import on push | Decided | [0011](adr/0011-git-as-the-hand-off.md) |
 | In-app AI (Ask) | Gemini API, free tier | Decided (model Open) | [0014](adr/0014-gemini-free-api-for-ask.md) |
 | Email | Admin's brief only, through the Gmail connector; no email to users | Decided | [0015](adr/0015-email-to-admin-only.md) |
@@ -61,7 +61,7 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Auth | An auth library for Next.js with a Postgres adapter; Google sign-in or password (no emailed links, because the app sends no email) | Open |
 | AI | Google Gen AI SDK for the Gemini API, server side only, one module per side: the app's is TypeScript in `web/lib/`, the worker's is Python in `stock_worker/` (020) ([ADR-0026](adr/0026-stock-worker-code-location.md)) | Decided |
 | UI | shadcn/ui components in `web/components/ui/`, Tailwind CSS v4, theme in `web/app/globals.css`; see [design.md](design.md) | Running |
-| Charts | GMP and subscription trends, results trends, the track record | Open |
+| Charts | shadcn/ui `chart` (`web/components/ui/chart.tsx`, added by the first chart task) on Recharts, coloured by the `--chart-*` tokens; client components fed plain arrays by server pages. For GMP and subscription trends, results trends and the track record ([ADR-0027](adr/0027-shadcn-charts-on-recharts.md)) | Decided |
 | Tests | Vitest, React Testing Library, jsdom; tests in `web/tests/` ([ADR-0024](adr/0024-vitest-for-app-tests.md)) | Running |
 | Lint and type check | oxlint (`npm run lint`), `tsc --noEmit` (`npm run typecheck`) | Running |
 | Product name and disclaimer | `web/lib/site.ts`: the name is a placeholder until D13; the footer shows the disclaimer on every page | Running |

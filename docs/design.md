@@ -31,7 +31,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Font | Geist via `next/font/google`, as `--font-sans` | Running |
 | Icons | lucide-react | Running |
 | Dark mode | Tokens exist; a toggle or `prefers-color-scheme` switch is not built | Open |
-| Charts | GMP and subscription trends, results, the track record | Open (D06) |
+| Charts | shadcn/ui `chart` on Recharts, added with `npx shadcn@latest add chart` by the first page that draws one. Series colours from `--chart-1`…`5` through `ChartConfig`; chart components are client components, and the server page passes them plain arrays | Decided ([ADR-0027](adr/0027-shadcn-charts-on-recharts.md)) |
 
 ### Adding components
 
@@ -97,6 +97,7 @@ Which shadcn component each part of [arch.md § 4.4](arch.md#44-nextjs-app-decid
 | IPO card on the Today list | `Card` with verdict and phase `Badge`s |
 | Key figures (price band, lot, GMP, dates) | Definition grid inside `Card`, `tabular-nums` |
 | Subscription by day, allotment odds, anchor book | `Table` |
+| GMP and subscription trends, results trend, track record | `ChartContainer` from `chart` (line for trends, bars for results and averages by verdict), with the figures also in a `Table` or text |
 | Analysis sections (business, financials, risks) | `Tabs` or headed sections |
 | Watchlist alerts | `Alert`, one per alert, severity by token |
 | Analysis loading screen (queue position, steps) | `Progress` plus a step list; `Skeleton` while loading |
@@ -109,6 +110,7 @@ Which shadcn component each part of [arch.md § 4.4](arch.md#44-nextjs-app-decid
 - Text and badges meet WCAG AA contrast in both themes.
 - Every interactive element is reachable by keyboard and shows the focus ring (`ring` token); Base UI handles this for its primitives.
 - Badges and trends carry text or arrows, not colour alone.
+- A chart never carries information alone: its figures are also in a table or a text line beside it, and tests check those.
 - Tables have header cells; numbers are announced with their units.
 
 ## Open questions
@@ -116,7 +118,6 @@ Which shadcn component each part of [arch.md § 4.4](arch.md#44-nextjs-app-decid
 | Question | Affects |
 | --- | --- |
 | Dark mode: follow the system, add a toggle, or light only for the hackathon | Every page |
-| Charts library (D06) | IPO trends, track record, stock results |
 | Product name (D13) | Header, page titles, metadata |
 | Brand colour, or stay on the neutral base | `--primary` and the header |
 | Base UI or Radix primitives. Base UI composes with a `render` prop, Radix with `asChild`; most shadcn examples use Radix | Every component; cheapest to switch now |

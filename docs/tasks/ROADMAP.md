@@ -153,7 +153,7 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 | D03 | ORM and migration tool (Drizzle or Prisma) | Decided: Drizzle with drizzle-kit, on Neon's serverless driver ([ADR-0025](../adr/0025-drizzle-on-neon-serverless-driver.md)) | 007 | [x] |
 | D04 | Auth library, and Google sign-in or password (no emailed links, [ADR-0015](../adr/0015-email-to-admin-only.md)) | Open | 010 | [ ] |
 | D05 | UI components and styling | Decided: shadcn/ui with Tailwind CSS ([ADR-0020](../adr/0020-shadcn-ui.md)) | 006 | [x] |
-| D06 | Charts library | Open | 011, 012, 019 | [ ] |
+| D06 | Charts library | Decided by the human on 2026-10-30: shadcn/ui's `chart` component on Recharts, added with `npx shadcn@latest add chart` by the first task that draws a chart ([ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)) | 011, 012, 019 | [x] |
 | D07 | App test runner | Decided: Vitest with React Testing Library ([ADR-0024](../adr/0024-vitest-for-app-tests.md)) | 006 | [x] |
 | D08 | Gemini model(s), free-tier quotas and search grounding, read in AI Studio. Sets the default for `analysis_daily_limit_platform` and confirms `ask_daily_limit_per_user` | Open ([db.md § settings](../db.md#settings)). Task 007 seeded no row for the cap; while it's missing the gate is closed and no analysis is dispatched (human, 2026-10-30) | 020, 021, 023 | [ ] |
 | D09 | Stock worker code: where it lives (new package or inside `ipo_agent/`) and its dependencies. It needs a Postgres driver and a Gemini client, and neither is in the standard library. [ADR-0002](../adr/0002-standard-library-only-agent.md) binds only `ipo_agent/`. Also, [tech.md](../tech.md#web-platform) says one Gemini module is shared by the app and the worker, which can't be one module across TypeScript and Python | Decided by the human at 014's plan review (2026-10-29): a new top-level package `stock_worker/`, importing `ipo_agent/net.py`; standard library in 014, later pinned packages through the package's own requirements file (Postgres driver in 018, Gemini SDK in 020); one Gemini module per side, TypeScript in `web/lib/` and Python in `stock_worker/`. Recorded in [ADR-0026](../adr/0026-stock-worker-code-location.md), accepted by the human on 2026-10-30 (option A) | 014, 020 | [x] |
@@ -186,7 +186,7 @@ Nothing below needs a task. Evidence is in the repo.
 | Research output as the system of record | `analysis/`, `reports/`, `data/` |
 | Docs: project, architecture, stack, database, AI design, data sources, plan, journal | `docs/`, commit `c1e113d` |
 | UI design rules: component kit, theme, status colours, number formats, layout | `docs/design.md`, commit `33c5a73` |
-| ADRs 0001–0026 | `docs/adr/` |
+| ADRs 0001–0027 | `docs/adr/` |
 | Two-agent workflow: rules, statuses, reviewer guide, templates | `AGENTS.md`, `docs/tasks/`, commit `fecb83d` |
 | Claude Code guardrails: push guard, card and report schema check on write, with tests | `.claude/hooks/guard.py`, `.claude/hooks/test_guard.py` |
 | Claude Code skills and subagents | `.claude/skills/`, `.claude/agents/` |
@@ -436,11 +436,12 @@ Sign-up and sign-in with the library and method chosen in D04, with sessions in 
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
 
-**Today:** IPOs that are open, closing or upcoming, with the latest numbers, card and call. **IPO detail:** the analysis, card, verdict history, GMP and subscription trends (charts from D06), allotment odds and anchor book. Both show the "as of" time from `imports` and the GMP caveat.
+**Today:** IPOs that are open, closing or upcoming, with the latest numbers, card and call. **IPO detail:** the analysis, card, verdict history, GMP and subscription trends (charts per [ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)), allotment odds and anchor book. Both show the "as of" time from `imports` and the GMP caveat.
 
 - **Done when:** both pages render from imported data; the shown call is the day's verdict or else the card's; tests cover the queries in [db.md § Access patterns](../db.md#access-patterns).
 - **Watch for:** the app displays numbers; it doesn't recompute odds or prices ([AGENTS.md](../../AGENTS.md) rule 1). Whether IPO pages need sign-in isn't in the docs; list it under "Decisions needed".
-- **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md), a recent `reports/*.html` email for the content.
+- **Charts (D06):** shadcn's `chart` on Recharts ([ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)). The first of 011, 012 and 019 to be built runs `npx shadcn@latest add chart`; the others reuse `web/components/ui/chart.tsx`.
+- **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md), [design.md](../design.md), a recent `reports/*.html` email for the content.
 - **Start:** `/run-task 011`
 
 ### 012 · Track record page
@@ -456,7 +457,8 @@ Sign-up and sign-in with the library and method chosen in D04, with sessions in 
 Every IPO call against how it listed, from `ipo_outcomes`: a per-IPO table, the average listing gain by verdict, the average GMP miss, and the correlations listed in db.md.
 
 - **Done when:** the page matches `python3 -m ipo_agent.outcomes --no-fetch` for the same data; it warns when the sample is small, as the scorecard does.
-- **Read:** [ADR-0007](../adr/0007-listing-scorecard-as-eval.md), [db.md § ipo_outcomes](../db.md#ipo_outcomes), `ipo_agent/outcomes.py`.
+- **Charts (D06):** shadcn's `chart` on Recharts ([ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)). The first of 011, 012 and 019 to be built runs `npx shadcn@latest add chart`; the others reuse `web/components/ui/chart.tsx`.
+- **Read:** [ADR-0007](../adr/0007-listing-scorecard-as-eval.md), [db.md § ipo_outcomes](../db.md#ipo_outcomes), `ipo_agent/outcomes.py`, [design.md](../design.md).
 - **Start:** `/run-task 012`
 
 ### 013 · Admin settings page
@@ -602,7 +604,8 @@ Stock detail: quote, the last 8 quarterly results with a trend chart, the last 4
 - **Done when:** the page renders from the stock tables; tests cover the queries in [db.md § Access patterns](../db.md#access-patterns).
 - **Watch for:** no buy, sell or hold wording anywhere ([ADR-0012](../adr/0012-research-not-advice.md)).
 - **From 014:** there's no confirmed quote source yet (see 018), so the page must show price and valuation as "not available" when `stock_quotes` has no row, never an estimate.
-- **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md).
+- **Charts (D06):** shadcn's `chart` on Recharts ([ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)). The first of 011, 012 and 019 to be built runs `npx shadcn@latest add chart`; the others reuse `web/components/ui/chart.tsx`.
+- **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md), [design.md](../design.md).
 - **Start:** `/run-task 019`
 
 ### 020 · Gemini client and filing summaries

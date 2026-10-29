@@ -449,3 +449,13 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - For database code, only a real run counts. Four of the five code-review blockers were invisible offline.
   - Write catalog assertions against what Postgres reports (`pg_get_expr`, column lists), not against the migration text.
   - Push a task branch with `git push origin <branch>`. A bare `git push` from the main checkout pushed `main` instead, once.
+
+### 2026-10-30: D06, charts library
+
+- **Asked:** the human asked Claude to settle D06 while another session ran a task.
+- **AI did:**
+  - Claude checked the shadcn registry: there's a `base-nova` `chart` component on Recharts 3.8.0.
+  - Claude checked the alternatives' peer dependencies: Tremor accepts only React 18, so it was dropped.
+  - Claude put three options to the human: shadcn chart on Recharts, hand-written SVG, and visx.
+- **Human decision:** shadcn chart on Recharts, the recommended option ([ADR-0027](adr/0027-shadcn-charts-on-recharts.md)).
+- **Docs:** tech.md, design.md and arch.md § Decisions now name the choice. arch.md also gains the missing 0025 and 0026 rows. On the roadmap, D06 is ticked; 011, 012 and 019 stay Blocked on their other dependencies.

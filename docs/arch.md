@@ -397,6 +397,9 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | [0022](adr/0022-web-app-in-same-repo.md) | The web app lives in this repo, in `web/` | Accepted |
 | [0023](adr/0023-typescript-strict.md) | TypeScript in strict mode for the web app | Accepted |
 | [0024](adr/0024-vitest-for-app-tests.md) | Vitest and Testing Library for the web app's tests | Accepted |
+| [0025](adr/0025-drizzle-on-neon-serverless-driver.md) | Drizzle ORM on Neon's serverless driver | Accepted |
+| [0026](adr/0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | Accepted |
+| [0027](adr/0027-shadcn-charts-on-recharts.md) | shadcn/ui charts, on Recharts, for the web app | Accepted |
 
 ## 9. Open questions
 
