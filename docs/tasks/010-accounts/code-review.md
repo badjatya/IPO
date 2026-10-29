@@ -185,3 +185,41 @@ The first-admin script (round 1 finding 1) and the emailed link (round 1 finding
 | --- | --- | --- |
 | 1 | Fixed. `tests/db/setup.ts` deletes `process.env.TEST` before anything builds the auth instance, with a comment citing `env-impl.mjs` (`isTest()` = `NODE_ENV === "test" \|\| toBoolean(env.TEST)`) and `create-context.mjs` (`skipOriginCheck = isTest() ? true : false`) — the vitest-propagated `TEST=true` was the second half of `isTest()` the harness's `NODE_ENV=development` didn't cover. `tests/db/auth.test.ts` now asserts `(await AUTH.\$context).skipOriginCheck === false` (and `skipCSRFCheck === false`) as the suite's first test, so the checks being on is proven, not assumed. The `api()` helper sends `origin: BASE` by default on POSTs, as a browser does; a test overrides it (the forged-Origin test still sends `https://evil.example`). No `advanced.disableOriginCheck` anywhere in `lib/auth.ts` — verified in the installed package before the fix. The harness comment in `neon-branch.mjs` and plan.md "Changes during build" 3 are corrected to name vitest's `TEST`, not `NODE_ENV`, as the skipper | 04c4dad |
 | 2 | Fixed. The scoping test no longer feeds raw `session.token` values in as cookies — Better Auth signs the session cookie (`<token>.<HMAC signature>`, URL-encoded; better-call's `signCookieValue`, verified in the installed package), so that cookie was one the library couldn't read and the test failed on its own construction. It now extracts the token part (before the first `.`, after `decodeURIComponent`) from the cookies Better Auth itself issued, asserts `adminToken !== userToken`, and asserts each token's `session` row keys to that user's `user_id` (email looked up back through `users`). The two `get-session` calls asserting each cookie resolves to its own email stay as before | 04c4dad |
+
+## Round 4 (2026-10-30)
+
+**Verdict:** Approved
+
+**Diff:** `git diff main...task/010-accounts` at `49d7d27`
+
+**Tests:** run by Claude. Offline in `web/`: vitest 16/16 files, 96/96 tests. CI on the pushed branch, [run 40958866657](https://github.com/badjatya/IPO/actions/runs/40958866657): `tests`, `web` and `db` all passed:
+
+```
+ ✓ tests/db/schema-shape.test.ts (9 tests) 2333ms
+ ✓ tests/db/schema-rules.test.ts (8 tests) 6363ms
+ ✓ tests/db/auth.test.ts (15 tests) 57244ms
+ Test Files  3 passed (3)
+      Tests  32 passed (32)
+```
+
+### Findings
+
+None open.
+
+### Plan and docs
+
+- **Round 3 finding 1** is fixed as suggested:
+  - `tests/db/setup.ts` deletes vitest's `TEST`;
+  - a new test asserts `skipOriginCheck` and `skipCSRFCheck` are both `false` (`skipCSRFCheck` is a real context field, `create-context.mjs:210`);
+  - `api()` sends `Origin: BASE` on POSTs by default;
+  - `lib/auth.ts` is untouched, so the forged-Origin 403 now comes from the real check.
+- **Round 3 finding 2** is fixed: scoping is checked through the issued cookies' token parts against the `session` rows.
+- **Done-when holds on a real branch:**
+  - sign-up is refused;
+  - first admin, invite, set password, sign in;
+  - links work once and expire;
+  - forgot-password gives nothing away;
+  - the role check and scoping;
+  - origin checks and rate limits;
+  - docs labels as in round 1.
+- **For the merge:** `task/008-import-script` also adds a migration numbered `0003`. Whichever task merges second regenerates its migration on top of the other's (`npx drizzle-kit generate`).
