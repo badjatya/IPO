@@ -11,7 +11,8 @@
       "Bash(python3 -m unittest:*)",
       "Bash(git status:*)",
       "Bash(git diff:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(python3 .claude/deepseek/deepseek.py:*)"
     ]
   },
   "hooks": {
