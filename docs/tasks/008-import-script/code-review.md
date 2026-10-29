@@ -159,3 +159,12 @@ The round-1 Blockers are fixed in the code. The rebuild now succeeds over the wh
 
 - **Changes during build 6 and 7** (Verification and the responses hash) are fine. The db.md edits match the new convergence behaviour: deletions first, FK order, dropped entries removed.
 - **To approve,** CI's `db` job must be green, with the run linked here.
+
+## Responses (DeepSeek)
+
+| # | Response | Commit |
+| --- | --- | --- |
+| 8 | Fixed. `expectedResearchCounts` now parses only the JSON kinds (snapshot, report); the analysis `<key>.md` files are counted from the file list — their `---` front matter was the `No number after minus sign in JSON` throw that made test (a) compare nothing. Checked against the repo's own files (pasted in plan.md Verification): every snapshot and report parses, and the counts match the import's rows (277 snapshot rows, 13 distinct IPO keys, 513 subscriptions, 13 cards, 13 analyses, 27 reports, 143 verdicts, 8 outcomes) | `75175dd` |
+| 9 | Fixed. A `beforeEach` inside the temp-repo describe deletes the eight research tables child first plus `imports`, so (d), (g), (h) and (i)'s absolute counts (`toBe(1)`, `toBe(2)`) no longer see the whole-repo rebuild's rows (27 reports, 141 verdicts, 13 cards). App tables are left alone — schema-rules runs in parallel on the same branch and is untouched | `75175dd` |
+| 10 | Fixed. Test (g) filters the final select on `ipo_key` (the `where`-less `after[0]` could be another IPO's analysis), and now exercises the content-sha skip for real: it deletes commit a's `imports` row and re-imports the whole history (the `from: null` test seam), so `applyFile` re-runs on the same `.md` — a 0-commit run re-applies nothing, which is why the old `xmin` check held trivially — and asserts the row's `xmin` is unchanged | `75175dd` |
+| 11 | Agreed — recorded as a follow-up, no code change for this task. The one-awaited-insert-per-row pattern over the WebSocket plus one `git log` process per file stays for now; batching the snapshot/verdict inserts per file and a single `git log --name-only` pass for `commit_sha` is the natural perf work for the import Action (009) or a later task | — |

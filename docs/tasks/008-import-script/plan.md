@@ -147,9 +147,9 @@ Anything built differently from the approved plan, and why.
 
 ## Verification
 
-Test commands run (respond step, after review round 1), with their output pasted.
+Test commands run by the respond steps (after review rounds 1 and 2), with their output pasted.
 
-**Offline suite** (`npm test` — 6 files, 57 tests, all green; the db suite is excluded by design):
+**Offline suite** (`npm test` — 6 files, 57 tests, all green; the db suite is excluded by design; rerun unchanged in the round-2 respond step):
 
 ```text
 > test
@@ -159,14 +159,14 @@ Test commands run (respond step, after review round 1), with their output pasted
  ✓ tests/neon-branch.test.ts (14 tests) 4ms
  ✓ tests/layout.test.tsx (5 tests) 60ms
  ✓ tests/schema.test.ts (4 tests) 2ms
- ✓ tests/import-parsers.test.ts (17 tests) 19ms
- ✓ tests/import-git.test.ts (15 tests) 354ms
+ ✓ tests/import-parsers.test.ts (17 tests) 21ms
+ ✓ tests/import-git.test.ts (15 tests) 384ms
 
  Test Files  6 passed (6)
       Tests  57 passed (57)
 ```
 
-**Type check** (`npm run typecheck` — clean):
+**Type check** (`npm run typecheck` — clean, including the round-2 test edits):
 
 ```text
 > typecheck
@@ -192,6 +192,19 @@ No schema changes, nothing to migrate 😴
 
 ```text
 parsed OK across 373 committed files: snapshot-rows=277 cards=13 analyses=13 reports=27 outcome-rows=8 failures=0
+```
+
+**Round-2 respond step: raw-counts sanity check** (finding 8's fix read against the repo's own files — every snapshot and report parses as JSON, and the counts match the parser run above; verdicts/cards/analyses/reports/outcomes are derived at run time in the test, never hard-coded):
+
+```text
+{"ipos":13,"snapshots":277,"subscriptions":513,"cards":13,"analyses":13,"reports":27,"verdicts":143,"outcomes":8}
+```
+
+**Python suite** (`python3 -m unittest discover -s tests` — unchanged by this step, which touches only `web/`):
+
+```text
+Ran 330 tests in 0.568s
+OK
 ```
 
 **CLI smoke tests** (`npx --no-install tsx scripts/import.ts`):
@@ -224,4 +237,10 @@ test:db needs NEON_API_KEY and NEON_PROJECT_ID (CI secrets, H06). Refusing to ru
 the db tests must never touch the `dev` branch by accident.
 ```
 
-Round 1's CI `db` job caught the three blockers this respond step fixed (findings 1–3); the run transcript is in code-review.md. Claude pushes this branch after the respond step so the `db` job re-runs, and pastes the run result into the next review round. The suite's tests: (a) rebuild twice → identical counts matching the repo's files, (b) app rows survive, (c) bad commit leaves no rows + failed-row upsert retry, (d) deleted report's rows go with it, (e) re-running a complete range changes nothing, (f) spot-checks of known rows, (g) an unchanged analysis is not rewritten, (h) an edit that drops an entry removes its rows and matches a rebuild (new), (i) one commit can first introduce an IPO with its card, analysis and report (new), plus the CLI value-flag check (new).
+Round 1's CI `db` job caught the three blockers the first respond step fixed (findings 1–3) — the code side is green (rebuild, retry, re-run, spot-checks all pass — run transcript in code-review.md). Round 2's CI run (code-review.md) found five failures, all test bugs; the second respond step fixed them in `web/tests/db/import.test.ts`, none in the library:
+
+- (8) `expectedResearchCounts` no longer `JSON.parse`s the analysis `.md` files (their `---` front matter threw), so test (a)'s "twice, same counts" check compares real numbers — verified offline above (277 snapshot rows, 13 distinct IPOs, 513 subscriptions, 13 cards, 13 analyses, 27 reports, 143 verdicts, 8 outcomes).
+- (9) the temp-repo tests now start from an empty research database: a `beforeEach` deletes the eight research tables child first plus `imports`, so tests (d), (g), (h) and (i)'s absolute counts (`is(1)`, `is(2)`) no longer see the whole-repo rebuild's rows (27 reports, 141 verdicts, 13 cards). App tables are left alone (schema-rules runs in parallel).
+- (10) test (g) filters its final select on `ipo_key` and now actually exercises the content-sha skip: it deletes commit a's `imports` row and re-imports, so `applyFile` re-runs on the same `.md` (a 0-commit run re-applies nothing) and the assertion checks the row's `xmin` did not move.
+
+Claude pushes this branch after the respond step so the `db` job re-runs, and pastes the run result into the next review round. The suite's tests: (a) rebuild twice → identical counts matching the repo's files, (b) app rows survive, (c) bad commit leaves no rows + failed-row upsert retry, (d) deleted report's rows go with it, (e) re-running a complete range changes nothing, (f) spot-checks of known rows, (g) an unchanged analysis is not rewritten (re-apply with unchanged content leaves its xmin alone), (h) an edit that drops an entry removes its rows and matches a rebuild (new), (i) one commit can first introduce an IPO with its card, analysis and report (new), plus the CLI value-flag check (new).
