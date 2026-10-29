@@ -612,6 +612,85 @@ class ComputeAlertsTests(NoNetworkCase):
         ])
 
 
+class FirstPledgeTests(NoNetworkCase):
+    """Code review round 1, finding 1: a stock's first-ever pledge on record.
+
+    NSE's pledge data lists only companies with a pledge disclosure, so a
+    stock whose promoters have never pledged has no pledge records at all —
+    stored or fetched. Going from no pledge to a pledge is the most serious
+    pledge event, so the first row must alert: ``pledge_up`` fires on the
+    stated percentage alone (no invented 0% baseline), and only when the
+    stock is not on first sight (some shareholding history is stored).
+    """
+
+    def test_first_pledge_on_record_fires_once_with_the_exact_title(self):
+        # Shareholding stored for 2026-06-30; fetched shareholding for
+        # 2026-09-30 at the same promoter value (so no change alert) plus the
+        # first-ever pledge row at 25%: no earlier pledge record exists, so
+        # the first-time alert fires with a title that states only what the
+        # record states.
+        fetched = {
+            "shareholding": [sh("2026-09-30", 48.00, filed_at="2026-10-21")],
+            "pledges": [pl("2026-09-30", 25.00, disclosed_at="2026-10-21")],
+        }
+        stored = {"shareholding": [sh("2026-06-30", 48.00, filed_at="2026-07-16")]}
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        alert = result[0]
+        self.assertEqual(alert["kind"], "pledge_up")
+        self.assertEqual(alert["severity"], "warning")
+        self.assertEqual(
+            alert["title"],
+            "Promoter pledge on record for the first time: 25% of promoter holding",
+        )
+        self.assertEqual(alert["dedupe_key"], "RELIANCE:pledge_up:2026-09-30")
+        self.assertEqual(alert["source_table"], "shareholding")
+        self.assertEqual(alert["source_id"], "2026-09-30")
+        self.assertIsNone(alert["detail"])
+
+    def test_first_pledge_stays_silent_on_first_sight_for_the_stock(self):
+        # Nothing stored at all: the whole fetched history — shareholding and
+        # the first pledge alike — is the baseline, zero alerts.
+        fetched = {
+            "shareholding": [sh("2026-09-30", 48.00, filed_at="2026-10-21")],
+            "pledges": [pl("2026-09-30", 25.00, disclosed_at="2026-10-21")],
+        }
+        self.assertEqual(compute(fetched=fetched, stored={}), [])
+
+    def test_first_pledge_below_the_threshold_stays_silent(self):
+        fetched = {
+            "shareholding": [sh("2026-09-30", 48.00, filed_at="2026-10-21")],
+            "pledges": [pl("2026-09-30", Decimal("0.50"), disclosed_at="2026-10-21")],
+        }
+        stored = {"shareholding": [sh("2026-06-30", 48.00, filed_at="2026-07-16")]}
+        self.assertEqual(compute(fetched=fetched, stored=stored), [])
+        # A pledge exactly at the threshold fires ("at least" semantics).
+        fetched["pledges"] = [
+            pl("2026-09-30", Decimal("1.00"), disclosed_at="2026-10-21")
+        ]
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0]["kind"], "pledge_up")
+
+    def test_rise_rule_is_unchanged_once_an_earlier_pledge_is_on_record(self):
+        # With an earlier pledge on record the ordinary rise rule applies —
+        # a rise title with the exact before and after values, never the
+        # "first time" title.
+        fetched = {
+            "shareholding": [sh("2026-09-30", 48.00, filed_at="2026-10-21")],
+            "pledges": [pl("2026-09-30", 5.00, disclosed_at="2026-10-21")],
+        }
+        stored = {
+            "shareholding": [sh("2026-06-30", 48.00, filed_at="2026-07-16")],
+            "pledges": [pl("2026-06-30", 2.00, disclosed_at="2026-07-16")],
+        }
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        alert = result[0]
+        self.assertEqual(alert["kind"], "pledge_up")
+        self.assertEqual(alert["title"], "Promoter pledge up from 2% to 5%")
+
+
 class FixtureIntegrationTests(NoNetworkCase):
     """Step 5: the 014 parsers run over the saved ``tests/fixtures/nse_stock/``
     fixtures end to end. No live sites, no AI APIs."""
