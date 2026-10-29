@@ -470,14 +470,16 @@ describe("accounts on a real branch", () => {
   it("scoping: each session token resolves only to its own user", async () => {
     const adminSession = await api("GET", "/api/auth/get-session", { cookie: adminCookie });
     expect((adminSession.json as { user: { email: string } }).user.email).toBe("admin@example.com");
-    const userCookie = await signInCookie("reinvite@example.com", "Reinvite1");
-    const userSession = await api("GET", "/api/auth/get-session", { cookie: userCookie });
+    // Local name only: the file-level `userCookie` (role-check test) is the
+    // admin settings block's non-admin session.
+    const scopingCookie = await signInCookie("reinvite@example.com", "Reinvite1");
+    const userSession = await api("GET", "/api/auth/get-session", { cookie: scopingCookie });
     expect((userSession.json as { user: { email: string } }).user.email).toBe("reinvite@example.com");
     expect((userSession.json as { user: { role?: string } }).user.role).toBe("user");
     // A cross-run through the invite surface with a user cookie is refused
     // above; here the cookie tokens themselves key to their own users.
     const adminToken = tokenOf(adminCookie);
-    const userToken = tokenOf(userCookie);
+    const userToken = tokenOf(scopingCookie);
     expect(adminToken).not.toBe(userToken);
     expect(await sessionOwnerEmail(adminToken)).toBe("admin@example.com");
     expect(await sessionOwnerEmail(userToken)).toBe("reinvite@example.com");

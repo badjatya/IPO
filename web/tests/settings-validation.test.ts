@@ -3,7 +3,7 @@ import { KNOWN_SETTINGS, validateSettingValue } from "@/lib/settings";
 
 describe("KNOWN_SETTINGS", () => {
   it("registers exactly the four keys with db.md's bounds", () => {
-    expect(Object.keys(KNOWN_SETTINGS).sort()).toEqual([
+    expect(Object.keys(KNOWN_SETTINGS).toSorted()).toEqual([
       "analysis_daily_limit_platform",
       "analysis_monthly_limit_per_user",
       "analysis_refresh_after_days",
@@ -52,17 +52,19 @@ describe("validateSettingValue", () => {
 
   it("refuses a body that is not an object", () => {
     for (const body of ["5", 5.5, true, null, [1, 2]]) {
-      const result = validateSettingValue(body);
-      expect(result.ok).toBe(false);
-      if (!result.ok) expect(result.error).toBe("body must be an object with key and value");
+      expect(validateSettingValue(body)).toEqual({
+        ok: false,
+        error: "body must be an object with key and value",
+      });
     }
   });
 
   it("refuses a value that is not a number (string, boolean, null, object, array)", () => {
     for (const value of ["5", true, null, { n: 1 }, [1]]) {
-      const result = validateSettingValue({ key: "ask_daily_limit_per_user", value });
-      expect(result.ok).toBe(false);
-      if (!result.ok) expect(result.error).toBe("value must be a number");
+      expect(validateSettingValue({ key: "ask_daily_limit_per_user", value })).toEqual({
+        ok: false,
+        error: "value must be a number",
+      });
     }
   });
 
