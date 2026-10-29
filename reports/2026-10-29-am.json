@@ -1,0 +1,32 @@
+{
+ "date": "2026-10-29",
+ "session": "AM",
+ "headline": "BLS Polymers closes today — 21x, GMP ₹51 (34%) rising, best apply for Retail (listing gains); SFC closes today at 0.15x with GMP down to ₹10 — skip",
+ "ipos": {
+  "sfc-environmental-technologies": {
+   "verdict": "avoid",
+   "verdict_text": "Avoid",
+   "best_category": null,
+   "category_note": "GMP falling since 21 Oct (₹32 → ₹10, ~3%); Day 2 total only 0.15x, QIB 0x. Closes today — skip."
+  },
+  "bls-polymers": {
+   "best_category": "Retail",
+   "category_note": "Closes today. Day 2 total 21x, Retail 18.5x, sNII 62x; GMP rising to ₹51 (~34%). Retail has best return on capital — listing gains only: weak anchors, customer concentration. 1 lot per family PAN."
+  },
+  "m-k-sons-fine-jewels": {
+   "best_category": "Retail",
+   "category_note": "Day 2 total 0.4x, Retail 0.13x; GMP ₹15 (~9%) rising. Anchor book weak — be cautious. Closes 30 Oct; recheck then."
+  },
+  "bombay-coated-and-special-steels": {
+   "best_category": "Retail",
+   "category_note": "Opens today (closes 2 Nov). GMP ₹9 (~11%) steady. Anchor book weak — listing gains only; recheck subscription on close."
+  },
+  "eaaa-alternatives": {
+   "verdict": "avoid",
+   "verdict_text": "Avoid",
+   "best_category": null,
+   "category_note": "Closed: total 4.06x, Retail 0.73x (QIB 10x). GMP ₹28 (~1.7%) on a 100% OFS at P/E ~41 — skip. Allotment today, lists 2 Nov."
+  }
+ },
+ "notes": []
+}
