@@ -528,6 +528,6 @@ Estimates for planning only. Neon's free tier is 1 GB per project ([ADR-0010](ad
 
 ## Migrations and environments
 
-- Schema changes are versioned migrations, checked in alongside the app. The migration tool comes with the ORM choice (**Open**).
+- Schema changes are versioned migrations, checked in alongside the app. They are written with drizzle-kit and run over the direct (unpooled) connection ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)).
 - **Neon branches:** each test run and preview deploy gets its own branch from the main database, and the branch is deleted afterwards. Tests run against real Postgres, not a mock.
 - **Seed data:** importing the repo's existing files gives a realistic dataset from day one. That's about 39 runs and 8 scored listings as of 2026-10-29.

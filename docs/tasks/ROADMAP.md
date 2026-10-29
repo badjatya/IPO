@@ -150,7 +150,7 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 | --- | --- | --- | --- | --- |
 | D01 | App in the same repo (`web/`) or a separate repo | Decided: same repo, `web/` ([ADR-0022](../adr/0022-web-app-in-same-repo.md)) | 006 | [x] |
 | D02 | TypeScript (strict) for the web app | Decided: TypeScript, strict ([ADR-0023](../adr/0023-typescript-strict.md)) | 006 | [x] |
-| D03 | ORM and migration tool (Drizzle or Prisma) | Open | 007 | [ ] |
+| D03 | ORM and migration tool (Drizzle or Prisma) | Decided: Drizzle with drizzle-kit, on Neon's serverless driver ([ADR-0025](../adr/0025-drizzle-on-neon-serverless-driver.md)) | 007 | [x] |
 | D04 | Auth library, and Google sign-in or password (no emailed links, [ADR-0015](../adr/0015-email-to-admin-only.md)) | Open | 010 | [ ] |
 | D05 | UI components and styling | Decided: shadcn/ui with Tailwind CSS ([ADR-0020](../adr/0020-shadcn-ui.md)) | 006 | [x] |
 | D06 | Charts library | Open | 011, 012, 019 | [ ] |
@@ -169,12 +169,12 @@ Accounts and secrets that only the human can create. Values never go into git ([
 
 | ID | Step | Needed by | Done |
 | --- | --- | --- | --- |
-| H01 | Create the Neon project and a development branch; put `DATABASE_URL` in the local environment | 007 | [ ] |
+| H01 | Create the Neon project and a development branch; put `DATABASE_URL` in the local environment. Done 2026-10-29: project `dark-field-33023581`, branches `production` (default) and `dev`; `neon checkout dev` in `web/` writes `web/.env.local` | 007 | [x] |
 | H02 | Add `DATABASE_URL` as a GitHub Actions secret (for the import Action and the stock worker) | 009, 018 | [ ] |
 | H03 | Create the Gemini API key in AI Studio; add `GEMINI_API_KEY` to the local environment and as an Actions secret | 020, 023 | [ ] |
 | H04 | Create a fine-grained `GITHUB_DISPATCH_TOKEN` that can only dispatch the stock worker workflow | 022 | [ ] |
 | H05 | Create the host account and set its environment: `DATABASE_URL`, `GEMINI_API_KEY`, `AUTH_SECRET`, `GITHUB_DISPATCH_TOKEN` | 025 | [ ] |
-| H06 | Create a Neon API key and add it as an Actions secret, so CI can create a database branch per test run ([db.md § Migrations](../db.md#migrations-and-environments)) | 007 | [ ] |
+| H06 | Create a Neon API key and add it as an Actions secret, so CI can create a database branch per test run ([db.md § Migrations](../db.md#migrations-and-environments)). Done 2026-10-29: key `github-actions-ci`, scoped to the project, in the `NEON_API_KEY` secret; `NEON_PROJECT_ID` is an Actions variable | 007 | [x] |
 
 ## Already in place
 
@@ -186,12 +186,13 @@ Nothing below needs a task. Evidence is in the repo.
 | Research output as the system of record | `analysis/`, `reports/`, `data/` |
 | Docs: project, architecture, stack, database, AI design, data sources, plan, journal | `docs/`, commit `c1e113d` |
 | UI design rules: component kit, theme, status colours, number formats, layout | `docs/design.md`, commit `33c5a73` |
-| ADRs 0001–0024 | `docs/adr/` |
+| ADRs 0001–0025 | `docs/adr/` |
 | Two-agent workflow: rules, statuses, reviewer guide, templates | `AGENTS.md`, `docs/tasks/`, commit `fecb83d` |
 | Claude Code guardrails: push guard, card and report schema check on write, with tests | `.claude/hooks/guard.py`, `.claude/hooks/test_guard.py` |
 | Claude Code skills and subagents | `.claude/skills/`, `.claude/agents/` |
 | DeepSeek through OpenRouter: a driver with four steps (plan, revise, build, respond), file tools that keep to the write rules, a post-step check, and the `/run-task` loop. Replaced opencode on 2026-10-29 ([ADR-0021](../adr/0021-deepseek-on-openrouter.md)) | `.claude/deepseek/`, `.claude/skills/run-task/` |
 | Web app scaffold: Next.js App Router, strict TypeScript, shadcn/ui on Tailwind CSS v4, disclaimer footer, Vitest tests, oxlint, a `web` CI job (task 006) | `web/`, commits `c835c42`, `33c5a73`, task 006 |
+| Neon linked to the app: `web/neon.ts` branch policy (`dev` kept, other new branches expire in 7 days), the serverless driver in `web/lib/db.ts`, and a `GET /api/health/db` check. Done outside a task on 2026-10-29; task 007 builds on it ([ADR-0025](../adr/0025-drizzle-on-neon-serverless-driver.md)) | `web/neon.ts`, `web/lib/db.ts`, `web/app/api/health/db/route.ts` |
 
 ---
 
@@ -357,6 +358,7 @@ A bare app already exists in `web/` (commits c835c42 and 33c5a73): Next.js with 
 Every table, enum and index in [db.md](../db.md), written as versioned migrations with the tool chosen in D03. Includes the `watched_symbols` view and the seeded `settings` rows. Tests run against a Neon branch, not a mock.
 
 - **Done when:** migrations build the full schema on an empty Neon branch; tests cover the constraints that carry rules (one open job per stock, unique `dedupe_key`, unique `exchange_ref`); `db.md` status labels are updated.
+- **Already in place:** `web/lib/db.ts` opens the Neon connection (serverless driver, pooled `DATABASE_URL`); wrap it with Drizzle rather than adding a second connection. Migrations use `DATABASE_URL_UNPOOLED`. CI branches come from the `NEON_API_KEY` secret and the `NEON_PROJECT_ID` variable (H06).
 - **Watch for:** `analysis_daily_limit_platform` has no default yet (D08). The plan must say how the app behaves while it's unset, without inventing a number. The auth library's own tables come in 010.
 - **Read:** [db.md](../db.md), [ADR-0010](../adr/0010-postgresql-on-neon.md), [ADR-0011](../adr/0011-git-as-the-hand-off.md).
 - **Start:** `/run-task 007`

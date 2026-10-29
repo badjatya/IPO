@@ -22,7 +22,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Web framework | Next.js: pages and API routes in one app | Decided | [0009](adr/0009-nextjs-web-platform.md) |
 | Web language | TypeScript, strict mode | Running | [0023](adr/0023-typescript-strict.md) |
 | Database | PostgreSQL on Neon (free tier) | Decided | [0010](adr/0010-postgresql-on-neon.md) |
-| ORM and migrations | Drizzle or Prisma | Open | — |
+| ORM and migrations | Drizzle ORM, drizzle-kit migrations, on Neon's serverless driver | Decided | [0025](adr/0025-drizzle-on-neon-serverless-driver.md) |
 | Auth | Auth library for Next.js, sessions in Postgres | Open | — |
 | UI components and styling | shadcn/ui (Base UI) with Tailwind CSS v4; rules in [design.md](design.md) | Running | [0020](adr/0020-shadcn-ui.md) |
 | Charts | Not chosen yet | Open | — |
@@ -56,8 +56,8 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | --- | --- | --- |
 | Framework | Next.js: server-rendered pages for IPOs, track record and stocks; API routes for the watchlist, analysis requests and progress, Ask, admin settings and worker dispatch | Decided |
 | Language | TypeScript, with strict mode ([ADR-0023](adr/0023-typescript-strict.md)) | Running |
-| Data access | ORM with versioned migrations (Drizzle or Prisma) | Open |
-| Database driver | Neon's serverless driver or standard Postgres driver, depending on the host | Open |
+| Data access | Drizzle ORM; drizzle-kit for versioned migrations ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Decided |
+| Database driver | `@neondatabase/serverless`: HTTP for queries, WebSocket `Pool` for interactive transactions; connection in `web/lib/db.ts` ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
 | Auth | An auth library for Next.js with a Postgres adapter; Google sign-in or password (no emailed links, because the app sends no email) | Open |
 | AI | Google Gen AI SDK for the Gemini API, server side only, behind one module that the app (Ask) and the stock worker share | Decided |
 | UI | shadcn/ui components in `web/components/ui/`, Tailwind CSS v4, theme in `web/app/globals.css`; see [design.md](design.md) | Running |
@@ -82,7 +82,10 @@ Names are planned; values are never committed. The app's variables are listed, e
 
 | Variable | Used by | Purpose |
 | --- | --- | --- |
-| `DATABASE_URL` | App, import Action, stock worker | Neon connection (a different branch per environment) |
+| `DATABASE_URL` | App, import Action, stock worker | Neon connection, pooled (a different branch per environment). Locally, `neon checkout dev` writes it to `web/.env.local` |
+| `DATABASE_URL_UNPOOLED` | App: drizzle-kit migrations | The same branch's direct connection; migrations can't run through the pooler |
+| `NEON_API_KEY` | CI | Neon API key scoped to the project, so CI can create a database branch per test run (Actions secret) |
+| `NEON_PROJECT_ID` | CI | The Neon project, `dark-field-33023581` (Actions variable, not secret) |
 | `GEMINI_API_KEY` | App, stock worker | Ask; stock analyses and summaries |
 | `AUTH_SECRET` | App | Session signing |
 | `GITHUB_DISPATCH_TOKEN` | App | Fine-grained token that can only dispatch the stock worker workflow |
