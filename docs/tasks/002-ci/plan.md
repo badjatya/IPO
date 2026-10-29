@@ -1,16 +1,16 @@
 ---
 task: 002-ci
-status: code-review
+status: done
 branch: task/002-ci
 assigned_by: Vijay
 planner: Claude Code (opencode unavailable)
 builder: Claude Code (opencode unavailable)
-reviewer: Human, or a fresh reviewer given the diff
+reviewer: none (the human merged without an independent review)
 ---
 
 # 002: CI workflow
 
-**Who built this.** On 2026-10-29 the human asked Claude Code to work on task 002 because opencode was unavailable. Claude wrote this plan and built it in one step. No plan review took place, and Claude has not reviewed its own code. The review is still owed: by the human, or by a fresh Claude session running `/review-code 002` that sees only the diff and this plan.
+**Who built this.** On 2026-10-29 the human asked Claude Code to work on task 002 because opencode was unavailable. Claude wrote this plan and built it in one step. No plan review took place, and Claude has not reviewed its own code. Claude said so when it handed the task back. The human then asked Claude to push the branch, merge it into `main` and update the roadmap, without a separate review.
 
 ## Task
 
@@ -152,7 +152,13 @@ FAILED (failures=1)
 
 Also passed under `TZ=Asia/Kolkata` and `TZ=America/Los_Angeles`, and under `LC_ALL=C`.
 
-**On GitHub (to fill in after the human pushes `task/002-ci`):**
+**On GitHub.** Claude pushed `task/002-ci` at the human's request. [Run 40877897168](https://github.com/badjatya/IPO/actions/runs/40877897168) passed:
 
-- Task branch run: _pending_
-- First run on `main` after merge: _pending_
+```text
+tests	Agent tests	Ran 188 tests in 0.155s
+tests	Agent tests	OK
+tests	Schema check (guard tests over every saved card and report)	Ran 17 tests in 0.151s
+tests	Schema check (guard tests over every saved card and report)	OK
+```
+
+The first run on `main` after the merge is recorded in the roadmap's 002 entry.
