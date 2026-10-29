@@ -1,6 +1,6 @@
 # Agent rules
 
-Rules for any AI coding agent working in this repo. The main reader is **DeepSeek in opencode**, which plans and builds tasks. Claude Code reviews against the same rules. Its own file is `CLAUDE.md`, which opencode ignores when this file exists.
+Rules for any AI coding agent working in this repo. The main reader is **DeepSeek**, which plans and builds tasks through the OpenRouter API. Claude Code runs each DeepSeek step, gives it this file as its rules, and reviews against the same rules ([ADR-0021](docs/adr/0021-deepseek-on-openrouter.md)). Claude's own file is `CLAUDE.md`.
 
 ## The project in brief
 
@@ -27,28 +27,27 @@ Read these before planning, as far as your task touches them:
 | Who | Does | Never does |
 | --- | --- | --- |
 | **Human (Vijay)** | Assigns tasks, decides open questions, accepts ADRs, merges | — |
-| **DeepSeek (opencode)** | Writes the plan; after approval, builds it on the task branch | Merges, pushes, accepts its own plan, decides an open question on its own |
-| **Claude Code** | Reviews the plan; reviews the finished code | Builds a task assigned to DeepSeek, unless the human asks |
+| **DeepSeek (OpenRouter)** | Writes the plan; after approval, builds it on the task branch | Merges, pushes, accepts its own plan, decides an open question on its own |
+| **Claude Code** | Runs each DeepSeek step; reviews the plan; reviews the finished code | Builds a task assigned to DeepSeek, unless the human asks |
 
 ## Task workflow
 
 Every task lives in `docs/tasks/NNN-short-slug/`, where `NNN` is the task's ID in [docs/tasks/ROADMAP.md](docs/tasks/ROADMAP.md), or the next unused number for a task that isn't in it. The roadmap lists every task with its dependencies and status. Only the human or Claude edits it, on `main`, and every commit there that changes something it tracks updates it in the same commit. You never edit it. Instead, list under your plan's "Doc updates" the roadmap changes to make once the task merges: a decision it settles, work it adds, another task whose scope it changes, or a new task it shows is needed. The full workflow and the templates are in [docs/tasks/README.md](docs/tasks/README.md).
 
-**One branch and one worktree per task.** Each task's branch `task/NNN-short-slug` is checked out in its own git worktree at `.worktrees/NNN-short-slug/` (gitignored). The main checkout stays on `main`. Several tasks can therefore be planned, built and reviewed at the same time, with one opencode session per worktree. Never check out a task branch in the main checkout or in another task's worktree.
+**One branch and one worktree per task.** Each task's branch `task/NNN-short-slug` is checked out in its own git worktree at `.worktrees/NNN-short-slug/` (gitignored). The main checkout stays on `main`. Several tasks can therefore be planned, built and reviewed at the same time. Never check out a task branch in the main checkout or in another task's worktree.
 
-In opencode, each step is a command:
+Claude Code runs each DeepSeek step with `.claude/deepseek/deepseek.py <plan|revise|build|respond> NNN`, usually through its `/run-task NNN` skill. The driver:
 
-- `/plan-task <task>`: run from the main checkout. It creates the branch and the worktree. It runs on the `planner` agent, which can only edit `docs/tasks/`.
-- `/revise-plan NNN`, `/build-task NNN`, `/respond-review NNN`: run in an opencode session opened inside the task's worktree (`cd .worktrees/NNN-short-slug && opencode`). Each command stops if it isn't.
+- creates the branch and the worktree for `plan`, and runs every step inside the task's worktree
+- checks the `status:` line before the step, sets the next one after it and makes the hand-off commit, so you never edit plan.md's frontmatter
+- gives you file tools that refuse the paths in [Paths you must not edit by hand](#paths-you-must-not-edit-by-hand), `AGENTS.md`, `ROADMAP.md` and other tasks' files, and a `run` tool for tests and read-only git, without a shell
+- checks every path the step changed afterwards. A step that broke a rule is not handed off.
 
-The project's `opencode.json` denies `git push` and edits to the routine's files. In the main checkout it also denies edits under `.worktrees/`, because its path rules only match inside the session's own worktree.
-
-1. **Plan.** DeepSeek creates the branch `task/NNN-short-slug` from `main` together with its worktree, copies `docs/tasks/templates/plan.md` into the task folder in the worktree and fills it in. It writes no code in this step. It sets `status: plan-review`, commits the plan and stops.
-   - Use opencode's plan agent to think. Switch to the build agent only to save the plan file.
+1. **Plan.** The driver creates the branch `task/NNN-short-slug` from `main` together with its worktree, and copies `docs/tasks/templates/plan.md` into the task folder. DeepSeek fills it in and writes no code in this step. The driver sets `status: plan-review` and commits the plan.
 2. **Plan review.** Claude writes `plan-review.md` in the task folder, with a verdict of **Approved** or **Changes requested**.
-3. **Revise.** If changes are requested, DeepSeek updates `plan.md`, adds a row to its "Revisions" table and sets `status: plan-review` again. Steps 2 and 3 repeat until the plan is approved.
-4. **Build.** DeepSeek builds exactly the approved plan on the task branch. Anything that has to differ from the plan goes into the plan's "Changes during build" section, with the reason. When done, it sets `status: code-review`, commits and stops.
-5. **Code review.** Claude writes `code-review.md` with findings and a verdict. On **Changes requested**, DeepSeek fixes the findings, answers each one in `code-review.md` under "Responses", and sets `status: code-review` again.
+3. **Revise.** If changes are requested, DeepSeek updates `plan.md` and adds a row to its "Revisions" table; the driver sets `status: plan-review` again. Steps 2 and 3 repeat until the plan is approved.
+4. **Build.** DeepSeek builds exactly the approved plan on the task branch. Anything that has to differ from the plan goes into the plan's "Changes during build" section, with the reason. When done, the driver sets `status: code-review` and commits.
+5. **Code review.** Claude writes `code-review.md` with findings and a verdict. On **Changes requested**, DeepSeek fixes the findings and answers each one in `code-review.md` under "Responses"; the driver sets `status: code-review` again.
 6. **Done.** Claude approves, the human merges, and the status becomes `done`.
 
 **Each agent commits only its own step's files, and only on the task branch, in the task's worktree.** No agent pushes. The human pushes, merges and removes the worktree.
@@ -77,11 +76,12 @@ These are binding. A plan that breaks one is sent back, and code that breaks one
 | `analysis/`, `reports/`, `data/` | Written by the routine and the worker; system of record | Change the code that writes them |
 | `ROUTINE.md`, `config/delivery.json` | Drive the live routine | Propose in a plan; Claude reviews; the human applies |
 | `CLAUDE.md`, `.claude/` | Claude's instructions and settings | Propose in a plan |
+| `AGENTS.md`, `docs/tasks/ROADMAP.md`, `.gitignore` | The rules you work under, and the shared task list | Propose in a plan, or list under "Doc updates" |
 | An accepted ADR's decision | Decisions are superseded, not edited | Write a new ADR with status Proposed |
 
 ## Building
 
-- **Small commits** on the task branch. Each message ends with the trailer `AI-Agent: DeepSeek (opencode)`.
+- **Small commits** on the task branch, through the `commit` tool, which adds the trailer `AI-Agent: DeepSeek <model> (OpenRouter)`.
 - **Tests for every change.**
   - Python: `unittest` under `tests/`, run with `python3 -m unittest discover -s tests`.
   - Web app: the runner chosen for `web/`.
@@ -89,6 +89,7 @@ These are binding. A plan that breaks one is sent back, and code that breaks one
   - CI (`.github/workflows/ci.yml`) runs `tests/` and the schema check in `.claude/hooks/` on every push and pull request. Both must pass.
 - **Docs in the same change.** If the change touches a table, flow, setting or choice, update the matching doc in `docs/` and its status label. A new decision gets an ADR with status **Proposed**; only the human accepts it.
 - **Stay in scope.** No refactors, renames or dependency changes beyond the approved plan.
+- **Packages.** You can't install them. If the approved plan needs one, stop and say which command to run; Claude asks the human.
 
 ## Commands (existing agent)
 

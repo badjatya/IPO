@@ -1,8 +1,8 @@
 # Tasks
 
-How coding work moves between the human, DeepSeek in opencode, and Claude Code. Each task gets a folder here, so the plan, both reviews and the responses stay together as a record of the AI-assisted process ([ADR-0019](../adr/0019-deepseek-builds-claude-reviews.md)).
+How coding work moves between the human, DeepSeek and Claude Code. DeepSeek plans and builds through the OpenRouter API; Claude Code runs each DeepSeek step and reviews it ([ADR-0021](../adr/0021-deepseek-on-openrouter.md)). Each task gets a folder here, so the plan, both reviews and the responses stay together as a record of the AI-assisted process.
 
-Every task, its dependencies and its status are in [ROADMAP.md](ROADMAP.md). Start a roadmap task with `/plan-task Task NNN from docs/tasks/ROADMAP.md`.
+Every task, its dependencies and its status are in [ROADMAP.md](ROADMAP.md). Start a roadmap task by asking Claude Code to run it: `/run-task NNN`.
 
 ## Folder layout
 
@@ -20,31 +20,31 @@ Each task's branch is `task/NNN-short-slug`, checked out in its own git worktree
 
 ## Worktrees: several tasks at once
 
-The main checkout stays on `main`. Every task gets its own worktree, so DeepSeek can build one task while Claude reviews another and a third waits for a decision. Nobody switches branches.
+The main checkout stays on `main`. Every task gets its own worktree, so one task can be building while another is in review and a third waits for a decision. Nobody switches branches.
 
 ```text
 IPO/                              main checkout, always on main
   .worktrees/
-    001-agent-tests/              task/001-agent-tests: opencode session A
-    003-nse-stock-spike/          task/003-nse-stock-spike: opencode session B
+    001-agent-tests/              task/001-agent-tests
+    003-nse-stock-spike/          task/003-nse-stock-spike
 ```
 
 | When | Who | Where | Command |
 | --- | --- | --- | --- |
-| Start a task | Human → DeepSeek | Main checkout | opencode: `/plan-task Task NNN from docs/tasks/ROADMAP.md` (creates the branch and the worktree) |
-| Every later DeepSeek step | Human → DeepSeek | The task's worktree | `cd .worktrees/NNN-slug && opencode`, then the step's command |
-| Reviews | Human → Claude | Main checkout | Claude Code: `/review-plan NNN` or `/review-code NNN`. Claude reads, tests and commits inside `.worktrees/NNN-slug/` |
+| Run a task, start to merge-ready | Human → Claude | Main checkout | Claude Code: `/run-task NNN`. Claude runs each DeepSeek step and each review, and stops when the human is needed |
+| One DeepSeek step | Claude | Main checkout | `python3 .claude/deepseek/deepseek.py <plan\|revise\|build\|respond> NNN`. `plan` creates the branch and the worktree; every step works inside the worktree |
+| One review | Human → Claude | Main checkout | Claude Code: `/review-plan NNN` or `/review-code NNN`. Claude reads, tests and commits inside `.worktrees/NNN-slug/` |
 | Merge | Human | Main checkout | `git merge task/NNN-slug` on `main` |
 | Clean up | Human | Main checkout | `git worktree remove .worktrees/NNN-slug && git branch -d task/NNN-slug` |
 | Worktree lost but branch kept | Human or Claude | Main checkout | `git worktree add .worktrees/NNN-slug task/NNN-slug` |
 
 - **Dependencies still apply.** A task starts from `main`, so it only sees work that has been merged. Start a task only when the roadmap says it's Ready.
-- **Parallel tasks can touch the same file,** usually a doc. Whoever merges second resolves the conflict. If it's big, the human asks DeepSeek to merge `main` into the task branch in its worktree.
-- **One session per worktree.** Don't point two opencode sessions at the same worktree.
+- **Parallel tasks can touch the same file,** usually a doc. Whoever merges second resolves the conflict. If it's big, the human asks Claude to merge `main` into the task branch in its worktree.
+- **One step per worktree at a time.** Don't run two DeepSeek steps, or a step and a review, on the same worktree at once.
 
 ## Status
 
-The `status:` line at the top of `plan.md` says whose turn it is. Each agent sets it at the end of its step.
+The `status:` line at the top of `plan.md` says whose turn it is. Claude sets it at the end of a review; the driver sets it at the end of a DeepSeek step.
 
 | Status | Whose turn | Next |
 | --- | --- | --- |
@@ -57,16 +57,20 @@ The `status:` line at the top of `plan.md` says whose turn it is. Each agent set
 | `merge-ready` | Human | Merge → `done` |
 | `done` | — | — |
 
-The human hands each task to the right tool when the status changes:
+`/run-task NNN` moves the task on by status. Each step can also be run on its own, from the main checkout:
 
-| Step | Command | Run from |
-| --- | --- | --- |
-| Start a task | opencode: `/plan-task <what to do>` | Main checkout |
-| Review the plan | Claude Code: `/review-plan NNN` | Main checkout |
-| Revise the plan | opencode: `/revise-plan NNN` | `.worktrees/NNN-slug/` |
-| Build | opencode: `/build-task NNN` | `.worktrees/NNN-slug/` |
-| Review the code | Claude Code: `/review-code NNN` | Main checkout |
-| Fix and respond | opencode: `/respond-review NNN` | `.worktrees/NNN-slug/` |
+| Step | Command |
+| --- | --- |
+| Start a task | `deepseek.py plan NNN`, or for a task not in the roadmap `deepseek.py plan NNN --slug NNN-short-slug --task "<what to do>"` |
+| Review the plan | Claude Code: `/review-plan NNN` |
+| Revise the plan | `deepseek.py revise NNN` |
+| Build | `deepseek.py build NNN` |
+| Review the code | Claude Code: `/review-code NNN` |
+| Fix and respond | `deepseek.py respond NNN` |
+
+`deepseek.py` is `python3 .claude/deepseek/deepseek.py`. It reads `OPENROUTER_API_KEY` and `OPENROUTER_MODEL_NAME` from `.env.local` in the main checkout, logs each step to `.deepseek-logs/`, and prints the step's cost.
+
+**Where `/run-task` stops for the human:** a decision the plan needs, a setup step before the build, a package to install, a third review round without approval, a step that broke a write rule, and `merge-ready`.
 
 ## Reviewer guide (Claude Code)
 

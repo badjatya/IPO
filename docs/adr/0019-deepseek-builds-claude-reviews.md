@@ -1,6 +1,6 @@
 # ADR-0019: DeepSeek plans and builds; Claude reviews the plan and the code
 
-- **Status:** Accepted
+- **Status:** Superseded by [ADR-0021](0021-deepseek-on-openrouter.md) (DeepSeek now runs through OpenRouter; the roles are unchanged)
 - **Decided:** 2026-10-29 · **Recorded:** 2026-10-29
 - **Deciders:** Vijay · **Drafted with:** Claude Code (Opus 5.5)
 

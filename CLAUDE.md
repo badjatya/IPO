@@ -19,18 +19,18 @@ Python standard library only; `pdftotext` (poppler-utils) is used for RHPs, with
 
 The repo is growing into a multi-user research app; start at `docs/README.md`.
 
-Coding is split between agents ([ADR-0019](docs/adr/0019-deepseek-builds-claude-reviews.md)):
+Coding is split between agents ([ADR-0021](docs/adr/0021-deepseek-on-openrouter.md)):
 
-- **DeepSeek in opencode** plans and builds each task. Its rules are in `AGENTS.md`.
+- **DeepSeek** plans and builds each task, through OpenRouter. You run its steps with `.claude/deepseek/deepseek.py`; its rules are in `AGENTS.md`.
 - **Claude Code reviews:** first the task's plan, then the finished code.
 - **The human** assigns tasks, decides open questions, and merges.
 
-When asked to review a task, use the `/review-plan NNN` or `/review-code NNN` skill. They follow these steps:
+When asked to run a task, use `/run-task NNN`: it runs DeepSeek's steps and your reviews in a loop and stops when the human is needed. When asked only to review, use `/review-plan NNN` or `/review-code NNN`. The reviews follow these steps:
 
 1. Work in the task's worktree `.worktrees/NNN-*/` (branch `task/NNN-*`); never check out a task branch in the main checkout. Read `AGENTS.md` (the rules both agents enforce), `docs/tasks/README.md` (the reviewer guide, statuses and severities), and the task folder `docs/tasks/NNN-*/` there.
 2. Write `plan-review.md` or `code-review.md` from `docs/tasks/templates/`, as a new round section. Never rewrite an earlier round.
 3. Set the `status:` line in the task's `plan.md`, and commit only the review file and that status change in the worktree (`git -C .worktrees/NNN-*`). Don't push.
 
-Don't build a task assigned to DeepSeek unless the human asks. Put fixes in the review as findings.
+Don't build a task assigned to DeepSeek unless the human asks. Put fixes in the review as findings, and never put your code into DeepSeek's prompt.
 
 **Keep `docs/tasks/ROADMAP.md` current.** Any commit you make on `main` that changes something the roadmap tracks updates it in the same commit: a decision settled or an ADR added, a setup step done, work landed outside a task (add it under "Already in place" and note it in the tasks it affects), a task merged or its scope changed. When the human merges a task, apply the roadmap changes its plan lists under "Doc updates".

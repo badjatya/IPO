@@ -3,7 +3,7 @@ task: NNN-short-slug
 status: planning
 branch: task/NNN-short-slug
 assigned_by: Vijay
-planner: DeepSeek (opencode)
+planner: DeepSeek (OpenRouter)
 reviewer: Claude Code
 ---
 

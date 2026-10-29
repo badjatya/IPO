@@ -391,8 +391,9 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | [0016](adr/0016-on-demand-stock-analysis.md) | On-demand stock analysis through the Claude routine | Superseded by 0017 |
 | [0017](adr/0017-gemini-for-stocks-claude-for-ipos.md) | Claude for IPOs only; Gemini for all stock work; every analysis request counts | Accepted |
 | [0018](adr/0018-stock-worker-on-github-actions.md) | Stock worker runs on GitHub Actions | Accepted |
-| [0019](adr/0019-deepseek-builds-claude-reviews.md) | DeepSeek plans and builds; Claude reviews the plan and the code | Accepted |
+| [0019](adr/0019-deepseek-builds-claude-reviews.md) | DeepSeek plans and builds; Claude reviews the plan and the code | Superseded by 0021 |
 | [0020](adr/0020-shadcn-ui.md) | shadcn/ui and Tailwind CSS for the web app | Accepted |
+| [0021](adr/0021-deepseek-on-openrouter.md) | DeepSeek runs through OpenRouter, driven by Claude Code | Accepted |
 
 ## 9. Open questions
 

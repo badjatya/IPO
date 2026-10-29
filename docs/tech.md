@@ -33,7 +33,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Agent tests | Python `unittest`; run with `python3 -m unittest discover -s tests` | Running | — |
 | App tests | Test runner not chosen yet; database tests on Neon branches | Open | — |
 | CI | GitHub Actions: agent tests and the schema check on every push and pull request (`.github/workflows/ci.yml`) | Running | — |
-| Dev tooling | DeepSeek in opencode (plans and builds); Claude Code, Opus 5.5 (reviews plans and code) | Running | [0019](adr/0019-deepseek-builds-claude-reviews.md) |
+| Dev tooling | DeepSeek through OpenRouter (plans and builds; model in `OPENROUTER_MODEL_NAME`), run by `.claude/deepseek/deepseek.py`; Claude Code, Opus 5.5 (runs the loop, reviews plans and code) | Running | [0021](adr/0021-deepseek-on-openrouter.md) |
 
 ## Research agent
 
@@ -83,6 +83,8 @@ Names are planned; values are never committed.
 | `AUTH_SECRET` | App | Session signing |
 | `GITHUB_DISPATCH_TOKEN` | App | Fine-grained token that can only dispatch the stock worker workflow |
 | `config/delivery.json` | Routine | The admin's email address for the brief (running) |
+| `OPENROUTER_API_KEY` | Dev tooling: `.claude/deepseek/deepseek.py` | DeepSeek through OpenRouter. In the main checkout's `.env.local` (gitignored); never in CI (running) |
+| `OPENROUTER_MODEL_NAME` | Dev tooling: `.claude/deepseek/deepseek.py` | The DeepSeek model, e.g. `deepseek/deepseek-v4-flash-0731`. In `.env.local` (running) |
 
 ## Repository layout
 
@@ -92,10 +94,9 @@ Names are planned; values are never committed.
 | `analysis/`, `reports/`, `data/` | Research output (system of record) | Running |
 | `docs/` | Project, architecture, stack, database, AI, sources, ADRs, plan | Running |
 | `CLAUDE.md`, `ROUTINE.md` | Instructions for Claude (routine and reviewer) | Running |
-| `AGENTS.md` | Rules for every coding agent (DeepSeek in opencode) | Running |
+| `AGENTS.md` | Rules for every coding agent (DeepSeek through OpenRouter) | Running |
 | `docs/tasks/` | Task plans, reviews and responses | Running |
-| `.claude/` | Claude Code skills, subagents, hooks and their tests | Running |
-| `opencode.json`, `.opencode/` | DeepSeek's permissions, planner agent, workflow commands | Running |
+| `.claude/` | Claude Code skills, subagents, hooks, the DeepSeek driver (`.claude/deepseek/`), and their tests | Running |
 | `tests/` | Agent tests (`python3 -m unittest discover -s tests`, saved fixtures only) | Running |
 | `web/` | Next.js app, migrations, import script | Proposed (same repo; [arch.md § Open questions](arch.md#9-open-questions)) |
 | `.github/workflows/` | CI (`ci.yml`) and the NSE stock smoke test (`nse-stock-smoke.yml`) running; the import Action decided | Running / Decided |

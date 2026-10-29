@@ -6,7 +6,7 @@ argument-hint: <task number, e.g. 001>
 
 # Review a task's code
 
-You are the final code reviewer in the DeepSeek → Claude workflow ([ADR-0019](../../../docs/adr/0019-deepseek-builds-claude-reviews.md)). The task number is `$ARGUMENTS`.
+You are the final code reviewer in the DeepSeek → Claude workflow ([ADR-0021](../../../docs/adr/0021-deepseek-on-openrouter.md)). The task number is `$ARGUMENTS`.
 
 1. **Find the task's worktree.**
    - It's `.worktrees/$ARGUMENTS-*/`, on branch `task/<folder name>`. The task folder is `.worktrees/<folder>/docs/tasks/<folder>/`.
@@ -18,6 +18,7 @@ You are the final code reviewer in the DeepSeek → Claude workflow ([ADR-0019](
    - `docs/tasks/README.md` § Reviewer guide
    - the approved `plan.md`, including "Changes during build" and "Verification"
    - earlier rounds of `code-review.md` and DeepSeek's responses
+   - DeepSeek's commits since your last round (`git -C .worktrees/<folder> log -p`): the driver rejects a step that edits your review text or the approved plan, but confirm it
 3. **Diff and test.**
    - Diff with `git diff main...task/<folder>`.
    - Run the tests yourself, from the worktree (`cd .worktrees/<folder>` first): `python3 -m unittest discover -s tests` for Python, the web app's runner for `web/`, and `python3 -m unittest discover -s .claude/hooks` if guards changed.

@@ -20,7 +20,7 @@ This is the reference for the organization's month-long AI hackathon: how it is 
 | Format              | Internal AI hackathon, about one month                                                    |
 | Start               | 2026-10-28                                                                                |
 | Submission deadline | _TBD (we assume about 2026-11-27 until it's confirmed)_                                   |
-| Team                | 1 developer (Vijay) + AI agents: DeepSeek in opencode (plans and builds), Claude Code (reviews; runs the IPO routine) |
+| Team                | 1 developer (Vijay) + AI agents: DeepSeek through OpenRouter (plans and builds), Claude Code (runs DeepSeek's steps and reviews them; runs the IPO routine) |
 | Goal                | Win: score highly on every judging criterion                                              |
 
 ## Starting point
@@ -66,7 +66,7 @@ _Open question: confirm with the organisers that existing work is allowed, as lo
 | ------------------------ | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | AI-assisted engineering  | Every commit has a Claude co-author trailer; the code was built with Claude Code                        | AI journal, ADRs, PRs that show the plan → build → review loop                |
 | How well we use AI       | Split between Python (exact work) and Claude (judgement); RHP and analysis cached once per IPO; quiet runs skip Claude | Write-up with numbers: tokens or runs saved, analyses reused             |
-| AI structure             | `AGENTS.md`, `CLAUDE.md`, `ROUTINE.md`, scheduled routine; `.claude/` skills, subagents and tested hooks; `opencode.json` and `.opencode/` planner agent and commands; task workflow in `docs/tasks/` | The scheduled routine still follows `ROUTINE.md` directly, not the skills; the first tasks run through the workflow |
+| AI structure             | `AGENTS.md`, `CLAUDE.md`, `ROUTINE.md`, scheduled routine; `.claude/` skills, subagents and tested hooks; the DeepSeek driver `.claude/deepseek/` and the `/run-task` loop; task workflow in `docs/tasks/` | The scheduled routine still follows `ROUTINE.md` directly, not the skills; the first tasks run through the workflow |
 | AI inside the platform   | Claude writes every analysis, card and verdict; scorecard tracks the calls                              | An in-product AI feature the judge can try (e.g. "Ask about this IPO")        |
 | QA & testing (form §6)   | Listing scorecard works as an eval of the verdicts                                                      | No `tests/`; no schema checks; no check that analysis numbers come from the RHP |
 | UI/UX (human judge)      | Designed HTML email                                                                                     | Dashboard                                                                     |
@@ -104,7 +104,7 @@ Markdown (or an uploaded `.md`) covering system architecture, components, data f
 | Field                                           | Limit | Evidence                                                                                   |
 | ----------------------------------------------- | ----- | ------------------------------------------------------------------------------------------ |
 | How was AI used during development?\*           | 5,000 | Commit history (Opus for development), AI journal                                          |
-| Which AI tools and models were used?\*          | 5,000 | DeepSeek in opencode (plan and build), Claude Code Opus 5.5 (review; earlier build), Claude Sonnet 5.5 (IPO routine), Gemini (stocks, Ask), Gmail connector, web search |
+| Which AI tools and models were used?\*          | 5,000 | DeepSeek `deepseek-v4-flash-0731` through OpenRouter (plan and build; briefly in opencode before that), Claude Code Opus 5.5 (runs and reviews DeepSeek's steps; earlier build), Claude Sonnet 5.5 (IPO routine), Gemini (stocks, Ask), Gmail connector, web search |
 | How did you manage context?\*                   | 5,000 | `CLAUDE.md`, `ROUTINE.md`, cached `analysis/`, `data/latest.md` as the single input, quiet runs |
 | Approach to planning, prompting and iteration\* | 5,000 | AI journal, ADRs, commit history (e.g. quota fix in `44f553a`)                             |
 
@@ -112,9 +112,9 @@ Markdown (or an uploaded `.md`) covering system architecture, components, data f
 
 | Field                                                | Limit | Evidence                                                                                 |
 | ---------------------------------------------------- | ----- | ---------------------------------------------------------------------------------------- |
-| Agents, skills, reusable instructions or workflows\* | 5,000 | `AGENTS.md`, `CLAUDE.md`, `ROUTINE.md`, the task workflow in `docs/tasks/`, scheduled routine; `.claude/` skills, subagents and hooks; `.opencode/` planner agent and commands |
+| Agents, skills, reusable instructions or workflows\* | 5,000 | `AGENTS.md`, `CLAUDE.md`, `ROUTINE.md`, the task workflow in `docs/tasks/`, scheduled routine; `.claude/` skills, subagents and hooks; the `/run-task` loop and the DeepSeek driver in `.claude/deepseek/` |
 | Responsibilities the agents handled\*                | 5,000 | RHP analysis, anchor research, cards, daily verdicts, best category, delivery, commits  |
-| Guardrails implemented\*                             | 5,000 | Rules: never invent numbers, facts only in cards (`ROUTINE.md`, `AGENTS.md`). Hooks: card and verdict schema, live-number words, push limits (`.claude/hooks/guard.py`, 17 tests). opencode: no push; no edits to routine output or agent config; a planner that can't write code. Quiet runs; per-user quotas from `settings` |
+| Guardrails implemented\*                             | 5,000 | Rules: never invent numbers, facts only in cards (`ROUTINE.md`, `AGENTS.md`). Hooks: card and verdict schema, live-number words, push limits (`.claude/hooks/guard.py`, 17 tests). DeepSeek driver: no push; file tools refuse routine output and agent config; plan steps write only the plan; a post-step check on every changed path; no API key in its environment. Quiet runs; per-user quotas from `settings` |
 | How was human review incorporated?\*                 | 5,000 | Test runs before enabling the routine; every task goes plan → Claude plan review → build → Claude code review → human merge ([docs/tasks/](tasks/README.md)); human decisions and overrides in ADRs |
 
 ### 6. AI-assisted QA & testing
@@ -146,7 +146,7 @@ Markdown (or an uploaded `.md`) covering system architecture, components, data f
 - [ ] Problem statement and solution text within limits
 - [ ] AI journal started and kept up to date
 - [ ] `tests/` added and passing
-- [x] `.claude/` skills, subagents and hooks in place; `opencode.json` and `.opencode/` for DeepSeek
+- [x] `.claude/` skills, subagents and hooks in place; `.claude/deepseek/` driver for DeepSeek
 - [ ] Web app built: accounts, watchlist, IPO and stock pages, track record
 - [ ] "Not financial advice" disclaimer in the email, dashboard and README
 - [ ] Demo runs end to end on live IPO data

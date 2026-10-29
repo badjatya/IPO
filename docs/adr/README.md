@@ -24,8 +24,9 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0016](0016-on-demand-stock-analysis.md) | On-demand stock analysis through the Claude routine | 2026-10-29 | Superseded by 0017 |
 | [0017](0017-gemini-for-stocks-claude-for-ipos.md) | Claude for IPOs only; Gemini for all stock work; every analysis request counts | 2026-10-29 | Accepted |
 | [0018](0018-stock-worker-on-github-actions.md) | Stock worker runs on GitHub Actions | 2026-10-29 | Accepted |
-| [0019](0019-deepseek-builds-claude-reviews.md) | DeepSeek plans and builds; Claude reviews the plan and the code | 2026-10-29 | Accepted |
+| [0019](0019-deepseek-builds-claude-reviews.md) | DeepSeek plans and builds; Claude reviews the plan and the code | 2026-10-29 | Superseded by 0021 |
 | [0020](0020-shadcn-ui.md) | shadcn/ui and Tailwind CSS for the web app | 2026-10-29 | Accepted |
+| [0021](0021-deepseek-on-openrouter.md) | DeepSeek runs through OpenRouter, driven by Claude Code | 2026-10-29 | Accepted |
 
 ## Adding one
 

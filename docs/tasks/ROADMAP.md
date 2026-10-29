@@ -2,21 +2,21 @@
 
 Every task between today and a finished system, in build order, with what each one depends on. When every task here is **Done**, the system in [arch.md](../arch.md) is built.
 
-Each task runs through the loop in [README.md](README.md): DeepSeek plans, Claude reviews the plan, DeepSeek builds, Claude reviews the code, the human merges.
+Each task runs through the loop in [README.md](README.md): DeepSeek plans, Claude reviews the plan, DeepSeek builds, Claude reviews the code, the human merges. Claude Code runs DeepSeek's steps through OpenRouter ([ADR-0021](../adr/0021-deepseek-on-openrouter.md)).
 
 ## How to use this file
 
 1. **Pick a task whose status is Ready.** Every task it depends on is Done (and gate G1, where listed).
-2. **Start it in opencode, from the main checkout,** with the line under the task's **Start** heading, for example:
+2. **Ask Claude Code to run it, from the main checkout,** with the line under the task's **Start** heading, for example:
 
    ```text
-   /plan-task Task 001 from docs/tasks/ROADMAP.md
+   /run-task 005
    ```
 
-   DeepSeek uses the roadmap ID as the task number and the slug given here. It creates the branch `task/001-agent-tests` and its worktree `.worktrees/001-agent-tests/`, and writes `docs/tasks/001-agent-tests/plan.md` there. It quotes the task's entry under "Task".
+   The driver uses the roadmap ID as the task number and the slug given here. It creates the branch `task/005-figures-check` and its worktree `.worktrees/005-figures-check/`, and quotes the task's entry under "Task" in `docs/tasks/005-figures-check/plan.md` there. DeepSeek writes the plan.
 
-   The rest of DeepSeek's steps for the task run in an opencode session opened in that worktree (`cd .worktrees/001-agent-tests && opencode`). Several tasks can run at once, one worktree each ([README.md § Worktrees](README.md#worktrees-several-tasks-at-once)).
-3. **Review it in Claude Code** with `/review-plan 001`, then `/review-code 001`, as usual. Claude works inside the task's worktree.
+   Claude then runs the loop: its plan review, DeepSeek's revisions and build, its code review, DeepSeek's fixes. It stops when the human is needed: a decision, a setup step, a package to install, or `merge-ready`. Several tasks can run at once, one worktree each ([README.md § Worktrees](README.md#worktrees-several-tasks-at-once)).
+3. **Answer Claude's questions** when it stops. `/review-plan NNN` and `/review-code NNN` still run a single review on their own.
 4. **After merging,** remove the worktree (`git worktree remove .worktrees/NNN-slug && git branch -d task/NNN-slug`). Then the human (or Claude, when asked) updates the task's status here, on `main`. Then any task that has just become Ready is marked as such. DeepSeek never edits this file, because tasks run on parallel branches and would conflict.
 
 **Keep this file current.** Any commit on `main` that changes something tracked here updates this file in the same commit: a task merged or its scope changed, a decision settled or an ADR added, a setup step done, a gate answered, or work landed outside a task (add it under "Already in place", and note it in any task it affects). A task's plan lists, under "Doc updates", the roadmap changes to make after it merges.
@@ -186,11 +186,11 @@ Nothing below needs a task. Evidence is in the repo.
 | Research output as the system of record | `analysis/`, `reports/`, `data/` |
 | Docs: project, architecture, stack, database, AI design, data sources, plan, journal | `docs/`, commit `c1e113d` |
 | UI design rules: component kit, theme, status colours, number formats, layout | `docs/design.md`, commit `33c5a73` |
-| ADRs 0001–0020 | `docs/adr/` |
+| ADRs 0001–0021 | `docs/adr/` |
 | Two-agent workflow: rules, statuses, reviewer guide, templates | `AGENTS.md`, `docs/tasks/`, commit `fecb83d` |
 | Claude Code guardrails: push guard, card and report schema check on write, with tests | `.claude/hooks/guard.py`, `.claude/hooks/test_guard.py` |
 | Claude Code skills and subagents | `.claude/skills/`, `.claude/agents/` |
-| DeepSeek permissions, planner agent, workflow commands | `opencode.json`, `.opencode/` |
+| DeepSeek through OpenRouter: a driver with four steps (plan, revise, build, respond), file tools that keep to the write rules, a post-step check, and the `/run-task` loop. Replaced opencode on 2026-10-29 ([ADR-0021](../adr/0021-deepseek-on-openrouter.md)) | `.claude/deepseek/`, `.claude/skills/run-task/` |
 | Bare web app: Next.js App Router, strict TypeScript, shadcn/ui on Tailwind CSS v4, disclaimer footer. No tests, lint or CI yet (task 006) | `web/`, commits `c835c42`, `33c5a73` |
 
 ---
@@ -282,7 +282,7 @@ Make the routine's cards and reports carry `ai_model`, `ai_prompt_version` and `
 - **Done when:** the guard accepts files with and without the new fields; `cards.py` and `email_render.py` handle both; the human has applied the `ROUTINE.md` and guard changes; the next routine run writes the fields.
 - **Watch for:** existing files must still validate. Where the prompt version comes from (for example a version line in `ROUTINE.md`) is for the plan to propose.
 - **Read:** [ai.md § Guardrails](../ai.md#guardrails), [db.md § Principles](../db.md#principles), `ROUTINE.md`, `.claude/hooks/guard.py`.
-- **Start:** `/plan-task Task 004 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 004`
 
 ### 005 · Figures check
 
@@ -299,7 +299,7 @@ A standard-library script that checks that every ₹ figure in `analysis/<key>.m
 - **Done when:** the script runs on one IPO or all of them; CI runs it; `ai.md` marks Figures check as Running, with today's results quoted.
 - **Watch for:** crore and lakh, commas, rounding, and figures written in words. Analyses written from web search before the RHP (card `source: web`) are skipped. Whether a low score fails CI or only reports is a decision for the plan.
 - **Read:** [ai.md § Guardrails and § Evals](../ai.md#guardrails), `ROUTINE.md` analysis template, a few files in `analysis/`.
-- **Start:** `/plan-task Task 005 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 005`
 
 ## Week 2: web app and the IPO side
 
@@ -319,9 +319,9 @@ A bare app already exists in `web/` (commits c835c42 and 33c5a73): Next.js with 
 
 - **Done when:** the app starts locally and shows an empty home page with the disclaimer; its tests run in CI; `tech.md` has the local setup and updated status labels.
 - **Out of scope:** database, auth, real pages.
-- **Watch for:** `npm install` asks for permission in opencode.
+- **Watch for:** DeepSeek can't run `npm install`; `/run-task` stops and asks the human to run it.
 - **Read:** [tech.md](../tech.md), [design.md](../design.md), [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [ADR-0012](../adr/0012-research-not-advice.md), [ADR-0020](../adr/0020-shadcn-ui.md).
-- **Start:** `/plan-task Task 006 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 006`
 
 ### 007 · Database schema and migrations
 
@@ -338,7 +338,7 @@ Every table, enum and index in [db.md](../db.md), written as versioned migration
 - **Done when:** migrations build the full schema on an empty Neon branch; tests cover the constraints that carry rules (one open job per stock, unique `dedupe_key`, unique `exchange_ref`); `db.md` status labels are updated.
 - **Watch for:** `analysis_daily_limit_platform` has no default yet (D08). The plan must say how the app behaves while it's unset, without inventing a number. The auth library's own tables come in 010.
 - **Read:** [db.md](../db.md), [ADR-0010](../adr/0010-postgresql-on-neon.md), [ADR-0011](../adr/0011-git-as-the-hand-off.md).
-- **Start:** `/plan-task Task 007 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 007`
 
 ### 008 · Import script: git to database
 
@@ -356,7 +356,7 @@ The script that turns the repo's research files into rows. It reads snapshots, c
 - **Out of scope:** `data/stocks/` (added in 015 and 018).
 - **Watch for:** the import runs outside `ipo_agent/`, which has no Postgres driver ([tech.md](../tech.md#repository-layout) puts it in `web/`).
 - **Read:** [db.md § Import and rebuild](../db.md#import-and-rebuild), [arch.md § 4.3](../arch.md#43-import-action-decided).
-- **Start:** `/plan-task Task 008 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 008`
 
 ### 009 · Import Action
 
@@ -372,7 +372,7 @@ A GitHub Actions workflow that runs the import on every push to `main` that touc
 
 - **Done when:** a push imports the new commit; a failed run retries from the last imported commit; two quick pushes can't race (one concurrency group); `arch.md` marks the import Action as Running.
 - **Read:** [arch.md § 4.3 and § 5.2](../arch.md#43-import-action-decided).
-- **Start:** `/plan-task Task 009 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 009`
 
 ### 010 · Accounts
 
@@ -389,7 +389,7 @@ Sign-up and sign-in with the library and method chosen in D04, with sessions in 
 - **Done when:** a user can sign up, sign in and out; admin-only routes refuse other users; tests cover scoping and the role check.
 - **Watch for:** the app sends no email ([ADR-0015](../adr/0015-email-to-admin-only.md)), so there are no magic links and no reset emails. The first-admin mechanism is for the plan to propose. No user data goes in git.
 - **Read:** [db.md § users](../db.md#users), [arch.md § 7.1](../arch.md#71-security-and-trust-boundaries).
-- **Start:** `/plan-task Task 010 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 010`
 
 ### 011 · IPO pages
 
@@ -406,7 +406,7 @@ Sign-up and sign-in with the library and method chosen in D04, with sessions in 
 - **Done when:** both pages render from imported data; the shown call is the day's verdict or else the card's; tests cover the queries in [db.md § Access patterns](../db.md#access-patterns).
 - **Watch for:** the app displays numbers; it doesn't recompute odds or prices ([AGENTS.md](../../AGENTS.md) rule 1). Whether IPO pages need sign-in isn't in the docs; list it under "Decisions needed".
 - **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md), a recent `reports/*.html` email for the content.
-- **Start:** `/plan-task Task 011 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 011`
 
 ### 012 · Track record page
 
@@ -422,7 +422,7 @@ Every IPO call against how it listed, from `ipo_outcomes`: a per-IPO table, the 
 
 - **Done when:** the page matches `python3 -m ipo_agent.outcomes --no-fetch` for the same data; it warns when the sample is small, as the scorecard does.
 - **Read:** [ADR-0007](../adr/0007-listing-scorecard-as-eval.md), [db.md § ipo_outcomes](../db.md#ipo_outcomes), `ipo_agent/outcomes.py`.
-- **Start:** `/plan-task Task 012 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 012`
 
 ### 013 · Admin settings page
 
@@ -438,7 +438,7 @@ An admin-only page that lists the `settings` rows and edits one at a time. Each 
 
 - **Done when:** an admin can change a value; a bad value is refused; a non-admin gets 403; tests cover all three.
 - **Read:** [db.md § settings](../db.md#settings), [AGENTS.md](../../AGENTS.md) rule 6.
-- **Start:** `/plan-task Task 013 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 013`
 
 ## Weeks 2–3: the stock side
 
@@ -463,7 +463,7 @@ Fetchers and parsers for the endpoints confirmed in 003: quote, quarterly result
   - **FII/DII split:** not in the shareholding JSON, only in the XBRL filing.
   - **Pledges:** `promoter_pledged_pct` is computed as `numSharesPledged / totPromoterHolding × 100`; NSE's `percSharesPledged` is a share of all shares. Pledge rows carry no symbol, only the company name.
 - **Read:** [data-sources.md](../data-sources.md), [arch.md § 4.2](../arch.md#42-stock-worker-decided), [ADR-0001](../adr/0001-python-for-exact-work-claude-for-judgement.md).
-- **Start:** `/plan-task Task 014 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 014`
 
 ### 015 · Stock universe
 
@@ -481,7 +481,7 @@ Load NSE's list of listed equities into `stocks` (symbol, ISIN, name, industry, 
 - **From 003:** `EQUITY_L.csv` has no industry and no active flag, and its header has spaces after the commas.
 - **Watch for:** the stocks list is what the watchlist and the worker check symbols against ([arch.md § 7.1](../arch.md#71-security-and-trust-boundaries)). How often it refreshes is for the plan to propose (likely inside 018).
 - **Read:** [db.md § stocks](../db.md#stocks), [ADR-0011](../adr/0011-git-as-the-hand-off.md).
-- **Start:** `/plan-task Task 015 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 015`
 
 ### 016 · Change detection and alert rules
 
@@ -497,7 +497,7 @@ Pure Python functions that compare a stock's latest filings with earlier ones, a
 
 - **Done when:** every rule has tests, including the first quarter on record and missing data (no alert); the same input never raises the same alert twice.
 - **Read:** [plan.md § Watchlist signals](../plan.md#watchlist-signals), [db.md § alerts and § shareholding](../db.md#alerts).
-- **Start:** `/plan-task Task 016 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 016`
 
 ### 017 · Watchlist
 
@@ -514,7 +514,7 @@ Add, remove and list watched stocks, for the signed-in user only. Symbols are ch
 - **Done when:** a user sees only their own list; an unknown symbol is refused; the per-user cap is enforced; tests cover all three.
 - **Watch for:** [db.md](../db.md#watchlist_items) says "50 stocks, checked in the app", but rule 6 says caps come from `settings`. Raise it under "Decisions needed".
 - **Read:** [db.md § watchlist_items](../db.md#watchlist_items), [ADR-0013](../adr/0013-shared-per-stock-research.md).
-- **Start:** `/plan-task Task 017 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 017`
 
 ### 018 · Stock worker, scheduled: numbers and alerts
 
@@ -532,7 +532,7 @@ The GitHub Actions stock worker, scheduled twice each weekday, **without AI yet*
 - **From 003:** market-wide announcements (with a `from_date`/`to_date` range) and market-wide pledges both answered, so one call per run can replace one call per watched stock. Market-wide pledge rows have no symbol and need a name-to-symbol match.
 - **Watch for:** the worker reads symbols only, no user data. It pushes only to `main` with no force. One run should stay well within free Actions minutes.
 - **Read:** [arch.md § 4.2](../arch.md#42-stock-worker-decided), [ADR-0018](../adr/0018-stock-worker-on-github-actions.md), [db.md](../db.md).
-- **Start:** `/plan-task Task 018 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 018`
 
 ### 019 · Stock pages
 
@@ -549,7 +549,7 @@ Stock detail: quote, the last 8 quarterly results with a trend chart, the last 4
 - **Done when:** the page renders from the stock tables; tests cover the queries in [db.md § Access patterns](../db.md#access-patterns).
 - **Watch for:** no buy, sell or hold wording anywhere ([ADR-0012](../adr/0012-research-not-advice.md)).
 - **Read:** [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [db.md](../db.md).
-- **Start:** `/plan-task Task 019 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 019`
 
 ### 020 · Gemini client and filing summaries
 
@@ -566,7 +566,7 @@ The worker's Gemini client (model from D08, built as D09 says) and its first job
 - **Done when:** tests with a stubbed client cover each prompt; every AI column has its provenance filled; a quota error leaves the filing unsummarised for the next run.
 - **Watch for:** filing text goes into prompts as quoted data, never as instructions, and no user text at all (rules 4 and 5). No tools except search grounding. Gemini quotes numbers but never produces them.
 - **Read:** [ai.md](../ai.md), [ADR-0017](../adr/0017-gemini-for-stocks-claude-for-ipos.md), [db.md § Sizing and retention](../db.md#sizing-and-retention).
-- **Start:** `/plan-task Task 020 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 020`
 
 ### 021 · Stock worker, on request: full analysis
 
@@ -586,7 +586,7 @@ Mode 2 of the worker ([arch.md § 4.2](../arch.md#42-stock-worker-decided)). It 
   - No buy, sell or hold wording.
   - A dispatched workflow only runs once its file is on `main`, so the dispatch path can only be tested end to end after merge. The plan says how it's tested before then.
 - **Read:** [arch.md § 5.3 and § 7.2](../arch.md#53-a-user-asks-for-a-stock-analysis-decided), [db.md § analysis_jobs](../db.md#analysis_jobs), [ADR-0017](../adr/0017-gemini-for-stocks-claude-for-ipos.md).
-- **Start:** `/plan-task Task 021 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 021`
 
 ### 022 · Analysis requests and loading screen
 
@@ -606,7 +606,7 @@ The app side of analysis on request. "Get analysis" runs the one transaction in 
   - Limits come from `settings`.
   - Dispatching needs the worker workflow on `main` (021 merged).
 - **Read:** [arch.md § 5.3](../arch.md#53-a-user-asks-for-a-stock-analysis-decided), [db.md § analysis_requests](../db.md#analysis_requests), [ADR-0017](../adr/0017-gemini-for-stocks-claude-for-ipos.md).
-- **Start:** `/plan-task Task 022 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 022`
 
 ## Week 4: Ask, hardening, launch
 
@@ -625,7 +625,7 @@ A question box on IPO and stock pages, answered by Gemini from the stored card, 
 - **Done when:** tests cover the limit, the "not in the context" answer, quota exhaustion, and that the prompt holds no user identity; each answer carries "not investment advice"; the box says questions go to Google's Gemini API.
 - **Watch for:** context goes in as data; the call has no tools; the provider sits behind one module ([ai.md § Ask](../ai.md#in-app-ai-ask)). Ask history older than 12 months is trimmed.
 - **Read:** [ADR-0014](../adr/0014-gemini-free-api-for-ask.md), [arch.md § 5.4](../arch.md#54-ask-about-an-ipo-or-stock-decided), [db.md § ai_questions](../db.md#ai_questions).
-- **Start:** `/plan-task Task 023 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 023`
 
 ### 024 · Security review and fixes
 
@@ -640,7 +640,7 @@ A question box on IPO and stock pages, answered by Gemini from the stored card, 
 A full pass over user scoping, CSRF, rate limits, secrets, the dispatch token's scope, prompt injection through documents, and user identity in prompts.
 
 - **Done when:** every Blocker and Major finding is fixed and tested; `arch.md § 7.1` matches what's built.
-- **Start:** the human asks Claude for the review, then `/plan-task Task 024 from docs/tasks/ROADMAP.md` with the findings file.
+- **Start:** the human asks Claude for the review, then `/run-task 024` once the findings file is in the repo.
 
 ### 025 · Hosting, environments and backups
 
@@ -656,7 +656,7 @@ Deploy the app to the host from D11, on a production Neon branch, with migration
 
 - **Done when:** the app is live; a routine push shows up in it after the import; `arch.md § 6` and `tech.md` mark hosting as Running.
 - **Read:** [arch.md § 6](../arch.md#6-deployment), [tech.md § Configuration](../tech.md#configuration-and-secrets).
-- **Start:** `/plan-task Task 025 from docs/tasks/ROADMAP.md`
+- **Start:** `/run-task 025`
 
 ### 026 · Submission package
 

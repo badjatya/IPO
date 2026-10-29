@@ -26,3 +26,6 @@ jobs:
       - name: Schema check (guard tests over every saved card and report)
         if: ${{ !cancelled() }}
         run: python3 -m unittest discover -s .claude/hooks
+      - name: DeepSeek driver tests
+        if: ${{ !cancelled() }}
+        run: python3 -m unittest discover -s .claude/deepseek

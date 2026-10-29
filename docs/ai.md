@@ -61,9 +61,10 @@ How Claude gets exactly the context it needs and no more.
 | Validate card and report JSON when they're written (schema, enums, file name vs date and session) | Hook `.claude/hooks/guard.py post-write` | **Running** (2026-10-29; checked against every saved card and report) |
 | Reject GMP, subscription or today/tomorrow text inside cards | Hook `guard.py post-write` | **Running** |
 | Every ₹ figure in an analysis must appear in the RHP text | Verifier script, run by a hook and in CI | **Decided** |
-| Push only to `origin`; no force, mirror or delete pushes | Hook `guard.py pre-bash` (Claude); `git push` denied in `opencode.json` (DeepSeek) | **Running** |
-| DeepSeek can't edit the routine's files, Claude's config or its own permissions | `opencode.json` edit rules | **Running** |
-| The planner agent can't write code: it can only edit `docs/tasks/` | `.opencode/agents/planner.md` | **Running** |
+| Push only to `origin`; no force, mirror or delete pushes | Hook `guard.py pre-bash` (Claude). DeepSeek has no push: its `run` tool allows only read-only git, and the driver commits | **Running** |
+| DeepSeek's file tools refuse the routine's files, Claude's config, `AGENTS.md`, the roadmap, review files and `.env*`; plan steps write only `plan.md` | `.claude/deepseek/deepseek.py`, tests in `test_deepseek.py` | **Running** |
+| After every DeepSeek step, every changed path and commit is checked against the same rules, along with the approved plan and Claude's review text; a step that broke one isn't handed off | `deepseek.py` post-step check | **Running**. The limit: code a task runs through `python3` or `npm` can still touch anything, so this check, Claude's code review and "only the human pushes" are the boundary ([ADR-0021](adr/0021-deepseek-on-openrouter.md)) |
+| The OpenRouter key stays out of DeepSeek's reach: not in its commands' environment, replaced in every tool result before the model or the log sees it, and a step whose changed files contain it is not handed off | `deepseek.py`, tested in `test_deepseek.py` | **Running** |
 | Documents are data, not instructions (prompt-injection defence) | Instruction in the routine and in the worker's prompts; Gemini calls have no tools beyond search grounding | **Decided** |
 | Per-person daily Ask limit (5) and monthly analysis limit (3), the same for every user in phase 1; every analysis request counts; no user identity in any prompt | App code + `settings` table | **Decided** |
 | The stock worker gets no user text; it reads job rows whose symbols were checked against the stocks list | App code + worker | **Decided** |
@@ -120,8 +121,9 @@ Design (**Decided**, [ADR-0014](adr/0014-gemini-free-api-for-ask.md); Gemini mod
 
 | Tool | Used for | Evidence |
 | --- | --- | --- |
-| Claude Code (Opus 5.5) | Until 2026-10-29: writing the agent, renderer, scorecard and docs. From 2026-10-29: reviewing every task's plan and code ([ADR-0019](adr/0019-deepseek-builds-claude-reviews.md)) | Commits with `Co-Authored-By: Claude Opus 5.5`; `plan-review.md` and `code-review.md` in `docs/tasks/` |
-| DeepSeek in opencode | From 2026-10-29: planning and building each task ([ADR-0019](adr/0019-deepseek-builds-claude-reviews.md)) | `plan.md` in `docs/tasks/`; commits with the trailer `AI-Agent: DeepSeek (opencode)` |
+| Claude Code (Opus 5.5) | Until 2026-10-29: writing the agent, renderer, scorecard and docs. From 2026-10-29: reviewing every task's plan and code ([ADR-0019](adr/0019-deepseek-builds-claude-reviews.md)), and running DeepSeek's steps ([ADR-0021](adr/0021-deepseek-on-openrouter.md)) | Commits with `Co-Authored-By: Claude Opus 5.5`; `plan-review.md` and `code-review.md` in `docs/tasks/` |
+| DeepSeek in opencode | 2026-10-29, briefly: planning tasks 001 and 003 ([ADR-0019](adr/0019-deepseek-builds-claude-reviews.md)); often unavailable | Commits with the trailer `AI-Agent: DeepSeek (opencode)` |
+| DeepSeek through OpenRouter (`deepseek/deepseek-v4-flash-0731`) | From 2026-10-29: planning and building each task, run by Claude Code ([ADR-0021](adr/0021-deepseek-on-openrouter.md)) | `plan.md` in `docs/tasks/`; commits with the trailer `AI-Agent: DeepSeek <model> (OpenRouter)`; step logs with cost in `.deepseek-logs/` (local) |
 | Claude Code routine (Sonnet 5.5) | The twice-daily research runs | Commits by `Claude` with `Co-Authored-By: Claude Sonnet 5.5` |
 | Claude web search | Anchor books and news inside the IPO routine | Report and analysis sources |
 | Gemini API (free tier) | In the product: stock analyses, filing summaries, Ask (not used for development) | [ADR-0014](adr/0014-gemini-free-api-for-ask.md), [ADR-0017](adr/0017-gemini-for-stocks-claude-for-ipos.md) |
@@ -129,11 +131,11 @@ Design (**Decided**, [ADR-0014](adr/0014-gemini-free-api-for-ask.md); Gemini mod
 
 ### How we work: two agents and a human
 
-From 2026-10-29 ([ADR-0019](adr/0019-deepseek-builds-claude-reviews.md); workflow in [tasks/README.md](tasks/README.md)):
+From 2026-10-29 ([ADR-0019](adr/0019-deepseek-builds-claude-reviews.md), with DeepSeek through OpenRouter since [ADR-0021](adr/0021-deepseek-on-openrouter.md); workflow in [tasks/README.md](tasks/README.md)). Claude Code runs the loop with `/run-task NNN` and stops for the human:
 
 ```mermaid
 flowchart LR
-    H(["Human<br/>assigns task"]) --> P["DeepSeek (opencode)<br/>plan.md"]
+    H(["Human<br/>assigns task"]) --> P["DeepSeek (OpenRouter)<br/>plan.md"]
     P --> PRClaude Code<br/>plan review
     PR -- "changes requested" --> P
     PR -- "approved" --> B["DeepSeek<br/>builds on task branch"]
@@ -157,14 +159,14 @@ flowchart LR
 | Piece | Status | Purpose |
 | --- | --- | --- |
 | `CLAUDE.md` | **Running** | Project map for Claude Code; kept short because the IPO routine loads it on every run; reviewer steps for development sessions |
-| `AGENTS.md` | **Running** | Project rules for every coding agent; the file opencode loads for DeepSeek |
+| `AGENTS.md` | **Running** | Project rules for every coding agent; the driver puts it in DeepSeek's system prompt |
 | `docs/tasks/` | **Running** | One folder per task: plan, plan review, code review, responses; templates and reviewer guide |
 | `ROUTINE.md` | **Running** | The routine's procedure, templates and rules |
 | `docs/` with status labels and ADRs | **Running** | Shared context for people and agents; every claim traceable |
-| `.claude/skills/`: `review-plan`, `review-code` | **Running** | Claude's reviewer steps as `/review-plan NNN` and `/review-code NNN` |
+| `.claude/skills/`: `run-task`, `review-plan`, `review-code` | **Running** | `/run-task NNN` runs the whole loop; `/review-plan NNN` and `/review-code NNN` are Claude's reviewer steps |
 | `.claude/skills/`: `analyse-ipo`, `anchor-update`, `daily-verdict` | **Running** for development sessions | `ROUTINE.md` steps 2, 2b and 3 for one IPO or session; `ROUTINE.md` stays the source of truth for the scheduled run |
 | `.claude/agents/`: `rhp-analyst`, `verdict-reviewer` | **Running** | Narrow subagents: one drafts an analysis from RHP text and lists where each figure came from; one checks a verdict file against the day's numbers, read-only |
 | `.claude/settings.json` hooks | **Running** | Guardrails above, enforced by the harness instead of by instruction; tests in `.claude/hooks/test_guard.py` |
-| `opencode.json`, `.opencode/agents/planner.md`, `.opencode/commands/` | **Running** | DeepSeek's permissions, planning-only agent, and the commands `/plan-task`, `/revise-plan`, `/build-task`, `/respond-review` |
+| `.claude/deepseek/deepseek.py` | **Running** | Runs DeepSeek through OpenRouter for one step (`plan`, `revise`, `build`, `respond`): tools, write rules, post-step check, status and hand-off commit; tests in `test_deepseek.py`, run in CI |
 | Agent `tests/` | **Running** | Python `unittest` for the agent, saved fixtures only, no network |
 | CI | **Running** for the agent | GitHub Actions (`.github/workflows/ci.yml`): agent tests and the schema check on every push and pull request. App tests against a Neon branch are **Decided** (tasks 006, 007) |

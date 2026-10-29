@@ -330,3 +330,18 @@ One entry per working session: what we asked the AI to do, what it did, what a h
 - **Learned:**
   - A CI that runs on the routine's pushes must never be a required check, or it blocks the routine.
   - Prove a check can fail before calling it Running.
+
+### 2026-10-29 (later): DeepSeek through OpenRouter
+
+- **Human decided:**
+  - Drop opencode, which had been unavailable for all three tasks so far.
+  - Run DeepSeek through OpenRouter (`deepseek/deepseek-v4-flash-0731`), with Claude Code running its steps and reviewing them ([ADR-0021](adr/0021-deepseek-on-openrouter.md)).
+  - The key and the model name went into the gitignored `.env.local`.
+- **AI did:**
+  - Tested two-turn tool calling against the exact model before writing the driver. The model returns `reasoning_details` with its tool calls, and sending the whole message back works.
+  - Wrote `.claude/deepseek/deepseek.py`, standard library only. It has four steps (plan, revise, build, respond) ported from the opencode commands, and gives DeepSeek file tools, a `run` tool with no shell and a `commit` tool.
+  - The driver, not the model, checks and sets the status line and makes the hand-off commit. Each step logs its messages and cost to `.deepseek-logs/`, and has a turn limit and a cost cap.
+  - Wrote 21 tests with a scripted fake model and a throwaway git repo. They run in CI.
+  - Added the `/run-task NNN` skill. It runs the loop and stops for the human on decisions, setup steps, packages to install, a third round without approval, a broken write rule, and `merge-ready`.
+  - Removed `opencode.json` and `.opencode/`. Superseded ADR-0019 with ADR-0021, and updated `AGENTS.md`, `CLAUDE.md`, the task guide, the roadmap and the docs.
+- **Notable finding:** an advisor model pointed out that file-tool rules can't stop code run through `python3 -m unittest`, which can write anywhere. The driver now checks every changed path and commit after each step. It also replaces the API key in every tool result and blocks a step whose files hold it, because such a script could read `.env.local`. The docs describe these checks, Claude's review and "only the human pushes" as the boundary, not the file tools.
