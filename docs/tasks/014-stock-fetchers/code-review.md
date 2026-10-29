@@ -64,3 +64,59 @@ The parsers do what the approved plan says. EBITDA, the lakh-to-crore conversion
 | 9 | **Fixed (nit).** `industry` moved under an "Extras" line in the docstring — it has no db.md column but stays in the record (the test's key set is unchanged). | 906c4db |
 
 Full suite after the fixes: `python3 -m unittest discover -s tests` → 319 tests OK (was 301); stock tests 92 OK (was 74); `.claude/hooks` 19 OK. Output is pasted in plan.md "Verification".
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Changes requested (step 6b only, plus one Minor)
+
+**Diff:** `git diff main...task/014-stock-fetchers` at `a5cc1e4`
+
+**Tests:** run by Claude in the worktree.
+
+```
+$ python3 -m unittest discover -s tests
+Ran 319 tests in 0.564s
+OK
+
+$ python3 -m unittest discover -s tests -p 'test_stock_*.py'
+Ran 92 tests in 0.024s
+OK
+
+$ python3 -m unittest discover -s .claude/hooks
+Ran 19 tests in 0.207s
+OK
+```
+
+**Round 1, checked:** all nine responses verified in the code.
+
+- **Finding 1:** re-run with the round-1 reproduction (a 200 "Access Denied" body for every candidate). Every candidate is now `ok: False` with the error, `quote source` is `None`, and no `quote.json` or `manifest.json` is written.
+- **Finding 2:** the re-check fetches standalone and consolidated in the same run, 5 calls in that reproduction.
+- **Finding 3:** a UTC `since` of `2026-10-29T05:00:00+00:00` now drops the 08:55 IST row.
+- **Finding 4:** `tech.md:62` and the ADR index (0026, Proposed) are updated.
+- **Findings 5–9:** fixed as described.
+
+### The human's probe run (input for 6b)
+
+Run once by the human on 2026-10-30 from the task worktree. It wrote no files (`git status` clean afterwards).
+
+```
+$ python3 -m stock_worker.probe
+candidate            ok         source / error
+stock_page_embedded  False      no embedded quote JSON found in the stock page
+nextapi              False      unprobed: the stock page carries no _next/data URL
+trade_info           False      HTTPError: HTTP Error 403: Forbidden
+cookie_order         False      HTTPError: HTTP Error 403: Forbidden
+quote source: none (see table errors)
+consolidated re-check: identical (the endpoint still returns the standalone body)
+```
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 10 | Major | step 6b (`stock_worker/quote.py`, `docs/data-sources.md`, `docs/arch.md` § 9) | Step 6b isn't built yet, and the approved plan requires it. The probe above found no quote source, so the plan's "nothing answered" path applies. | Build the plan's "nothing answered" path: (a) `fetch_quote` raises `SourceError` pointing at the recorded gap, wired into `fetch_all` so the gap shows in `errors` while the other sources still return records; add tests for both and update the call-count test. (b) The `data-sources.md` quote row records the 2026-10-30 run with each candidate's error, verbatim from the table above. (c) The consolidated row records that the same-run re-check was `identical`, so the gap is confirmed. (d) `arch.md` § 9 keeps quote and consolidated as open. (e) The NextApi candidate is recorded honestly: the probe searched the stock page only for a `_next/data` route and found none, so NSE's `/api/NextApi/…` paths were **not** tried; say so, and leave them as an unprobed candidate for a later task. No `quote.json` fixture is added. Paste the run into the plan's Verification. |
+| 11 | Minor | `stock_worker/util.py` (`to_aware_datetime`), `stock_worker/announcements.py:40` | `since` with a `Z` suffix (`2026-10-29T05:00:00Z`) or fractional seconds (`2026-10-29 05:00:00.123456+00:00`, how a Postgres `timestamptz` often prints) raises `ValueError`, so the whole announcements source fails into `errors`. A `datetime` object works only because its `str()` happens to match. 018 will pass a stored run time. | Accept a timezone-aware `datetime` directly, and parse strings with `datetime.fromisoformat` (Python 3.11+ reads `Z` and fractional seconds), still reading a naive value as +05:30. Add tests for `Z`, fractional seconds and a `datetime` object. |
+
+### Plan and docs
+
+With 6b built as the "nothing answered" path, the plan is complete. No `quote.json` is added and `stock_quotes` stays unfilled. After merge, the roadmap must record that the quote source is still open; see the report to the human.
