@@ -12,8 +12,14 @@ Card schema:
   "verdict": "apply|listing_gains|avoid|neutral|pending", "verdict_text": "Apply",
   "summary": "...", "financials": "...", "quota": "...",
   "positives": ["..."], "red_flags": ["..."],   # facts only: no GMP, subscription or "today"
-  "anchor": "...", "anchor_grade": "strong|average|weak|pending"
+  "anchor": "...", "anchor_grade": "strong|average|weak|pending",
+  # Provenance, stamped on every write (ROUTINE.md "Provenance"); the model ID is the
+  # one your system prompt says you are running as:
+  "ai_model": "claude-sonnet-5-5", "ai_prompt_version": "1",
+  "ai_written_at": "2026-10-29T05:31:02Z"
 }
+Older cards without the provenance fields load and validate unchanged; the guard
+(.claude/hooks/guard.py) checks the fields only when they are present.
 """
 
 import json

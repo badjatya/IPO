@@ -52,6 +52,18 @@ class CardTests(NoNetworkCase):
         self.repo.analysis("acme", "text")
         self.assertTrue(cards.needs_card("acme"))
 
+    def test_card_with_provenance_fields_loads(self):
+        # ROUTINE.md "Provenance": cards carry ai_model, ai_prompt_version and ai_written_at.
+        # load() must accept them, and needs_card must behave exactly as without them.
+        self.repo.card("acme", {"verdict": "apply", "source": "rhp",
+                                "ai_model": "claude-sonnet-5-5", "ai_prompt_version": "1",
+                                "ai_written_at": "2026-10-29T05:31:02Z"})
+        card = cards.load("acme")
+        self.assertEqual(card["ai_model"], "claude-sonnet-5-5")
+        self.assertEqual(card["ai_prompt_version"], "1")
+        self.assertEqual(card["ai_written_at"], "2026-10-29T05:31:02Z")
+        self.assertFalse(cards.needs_card("acme"))
+
 
 if __name__ == "__main__":
     unittest.main()
