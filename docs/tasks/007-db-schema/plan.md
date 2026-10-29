@@ -122,9 +122,48 @@ Both open items from the first draft are now decided; nothing remains open for t
 
 ## Changes during build
 
-Anything built differently from the approved plan, and why.
+1. **`driver: "pg"` omitted from `drizzle.config.ts`.** The installed drizzle-kit (0.31.11) validates `driver` against `d1-http | expo | aws-data-api | pglite | durable-sqlite`; `driver: "pg"` fails. The review's note predicted this. drizzle-kit uses the installed `pg` automatically for a plain Postgres URL, so nothing else changes: migrations still run over `DATABASE_URL_UNPOOLED` via drizzle-kit's `migrate` command.
+2. **`watched_symbols` needed no custom migration.** `pgView` generated `CREATE VIEW "public"."watched_symbols" AS (select distinct "watchlist_items"."symbol" from "watchlist_items")` inside the tables migration, so the plan's "or its own custom migration" branch was never taken. The custom migrations are exactly two: `0000` (citext extension, created before the tables migration so it runs first) and `0002` (the three settled settings seed rows; no cap row).
+3. **CI drift step scoped from the `web` working directory.** The step runs `npx drizzle-kit generate && test -z "$(git status --porcelain db)"` (the `web` job's `defaults.run.working-directory` is `web`, so the pathspec `db` covers `web/db`). `git status --porcelain` catches both modified and untracked files (a new migration), which a plain `git diff` would miss. Verified locally: with the schema untouched the output is empty and `generate` is a no-op; with a probe column added, `generate` created an untracked `0003_*.sql` and the command would fail.
+4. **`imports.started_at` / `finished_at` are nullable.** db.md listed no Null flag for them; the build reads that as nullable (a failed import may lack `finished_at`). Recorded in db.md's `imports` table.
+5. **Bare `numeric` columns pinned to the plan's widths.** db.md wrote `numeric` without precision for `ipo_outcomes.pe`/`size_cr` and `stock_quotes.price`/`change_pct`/`market_cap_cr`/`pe`. The build applies the plan's mapping (money `numeric(12,2)`, ₹ crore `numeric(14,2)`, percentages `numeric(7,2)`, `pe`/times `numeric(10,2)`); db.md's tables now show the exact types.
+6. **The offline Vitest config spells out Vitest's default excludes.** Setting `exclude` replaces Vitest's defaults, so `vitest.config.mts` lists the documented default pattern set plus `tests/db/**` — the plan's "keeping Vitest's default excludes" holds in effect, and the db tests are additionally impossible to run accidentally (separate config, marker guard in `tests/db/setup.ts`).
 
 ## Verification
 
-- **Offline (this build step):** `npm run typecheck`, `npm test` (which now excludes `tests/db/**`), the new offline `web/tests/schema.test.ts` and `web/tests/neon-branch.test.ts`, and `npx drizzle-kit generate` as a no-op. Output pasted here.
-- **Real branch — required before code review:** the build step has no `NEON_API_KEY`, so `npm run test:db` cannot run here. It gets a green run before code review is approved: either the human runs `cd web && npm run test:db` locally with `NEON_API_KEY` set (output pasted here), or the human pushes the branch so the CI `db` job runs it (the run link goes here). Until one of those is green, the Done-when — "migrations build the full schema on an empty Neon branch" — is unproven.
+- **Offline (this build step):** all commands below ran in the task worktree and are pasted from real output.
+
+  ```text
+  $ npm run typecheck            (web/)
+  > tsc --noEmit
+  (exit 0)
+
+  $ npm run lint                 (web/)
+  Found 0 warnings and 0 errors.
+  Finished in 47ms on 24 files with 250 rules using 12 threads.   (exit 0)
+
+  $ npm test                     (web/)
+  Test Files  4 passed (4)   — env-example, neon-branch helpers, layout, schema
+  Tests       21 passed (21)  — tests/db/** excluded, no db test ran
+  (exit 0)
+
+  $ npm run test:db              (web/, no NEON_API_KEY/NEON_PROJECT_ID here)
+  test:db needs NEON_API_KEY and NEON_PROJECT_ID (CI secrets, H06). Refusing to run without
+  them — the db tests must never touch the `dev` branch by accident.
+  (exit 2, as designed)
+
+  $ npx vitest run --config vitest.db.config.mts   (web/, no NEON_TEST_BRANCH_ID)
+  FAIL tests/db/schema-rules.test.ts / tests/db/schema-shape.test.ts
+  Error: NEON_TEST_BRANCH_ID is not set: the database tests only run under `npm run test:db` …
+  (exit 1, as designed: a stray local run can never reach a real branch)
+
+  $ npx drizzle-kit generate     (web/; config loads with no DATABASE_URL_UNPOOLED)
+  No schema changes, nothing to migrate 😴   (second run = no-op; drift check verified
+  with a probe column that made it create an untracked migration)
+
+  $ python3 -m unittest discover -s tests   (repo root)
+  Ran 227 tests in 0.541s
+  OK
+  ```
+
+- **Real branch — required before code review:** the build step has no `NEON_API_KEY`, so `npm run test:db` cannot run here (it refuses, above). It gets a green run before code review is approved: either the human runs `cd web && npm run test:db` locally with `NEON_API_KEY` set (output pasted here), or the human pushes the branch so the CI `db` job runs it (the run link goes here). Until one of those is green, the Done-when — "migrations build the full schema on an empty Neon branch" — is unproven. The `web` job's new schema-drift step also gets its green run on the same push.
