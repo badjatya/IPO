@@ -81,6 +81,50 @@ class AnnouncementsTests(NoNetworkCase):
         records = announcements.parse(rows, since="2026-10-29T03:25:40+00:00")
         self.assertEqual([r["exchange_ref"] for r in records], ["1"])
 
+    def test_since_with_z_suffix(self):
+        # A Postgres timestamptz often prints with a Z
+        # (05:00:00Z == 10:30 IST): the 08:55 IST row drops, 11:12 IST stays.
+        rows = [
+            {"an_dt": "29-Oct-2026 08:55:40", "desc": "old", "seq_id": "1"},
+            {"an_dt": "29-Oct-2026 11:12:00", "desc": "new", "seq_id": "2"},
+        ]
+        records = announcements.parse(rows, since="2026-10-29T05:00:00Z")
+        self.assertEqual([r["exchange_ref"] for r in records], ["2"])
+
+    def test_since_with_fractional_seconds(self):
+        # A Postgres timestamptz string with microseconds (05:00:00.123456Z).
+        rows = [
+            {"an_dt": "29-Oct-2026 08:55:40", "desc": "old", "seq_id": "1"},
+            {"an_dt": "29-Oct-2026 11:12:00", "desc": "new", "seq_id": "2"},
+        ]
+        records = announcements.parse(
+            rows, since="2026-10-29 05:00:00.123456+00:00"
+        )
+        self.assertEqual([r["exchange_ref"] for r in records], ["2"])
+
+    def test_since_as_aware_datetime_object(self):
+        # 018 will pass a stored run time; a datetime object works directly.
+        import datetime as dt
+
+        since = dt.datetime(2026, 10, 29, 5, 0, tzinfo=dt.timezone.utc)
+        rows = [
+            {"an_dt": "29-Oct-2026 08:55:40", "desc": "old", "seq_id": "1"},
+            {"an_dt": "29-Oct-2026 11:12:00", "desc": "new", "seq_id": "2"},
+        ]
+        records = announcements.parse(rows, since=since)
+        self.assertEqual([r["exchange_ref"] for r in records], ["2"])
+
+    def test_naive_datetime_object_since_is_ist(self):
+        import datetime as dt
+
+        since = dt.datetime(2026, 10, 29, 10, 30)  # naive -> +05:30
+        rows = [
+            {"an_dt": "29-Oct-2026 10:00:00", "desc": "x", "seq_id": "1"},
+            {"an_dt": "29-Oct-2026 11:30:00", "desc": "y", "seq_id": "2"},
+        ]
+        records = announcements.parse(rows, since=since)
+        self.assertEqual([r["exchange_ref"] for r in records], ["2"])
+
     def test_naive_since_is_read_as_ist(self):
         rows = [
             {"an_dt": "29-Oct-2026 10:00:00", "desc": "x", "seq_id": "1"},

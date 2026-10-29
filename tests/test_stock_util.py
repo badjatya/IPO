@@ -105,6 +105,25 @@ class AwareDatetimeTests(NoNetworkCase):
         ist = util.to_aware_datetime("2026-10-29T08:55:40+05:30")
         self.assertEqual(utc, ist)  # the same instant, different offsets
 
+    def test_z_suffix_is_read(self):
+        # Postgres timestamptz strings often print with a Z.
+        moment = util.to_aware_datetime("2026-10-29T05:00:00Z")
+        self.assertEqual(moment.utcoffset(), dt.timedelta(0))
+        self.assertEqual(moment.isoformat(), "2026-10-29T05:00:00+00:00")
+
+    def test_fractional_seconds(self):
+        moment = util.to_aware_datetime("2026-10-29 05:00:00.123456+00:00")
+        self.assertEqual(moment.utcoffset(), dt.timedelta(0))
+        self.assertEqual(moment.isoformat(), "2026-10-29T05:00:00.123456+00:00")
+
+    def test_aware_datetime_object_passthrough(self):
+        moment = util.to_aware_datetime("2026-10-29T05:00:00+00:00")
+        self.assertIs(util.to_aware_datetime(moment), moment)
+
+    def test_naive_datetime_object_is_read_as_ist(self):
+        moment = util.to_aware_datetime(dt.datetime(2026, 10, 29, 10, 30))
+        self.assertEqual(moment.isoformat(), "2026-10-29T10:30:00+05:30")
+
     def test_junk_is_none(self):
         self.assertIsNone(util.to_aware_datetime(None))
         self.assertIsNone(util.to_aware_datetime("not-a-timestamp"))

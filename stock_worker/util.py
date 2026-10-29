@@ -144,42 +144,30 @@ IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 
 
 def to_aware_datetime(value):
-    """ISO timestamp or date -> a timezone-aware ``datetime``; junk -> ``None``.
+    """ISO timestamp or date, or a ``datetime`` -> aware ``datetime``; junk -> ``None``.
 
-    A full timestamp keeps its own offset; a naive timestamp is read as NSE's
-    ``+05:30`` (the same assumption ``parse_timestamp`` makes) and a date-only
-    value as midnight ``+05:30`` — the earliest moment that date could carry,
-    needed so a date can be compared against a moment. Impossible dates and
-    junk -> ``None``.
+    A ``datetime`` object is accepted directly: an aware one is returned as-is,
+    a naive one is read as NSE's ``+05:30``. Strings are parsed with
+    ``datetime.fromisoformat``, which (Python 3.11+) also reads the ``Z``
+    suffix and fractional seconds — how a Postgres ``timestamptz`` often
+    prints. A naive timestamp is read as NSE's ``+05:30`` (the same assumption
+    ``parse_timestamp`` makes) and a date-only value as midnight ``+05:30`` —
+    the earliest moment that date could carry, needed so a date can be
+    compared against a moment. Impossible dates and junk -> ``None``.
     """
     if value is None:
         return None
-    text = str(value).strip()
-    match = _ISO_TS_RE.fullmatch(text)
-    if match:
-        year, mon, day, hh, mm, ss, offset = match.groups()
-        try:
-            moment = dt.datetime(
-                int(year), int(mon), int(day), int(hh), int(mm), int(ss or 0)
-            )
-        except ValueError:
-            return None
-        if offset:
-            sign = 1 if offset[0] == "+" else -1
-            oh, om = int(offset[1:3]), int(offset[4:6])
-            tz = dt.timezone(sign * dt.timedelta(hours=oh, minutes=om))
-        else:
-            tz = IST
-        return moment.replace(tzinfo=tz)
-    match = _ISO_DATE_RE.fullmatch(text)
-    if match:
-        year, mon, day = match.groups()
-        try:
-            moment = dt.datetime(int(year), int(mon), int(day))
-        except ValueError:
-            return None
+    if isinstance(value, dt.datetime):
+        if value.tzinfo is None:
+            return value.replace(tzinfo=IST)
+        return value
+    try:
+        moment = dt.datetime.fromisoformat(str(value).strip())
+    except ValueError:
+        return None
+    if moment.tzinfo is None:
         return moment.replace(tzinfo=IST)
-    return None
+    return moment
 
 
 def to_crore(value):
