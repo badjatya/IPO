@@ -51,3 +51,16 @@ Asked on 2026-10-29 with the plan's recommendation first; the human chose:
 - The pledge numbers check out: 21,723,685 / 974,234,554 × 100 = 2.23, and `percPromoterHolding` needs `"    71.97"` stripped.
 - `other_pct ← employeeTrusts` follows data-sources.md's mapping. Fine as is; it isn't a new decision.
 - `period_start` and `audited` aren't db.md columns. Keeping them in the record is fine if the module docstring lists them as extras.
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Approved
+
+**Read:** plan.md (revision 1), round 1 above, `ipo_agent/net.py`, `ipo_agent/nse.py`, the results fixtures (the pinned figures re-checked: 321,400 → 3,214.00; 11,987,700 → 119,877.00; 872,100 → 8,721.00; EBITDA 1,521,300 → 15,213.00).
+
+All seven round-1 items are addressed. The decisions are recorded under "Decisions (settled by the human…)", the EBITDA formula and its test match the human's choice, units are converted in the parser with db.md keys, the filings join takes only the `Non-Consolidated` row, the probe is split 6a/6b with the human running it, NSE is primed once per run, and the `Decimal` printing and rounding are stated.
+
+### Notes
+
+- **Where the prime lives.** Approach § 4 says `ipo_agent/net.py`'s `Client` primes once per client (`_primed`). It doesn't: `Client` only holds the cookie jar, and the `_primed` flag is on the `NSE` wrapper in `ipo_agent/nse.py`. Build to the plan's intent (one shared prime per run, as `nse.py` does) and correct the sentence when you record the build.
+- **The probe must not touch 003's fixtures.** Its consolidated re-check compares bodies and records the outcome; it doesn't overwrite `results_consolidated.json` or any other existing fixture. The only new fixture it writes is `quote.json` and its manifest entry. A test pins this, for example by running the probe against a `FakeClient` in a temporary fixture directory and asserting that only `quote.json` and `manifest.json` change.
