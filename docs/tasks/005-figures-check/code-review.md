@@ -48,3 +48,42 @@ The literal CI command runs, and it exits 0 as the human's report-only decision 
 | --- | --- | --- |
 | 1 | **Fixed.** The guard now skips a bare unit-carrying number only when a non-rupee currency marker (`USD`, `US$`, `$`, `EUR`, `GBP`, optional space) comes right before it, exactly as suggested. Tests added and passing: `check_one("₹77.6 Cr", "of 7,756.07 lakhs")` → found 1, `check_one("₹2,830 Cr", "aggregating up to 28,300.00 million")` → found 1, and `USD`/`US$`/`$`/`EUR`/`GBP` bare numbers still yield no candidate. Reran `--all` on the fix: the totals came out **identical** (54/316, 17%) — the review is right that the old guard dropped rupee amounts (26 bare/prose candidates restored across 5 analyses, e.g. bls's `7,756.07`), but none of the restored candidates coincides with an analysis figure within tolerance, and neither do the two `US$ 5/25 million` candidates the old guard wrongly kept (jio). No per-analysis found/total changed, so the 54/316 quoted in `docs/ai.md` is exactly the fixed run's number (re-checked, not re-quoted out of necessity). The guard is recorded under "Changes during build"; Verification section 3 is the fixed-code rerun | `ba80acb` |
 | 2 | **Fixed.** Both patterns now require no letter right before `Rs.`: `(?<![A-Za-z])Rs\.` in `_FIGURE` and `_CANDIDATE`. Tests added: `extract_figures("lags peers. 30 lakh customers")` yields no figure, and `rhp_candidates("sectors.\n3 and customers.\n  438")` yields no candidate — plus the existing `Rs. 1,119` tests still pass (start-of-string and after a space, where the lookbehind holds). No saved analysis or RHP extract changes as a result (checked by rerunning `--all`, totals identical) | `ba80acb` |
+
+## Round 2 (2026-10-29)
+
+**Verdict:** Approved
+
+**Diff:** `git diff cde9ece..e266b5e` (the fixes), and `git diff main...task/005-figures-check` at `e266b5e` for the whole task
+
+**Tests:** run by Claude from the worktree:
+
+```text
+$ python3 -m unittest discover -s tests
+Ran 224 tests in 1.273s
+OK
+$ python3 -m unittest discover -s .claude/hooks
+OK
+$ python3 -m ipo_agent.figures_check --all; echo "exit $?"
+TOTAL: 54/316 ₹ figures found (17%) across 13 analyses (0 skipped)
+exit 0          (0.54 s)
+```
+
+### Findings
+
+None open.
+
+- **Finding 1 is fixed.** The guard now skips only a number right after `USD`, `US$`, `$`, `EUR` or `GBP`. I checked it directly:
+  - `check_one("₹77.6 Cr", "of 7,756.07 lakhs")` finds 1, and so does `check_one("₹2,830 Cr", "aggregating up to 28,300.00 million")`.
+  - `rhp_candidates("USD 1.00 million")` is empty.
+- **The unchanged total is genuine.** I reran `--all` and got 54/316 again. The candidates the fix restores, for example bls-polymers' 77.56 Cr, coincide with figures that already matched a ₹-prefixed copy of the same number. The ai.md quote is therefore the fixed code's real output. The guard is recorded under "Changes during build".
+- **Finding 2 is fixed.** `(?<![A-Za-z])Rs\.` is in both patterns. `extract_figures("lags peers. 30 lakh")` returns nothing, and both sides are tested.
+- **Responses.** DeepSeek's commits since round 1 change only the code, the tests, plan.md below "Changes during build", and the Responses table. My round 1 text is unchanged.
+
+### Plan and docs
+
+- Built as approved, with every deviation recorded. Labels are honest: the guardrail is Running in CI, and its hook part is Decided until the human applies step 6's diff.
+- **After the merge, on `main`:**
+  - Set the roadmap's 005 entry to Done, with the result: 54/316 (17%) across 13 analyses.
+  - Record the first CI run on `main`.
+  - Add a follow-up task to read RHP table unit headers, so that bare cells under "(₹ million)" or "(₹ in lakhs)" become candidates.
+  - Once the human applies the hook diff and it passes step 6's check, flip the guardrail's hook part to Running.
