@@ -207,20 +207,21 @@ Anything built differently from the approved plan, and why.
 - **`~` counts as an approximate marker too.** The plan names `≈` only ("A figure prefixed `≈` … counts as approximate"). In the wild, computed/estimated figures are marked with both signs — `≈₹2,534 Cr`, `≈ ₹10,765 Cr`, but also `~₹852.2 Cr`, `~₹4,010 Cr`, `~₹10.3 lakh Cr`, `~₹469 Cr`, `~₹475 Cr` (tonbo, jio, hd-fire, m-k-sons, sahanajand). Treating the `~` ones as ordinary figures would flood the missing lists with figures the writer already flagged as estimates, which is exactly what the `≈` rule exists to avoid. The extraction regex accepts `[≈~]` before the `₹`; both are excluded from the share and listed as approximate. Covered by `test_approximate_markers`.
 - **How the `--all` report was produced.** My `run` tool allows only `python3 -m unittest …` and `python3 <script.py in the worktree>`, so the literal CI command `python3 -m ipo_agent.figures_check --all` cannot be executed by me. The report in Verification was produced by a temporary self-deleting script that called the same `figures_check.main(["--all"])` (the module's own `__main__` path); the script removed itself afterwards and the tree is clean. Claude's code review can run the literal command, and the GitHub run after the human pushes is the final proof, as the plan says (step 4).
 - **A trailing comma after a figure is punctuation, not the number.** "At ₹693, P/E …" produced a figure rendered "₹693," in the missing list (the digit regex is greedy over commas). The comma is now stripped from the number (`num.rstrip(",")`) on both the analysis and RHP sides; the count was unaffected. Covered by `test_trailing_comma_is_punctuation`.
+- **The foreign-currency guard was narrowed (code-review round 1, finding 1).** The plan's Approach says bare unit-carrying numbers are candidates ("so '28,300.00 million' still matches without a prefix"). The build implemented that with a "Latin letter + space right before the number" guard meant to exclude "USD 1.00 million" — but that guard was far too wide: it dropped rupee amounts in prose ("of 7,756.07 lakhs", "aggregating up to 28,300.00 million") and, being blind to "$ ", let real foreign currency through (jio's "US$ 5 million" and "US$ 25 million" were candidates). The guard now skips a bare unit-carrying number only when a non-rupee currency marker — `USD`, `US$`, `$`, `EUR` or `GBP`, with optional space — comes right before it. On the saved data the candidate pool changes (26 net) but no found/missing outcome does: none of the restored prose-preceded candidates coincides with an analysis figure within tolerance, nor do the two wrongly-kept US$ ones. The rerun therefore reports the same overall share, 54/316 (17%), which is now the fixed code's true number. Covered by `test_bare_unit_number_after_prose_word_is_a_candidate` and `test_foreign_currency_bare_number_is_not_a_candidate`. Also from that round (finding 2): "Rs." must not follow a letter, or the "rs." at the end of "peers."/"sectors." reads as a prefix — covered by `test_rs_at_word_end_is_no_prefix` and `test_rs_at_word_end_is_no_candidate`.
 - Everything else matches the plan. All 13 repo analyses have cards with `"source": "rhp"`, so the integration run checks all 13 (0 skipped); the plan's example "bls-polymers: 3/15" was illustrative — the real line is 3/20.
 
 ## Verification
 
-Runs below are from the committed tree on `task/005-figures-check` (the build commits are `51bdd93`, `a178953`, `cdf9c2b`, `57fbbb0`). The test suite's stray `usage:` line is `test_no_keys_is_usage_error` exercising argparse's exit 2; unittest does not capture argparse's stderr, so it appears in the output and the test still passes.
+Runs below are from the committed tree on `task/005-figures-check` (the build commits are `51bdd93`, `a178953`, `cdf9c2b`, `57fbbb0`; runs 1–3 were rerun on `ba80acb`, the code-review round-1 fix commit). The test suite's stray `usage:` line is `test_no_keys_is_usage_error` exercising argparse's exit 2; unittest does not capture argparse's stderr, so it appears in the output and the test still passes.
 
 **1. Full agent suite — `python3 -m unittest discover -s tests`**
 
 ```
-................................................................usage: python3 -m unittest [-h] [--all] [--root ROOT] [KEY ...]
+...................................................................usage: python3 -m unittest [-h] [--all] [--root ROOT] [KEY ...]
 python3 -m unittest: error: give one or more IPO keys, or --all
 .............................................................................................................................................................
 ----------------------------------------------------------------------
-Ran 221 tests in 0.651s
+Ran 224 tests in 1.250s
 
 OK
 ```
@@ -230,12 +231,12 @@ OK
 ```
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.238s
+Ran 17 tests in 0.295s
 
 OK
 ```
 
-**3. The figures check over every saved analysis — the CI step's command, `python3 -m ipo_agent.figures_check --all`** (ran through the equivalent `main(["--all"])`, see "Changes during build"):
+**3. The figures check over every saved analysis — the CI step's command, `python3 -m ipo_agent.figures_check --all`** (ran through the equivalent `main(["--all"])`, see "Changes during build"). Rerun on `ba80acb` (the code-review round-1 fix commits):
 
 ```
 bls-polymers: 3/20 ₹ figures found (15%)
@@ -267,4 +268,4 @@ zetwerk: 4/28 ₹ figures found (14%), 4 approximate
 TOTAL: 54/316 ₹ figures found (17%) across 13 analyses (0 skipped)
 ```
 
-Exit code 0 throughout; the run completes even with a 0% key (sahajanand-medical-technologies: 1/32) and a low overall share — that is the point of Option A (report only). The numbers quoted in `docs/ai.md` (13 analyses, 54/316, 17%, 2026-10-29) are exactly this run's. The GitHub `--all` run is recorded after the human pushes the branch, as in task 002; the first run on `main` after the merge is recorded in the roadmap's 005 entry.
+Exit code 0 throughout; the run completes even with a 0% key (sahajanand-medical-technologies: 1/32) and a low overall share — that is the point of Option A (report only). The numbers quoted in `docs/ai.md` (13 analyses, 54/316, 17%, 2026-10-29) are exactly this run's. The overall share is unchanged from the first build run on the buggy guard: the code-review round-1 fixes restored 26 candidates (and removed two wrongly-kept US$ ones) but none of them coincides with an analysis figure within tolerance, so every per-analysis found/total is identical — the guard is now correct by construction (see "Changes during build"). The GitHub `--all` run is recorded after the human pushes the branch, as in task 002; the first run on `main` after the merge is recorded in the roadmap's 005 entry.
