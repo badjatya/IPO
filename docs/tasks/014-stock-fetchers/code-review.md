@@ -127,3 +127,37 @@ With 6b built as the "nothing answered" path, the plan is complete. No `quote.js
 | --- | --- | --- |
 | 10 | **Fixed.** 6b built as the plan's "nothing answered" path. (a) New `stock_worker/quote.py`: `fetch_quote` raises `SourceError` pointing at the recorded gap (probe run 2026-10-30) and makes no call — there is no confirmed endpoint; wired into `fetch_all` as the last source, so every run reports the quote gap in `errors` while the other sources still return records. The call-count test still pins exactly 1 prime + 5 API calls (quote adds none) and now asserts the quote `SourceError`; `plan_calls`/`--dry-run` list quote as "(no call: quote source unconfirmed — see data-sources.md)"; tests cover the raise, that no session state is touched, and that the gap message names the run and each candidate honestly (`tests/test_stock_quote.py`, updated `tests/test_stock_fetchers.py`). (b) `data-sources.md` quote row records the 2026-10-30 run with each candidate's error verbatim, including the `quote source:` and `consolidated re-check:` lines. (c) The consolidated row records the same-run `identical` re-check, confirming the gap. (d) `arch.md` § 9 keeps quote and consolidated as open, and § 4.2 notes the probe ran and found nothing. (e) The NextApi candidate is recorded honestly as **unprobed**: the probe searched only the stock page's HTML for a `_next/data` route and found none, so NSE's `/api/NextApi/…` paths were **not** tried and stay the candidate for a later task. No `quote.json` fixture is added; the run is pasted into plan.md "Verification" and the roadmap note records that the quote source stays open. | 0ac2bb5 (code), 7163a42 (docs) |
 | 11 | **Fixed.** `to_aware_datetime` accepts a timezone-aware `datetime` directly (a naive object read as +05:30) and parses strings with `datetime.fromisoformat` (Python 3.11+), which reads the `Z` suffix and fractional seconds — how a Postgres `timestamptz` prints — while junk still gives `None` (and so still raises `ValueError` in the announcements `since` path). Tests: `Z`, fractional seconds, a `datetime` object and a naive `datetime` object, at both the util and the `since`-filter level. Docstrings updated. | 5944ca7 |
+
+## Round 3 (2026-10-30)
+
+**Verdict:** Approved
+
+**Diff:** `git diff main...task/014-stock-fetchers` at `cfaf616`
+
+**About this round:** the driver stopped DeepSeek's round-2 respond step with exit 3. It had extended one line of the approved plan: the "Roadmap changes … after merge" bullet under Doc updates, adding that the quote source remains open. The human looked at the change and accepted it as is. The step's four commits are reviewed here, and Claude set the status.
+
+**Tests:** run by Claude in the worktree (Python 3.12.4).
+
+```
+$ python3 -m unittest discover -s tests
+Ran 330 tests in 0.538s
+OK
+```
+
+**Round 2, checked:**
+
+- **10, 6b:** `stock_worker/quote.py` raises `SourceError` with the probe's outcome. `fetch_all` makes 6 calls, reports only `quote` in `errors`, and still returns `results`, `announcements`, `shareholding` and `pledges` (checked with a fake client). `data-sources.md` records the 2026-10-30 table verbatim and the same-run `identical` re-check. `arch.md` § 9 keeps quote and consolidated open. NextApi is recorded as unprobed, with `/api/NextApi/…` named as the next candidate. No `quote.json` is added.
+- **11, `since` formats:** checked against the 08:55:40 IST row. `…T05:00:00Z`, `… 05:00:00.123456+00:00`, Postgres's `… 05:00:00+00` and an aware `datetime` all drop it. `…T03:25:40+00:00`, the same moment, keeps it.
+
+### Findings
+
+None open.
+
+### Plan and docs
+
+- **Built as approved:** yes, with every deviation recorded under "Changes during build", including 6b's "nothing answered" path.
+- **Docs and ADR:** `data-sources.md`, `arch.md`, `db.md` and `tech.md` are current; ADR-0026 is Proposed and listed in the index.
+- **Follow-ups for the roadmap:**
+  - **Quote source:** still open, and `stock_quotes` has no source. 018 and 019 need one before stock pages can show a price; the candidate to try is `/api/NextApi/…`.
+  - **Consolidated results:** confirmed absent from `results-comparision`; the `Consolidated` filings' XBRL is the likely source.
+  - **FII/DII:** needs XBRL parsing before 016's `fii_move`/`dii_move` rules can fire.
