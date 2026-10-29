@@ -1,6 +1,6 @@
 {
-  "id": "f5b7c6ae-0d52-499b-824f-b107bcc3fd18",
-  "prevId": "22a7ffd1-6b04-4d8d-b5e7-c93bd2307706",
+  "id": "efe5d6b8-7299-4e0d-ad11-867c28898e7c",
+  "prevId": "bebb7b08-1002-4a09-8bf8-aa40b010b51f",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -1244,14 +1244,14 @@
         "ipo_key": {
           "name": "ipo_key",
           "type": "text",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "taken_at": {
           "name": "taken_at",
           "type": "timestamp with time zone",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "phase": {
           "name": "phase",
@@ -1347,7 +1347,15 @@
           "onDelete": "no action"
         }
       },
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "ipo_snapshots_ipo_key_taken_at_pk": {
+          "name": "ipo_snapshots_ipo_key_taken_at_pk",
+          "columns": [
+            "ipo_key",
+            "taken_at"
+          ]
+        }
+      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
@@ -1360,21 +1368,21 @@
         "ipo_key": {
           "name": "ipo_key",
           "type": "text",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "taken_at": {
           "name": "taken_at",
           "type": "timestamp with time zone",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "category": {
           "name": "category",
           "type": "sub_category",
           "typeSchema": "public",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "shares_offered": {
           "name": "shares_offered",
@@ -1413,7 +1421,16 @@
           "onDelete": "no action"
         }
       },
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "ipo_subscriptions_ipo_key_taken_at_category_pk": {
+          "name": "ipo_subscriptions_ipo_key_taken_at_category_pk",
+          "columns": [
+            "ipo_key",
+            "taken_at",
+            "category"
+          ]
+        }
+      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
@@ -1426,21 +1443,21 @@
         "report_date": {
           "name": "report_date",
           "type": "date",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "session": {
           "name": "session",
           "type": "report_session",
           "typeSchema": "public",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "ipo_key": {
           "name": "ipo_key",
           "type": "text",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "verdict": {
           "name": "verdict",
@@ -1533,7 +1550,16 @@
           "onDelete": "no action"
         }
       },
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "ipo_verdicts_report_date_session_ipo_key_pk": {
+          "name": "ipo_verdicts_report_date_session_ipo_key_pk",
+          "columns": [
+            "report_date",
+            "session",
+            "ipo_key"
+          ]
+        }
+      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
@@ -1736,20 +1762,20 @@
         "symbol": {
           "name": "symbol",
           "type": "text",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "period_end": {
           "name": "period_end",
           "type": "date",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "consolidated": {
           "name": "consolidated",
           "type": "boolean",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "revenue_cr": {
           "name": "revenue_cr",
@@ -1862,7 +1888,16 @@
           "onDelete": "no action"
         }
       },
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "quarterly_results_symbol_period_end_consolidated_pk": {
+          "name": "quarterly_results_symbol_period_end_consolidated_pk",
+          "columns": [
+            "symbol",
+            "period_end",
+            "consolidated"
+          ]
+        }
+      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
@@ -1875,15 +1910,15 @@
         "report_date": {
           "name": "report_date",
           "type": "date",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "session": {
           "name": "session",
           "type": "report_session",
           "typeSchema": "public",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "headline": {
           "name": "headline",
@@ -1943,7 +1978,15 @@
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "reports_report_date_session_pk": {
+          "name": "reports_report_date_session_pk",
+          "columns": [
+            "report_date",
+            "session"
+          ]
+        }
+      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
@@ -2014,14 +2057,14 @@
         "symbol": {
           "name": "symbol",
           "type": "text",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "quarter_end": {
           "name": "quarter_end",
           "type": "date",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "promoter_pct": {
           "name": "promoter_pct",
@@ -2088,7 +2131,15 @@
           "onDelete": "no action"
         }
       },
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "shareholding_symbol_quarter_end_pk": {
+          "name": "shareholding_symbol_quarter_end_pk",
+          "columns": [
+            "symbol",
+            "quarter_end"
+          ]
+        }
+      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
@@ -2423,14 +2474,14 @@
         "user_id": {
           "name": "user_id",
           "type": "uuid",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "symbol": {
           "name": "symbol",
           "type": "text",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "added_at": {
           "name": "added_at",
@@ -2469,7 +2520,15 @@
           "onDelete": "no action"
         }
       },
-      "compositePrimaryKeys": {},
+      "compositePrimaryKeys": {
+        "watchlist_items_user_id_symbol_pk": {
+          "name": "watchlist_items_user_id_symbol_pk",
+          "columns": [
+            "user_id",
+            "symbol"
+          ]
+        }
+      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},

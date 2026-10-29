@@ -13,6 +13,7 @@ import {
   pgEnum,
   pgTable,
   pgView,
+  primaryKey,
   text,
   timestamp,
   uniqueIndex,
@@ -126,10 +127,8 @@ export const ipos = pgTable(
 export const ipoSnapshots = pgTable(
   "ipo_snapshots",
   {
-    ipoKey: text("ipo_key")
-      .primaryKey()
-      .references(() => ipos.key),
-    takenAt: timestamp("taken_at", { withTimezone: true }).primaryKey(),
+    ipoKey: text("ipo_key").references(() => ipos.key),
+    takenAt: timestamp("taken_at", { withTimezone: true }),
     phase: ipoPhase("phase").notNull(),
     gmp: numeric("gmp", { precision: 12, scale: 2 }),
     gmpLow: numeric("gmp_low", { precision: 12, scale: 2 }),
@@ -141,6 +140,7 @@ export const ipoSnapshots = pgTable(
     sourceFile: text("source_file").notNull(),
   },
   (table) => [
+    primaryKey({ columns: [table.ipoKey, table.takenAt] }),
     index("ipo_snapshots_taken_at_index").on(table.ipoKey, desc(table.takenAt)),
   ],
 );
@@ -148,14 +148,15 @@ export const ipoSnapshots = pgTable(
 export const ipoSubscriptions = pgTable(
   "ipo_subscriptions",
   {
-    ipoKey: text("ipo_key").primaryKey(),
-    takenAt: timestamp("taken_at", { withTimezone: true }).primaryKey(),
-    category: subCategory("category").primaryKey(),
+    ipoKey: text("ipo_key"),
+    takenAt: timestamp("taken_at", { withTimezone: true }),
+    category: subCategory("category"),
     sharesOffered: bigint("shares_offered", { mode: "number" }),
     sharesBid: bigint("shares_bid", { mode: "number" }),
     times: numeric("times", { precision: 10, scale: 2 }),
   },
   (table) => [
+    primaryKey({ columns: [table.ipoKey, table.takenAt, table.category] }),
     foreignKey({
       columns: [table.ipoKey, table.takenAt],
       foreignColumns: [ipoSnapshots.ipoKey, ipoSnapshots.takenAt],
@@ -196,26 +197,32 @@ export const ipoAnalyses = pgTable("ipo_analyses", {
   contentSha: text("content_sha").notNull(),
 });
 
-export const reports = pgTable("reports", {
-  reportDate: date("report_date").primaryKey(),
-  session: reportSession("session").primaryKey(),
-  headline: text("headline"),
-  notes: text("notes").array().notNull().default(sql`'{}'`),
-  quiet: boolean("quiet").notNull(),
-  carriedFrom: text("carried_from"),
-  aiModel: text("ai_model"),
-  aiPromptVersion: text("ai_prompt_version"),
-  aiWrittenAt: timestamp("ai_written_at", { withTimezone: true }),
-  commitSha: text("commit_sha"),
-  sourceFile: text("source_file").notNull(),
-});
+export const reports = pgTable(
+  "reports",
+  {
+    reportDate: date("report_date"),
+    session: reportSession("session"),
+    headline: text("headline"),
+    notes: text("notes").array().notNull().default(sql`'{}'`),
+    quiet: boolean("quiet").notNull(),
+    carriedFrom: text("carried_from"),
+    aiModel: text("ai_model"),
+    aiPromptVersion: text("ai_prompt_version"),
+    aiWrittenAt: timestamp("ai_written_at", { withTimezone: true }),
+    commitSha: text("commit_sha"),
+    sourceFile: text("source_file").notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.reportDate, table.session] }),
+  ],
+);
 
 export const ipoVerdicts = pgTable(
   "ipo_verdicts",
   {
-    reportDate: date("report_date").primaryKey(),
-    session: reportSession("session").primaryKey(),
-    ipoKey: text("ipo_key").primaryKey(),
+    reportDate: date("report_date"),
+    session: reportSession("session"),
+    ipoKey: text("ipo_key"),
     verdict: verdict("verdict"),
     verdictText: text("verdict_text"),
     bestCategory: text("best_category"),
@@ -223,6 +230,7 @@ export const ipoVerdicts = pgTable(
     overrides: jsonb("overrides"),
   },
   (table) => [
+    primaryKey({ columns: [table.reportDate, table.session, table.ipoKey] }),
     foreignKey({
       columns: [table.reportDate, table.session],
       foreignColumns: [reports.reportDate, reports.session],
@@ -327,11 +335,9 @@ export const stockQuotes = pgTable("stock_quotes", {
 export const quarterlyResults = pgTable(
   "quarterly_results",
   {
-    symbol: text("symbol")
-      .primaryKey()
-      .references(() => stocks.symbol),
-    periodEnd: date("period_end").primaryKey(),
-    consolidated: boolean("consolidated").primaryKey(),
+    symbol: text("symbol").references(() => stocks.symbol),
+    periodEnd: date("period_end"),
+    consolidated: boolean("consolidated"),
     revenueCr: numeric("revenue_cr", { precision: 14, scale: 2 }),
     otherIncomeCr: numeric("other_income_cr", { precision: 14, scale: 2 }),
     expensesCr: numeric("expenses_cr", { precision: 14, scale: 2 }),
@@ -346,24 +352,29 @@ export const quarterlyResults = pgTable(
     aiWrittenAt: timestamp("ai_written_at", { withTimezone: true }),
   },
   (table) => [
+    primaryKey({ columns: [table.symbol, table.periodEnd, table.consolidated] }),
     index("quarterly_results_symbol_period_end_index").on(table.symbol, desc(table.periodEnd)),
   ],
 );
 
-export const shareholding = pgTable("shareholding", {
-  symbol: text("symbol")
-    .primaryKey()
-    .references(() => stocks.symbol),
-  quarterEnd: date("quarter_end").primaryKey(),
-  promoterPct: numeric("promoter_pct", { precision: 7, scale: 2 }),
-  fiiPct: numeric("fii_pct", { precision: 7, scale: 2 }),
-  diiPct: numeric("dii_pct", { precision: 7, scale: 2 }),
-  publicPct: numeric("public_pct", { precision: 7, scale: 2 }),
-  otherPct: numeric("other_pct", { precision: 7, scale: 2 }),
-  promoterPledgedPct: numeric("promoter_pledged_pct", { precision: 7, scale: 2 }),
-  filedAt: timestamp("filed_at", { withTimezone: true }),
-  sourceUrl: text("source_url"),
-});
+export const shareholding = pgTable(
+  "shareholding",
+  {
+    symbol: text("symbol").references(() => stocks.symbol),
+    quarterEnd: date("quarter_end"),
+    promoterPct: numeric("promoter_pct", { precision: 7, scale: 2 }),
+    fiiPct: numeric("fii_pct", { precision: 7, scale: 2 }),
+    diiPct: numeric("dii_pct", { precision: 7, scale: 2 }),
+    publicPct: numeric("public_pct", { precision: 7, scale: 2 }),
+    otherPct: numeric("other_pct", { precision: 7, scale: 2 }),
+    promoterPledgedPct: numeric("promoter_pledged_pct", { precision: 7, scale: 2 }),
+    filedAt: timestamp("filed_at", { withTimezone: true }),
+    sourceUrl: text("source_url"),
+  },
+  (table) => [
+    primaryKey({ columns: [table.symbol, table.quarterEnd] }),
+  ],
+);
 
 export const announcements = pgTable(
   "announcements",
@@ -424,15 +435,17 @@ export const users = pgTable("users", {
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
-export const watchlistItems = pgTable("watchlist_items", {
-  userId: uuid("user_id")
-    .primaryKey()
-    .references(() => users.id, { onDelete: "cascade" }),
-  symbol: text("symbol")
-    .primaryKey()
-    .references(() => stocks.symbol),
-  addedAt: timestamp("added_at", { withTimezone: true }).notNull().defaultNow(),
-});
+export const watchlistItems = pgTable(
+  "watchlist_items",
+  {
+    userId: uuid("user_id").references(() => users.id, { onDelete: "cascade" }),
+    symbol: text("symbol").references(() => stocks.symbol),
+    addedAt: timestamp("added_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.userId, table.symbol] }),
+  ],
+);
 
 export const aiQuestions = pgTable(
   "ai_questions",

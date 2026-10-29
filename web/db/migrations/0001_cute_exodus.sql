@@ -158,8 +158,8 @@ CREATE TABLE "ipo_outcomes" (
 );
 --> statement-breakpoint
 CREATE TABLE "ipo_snapshots" (
-	"ipo_key" text PRIMARY KEY NOT NULL,
-	"taken_at" timestamp with time zone PRIMARY KEY NOT NULL,
+	"ipo_key" text,
+	"taken_at" timestamp with time zone,
 	"phase" "ipo_phase" NOT NULL,
 	"gmp" numeric(12, 2),
 	"gmp_low" numeric(12, 2),
@@ -168,27 +168,30 @@ CREATE TABLE "ipo_snapshots" (
 	"gmp_updated" text,
 	"pe" numeric(10, 2),
 	"allotment" jsonb,
-	"source_file" text NOT NULL
+	"source_file" text NOT NULL,
+	CONSTRAINT "ipo_snapshots_ipo_key_taken_at_pk" PRIMARY KEY("ipo_key","taken_at")
 );
 --> statement-breakpoint
 CREATE TABLE "ipo_subscriptions" (
-	"ipo_key" text PRIMARY KEY NOT NULL,
-	"taken_at" timestamp with time zone PRIMARY KEY NOT NULL,
-	"category" "sub_category" PRIMARY KEY NOT NULL,
+	"ipo_key" text,
+	"taken_at" timestamp with time zone,
+	"category" "sub_category",
 	"shares_offered" bigint,
 	"shares_bid" bigint,
-	"times" numeric(10, 2)
+	"times" numeric(10, 2),
+	CONSTRAINT "ipo_subscriptions_ipo_key_taken_at_category_pk" PRIMARY KEY("ipo_key","taken_at","category")
 );
 --> statement-breakpoint
 CREATE TABLE "ipo_verdicts" (
-	"report_date" date PRIMARY KEY NOT NULL,
-	"session" "report_session" PRIMARY KEY NOT NULL,
-	"ipo_key" text PRIMARY KEY NOT NULL,
+	"report_date" date,
+	"session" "report_session",
+	"ipo_key" text,
 	"verdict" "verdict",
 	"verdict_text" text,
 	"best_category" text,
 	"category_note" text,
-	"overrides" jsonb
+	"overrides" jsonb,
+	CONSTRAINT "ipo_verdicts_report_date_session_ipo_key_pk" PRIMARY KEY("report_date","session","ipo_key")
 );
 --> statement-breakpoint
 CREATE TABLE "ipos" (
@@ -216,9 +219,9 @@ CREATE TABLE "ipos" (
 );
 --> statement-breakpoint
 CREATE TABLE "quarterly_results" (
-	"symbol" text PRIMARY KEY NOT NULL,
-	"period_end" date PRIMARY KEY NOT NULL,
-	"consolidated" boolean PRIMARY KEY NOT NULL,
+	"symbol" text,
+	"period_end" date,
+	"consolidated" boolean,
 	"revenue_cr" numeric(14, 2),
 	"other_income_cr" numeric(14, 2),
 	"expenses_cr" numeric(14, 2),
@@ -230,12 +233,13 @@ CREATE TABLE "quarterly_results" (
 	"ai_summary" text,
 	"ai_model" text,
 	"ai_prompt_version" text,
-	"ai_written_at" timestamp with time zone
+	"ai_written_at" timestamp with time zone,
+	CONSTRAINT "quarterly_results_symbol_period_end_consolidated_pk" PRIMARY KEY("symbol","period_end","consolidated")
 );
 --> statement-breakpoint
 CREATE TABLE "reports" (
-	"report_date" date PRIMARY KEY NOT NULL,
-	"session" "report_session" PRIMARY KEY NOT NULL,
+	"report_date" date,
+	"session" "report_session",
 	"headline" text,
 	"notes" text[] DEFAULT '{}' NOT NULL,
 	"quiet" boolean NOT NULL,
@@ -244,7 +248,8 @@ CREATE TABLE "reports" (
 	"ai_prompt_version" text,
 	"ai_written_at" timestamp with time zone,
 	"commit_sha" text,
-	"source_file" text NOT NULL
+	"source_file" text NOT NULL,
+	CONSTRAINT "reports_report_date_session_pk" PRIMARY KEY("report_date","session")
 );
 --> statement-breakpoint
 CREATE TABLE "settings" (
@@ -256,8 +261,8 @@ CREATE TABLE "settings" (
 );
 --> statement-breakpoint
 CREATE TABLE "shareholding" (
-	"symbol" text PRIMARY KEY NOT NULL,
-	"quarter_end" date PRIMARY KEY NOT NULL,
+	"symbol" text,
+	"quarter_end" date,
 	"promoter_pct" numeric(7, 2),
 	"fii_pct" numeric(7, 2),
 	"dii_pct" numeric(7, 2),
@@ -265,7 +270,8 @@ CREATE TABLE "shareholding" (
 	"other_pct" numeric(7, 2),
 	"promoter_pledged_pct" numeric(7, 2),
 	"filed_at" timestamp with time zone,
-	"source_url" text
+	"source_url" text,
+	CONSTRAINT "shareholding_symbol_quarter_end_pk" PRIMARY KEY("symbol","quarter_end")
 );
 --> statement-breakpoint
 CREATE TABLE "stock_analyses" (
@@ -315,9 +321,10 @@ CREATE TABLE "users" (
 );
 --> statement-breakpoint
 CREATE TABLE "watchlist_items" (
-	"user_id" uuid PRIMARY KEY NOT NULL,
-	"symbol" text PRIMARY KEY NOT NULL,
-	"added_at" timestamp with time zone DEFAULT now() NOT NULL
+	"user_id" uuid,
+	"symbol" text,
+	"added_at" timestamp with time zone DEFAULT now() NOT NULL,
+	CONSTRAINT "watchlist_items_user_id_symbol_pk" PRIMARY KEY("user_id","symbol")
 );
 --> statement-breakpoint
 ALTER TABLE "ai_questions" ADD CONSTRAINT "ai_questions_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
