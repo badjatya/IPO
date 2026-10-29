@@ -63,3 +63,67 @@ Checked against the installed packages: `better-auth@1.7.14` (`dist/utils/url.mj
 | 6 | Fixed. tech.md keeps both the At-a-glance Account email row and the Infrastructure Resend row **Decided**, each saying the account and verified domain (H07) aren't done and the first real invite is a manual check after 010 merges | 6796cfc |
 | 7 | Fixed. `assertMailConfig` (and the production check in `sendAccountEmail`) now throws `MailNotConfiguredError`; the invite route's 500 branch matches it with `instanceof` instead of the message text | f38068a |
 | 8 | Fixed. The comment now says `generateId: "uuid"` makes Better Auth generate its own ids, as UUIDs, with the database defaults only a fallback for rows the app inserts itself | 6796cfc |
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff main...task/010-accounts` at `61d85fe`
+
+**Tests:** offline, run by Claude in `.worktrees/010-accounts/web`:
+
+```
+$ npm run typecheck        → tsc --noEmit, exit 0
+$ npm run lint             → oxlint --deny-warnings, clean
+$ npx vitest run
+ Test Files  16 passed (16)
+      Tests  96 passed (96)
+```
+
+Neon branch suite: Claude pushed `task/010-accounts` (the human was away) to run CI. In [run 40957096331](https://github.com/badjatya/IPO/actions/runs/40957096331), `tests` and `web` passed and **`db` failed**:
+
+```
+ ✓ tests/db/schema-shape.test.ts (9 tests) 3063ms
+ ✓ tests/db/schema-rules.test.ts (8 tests) 8249ms
+ ❯ tests/db/auth.test.ts (14 tests | 11 failed) 16153ms
+     ✓ refuses public sign-up 1632ms
+     ✓ forgot-password on an unknown address answers the same and mails nothing 1586ms
+     × first admin: the script upserts the admin, and the app boots it with a password and an admin session 5004ms
+     × admin invite: new user created, invite wording, token works once, session role is user 3ms
+     × the emailed link works as sent: GET /api/auth/reset-password/<token> redirects to the form page (code review round 1 finding 4) 5ms
+     × inviting an existing address changes no row, voids the old link, sends a working fresh one 225ms
+     × re-inviting sends a fresh link and voids the previous one 1ms
+     × refuses an expired token 1ms
+     × a password reset revokes sessions minted before it (round 2 item 5) 1ms
+     × role check: a signed-in user's invite is refused, the admin's succeeds (guards are layered) 774ms
+     × scoping: each session token resolves only to its own user 452ms
+     × refuses a forged-Origin sign-in POST (Better Auth's origin check) 1240ms
+     ✓ refuses a cross-origin invite POST even with an admin session (the route's own check) 225ms
+     × rate limits sign-ins: enough failures in the window → the next is refused (429) 5001ms
+ FAIL  … first admin: … Error: Test timed out in 5000ms.
+ FAIL  … admin invite: … AssertionError: expected '' not to be ''   (tests/db/auth.test.ts:164)
+ FAIL  … rate limits sign-ins … Error: Test timed out in 5000ms.
+      Tests  11 failed | 20 passed (31)
+```
+
+Also on this branch: Claude applied round 1 finding 5 in `61d85fe` (`AUTH_URL` with its comment in `web/.env.example`), as that finding directed. The offline suite is green now.
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 1 | Blocker | `web/vitest.db.config.mts:12` | The Neon auth suite is red in CI because of vitest's default 5 s `testTimeout`. Each Better Auth call from the runner to the `ap-southeast-1` branch takes about 1 s (password hashing plus round trips; the passing tests take 1.2–1.6 s for one or two calls). The first-admin test runs `spawnSync("node", …)` plus about eight handler calls, so it hits 5004 ms before it sets `adminCookie`. Nine later tests then fail on the empty cookie or a 401 (`auth.test.ts:164` and onwards). The rate-limit test needs up to ten failed sign-ins of about 1 s each, so it also stops at 5001 ms before any 429. None of the round-1 fixes that need the database (findings 1 and 4) has been shown to work yet | Set `testTimeout: 60_000` and `hookTimeout: 60_000` in `vitest.db.config.mts`'s `test` block, with a comment saying why: real-branch calls take about 1 s each, and `spawnSync` blocks the event loop. Don't raise the default in `vitest.config.mts`; the offline suite stays fast. Leave the tests' assertions as they are. If a test still fails once it has the time, that's a real bug: fix the code, not the assertion |
+
+### Plan and docs
+
+- **Round 1 fixes:** findings 1–4 and 6–8 are fixed as suggested, and the code matches the responses:
+  - `runUpsert` calls `client.query(text, values)`;
+  - `getSessionCookie` is used in the proxy, tested with both cookie names through the real `proxy()`;
+  - `safeNextPath` covers the four cases, and the sign-in page uses it;
+  - the `[token]` page is gone, and `/reset-password` handles `?error=INVALID_TOKEN`;
+  - the Neon test follows the emailed link;
+  - tech.md keeps Resend **Decided**;
+  - `MailNotConfiguredError` is matched with `instanceof`;
+  - the comment is fixed.
+- **Record:** "Changes during build" 1 now describes the link correctly. The driver's commits didn't touch round 1's text or the approved plan's body.
+- **Before round 3:** after the response, Claude pushes the branch again so the `db` job reruns. Round 3 approves only when that job is green.
