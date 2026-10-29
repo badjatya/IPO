@@ -106,6 +106,29 @@ class HookProcessTests(unittest.TestCase):
             self.assertEqual(r.returncode, 2)
             self.assertIn("today", r.stderr)
 
+    def analysis_hook(self, analysis, rhp="Issue of ₹ 7,756.07 lakhs", source="rhp"):
+        with tempfile.TemporaryDirectory() as tmp:
+            md = Path(tmp, "analysis", "x.md")
+            (md.parent / "rhp").mkdir(parents=True)
+            md.write_text(analysis)
+            (md.parent / "rhp" / "x.txt").write_text(rhp)
+            (md.parent / "x.json").write_text(json.dumps({"source": source}))
+            return run_hook("post-write", {"tool_input": {"file_path": str(md)}}, project_dir=tmp)
+
+    def test_analysis_reports_missing_figures_without_blocking(self):
+        r = self.analysis_hook("Issue ₹77.6 Cr; PAT ₹27.0 Cr")
+        self.assertEqual(r.returncode, 0)
+        report = json.loads(r.stdout)["hookSpecificOutput"]
+        self.assertEqual(report["hookEventName"], "PostToolUse")
+        self.assertIn("1/2 ₹ figures found", report["additionalContext"])
+        self.assertIn("₹27.0 Cr", report["additionalContext"])
+        self.assertNotIn("₹77.6 Cr", report["additionalContext"])
+
+    def test_analysis_fully_found_or_skipped_is_quiet(self):
+        for r in (self.analysis_hook("Issue ₹77.6 Cr"),
+                  self.analysis_hook("PAT ₹27.0 Cr", source="web")):
+            self.assertEqual((r.returncode, r.stdout), (0, ""))
+
     def test_file_outside_project_is_ignored(self):
         r = run_hook("post-write", {"tool_input": {"file_path": "/etc/hostname"}})
         self.assertEqual(r.returncode, 0)

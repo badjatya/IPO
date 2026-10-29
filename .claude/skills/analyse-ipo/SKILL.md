@@ -11,6 +11,6 @@ argument-hint: <IPO key, e.g. zetwerk>
 1. **Find the IPO.** Look up `$ARGUMENTS` in `data/latest.json` for its `rhp_url`. If there's no RHP yet, stop: the card stays a web stub.
 2. **Extract the RHP** if `analysis/rhp/$ARGUMENTS.txt` is missing: `python3 -m ipo_agent.rhp "<rhp_url>" --out analysis/rhp/$ARGUMENTS.txt`. Read the extracted text in full, never the PDF.
 3. **Research the deep parts.** Delegate the RHP reading and drafting to the `rhp-analyst` subagent, giving it the key and the text path. It returns the draft of `analysis/$ARGUMENTS.md`, written to the ROUTINE.md template.
-4. **Check before saving.** Every ₹ figure in the draft must appear in the RHP text. Anything not found becomes "not found". The quota split comes only from the RHP's "Offer structure".
+4. **Check before saving.** Every ₹ figure in the draft must appear in the RHP text. Anything not found becomes "not found". Run `python3 -m ipo_agent.figures_check <key>`; it lists every ₹ figure not found in the RHP text, and the hook shows the same list when the analysis is saved. The quota split comes only from the RHP's "Offer structure".
 5. **Write the card** `analysis/$ARGUMENTS.json` from the analysis, with `"source": "rhp"`. Facts only: no GMP, no subscription, no today or tomorrow. The `post-write` hook rejects a card that breaks the schema or uses those words; fix whatever it reports.
 6. **Show the human** the verdict and what changed, before anything is committed.
