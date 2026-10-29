@@ -133,3 +133,48 @@ Also on this branch: Claude applied round 1 finding 5 in `61d85fe` (`AUTH_URL` w
 | # | Response | Commit |
 | --- | --- | --- |
 | 1 | Fixed. `testTimeout: 60_000` and `hookTimeout: 60_000` added to the `test` block of `web/vitest.db.config.mts`, with a comment recording why: each Better Auth call to the real branch takes about 1 s, the first-admin test's `spawnSync` blocks the event loop (its 5004 ms timeout was the first failure CI showed), and the rate-limit test needs up to ten ~1 s failed sign-ins before the 429. `vitest.config.mts` keeps Vitest's default and the offline suite stays fast; no test assertion changed. Offline checks re-run on the branch: typecheck, lint and `npm test` all green (16/16 files, 96/96 tests). The Neon suite itself still only runs in CI — the branch needs a push for the `db` job to rerun | 6029a4b |
+
+## Round 3 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff main...task/010-accounts` at `43f2ae8`
+
+**Tests:** the round-2 fix (`6029a4b`, 60 s timeouts in `vitest.db.config.mts`) is right and is the only code change. Offline, unchanged from round 2: typecheck, lint, and vitest 16/16 files, 96/96 tests. Claude pushed the branch again. In CI [run 40957678294](https://github.com/badjatya/IPO/actions/runs/40957678294), `tests` and `web` passed and `db` failed, with 2 failures left:
+
+```
+ ✓ tests/db/schema-shape.test.ts (9 tests) 2716ms
+ ✓ tests/db/schema-rules.test.ts (8 tests) 7318ms
+ ❯ tests/db/auth.test.ts (14 tests | 2 failed) 66422ms
+     ✓ first admin: … 8149ms
+     ✓ admin invite: … 7924ms
+     ✓ the emailed link works as sent: … 4192ms
+     ✓ inviting an existing address … 7850ms
+     ✓ re-inviting … 7643ms
+     ✓ refuses an expired token 3408ms
+     ✓ a password reset revokes sessions minted before it 13424ms
+     ✓ role check: … 3249ms
+     × scoping: each session token resolves only to its own user 3266ms
+     × refuses a forged-Origin sign-in POST (Better Auth's origin check) 1055ms
+     ✓ refuses a cross-origin invite POST even with an admin session 215ms
+     ✓ rate limits sign-ins: … 3167ms
+ FAIL … scoping … TypeError: Cannot read properties of null (reading 'user')   ❯ tests/db/auth.test.ts:338:54
+ FAIL … forged-Origin … AssertionError: expected 200 to be 403                ❯ tests/db/auth.test.ts:350:22
+      Tests  2 failed | 29 passed (31)
+```
+
+The first-admin script (round 1 finding 1) and the emailed link (round 1 finding 4) now pass on a real branch.
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 1 | Blocker | `web/tests/db/setup.ts`; `web/scripts/neon-branch.mjs:194` | **The Neon suite never runs Better Auth's origin or CSRF check, so the forged-Origin test fails (200).** Vitest sets `process.env.TEST = "true"` in every worker (`vitest/dist/chunks/index.*.js`: `TEST: "true", VITEST: "true"`). In 1.7.14, `isTest()` is `nodeENV === "test" \|\| toBoolean(env.TEST)` (`@better-auth/core/dist/env/env-impl.mjs:36`), and `create-context.mjs:211` sets `skipOriginCheck: isTest() ? true : false` when `advanced.disableOriginCheck` isn't set. With `skipOriginCheck === true`, `validateOrigin` returns early for the origin check and the CSRF check alike. The harness's `NODE_ENV=development` fixes only half of `isTest()`, and the round-1 review missed the `TEST` half too. Production is unaffected, because `TEST` isn't set there. But the suite's claim to cover "Better Auth's origin check" (Done-when: CSRF protection) is false, and the test fails | In `tests/db/setup.ts`, before anything builds the auth instance, `delete process.env.TEST`, with a comment citing the two lines above. Keep `NODE_ENV=development` in the harness. Then add an assertion that the check is really on, e.g. `expect((await getAuth().$context).skipOriginCheck).toBe(false)` (or whatever 1.7.14 exposes for it). Expect fallout: with the check on, any **POST that carries a cookie and no `Origin`** gets 403 `MISSING_OR_NULL_ORIGIN`. Make the `api()` helper send `origin: BASE` by default on POSTs, as a browser does, and let a test override it. Don't set `advanced.disableOriginCheck` in `lib/auth.ts` to make tests pass |
+| 2 | Major | `web/tests/db/auth.test.ts:336-339` | **The scoping test builds cookies Better Auth can't read.** It sends `better-auth.session_token=<session.token>` straight from the `session` table. Better Auth's session cookie is **signed** (`<token>.<HMAC signature>`, URL-encoded), so an unsigned token resolves to no session, `get-session` returns `null`, and `.user` throws. The test fails on its own construction, so it says nothing about scoping | Check scoping from the cookies Better Auth issued instead: take the token part (before the first `.`, after `decodeURIComponent`) of `adminCookie` and of the user's sign-in cookie. Assert that each token's `session` row has its own user's `user_id`, that the two differ, and that each cookie's `get-session` returns its own email (that part already passes). Don't hand-roll the signature |
+
+### Plan and docs
+
+- **Round 2:** fixed as asked, and no assertions changed. `vitest.config.mts` keeps the default.
+- **Record:** "Changes during build" 2 records that Claude applied `.env.example`, and the Verification section is updated. Earlier rounds are untouched.
+- **Loop count:** this is the third code-review round without approval. The human asked overnight for 010 to be finished and merged, both findings are in the test harness, failures went from 11 to 2, and the respond steps cost under a cent. So Claude is running one more respond step instead of stopping here, and records that for the human.
+- **Before round 4:** Claude pushes the branch again, and round 4 approves only when the `db` job is green.
