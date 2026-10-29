@@ -1,0 +1,30 @@
+{
+  "comNameList": [
+    "Adani Enterprises Limited"
+  ],
+  "data": [
+    {
+      "broadcastDt": "29-Oct-2026 16:30:25",
+      "comName": "Adani Enterprises Limited",
+      "compBroadcastDate": "31-12-2018",
+      "disclosureFromDate": null,
+      "disclosureToDate": null,
+      "nbfcNonPromoShare": "0",
+      "nbfcPromoShare": "0",
+      "noOfPledgeShare": "2235.618",
+      "noOfSecPledgeShare": "6307.255",
+      "numSharesPledged": "21723685",
+      "percPromoterHolding": "    71.97",
+      "percPromoterShares": "     0.79",
+      "percSharesPledged": "1.61",
+      "percTotShares": "     0.57",
+      "sharesCollateral": "0",
+      "shp": "30-Sep-2026",
+      "totDematShares": "1353182590",
+      "totIssuedShares": "1353722600",
+      "totPromoterHolding": "974234554",
+      "totPromoterShares": "7700000",
+      "totPublicHolding": "379488046"
+    }
+  ]
+}
