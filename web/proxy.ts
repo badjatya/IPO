@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getSessionCookie } from "better-auth/cookies";
 
 // Next 16.4's middleware replacement (web/proxy.ts, runs on Node, review item
 // 9). This is deliberately only a fast cookie check — pages and API routes
 // carry the authoritative session-and-role checks (admin layout + requireAdmin),
 // so a middleware bypass (CVE-2025-29927 class) never exposes the admin
 // surface.
-
-// Better Auth's default session cookie name; the app sets no cookiePrefix.
-export const SESSION_COOKIE = "better-auth.session_token";
 
 export type ProxyDecision = "allow" | "redirect" | "unauthorized";
 
@@ -18,7 +16,12 @@ export function proxyDecision(pathname: string, hasSessionCookie: boolean): Prox
 }
 
 export default function proxy(request: NextRequest) {
-  const decision = proxyDecision(request.nextUrl.pathname, request.cookies.has(SESSION_COOKIE));
+  // Better Auth's own session-cookie getter, not a hard-coded name (code
+  // review round 1 finding 2): with a real https AUTH_URL the cookie is
+  // `__Secure-better-auth.session_token`, while local runs see the plain name.
+  // getSessionCookie checks both, so the proxy matches whatever the auth
+  // routes actually set.
+  const decision = proxyDecision(request.nextUrl.pathname, getSessionCookie(request) !== null);
   if (decision === "allow") return NextResponse.next();
   if (decision === "unauthorized") {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
