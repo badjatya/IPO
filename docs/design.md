@@ -12,7 +12,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 
 | Principle | What it means on a page | Status |
 | --- | --- | --- |
-| Research, not advice | The footer says "Research, not investment advice." on every page; it lives in `web/app/layout.tsx`, not in page code. IPO verdicts are labelled as research. Stock pages never say buy, sell or hold ([ADR-0012](adr/0012-research-not-advice.md)) | Running (footer); Decided (wording) |
+| Research, not advice | The footer says "Research, not investment advice." on every page; `web/components/site-footer.tsx` renders the text from `web/lib/site.ts`, and `web/app/layout.tsx` places it, not page code. A test checks the layout renders it. IPO verdicts are labelled as research. Stock pages never say buy, sell or hold ([ADR-0012](adr/0012-research-not-advice.md)) | Running (footer); Decided (wording) |
 | Every number has a source and a time | A block of figures shows where they came from and "as of HH:MM IST", as the email does. GMP is marked unofficial | Decided ([arch.md § 7.2](arch.md#72-failure-handling): the app shows the "as of" time); Proposed (per block) |
 | Numbers are exact | The page shows the stored figure. It never rounds a figure into a different claim, and never computes one the research didn't produce | Decided ([ADR-0001](adr/0001-python-for-exact-work-claude-for-judgement.md)) |
 | Same words as the email | Verdicts, phases, trends and grades use the email's labels (below), so the brief and the app read as one product | Proposed |
@@ -85,7 +85,7 @@ Format numbers in one shared module (to be added with the first page that shows 
 | Page shell | `body` is a full-height column; content above, disclaimer footer at the bottom | Running |
 | Content width | `max-w-5xl`, centred, `px-4` side gutter | Running (home page) |
 | Mobile | Works at 360 px wide with no sideways page scroll; wide tables scroll inside their own container | Proposed |
-| Navigation | Header with the modules a user can reach: IPOs, Track record, Watchlist; Admin only for admins. Product name is a placeholder until D13 | Proposed |
+| Navigation | Header with the modules a user can reach: IPOs, Track record, Watchlist; Admin only for admins. Product name is a placeholder until D13, in `PRODUCT_NAME` (`web/lib/site.ts`), used for the page title and the home heading | Proposed (header); Running (placeholder) |
 | Page header | Title, then the "as of" line and source, then the main call | Proposed |
 
 ## Page elements → components

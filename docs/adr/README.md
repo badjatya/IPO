@@ -27,6 +27,9 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0019](0019-deepseek-builds-claude-reviews.md) | DeepSeek plans and builds; Claude reviews the plan and the code | 2026-10-29 | Superseded by 0021 |
 | [0020](0020-shadcn-ui.md) | shadcn/ui and Tailwind CSS for the web app | 2026-10-29 | Accepted |
 | [0021](0021-deepseek-on-openrouter.md) | DeepSeek runs through OpenRouter, driven by Claude Code | 2026-10-29 | Accepted |
+| [0022](0022-web-app-in-same-repo.md) | The web app lives in this repo, in `web/` | 2026-10-29 | Accepted |
+| [0023](0023-typescript-strict.md) | TypeScript in strict mode for the web app | 2026-10-29 | Accepted |
+| [0024](0024-vitest-for-app-tests.md) | Vitest and Testing Library for the web app's tests | 2026-10-29 | Accepted |
 
 ## Adding one
 
@@ -36,4 +39,4 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 4. Add a row above, and update [arch.md § Decisions](../arch.md#8-decisions) in the same commit.
 5. Never edit an accepted decision's outcome. Supersede it with a new ADR and set the old one's status to "Superseded by ADR-NNNN".
 
-Still to decide, each to become an ADR: ORM and migrations, auth library, charts, host, same repo or separate repo for the app.
+Still to decide, each to become an ADR: ORM and migrations, auth library, charts, host.
