@@ -1,6 +1,6 @@
 ---
 task: 014-stock-fetchers
-status: code-review
+status: code-changes
 branch: task/014-stock-fetchers
 assigned_by: Vijay
 planner: DeepSeek deepseek-v4-flash-0731 (OpenRouter)
