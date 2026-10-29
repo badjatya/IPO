@@ -128,16 +128,17 @@ class CallTests(NoNetworkCase):
 
 class ListingPricesTests(NoNetworkCase):
     def row(self, date, series="EQ", open_=110):
-        return {"mTIMESTAMP": date, "CH_SERIES": series, "CH_PREVIOUS_CLS_PRICE": "90",
-                "CH_OPENING_PRICE": str(open_), "CH_CLOSING_PRICE": "120",
-                "CH_TRADE_HIGH_PRICE": "130", "CH_TRADE_LOW_PRICE": "100"}
+        # NSE sends prices as numbers: every "price_source": "nse" row in data/outcomes.json is numeric.
+        return {"mTIMESTAMP": date, "CH_SERIES": series, "CH_PREVIOUS_CLS_PRICE": 90,
+                "CH_OPENING_PRICE": open_, "CH_CLOSING_PRICE": 120,
+                "CH_TRADE_HIGH_PRICE": 130, "CH_TRADE_LOW_PRICE": 100}
 
     def test_picks_the_first_mainboard_row(self):
         nse = FakeNSE({"data": [self.row("22-Oct-2026", open_=115), self.row("21-Oct-2026", open_=110)]})
         result = outcomes.listing_prices(nse, "ACME", "2026-10-21")
         self.assertEqual(result["listed_on"], "2026-10-21")
-        self.assertEqual(result["listing"], "110")
-        self.assertEqual(result["issue"], "90")
+        self.assertEqual(result["listing"], 110)
+        self.assertEqual(result["issue"], 90)
         self.assertEqual(result["source"], "nse")
 
     def test_filters_non_mainboard_series(self):

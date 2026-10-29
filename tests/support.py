@@ -5,10 +5,14 @@ socket connections and fails the test if any were attempted. Use :class:`FakeCli
 at the network boundary instead.
 
 :class:`TempRepo` builds a throwaway repo root.  Paths that the modules bind at
-import time have to be redirected explicitly; patch all of these for a test that
-touches the module:
+import time have to be redirected explicitly:
 
-* ``outcomes.ROOT`` and ``trends.SNAP_DIR`` (``load``/``update``/``attach`` defaults)
+* pass ``root`` / ``snap_dir`` explicitly to ``outcomes.load``/``update`` and
+  ``trends.load``/``attach``; their defaults were evaluated at import, so patching
+  ``outcomes.ROOT`` or ``trends.SNAP_DIR`` does not move them
+
+Patch all of these for a test that touches the module:
+
 * ``snapshot.ROOT`` **and** ``cards.DIR`` together for ``snapshot.build`` (the build
   does ``cards.path(key).relative_to(ROOT)``); set ``cards.DIR = root / "analysis"``
 * ``quiet.ROOT``, ``quiet.REPORTS``, ``email_render.ROOT`` and ``cards.DIR`` for

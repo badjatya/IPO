@@ -47,6 +47,14 @@ class GuardTests(NoNetworkCase):
         finally:
             case.tearDown()
 
+    def test_http_client_is_stopped_at_dns_not_turned_into_urlerror(self):
+        from ipo_agent.net import Client
+
+        with self.assertRaises(NoNetworkAttempt):
+            Client(retries=0).get("https://no-such-host.invalid/")
+        self.assertEqual(self.network_attempts, [("dns", "no-such-host.invalid")])
+        self.network_attempts.clear()
+
     def test_teardown_fails_when_an_attempt_is_left_behind(self):
         case = self._guard_case()
         case.network_attempts.append(("dns", "example.invalid"))

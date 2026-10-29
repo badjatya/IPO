@@ -127,7 +127,7 @@ None. The agent test runner (`unittest`) and its command are already Decided/rec
 None found. No test needed `@unittest.expectedFailure`, and no test exposed a behaviour that a doc or code comment says is wrong. Two parser behaviours looked surprising but are pinned as they are, with no intent recorded to call them bugs:
 
 - `nse.parse_detail` takes `issueInfo.dataList[0].title` as the company name (`nse.py:103`); a real response whose first row is a label would report the label. The fixture leaves that row's title empty so the `companyName` fallback is exercised.
-- `outcomes.listing_prices` returns NSE's raw `CH_OPENING_PRICE` value as `listing` (`outcomes.py:104`). The test pins the type the fixture supplies rather than assuming a float; no saved evidence says the live API sends a string, so this is not recorded as a bug.
+- `outcomes.listing_prices` passes NSE's `CH_OPENING_PRICE` through as `listing` without converting it (`outcomes.py:104`). That is safe because NSE sends prices as numbers: every `"price_source": "nse"` row in `data/outcomes.json` is numeric. The fixture now sends numbers too (code review round 1, finding 3). Not a bug.
 
 ## Risks and rollback
 
@@ -152,6 +152,13 @@ None found. No test needed `@unittest.expectedFailure`, and no test exposed a be
 - **Malformed Investorgain page is built inline.** The layout-change `ValueError` test constructs a tiny page in the test instead of adding a file that exists only to be broken.
 - **`quiet.main` outcome-error test patches `quiet.outcomes.update`.** It returns `([], [], {"hd-fire": ...})` so the test exercises `quiet`'s `outcome_errors` branch without a network client. `outcomes.update`'s own error paths (no symbol, no prices, waiting, already recorded) are covered directly in `tests/test_outcomes.py`.
 - No changes to `ipo_agent/`, `data/`, `analysis/` or `reports/`.
+- **Code review round 1 fixes were made by Claude Code at the human's request**, because opencode was unavailable. They change only `tests/` and the second "Bugs found" bullet:
+  - the snapshot build tests freeze the clock;
+  - Acme's Investorgain price and lot now differ from NSE's, so the override is tested;
+  - the NSE listing-price fixture is numeric;
+  - a guard self-test goes through `net.Client`;
+  - the `TempRepo` docstring is corrected.
+  See `code-review.md`.
 
 ## Verification
 

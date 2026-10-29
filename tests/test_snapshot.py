@@ -1,5 +1,7 @@
+import datetime as dt
 import pathlib
 import sys
+import types
 import unittest
 from unittest import mock
 
@@ -11,7 +13,17 @@ from support import FakeClient, NoNetworkCase, TempRepo, fixture  # noqa: E402
 from ipo_agent import cards, investorgain, nse, sebi, snapshot  # noqa: E402
 
 TODAY = "2026-10-29"
+NOW = dt.datetime(2026, 10, 29, 9, 7, tzinfo=snapshot.IST)
 SEBI_PAGE = "https://www.sebi.gov.in/filings/public-issues/oct-2026/acme-industries-123.html"
+
+
+class FrozenDateTime(dt.datetime):
+    """`build` stamps `generated_at` with the clock, and trends read Investorgain's
+    year-less times against it, so the build tests run at a fixed moment."""
+
+    @classmethod
+    def now(cls, tz=None):
+        return NOW.astimezone(tz) if tz else NOW
 
 
 class PhaseTests(NoNetworkCase):
@@ -60,6 +72,7 @@ class BuildTests(NoNetworkCase):
         for patcher in (
             mock.patch.object(snapshot, "ROOT", self.repo.root),
             mock.patch.object(cards, "DIR", self.repo.path("analysis")),
+            mock.patch.object(snapshot, "dt", types.SimpleNamespace(datetime=FrozenDateTime)),
         ):
             patcher.start()
             self.addCleanup(patcher.stop)
@@ -91,6 +104,7 @@ class BuildTests(NoNetworkCase):
     def test_merge_keeps_mainboard_and_drops_sme_and_old_listings(self):
         snap = self.build()
         self.assertEqual(snap["errors"], {})
+        self.assertEqual(snap["generated_at"], "2026-10-29T09:07+05:30")
         self.assertEqual(
             [i["key"] for i in snap["ipos"]],
             ["sfc-environmental-technologies", "acme-industries", "beta-corp", "closed"],
@@ -108,6 +122,13 @@ class BuildTests(NoNetworkCase):
         self.assertEqual(sfc["rhp_source"], "nse")
         self.assertTrue(sfc["categories"])
         self.assertIsNotNone(sfc["best_category"])
+
+    def test_nse_price_and_lot_override_investorgain(self):
+        # Investorgain has Acme at ₹245 x 50, NSE at ₹250 x 60 (see tests/fixtures/README.md).
+        acme = self.by_key(self.build())["acme-industries"]
+        self.assertEqual(acme["price_high"], 250.0)
+        self.assertEqual(acme["lot"], 60)
+        self.assertEqual(acme["categories"][0]["min_amount"], 15000)
 
     def test_zero_bid_subscription_is_dropped(self):
         acme = self.by_key(self.build())["acme-industries"]
