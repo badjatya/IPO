@@ -60,7 +60,7 @@ How Claude gets exactly the context it needs and no more.
 | Routine limited to the Gmail connector and an allowlisted network | Environment ([SETUP.md](../SETUP.md)) | **Running** |
 | Validate card and report JSON when they're written (schema, enums, file name vs date and session) | Hook `.claude/hooks/guard.py post-write` | **Running** (2026-10-29; checked against every saved card and report) |
 | Reject GMP, subscription or today/tomorrow text inside cards | Hook `guard.py post-write` | **Running** |
-| Every ₹ figure in an analysis must appear in the RHP text | Verifier script, run by a hook and in CI | **Decided** |
+| Every ₹ figure in an analysis must appear in the RHP text | Verifier script, run by a hook and in CI | **Running** in CI (`ipo_agent/figures_check.py`); the hook is **Decided** until the human applies the diff in plan 005 |
 | Push only to `origin`; no force, mirror or delete pushes | Hook `guard.py pre-bash` (Claude). DeepSeek has no push: its `run` tool allows only read-only git, and the driver commits | **Running** |
 | DeepSeek's file tools refuse the routine's files, Claude's config, `AGENTS.md`, the roadmap, review files and `.env*`; plan steps write only `plan.md` | `.claude/deepseek/deepseek.py`, tests in `test_deepseek.py` | **Running** |
 | After every DeepSeek step, every changed path and commit is checked against the same rules, along with the approved plan and Claude's review text; a step that broke one isn't handed off | `deepseek.py` post-step check | **Running**. The limit: code a task runs through `python3` or `npm` can still touch anything, so this check, Claude's code review and "only the human pushes" are the boundary ([ADR-0021](adr/0021-deepseek-on-openrouter.md)) |
@@ -77,7 +77,7 @@ How Claude gets exactly the context it needs and no more.
 | Eval | What it measures | Status |
 | --- | --- | --- |
 | **Listing scorecard** (`python3 -m ipo_agent.outcomes --no-fetch`) | Each call against the real listing: average listing gain by verdict, GMP miss, which signals tracked listing gains ([ADR-0007](adr/0007-listing-scorecard-as-eval.md)) | **Running**: 8 listings scored by 2026-10-29 |
-| Figures check | Share of ₹ figures in each analysis found in its RHP text | **Decided** |
+| Figures check | Share of ₹ figures in each analysis found in its RHP text | **Running**: 13 analyses checked on 2026-10-29, 54/316 ₹ figures found overall (17%); a low share is expected (price band, GMP, anchor book and computed market caps are not RHP text) and points at the missing list to read, not a failure |
 | Schema check | Every card and report in the repo matches its schema | **Running**: `.claude/hooks/test_guard.py`, run by CI on every push (`.github/workflows/ci.yml`) |
 | Analysis quality review | A second Claude pass grades each analysis against the template (all sections, numbers cited, grade justified) | **Proposed** |
 | Regression set | Past IPOs replayed with a changed instruction; calls and figures compared with before | **Proposed** |
@@ -169,4 +169,4 @@ flowchart LR
 | `.claude/settings.json` hooks | **Running** | Guardrails above, enforced by the harness instead of by instruction; tests in `.claude/hooks/test_guard.py` |
 | `.claude/deepseek/deepseek.py` | **Running** | Runs DeepSeek through OpenRouter for one step (`plan`, `revise`, `build`, `respond`): tools, write rules, post-step check, status and hand-off commit; tests in `test_deepseek.py`, run in CI |
 | Agent `tests/` | **Running** | Python `unittest` for the agent, saved fixtures only, no network |
-| CI | **Running** for the agent | GitHub Actions (`.github/workflows/ci.yml`): agent tests and the schema check on every push and pull request. App tests against a Neon branch are **Decided** (tasks 006, 007) |
+| CI | **Running** for the agent | GitHub Actions (`.github/workflows/ci.yml`): agent tests, the schema check and the figures check on every push and pull request. App tests against a Neon branch are **Decided** (tasks 006, 007) |

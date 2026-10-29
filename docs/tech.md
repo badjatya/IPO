@@ -32,7 +32,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Hosting | Not chosen yet; local until week 4 | Open | — |
 | Agent tests | Python `unittest`; run with `python3 -m unittest discover -s tests` | Running | — |
 | App tests | Test runner not chosen yet; database tests on Neon branches | Open | — |
-| CI | GitHub Actions: agent tests and the schema check on every push and pull request (`.github/workflows/ci.yml`) | Running | — |
+| CI | GitHub Actions: agent tests, the schema check and the figures check (`ipo_agent/figures_check.py`) on every push and pull request (`.github/workflows/ci.yml`) | Running | — |
 | Dev tooling | DeepSeek through OpenRouter (plans and builds; model in `OPENROUTER_MODEL_NAME`), run by `.claude/deepseek/deepseek.py`; Claude Code, Opus 5.5 (runs the loop, reviews plans and code) | Running | [0021](adr/0021-deepseek-on-openrouter.md) |
 
 ## Research agent
