@@ -1,6 +1,6 @@
 ---
 task: 006-web-scaffold
-status: merge-ready
+status: done
 branch: task/006-web-scaffold
 assigned_by: Vijay
 planner: Claude Code (Opus 5.5), at the human's request

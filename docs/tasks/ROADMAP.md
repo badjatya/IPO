@@ -54,8 +54,8 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [003](#003--nse-stock-data-spike) | NSE stock-data spike and runner smoke test | 1 | — | Done |
 | [004](#004--routine-provenance-and-documents-as-data) | Routine provenance and documents-as-data | 1 | 001 | Done |
 | [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | Done |
-| [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | **Ready** |
-| [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Blocked |
+| [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | Done |
+| [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | **Ready** |
 | [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | Blocked |
 | [009](#009--import-action) | Import Action on push | 2 | 002, 008, H02 | Blocked |
 | [010](#010--accounts) | Accounts: sign-up, sign-in, roles | 2 | 007, D04 | Blocked |
@@ -94,8 +94,8 @@ flowchart LR
         T005[005 figures check]:::done
     end
     subgraph wk2 ["Week 2: web app, IPO side"]
-        T006[006 scaffold]:::ready
-        T007[007 schema]
+        T006[006 scaffold]:::done
+        T007[007 schema]:::ready
         T008[008 import script]
         T009[009 import Action]
         T010[010 accounts]
@@ -148,13 +148,13 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 
 | ID | Decision | Docs today | Blocks | Done |
 | --- | --- | --- | --- | --- |
-| D01 | App in the same repo (`web/`) or a separate repo | Open ([arch.md § 9](../arch.md#9-open-questions)); same repo Proposed in [tech.md](../tech.md#repository-layout). A bare app already sits in `web/` (commit `c835c42`) | 006 | [ ] |
-| D02 | TypeScript (strict) for the web app | Proposed ([tech.md](../tech.md#web-platform)). The bare app in `web/` already uses it | 006 | [ ] |
+| D01 | App in the same repo (`web/`) or a separate repo | Decided: same repo, `web/` ([ADR-0022](../adr/0022-web-app-in-same-repo.md)) | 006 | [x] |
+| D02 | TypeScript (strict) for the web app | Decided: TypeScript, strict ([ADR-0023](../adr/0023-typescript-strict.md)) | 006 | [x] |
 | D03 | ORM and migration tool (Drizzle or Prisma) | Open | 007 | [ ] |
 | D04 | Auth library, and Google sign-in or password (no emailed links, [ADR-0015](../adr/0015-email-to-admin-only.md)) | Open | 010 | [ ] |
 | D05 | UI components and styling | Decided: shadcn/ui with Tailwind CSS ([ADR-0020](../adr/0020-shadcn-ui.md)) | 006 | [x] |
 | D06 | Charts library | Open | 011, 012, 019 | [ ] |
-| D07 | App test runner | Open | 006 | [ ] |
+| D07 | App test runner | Decided: Vitest with React Testing Library ([ADR-0024](../adr/0024-vitest-for-app-tests.md)) | 006 | [x] |
 | D08 | Gemini model(s), free-tier quotas and search grounding, read in AI Studio. Sets the default for `analysis_daily_limit_platform` and confirms `ask_daily_limit_per_user` | Open ([db.md § settings](../db.md#settings)) | 020, 021, 023 | [ ] |
 | D09 | Stock worker code: where it lives (new package or inside `ipo_agent/`) and its dependencies. It needs a Postgres driver and a Gemini client, and neither is in the standard library. [ADR-0002](../adr/0002-standard-library-only-agent.md) binds only `ipo_agent/`. Also, [tech.md](../tech.md#web-platform) says one Gemini module is shared by the app and the worker, which can't be one module across TypeScript and Python | Not in the docs; likely a new ADR | 014, 020 | [ ] |
 | D10 | Alert thresholds (pledge up, promoter holding down, FII and DII moves) and severities, and whether they live in `settings` or code | Not in the docs | 016 | [ ] |
@@ -186,12 +186,12 @@ Nothing below needs a task. Evidence is in the repo.
 | Research output as the system of record | `analysis/`, `reports/`, `data/` |
 | Docs: project, architecture, stack, database, AI design, data sources, plan, journal | `docs/`, commit `c1e113d` |
 | UI design rules: component kit, theme, status colours, number formats, layout | `docs/design.md`, commit `33c5a73` |
-| ADRs 0001–0021 | `docs/adr/` |
+| ADRs 0001–0024 | `docs/adr/` |
 | Two-agent workflow: rules, statuses, reviewer guide, templates | `AGENTS.md`, `docs/tasks/`, commit `fecb83d` |
 | Claude Code guardrails: push guard, card and report schema check on write, with tests | `.claude/hooks/guard.py`, `.claude/hooks/test_guard.py` |
 | Claude Code skills and subagents | `.claude/skills/`, `.claude/agents/` |
 | DeepSeek through OpenRouter: a driver with four steps (plan, revise, build, respond), file tools that keep to the write rules, a post-step check, and the `/run-task` loop. Replaced opencode on 2026-10-29 ([ADR-0021](../adr/0021-deepseek-on-openrouter.md)) | `.claude/deepseek/`, `.claude/skills/run-task/` |
-| Bare web app: Next.js App Router, strict TypeScript, shadcn/ui on Tailwind CSS v4, disclaimer footer. No tests, lint or CI yet (task 006) | `web/`, commits `c835c42`, `33c5a73` |
+| Web app scaffold: Next.js App Router, strict TypeScript, shadcn/ui on Tailwind CSS v4, disclaimer footer, Vitest tests, oxlint, a `web` CI job (task 006) | `web/`, commits `c835c42`, `33c5a73`, task 006 |
 
 ---
 
@@ -318,7 +318,7 @@ A standard-library script that checks that every ₹ figure in `analysis/<key>.m
 | | |
 | --- | --- |
 | Slug | `006-web-scaffold` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | 002, D01, D02, D05, D07 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -329,16 +329,27 @@ A bare app already exists in `web/` (commits c835c42 and 33c5a73): Next.js with 
 
 - **Done when:** the app starts locally and shows an empty home page with the disclaimer; its tests run in CI; `tech.md` has the local setup and updated status labels.
 - **Out of scope:** database, auth, real pages.
-- **Watch for:** DeepSeek can't run `npm install`; `/run-task` stops and asks the human to run it.
+- **Watch for:** DeepSeek can't run `npm install`; `/run-task` stops and asks the human to run it. (Moot for this task: Claude built it and installed the packages.)
 - **Read:** [tech.md](../tech.md), [design.md](../design.md), [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [ADR-0012](../adr/0012-research-not-advice.md), [ADR-0020](../adr/0020-shadcn-ui.md).
 - **Start:** `/run-task 006`
+- **Result:** merged 2026-10-29. Planned and built by Claude Code at the human's request: `/run-task` couldn't start DeepSeek, because `.env.local` with the OpenRouter key was missing. It was merged without an independent review; the plan and the self-check review say so. DeepSeek cost $0.
+  - **Human decisions:** D01 same repo, `web/` ([ADR-0022](../adr/0022-web-app-in-same-repo.md)); D02 strict TypeScript ([ADR-0023](../adr/0023-typescript-strict.md)); D07 Vitest with Testing Library ([ADR-0024](../adr/0024-vitest-for-app-tests.md)).
+  - **What it adds:**
+    - `web/lib/site.ts` (product-name placeholder and disclaimer text) and `web/components/site-footer.tsx`
+    - `web/.env.example` with the app's variables, kept in step with tech.md by a test
+    - 7 Vitest tests, oxlint, `npm run typecheck`
+    - a `web` job in `ci.yml`: lint, type check, tests, build
+  - **Changes during build:**
+    - oxlint replaces ESLint, because typescript-eslint doesn't support the TypeScript 7 the bare app ships with.
+    - The app now needs Node 22.22+ or 24.15+, because of jsdom.
+  - **Still to do (human):** push `main` and check that the `web` CI job passes on its first run. It hasn't run yet.
 
 ### 007 · Database schema and migrations
 
 | | |
 | --- | --- |
 | Slug | `007-db-schema` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 006, D03, H01, H06 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |

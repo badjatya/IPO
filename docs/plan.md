@@ -379,3 +379,22 @@ One entry per working session: what we asked the AI to do, what it did, what a h
 - **Learned:**
   - Applying a plan's "exact diffs" to a scratch copy and running the tests is a cheap and reliable plan-review check.
   - Changes the human applies by hand should be rebuilt against the current main at merge time.
+
+### 2026-10-29 (later): Task 006, web app scaffold
+
+- **Asked:** the human asked Claude to pick task 006 and complete it. `/run-task 006` stopped at once, because `.env.local` with the OpenRouter key was missing. The human then asked Claude to do the task itself, and later to merge it and update the roadmap.
+- **Rounds:** none. Claude asked the human the three open decisions (D01, D02, D07), then planned and built the task in one step. The human had it merged without an independent review; the plan and the self-check review say so. DeepSeek cost $0.
+- **Human decisions:** the app stays in this repo, in `web/` (ADR-0022); TypeScript, strict (ADR-0023); Vitest with Testing Library (ADR-0024). Each time, the human took Claude's recommendation.
+- **AI did:**
+  - Moved the product-name placeholder and the disclaimer into `web/lib/site.ts`, with a footer component the root layout renders.
+  - Wrote 7 Vitest tests. They check that the root layout renders the disclaimer around any page, that the home page shows the product name, and that `.env.example` lists exactly the app's variables from tech.md with no values.
+  - Added lint and type-check scripts, and a `web` CI job.
+  - Wrote the three ADRs and updated tech.md, design.md and arch.md.
+  - Showed that the checks fail when they should: a changed disclaimer failed 2 tests, and a conditional hook with a bare `<img>` failed lint.
+- **Notable findings:**
+  - **ESLint vs TypeScript 7.** The bare app ships TypeScript 7, and typescript-eslint supports only versions below 6.1, so `eslint-config-next` crashes on load. Claude kept TypeScript 7 and switched to oxlint, which has Next.js, React-hooks and jsx-a11y rules of its own.
+  - **`@vitejs/plugin-react`** had a peer conflict on `@babel/core` 8 and isn't needed: Vite 8 compiles TSX itself.
+  - **Node version.** jsdom 30 needs Node 22.22+ or 24.15+, higher than the 20.9 tech.md listed.
+- **Learned:**
+  - A scaffold's newest defaults (TypeScript 7 here) can be ahead of the tooling around them. Run lint early, not only the build.
+  - The `/run-task` driver needs `.env.local` in the main checkout. Check for it before starting a task.
