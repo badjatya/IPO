@@ -5,6 +5,7 @@
 // `tsx --env-file-if-exists=.env.local`, and CI / the import Action (009) set
 // the variable in the environment instead. Exits non-zero when a commit fails
 // (the next run retries from the last ok) or when DATABASE_URL is missing.
+// `--from` / `--root` without a value exit with usage, like other bad flags.
 
 import { fileURLToPath } from "node:url";
 import { closePool, poolDb } from "@/lib/db";
@@ -27,14 +28,24 @@ function usage(exitCode: number) {
   process.exit(exitCode);
 }
 
+/** The value of a `--flag <value>` pair; missing value → usage error (exit 2). */
+function flagValue(args: string[], flag: string): string | undefined {
+  const index = args.indexOf(flag);
+  if (index === -1) return undefined;
+  const value = args[index + 1];
+  if (value === undefined || value.startsWith("--")) {
+    console.error(`${flag} needs a value`);
+    usage(2);
+  }
+  return value;
+}
+
 async function main() {
   const args = process.argv.slice(2);
   if (args.includes("--help") || args.includes("-h")) usage(0);
   const rebuild = args.includes("--rebuild");
-  const fromFlag = args.indexOf("--from");
-  const from = fromFlag >= 0 ? args[fromFlag + 1] : undefined;
-  const rootFlag = args.indexOf("--root");
-  const root = rootFlag >= 0 ? args[rootFlag + 1] : defaultRoot;
+  const from = flagValue(args, "--from");
+  const root = flagValue(args, "--root") ?? defaultRoot;
 
   if (!process.env.DATABASE_URL) {
     console.error(
@@ -47,7 +58,7 @@ async function main() {
 
   try {
     const db = poolDb();
-    const result = await runImport({ root, db, rebuild, from: from ?? undefined, log: console.log });
+    const result = await runImport({ root, db, rebuild, from, log: console.log });
     if (!result.ok) {
       console.error(`import failed on ${result.failedSha}: ${result.error}`);
       console.error("rollback complete — the next run retries from the last ok row");
