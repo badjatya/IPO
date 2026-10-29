@@ -58,12 +58,55 @@ These checks went beyond the suite:
   - `test_weekday_exchange_holiday_still_counts_as_a_bidding_day` uses Mon 26 → Thu 29 Oct, which is the same weekday count as the test above it. It pins the documented behaviour, but naming a specific weekday as "the holiday" in the comment would make the intent clearer.
   - `test_investor_sub_rows_without_offered_quantity_are_skipped` asserts that `"foreign institutional investors"` is not a key. It never could be, so that line is decoration. The `set(sub)` assertion below it does the real work.
 
-## Responses (DeepSeek)
+## Responses (Claude Code, at the human's request)
+
+The human asked Claude Code to fix this round because opencode was unavailable, so these responses are Claude's, not DeepSeek's.
 
 | # | Response | Commit |
 | --- | --- | --- |
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | Fixed. `BuildTests` patches `snapshot.dt` with a `FrozenDateTime` fixed at 2026-10-29 09:07 IST, and the merge test now asserts `generated_at`. | `d8d499f` |
+| 2 | Fixed. In the Investorgain fixture, Acme is now ₹245 × 50, against ₹250 × 60 on NSE, and `tests/fixtures/README.md` records why. A new test, `test_nse_price_and_lot_override_investorgain`, asserts that `price_high` is 250, `lot` is 60 and the retail minimum is ₹15,000. | `d8d499f` |
+| 3 | Fixed. The `ListingPricesTests` rows now carry numeric prices and assert `110` / `90`. The plan's second "Bugs found" bullet now cites `data/outcomes.json`. | `d8d499f` |
+| 4 | Fixed. A new test, `test_http_client_is_stopped_at_dns_not_turned_into_urlerror`, calls `net.Client(retries=0).get(...)` and asserts that `NoNetworkAttempt` is raised and `("dns", "no-such-host.invalid")` is recorded. | `d8d499f` |
+| 5 | Fixed. The docstring now says to pass `root` / `snap_dir` explicitly, because patching doesn't move a default argument. | `d8d499f` |
+
+## Round 2 (2026-10-29)
+
+**Verdict:** Approved
+
+**Diff:** `git diff 6ed4f9a d8d499f`. It touches `tests/` and the plan's "Bugs found" and "Changes during build" sections only. `ipo_agent/` is unchanged.
+
+**Tests:**
+
+```text
+$ python3 -m unittest discover -s tests
+Ran 169 tests in 0.243s
+
+OK
+
+$ unshare -rn python3 -m unittest discover -s tests
+Ran 169 tests in 0.250s
+
+OK
+
+$ git status --short --untracked-files=all data analysis reports
+(no output)
+```
+
+**Checks beyond the suite:**
+- **Finding 1.** I set the clock in `snapshot.dt` to 2026-10-29, 2027-11-01 and 2030-06-15 and ran `BuildTests` (11 tests) at each. All passed, so the build tests no longer depend on the date they run.
+- **Finding 2.** In a scratch copy of `ipo_agent/snapshot.py`, I swapped the precedence so Investorgain's price and lot win (`price = ipo.get("price") or d.get("price_high")`, and the same for `lot`). `test_nse_price_and_lot_override_investorgain` fails against that copy, so the test detects the regression it was written for.
+
+### Findings
+
+None open. All five round-1 findings are fixed (see Responses).
+
+### Plan and docs
+
+- The plan's "Changes during build" records that Claude made these fixes and why.
+- The second "Bugs found" bullet now cites the evidence.
+- The docs and status labels are unchanged from round 1, where they were already correct.
+
+### Notes
+
+- **The same agent found, fixed and approved these five findings.** Round 1's scope, the rest of the suite and the docs are unaffected. If the human wants a second pair of eyes on these fixes, DeepSeek can read `d8d499f` when opencode is back.
