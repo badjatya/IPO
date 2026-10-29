@@ -32,4 +32,4 @@ You are the final code reviewer in the DeepSeek → Claude workflow ([ADR-0019](
    - **Don't fix the code yourself** unless the human asks; findings go in the review.
 6. **Set the status** in `plan.md`: `merge-ready` if there's no open Blocker or Major, otherwise `code-changes`.
 7. **Commit** only `code-review.md` and the status line, in the worktree, with `git -C .worktrees/<folder> add …` and `git -C .worktrees/<folder> commit` and a message like `Code review NNN round N: <verdict>`. Don't push or merge.
-8. **Report** to the human: the verdict, the Blockers and Majors, and who goes next.
+8. **Report** to the human: the verdict, the Blockers and Majors, and who goes next. On `merge-ready`, also list the roadmap changes to make after the merge (the plan's "Doc updates", plus anything it missed).

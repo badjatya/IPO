@@ -32,7 +32,7 @@ Read these before planning, as far as your task touches them:
 
 ## Task workflow
 
-Every task lives in `docs/tasks/NNN-short-slug/`, where `NNN` is the task's ID in [docs/tasks/ROADMAP.md](docs/tasks/ROADMAP.md), or the next unused number for a task that isn't in it. The roadmap lists every task with its dependencies and status. Only the human or Claude edits it, on `main`. The full workflow and the templates are in [docs/tasks/README.md](docs/tasks/README.md).
+Every task lives in `docs/tasks/NNN-short-slug/`, where `NNN` is the task's ID in [docs/tasks/ROADMAP.md](docs/tasks/ROADMAP.md), or the next unused number for a task that isn't in it. The roadmap lists every task with its dependencies and status. Only the human or Claude edits it, on `main`, and every commit there that changes something it tracks updates it in the same commit. You never edit it. Instead, list under your plan's "Doc updates" the roadmap changes to make once the task merges: a decision it settles, work it adds, another task whose scope it changes, or a new task it shows is needed. The full workflow and the templates are in [docs/tasks/README.md](docs/tasks/README.md).
 
 **One branch and one worktree per task.** Each task's branch `task/NNN-short-slug` is checked out in its own git worktree at `.worktrees/NNN-short-slug/` (gitignored). The main checkout stays on `main`. Several tasks can therefore be planned, built and reviewed at the same time, with one opencode session per worktree. Never check out a task branch in the main checkout or in another task's worktree.
 

@@ -19,6 +19,8 @@ Each task runs through the loop in [README.md](README.md): DeepSeek plans, Claud
 3. **Review it in Claude Code** with `/review-plan 001`, then `/review-code 001`, as usual. Claude works inside the task's worktree.
 4. **After merging,** remove the worktree (`git worktree remove .worktrees/NNN-slug && git branch -d task/NNN-slug`). Then the human (or Claude, when asked) updates the task's status here, on `main`. Then any task that has just become Ready is marked as such. DeepSeek never edits this file, because tasks run on parallel branches and would conflict.
 
+**Keep this file current.** Any commit on `main` that changes something tracked here updates this file in the same commit: a task merged or its scope changed, a decision settled or an ADR added, a setup step done, a gate answered, or work landed outside a task (add it under "Already in place", and note it in any task it affects). A task's plan lists, under "Doc updates", the roadmap changes to make after it merges.
+
 **Decisions and setup steps gate later stages, not the plan.**
 
 - **Decisions (`D..`):** a task can be planned while its decisions are still open. DeepSeek lays out the options with a recommendation under "Decisions needed". The human settles them before the plan is approved, records each one (an ADR, or the doc's status label from Open to Decided) and ticks it below.
@@ -145,8 +147,8 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 
 | ID | Decision | Docs today | Blocks | Done |
 | --- | --- | --- | --- | --- |
-| D01 | App in the same repo (`web/`) or a separate repo | Open ([arch.md § 9](../arch.md#9-open-questions)); same repo Proposed in [tech.md](../tech.md#repository-layout) | 006 | [ ] |
-| D02 | TypeScript (strict) for the web app | Proposed ([tech.md](../tech.md#web-platform)) | 006 | [ ] |
+| D01 | App in the same repo (`web/`) or a separate repo | Open ([arch.md § 9](../arch.md#9-open-questions)); same repo Proposed in [tech.md](../tech.md#repository-layout). A bare app already sits in `web/` (commit `c835c42`) | 006 | [ ] |
+| D02 | TypeScript (strict) for the web app | Proposed ([tech.md](../tech.md#web-platform)). The bare app in `web/` already uses it | 006 | [ ] |
 | D03 | ORM and migration tool (Drizzle or Prisma) | Open | 007 | [ ] |
 | D04 | Auth library, and Google sign-in or password (no emailed links, [ADR-0015](../adr/0015-email-to-admin-only.md)) | Open | 010 | [ ] |
 | D05 | UI components and styling | Decided: shadcn/ui with Tailwind CSS ([ADR-0020](../adr/0020-shadcn-ui.md)) | 006 | [x] |
@@ -182,11 +184,13 @@ Nothing below needs a task. Evidence is in the repo.
 | IPO research routine: snapshot, RHP extraction (NSE and SEBI), allotment odds, trends, quiet runs, cards, email, listing scorecard | `ipo_agent/`, `ROUTINE.md`, running since 2026-10-12 |
 | Research output as the system of record | `analysis/`, `reports/`, `data/` |
 | Docs: project, architecture, stack, database, AI design, data sources, plan, journal | `docs/`, commit `c1e113d` |
-| ADRs 0001–0019 | `docs/adr/` |
+| UI design rules: component kit, theme, status colours, number formats, layout | `docs/design.md`, commit `33c5a73` |
+| ADRs 0001–0020 | `docs/adr/` |
 | Two-agent workflow: rules, statuses, reviewer guide, templates | `AGENTS.md`, `docs/tasks/`, commit `fecb83d` |
 | Claude Code guardrails: push guard, card and report schema check on write, with tests | `.claude/hooks/guard.py`, `.claude/hooks/test_guard.py` |
 | Claude Code skills and subagents | `.claude/skills/`, `.claude/agents/` |
 | DeepSeek permissions, planner agent, workflow commands | `opencode.json`, `.opencode/` |
+| Bare web app: Next.js App Router, strict TypeScript, shadcn/ui on Tailwind CSS v4, disclaimer footer. No tests, lint or CI yet (task 006) | `web/`, commits `c835c42`, `33c5a73` |
 
 ---
 

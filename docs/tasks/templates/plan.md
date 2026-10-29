@@ -38,7 +38,7 @@ Tables or columns added or changed, settings read, AI calls (provider, prompt in
 
 ## Doc updates
 
-Docs and status labels this change updates; ADRs to propose.
+Docs and status labels this change updates; ADRs to propose. Roadmap changes for the human or Claude to make after merge (`docs/tasks/ROADMAP.md` is edited only on `main`); write "None" if only the task's status changes.
 
 ## Decisions needed
 

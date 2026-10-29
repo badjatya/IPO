@@ -32,3 +32,5 @@ When asked to review a task, use the `/review-plan NNN` or `/review-code NNN` sk
 3. Set the `status:` line in the task's `plan.md`, and commit only the review file and that status change in the worktree (`git -C .worktrees/NNN-*`). Don't push.
 
 Don't build a task assigned to DeepSeek unless the human asks. Put fixes in the review as findings.
+
+**Keep `docs/tasks/ROADMAP.md` current.** Any commit you make on `main` that changes something the roadmap tracks updates it in the same commit: a decision settled or an ADR added, a setup step done, work landed outside a task (add it under "Already in place" and note it in the tasks it affects), a task merged or its scope changed. When the human merges a task, apply the roadmap changes its plan lists under "Doc updates".
