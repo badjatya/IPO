@@ -32,7 +32,11 @@ Alert record contract — keys are the ``alerts`` columns:
 round 1, finding 1): NSE's pledge data lists only companies with a pledge
 disclosure, so the first pledge row has no earlier record to compare with —
 the alert fires on the stated percentage alone ("on record for the first
-time"), never an invented 0% baseline.
+time"), never an invented 0% baseline. It fires only for a new pledge
+quarter *on or after* the latest stored shareholding quarter: when the
+pledge series starts later than the shareholding series, older fetched
+pledge quarters are baseline history, not news (code review round 2,
+finding 4).
 
 Thresholds and severities are the values the human settled for D10 at 016's
 round-1 plan review (ADR-0029, status Proposed): analytic parameters, held in
@@ -184,7 +188,10 @@ def _pledge_first_alert(symbol, curr, threshold_pp):
     ``promoter_pledged_pct`` is at least ``threshold_pp``, with a title that
     states only what the record states. ``compute_alerts`` gates it: the
     stock must not be on first sight (some ``shareholding`` history is
-    stored) and no pledge record may be on record at all.
+    stored), no pledge record may be on record at all, and the quarter must
+    be on or after the latest stored ``shareholding`` quarter (code review
+    round 2, finding 4 — older fetched pledge quarters are baseline
+    history, not an event).
     """
     pledged_pct = (curr or {}).get("promoter_pledged_pct")
     quarter_end = (curr or {}).get("quarter_end")
@@ -364,7 +371,13 @@ def compute_alerts(symbol, fetched, stored, existing_keys=(), thresholds=DEFAULT
     whole fetched set is *not* the baseline. If some ``shareholding`` history
     is stored (the stock is not on first sight), a new pledge at or above the
     ``pledge_up`` threshold fires the "first pledge on record" alert (same
-    ``dedupe_key`` form and severity; no invented 0% earlier value). A change
+    ``dedupe_key`` form and severity; no invented 0% earlier value) — but
+    only for a quarter on or after the latest stored ``shareholding``
+    quarter. When the pledge series starts later than the shareholding
+    series (a pledge fetch failed on an early run, or 018 brings pledges in
+    later), pledge quarters before that quarter are baseline history: they
+    raise no alert yet still serve as ``prev_pl`` (code review round 2,
+    finding 4). A change
     rule compares the new quarter with the latest earlier quarter on record,
     which may come from ``stored``; an omitted quarter simply means the next
     one on record is the comparison partner. A revised filing whose key is
@@ -416,34 +429,52 @@ def compute_alerts(symbol, fetched, stored, existing_keys=(), thresholds=DEFAULT
 
     prev_pl = None
     first_sight = not stored_pl and not stored_sh
+    # When the pledge series starts later than the shareholding series
+    # (stored_pl empty, stored_sh not — the pledge fetch failed on an early
+    # run, or 018 brings pledges in after shareholding), the whole fetched
+    # pledge history must not burst as news: pledge quarters before the
+    # latest stored shareholding quarter are baseline history — they raise
+    # no alert but still serve as ``prev_pl`` — and only a new pledge
+    # quarter on or after it can alert (code review round 2, finding 4). A
+    # pledge row usually arrives in the same run as, or a run after, the
+    # shareholding for its quarter, so "on or after" still catches the
+    # first-pledge case of round 1, finding 1.
+    earliest_alertable = max(stored_sh) if stored_sh else None
     for quarter in quarter_order:
         pledge_record = pl_by_quarter.get(quarter)
         if pledge_record is None:
             # A quarter with shareholding but no pledge row is not a
             # pledge_up candidate; ``prev_pl`` stays put.
             continue
-        if quarter in fetched_pl and quarter not in stored_pl:
-            if prev_pl is not None and not first_sight:
+        alert = None
+        if (
+            quarter in fetched_pl
+            and quarter not in stored_pl
+            and not first_sight
+            and (earliest_alertable is None or quarter >= earliest_alertable)
+        ):
+            if prev_pl is not None:
                 alert = pledge_up_alert(
                     symbol, prev_pl, pledge_record, thresholds["pledge_up"]
                 )
-            elif not stored_pl and stored_sh:
+            elif not stored_pl:
                 # A stock's first-ever pledge on record (code review round 1,
                 # finding 1): NSE's pledge data lists only companies with a
                 # disclosure, so there is no earlier pledge record to compare
                 # with — and no invented 0% baseline (AGENTS.md rule 1). The
                 # stock is not on first sight (some shareholding history is
-                # stored), so the first pledge row is an event.
+                # stored), so the first pledge row at or after the latest
+                # stored shareholding quarter is an event.
                 alert = _pledge_first_alert(
                     symbol, pledge_record, thresholds["pledge_up"]
                 )
             else:
-                # First sight (nothing stored for the stock): the whole
-                # fetched history is the baseline; even a first pledge row
-                # stays silent.
+                # A backfilled older quarter while stored pledges exist: the
+                # stored later pledge already put a pledge on record, so an
+                # older fetched row is history, not an event.
                 alert = None
-            if alert is not None:
-                alerts_list.append(alert)
+        if alert is not None:
+            alerts_list.append(alert)
         prev_pl = pledge_record
 
     stored_results = _dedupe_latest(stored.get("results") or [], "period_end", "filed_at")
