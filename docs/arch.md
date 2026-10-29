@@ -313,7 +313,7 @@ sequenceDiagram
 | IPO routine | Claude Code cloud environment on the personal Pro account, network allowlist ([SETUP.md](../SETUP.md)) | **Running** | Gmail connector; GitHub access to the repo |
 | Repo, Import Action | GitHub | Repo **Running**; Action **Decided** | Action secret: database URL |
 | Stock worker | GitHub Actions ([ADR-0018](adr/0018-stock-worker-on-github-actions.md)) | **Decided** | Action secrets: database URL, Gemini API key |
-| Database | Neon free tier; a branch per test run and preview | **Decided** | Connection strings per branch |
+| Database | Neon free tier; a branch per test run (the CI `db` job), deleted after the run | **Running** | Connection strings per branch; `NEON_API_KEY` secret and `NEON_PROJECT_ID` variable in CI |
 | Next.js app | Host **Open**; local until week 4 | **Decided** | Database URL, Gemini API key, auth secret, worker dispatch token |
 
 The worker writes progress to the database itself, so it never needs to reach the app. Hosting can stay in week 4.

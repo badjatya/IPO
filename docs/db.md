@@ -1,6 +1,6 @@
 # Database
 
-PostgreSQL on Neon ([ADR-0010](adr/0010-postgresql-on-neon.md)). The schema below is **Decided** as the starting point: Claude drafted it from the routine's existing JSON, and the human accepted it on 2026-10-29. It isn't built yet, and details may change while we build. The auth tables will take whatever shape the auth library needs, which is still **Open**.
+PostgreSQL on Neon ([ADR-0010](adr/0010-postgresql-on-neon.md)). The schema below is **Running**: task 007 built it from `web/db/schema.ts` into the checked-in migrations in `web/db/migrations/`, and the database tests run against a real, disposable Neon branch per run (§ [Migrations and environments](#migrations-and-environments)). The auth tables will take whatever shape the auth library needs, which is still **Open** (task 010).
 
 The design starts from data that exists today. Every research table below maps to a JSON file the routine already writes; the mapping is in [§ Where the data comes from](#where-the-data-comes-from).
 
@@ -206,7 +206,7 @@ The listing-day scorecard: one row per listed IPO (`data/outcomes.json`). Subscr
 | `verdict`, `verdict_text`, `best_category` | | yes | Our last call before bids closed |
 | `verdict_report` | `text` | yes | Which report held that call |
 | `anchor_grade` | `anchor_grade` | yes | |
-| `pe`, `size_cr` | `numeric` | yes | |
+| `pe`, `size_cr` | `numeric(10,2)`, `numeric(14,2)` | yes | P/E; issue size in ₹ crore |
 | `sub_qib`, `sub_snii`, `sub_bnii`, `sub_retail`, `sub_total` | `numeric(10,2)` | yes | Final subscription (times) |
 | `subscription_source`, `price_source` | `text` | yes | |
 | `recorded_at` | `timestamptz` | no | |
@@ -249,9 +249,9 @@ Latest price and valuation, refreshed each run. One row per stock; the app is no
 | Column | Type | Null | Notes |
 | --- | --- | --- | --- |
 | `symbol` | `text` | PK, FK → `stocks` | |
-| `price`, `change_pct` | `numeric` | yes | |
+| `price`, `change_pct` | `numeric(12,2)`, `numeric(7,2)` | yes | |
 | `week52_high`, `week52_low` | `numeric(12,2)` | yes | |
-| `market_cap_cr`, `pe` | `numeric` | yes | |
+| `market_cap_cr`, `pe` | `numeric(14,2)`, `numeric(10,2)` | yes | |
 | `as_of` | `timestamptz` | no | |
 
 ### `quarterly_results`
@@ -435,6 +435,8 @@ Seeded rows:
 | `analysis_daily_limit_platform` | integer ≥ 0 | **Open:** set after reading the Gemini quota in AI Studio | Platform-wide cap on new and refreshed analyses a day, so analyses can't use up the Gemini quota that Ask shares ([ADR-0017](adr/0017-gemini-for-stocks-claude-for-ipos.md)) |
 | `analysis_refresh_after_days` | integer ≥ 1 | `30` | A saved analysis older than this, or older than the company's latest quarterly result, is refreshed before it's served |
 
+**Seeded by task 007** (values already settled by the human; `updated_at = now()`, `updated_by = NULL`): the rows for `ask_daily_limit_per_user`, `analysis_monthly_limit_per_user` and `analysis_refresh_after_days` come from the seed migration in `web/db/migrations/`. `analysis_daily_limit_platform` has **no row** until D08 sets a number (decided 2026-10-29): no default may be invented ([AGENTS.md](../AGENTS.md) rule 6). **While the row is missing the gate is closed** — no new or refreshed analysis is dispatched: the dispatch rule reads the cap's row and requires it to exist, jobs stay queued, and the loading screen says why (arch § 7.2). Tasks 018/022 build that. The cap row is added once D08 decides, before the tasks that read it.
+
 **Choosing the default.** Gemini's free quota is per project and shared by all users ([ADR-0014](adr/0014-gemini-free-api-for-ask.md)). Set this limit with that quota in mind: a high per-person limit lets a few users use up the day's quota for everyone. The human set it to `5`; revisit once the quota has been read from AI Studio.
 
 New settings are added as new rows, plus an entry in the app's list of known keys. No schema change is needed.
@@ -448,7 +450,7 @@ Bookkeeping for the import Action.
 | Column | Type | Null | Notes |
 | --- | --- | --- | --- |
 | `commit_sha` | `text` | PK | |
-| `started_at`, `finished_at` | `timestamptz` | | |
+| `started_at`, `finished_at` | `timestamptz` | yes | A failed import may lack `finished_at` |
 | `status` | `text` | no | `ok` or `failed` |
 | `files` | `integer` | yes | |
 | `error` | `text` | yes | |
@@ -506,7 +508,7 @@ Snapshot fields used only inside the routine (`needs_analysis`, `needs_card`, `n
 | Ask limit | Count of `ai_questions` for the user since midnight IST, compared with `settings.ask_daily_limit_per_user` |
 | Admin settings page | All rows of `settings`; update one row, setting `updated_by` and `updated_at` |
 | Request an analysis | In one transaction: count the user's `charged` requests this month against `analysis_monthly_limit_per_user`; if within the limit, check `stock_analyses` for the symbol. If it's fresh, record a `saved` request and serve it. Otherwise find or create the open `analysis_jobs` row (`new` or `refresh`) and record the request with its `job_id` |
-| Start the worker | No job `running`, and fewer than `analysis_daily_limit_platform` jobs started today: dispatch the stock worker. The worker claims every `queued` job |
+| Start the worker | The `analysis_daily_limit_platform` row must exist — while it's missing the gate is closed and nothing is dispatched until an admin sets the cap; no job `running`; and fewer than the cap's jobs started today: dispatch the stock worker. The worker claims every `queued` job |
 | Loading screen (polled) | The job's `status` and `current_step`, its `analysis_job_events` in order, and its queue position (count of earlier `queued` jobs) |
 | Stuck jobs | `running` jobs with `last_event_at` older than 30 minutes → `failed` and re-queued; the request is refunded (`charged = false`) |
 
@@ -529,5 +531,7 @@ Estimates for planning only. Neon's free tier is 1 GB per project ([ADR-0010](ad
 ## Migrations and environments
 
 - Schema changes are versioned migrations, checked in alongside the app. They are written with drizzle-kit and run over the direct (unpooled) connection ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)).
-- **Neon branches:** each test run and preview deploy gets its own branch from the main database, and the branch is deleted afterwards. Tests run against real Postgres, not a mock.
+- **Where they live.** The schema is written once, in TypeScript, at `web/db/schema.ts`; the table migration in `web/db/migrations/` is **generated** by drizzle-kit and never hand-edited. The custom migrations in the same folder carry the `citext` extension (created first, so the tables can use it), the `settings` seed rows, and the `watched_symbols` view if a drizzle version can't generate it. A later schema change adds a new migration — never edits a generated file — and the CI `web` job's schema-drift step fails a change to `schema.ts` that ships no migration.
+- **Insert defaults.** Where the tables above list no default for a column, the schema fills the time columns (`created_at`, `queued_at`, `requested_at`, `recorded_at`, `added_at`, `at`, `updated_at`) with `default now()`, and `users.id` / `analysis_jobs.id` (the bare `uuid` keys) with `default gen_random_uuid()` (core Postgres 13+, no extension).
+- **Neon branches:** each test run gets its own branch from the main database, and the branch is deleted afterwards. Tests run against real Postgres, not a mock. Built in task 007: `npm run test:db` in `web/` (`web/scripts/neon-branch.mjs`) creates a short-lived, schema-only branch from the project's default branch, drops and recreates `public` so the migrations build the full schema from nothing, runs `drizzle-kit migrate` over the branch's unpooled URL, runs the rule and shape tests over the pooled URL, and deletes exactly that branch, refusing ever to touch the default branch or `dev`. The CI `db` job runs it on every push and pull request (`NEON_API_KEY` secret, `NEON_PROJECT_ID` variable).
 - **Seed data:** importing the repo's existing files gives a realistic dataset from day one. That's about 39 runs and 8 scored listings as of 2026-10-29.
