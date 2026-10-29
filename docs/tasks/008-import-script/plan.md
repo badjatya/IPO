@@ -134,6 +134,79 @@ None. The two decisions this plan needed were settled by the human on 2026-10-30
 
 Anything built differently from the approved plan, and why.
 
+1. **Test (c)'s retry seam.** The plan's literal scenario — a bad commit, then "a fix commit makes the next run import both commits' data and turn the row ok" — cannot work with per-commit immutable reads (a fix commit on top leaves the bad commit's own tree invalid, and the plan itself documents that a bad file "blocks until the file is fixed **(or history rewritten)**"). The db test therefore fixes the commit by rewriting it (`git commit --amend`, the plan's documented recovery), and inserts a synthetic `failed` row for the *fixed* sha to simulate the transient first-attempt failure, so the next run's `ok` write genuinely upserts over a `failed` row for the same sha through the real CLI path. The mechanism the plan names — failed row → re-attempt → ok upserts over failed, same sha — is exercised end-to-end; only the setup differs.
+2. **The no-verdict report fixture.** The plan names `reports/2026-10-29-pm.json` as "an entry with no `verdict`", but at HEAD every entry of that file carries one. The no-verdict path is covered instead with a synthetic fixture in the exact shape of `reports/2026-10-19-am.json`'s tonbo-imaging entry (which at HEAD really has no verdict), plus an assertion that every committed report parses to one verdict row per entry.
+3. **Test (b) asserts the seeded `settings` rows survive, not a new one.** The schema-rules db suite asserts `settings` has *exactly* the three seed rows, and db test files run in parallel on the same branch, so inserting a new row would make that suite flaky. A `users` row and a watchlist item on a standalone `stocks` row are still inserted and asserted; the settings coverage is a read + equality check of the seeded rows.
+4. **Test (a)'s expected counts are computed by raw JSON parsing** of the repo's own files (distinct keys, entry/subscription/report-entry counts), not by reusing the import's parsers — reusing them would make the "same counts" check a tautology.
+5. **Replaced tables null their absent fields.** The plan says cards, analyses, outcomes, reports and verdicts are "replaced on their natural keys"; the build implements "replaced" as: the update also nulls the table's nullable columns the file no longer carries (`ipos` alone keeps the present-and-non-null merge). This is what makes per-commit and rebuild converge to exactly the file state, and is documented in db.md § Import and rebuild.
+
 ## Verification
 
 Test commands run, with their output pasted.
+
+**Offline suite** (`npm test` — 6 files, 55 tests, all green; the db suite is excluded by design):
+
+```text
+> test
+> vitest run
+
+ ✓ tests/env-example.test.ts (2 tests) 2ms
+ ✓ tests/neon-branch.test.ts (14 tests) 4ms
+ ✓ tests/layout.test.tsx (5 tests) 57ms
+ ✓ tests/schema.test.ts (4 tests) 2ms
+ ✓ tests/import-parsers.test.ts (15 tests) 16ms
+ ✓ tests/import-git.test.ts (15 tests) 387ms
+
+ Test Files  6 passed (6)
+      Tests  55 passed (55)
+```
+
+**Type check** (`npm run typecheck` — clean):
+
+```text
+> typecheck
+> tsc --noEmit
+```
+
+**Lint** (`npm run lint` — 0 warnings, 0 errors, 40 files):
+
+```text
+> lint
+> oxlint --deny-warnings
+
+Found 0 warnings and 0 errors.
+```
+
+**Schema drift** (`npx drizzle-kit generate` is a no-op after step 2's migration — required by CI's `web` job):
+
+```text
+No schema changes, nothing to migrate 😴
+```
+
+**CLI smoke tests** (`npx --no-install tsx scripts/import.ts`):
+
+```text
+$ npx --no-install tsx scripts/import.ts --help
+usage: tsx scripts/import.ts [--rebuild] [--from <sha>] [--root <repo>]
+  (default)  import the commits after the last ok row, one transaction each;
+             an empty imports table or rewritten history runs the rebuild
+  --rebuild  empty the IPO research tables and replay every research file at HEAD
+  --from     import only the commits after <sha>, instead of the last ok row
+  --root     the repo to import (default: the checkout containing web/scripts)
+
+$ npx --no-install tsx scripts/import.ts --rebuild --root /tmp
+DATABASE_URL is not set: the npm scripts load web/.env.local (write it with
+`neon checkout dev` in web/); CI and the import Action set the variable instead.
+```
+
+**Database suite** (`npm run test:db` — `web/tests/db/import.test.ts` plus the existing schema tests). It cannot run in this environment: the harness refuses without the Neon secrets, exactly as designed. The refusal itself:
+
+```text
+> npm run test:db
+> node scripts/neon-branch.mjs
+
+test:db needs NEON_API_KEY and NEON_PROJECT_ID (CI secrets, H06). Refusing to run without them —
+the db tests must never touch the `dev` branch by accident.
+```
+
+The three whole-repo import tests (a, b, f) and the four temp-repo per-commit tests (c, d, e, g) run under that harness in CI's `db` job (which has the secrets), on a fresh schema-only branch per run (`npm run test:db`). All of them were written against the branch that the harness provisions; the offline suite, typecheck and lint all pass with them present.
