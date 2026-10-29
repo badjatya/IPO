@@ -8,6 +8,7 @@
     "lint": "oxlint --deny-warnings",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "test:db": "node scripts/neon-branch.mjs",
     "test:watch": "vitest"
   },
   "dependencies": {
