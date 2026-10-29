@@ -20,6 +20,7 @@ interface ApiResult {
   status: number;
   json: unknown;
   cookies: string[];
+  location: string | null;
 }
 
 async function api(
@@ -36,7 +37,7 @@ async function api(
   const res = await AUTH.handler(new Request(`${BASE}${path}`, init));
   const cookies = res.headers.getSetCookie().map((c) => c.split(";")[0]);
   const json = await res.json().catch(() => null);
-  return { status: res.status, json, cookies };
+  return { status: res.status, json, cookies, location: res.headers.get("location") };
 }
 
 /** Capture print-mode mail output; each entry is one console.log call. */
@@ -71,6 +72,14 @@ async function userIdByEmail(email: string): Promise<string> {
   const rows = (await sql()`select id from users where email = ${email} limit 1`) as { id: string }[];
   expect(rows.length).toBe(1);
   return rows[0].id;
+}
+
+/** The one-time URL from the print-mode mail line — what the user actually receives. */
+function mailLink(mailLines: string[]): string {
+  expect(mailLines.length).toBe(1);
+  const link = mailLines[0].match(/https?:\/\/\S+/)?.[0];
+  expect(link).toBeTruthy();
+  return link as string;
 }
 
 async function invite(email: string, cookie: string, origin = BASE): Promise<{ status: number; json: unknown }> {
@@ -176,6 +185,41 @@ describe("accounts on a real branch", () => {
     const cookie = await signInCookie(email, "UserPass1");
     const session = await api("GET", "/api/auth/get-session", { cookie });
     expect((session.json as { user: { role?: string; email: string } }).user).toMatchObject({ email, role: "user" });
+  });
+
+  it("the emailed link works as sent: GET /api/auth/reset-password/<token> redirects to the form page (code review round 1 finding 4)", async () => {
+    const email = "email-link@example.com";
+    const capture = captureMail();
+    expect((await invite(email, adminCookie)).status).toBe(200);
+    const link = mailLink(capture.mail());
+    capture.restore();
+
+    // 1.7.14 emails {baseURL}/api/auth/reset-password/<token>?callbackURL=…,
+    // where baseURL already includes /api/auth. Better Auth's own GET endpoint
+    // serves that path — the app's [token] page is never reached — so follow
+    // the exact link the user receives, through the same handler.
+    const { pathname, search } = new URL(link);
+    expect(pathname).toMatch(/^\/api\/auth\/reset-password\//);
+    const userId = await userIdByEmail(email);
+    const token = await latestResetToken(userId);
+
+    const clicked = await api("GET", `${pathname}${search}`);
+    expect(clicked.status).toBeGreaterThanOrEqual(300);
+    expect(clicked.status).toBeLessThan(400);
+    expect(clicked.location).toBeTruthy();
+    const target = new URL(clicked.location as string, BASE);
+    expect(target.pathname).toBe("/reset-password");
+    expect(target.searchParams.get("token")).toBe(token);
+
+    // A token that is missing or already used redirects to the form with
+    // ?error=INVALID_TOKEN, which the offline page test asserts shows the
+    // "invalid or expired" message.
+    const bad = await api("GET", "/api/auth/reset-password/not-a-real-token?callbackURL=%2Freset-password");
+    expect(bad.status).toBeGreaterThanOrEqual(300);
+    expect(bad.status).toBeLessThan(400);
+    const badTarget = new URL(bad.location as string, BASE);
+    expect(badTarget.pathname).toBe("/reset-password");
+    expect(badTarget.searchParams.get("error")).toBe("INVALID_TOKEN");
   });
 
   it("inviting an existing address changes no row, voids the old link, sends a working fresh one", async () => {

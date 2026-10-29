@@ -8,12 +8,19 @@ import { Button, buttonVariants } from "@/components/ui/button";
 
 // One page for both flows (ADR-0028): the invitee's set-password link and the
 // forgot-password reset link both land here with ?token=…, and Better Auth
-// itself verifies the token (single use, expiry) on submit.
+// itself verifies the token (single use, expiry) on submit. When Better Auth's
+// own GET endpoint redirects a stale link here it adds ?error=INVALID_TOKEN
+// (code review round 1 finding 4) — the page surfaces that as the invalid or
+// expired message right away.
+const INVALID_LINK_MESSAGE = "This link is invalid or has expired. Ask for a new one.";
+
 function ResetPasswordForm() {
   const searchParams = useSearchParams();
   const token = searchParams.get("token") ?? "";
   const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(
+    searchParams.get("error") === "INVALID_TOKEN" ? INVALID_LINK_MESSAGE : null,
+  );
   const [done, setDone] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -23,7 +30,7 @@ function ResetPasswordForm() {
     setError(null);
     const { error: resetError } = await authClient.resetPassword({ newPassword: password, token });
     if (resetError) {
-      setError("This link is invalid or has expired. Ask for a new one.");
+      setError(INVALID_LINK_MESSAGE);
       setSubmitting(false);
       return;
     }
