@@ -127,6 +127,33 @@ Both open questions were answered by the human in plan review round 1; nothing i
 
 Anything built differently from the approved plan, and why.
 
+1. **1.7.14's emailed reset link puts the token in the path, not in `?token=`.** The plan assumed the link is `<redirectTo>?token=…`; the installed version builds `{baseURL}/reset-password/{token}?callbackURL={redirectTo}` (`api/routes/password.mjs`). Clicking it would have hit `/reset-password/<token>` and 404'd. Fix, minimal: `web/app/reset-password/[token]/page.tsx` (a server page that redirects to `/reset-password?token=…`, where the planned form page reads it; the stale `callbackURL` param is dropped — the form links to `/sign-in` on success). Tested in `web/tests/reset-token-page.test.tsx`. Nothing else in the flow changed; the Neon-branch tests read the token from the `verification` row and so were unaffected.
+2. **`web/.env.example` cannot be edited by the build tools.** The driver refuses both reads and writes of `.env*` paths (the plan's Context read only anticipated the read being blocked). All other step-10 changes are committed: tech.md carries the `AUTH_URL` row as an App variable, so the env-example test now fails with exactly one missing variable (`AUTH_URL`). **One line must be added by the human or Claude at review before merge** — `AUTH_URL=` under `AUTH_SECRET=` in `web/.env.example` — after which `npm test` is fully green (see Verification).
+3. **Confirmations against the installed package, as the Risks section allowed** (all consistent with the plan, nothing to change): `isTest()` skips Better Auth's origin checks, which is why the harness sets `NODE_ENV=development` (the forged-origin tests' subject); `advanced.backgroundTasks` is present but its default handler swallows errors silently, so our hook keeps its own `.catch(console.error)` (the plan's named fallback — failures still reach the log); `runWithTransaction` on the pg adapter runs the callback directly, so the neon-http `db()` works; `resetCredentialPassword` creates the `credential` `account` row for an invitee (no password yet), which is what makes set-password work for fresh invites.
+4. **Wording detail in step 8's proof:** the plan's step 8 parenthetical said the first-admin forgot-password mail is "(reset wording)". The approved hook (review item 8: "a never-set-up invitee who asks for a reset still gets invite wording") sends invite wording for the fresh admin — the Neon suite asserts that ("Set up" + "invited").
+5. **Test-infra fix (not a deviation):** the interrupted run's leftover `web/tests/auth-pages.test.tsx` change stubs `window.location.assign` for the sign-in success test — jsdom cannot navigate, and the page assigns to `window.location` after a successful sign-in.
+6. **Step 9 (CI) needed no change** — the `db` job already runs `npm run test:db` with the Neon secrets, and the harness now supplies `AUTH_SECRET`/`AUTH_URL`/`NODE_ENV` to the child process itself.
+
 ## Verification
 
-Test commands run, with their output pasted.
+Test commands run on the branch, with their real output.
+
+- `npm run typecheck` → `tsc --noEmit`, exit 0 (no output).
+- `npm run lint` → "Found 0 warnings and 0 errors. Finished in 76ms on 51 files".
+- `npm test` (offline vitest, `web/`) → **15/16 files, 82/83 tests pass. The one failure is the env-example test, exactly item 2 above** (tech.md lists `AUTH_URL`, `.env.example` cannot be written by the build tools):
+
+```
+AssertionError: expected [ 'AUTH_SECRET', 'DATABASE_URL', …(5) ] to deeply equal [ 'AUTH_SECRET', 'AUTH_URL', …(6) ]
+- Expected   + Received
+  "AUTH_SECRET",
+- "AUTH_URL",
+  "DATABASE_URL",
+…
+❯ tests/env-example.test.ts:23:54
+```
+
+  After the human (or Claude at review) adds the `AUTH_URL=` line to `web/.env.example`, this goes green — that is the file's only missing line.
+
+- `npx --no-install drizzle-kit generate` (drift proof for step 2) → "27 tables… No schema changes, nothing to migrate" and `git status --porcelain web/db` is empty.
+- `python3 -m unittest discover -s tests` (agent tests) → `Ran 330 tests … OK`.
+- `npm run test:db` (the Neon-branch auth suite in `web/tests/db/auth.test.ts` + `schema-shape.test.ts`) → **not run here**: it needs `NEON_API_KEY`/`NEON_PROJECT_ID` and creates a real, disposable Neon branch; per task 007's lesson it only counts in CI. The branch must be pushed for the `db` job (round-3 note) — the human pushes. The suite covers everything step 8 lists: sign-up refused, invite → invite wording → set password → token works once, expired token refused, re-invite voids the old link, existing-address invite (no new row, role unchanged, identical response), first-admin script → forgot-password → admin session, reset revokes pre-reset sessions, role check 401/403, session scoping, the shared-bucket sign-in rate limit (429), forged-Origin sign-in refused, cross-origin invite refused — with per-run `AUTH_SECRET`, `AUTH_URL=http://localhost:3000` and print-mode mail from the harness.
