@@ -8,6 +8,7 @@ Start with [project.md](project.md) for what the product is, then [arch.md](arch
 | [arch.md](arch.md) | System architecture: context, containers, components, runtime flows, deployment, security, failure handling, cost |
 | [tech.md](tech.md) | The tech stack layer by layer, tooling, configuration and local setup |
 | [db.md](db.md) | Database: entity diagram, every table and column, keys and indexes, how repo files map to tables, sizing |
+| [design.md](design.md) | UI design: component kit, theme, status colours, number formats, layout and page rules for the web app |
 | [ai.md](ai.md) | How AI works inside the product and how AI is used to build it: tasks, models, context, guardrails, evals, human review |
 | [data-sources.md](data-sources.md) | Every external source: what we read, how often, what breaks, and the fallback |
 | [adr/](adr/README.md) | Architecture decision records: one file per decision, with the options weighed and the evidence |

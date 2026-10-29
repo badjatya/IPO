@@ -24,7 +24,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Database | PostgreSQL on Neon (free tier) | Decided | [0010](adr/0010-postgresql-on-neon.md) |
 | ORM and migrations | Drizzle or Prisma | Open | — |
 | Auth | Auth library for Next.js, sessions in Postgres | Open | — |
-| UI components and styling | Not chosen yet | Open | — |
+| UI components and styling | shadcn/ui (Base UI) with Tailwind CSS v4; rules in [design.md](design.md) | Running | [0020](adr/0020-shadcn-ui.md) |
 | Charts | Not chosen yet | Open | — |
 | Sync | GitHub Actions: import on push | Decided | [0011](adr/0011-git-as-the-hand-off.md) |
 | In-app AI (Ask) | Gemini API, free tier | Decided (model Open) | [0014](adr/0014-gemini-free-api-for-ask.md) |
@@ -59,6 +59,7 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Database driver | Neon's serverless driver or standard Postgres driver, depending on the host | Open |
 | Auth | An auth library for Next.js with a Postgres adapter; Google sign-in or password (no emailed links, because the app sends no email) | Open |
 | AI | Google Gen AI SDK for the Gemini API, server side only, behind one module that the app (Ask) and the stock worker share | Decided |
+| UI | shadcn/ui components in `web/components/ui/`, Tailwind CSS v4, theme in `web/app/globals.css`; see [design.md](design.md) | Running |
 | Charts | GMP and subscription trends, results trends, the track record | Open |
 
 ## Infrastructure

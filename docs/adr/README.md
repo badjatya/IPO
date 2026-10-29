@@ -25,6 +25,7 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0017](0017-gemini-for-stocks-claude-for-ipos.md) | Claude for IPOs only; Gemini for all stock work; every analysis request counts | 2026-10-29 | Accepted |
 | [0018](0018-stock-worker-on-github-actions.md) | Stock worker runs on GitHub Actions | 2026-10-29 | Accepted |
 | [0019](0019-deepseek-builds-claude-reviews.md) | DeepSeek plans and builds; Claude reviews the plan and the code | 2026-10-29 | Accepted |
+| [0020](0020-shadcn-ui.md) | shadcn/ui and Tailwind CSS for the web app | 2026-10-29 | Accepted |
 
 ## Adding one
 
@@ -34,4 +35,4 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 4. Add a row above, and update [arch.md § Decisions](../arch.md#8-decisions) in the same commit.
 5. Never edit an accepted decision's outcome. Supersede it with a new ADR and set the old one's status to "Superseded by ADR-NNNN".
 
-Still to decide, each to become an ADR: ORM and migrations, auth library, UI kit, charts, host, same repo or separate repo for the app.
+Still to decide, each to become an ADR: ORM and migrations, auth library, charts, host, same repo or separate repo for the app.

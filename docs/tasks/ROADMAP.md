@@ -149,7 +149,7 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 | D02 | TypeScript (strict) for the web app | Proposed ([tech.md](../tech.md#web-platform)) | 006 | [ ] |
 | D03 | ORM and migration tool (Drizzle or Prisma) | Open | 007 | [ ] |
 | D04 | Auth library, and Google sign-in or password (no emailed links, [ADR-0015](../adr/0015-email-to-admin-only.md)) | Open | 010 | [ ] |
-| D05 | UI components and styling | Open | 006 | [ ] |
+| D05 | UI components and styling | Decided: shadcn/ui with Tailwind CSS ([ADR-0020](../adr/0020-shadcn-ui.md)) | 006 | [x] |
 | D06 | Charts library | Open | 011, 012, 019 | [ ] |
 | D07 | App test runner | Open | 006 | [ ] |
 | D08 | Gemini model(s), free-tier quotas and search grounding, read in AI Studio. Sets the default for `analysis_daily_limit_platform` and confirms `ask_daily_limit_per_user` | Open ([db.md § settings](../db.md#settings)) | 020, 021, 023 | [ ] |
