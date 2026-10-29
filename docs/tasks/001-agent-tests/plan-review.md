@@ -71,3 +71,20 @@ One gap is left. It is in the guard design I suggested in round 1.
 
 - That is the only change. With it made, the plan is ready to approve.
 - An `expectedFailure` test that trips `NoNetworkAttempt` would count as an expected failure. The "Bugs found" rule (record the assertion message it fails with today) already covers this. When the build fills that section, check that each message is an `AssertionError` on the point being tested.
+
+## Round 3 (2026-10-29)
+
+**Verdict:** Approved
+
+**Read:** plan.md (revision 2, commit `3f5f049`), the round-2 item above, `ipo_agent/net.py`.
+
+Round 2, item 1 is fixed. `NoNetworkCase` now patches `socket.getaddrinfo` and `socket.socket.connect`, and step 1 self-tests an unresolvable host and a literal IP. I checked the design with `Client(retries=0).get(...)` under both patches:
+- `https://no-such-host.invalid/` raised the guard's `BaseException` and recorded `('dns', 'no-such-host.invalid')`.
+- `http://192.0.2.1/` did the same and recorded `('dns', '192.0.2.1')`.
+
+Neither produced a swallowable `URLError`. The round-2 note about `expectedFailure` and `NoNetworkAttempt` has been added to "Bugs found". Nothing else changed since round 2, and the rest of the plan was already accepted in rounds 1 and 2.
+
+### Notes
+
+- **The literal-IP self-test is caught at `getaddrinfo`, not `connect`.** `socket.create_connection` calls `getaddrinfo` even for an IP address. The `connect` patch is a second line of defence for code that opens a socket without resolving a name. The self-test should assert that an attempt was recorded and `NoNetworkAttempt` was raised. It shouldn't assert which patch caught it.
+- **Build order.** Write `support.py` and its self-tests first (step 1). Every later step relies on the guard and on `TempRepo`'s list of roots to redirect.
