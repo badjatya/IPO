@@ -153,7 +153,7 @@ D09 is decided at plan review (round 1), so the steps build in `stock_worker/` a
 - `docs/arch.md`: § 4.2 notes the fetchers now exist and where (per D09); § 9's open-question row narrows to what remains (FII/DII XBRL parsing, consolidated if still gapped, quote if still gapped).
 - `docs/db.md`: one-line notes under `quarterly_results` (amounts are NSE's ₹ lakh converted to crore by 014's tested helper), under `ebitda_cr` (the operating-EBITDA formula `revenue − (total expenses − finance costs − depreciation)` and its four source fields), and under `shareholding` (`promoter_pledged_pct` computed by the fetcher from stated share counts, `ROUND_HALF_UP` to 2 dp; FII/DII come later from XBRL).
 - New ADR `0026-stock-worker-code-location` (D09) with status **Proposed**, covering both halves of the decision: the `stock_worker/` location, and the dependency rule (standard library in 014; later pinned third-party packages through the package's own requirements file, each named in that task's plan) — including the Python/TypeScript Gemini split in tech.md — the human accepts it and ticks D09.
-- **Roadmap changes for the human or Claude to make on `main` after merge** (`ROADMAP.md` is edited only there): mark **014** Done; tick **D09** once the human accepts ADR-0026; set **015** Ready once 008 is Done; set **016** Ready once D10 is decided (adding a note that `fii_move`/`dii_move` need an XBRL-parsing step that 014 explicitly left as a gap — its scope likely grows or a follow-up task appears); **018** stays Blocked until 007/015/016/H02; nothing else changes.
+- **Roadmap changes for the human or Claude to make on `main` after merge** (`ROADMAP.md` is edited only there): mark **014** Done; tick **D09** once the human accepts ADR-0026; set **015** Ready once 008 is Done; set **016** Ready once D10 is decided (adding a note that `fii_move`/`dii_move` need an XBRL-parsing step that 014 explicitly left as a gap — its scope likely grows or a follow-up task appears); **018** stays Blocked until 007/015/016/H02; and record that the **quote source remains open** — 014's 2026-10-30 probe found no working candidate (each candidate's error in `data-sources.md`), so `stock_quotes` stays unfilled until a later task confirms a source, the unprobed `/api/NextApi/…` paths being the candidate to try; nothing else changes.
 
 ## Decisions (settled by the human at plan review, round 1)
 
@@ -194,6 +194,8 @@ No decisions remain open for the build; D09 was the only roadmap decision 014 de
 - **Round 1 review (respond): the announcements `since` filter compares timezone-aware moments.** Both the row's `announced_at` and `since` go through the new `util.to_aware_datetime` (offset preserved; naive read as +05:30; date-only as midnight +05:30; junk `since` raises `ValueError`), so a UTC `since` no longer misorders IST rows; 018's stored run times compare correctly. The `industry` field is listed as an extra in the docstring (review finding 9) — it has no db.md column.
 - **Shareholding `filed_at` is `submissionDate`**, which is date-only in the sampled rows; the record keeps the ISO date exactly as stated (no invented time of day). `broadcastDate` exists alongside it with a full time, but the plan mapped `filed_at` ← `submissionDate`, so that is what the fetcher reads.
 - **Market-wide announcements use the same date-window convention as 003's smoke** (run date − 6 days, `DD-MM-YYYY`), matching the data-sources row's documented one-call option.
+- **Round 2 review (respond): step 6b is built as the plan's "nothing answered" path.** The human ran the probe once on 2026-10-30 from the task worktree (output pasted in "Verification"); no candidate answered, so there is no `quote.json` fixture, no manifest entry and no quote parser. New `stock_worker/quote.py`: `fetch_quote` raises `SourceError` pointing at the recorded gap, and `fetch_all` wires it in as the last source — every run reports the quote gap in `errors` while the other sources still return records; the call count stays 6 (quote makes no call; the dry-run lists it as "(no call: quote source unconfirmed — see data-sources.md)"). `data-sources.md`'s quote row records the run with each candidate's error verbatim, the NextApi candidate honestly as **unprobed** (only the stock page's HTML was searched for a `_next/data` route — NSE's `/api/NextApi/…` paths were **not** tried, left as the candidate for a later task), and the consolidated row records the same-run `identical` re-check confirming that gap. `arch.md` § 9 keeps quote and consolidated as open. `stock_quotes` stays unfilled.
+- **Round 2 review (respond): `to_aware_datetime` accepts a `datetime` object, a `Z` suffix and fractional seconds** (finding 11). Strings parse via `datetime.fromisoformat` (Python 3.11+), which reads both — how a Postgres `timestamptz` prints, and what 018 will pass; a naive value (string or object) is still read as +05:30 and junk still gives `None` (and so still raises `ValueError` in the announcements `since` path).
 
 ## Verification
 
@@ -203,9 +205,9 @@ Run via the driver's `run` tool on the task branch; the dev CLI and the probe ar
 $ python3 -m unittest discover -s tests
 ......................................................................usage: python3.12 -m unittest [-h] [--all] [--root ROOT] [KEY ...]
 python3.12 -m unittest: error: give one or more IPO keys, or --all
-.........................................................................................................................................................................................................................................................
+....................................................................................................................................................................................................................................................................
 ----------------------------------------------------------------------
-Ran 319 tests in 0.548s
+Ran 330 tests in 0.536s
 
 OK
 ```
@@ -216,7 +218,7 @@ OK
 $ python3 -m unittest discover -s .claude/hooks
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.191s
+Ran 19 tests in 0.193s
 
 OK
 ```
@@ -225,35 +227,53 @@ OK
 $ python3 -m unittest discover -s .claude/deepseek
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 2.335s
+Ran 21 tests in 2.451s
 
 OK
 ```
 
-New stock tests, run during the build and again after the round-1 fixes:
+New stock tests, run during the build and again after each review round:
 
 ```
 $ python3 -m unittest discover -s tests -p 'test_stock_*.py'
-............................................................................................
+.......................................................................................................
 ----------------------------------------------------------------------
-Ran 92 tests in 0.021s
+Ran 103 tests in 0.023s
 
 OK
 ```
 
-(92 = test_stock_util 25, test_stock_results 13, test_stock_announcements 14,
+(103 = test_stock_util 29, test_stock_results 13, test_stock_announcements 18,
 test_stock_shareholding 6, test_stock_pledges 8, test_stock_probe 18,
-test_stock_fetchers 8. The round-1 fixes added: probe 4 (non-JSON 200, JSON
-without lastPrice, all-fail writes nothing, distinct re-check; plus the
-in-run identical pair), util 6 (`to_aware_datetime`), announcements 6 (UTC
-`since` drop/keep, UTC boundary, naive → IST, date-only → midnight IST, junk
-raises, no-timestamp kept), results 1 (missing `re_net_sale` → `None`),
-pledges 1 (missing `comName` → `None`).)
+test_stock_fetchers 8, test_stock_quote 3. The round-1 fixes added: probe 4
+(non-JSON 200, JSON without lastPrice, all-fail writes nothing, distinct
+re-check; plus the in-run identical pair), util 6 (`to_aware_datetime`),
+announcements 6 (UTC `since` drop/keep, UTC boundary, naive → IST, date-only →
+midnight IST, junk raises, no-timestamp kept), results 1 (missing
+`re_net_sale` → `None`), pledges 1 (missing `comName` → `None`). The round-2
+fixes added: util 4 (`Z` suffix, fractional seconds, aware `datetime` object,
+naive `datetime` object), announcements 4 (the same four at the `since`
+level), quote 3 (`fetch_quote` raises `SourceError` pointing at the gap, makes
+no call / touches no session state, and the gap message names the run and
+every candidate honestly).)
 
-**Probe run: pending.** The human is asked to run once, after the build step:
+**Probe run (the human's one run, 2026-10-30, from the task worktree; it wrote
+no files — `git status` clean afterwards):**
 
-```bash
-python3 -m stock_worker.probe
+```
+$ python3 -m stock_worker.probe
+candidate            ok         source / error
+stock_page_embedded  False      no embedded quote JSON found in the stock page
+nextapi              False      unprobed: the stock page carries no _next/data URL
+trade_info           False      HTTPError: HTTP Error 403: Forbidden
+cookie_order         False      HTTPError: HTTP Error 403: Forbidden
+quote source: none (see table errors)
+consolidated re-check: identical (the endpoint still returns the standalone body)
 ```
 
-and paste the output (the candidates table with its `quote source:` line and the `consolidated re-check:` line) — that is step 6b's input for the respond round.
+Step 6b used this output as recorded: no `quote.json` was written, `fetch_quote`
+raises `SourceError` (built and tested), the quote row in `data-sources.md`
+records each candidate's error verbatim, the consolidated row records the
+same-run `identical` re-check, and `arch.md` § 9 keeps both open. The NextApi
+candidate is recorded honestly as **unprobed**: only the stock page's HTML was
+searched for a `_next/data` route; NSE's `/api/NextApi/…` paths were not tried.
