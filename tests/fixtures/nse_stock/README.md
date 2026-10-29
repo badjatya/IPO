@@ -81,9 +81,9 @@ Top-level JSON lists keep the first 20 rows; the equity CSV is saved in full. Do
 - company: found (`data[].comName`)
 - shares_held: found (`data[].totPromoterHolding`)
 - shares_pledged: found (`data[].numSharesPledged`)
-- pledged_pct: found (`data[].percSharesPledged`)
+- pledged_pct_of_total: found (`data[].percSharesPledged`)
 - promoter_pct: found (`data[].percPromoterHolding`)
-- promoter_pledged_pct: found (`data[].percPromoterShares`)
+- promoter_shares_pct: found (`data[].percPromoterShares`)
 - quarter_end: found (`data[].shp`)
 - disclosed_at: found (`data[].broadcastDt`)
 
@@ -92,9 +92,9 @@ Top-level JSON lists keep the first 20 rows; the equity CSV is saved in full. Do
 - company: found (`data[].comName`)
 - shares_held: found (`data[].totPromoterHolding`)
 - shares_pledged: found (`data[].numSharesPledged`)
-- pledged_pct: found (`data[].percSharesPledged`)
+- pledged_pct_of_total: found (`data[].percSharesPledged`)
 - promoter_pct: found (`data[].percPromoterHolding`)
-- promoter_pledged_pct: found (`data[].percPromoterShares`)
+- promoter_shares_pct: found (`data[].percPromoterShares`)
 - quarter_end: found (`data[].shp`)
 - disclosed_at: found (`data[].broadcastDt`)
 

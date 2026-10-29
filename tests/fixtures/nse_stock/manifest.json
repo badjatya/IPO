@@ -379,7 +379,7 @@
         },
         {
           "found": true,
-          "name": "pledged_pct",
+          "name": "pledged_pct_of_total",
           "path": "data[].percSharesPledged"
         },
         {
@@ -389,7 +389,7 @@
         },
         {
           "found": true,
-          "name": "promoter_pledged_pct",
+          "name": "promoter_shares_pct",
           "path": "data[].percPromoterShares"
         },
         {
@@ -450,7 +450,7 @@
         },
         {
           "found": true,
-          "name": "pledged_pct",
+          "name": "pledged_pct_of_total",
           "path": "data[].percSharesPledged"
         },
         {
@@ -460,7 +460,7 @@
         },
         {
           "found": true,
-          "name": "promoter_pledged_pct",
+          "name": "promoter_shares_pct",
           "path": "data[].percPromoterShares"
         },
         {

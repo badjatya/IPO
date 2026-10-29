@@ -121,9 +121,9 @@ PLEDGE_FIELDS = (
     field("company", "data[].comName"),
     field("shares_held", "data[].totPromoterHolding"),
     field("shares_pledged", "data[].numSharesPledged"),
-    field("pledged_pct", "data[].percSharesPledged"),
+    field("pledged_pct_of_total", "data[].percSharesPledged"),
     field("promoter_pct", "data[].percPromoterHolding"),
-    field("promoter_pledged_pct", "data[].percPromoterShares"),
+    field("promoter_shares_pct", "data[].percPromoterShares"),
     field("quarter_end", "data[].shp"),
     field("disclosed_at", "data[].broadcastDt"),
 )
@@ -280,7 +280,6 @@ def summarise(kind, body):
             "row_count": count,
             "header": header,
         }
-    text = body.decode("utf-8", "replace") if isinstance(body, bytes) else str(body)
     return {
         "kind": "html",
         "type": "html",
