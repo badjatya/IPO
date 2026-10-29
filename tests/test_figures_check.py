@@ -193,11 +193,14 @@ class KeyTests(NoNetworkCase):
             self.assertEqual(code, 0)
             self.assertIn("x: 1/1 ₹ figures found (100%)", out.getvalue())
 
-    def test_main_all_aggregates_and_exits_zero_even_when_missing(self):
+    def test_main_all_aggregates_and_exits_zero_even_when_nothing_found(self):
         with TempRepo() as t:
             t.analysis("alpha", "Issue ₹100 Cr\nGMP ₹20")
             t.card("alpha", {"name": "A", "source": "rhp"})
             t.write_text("analysis/rhp/alpha.txt", "₹10,000.00 lakh")
+            t.analysis("gamma", "Anchor ₹5 Cr")          # nothing in the RHP matches
+            t.card("gamma", {"name": "C", "source": "rhp"})
+            t.write_text("analysis/rhp/gamma.txt", "₹1.00")
             t.analysis("beta", "Anchor ₹5 Cr")
             t.card("beta", {"name": "B", "source": "web"})
             out = io.StringIO()
@@ -207,9 +210,10 @@ class KeyTests(NoNetworkCase):
             self.assertEqual(code, 0)
             self.assertIn("alpha: 1/2 ₹ figures found (50%)", text)
             self.assertIn("not found: ₹20", text)
+            self.assertIn("gamma: 0/1 ₹ figures found (0%)", text)
             self.assertIn("beta: skipped (source: web)", text)
-            self.assertIn("TOTAL: 1/2 ₹ figures found (50%) "
-                          "across 2 analyses (1 skipped)", text)
+            self.assertIn("TOTAL: 1/3 ₹ figures found (33%) "
+                          "across 3 analyses (1 skipped)", text)
 
     def test_no_keys_is_usage_error(self):
         with TempRepo() as t:
