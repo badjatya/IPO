@@ -42,33 +42,35 @@ describe("snapshot parser", () => {
 
     const ipo = findIpo(rows, "sfc-environmental-technologies");
     expect(ipo.name).toBe("SFC Environmental Technologies");
-    expect(ipo.priceHigh).toBe(330);
-    expect(ipo.priceLow).toBe(313);
+    expect(ipo.priceHigh).toBe("330");
+    expect(ipo.priceLow).toBe("313");
     expect(ipo.symbol).toBe("SFCTECH");
     expect(ipo.lotSize).toBe(45);
-    expect(ipo.issueSizeCr).toBe(667.53);
+    expect(ipo.issueSizeCr).toBe("667.53");
     expect(ipo.rhpUrl).toContain("RHP_SFCTECH.zip");
     expect(ipo.rhpSource).toBe("nse");
     expect(ipo.investorgainUrl).toContain("investorgain.com");
     expect(ipo.anchorDone).toBe(true);
     expect(ipo.phase).toBe("closing_today");
-    // updated_at is the snapshot's own generated_at, never now().
-    expect(ipo.updatedAt).toBe("2026-10-29T09:07+05:30");
+    // updated_at is the snapshot's own generated_at, never now() — as a Date,
+    // which is what Drizzle's timestamp columns take (PgTimestamp converts
+    // with toISOString, so a string would throw at insert).
+    expect(ipo.updatedAt).toEqual(new Date("2026-10-29T09:07+05:30"));
 
     const snapshot = findSnapshot(rows, "sfc-environmental-technologies");
-    expect(snapshot.takenAt).toBe("2026-10-29T09:07+05:30");
-    expect(snapshot.gmp).toBe(10);
-    expect(snapshot.gmpPct).toBe(3.03);
+    expect(snapshot.takenAt).toEqual(new Date("2026-10-29T09:07+05:30"));
+    expect(snapshot.gmp).toBe("10");
+    expect(snapshot.gmpPct).toBe("3.03");
     expect(snapshot.gmpUpdated).toBe("28-Oct 23:37");
-    expect(snapshot.pe).toBe(19.24);
+    expect(snapshot.pe).toBe("19.24");
     expect(snapshot.sourceFile).toBe("data/snapshots/2026-10-29T0907.json");
     expect(Array.isArray(snapshot.allotment)).toBe(true);
 
     const retail = findSubscription(rows, "sfc-environmental-technologies", "retail");
     expect(retail.sharesOffered).toBe(7079872);
     expect(retail.sharesBid).toBe(1435005);
-    expect(retail.times).toBe(0.2);
-    expect(findSubscription(rows, "sfc-environmental-technologies", "total").times).toBe(0.15);
+    expect(retail.times).toBe("0.2");
+    expect(findSubscription(rows, "sfc-environmental-technologies", "total").times).toBe("0.15");
   });
 
   it("maps a shareholder subscription category to a row (the decided enum value)", () => {
@@ -76,8 +78,19 @@ describe("snapshot parser", () => {
     const shareholder = findSubscription(rows, "jio-platforms", "shareholder");
     expect(shareholder.sharesOffered).toBe(22341376);
     expect(shareholder.sharesBid).toBe(120044304);
-    expect(shareholder.times).toBe(5.37);
-    expect(findSubscription(rows, "jio-platforms", "employee").times).toBe(1.87);
+    expect(shareholder.times).toBe("5.37");
+    expect(findSubscription(rows, "jio-platforms", "employee").times).toBe("1.87");
+  });
+
+  it("parses a real snapshot with no subscription data (an empty insert array)", () => {
+    // 10 of the repo's 35 committed snapshots carry no subscription data at
+    // all; the apply layer must skip the empty ipo_subscriptions insert rather
+    // than let Drizzle's `.values([])` throw.
+    const rows = parseSnapshotDocument(json("data/snapshots/2026-10-26T0907.json"), "data/snapshots/2026-10-26T0907.json");
+    expect(rows.subscriptions).toEqual([]);
+    expect(rows.snapshots.length).toBeGreaterThan(0);
+    expect(rows.ipos.length).toBeGreaterThan(0);
+    expect(findSnapshot(rows, "sfc-environmental-technologies").sourceFile).toBe("data/snapshots/2026-10-26T0907.json");
   });
 
   it("leaves fields a file lacks out of the row (they store as null)", () => {
@@ -116,6 +129,17 @@ describe("snapshot parser", () => {
         "data/snapshots/x.json",
       ),
     ).toThrow(/subscription category/);
+  });
+
+  it("throws on an unparseable generated_at instead of passing it through", () => {
+    // A malformed timestamptz must fail the commit's transaction (and land in
+    // imports.error), not reach Drizzle as a non-Date value.
+    expect(() =>
+      parseSnapshotDocument(
+        { generated_at: "not a date-time", ipos: [{ key: "x", name: "X", phase: "open" }] } as never,
+        "data/snapshots/x.json",
+      ),
+    ).toThrow(/generated_at/);
   });
 
   it("throws on a non-object file", () => {
@@ -160,7 +184,7 @@ describe("card parser", () => {
     );
     expect(withAi.aiModel).toBe("claude-sonnet-5-5");
     expect(withAi.aiPromptVersion).toBe("v1");
-    expect(withAi.aiWrittenAt).toBe("2026-10-13T09:00+05:30");
+    expect(withAi.aiWrittenAt).toEqual(new Date("2026-10-13T09:00+05:30"));
 
     const withoutAi = parseCardDocument(
       { name: "X", source: "web", verdict: "apply", verdict_text: "Apply", anchor_grade: "pending" } as never,
@@ -294,20 +318,20 @@ describe("outcomes parser", () => {
     const hd = rows.find((row) => row.ipoKey === "hd-fire-protect")!;
     expect(hd.symbol).toBe("HDFIRE");
     expect(hd.listingDate).toBe("2026-10-21");
-    expect(hd.issuePrice).toBe(271);
-    expect(hd.listingPrice).toBe(335);
-    expect(hd.listingGainPct).toBe(23.62);
-    expect(hd.gmpEveSnapshot).toBe("2026-10-20T19:09+05:30");
+    expect(hd.issuePrice).toBe("271");
+    expect(hd.listingPrice).toBe("335");
+    expect(hd.listingGainPct).toBe("23.62");
+    expect(hd.gmpEveSnapshot).toEqual(new Date("2026-10-20T19:09+05:30"));
     expect(hd.verdict).toBe("apply");
     expect(hd.verdictReport).toBe("2026-10-15-am.json");
-    expect(hd.subQib).toBe(156.82);
-    expect(hd.subRetail).toBe(20.83);
-    expect(hd.subTotal).toBe(82.41);
+    expect(hd.subQib).toBe("156.82");
+    expect(hd.subRetail).toBe("20.83");
+    expect(hd.subTotal).toBe("82.41");
 
     const zetwerk = rows.find((row) => row.ipoKey === "zetwerk")!;
     expect(zetwerk.verdict).toBe("avoid");
     expect(zetwerk.anchorGrade).toBe("strong");
-    expect(zetwerk.pe).toBe(-14.17);
-    expect(zetwerk.sizeCr).toBe(5012.33);
+    expect(zetwerk.pe).toBe("-14.17");
+    expect(zetwerk.sizeCr).toBe("5012.33");
   });
 });

@@ -24,10 +24,41 @@ export function maybeString(value: unknown): string | undefined {
   return String(value);
 }
 
-/** A number field: null/undefined pass through, anything numeric stays verbatim. */
-export function maybeNumber(value: unknown, label: string): number | string | undefined {
+/**
+ * A `numeric` column value: null/undefined pass through; a JSON number or a
+ * numeric string becomes a string, which is what Drizzle's `numeric` type
+ * (mode "string") and the `numeric(...)` schema columns take.
+ */
+export function maybeDecimal(value: unknown, label: string): string | undefined {
   if (value === null || value === undefined) return undefined;
-  if (typeof value === "number" && !Number.isNaN(value)) return value;
+  if (typeof value === "number" && !Number.isNaN(value)) return String(value);
   if (typeof value === "string" && value.trim() !== "" && !Number.isNaN(Number(value))) return value;
   throw new Error(`invalid ${label}: ${JSON.stringify(value)} (expected a number)`);
+}
+
+/**
+ * An `integer` / `bigint` (mode "number") column value: null/undefined pass
+ * through; a JSON number stays a number, a numeric string is converted.
+ */
+export function maybeInt(value: unknown, label: string): number | undefined {
+  if (value === null || value === undefined) return undefined;
+  if (typeof value === "number" && !Number.isNaN(value)) return value;
+  if (typeof value === "string" && value.trim() !== "" && !Number.isNaN(Number(value))) return Number(value);
+  throw new Error(`invalid ${label}: ${JSON.stringify(value)} (expected a number)`);
+}
+
+/**
+ * A timestamptz/timestamp column value: null/undefined pass through; anything
+ * else becomes a `Date`. Drizzle's `timestamp()` columns are in date mode, so
+ * the driver value must be a `Date` (`PgTimestamp.mapToDriverValue` calls
+ * `toISOString()`); an unparseable value throws — the commit's transaction
+ * rolls back and the error lands in `imports.error`.
+ */
+export function maybeDate(value: unknown, label: string): Date | undefined {
+  if (value === null || value === undefined) return undefined;
+  const date = new Date(String(value));
+  if (Number.isNaN(date.getTime())) {
+    throw new Error(`invalid ${label}: ${JSON.stringify(value)} (expected a date-time)`);
+  }
+  return date;
 }
