@@ -363,3 +363,19 @@ One entry per working session: what we asked the AI to do, what it did, what a h
 - **Learned:**
   - The two-model loop caught real bugs on both sides. DeepSeek's build was solid apart from one over-broad guard.
   - The driver blocked DeepSeek from running its own CI command, so the driver now allows the agent's offline commands.
+
+### 2026-10-29 (later): Task 004, routine provenance and documents-as-data
+
+- **Asked:** the human asked Claude to pick a Ready task nobody was working on. Another session had 005. Claude chose 004, the only Ready task with no open decisions, and ran `/run-task 004`. The human then asked for the merge.
+- **Rounds:**
+  - **Plan:** two rounds.
+  - **Code:** one round, approved with a Minor follow-up: no test checks that a card carrying the fields renders the same.
+  - **Cost:** DeepSeek's steps cost $0.065 in total: plan $0.042, revise $0.010, build $0.013.
+- **Human decisions:** `ai_prompt_version` comes from a version line in `ROUTINE.md`. `ai_model` is the model actually writing the file, so files from Opus development sessions aren't labelled Sonnet.
+- **Notable findings:**
+  - **Claude applied the plan's exact diffs to a scratch copy and ran the guard tests.** This showed that the plan's fallback, writing `"not available"` when `date` fails, would be rejected by the plan's own guard and stop the routine at the write hook. The fallback now leaves the field out.
+  - **A bare-number `ai_prompt_version` was also rejected,** so `ROUTINE.md` now says to quote it.
+  - **The step-4 diffs were written against the branch.** 005 changed `guard.py` on main in the meantime. Rebuilding them against main, rather than diffing the branch's files, kept 005's figures hook.
+- **Learned:**
+  - Applying a plan's "exact diffs" to a scratch copy and running the tests is a cheap and reliable plan-review check.
+  - Changes the human applies by hand should be rebuilt against the current main at merge time.

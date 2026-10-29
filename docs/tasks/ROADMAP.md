@@ -52,7 +52,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [001](#001--agent-test-suite) | Agent test suite | 1 | — | Done |
 | [002](#002--ci-workflow) | CI workflow | 1 | 001 | Done |
 | [003](#003--nse-stock-data-spike) | NSE stock-data spike and runner smoke test | 1 | — | Done |
-| [004](#004--routine-provenance-and-documents-as-data) | Routine provenance and documents-as-data | 1 | 001 | **Ready** |
+| [004](#004--routine-provenance-and-documents-as-data) | Routine provenance and documents-as-data | 1 | 001 | Done |
 | [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | Done |
 | [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | **Ready** |
 | [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Blocked |
@@ -90,7 +90,7 @@ flowchart LR
         T001[001 agent tests]:::done
         T002[002 CI]:::done
         T003[003 NSE spike]:::done
-        T004[004 provenance]:::ready
+        T004[004 provenance]:::done
         T005[005 figures check]:::done
     end
     subgraph wk2 ["Week 2: web app, IPO side"]
@@ -272,7 +272,7 @@ Confirm the NSE endpoints for quotes, quarterly results (standalone and consolid
 | | |
 | --- | --- |
 | Slug | `004-routine-provenance` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | 001 |
 | Owner | DeepSeek plans and builds the Python side. The changes to `ROUTINE.md` and `.claude/hooks/` go in the plan as exact diffs, and **the human applies them** (DeepSeek can't edit those paths) |
 | Milestone | M1 |
@@ -283,6 +283,11 @@ Make the routine's cards and reports carry `ai_model`, `ai_prompt_version` and `
 - **Watch for:** existing files must still validate. Where the prompt version comes from (for example a version line in `ROUTINE.md`) is for the plan to propose.
 - **Read:** [ai.md § Guardrails](../ai.md#guardrails), [db.md § Principles](../db.md#principles), `ROUTINE.md`, `.claude/hooks/guard.py`.
 - **Start:** `/run-task 004`
+- **Result:** merged 2026-10-29.
+  - **Who did what:** DeepSeek (OpenRouter) planned and built it, and Claude reviewed it. It took two plan rounds and one code round. DeepSeek's three steps cost $0.065.
+  - **What it adds:** the optional provenance fields in the card and report schemas, with tests that files render the same with or without them. `ai.md` and `db.md` are updated.
+  - **Human decisions:** `ai_prompt_version` comes from a `**Prompt version: N**` line in `ROUTINE.md`. `ai_model` is the ID of the model actually writing the file, not a fixed string.
+  - **Still to do (human):** apply plan step 4, the `ROUTINE.md`, `.claude/hooks/guard.py` and `test_guard.py` diffs, in one commit before the next routine run. Then confirm that the first non-quiet run writes the three fields. Until then, the two `ai.md` rows marked Running for task 004 run ahead of the routine.
 
 ### 005 · Figures check
 
