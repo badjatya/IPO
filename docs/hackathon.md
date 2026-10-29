@@ -124,7 +124,7 @@ Markdown (or an uploaded `.md`) covering system architecture, components, data f
 | AI-assisted testing strategy\*                       | 5,000 | `tests/` _(to build)_; scorecard as an eval of the verdicts                      |
 | Tests created or executed\*                          | 5,000 | `tests/` _(to build)_; `python3 -m ipo_agent.outcomes --no-fetch`                |
 | How AI helped find bugs, edge cases or regressions\* | 5,000 | AI journal; commits such as the Sahajanand retail quota fix (35%, not 10%)       |
-| How were test results validated?\*                   | 5,000 | CI or test output _(to build)_; scorecard against real listing prices            |
+| How were test results validated?\*                   | 5,000 | CI on every push (`.github/workflows/ci.yml`); scorecard against real listing prices |
 
 ### 7. Key decisions, limitations & dependencies
 

@@ -77,7 +77,7 @@ How Claude gets exactly the context it needs and no more.
 | --- | --- | --- |
 | **Listing scorecard** (`python3 -m ipo_agent.outcomes --no-fetch`) | Each call against the real listing: average listing gain by verdict, GMP miss, which signals tracked listing gains ([ADR-0007](adr/0007-listing-scorecard-as-eval.md)) | **Running**: 8 listings scored by 2026-10-29 |
 | Figures check | Share of ₹ figures in each analysis found in its RHP text | **Decided** |
-| Schema check | Every card and report in the repo matches its schema | **Decided** |
+| Schema check | Every card and report in the repo matches its schema | **Running**: `.claude/hooks/test_guard.py`, run by CI on every push (`.github/workflows/ci.yml`) |
 | Analysis quality review | A second Claude pass grades each analysis against the template (all sections, numbers cited, grade justified) | **Proposed** |
 | Regression set | Past IPOs replayed with a changed instruction; calls and figures compared with before | **Proposed** |
 
@@ -167,4 +167,4 @@ flowchart LR
 | `.claude/settings.json` hooks | **Running** | Guardrails above, enforced by the harness instead of by instruction; tests in `.claude/hooks/test_guard.py` |
 | `opencode.json`, `.opencode/agents/planner.md`, `.opencode/commands/` | **Running** | DeepSeek's permissions, planning-only agent, and the commands `/plan-task`, `/revise-plan`, `/build-task`, `/respond-review` |
 | Agent `tests/` | **Running** | Python `unittest` for the agent, saved fixtures only, no network |
-| CI | **Decided** | GitHub Actions; app tests against a Neon branch |
+| CI | **Running** for the agent | GitHub Actions (`.github/workflows/ci.yml`): agent tests and the schema check on every push and pull request. App tests against a Neon branch are **Decided** (tasks 006, 007) |
