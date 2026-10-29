@@ -1,6 +1,6 @@
 ---
 task: 005-figures-check
-status: plan-review
+status: approved
 branch: task/005-figures-check
 assigned_by: Vijay
 planner: DeepSeek deepseek-v4-flash-0731 (OpenRouter)

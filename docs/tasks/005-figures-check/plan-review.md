@@ -42,3 +42,24 @@ The plan is well grounded. It reads the real figure shapes in `analysis/` and `a
 - **Approximate figures.** Figures written with `≈`, such as `≈₹2,534 Cr` or `≈ ₹10,765 Cr` market caps, mark themselves as computed. You could count them separately ("n approximate, not checked") instead of as missing, so the share measures what the writer claims came from the RHP. Optional. If you do it, test it.
 - **Short units need word boundaries.** `L`, `cr` and `mn` must only match as whole words, so `₹20 Listing…` isn't read as ₹20 lakh. A test for that would be cheap.
 - **Report-only output is still output.** A missing figure in `--all` must never change the exit code. The step 2 test already says so; keep it.
+
+## Round 2 (2026-10-29)
+
+**Verdict:** Approved
+
+**Read:** plan.md as revised in `716152f` (the diff against round 1), and the Revisions row.
+
+All five round 1 items are answered, and the human's decision is recorded under "Decisions".
+
+1. **Hook channel.** The diff now prints `hookSpecificOutput.additionalContext` JSON on stdout and exits 0. A skipped or fully found analysis stays quiet. Step 6's check looks for the JSON on stdout.
+2. **Tolerance.** Half a unit of the last written digit. All three requested tests are in step 1. I checked the arithmetic of the existing cases under the new rule: `₹77.6 Cr` (±0.05 Cr) still covers ₹7,756.07 lakhs (₹77.56 Cr), and `₹2,830 Cr` equals ₹28,300.00 million.
+3. **Ranges.** Both ends count, and a trailing unit applies to both. Tested plain and with a unit.
+4. **Labels.** The guardrail row reads "Running in CI; the hook is Decided" until the human applies the diff. The follow-up to flip it is under "Doc updates".
+5. **CI run.** Step 4 proves itself from a clean worktree. The GitHub run is recorded after the human pushes.
+
+The plan also took up both optional notes: `≈` figures are listed as approximate and left out of the share, and short units match only as whole words. Both are tested.
+
+### Notes
+
+- **Hook diff (step 6).** The human applies it. Claude verifies it in code review if it's on the branch by then, or after the merge if not.
+- **The `--all` share.** Expect a low number on today's analyses, for the reasons the plan gives. The figure quoted in ai.md must be the real output pasted in Verification.
