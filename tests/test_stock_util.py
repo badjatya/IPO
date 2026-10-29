@@ -1,3 +1,4 @@
+import datetime as dt
 import sys
 import unittest
 from decimal import Decimal
@@ -30,6 +31,12 @@ class DecimalTests(NoNetworkCase):
         self.assertIsNone(util.to_decimal(""))
         self.assertIsNone(util.to_decimal(None))
         self.assertIsNone(util.to_decimal("12abc"))
+
+    def test_non_finite_is_none(self):
+        # NaN and Infinity must not flow into numeric columns or arithmetic.
+        self.assertIsNone(util.to_decimal("NaN"))
+        self.assertIsNone(util.to_decimal("Infinity"))
+        self.assertIsNone(util.to_decimal("-Infinity"))
 
 
 class DateTests(NoNetworkCase):
@@ -76,6 +83,32 @@ class TimestampTests(NoNetworkCase):
     def test_junk_is_none(self):
         self.assertIsNone(util.parse_timestamp("nope"))
         self.assertIsNone(util.parse_timestamp(None))
+
+
+class AwareDatetimeTests(NoNetworkCase):
+    def test_keeps_the_offset(self):
+        moment = util.to_aware_datetime("2026-10-29T05:00:00+00:00")
+        self.assertEqual(moment.utcoffset(), dt.timedelta(0))
+        self.assertEqual(moment.isoformat(), "2026-10-29T05:00:00+00:00")
+
+    def test_naive_is_read_as_ist(self):
+        moment = util.to_aware_datetime("2026-10-29T10:30:00")
+        self.assertEqual(moment.utcoffset(), dt.timedelta(hours=5, minutes=30))
+        self.assertEqual(moment.isoformat(), "2026-10-29T10:30:00+05:30")
+
+    def test_date_only_is_midnight_ist(self):
+        moment = util.to_aware_datetime("2026-10-29")
+        self.assertEqual(moment.isoformat(), "2026-10-29T00:00:00+05:30")
+
+    def test_orders_across_offsets(self):
+        utc = util.to_aware_datetime("2026-10-29T03:25:40+00:00")
+        ist = util.to_aware_datetime("2026-10-29T08:55:40+05:30")
+        self.assertEqual(utc, ist)  # the same instant, different offsets
+
+    def test_junk_is_none(self):
+        self.assertIsNone(util.to_aware_datetime(None))
+        self.assertIsNone(util.to_aware_datetime("not-a-timestamp"))
+        self.assertIsNone(util.to_aware_datetime("13-13-2026"))
 
 
 class ToCroreTests(NoNetworkCase):

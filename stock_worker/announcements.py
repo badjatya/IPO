@@ -9,14 +9,22 @@ Records are keyed exactly as the ``db.md`` ``announcements`` columns:
 ``title``          ``attchmntText``, kept raw
 ``attachment_url`` ``attchmntFile`` (absolute; ``None`` when the row has none)
 ``exchange_ref``   ``seq_id`` — the exchange's own ID, the dedupe key
+
+Extras (no db.md column; kept in the record as the plan requires):
 ``industry``       ``smIndustry``, kept raw (``None`` when absent)
 
-The optional ``since`` (an ISO timestamp) is a code-side filter: rows
-announced before it are dropped, so a daily run is one call that keeps only
-what's new. Missing fields are ``None``, never estimated.
+The optional ``since`` (a full ISO timestamp) is a code-side filter: rows
+announced strictly before it are dropped, so a daily run is one call that
+keeps only what's new. Both sides are compared as timezone-aware moments via
+``util.to_aware_datetime``: ``since``'s offset is kept, a naive ``since`` is
+read as NSE local time (+05:30), a date-only ``since`` as midnight +05:30,
+and a ``since`` that parses to nothing raises ``ValueError`` (018 passes a
+stored run time, e.g. from a ``timestamptz`` column, which always carries an
+offset). Rows without a usable ``announced_at`` are kept — they cannot be
+proven older. Missing fields are ``None``, never estimated.
 """
 
-from .util import parse_timestamp
+from .util import parse_timestamp, to_aware_datetime
 
 
 def _rows(body):
@@ -28,14 +36,29 @@ def _rows(body):
     return body or []
 
 
+def _since_moment(since):
+    """``since`` as a timezone-aware moment; junk raises ``ValueError``."""
+    moment = to_aware_datetime(since)
+    if moment is None:
+        raise ValueError(
+            "since must be a full ISO timestamp, e.g. '2026-10-29T05:00:00+00:00'"
+            f" (a naive value is read as +05:30, a date-only value as midnight "
+            f"+05:30); got {since!r}"
+        )
+    return moment
+
+
 def parse(rows, since=None):
     """Parse an announcements response into records, dropping rows announced
-    strictly before ``since`` (an ISO timestamp) when one is given."""
+    strictly before ``since`` (a full ISO timestamp) when one is given."""
+    since_moment = _since_moment(since) if since is not None else None
     records = []
     for row in _rows(rows):
         announced_at = parse_timestamp(row.get("an_dt"))
-        if since is not None and announced_at is not None and announced_at < since:
-            continue
+        if since_moment is not None:
+            moment = to_aware_datetime(announced_at)
+            if moment is not None and moment < since_moment:
+                continue
         seq_id = row.get("seq_id")
         records.append(
             {

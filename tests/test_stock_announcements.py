@@ -65,6 +65,50 @@ class AnnouncementsTests(NoNetworkCase):
         )
         self.assertEqual([r["exchange_ref"] for r in records], ["106833561"])
 
+    def test_utc_since_drops_an_older_ist_row_and_keeps_a_newer_one(self):
+        # 2026-10-29T05:00:00+00:00 is 10:30 IST. The 08:55 IST row (03:25 UTC)
+        # is older and is dropped; the 11:12 IST row (05:42 UTC) is newer.
+        rows = [
+            {"an_dt": "29-Oct-2026 08:55:40", "desc": "old", "seq_id": "1"},
+            {"an_dt": "29-Oct-2026 11:12:00", "desc": "new", "seq_id": "2"},
+        ]
+        records = announcements.parse(rows, since="2026-10-29T05:00:00+00:00")
+        self.assertEqual([r["exchange_ref"] for r in records], ["2"])
+
+    def test_utc_since_boundary_equal_time_is_kept(self):
+        # 08:55:40 IST == 03:25:40 UTC; strictly-before drops, equal keeps.
+        rows = [{"an_dt": "29-Oct-2026 08:55:40", "desc": "x", "seq_id": "1"}]
+        records = announcements.parse(rows, since="2026-10-29T03:25:40+00:00")
+        self.assertEqual([r["exchange_ref"] for r in records], ["1"])
+
+    def test_naive_since_is_read_as_ist(self):
+        rows = [
+            {"an_dt": "29-Oct-2026 10:00:00", "desc": "x", "seq_id": "1"},
+            {"an_dt": "29-Oct-2026 11:30:00", "desc": "y", "seq_id": "2"},
+        ]
+        records = announcements.parse(rows, since="2026-10-29T10:30:00")
+        self.assertEqual([r["exchange_ref"] for r in records], ["2"])
+
+    def test_date_only_since_is_midnight_ist(self):
+        rows = [
+            {"an_dt": "25-Oct-2026 23:00:00", "desc": "x", "seq_id": "1"},
+            {"an_dt": "26-Oct-2026 00:30:00", "desc": "y", "seq_id": "2"},
+        ]
+        records = announcements.parse(rows, since="2026-10-26")
+        self.assertEqual([r["exchange_ref"] for r in records], ["2"])
+
+    def test_junk_since_raises_value_error(self):
+        with self.assertRaises(ValueError):
+            announcements.parse([], since="not-a-timestamp")
+
+    def test_row_without_a_timestamp_is_kept_under_since(self):
+        # A row with no usable announced_at cannot be proven older; it is kept
+        # (the caller dedupes by exchange_ref).
+        records = announcements.parse(
+            [{"seq_id": "1", "desc": "x"}], since="2026-10-29T05:00:00+00:00"
+        )
+        self.assertEqual(len(records), 1)
+
     def test_no_since_keeps_every_parsed_row(self):
         # Without a since filter all 20 rows stay (oldest: 21-Sep-2026 19:05).
         self.assertEqual(len(announcements.parse(load("announcements.json"))), 20)

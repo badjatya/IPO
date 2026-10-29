@@ -66,9 +66,14 @@ def to_decimal(value):
     if not text:
         return None
     try:
-        return Decimal(text)
+        decimal = Decimal(text)
     except ArithmeticError:
         return None
+    if not decimal.is_finite():
+        # "NaN" and "Infinity" are junk, not values that belong in numeric
+        # columns or pledge arithmetic.
+        return None
+    return decimal
 
 
 def parse_date(value):
@@ -132,6 +137,48 @@ def parse_timestamp(value):
     date_only = parse_date(text)
     if date_only is not None:
         return date_only
+    return None
+
+
+IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
+
+
+def to_aware_datetime(value):
+    """ISO timestamp or date -> a timezone-aware ``datetime``; junk -> ``None``.
+
+    A full timestamp keeps its own offset; a naive timestamp is read as NSE's
+    ``+05:30`` (the same assumption ``parse_timestamp`` makes) and a date-only
+    value as midnight ``+05:30`` — the earliest moment that date could carry,
+    needed so a date can be compared against a moment. Impossible dates and
+    junk -> ``None``.
+    """
+    if value is None:
+        return None
+    text = str(value).strip()
+    match = _ISO_TS_RE.fullmatch(text)
+    if match:
+        year, mon, day, hh, mm, ss, offset = match.groups()
+        try:
+            moment = dt.datetime(
+                int(year), int(mon), int(day), int(hh), int(mm), int(ss or 0)
+            )
+        except ValueError:
+            return None
+        if offset:
+            sign = 1 if offset[0] == "+" else -1
+            oh, om = int(offset[1:3]), int(offset[4:6])
+            tz = dt.timezone(sign * dt.timedelta(hours=oh, minutes=om))
+        else:
+            tz = IST
+        return moment.replace(tzinfo=tz)
+    match = _ISO_DATE_RE.fullmatch(text)
+    if match:
+        year, mon, day = match.groups()
+        try:
+            moment = dt.datetime(int(year), int(mon), int(day))
+        except ValueError:
+            return None
+        return moment.replace(tzinfo=IST)
     return None
 
 
