@@ -11,7 +11,7 @@ Every external source the system reads: what we take from it, how often, what go
 | NSE archives (`nsearchives.nseindia.com`) | RHP, ratios and anchor report downloads | **Running** | `ipo_agent/rhp.py` |
 | SEBI | RHPs filed with the RoC, before NSE lists the issue | **Running** | `ipo_agent/sebi.py` |
 | Web search (inside the routine) | Anchor investor lists, company news, numbers NSE didn't return | **Running** | `ROUTINE.md` steps 1, 2 and 2b |
-| NSE stock data | Quotes, quarterly results, announcements, shareholding, pledges | **Decided**; endpoints to confirm; fetched by the stock worker | Planned |
+| NSE stock data | Quotes, quarterly results, announcements, shareholding, pledges | **Decided**; endpoints partly confirmed in 003 (gaps: quote, consolidated results, FII/DII split, pledge symbol, filing links); fetched by the stock worker | Planned |
 
 The routine's network allowlist covers `www.nseindia.com`, `nsearchives.nseindia.com`, `www.investorgain.com`, `www.sebi.gov.in` and `www.bseindia.com` ([SETUP.md](../SETUP.md)).
 
@@ -57,19 +57,26 @@ The routine's network allowlist covers `www.nseindia.com`, `nsearchives.nseindia
 | Rule | Results are cited; numbers from search are labelled as such in the brief |
 | Limit | In the routine's environment, web *fetch* can't reach most news sites, but web *search* works |
 
-## NSE stock data (planned)
+## NSE stock data
 
-Needed for the watchlist ([plan.md](plan.md#watchlist-signals)). Each endpoint will be confirmed against NSE before we build on it, and recorded here.
+Needed for the watchlist ([plan.md](plan.md#watchlist-signals)). The smoke probe in task 003 made one fixed 12-request run on 2026-10-29 local time. It confirmed the endpoints below except where marked **not confirmed**. Amounts are saved exactly as returned; **unit not stated** means the response did not say whether a value is rupees, lakh or crore, so 014 must confirm one filing before converting. No headers, cookies or secrets are stored in the fixtures.
 
-| Data | Fields needed | Cadence |
-| --- | --- | --- |
-| Quote | Price, change, 52-week high and low, market cap, P/E | Every run |
-| Financial results | Quarterly revenue, expenses, EBITDA, PAT, EPS; standalone and consolidated; filing link | Daily check; new rows only |
-| Corporate announcements | Exchange ID, time, subject, title, attachment link | Every run; new rows only |
-| Shareholding pattern | Promoter, FII, DII, public; quarter | Quarterly; daily check |
-| Pledged shares | Promoter shares pledged | Daily check |
+| Data | Confirmed endpoint | Fields used (`db.md` ← source path) | Unit | Cadence | Quirks |
+| --- | --- | --- | --- | --- | --- |
+| Quote | **Not confirmed.** Tried `GET https://www.nseindia.com/api/quote-equity?symbol=RELIANCE`; local run returned `HTTP 403 Forbidden` | Expected: `stocks.symbol`/`isin` ← `securityInfo.symbol`/`securityInfo.isin`; `stock_quotes.price` ← `priceInfo.lastPrice`; `change_pct` ← `priceInfo.pChange`; `week52_high`/`low` ← `priceInfo.weekHighLow.weekHigh`/`weekLow`; market cap and P/E only if the base response states them. None confirmed | unit not stated | Every run | The stock page (`/get-quotes/equity?symbol=RELIANCE`) answered, but the base quote API returned 403 from the build IP. The `section=trade_info` variant was not called; it stays an unprobed candidate |
+| Financial results, standalone | `GET https://www.nseindia.com/api/results-comparision?symbol=RELIANCE` | `quarterly_results.period_end` ← `resCmpData[].re_to_dt`; `revenue_cr` ← `resCmpData[].re_net_sale` (fallback `re_total_inc`); `other_income_cr` ← `resCmpData[].re_oth_inc_new` (fallback `re_oth_inc`); `expenses_cr` ← `resCmpData[].re_oth_tot_exp`; `pat_cr` ← `resCmpData[].re_net_profit`; `eps` ← `resCmpData[].re_basic_eps_for_cont_dic_opr` | unit not stated | Daily check; new rows only | EBITDA and a filing link are **not in this response**. 014 must derive EBITDA or source it elsewhere, and take the filing link from `results_filings`. The first response has 5 quarters |
+| Financial results, consolidated | `GET https://www.nseindia.com/api/results-comparision?symbol=RELIANCE&consolidated=true` | Same paths as standalone | unit not stated | Daily check; new rows only | **Consolidated numbers not confirmed.** The response was byte-for-byte identical to standalone, so the endpoint appears to ignore `consolidated=true`; do not infer consolidated figures from standalone |
+| Results filings | `GET https://www.nseindia.com/api/corporates-financial-results?index=equities&period=Quarterly&symbol=RELIANCE` | `quarterly_results.period_end` ← `[].toDate`; period start ← `[].fromDate`; `consolidated` ← `[].consolidated` (string, e.g. `Non-Consolidated`); `audited` ← `[].audited` (string); `filed_at` ← `[].filingDate` or `[].broadCastDate`; `source_url` ← `[].xbrl` | unit not stated | Daily check; new rows only | Candidate source for `filed_at` and `source_url`. `resultDetailedDataLink` was null in all sampled rows; the XBRL link is present. Values are strings, not booleans, so 014 maps them |
+| Corporate announcements, per symbol | `GET https://www.nseindia.com/api/corporate-announcements?index=equities&symbol=RELIANCE` | `announcements.symbol` ← `[].symbol`; subject ← `[].desc`; announced_at ← `[].an_dt`; title ← `[].attchmntText`; attachment ← `[].attchmntFile`; exchange_ref ← `[].seq_id`; industry ← `[].smIndustry` | unit not stated | Every run; new rows only | The response has 3,374 rows for one symbol; 014 must page or filter, not save the whole list |
+| Corporate announcements, market-wide | `GET https://www.nseindia.com/api/corporate-announcements?index=equities&from_date=<DD-MM-YYYY>&to_date=<DD-MM-YYYY>` | Same paths as per-symbol; each row carries `symbol` | unit not stated | Every run; new rows only | One fixed call with the run date and six days earlier answered (3,484 rows). The date format `DD-MM-YYYY` is accepted. Evidence for 018's one-call option; not a second fetcher |
+| Shareholding pattern | `GET https://www.nseindia.com/api/corporate-share-holdings-master?index=equities&symbol=RELIANCE` | `shareholding.quarter_end` ← `[].date`; filed_at ← `[].submissionDate`; `promoter_pct` ← `[].pr_and_prgrp`; `public_pct` ← `[].public_val`; `other_pct` ← `[].employeeTrusts`; source ← `[].xbrl` | unit not stated | Quarterly; daily check | **FII and DII splits are not in this response**; only the XBRL filing carries them. The JSON has promoter, public and employee-trust totals. 014 must parse the XBRL or record the gap |
+| Pledged shares, per symbol | `GET https://www.nseindia.com/api/corporate-pledgedata?index=equities&symbol=ADANIENT` | `shareholding.promoter_pledged_pct` ← `data[].percSharesPledged` (also `data[].percPromoterShares`); promoter holding ← `data[].totPromoterHolding`; pledged shares ← `data[].numSharesPledged`; quarter end ← `data[].shp`; disclosed_at ← `data[].broadcastDt`; company ← `data[].comName` | unit not stated | Daily check | **The row has no `symbol`**, only `comName`. The response does not label whether `percSharesPledged` is a share of total shares or promoter holding; `percPromoterShares` is also present. 014 must confirm the definition against one filing |
+| Pledged shares, market-wide | `GET https://www.nseindia.com/api/corporate-pledgedata?index=equities` | Same paths as per-symbol | unit not stated | Daily check | One fixed call answered (1,558 rows). **Rows have no `symbol`**, so a market-wide fetch needs a name-to-symbol map from `EQUITY_L.csv`. Evidence for 018's one-call option |
+| Equity list | `GET https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv` | `stocks.symbol` ← `SYMBOL`; name ← `NAME OF COMPANY`; `ISIN NUMBER`; `SERIES`; `DATE OF LISTING`; `PAID UP VALUE`; `MARKET LOT`; `FACE VALUE` | unit not stated | On demand / daily | **No industry and no explicit active flag**; 015 must source industry elsewhere or leave it null. The header has spaces after commas in the raw CSV; the probe strips them for comparison |
 
-**Worker host and NSE.** NSE blocks some cloud IP ranges. If the stock worker runs on GitHub Actions ([ADR-0018](adr/0018-stock-worker-on-github-actions.md)), a week-1 smoke test must confirm that NSE answers from GitHub's runners before anything is built on it.
+**Smoke test.** `.github/workflows/nse-stock-smoke.yml` runs the probe on a `push` to `task/003-*` (only when the probe or workflow changes) and on `workflow_dispatch`; it uploads `nse-smoke.json` and `tests/fixtures/nse_stock/` as the `nse-stock-smoke` artifact. Result awaited: the human pushes the task branch and supplies the run URL and its `G1 candidate:` line.
+
+**Worker host and NSE.** NSE blocks some cloud IP ranges. If the stock worker runs on GitHub Actions ([ADR-0018](adr/0018-stock-worker-on-github-actions.md)), a week-1 smoke test must confirm that NSE answers from GitHub's runners before anything is built on it. The local build saw a mixed result: nine of the ten data calls answered, but the quote endpoint returned 403.
 
 ## Rules for every source
 

@@ -264,23 +264,73 @@ The tests run with the existing command, `python3 -m unittest discover -s tests`
 
 ## Changes during build
 
-None yet.
+| Change | Why |
+| --- | --- |
+| Added an internal `prefer_ipv4()` context manager that filters `socket.getaddrinfo` to IPv4 for the probe's own requests | NSE publishes AAAA records that blackhole in this environment; the IPv4 path answers. This changes no URL, retry or call count |
+| Used local fixtures for the nine data calls that answered; `quote` failed with `HTTP 403` and has no fixture | The plan prefers local fixtures and allows the runner artifact only when the build environment is blocked. Local was partly blocked, not wholly blocked. `quote` is recorded as **not confirmed** in `data-sources.md` and as a `KNOWN_GAPS` fixture entry |
+| Corrected field paths after reading the live shapes: `results-comparision` uses `resCmpData[].re_*`; `results_filings` and `shareholding` are top-level lists; pledges uses `data[].comName`, `data[].totPromoterHolding`, `data[].numSharesPledged`, `data[].percSharesPledged`, `data[].percPromoterShares`, `data[].shp`, `data[].broadcastDt` | The planned paths were candidates. The fixtures are the evidence, and the corrected paths are what `ENDPOINTS` and `field_coverage` now test |
+| Added `KNOWN_GAPS` for EBITDA and filing links in `results-comparision`, `resultDetailedDataLink` in `results_filings`, FII/DII in `shareholding`, the missing `symbol` in pledges, and the missing `quote` fixture | The plan requires a missing column to be explicit, not silently passing. The gap list is asserted by the fixture test |
+| Stripped whitespace from CSV header names in `summarise` only; the saved CSV is unchanged | `EQUITY_L.csv` has spaces after commas (`NAME OF COMPANY, SERIES`). Field coverage needed the stripped names; the fixture keeps the exact bytes NSE returned |
+| Recorded that `results-comparision?consolidated=true` returned a byte-identical body to standalone | The plan says to record an ignored/rejected parameter and never infer consolidated numbers. Both fixtures are kept; `data-sources.md` marks consolidated results **not confirmed** |
+| Local run returned `G1 candidate: PARTIAL` (nine of ten data calls answered; `quote` 403) | The probe exits 1 when a required data call fails. The runner result is still awaited; the build does not fill it in |
 
 ## Verification
 
-Not run yet: this is the planning step. During the build, run and paste here:
-
 ```bash
 python3 -m unittest discover -s tests
+```
+
+```text
+Ran 19 tests in 0.021s
+
+OK
+```
+
+```bash
 python3 -m ipo_agent.nse_stock_smoke --dry-run
+```
+
+```text
+prime_home	https://www.nseindia.com/
+prime_stock	https://www.nseindia.com/get-quotes/equity?symbol=RELIANCE
+quote	https://www.nseindia.com/api/quote-equity?symbol=RELIANCE
+results_standalone	https://www.nseindia.com/api/results-comparision?symbol=RELIANCE
+results_consolidated	https://www.nseindia.com/api/results-comparision?symbol=RELIANCE&consolidated=true
+results_filings	https://www.nseindia.com/api/corporates-financial-results?index=equities&period=Quarterly&symbol=RELIANCE
+announcements	https://www.nseindia.com/api/corporate-announcements?index=equities&symbol=RELIANCE
+announcements_market	https://www.nseindia.com/api/corporate-announcements?index=equities&from_date=23-10-2026&to_date=29-10-2026
+shareholding	https://www.nseindia.com/api/corporate-share-holdings-master?index=equities&symbol=RELIANCE
+pledges	https://www.nseindia.com/api/corporate-pledgedata?index=equities&symbol=ADANIENT
+pledges_market	https://www.nseindia.com/api/corporate-pledgedata?index=equities
+equity_list	https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv
+```
+
+```bash
 python3 -m ipo_agent.nse_stock_smoke --save tests/fixtures/nse_stock --json-out /tmp/nse-smoke.json
 ```
 
-The third command makes exactly the 12 live requests and is not part of the unit tests. After the human pushes and supplies the run URL and its `G1 candidate:` line, this section records:
+```text
+endpoint                 ok       bytes   rows unit               error
+prime_home               False        0   None unit not stated    HTTPError: HTTP Error 403: Forbidden
+prime_stock              True    147630   None unit not stated
+quote                    False        0   None unit not stated    HTTPError: HTTP Error 403: Forbidden
+results_standalone       True     14525      5 unit not stated
+results_consolidated     True     14525      5 unit not stated
+results_filings          True    101760    130 unit not stated
+announcements            True   2910087   3374 unit not stated
+announcements_market     True   2432858   3484 unit not stated
+shareholding             True     43031     23 unit not stated
+pledges                  True       670      1 unit not stated
+pledges_market           True    972529   1558 unit not stated
+equity_list              True    185023   2620 unit not stated
+G1 candidate: PARTIAL
+```
+
+The third command makes exactly the 12 live requests and is not part of the unit tests. The runner result is still awaited: the human pushes the task branch and supplies the run URL and its `G1 candidate:` line. This section will then record:
 
 ```text
 Runner: <run URL>
 G1 candidate: <PASS|PARTIAL|FAIL>
 ```
 
-and `docs/data-sources.md` carries the same line as "observed on run `<URL>`". The build does not fill either line before the human supplies it.
+and `docs/data-sources.md` will carry the same line as "observed on run `<URL>`". Neither line is filled before the human supplies it.
