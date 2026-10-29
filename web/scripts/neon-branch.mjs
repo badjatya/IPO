@@ -177,9 +177,11 @@ async function main() {
     // Run the db tests over the pooled URL, naming the branch so the config
     // refuses to start anywhere else. The auth tests (tests/db/auth.test.ts)
     // also need app config: a per-run AUTH_SECRET (never a real value), the
-    // AUTH_URL the links carry, and NODE_ENV=development — better-auth turns
-    // its origin checks off under a test env (they are the forged-origin
-    // tests' subject), and mail print mode must never run in production.
+    // AUTH_URL the links carry, and NODE_ENV=development — Better Auth's
+    // isTest() is `NODE_ENV === "test" || toBoolean(env.TEST)` (the vitest half
+    // is deleted in tests/db/setup.ts, so the origin/CSRF checks the
+    // forged-Origin tests exercise stay on), and mail print mode must never run
+    // in production.
     const tests = spawnSync(
       "npx",
       ["--no-install", "vitest", "run", "--config", "vitest.db.config.mts"],

@@ -31,7 +31,13 @@ async function api(
   const headers: Record<string, string> = {};
   if (options.body !== undefined) headers["content-type"] = "application/json";
   if (options.cookie) headers.cookie = options.cookie;
-  if (options.origin) headers.origin = options.origin;
+  // A browser sends Origin on every POST, and Better Auth's origin check (on
+  // for real here — tests/db/setup.ts deletes vitest's TEST env) refuses a
+  // cookie-bearing POST without one (403 MISSING_OR_NULL_ORIGIN). Default to
+  // the trusted BASE, as a browser of this app would; a test overrides it to
+  // forge a cross-site origin.
+  const origin = options.origin ?? (method === "POST" ? BASE : undefined);
+  if (origin) headers.origin = origin;
   const init: RequestInit = { method, headers };
   if (options.body !== undefined) init.body = JSON.stringify(options.body);
   const res = await AUTH.handler(new Request(`${BASE}${path}`, init));
@@ -74,6 +80,28 @@ async function userIdByEmail(email: string): Promise<string> {
   return rows[0].id;
 }
 
+/**
+ * The unsigned token part of a session cookie Better Auth issued. The cookie
+ * value is signed — `<token>.<HMAC signature>`, URL-encoded (better-call's
+ * signCookieValue) — so decode it and take everything before the first dot.
+ * Never hand-roll the signature; a raw `session.token` straight from the table
+ * is a cookie Better Auth can't read (round 3 finding 2).
+ */
+function tokenOf(cookie: string): string {
+  const match = cookie.match(/(?:^|;\s*)(?:__Secure-)?better-auth\.session_token=([^;]+)/);
+  expect(match).not.toBeNull();
+  return decodeURIComponent(match![1]).split(".")[0];
+}
+
+/** The email whose user owns the session row for `token`. */
+async function sessionOwnerEmail(token: string): Promise<string> {
+  const rows = (await sql()`select user_id from session where token = ${token}`) as { user_id: string }[];
+  expect(rows).toHaveLength(1);
+  const user = (await sql()`select email from users where id = ${rows[0].user_id}`) as { email: string }[];
+  expect(user).toHaveLength(1);
+  return user[0].email;
+}
+
 /** The one-time URL from the print-mode mail line — what the user actually receives. */
 function mailLink(mailLines: string[]): string {
   expect(mailLines.length).toBe(1);
@@ -97,6 +125,16 @@ afterEach(() => {
 });
 
 describe("accounts on a real branch", () => {
+  it("the origin and CSRF checks are on: vitest's TEST env must not leak in (round 3 finding 1)", async () => {
+    // tests/db/setup.ts deletes the TEST=true vitest sets in every worker;
+    // without that, Better Auth's isTest() turns skipOriginCheck on and the
+    // forged-Origin test below would pass for the wrong reason (200, no check
+    // run). Prove the checks are really enabled before exercising them.
+    const context = await AUTH.$context;
+    expect(context.skipOriginCheck).toBe(false);
+    expect(context.skipCSRFCheck).toBe(false);
+  });
+
   it("refuses public sign-up", async () => {
     const r = await api("POST", "/api/auth/sign-up/email", {
       body: { email: "signup@example.com", password: "secret-123", name: "Signup" },
@@ -329,14 +367,12 @@ describe("accounts on a real branch", () => {
     expect((userSession.json as { user: { email: string } }).user.email).toBe("reinvite@example.com");
     expect((userSession.json as { user: { role?: string } }).user.role).toBe("user");
     // A cross-run through the invite surface with a user cookie is refused
-    // above; here the session rows themselves key to their own users.
-    const sessions = (await sql()`select token from session where user_id = (
-        select id from users where email = 'reinvite@example.com')`) as { token: string }[];
-    expect(sessions.length).toBeGreaterThan(0);
-    for (const row of sessions) {
-      const s = await api("GET", "/api/auth/get-session", { cookie: `better-auth.session_token=${row.token}` });
-      expect((s.json as { user: { email: string } }).user.email).toBe("reinvite@example.com");
-    }
+    // above; here the cookie tokens themselves key to their own users.
+    const adminToken = tokenOf(adminCookie);
+    const userToken = tokenOf(userCookie);
+    expect(adminToken).not.toBe(userToken);
+    expect(await sessionOwnerEmail(adminToken)).toBe("admin@example.com");
+    expect(await sessionOwnerEmail(userToken)).toBe("reinvite@example.com");
   });
 
   it("refuses a forged-Origin sign-in POST (Better Auth's origin check)", async () => {
