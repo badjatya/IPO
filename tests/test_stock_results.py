@@ -130,6 +130,23 @@ class ParseResultsTests(NoNetworkCase):
         self.assertIsNone(record["audited"])
         self.assertEqual(record["period_end"], "2026-06-30")
 
+    def test_missing_re_net_sale_gives_none_not_total_income(self):
+        # re_total_inc includes other income, which is stored separately as
+        # other_income_cr; using it as revenue would double-count. Missing is
+        # missing, never estimated.
+        rows = {
+            "resCmpData": [
+                {
+                    "re_to_dt": "31-DEC-2024",
+                    "re_total_inc": "13147400",
+                    "re_oth_inc_new": "321400",
+                }
+            ]
+        }
+        record = results.parse_results(rows, [])[0]
+        self.assertIsNone(record["revenue_cr"])
+        self.assertEqual(record["other_income_cr"], Decimal("3214.00"))
+
     def test_empty_comparison_is_empty(self):
         self.assertEqual(results.parse_results({"resCmpData": []}, self.filings), [])
         self.assertEqual(results.parse_results([], self.filings), [])

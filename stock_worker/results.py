@@ -6,8 +6,9 @@ Records are keyed exactly as the ``db.md`` ``quarterly_results`` columns:
 ``period_end``               ISO date (``re_to_dt``) — the natural key
 ``consolidated``             always ``False``: the comparison rows are standalone
                              and the endpoint ignores ``consolidated=true``
-``revenue_cr``               ``re_net_sale`` (₹ lakh → crore; fallback
-                             ``re_total_inc`` only when net sale is absent)
+``revenue_cr``               ``re_net_sale`` (₹ lakh → crore; ``None`` when
+                             net sale is absent — ``re_total_inc`` includes
+                             other income, which is its own column)
 ``other_income_cr``          ``re_oth_inc_new`` (fallback ``re_oth_inc``)
 ``expenses_cr``              ``re_oth_tot_exp``
 ``ebitda_cr``                operating EBITDA, excluding other income —
@@ -104,9 +105,7 @@ def parse_results(comparison, filings):
             {
                 "period_end": period_end,
                 "consolidated": False,
-                "revenue_cr": to_crore(
-                    to_decimal(_first(row, "re_net_sale", "re_total_inc"))
-                ),
+                "revenue_cr": to_crore(to_decimal(row.get("re_net_sale"))),
                 "other_income_cr": to_crore(
                     to_decimal(_first(row, "re_oth_inc_new", "re_oth_inc"))
                 ),

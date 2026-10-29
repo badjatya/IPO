@@ -49,7 +49,7 @@ def parse(body):
         shares_pledged = to_decimal(row.get("numSharesPledged"))
         records.append(
             {
-                "company": str(row.get("comName") or "").strip(),
+                "company": str(row.get("comName") or "").strip() or None,
                 "quarter_end": parse_date(row.get("shp")),
                 "disclosed_at": parse_timestamp(row.get("broadcastDt")),
                 "shares_held": shares_held,

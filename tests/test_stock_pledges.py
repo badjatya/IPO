@@ -88,6 +88,13 @@ class PledgesTests(NoNetworkCase):
         # 1/3 × 100 = 33.333... → rounds HALF_UP to 33.33; 33.333 is not 33.34.
         self.assertEqual(record["promoter_pledged_pct"], Decimal("33.33"))
 
+    def test_missing_company_name_is_none(self):
+        # A row without comName gives company None, never an empty string.
+        record = pledges.parse([{"shp": "30-Sep-2026"}])[0]
+        self.assertIsNone(record["company"])
+        record = pledges.parse([{"comName": "   ", "shp": "30-Sep-2026"}])[0]
+        self.assertIsNone(record["company"])
+
     def test_empty_response_is_empty(self):
         self.assertEqual(pledges.parse({"data": []}), [])
         self.assertEqual(pledges.parse([]), [])
