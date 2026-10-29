@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref == 'refs/heads/main' && github.sha || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Agent tests
+        run: python3 -m unittest discover -s tests
+      - name: Schema check (guard tests over every saved card and report)
+        if: ${{ !cancelled() }}
+        run: python3 -m unittest discover -s .claude/hooks

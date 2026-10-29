@@ -86,6 +86,7 @@ These are binding. A plan that breaks one is sent back, and code that breaks one
   - Python: `unittest` under `tests/`, run with `python3 -m unittest discover -s tests`.
   - Web app: the runner chosen for `web/`.
   - Tests must not call live sites or AI APIs. Use the saved files in `data/snapshots/`, `analysis/rhp/` and `reports/` as fixtures.
+  - CI (`.github/workflows/ci.yml`) runs `tests/` and the schema check in `.claude/hooks/` on every push and pull request. Both must pass.
 - **Docs in the same change.** If the change touches a table, flow, setting or choice, update the matching doc in `docs/` and its status label. A new decision gets an ADR with status **Proposed**; only the human accepts it.
 - **Stay in scope.** No refactors, renames or dependency changes beyond the approved plan.
 

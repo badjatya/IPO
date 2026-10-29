@@ -32,7 +32,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Hosting | Not chosen yet; local until week 4 | Open | — |
 | Agent tests | Python `unittest`; run with `python3 -m unittest discover -s tests` | Running | — |
 | App tests | Test runner not chosen yet; database tests on Neon branches | Open | — |
-| CI | GitHub Actions | Decided | — |
+| CI | GitHub Actions: agent tests and the schema check on every push and pull request (`.github/workflows/ci.yml`) | Running | — |
 | Dev tooling | DeepSeek in opencode (plans and builds); Claude Code, Opus 5.5 (reviews plans and code) | Running | [0019](adr/0019-deepseek-builds-claude-reviews.md) |
 
 ## Research agent
@@ -68,7 +68,7 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | --- | --- | --- | --- |
 | Anthropic: Claude Code routine | IPO research only | Personal Claude Pro plan (existing; nothing extra paid) | Running |
 | Google: Gemini API | Ask | Free tier: per-project quotas (check AI Studio); prompts may be used by Google | Decided |
-| GitHub | Repo, Actions (import, CI, stock worker) | Free: about 2,000 Actions minutes a month for a private repo (third-party sources; check GitHub's billing page) | Repo running; Actions decided |
+| GitHub | Repo, Actions (import, CI, stock worker) | Free: about 2,000 Actions minutes a month for a private repo (third-party sources; check GitHub's billing page) | Repo and CI running; import and stock worker decided |
 | Neon | PostgreSQL; branch per test run and preview | Free: 1 GB per project, 100 compute-hours a month, pauses when idle | Decided |
 | App host | Next.js | Not chosen yet | Open |
 
@@ -98,7 +98,7 @@ Names are planned; values are never committed.
 | `opencode.json`, `.opencode/` | DeepSeek's permissions, planner agent, workflow commands | Running |
 | `tests/` | Agent tests (`python3 -m unittest discover -s tests`, saved fixtures only) | Running |
 | `web/` | Next.js app, migrations, import script | Proposed (same repo; [arch.md § Open questions](arch.md#9-open-questions)) |
-| `.github/workflows/` | Import, CI and the NSE stock smoke test | Decided |
+| `.github/workflows/` | CI (`ci.yml`) and the NSE stock smoke test (`nse-stock-smoke.yml`) running; the import Action decided | Running / Decided |
 
 ## Local setup
 
