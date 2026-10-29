@@ -204,6 +204,67 @@ Settled by the human at plan review round 1 (2026-10-29); nothing here is open.
 
 Anything built differently from the approved plan, and why.
 
+- **`~` counts as an approximate marker too.** The plan names `≈` only ("A figure prefixed `≈` … counts as approximate"). In the wild, computed/estimated figures are marked with both signs — `≈₹2,534 Cr`, `≈ ₹10,765 Cr`, but also `~₹852.2 Cr`, `~₹4,010 Cr`, `~₹10.3 lakh Cr`, `~₹469 Cr`, `~₹475 Cr` (tonbo, jio, hd-fire, m-k-sons, sahanajand). Treating the `~` ones as ordinary figures would flood the missing lists with figures the writer already flagged as estimates, which is exactly what the `≈` rule exists to avoid. The extraction regex accepts `[≈~]` before the `₹`; both are excluded from the share and listed as approximate. Covered by `test_approximate_markers`.
+- **How the `--all` report was produced.** My `run` tool allows only `python3 -m unittest …` and `python3 <script.py in the worktree>`, so the literal CI command `python3 -m ipo_agent.figures_check --all` cannot be executed by me. The report in Verification was produced by a temporary self-deleting script that called the same `figures_check.main(["--all"])` (the module's own `__main__` path); the script removed itself afterwards and the tree is clean. Claude's code review can run the literal command, and the GitHub run after the human pushes is the final proof, as the plan says (step 4).
+- **A trailing comma after a figure is punctuation, not the number.** "At ₹693, P/E …" produced a figure rendered "₹693," in the missing list (the digit regex is greedy over commas). The comma is now stripped from the number (`num.rstrip(",")`) on both the analysis and RHP sides; the count was unaffected. Covered by `test_trailing_comma_is_punctuation`.
+- Everything else matches the plan. All 13 repo analyses have cards with `"source": "rhp"`, so the integration run checks all 13 (0 skipped); the plan's example "bls-polymers: 3/15" was illustrative — the real line is 3/20.
+
 ## Verification
 
-Test commands run, with their output pasted. The GitHub `--all` run is recorded after the human pushes the branch, as in task 002; the first run on `main` after the merge is recorded in the roadmap's 005 entry.
+Runs below are from the committed tree on `task/005-figures-check` (the build commits are `51bdd93`, `a178953`, `cdf9c2b`, `57fbbb0`). The test suite's stray `usage:` line is `test_no_keys_is_usage_error` exercising argparse's exit 2; unittest does not capture argparse's stderr, so it appears in the output and the test still passes.
+
+**1. Full agent suite — `python3 -m unittest discover -s tests`**
+
+```
+................................................................usage: python3 -m unittest [-h] [--all] [--root ROOT] [KEY ...]
+python3 -m unittest: error: give one or more IPO keys, or --all
+.............................................................................................................................................................
+----------------------------------------------------------------------
+Ran 221 tests in 0.651s
+
+OK
+```
+
+**2. Guard suite (unchanged `file_problems`; CI runs it too) — `python3 -m unittest discover -s .claude/hooks`**
+
+```
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.238s
+
+OK
+```
+
+**3. The figures check over every saved analysis — the CI step's command, `python3 -m ipo_agent.figures_check --all`** (ran through the equivalent `main(["--all"])`, see "Changes during build"):
+
+```
+bls-polymers: 3/20 ₹ figures found (15%)
+  not found: ₹150, ₹255 Cr, ₹27.0 Cr, ₹150, ₹930 Cr, ₹89.5 Cr, ₹76.5 Cr, ₹150, ₹16.5 Cr, ₹14.7 Cr, ₹10.3 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹5.0 Cr, ₹89.5 Cr, ₹20
+bombay-coated-and-special-steels: 3/12 ₹ figures found (25%)
+  not found: ₹78, ₹82, ₹35.7 Cr, ₹76.5 Cr, ₹54.1 Cr, ₹82, ₹20.0 Cr, ₹14.1 Cr, ₹5.0 Cr
+bonfiglioli-transmissions: 2/11 ₹ figures found (18%), 2 approximate
+  not found: ₹558, ₹586, ₹14,650, ₹586, ₹12.65, ₹586, ₹759 Cr, ₹586, ₹33.6 Cr
+eaaa-alternatives: 3/23 ₹ figures found (13%), 1 approximate
+  not found: ₹1585, ₹1665, ₹170, ₹173, ₹400 Cr, ₹290 Cr, ₹360 Cr, ₹1,665, ₹38 Cr, ₹38 Cr, ₹31.7 Cr, ₹6.3 Cr, ₹19 Cr, ₹19 Cr, ₹20.5 Cr, ₹15.5 Cr, ₹16 Cr, ₹18.4 Cr, ₹10 Cr, ₹5 Cr
+fusion-cx: 11/29 ₹ figures found (38%), 1 approximate
+  not found: ₹275, ₹289, ₹14,739, ₹289, ₹288 Cr, ₹362 Cr, ₹264 Cr, ₹170 Cr, ₹375 Cr, ₹126 Cr, ₹13.47, ₹289, ₹61.1 Cr, ₹315 Cr, ₹289, ₹120 Cr, ₹363 Cr, ₹620 Cr
+hd-fire-protect: 5/33 ₹ figures found (15%), 3 approximate
+  not found: ₹258, ₹271, ₹14,905, ₹712.3 Cr, ₹4,749 Cr, ₹25, ₹56 Cr, ₹140 Cr, ₹29 Cr, ₹16 Cr, ₹271, ₹712 Cr, ₹213.1 Cr, ₹271, ₹26.2 Cr, ₹22.8 Cr, ₹22.8 Cr, ₹17.5 Cr, ₹8.7 Cr, ₹14.5 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹8.8 Cr, ₹8.8 Cr, ₹8.4 Cr, ₹8.4 Cr, ₹196 Cr, ₹83
+jio-platforms: 3/20 ₹ figures found (15%), 3 approximate
+  not found: ₹1,119, ₹30,213 Cr, ₹77,556 Cr, ₹34,255 Cr, ₹53,607 Cr, ₹8,653 Cr, ₹4,048 Cr, ₹8,110 Cr, ₹1,119, ₹499 Cr, ₹487 Cr, ₹303 Cr, ₹156 Cr, ₹123 Cr, ₹71 Cr, ₹30,213 Cr, ₹10 lakh Cr
+m-k-sons-fine-jewels: 1/17 ₹ figures found (6%), 4 approximate
+  not found: ₹153, ₹162, ₹275.4 Cr, ₹39.36, ₹12.13, ₹162, ₹30 Cr, ₹82.6 Cr, ₹162, ₹17.0 Cr, ₹16.0 Cr, ₹9.6 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹5.0 Cr, ₹150 Cr
+paras-healthcare: 9/30 ₹ figures found (30%), 2 approximate
+  not found: ₹660, ₹693, ₹237, ₹660, ₹693, ₹16 Cr, ₹164 Cr, ₹169 Cr, ₹448 Cr, ₹350 Cr, ₹693, ₹4.34, ₹54.1 Cr, ₹652.5 Cr, ₹693, ₹44 Cr, ₹541 Cr, ₹445 Cr, ₹116 Cr, ₹97, ₹111
+sahajanand-medical-technologies: 1/32 ₹ figures found (3%), 1 approximate
+  not found: ₹327, ₹344, ₹14,792, ₹475.5 Cr, ₹0, ₹3,497 Cr, ₹40, ₹46, ₹69.1 Cr, ₹80.3 Cr, ₹11.6 Cr, ₹8.7 Cr, ₹15.0 Cr, ₹286 Cr, ₹309 Cr, ₹1,210 Cr, ₹98.0 Cr, ₹16.0 Cr, ₹344, ₹62.76, ₹270 Cr, ₹320 Cr, ₹140 Cr, ₹344, ₹39.4 Cr, ₹20.3 Cr, ₹15 Cr, ₹11 Cr, ₹10 Cr, ₹40, ₹46
+sfc-environmental-technologies: 2/21 ₹ figures found (10%), 2 approximate
+  not found: ₹313, ₹330, ₹667.5 Cr, ₹609 Cr, ₹205 Cr, ₹74.9 Cr, ₹200.3 Cr, ₹330, ₹37.5 Cr, ₹27.3 Cr, ₹26.0 Cr, ₹34.2 Cr, ₹10.2 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹6.8 Cr, ₹10.0 Cr, ₹31, ₹21
+tonbo-imaging: 7/40 ₹ figures found (18%), 4 approximate
+  not found: ₹700, ₹14,700, ₹345, ₹270, ₹345, ₹211.7 Cr, ₹144.8 Cr, ₹231.9 Cr, ₹82.4 Cr, ₹25,000, ₹17.7 Cr, ₹199 Cr, ₹111 Cr, ₹220 Cr, ₹320 Cr, ₹212 Cr, ₹97 Cr, ₹167 Cr, ₹8.88, ₹9.19, ₹700, ₹96.57, ₹104.6 Cr, ₹10.95, ₹19.49, ₹700, ₹255 Cr, ₹700, ₹17.5 Cr, ₹17.7 Cr, ₹111 Cr, ₹320 Cr, ₹345
+zetwerk: 4/28 ₹ figures found (14%), 4 approximate
+  not found: ₹143, ₹151, ₹14,949, ₹151, ₹6,508 Cr, ₹1,397 Cr, ₹1,464 Cr, ₹1,936 Cr, ₹475 Cr, ₹1,461 Cr, ₹1,014 Cr, ₹2,530 Cr, ₹512 Cr, ₹1,388 Cr, ₹11.02, ₹13,062 Cr, ₹1,300 Cr, ₹860 Cr, ₹2,251 Cr, ₹151, ₹288 Cr, ₹124 Cr, ₹75 Cr, ₹1,606 Cr
+TOTAL: 54/316 ₹ figures found (17%) across 13 analyses (0 skipped)
+```
+
+Exit code 0 throughout; the run completes even with a 0% key (sahajanand-medical-technologies: 1/32) and a low overall share — that is the point of Option A (report only). The numbers quoted in `docs/ai.md` (13 analyses, 54/316, 17%, 2026-10-29) are exactly this run's. The GitHub `--all` run is recorded after the human pushes the branch, as in task 002; the first run on `main` after the merge is recorded in the roadmap's 005 entry.
