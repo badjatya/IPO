@@ -265,3 +265,23 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - Added a deny rule for `.worktrees/*` to the main checkout's opencode permissions, because path rules like `analysis/*` don't match inside a nested worktree. The planner gets a narrow exception for `.worktrees/*/docs/tasks/*`.
   - Closed a gap: `git -C <path> push` slipped past the `git push*` deny rule.
   - Dry-ran creating and removing a worktree; `git status` stayed clean.
+
+### 2026-10-29 (later): Task 003, NSE stock-data spike
+
+- **Asked:** DeepSeek to plan and build task 003, and Claude Code to review the plan and the code. When opencode stopped working, the human asked Claude to finish the task.
+- **Rounds:** two plan rounds and two code rounds.
+- **Plan review, round 1 changes:**
+  - a fixed list of 12 requests with a hard cap in code
+  - no assumed units
+  - a set order for getting the GitHub run result onto the branch
+  - fixtures trimmed in code
+  - a `paths:` filter so review commits don't call NSE again
+- **AI did:**
+  - DeepSeek built the probe, the fixtures, the workflow and the docs.
+  - Claude pushed the branch at the human's request. It read the run with `gh`, recorded the result, reviewed the code, fixed the findings and merged.
+- **Result:** NSE answers from GitHub's runners. Nine of ten data calls answered, the same as locally ([run 40869763010](https://github.com/badjatya/IPO/actions/runs/40869763010)). The quote endpoint returns 403 everywhere, so it's a problem with that endpoint, not a runner block.
+- **Notable finding:** the docs mapped "share of promoter holding pledged" to NSE's `percSharesPledged`. Arithmetic on the committed fixtures showed that field is a share of *all* shares (ADANIENT: 1.61 against 2.23), so the worker would have stored about half the real figure. The mapping now computes it in code.
+- **Human decided:** tick G1, merge, and hand the quote gap and the other gaps to task 014.
+- **Learned:**
+  - Check field meanings against the fixture's own numbers, not just its field names.
+  - When Claude both fixes and reviews, the review records that it isn't independent.

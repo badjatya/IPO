@@ -152,6 +152,8 @@ flowchart TD
 
 A separate worker for listed stocks, using Gemini ([ADR-0017](adr/0017-gemini-for-stocks-claude-for-ipos.md)). It runs on GitHub Actions ([ADR-0018](adr/0018-stock-worker-on-github-actions.md)). It reuses the agent's standard-library Python fetchers (`net.py`, NSE client) for every number, and calls the Gemini API for the writing.
 
+**NSE from GitHub's runners:** confirmed by task 003's smoke test ([run 40869763010](https://github.com/badjatya/IPO/actions/runs/40869763010)). Nine of ten stock data calls answered, the same as from a local machine; the quote endpoint returns 403 everywhere and is left to task 014 ([data-sources.md](data-sources.md#nse-stock-data)).
+
 **Mode 1: scheduled filings (twice each weekday).**
 
 | Step | Who | Output |
@@ -396,7 +398,6 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 
 | Question | Affects | Needed by |
 | --- | --- | --- |
-| Does NSE answer requests from GitHub's runners? | Every stock number | Week 1 smoke test |
 | Gemini free quotas and grounding for the chosen model (read in AI Studio) | Quotas, platform cap, news step | Week 1 |
 | App host | Deployment, secrets | Week 4 |
 | Auth library and ORM | Accounts, schema migrations | Week 1 |

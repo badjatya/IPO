@@ -49,9 +49,9 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 
 | ID | Task | Week | Depends on | Status |
 | --- | --- | --- | --- | --- |
-| [001](#001--agent-test-suite) | Agent test suite | 1 | — | **Ready** |
+| [001](#001--agent-test-suite) | Agent test suite | 1 | — | **In progress** |
 | [002](#002--ci-workflow) | CI workflow | 1 | 001 | Blocked |
-| [003](#003--nse-stock-data-spike) | NSE stock-data spike and runner smoke test | 1 | — | **Ready** |
+| [003](#003--nse-stock-data-spike) | NSE stock-data spike and runner smoke test | 1 | — | Done |
 | [004](#004--routine-provenance-and-documents-as-data) | Routine provenance and documents-as-data | 1 | 001 | Blocked |
 | [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | Blocked |
 | [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | Blocked |
@@ -62,7 +62,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | Blocked |
 | [012](#012--track-record-page) | Track record page | 2 | 008, D06 | Blocked |
 | [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | Blocked |
-| [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | Blocked |
+| [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | **Ready** |
 | [015](#015--stock-universe) | Stock universe | 2 | 008, 014 | Blocked |
 | [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | Blocked |
 | [017](#017--watchlist) | Watchlist | 3 | 010, 015 | Blocked |
@@ -84,11 +84,12 @@ Tasks only (decisions and setup are in the tables below). An arrow points from a
 flowchart LR
     classDef ready fill:#d4f7d4,stroke:#2e7d32
     classDef m2 fill:#e3ecfb,stroke:#3b6db3
+    classDef done fill:#e0e0e0,stroke:#757575
 
     subgraph wk1 ["Week 1: foundation"]
         T001[001 agent tests]:::ready
         T002[002 CI]
-        T003[003 NSE spike]:::ready
+        T003[003 NSE spike]:::done
         T004[004 provenance]
         T005[005 figures check]
     end
@@ -103,7 +104,7 @@ flowchart LR
         T013[013 admin settings]
     end
     subgraph stocks ["Weeks 2–3: stock side"]
-        T014[014 stock fetchers]:::m2
+        T014[014 stock fetchers]:::ready
         T015[015 stock universe]:::m2
         T016[016 alert rules]:::m2
         T017[017 watchlist]:::m2
@@ -160,7 +161,7 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 | D11 | App host | Open | 025 | [ ] |
 | D12 | Backups for app-owned data (users, watchlists) | Open ([arch.md § 9](../arch.md#9-open-questions)) | 025 | [ ] |
 | D13 | Product name | Open ([plan.md](../plan.md#open-decisions)); the app uses a placeholder until then | 026 | [ ] |
-| G1 | **Gate:** does NSE answer from GitHub's runners? Answered by task 003. If not, ADR-0018 must be revisited before the worker is built | Open ([data-sources.md](../data-sources.md#nse-stock-data-planned)) | 018 and everything after it on the stock side | [ ] |
+| G1 | **Gate:** does NSE answer from GitHub's runners? Answered by task 003. If not, ADR-0018 must be revisited before the worker is built | **Yes**, ticked by the human on 2026-10-29. Task 003's [run 40869763010](https://github.com/badjatya/IPO/actions/runs/40869763010) answered nine of ten data calls, the same as locally; the quote endpoint returns 403 everywhere and is left to 014 ([data-sources.md](../data-sources.md#nse-stock-data)) | 018 and everything after it on the stock side | [x] |
 
 ## Setup steps (human)
 
@@ -236,7 +237,7 @@ A GitHub Actions workflow that runs on every push and pull request. It runs the 
 | | |
 | --- | --- |
 | Slug | `003-nse-stock-spike` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | — |
 | Owner | DeepSeek plans and builds; the human runs the smoke test on GitHub and ticks G1 |
 | Milestone | M2 (but do it in week 1: it answers gate G1) |
@@ -251,6 +252,7 @@ Confirm the NSE endpoints for quotes, quarterly results (standalone and consolid
 - **Watch for:** "be gentle" in [data-sources.md](../data-sources.md#rules-for-every-source): one call per endpoint, no loops.
 - **Read:** [data-sources.md](../data-sources.md), [ADR-0018](../adr/0018-stock-worker-on-github-actions.md), `ipo_agent/net.py`, `ipo_agent/nse.py`.
 - **Start:** `/plan-task Task 003 from docs/tasks/ROADMAP.md`
+- **Result:** merged 2026-10-29. Probe `ipo_agent/nse_stock_smoke.py`, fixtures in `tests/fixtures/nse_stock/`, workflow `.github/workflows/nse-stock-smoke.yml`. Nine of ten data calls answered locally and on a GitHub runner ([run 40869763010](https://github.com/badjatya/IPO/actions/runs/40869763010)); G1 ticked. Gaps went to 014.
 
 ### 004 · Routine provenance and documents-as-data
 
@@ -432,7 +434,7 @@ An admin-only page that lists the `settings` rows and edits one at a time. Each 
 | | |
 | --- | --- |
 | Slug | `014-stock-fetchers` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 003, D09 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M2 |
@@ -440,6 +442,13 @@ An admin-only page that lists the `settings` rows and edits one at a time. Each 
 Fetchers and parsers for the endpoints confirmed in 003: quote, quarterly results, announcements, shareholding and pledges. They reuse `ipo_agent/net.py` and live where D09 says. Each returns plain records with exact numbers.
 
 - **Done when:** each parser is tested against the fixtures from 003; a failing source returns an error and doesn't stop the others; missing fields come back as missing, never estimated.
+- **Gaps from 003** ([data-sources.md § NSE stock data](../data-sources.md#nse-stock-data)):
+  - **Quote:** `quote-equity` returned 403 locally and from a runner, while every other call answered. Find a working quote source (cookie order, the `section=trade_info` or NextApi variants) with one deliberate probe, and record it.
+  - **Consolidated results:** `results-comparision?consolidated=true` returned the standalone body unchanged. Find the consolidated source or record the gap; never infer it from standalone.
+  - **Results:** no EBITDA and no filing link in `results-comparision`. Take the link from `corporates-financial-results`; derive EBITDA in code only from fields that are stated.
+  - **Units:** no response states a unit. The results amounts look like ₹ lakh; confirm against one filing before converting to ₹ crore.
+  - **FII/DII split:** not in the shareholding JSON, only in the XBRL filing.
+  - **Pledges:** `promoter_pledged_pct` is computed as `numSharesPledged / totPromoterHolding × 100`; NSE's `percSharesPledged` is a share of all shares. Pledge rows carry no symbol, only the company name.
 - **Read:** [data-sources.md](../data-sources.md), [arch.md § 4.2](../arch.md#42-stock-worker-decided), [ADR-0001](../adr/0001-python-for-exact-work-claude-for-judgement.md).
 - **Start:** `/plan-task Task 014 from docs/tasks/ROADMAP.md`
 
@@ -456,6 +465,7 @@ Fetchers and parsers for the endpoints confirmed in 003: quote, quarterly result
 Load NSE's list of listed equities into `stocks` (symbol, ISIN, name, industry, active), through a file in `data/stocks/` written by code and imported like the rest. Link `stocks.ipo_key` when an IPO we covered has listed.
 
 - **Done when:** the import fills `stocks` from the file; IPOs that listed are linked to their stock; tests use the 003 fixture.
+- **From 003:** `EQUITY_L.csv` has no industry and no active flag, and its header has spaces after the commas.
 - **Watch for:** the stocks list is what the watchlist and the worker check symbols against ([arch.md § 7.1](../arch.md#71-security-and-trust-boundaries)). How often it refreshes is for the plan to propose (likely inside 018).
 - **Read:** [db.md § stocks](../db.md#stocks), [ADR-0011](../adr/0011-git-as-the-hand-off.md).
 - **Start:** `/plan-task Task 015 from docs/tasks/ROADMAP.md`
@@ -506,6 +516,7 @@ Add, remove and list watched stocks, for the signed-in user only. Symbols are ch
 The GitHub Actions stock worker, scheduled twice each weekday, **without AI yet**. It reads `watched_symbols`, fetches what's new since the last run, computes alerts, writes the rows to the database and the files to `data/stocks/<SYMBOL>/`, and commits them. The import (008) is extended to re-apply those files unchanged.
 
 - **Done when:** a manual run fills the stock tables for watched symbols; a second run with nothing new changes nothing; a commit from the worker imports with no changes to the rows.
+- **From 003:** market-wide announcements (with a `from_date`/`to_date` range) and market-wide pledges both answered, so one call per run can replace one call per watched stock. Market-wide pledge rows have no symbol and need a name-to-symbol match.
 - **Watch for:** the worker reads symbols only, no user data. It pushes only to `main` with no force. One run should stay well within free Actions minutes.
 - **Read:** [arch.md § 4.2](../arch.md#42-stock-worker-decided), [ADR-0018](../adr/0018-stock-worker-on-github-actions.md), [db.md](../db.md).
 - **Start:** `/plan-task Task 018 from docs/tasks/ROADMAP.md`
