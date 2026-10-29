@@ -9,9 +9,10 @@ that sets NSE's session cookie — the same page the quote probe parses.
 the filings join; announcements; shareholding; pledges) under that one prime,
 catches each source's failure into an ``errors`` list and still returns the
 records of the sources that worked — a failing source never stops the others.
-The quote source is not yet wired in: it joins in 6b once the probe records
-which candidate answers; until then ``fetch_quote`` does not exist and no
-``stock_quotes`` row can be fabricated.
+The quote source is wired in but unconfirmed: the 2026-10-30 probe found no
+working candidate, so ``fetch_quote`` raises ``SourceError`` on every run
+without a call, the gap lands in ``errors``, and no ``stock_quotes`` row can
+be fabricated until a later task records a working candidate.
 
 Each per-source function takes the shared :class:`Session` and returns the
 module's plain records keyed by the ``db.md`` column names. HTTP goes through
@@ -23,6 +24,7 @@ import json
 from urllib.parse import quote
 
 from . import announcements, pledges, results, shareholding
+from .quote import fetch_quote
 
 BASE = "https://www.nseindia.com"
 
@@ -129,13 +131,16 @@ def fetch_pledges_market(session):
 
 
 def fetch_all(client, symbol, since=None):
-    """Every confirmed source for one symbol, under one shared prime.
+    """Every source for one symbol, under one shared prime.
 
     Returns ``{"records": {"results": [...], "announcements": [...],
     "shareholding": [...], "pledges": [...]}, "errors":
     [{"source": ..., "error": ...}]}`` — a failing source lands in ``errors``
-    and never stops the others. Call count per run: 1 prime + 2 (results:
-    comparison and filings) + 1 announcements + 1 shareholding + 1 pledges.
+    and never stops the others. ``quote`` is wired in but unconfirmed (probe
+    2026-10-30): ``fetch_quote`` raises ``SourceError`` without a call, so
+    every run reports it in ``errors`` and ``records`` has no ``quote`` entry.
+    Call count per run: 1 prime + 2 (results: comparison and filings) +
+    1 announcements + 1 shareholding + 1 pledges — quote adds none.
     """
     session = Session(client, symbol)
     sources = (
@@ -143,6 +148,7 @@ def fetch_all(client, symbol, since=None):
         ("announcements", lambda: fetch_announcements(session, since=since)),
         ("shareholding", lambda: fetch_shareholding(session)),
         ("pledges", lambda: fetch_pledges(session)),
+        ("quote", lambda: fetch_quote(session)),
     )
     records = {}
     errors = []
@@ -155,7 +161,11 @@ def fetch_all(client, symbol, since=None):
 
 
 def plan_calls(symbol, run_date=None):
-    """(source, url) pairs the per-symbol run makes, in call order (--dry-run)."""
+    """(source, url) pairs the per-symbol run makes, in call order (--dry-run).
+
+    ``quote`` lists no URL: while the quote source stays unconfirmed (probe
+    2026-10-30), ``fetch_quote`` raises ``SourceError`` without a call.
+    """
     symbol = str(symbol).strip().upper()
     return (
         ("prime", stock_page(symbol)),
@@ -164,4 +174,5 @@ def plan_calls(symbol, run_date=None):
         ("announcements", BASE + announcements_url(symbol)),
         ("shareholding", BASE + shareholding_url(symbol)),
         ("pledges", BASE + pledges_url(symbol)),
+        ("quote", "(no call: quote source unconfirmed — see data-sources.md)"),
     )

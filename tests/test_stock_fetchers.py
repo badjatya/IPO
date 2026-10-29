@@ -60,8 +60,13 @@ class FetchAllTests(NoNetworkCase):
     def test_fetches_every_source_under_one_shared_prime(self):
         client = FakeClient(routes_for())
         bundle = fetchers.fetch_all(client, "RELIANCE")
+        # Quote adds no call (source unconfirmed), so the count stays 6.
         self.assertEqual(client.calls, expected_calls())
-        self.assertEqual(bundle["errors"], [])
+        # The only error is the unconfirmed quote source (probe 2026-10-30).
+        self.assertEqual([e["source"] for e in bundle["errors"]], ["quote"])
+        self.assertTrue(bundle["errors"][0]["error"].startswith("SourceError:"))
+        self.assertIn("not confirmed", bundle["errors"][0]["error"])
+        self.assertNotIn("quote", bundle["records"])
         self.assertEqual(len(bundle["records"]["results"]), 5)
         self.assertEqual(len(bundle["records"]["announcements"]), 20)
         self.assertEqual(len(bundle["records"]["shareholding"]), 20)
@@ -80,9 +85,13 @@ class FetchAllTests(NoNetworkCase):
         self.assertIn("results", bundle["records"])
         self.assertIn("announcements", bundle["records"])
         self.assertIn("pledges", bundle["records"])
+        # The failing source and the unconfirmed quote both land in errors.
         self.assertEqual(
-            bundle["errors"],
-            [{"source": "shareholding", "error": "RuntimeError: shareholding down"}],
+            [e["source"] for e in bundle["errors"]],
+            ["shareholding", "quote"],
+        )
+        self.assertEqual(
+            bundle["errors"][0]["error"], "RuntimeError: shareholding down"
         )
 
     def test_http_404_without_a_body_does_not_stop_the_rest(self):
@@ -145,6 +154,10 @@ class DryRunTests(NoNetworkCase):
         self.assertEqual(
             calls["pledges"],
             "https://www.nseindia.com/api/corporate-pledgedata?index=equities&symbol=RELIANCE",
+        )
+        self.assertEqual(
+            calls["quote"],
+            "(no call: quote source unconfirmed — see data-sources.md)",
         )
 
 
