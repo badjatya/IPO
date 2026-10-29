@@ -106,8 +106,94 @@ None. Everything this task needs is already settled: the known-keys list, the ro
 
 ## Changes during build
 
-Anything built differently from the approved plan, and why.
+- **POST's saved row carries the updater's email from the session** (`updatedByEmail: admin.email`), not from a second joined select. The plan said POST returns "the saved row" and the page "shows the returned row (new value, updater, timestamp)"; the saved row alone has the updater's id but no email, and `requireAdmin` already has the admin's email — the updater of the row is exactly the admin who just posted, so this is the joined value with no extra query, and the page's "Changed by <email>" line renders without a follow-up GET. The route tests and the Neon block assert it.
+- **The scoping test's local `userCookie` was renamed `scopingCookie`.** Adding the plan's file-level `userCookie` made that test's local declaration shadow it, which `npm run lint` (oxlint, `no-shadow`) refuses. Its assertions are unchanged (the rename is mechanical); the role-check test keeps all its original assertions, as the round-2 note required.
+- **Offline page-test detail:** jsdom runs interactive form-validation on a submit-button click, so an empty (or non-numeric, which jsdom sanitizes to `""`) required input blocks the submit before the page's own guard runs. The "never posts" tests assert the fetch count stays at one (the mount GET) for the click path, and additionally fire a direct submit to exercise the page's guard and its "Enter a whole number" message. No behaviour deviates from the plan.
+- **No other deviations.** Everything else matches the approved plan; the Neon block sits between the role-check test and the rate-limit test and adds no sign-in calls (7 remain before the rate-limit test).
 
 ## Verification
 
-Test commands run, with their output pasted.
+Commands run in `web/` on the task branch (worktree `.worktrees/013-admin-settings/`), with their real output:
+
+### `npm test` (offline Vitest suite) — PASS, 19 files / 120 tests
+
+```text
+> vitest run
+
+ ✓ tests/proxy.test.ts (9 tests)
+ ✓ tests/admin-invite-page.test.tsx (2 tests)
+ ✓ tests/layout.test.tsx (5 tests)
+ ✓ tests/admin-settings-page.test.tsx (6 tests)
+ ✓ tests/mail.test.ts (8 tests)
+ ✓ tests/invite-route.test.ts (7 tests)
+ ✓ tests/settings-route.test.ts (11 tests)
+ ✓ tests/auth-pages.test.tsx (11 tests)
+ ✓ tests/auth-config.test.ts (6 tests)
+ ✓ tests/auth-handler.test.ts (1 test)
+ ✓ tests/auth-prod-start.test.ts (3 tests)
+ ✓ tests/auth-guard.test.ts (8 tests)
+ ✓ tests/safe-next.test.ts (6 tests)
+ ✓ tests/first-admin.test.ts (6 tests)
+ ✓ tests/settings-validation.test.ts (7 tests)
+ ✓ tests/neon-branch.test.ts (14 tests)
+ ✓ tests/env-example.test.ts (2 tests)
+ ✓ tests/schema.test.ts (5 tests)
+ ✓ tests/admin-layout.test.tsx (3 tests)
+
+ Test Files  19 passed (19)
+      Tests  120 passed (120)
+```
+
+### `npm run typecheck` — PASS
+
+```text
+> tsc --noEmit
+```
+(exit 0, no output)
+
+### `npm run lint` — PASS
+
+```text
+> oxlint --deny-warnings
+
+Found 0 warnings and 0 errors.
+Finished in 47ms on 57 files with 250 rules using 12 threads.
+```
+
+### `npm run build` — PASS (Next.js 16.4.3, Turbopack)
+
+```text
+✓ Compiled successfully in 2.6s
+  Running TypeScript ... Finished in 588ms
+✓ Generating static pages using 11 workers (10/10) in 192ms
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /admin/invite
+├ ƒ /admin/settings          ← this task's page
+├ ƒ /api/admin/invite
+├ ƒ /api/admin/settings      ← this task's route
+├ ƒ /api/auth/[...all]
+├ ƒ /api/health/db
+├ ○ /forgot-password
+├ ○ /reset-password
+└ ○ /sign-in
+```
+
+### Schema drift (CI's `npx drizzle-kit generate` no-op) — PASS
+
+```text
+No config path provided, using default 'drizzle.config.ts'
+27 tables
+…
+settings 5 columns 0 indexes 1 fks
+…
+No schema changes, nothing to migrate 😴
+```
+
+and `git status --porcelain db` (in `web/`) printed nothing.
+
+### `npm run test:db` (Neon-branch suite) — NOT RUN here
+
+Needs `NEON_API_KEY` / `NEON_PROJECT_ID` (CI secrets, H06), which the local environment does not have; the harness refuses to run without them by design (`web/scripts/neon-branch.mjs`). CI's `db` job runs it on this branch; the new "admin settings on a real branch" describe block in `web/tests/db/auth.test.ts` adds no sign-in calls and sits between the role-check test and the rate-limit test.
