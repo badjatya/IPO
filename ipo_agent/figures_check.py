@@ -52,9 +52,10 @@ _NUMBER = rf"(?:{_NUM}|{_WORD_ALT}(?:\s+{_WORD_ALT})*)"
 
 # A figure: optional ≈/~ marker, a ₹ or Rs. prefix, a number (digits or words),
 # optionally a range (A–B, en dash or hyphen, unit after B applies to both), and an
-# optional unit.
+# optional unit. "Rs." must not follow a letter, or the "rs." at the end of
+# "peers."/"sectors." would read as a prefix.
 _FIGURE = re.compile(
-    rf"(?P<approx>[≈~])?\s*(?:₹|Rs\.)\s*"
+    rf"(?P<approx>[≈~])?\s*(?:₹|(?<![A-Za-z])Rs\.)\s*"
     rf"(?P<a>{_NUMBER})"
     rf"(?:\s*(?:–|-)\s*(?P<b>{_NUMBER}))?"
     rf"(?:\s+(?P<unit>{UNITS}(?:\s+{UNITS})*))?",
@@ -65,14 +66,20 @@ _FIGURE = re.compile(
 # Candidates: ₹/Rs.-prefixed numbers with an optional unit, or bare numbers carrying
 # an explicit unit word ("28,300.00 million" still matches without a prefix). Bare
 # table cells without a unit word (e.g. under a "(₹ in lakhs)" header) are not
-# candidates, and neither is a bare number right after a Latin letter + space
-# ("USD 1.00 million" is not rupees).
+# candidates, and neither is a bare unit-carrying number right after a non-rupee
+# currency marker ("USD 1.00 million" is not rupees). "Rs." must not follow a
+# letter, or the "rs." at the end of "peers."/"sectors." would read as a prefix.
 _CANDIDATE = re.compile(
-    rf"(?:(?P<pre>₹|Rs\.)\s*)?"
+    rf"(?:(?P<pre>₹|(?<![A-Za-z])Rs\.)\s*)?"
     rf"(?P<num>{_NUM})"
     rf"(?:\s+(?P<unit>{UNITS}(?:\s+{UNITS})*))?",
     re.IGNORECASE,
 )
+
+# A non-rupee currency marker right before a bare unit-carrying number means the
+# amount is not in rupees. Prose words before the number ("of 7,756.07 lakhs",
+# "aggregating up to 28,300.00 million") are fine — those are rupee candidates.
+_FOREIGN_CURRENCY = re.compile(r"(?:USD|US\$|\$|EUR|GBP)\s*$", re.IGNORECASE)
 
 _ONES = {w: i for i, w in enumerate(
     "zero one two three four five six seven eight nine ten eleven twelve thirteen "
@@ -187,7 +194,7 @@ def rhp_candidates(rhp_text):
         multiplier = _unit_multiplier(unit)
         if multiplier is None:
             continue
-        if not pre and m.start() >= 2 and re.match(r"[A-Za-z]\s", rhp_text[m.start() - 2:m.start()]):
+        if not pre and _FOREIGN_CURRENCY.search(rhp_text[:m.start()]):
             continue  # "USD 1.00 million" is not rupees
         candidates.append(float(m.group("num").rstrip(",").replace(",", "")) * multiplier)
     return candidates

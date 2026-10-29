@@ -68,6 +68,11 @@ class ExtractTests(unittest.TestCase):
         self.assertEqual(figures("Rs. 1,119 per share"),
                          [(1119.0, 0, 1, False)])
 
+    def test_rs_at_word_end_is_no_prefix(self):
+        # "peers." ends in "rs." but that is the word's ending, not a rupee prefix.
+        self.assertEqual(figures("lags peers. 30 lakh customers"), [])
+        self.assertEqual(figures("issue size, per others. 5 Cr"), [])
+
     def test_approximate_markers(self):
         self.assertTrue(figures("≈₹2,534 Cr")[0][3])
         self.assertTrue(figures("≈ ₹10,765 Cr")[0][3])
@@ -89,6 +94,20 @@ class CheckTests(unittest.TestCase):
     def test_crore_finds_lakhs(self):
         c = fc.check_one("₹77.6 Cr", "₹7,756.07 lakhs")
         self.assertEqual((c.found, c.total, c.share, c.missing), (1, 1, 1.0, []))
+
+    def test_bare_unit_number_after_prose_word_is_a_candidate(self):
+        # The plan's approach: a bare figure with an explicit unit word is a
+        # candidate without a ₹ prefix — "of 7,756.07 lakhs", "aggregating up to
+        # 28,300.00 million". Prose words before it do not make it foreign currency.
+        c = fc.check_one("₹77.6 Cr", "the issue of 7,756.07 lakhs")
+        self.assertEqual((c.found, c.total, c.share), (1, 1, 1.0))
+        c = fc.check_one("₹2,830 Cr", "aggregating up to 28,300.00 million")
+        self.assertEqual((c.found, c.total, c.share), (1, 1, 1.0))
+
+    def test_rs_at_word_end_is_no_candidate(self):
+        # "sectors.\n3" and "customers.\n  438": the "rs." is a word ending, and a
+        # bare number without a unit word is a table cell, not a candidate.
+        self.assertEqual(fc.rhp_candidates("sectors.\n3 and customers.\n  438"), [])
 
     def test_million_on_rhp_side(self):
         c = fc.check_one("₹2,830 Cr", "₹28,300.00 million")
@@ -135,9 +154,13 @@ class CheckTests(unittest.TestCase):
         self.assertEqual((c.found, c.total, c.share), (0, 1, 0.0))
 
     def test_foreign_currency_bare_number_is_not_a_candidate(self):
-        self.assertEqual(fc.rhp_candidates("more than USD 1.00 million"), [])
-        c = fc.check_one("₹1.00 million", "more than USD 1.00 million")
-        self.assertEqual(c.found, 0)
+        # The guard skips a bare unit-carrying number only when a non-rupee
+        # currency marker comes right before it.
+        for rhp in ("more than USD 1.00 million", "US$ 500 million",
+                    "at $ 500 million", "EUR 500 million", "GBP 500 million"):
+            self.assertEqual(fc.rhp_candidates(rhp), [], rhp)
+            c = fc.check_one("₹1.00 million", rhp)
+            self.assertEqual(c.found, 0, rhp)
 
     def test_rs_prefix_matches(self):
         c = fc.check_one("Rs. 1,119 per share", "₹ 1,119.00")
