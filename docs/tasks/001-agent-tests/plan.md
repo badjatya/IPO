@@ -1,6 +1,6 @@
 ---
 task: 001-agent-tests
-status: code-review
+status: code-changes
 branch: task/001-agent-tests
 assigned_by: Vijay
 planner: DeepSeek (opencode)
