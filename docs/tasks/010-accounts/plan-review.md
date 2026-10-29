@@ -75,3 +75,22 @@ All ten round 1 items and both decisions are answered, and the answers are sound
 ### Notes
 
 - Once these five are in, the plan is ready to approve. Step 1 stops for the human's `npm install` as planned.
+
+## Round 3 (2026-10-30)
+
+**Verdict:** Approved
+
+**Read:** plan.md (revision 2) and rounds 1–2 above.
+
+All five round 2 items are in:
+- `rate_limit.last_request` is `bigint` (`mode: "number"`).
+- `emailAndPassword.resetPasswordTokenExpiresIn` is `60 * 60 * 24`.
+- `customRules` is an object keyed by path.
+- `assertMailConfig()` runs in the invite route before any row is created (500 "email is not configured"), and `auth.ts` fails at start in production when the mail config is missing.
+- `revokeSessionsOnPasswordReset: true`, with a Neon-branch assertion that a session from before the reset is gone.
+
+### Notes
+
+- Step 1 is the human's `cd web && npm install better-auth resend`. `/run-task` stops for it before `build`.
+- During the build, check every Better Auth option against the installed package's types, as the Risks section says. Record any difference under "Changes during build", including the hook's context shape and whether `advanced.backgroundTasks` exists.
+- Real Neon-branch runs only count in CI (task 007's lesson). Push the branch for the `db` job before asking for the code review.
