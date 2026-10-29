@@ -37,3 +37,30 @@ The plan is solid on goal, scope and rules: stdlib only, no AI, no `data/` write
 2. **Follow task 001's test layout.** Task 001 uses `tests/test_<module>.py` with no `tests/__init__.py`, puts the repo root on `sys.path` in each test file, and keeps IPO NSE fixtures as `tests/fixtures/nse_*.json`. Use the same conventions. Consider naming the directory `tests/fixtures/nse_stock/` so it isn't confused with the IPO NSE fixtures. Don't add a `tests/__init__.py` or a shared helper that 001 also creates.
 3. **`tech.md` is edited by both 001 and 003.** Keep 003's edits to its own rows (entry points, `.github/workflows/`, Local setup) so the second merge rebases cleanly.
 4. **`ipo_agent/` placement is fine for a probe.** It doesn't settle D09. Keep the module docstring explicit that it is a one-off development probe that 014 may move or delete.
+
+## Round 2 (2026-10-29)
+
+**Verdict:** Approved
+
+**Read:** plan.md (revision 1 and its Revisions row), the round 1 items above, and the same docs as round 1.
+
+Every round 1 item is fixed:
+
+| Round 1 item | How the revision answers it |
+| --- | --- |
+| 1. Call budget | Exactly 12 requests, listed in order. `trade_info` is never called, the pledge symbol is fixed at `ADANIENT`, and there are no fallbacks. `MAX_CALLS = len(ENDPOINTS)` and a `CallBudget` guard enforce the limit, with a 12-vs-13 test |
+| 2. Units | "Unit not stated" unless the response itself states one. Nothing is converted in the probe or in a fixture. A test asserts no ₹ lakh or crore |
+| 3. Runner result | A fixed order: build, human pushes, human hands over the run URL and `G1 candidate:` line, DeepSeek records both, then `code-review`. `captured_by` is recorded per fixture |
+| 4. Fixture size | A 20-row cap applied in the `--save` code, with original counts and bytes in `manifest.json`, and a cap test |
+| 5. Workflow | `paths:` covers only the probe and the workflow. Actions are pinned to major versions, with `setup-python@v5` on 3.12 |
+| 6. Conditional docs | The `arch.md § 9` row and the `data-sources.md` summary row change only as far as the endpoints were confirmed |
+
+The notes are taken up too: market-wide announcement and pledge calls are fixed, optional probes inside the budget; `tests/fixtures/nse_stock/` with 001's test layout; `tech.md` edits limited to 003's rows; and the one-off-probe docstring. Marking the two primes and the two market-wide probes `required: false`, so they can't turn a G1 PASS into a FAIL, is a sound addition.
+
+### Notes
+
+Build-time points that don't need another plan round:
+
+1. **Make the date-range URL testable.** `announcements_market` builds its URL from today's date, so "the registry has exactly the 12 documented URLs" isn't deterministic. Let the URL builders take the run date as a parameter (with `main` passing today's date), and test with a fixed date.
+2. **The `paths:` filter and an earlier push.** If the local run is blocked and the human pushes early for the artifact (build order step 3), a later push that doesn't touch the probe or the workflow won't start another run. In that case, the early run is the G1 evidence for step 6. Record its URL, and use "Re-run jobs" only if a fresh result is really needed.
+3. **Build `README.md` from `manifest.json` in code,** as the plan says. Field gaps and unit notes can be added to it in code from the summary, so no part of the fixture provenance is written by hand.
