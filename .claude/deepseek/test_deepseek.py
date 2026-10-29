@@ -96,11 +96,14 @@ class RuleTests(unittest.TestCase):
     def test_commands(self):
         root = Path("/repo")
         ok = ["git status", "git diff main...HEAD", "git log --oneline", "python3 -m unittest discover -s tests",
-              "python3 tools/figures.py --all", "npm test", "npm run lint", "npx --no-install tsc --noEmit"]
+              "python3 tools/figures.py --all", "python3 -m ipo_agent.figures_check --all",
+              "python3 -m ipo_agent.outcomes --no-fetch", "python3 -m ipo_agent.quiet AM --check", "npm test", "npm run lint", "npx --no-install tsc --noEmit"]
         for cmd in ok:
             self.assertIsNone(deepseek.command_problem(cmd.split(), "build", root, root), cmd)
         refused = ["git commit -m x", "git push", "git -c x=y status", "git diff --output=f",
                    "git diff --no-index /a /b", "python3 -c print(1)", "python3 ../../x.py",
+                   "python3 -m ipo_agent.snapshot --print", "python3 -m ipo_agent.rhp ACME",
+                   "python3 -m ipo_agent.outcomes", "python3 -m ipo_agent.quiet AM", "python3 -m json.tool",
                    "npm install left-pad", "npx tsc", "bash -c ls", "rm -rf x", "curl http://x"]
         for cmd in refused:
             self.assertTrue(deepseek.command_problem(cmd.split(), "build", root, root), cmd)

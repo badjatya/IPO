@@ -201,17 +201,31 @@ def command_problem(argv, mode, root, cwd):
     if prog in ("python3", "python"):
         if args[:2] == ["-m", "unittest"]:
             return None
+        if len(args) >= 2 and args[0] == "-m" and args[1].startswith("ipo_agent."):
+            return agent_module_problem(args[1].split(".", 1)[1], args[2:])
         if args and args[0].endswith(".py") and readable(inside(cwd, args[0])):
             return None
-        return "python3: only `python3 -m unittest ...` or `python3 <script.py in the worktree> ...`"
+        return "python3: only `python3 -m unittest ...`, `python3 -m ipo_agent.<module> ...` " \
+               "or `python3 <script.py in the worktree> ...`"
     if prog == "npm":
         if args[:1] in (["test"], ["run"], ["ls"]):
             return None
         return "npm: only test, run and ls. You can't install packages: say in your summary what must be installed"
     if prog == "npx" and args[:1] == ["--no-install"] and len(args) > 1:
         return None
-    return f"{prog}: not allowed. Allowed: read-only git, python3 -m unittest, python3 <script.py>, " \
-           "npm test|run|ls, npx --no-install <bin>"
+    return f"{prog}: not allowed. Allowed: read-only git, python3 -m unittest, " \
+           "python3 -m ipo_agent.<module>, python3 <script.py>, npm test|run|ls, npx --no-install <bin>"
+
+
+def agent_module_problem(module, args):
+    """The agent's own commands, minus the ones that fetch live sites (AGENTS.md § Commands)."""
+    if module in ("snapshot", "rhp"):
+        return f"ipo_agent.{module} fetches live sites; builds and tests never run it"
+    if module == "outcomes" and "--no-fetch" not in args:
+        return "ipo_agent.outcomes fetches live prices; add --no-fetch"
+    if module == "quiet" and "--check" not in args:
+        return "ipo_agent.quiet writes the run's report; add --check"
+    return None
 
 
 def clean_env():

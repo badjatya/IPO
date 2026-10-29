@@ -38,7 +38,7 @@
 - **Post-step check.** After every step, the driver checks every changed path and every commit against the same rules. It also checks that the approved plan and Claude's review text are unchanged. A step that breaks a rule is not handed off (exit 3).
 
 **The limit of the sandbox.**
-- The `run` tool takes no shell, and only allowlisted commands: read-only git, `python3 -m unittest`, `python3 <script>`, `npm test|run|ls` and `npx --no-install`.
+- The `run` tool takes no shell, and only allowlisted commands: read-only git, `python3 -m unittest`, `python3 -m ipo_agent.<module>` (not the ones that fetch live sites), `python3 <script>`, `npm test|run|ls` and `npx --no-install`.
 - Those commands still run the task's own code, which can do anything the user can, including reading `.env.local`. So the key is not in its environment, is replaced in every tool result before DeepSeek or the log sees it, and a step whose changed files hold it is not handed off.
 - The post-step check, Claude's code review and "only the human pushes" are the real boundary. The docs say so.
 
