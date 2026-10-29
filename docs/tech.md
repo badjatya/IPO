@@ -13,7 +13,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Layer | Choice | Status | ADR |
 | --- | --- | --- | --- |
 | IPO research runtime | Claude Code routine on the personal Pro account, cloud environment with a network allowlist, scheduled; IPOs only | Running | [0003](adr/0003-research-on-a-schedule.md), [0017](adr/0017-gemini-for-stocks-claude-for-ipos.md) |
-| Stock research runtime | Stock worker: GitHub Actions workflow, dispatched by the app and on a schedule | Decided | [0017](adr/0017-gemini-for-stocks-claude-for-ipos.md), [0018](adr/0018-stock-worker-on-github-actions.md) |
+| Stock research runtime | Stock worker: GitHub Actions workflow, dispatched by the app and on a schedule; its fetcher layer is built in 014 (`stock_worker/`, Python, standard library) | Decided; fetchers built | [0017](adr/0017-gemini-for-stocks-claude-for-ipos.md), [0018](adr/0018-stock-worker-on-github-actions.md), [0026](adr/0026-stock-worker-code-location.md) |
 | Research models | Claude Sonnet 5.5 for IPOs (running); Gemini, free tier, for stocks (decided; model Open) | Running / Decided | [0017](adr/0017-gemini-for-stocks-claude-for-ipos.md) |
 | Research code | Python 3, standard library only | Running | [0002](adr/0002-standard-library-only-agent.md) |
 | PDF text | `pdftotext` (poppler-utils), `pypdf` as fallback | Running | — |
@@ -42,13 +42,13 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | --- | --- |
 | Language | Python 3; standard library only (`urllib`, `http.cookiejar`, `json`, `gzip`, `zipfile`, `subprocess`, `statistics`, `zoneinfo`, `html`) |
 | External tools | `pdftotext` from poppler-utils; `pypdf` only if `pdftotext` is missing |
-| Entry points | `python3 -m ipo_agent.<module>`: `snapshot`, `quiet`, `rhp`, `outcomes`, `trends`, `email_render`; `nse_stock_smoke` is a development probe, not a routine entry point |
+| Entry points | `python3 -m ipo_agent.<module>`: `snapshot`, `quiet`, `rhp`, `outcomes`, `trends`, `email_render`; `nse_stock_smoke` is a development probe, not a routine entry point. Stock worker (014): `python3 -m stock_worker` (dev print of one symbol's records), `python3 -m stock_worker.probe` (the one-off quote probe the human runs once) |
 | Packaging | None needed; the routine's setup script installs only poppler-utils and `pypdf` ([SETUP.md](../SETUP.md)) |
 | Runtime | Claude Code cloud environment; network allowlist for NSE, NSE archives, Investorgain, SEBI and BSE |
 | Schedule | Weekdays 09:07 and 19:07 IST |
 | Output | JSON, Markdown, HTML and text files committed to `main` |
 
-Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The stock worker reuses `net.py` and the NSE client: [arch.md § Stock worker](arch.md#42-stock-worker-decided).
+Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The stock worker's fetchers (`stock_worker/`, 014) reuse `net.py` for HTTP: [arch.md § Stock worker](arch.md#42-stock-worker-decided).
 
 ## Web platform
 
@@ -98,6 +98,7 @@ Names are planned; values are never committed. The app's variables are listed, e
 | Path | Contents | Status |
 | --- | --- | --- |
 | `ipo_agent/` | Python research agent | Running |
+| `stock_worker/` | NSE stock fetchers (014): quote probe, results, announcements, shareholding, pledges; standard library, reusing `ipo_agent/net.py` | New in 014 ([ADR-0026](adr/0026-stock-worker-code-location.md)) |
 | `analysis/`, `reports/`, `data/` | Research output (system of record) | Running |
 | `docs/` | Project, architecture, stack, database, AI, sources, ADRs, plan | Running |
 | `CLAUDE.md`, `ROUTINE.md` | Instructions for Claude (routine and reviewer) | Running |
@@ -119,6 +120,8 @@ python3 -m ipo_agent.rhp <SYMBOL|url>       # extract RHP sections
 python3 -m ipo_agent.outcomes --no-fetch    # listing scorecard
 python3 -m ipo_agent.email_render reports/<date>-<am|pm>.json
 python3 -m ipo_agent.nse_stock_smoke --dry-run   # print the NSE stock smoke URLs without calling NSE
+python3 -m stock_worker --dry-run                 # print the planned NSE stock calls for one symbol
+python3 -m stock_worker.probe                     # one-off quote probe (014; run once by the human)
 ```
 
 Scheduled routine setup: [SETUP.md](../SETUP.md). The web app (`web/`) needs Node.js 22.22 or later, or 24.15 or later (Vitest's jsdom needs it; CI uses 24):

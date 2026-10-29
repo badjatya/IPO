@@ -262,12 +262,14 @@ Latest price and valuation, refreshed each run. One row per stock; the app is no
 | `period_end` | `date` | PK | Quarter end |
 | `consolidated` | `boolean` | PK | Standalone and consolidated stored separately |
 | `revenue_cr`, `other_income_cr`, `expenses_cr` | `numeric(14,2)` | yes | |
-| `ebitda_cr`, `pat_cr` | `numeric(14,2)` | yes | |
-| `eps` | `numeric(10,2)` | yes | |
+| `ebitda_cr`, `pat_cr` | `numeric(14,2)` | yes | `ebitda_cr`: operating EBITDA `revenue − (total expenses − finance costs − depreciation)` from `re_net_sale`, `re_oth_tot_exp`, `re_int_new`, `re_depr_und_exp` — the 014 fetcher derives it in code, `None` unless all four are stated |
+| `eps` | `numeric(10,2)` | yes | ₹ per share; the NSE results API sends it unconverted (014) |
 | `filed_at` | `timestamptz` | yes | |
 | `source_url` | `text` | yes | Exchange filing |
 | `ai_summary` | `text` | yes | What changed and why |
 | `ai_model`, `ai_prompt_version`, `ai_written_at` | | | Provenance |
+
+Amounts are the NSE results API's ₹ lakh, converted to crore by 014's tested `to_crore` helper in the fetcher ([data-sources.md](data-sources.md#nse-stock-data)); the API is standalone-only, so `consolidated` is `False` for every fetched row.
 
 Index: `(symbol, period_end desc)`.
 
@@ -278,11 +280,13 @@ Index: `(symbol, period_end desc)`.
 | `symbol` | `text` | PK, FK → `stocks` | |
 | `quarter_end` | `date` | PK | |
 | `promoter_pct`, `fii_pct`, `dii_pct`, `public_pct`, `other_pct` | `numeric(7,2)` | yes | Share of total equity |
-| `promoter_pledged_pct` | `numeric(7,2)` | yes | Share of promoter holding that is pledged |
+| `promoter_pledged_pct` | `numeric(7,2)` | yes | Share of promoter holding that is pledged; computed by the 014 fetcher as shares pledged ÷ promoter holding × 100 (half-up, 2 dp) — never NSE's `percSharesPledged` |
 | `filed_at` | `timestamptz` | yes | |
 | `source_url` | `text` | yes | |
 
 Quarter-on-quarter changes come from a SQL window over this table. Python's alert rules use the same comparison.
+
+`fii_pct`/`dii_pct` come later from XBRL parsing (016/018); 014's fetcher leaves them missing, never estimated ([data-sources.md](data-sources.md#nse-stock-data)).
 
 ### `announcements`
 
