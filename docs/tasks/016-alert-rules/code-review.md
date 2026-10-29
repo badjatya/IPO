@@ -111,3 +111,42 @@ Neither needs a change on the branch.
 | # | Response | Commit |
 | --- | --- | --- |
 | 4 | **Fixed.** The first-pledge case no longer alerts the whole fetched pledge history. `compute_alerts` now treats pledge quarters **before the latest stored shareholding quarter** as baseline history whenever `stored_pl` is empty: they raise no alert but still serve as `prev_pl`, and only a new pledge quarter **on or after** the latest stored shareholding quarter can alert — the rise rule once an earlier pledge is on record (including one from that baseline history), otherwise the "first time" rule. The first-time branch is additionally gated on `stored_pl` being empty, so a backfilled older quarter while stored pledges exist stays silent (the rise rule then applies to later quarters as in the old code). Your (a)–(c) are pinned in the new `LatePledgeSeriesTests` class: (a) the four-quarter case (stored shareholding 2025-09-30 → 2026-06-30, pledges fetched for the same quarters at 5/8/12/12%) raises nothing — only 2026-06-30 is eligible and its 0 pp move stays silent; (b) round 1's case still fires exactly once with the "on record for the first time: 25% of promoter holding" title; (c) a new 2026-09-30 pledge after that baseline history fires "Promoter pledge up from 12% to 15%" against the baseline's 2026-06-30, never "first time". The `compute_alerts` and `_pledge_first_alert` docstrings, the module docstring, plan.md "Changes during build", ADR-0029's Consequences and db.md § alerts all state the gate. Full suite: `Ran 376 tests ... OK` (369 + 4 `FirstPledgeTests` + 3 `LatePledgeSeriesTests`), hooks and deepseek suites OK — see plan.md "Verification". | `4509e5c` (alerts.py), `401d571` (tests), `b4ec568` (docs) |
+
+## Round 3 (2026-10-30)
+
+**Verdict:** Approved
+
+**Diff:** `git diff c6f756c..task/016-alert-rules` at `6072b3c`, the finding-4 fix
+
+**Tests:** run by Claude in the worktree.
+
+```text
+$ python3 -m unittest discover -s tests
+Ran 376 tests in 0.580s
+OK
+
+$ python3 -m unittest discover -s .claude/hooks     → OK
+$ python3 -m unittest discover -s .claude/deepseek  → OK
+```
+
+I also ran `compute_alerts` by hand on finding 4's cases:
+
+```text
+(a) stored shareholding 2025-09-30..2026-06-30, pledges fetched 5/8/12/12%  → []
+(b) round 1's first-ever pledge at 25%            → ['Promoter pledge on record for the first time: 25% of promoter holding']
+(c) a new 2026-09-30 pledge at 14% after (a)'s baseline → ['Promoter pledge up from 12% to 14%']
+(d) a late pledge row (20%) for the stored 2026-06-30 shareholding quarter, earlier pledge 12% → ['Promoter pledge up from 12% to 20%']
+```
+
+**Round 2 fix:**
+
+| # | Fix | Checked |
+| --- | --- | --- |
+| 4 | Pledge history baseline | Pledge quarters before the latest stored shareholding quarter are now baseline. They raise no alert but still count as the earlier pledge for later quarters. Cases (a)–(c) are pinned in `LatePledgeSeriesTests`, and case (d) shows that a pledge row arriving a run after its quarter's shareholding still alerts. The docstrings, "Changes during build", ADR-0029 and db.md all state the gate. Done |
+
+No Blocker or Major is open.
+
+### Notes
+
+- **Nit, `stock_worker/alerts.py` (the `earliest_alertable` gate):** the code applies the gate whether or not `stored_pl` is empty. The response says "whenever `stored_pl` is empty". So a new pledge quarter that's older than the latest stored shareholding quarter stays silent even when pledges are stored. That's fine, since it's late data about an old quarter, but make the wording match the code if you touch this again.
+- **Merge:** the two `docs/arch.md` conflicts from round 2 still apply: in § 8 keep `main`'s 0028 row and add 0029; in § 9 keep `main`'s removal of the "Auth library and ORM" row and take the branch's NSE row.
