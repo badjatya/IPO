@@ -1,6 +1,6 @@
 ---
 task: 007-db-schema
-status: code-changes
+status: code-review
 branch: task/007-db-schema
 assigned_by: Vijay
 planner: DeepSeek deepseek-v4-flash-0731 (OpenRouter)
