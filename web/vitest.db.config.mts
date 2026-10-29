@@ -13,5 +13,14 @@ export default defineConfig({
     environment: "node",
     include: ["tests/db/**/*.test.ts"],
     setupFiles: ["./tests/db/setup.ts"],
+    // The Neon suite runs against the real ap-southeast-1 branch, where a
+    // Better Auth call takes about 1 s (password hashing plus round trips).
+    // The first-admin test also blocks the event loop with spawnSync, and the
+    // rate-limit test needs up to ten ~1 s failed sign-ins before the 429.
+    // Vitest's default 5 s testTimeout made those tests (and every later one
+    // that depended on their cookies) time out. The offline suite's config
+    // (vitest.config.mts) keeps the default: it is local and fast.
+    testTimeout: 60_000,
+    hookTimeout: 60_000,
   },
 });
