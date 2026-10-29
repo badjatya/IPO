@@ -160,7 +160,7 @@ A separate worker for listed stocks, using Gemini ([ADR-0017](adr/0017-gemini-fo
 | --- | --- | --- |
 | 1. Read the distinct watched symbols from the database | Worker | Symbols only, no user data |
 | 2. Fetch quotes, results, announcements, shareholding and pledges since the last run | Python | Raw filings |
-| 3. Compute changes and alert candidates (pledge up, promoter holding down, big FII/DII moves) | Python | Rule-based flags with numbers |
+| 3. Compute changes and alert candidates (pledge up, promoter holding down, big FII/DII moves) | Python | Rule-based flags with numbers — `stock_worker/alerts.py` (016) |
 | 4. Summarise each **new** result or announcement and rate its importance; explain each flag | Gemini | One summary per filing |
 | 5. Write the rows to the database, and the files to `data/stocks/<SYMBOL>/…` in git | Worker | Shared by every user watching the stock |
 
@@ -397,6 +397,9 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | [0022](adr/0022-web-app-in-same-repo.md) | The web app lives in this repo, in `web/` | Accepted |
 | [0023](adr/0023-typescript-strict.md) | TypeScript in strict mode for the web app | Accepted |
 | [0024](adr/0024-vitest-for-app-tests.md) | Vitest and Testing Library for the web app's tests | Accepted |
+| [0025](adr/0025-drizzle-on-neon-serverless-driver.md) | Drizzle ORM on Neon's serverless driver | Accepted |
+| [0026](adr/0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | Accepted |
+| [0027](adr/0027-alert-thresholds-and-severities.md) | Alert thresholds and severities in code (D10); FII/DII parsing is task 027 | Proposed |
 
 ## 9. Open questions
 
@@ -405,5 +408,5 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | Gemini free quotas and grounding for the chosen model (read in AI Studio) | Quotas, platform cap, news step | Week 1 |
 | App host | Deployment, secrets | Week 4 |
 | Auth library and ORM | Accounts, schema migrations | Week 1 |
-| NSE stock data after 014: what still remains — the **quote source** (014's 2026-10-30 probe found no working candidate; all four candidates failed or were unprobed, errors recorded in [data-sources.md](data-sources.md#nse-stock-data); `fetch_quote` raises `SourceError` and `stock_quotes` stays unfilled until a later task confirms a source, the unprobed `/api/NextApi/…` paths being the candidate to try), the **consolidated results source** (the same probe's re-check was `identical`, so the endpoint still ignores `consolidated=true`; `results.py` returns no consolidated rows), and the **FII/DII split**, reachable only through XBRL parsing that 016/018 must add before `fii_move`/`dii_move` alerts can fire. Settled by 014: results unit (₹ lakh, converted to crore), operating-EBITDA derivation, the filings join, the pledge share. Confirmed fetchers: [data-sources.md](data-sources.md#nse-stock-data) | Stock worker | 016/018 |
+| NSE stock data after 014: what still remains — the **quote source** (014's 2026-10-30 probe found no working candidate; all four candidates failed or were unprobed, errors recorded in [data-sources.md](data-sources.md#nse-stock-data); `fetch_quote` raises `SourceError` and `stock_quotes` stays unfilled until a later task confirms a source, the unprobed `/api/NextApi/…` paths being the candidate to try), the **consolidated results source** (the same probe's re-check was `identical`, so the endpoint still ignores `consolidated=true`; `results.py` returns no consolidated rows), and the **FII/DII split**, reachable only through XBRL parsing — task 027 (settled at 016's round-1 review) parses it; 016 shipped the `fii_move`/`dii_move` alert rules in `stock_worker/alerts.py`, silent until 027 feeds real values. Settled by 014: results unit (₹ lakh, converted to crore), operating-EBITDA derivation, the filings join, the pledge share. Confirmed fetchers: [data-sources.md](data-sources.md#nse-stock-data) | Stock worker | 016/018 |
 | Backups for app-owned data (Neon free tier keeps a short history) | Users, watchlists | Before real users |

@@ -32,6 +32,7 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0024](0024-vitest-for-app-tests.md) | Vitest and Testing Library for the web app's tests | 2026-10-29 | Accepted |
 | [0025](0025-drizzle-on-neon-serverless-driver.md) | Drizzle ORM on Neon's serverless driver | 2026-10-29 | Accepted |
 | [0026](0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | 2026-10-30 | Accepted |
+| [0027](0027-alert-thresholds-and-severities.md) | Alert thresholds and severities in code (D10); FII/DII parsing is task 027 | 2026-10-30 | Proposed |
 
 ## Adding one
 

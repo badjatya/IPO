@@ -284,9 +284,9 @@ Index: `(symbol, period_end desc)`.
 | `filed_at` | `timestamptz` | yes | |
 | `source_url` | `text` | yes | |
 
-Quarter-on-quarter changes come from a SQL window over this table. Python's alert rules use the same comparison.
+Quarter-on-quarter changes come from a SQL window over this table. Python's alert rules use the same comparison, implemented in `stock_worker/alerts.py` (016).
 
-`fii_pct`/`dii_pct` come later from XBRL parsing (016/018); 014's fetcher leaves them missing, never estimated ([data-sources.md](data-sources.md#nse-stock-data)).
+`fii_pct`/`dii_pct` come later from XBRL parsing (task 027, settled at 016's round-1 review); 016 ships the `fii_move`/`dii_move` rules that consume them, silent until then; 014's fetcher leaves them missing, never estimated ([data-sources.md](data-sources.md#nse-stock-data)).
 
 ### `announcements`
 
@@ -314,14 +314,20 @@ Alerts belong to a stock, not to a user. Users see the alerts of the stocks they
 | `id` | `bigint` identity | PK | |
 | `symbol` | `text` | no | FK → `stocks` |
 | `kind` | `alert_kind` | no | |
-| `severity` | `severity` | no | |
+| `severity` | `severity` | no | From the settled severity map ([ADR-0027](adr/0027-alert-thresholds-and-severities.md)) |
 | `title` | `text` | no | e.g. "Promoter pledge up from 4% to 11%" (numbers from Python) |
-| `detail` | `text` | yes | Gemini's explanation |
+| `detail` | `text` | yes | Gemini's explanation, written in 020 and left `NULL` by the rules |
 | `dedupe_key` | `text` | no | Unique, e.g. `HDFCBANK:pledge_up:2026-09-30` |
-| `source_table`, `source_id` | `text` | yes | The row that triggered it |
+| `source_table`, `source_id` | `text` | yes | The row that triggered it — see the `source_id` forms below |
 | `created_at` | `timestamptz` | no | |
 
 Index: `(symbol, created_at desc)`.
+
+The rules that produce these rows are pure functions in `stock_worker/alerts.py` (016): `pledge_up` rise ≥ 1.00 pp → `warning`, `promoter_down` fall ≥ 2.00 pp → `warning`, `fii_move`/`dii_move` absolute move ≥ 1.00 pp → `watch`, `results` → `info`, `announcement` → `watch` — the settled D10 values, held in code with **no `settings` rows**. Titles and every number in them are built by Python from stated fields ("not available" for gaps); the `announcement` rule is not part of `compute_alerts` — 020's rating step calls `announcement_alert` once per announcement it has just rated, after Gemini writes `importance`.
+
+`dedupe_key` forms: `<SYMBOL>:<kind>:<quarter_end>` for `pledge_up`/`promoter_down`/`fii_move`/`dii_move` (e.g. `HDFCBANK:pledge_up:2026-09-30`), `<SYMBOL>:results:<period_end>`, `<SYMBOL>:announcement:<exchange_ref>`.
+
+`source_id` holds the triggering row's natural key, scoped by the alert's `symbol`: `shareholding` → its `quarter_end`, `quarterly_results` → its `period_end`, `announcements` → its `exchange_ref` — never the `announcements.id` bigint, which the pure module never sees.
 
 ## App tables
 
