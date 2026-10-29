@@ -101,13 +101,16 @@ describe("schema shape on a real branch", () => {
   it("has the 12 db.md enums with their values", async () => {
     const rows = await sql()`
       select t.typname as name,
-             array_agg(e.enumlabel order by e.enumsortorder) as values
+             array_agg(e.enumlabel::text order by e.enumsortorder) as values
       from pg_type t
       join pg_enum e on e.enumtypid = t.oid
       join pg_namespace n on n.oid = t.typnamespace
       where t.typtype = 'e' and n.nspname = 'public'
       group by t.typname
     `;
+    // ::text casts enumlabel (type `name`) so array_agg returns text[], which
+    // the serverless driver parses into a JS array; name[] arrives as a raw
+    // "{a,b,c}" string.
     expect(Object.fromEntries(rows.map((row) => [row.name, row.values]))).toEqual(enums);
   });
 
@@ -120,25 +123,37 @@ describe("schema shape on a real branch", () => {
 
   it("has the partial unique indexes that carry the rules", async () => {
     const rows = await sql()`
-      select t.relname as table_name, pg_get_indexdef(i.oid) as definition
+      select t.relname as table_name,
+             i.relname as index_name,
+             pg_get_indexdef(i.oid) as definition,
+             pg_get_expr(ix.indpred, ix.indrelid) as predicate
       from pg_class t
       join pg_index ix on ix.indrelid = t.oid
       join pg_class i on i.oid = ix.indexrelid
       join pg_namespace n on n.oid = t.relnamespace
       where n.nspname = 'public' and ix.indisunique and ix.indpred is not null
     `;
-    const defs = rows.map((row) => unquoted(row.definition as string));
-    expect(
-      defs.find((d) =>
-        d.includes("ON analysis_jobs USING btree (symbol) WHERE analysis_jobs.status in ('queued', 'running')"),
-      ),
-    ).toBeTruthy();
-    expect(
-      defs.find((d) => d.includes("ON ipos USING btree (symbol) WHERE ipos.symbol is not null")),
-    ).toBeTruthy();
-    expect(
-      defs.find((d) => d.includes("ON stocks USING btree (isin) WHERE stocks.isin is not null")),
-    ).toBeTruthy();
+    const byTable = new Map(rows.map((row) => [row.table_name as string, row]));
+    // db.md's three partial unique indexes, and no others.
+    expect([...byTable.keys()].toSorted()).toEqual(["analysis_jobs", "ipos", "stocks"]);
+
+    // pg_get_indexdef rewrites the predicate (in → = ANY, wraps it in parens),
+    // so assert on the pieces: the indexed column from the definition, and the
+    // predicate from pg_get_expr, case-insensitively.
+    const expectPartialIndex = (table: string, column: string, predicateParts: string[]) => {
+      const row = byTable.get(table);
+      expect(row, `expected a partial unique index on "${table}"`).toBeDefined();
+      const r = row as { definition: string; predicate: string };
+      expect(unquoted(r.definition).toLowerCase()).toContain(`using btree (${column})`);
+      const predicate = r.predicate.toLowerCase();
+      for (const part of predicateParts) {
+        expect(predicate, `predicate of "${table}" should mention ${part}`).toContain(part);
+      }
+    };
+
+    expectPartialIndex("analysis_jobs", "symbol", ["status", "queued", "running"]);
+    expectPartialIndex("ipos", "symbol", ["symbol is not null"]);
+    expectPartialIndex("stocks", "isin", ["isin is not null"]);
   });
 
   it("has the unique exchange_ref and dedupe_key indexes", async () => {
@@ -173,14 +188,16 @@ describe("schema shape on a real branch", () => {
       where con.contype = 'f' and n.nspname = 'public'
     `;
     const defs = rows.map((row) => unquoted(row.definition as string));
+    // pg_get_constraintdef writes "REFERENCES ipo_snapshots(ipo_key, taken_at)"
+    // with no space before the "(", so allow whitespace there.
     expect(
       defs.find((d) =>
-        /FOREIGN KEY \(ipo_key, taken_at\) REFERENCES (public\.)?ipo_snapshots \(ipo_key, taken_at\)/.test(d),
+        /FOREIGN KEY \(ipo_key, taken_at\) REFERENCES (public\.)?ipo_snapshots\s*\(ipo_key, taken_at\)/.test(d),
       ),
     ).toBeTruthy();
     expect(
       defs.find((d) =>
-        /FOREIGN KEY \(report_date, session\) REFERENCES (public\.)?reports \(report_date, session\)/.test(d),
+        /FOREIGN KEY \(report_date, session\) REFERENCES (public\.)?reports\s*\(report_date, session\)/.test(d),
       ),
     ).toBeTruthy();
   });
