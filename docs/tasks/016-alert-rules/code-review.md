@@ -66,3 +66,42 @@ I also ran `compute_alerts` by hand on the edge cases below. The output is quote
 | 1 | **Fixed.** `compute_alerts` now fires the "first pledge on record" case: NSE's pledge data lists only disclosing companies, so a stock whose promoters have never pledged has no pledge records at all — the first row has no earlier record to compare with and no 0% baseline is invented (rule 1). When some `shareholding` history is stored (the stock is not on first sight), a new pledge row at or above the `pledge_up` threshold fires `pledge_up` with `"Promoter pledge on record for the first time: X% of promoter holding"` — same `kind`, severity, `dedupe_key` and `source_id` forms as a rise. First sight stays silent, and the rise rule is unchanged once an earlier pledge is on record. Four tests pin exactly your (a)–(d): the reviewer's stored-2026-06-30 / fetched-2026-09-30-plus-25%-pledge case fires once with that exact title; nothing stored at all stays silent; below the threshold stays silent (at-threshold fires); the rise title appears once an earlier pledge is on record. Also recorded in ADR-0029's Consequences, db.md § alerts, the module and `compute_alerts` docstrings, and plan.md "Changes during build". | `a340490` (alerts.py), `7c379e8` (tests) |
 | 2 | **Fixed, at 0029 — the suggested 0028 is itself taken on `main`.** `main` merged ADR-0028 (Better Auth, commit `444da7f`, 2026-10-30 01:08 IST — one minute before this review) on top of ADR-0027 (shadcn charts, `8b47b5e`), so 0028 is not free either; 0029 is the next unused number, and the XBRL task keeps its ID 027 (still free on `main`). The ADR is now `docs/adr/0029-alert-thresholds-and-severities.md` heading "ADR-0029" (status Proposed), and every reference in your list points at 0029: the README index row, arch.md § 8, db.md, tech.md, both comments in `alerts.py`, and the plan's Doc updates/roadmap notes (approved plan text elsewhere left alone; the deviation is recorded under "Changes during build"). Rather than dropping the branch's 0025/0026 rows and leaving you a leftover arch.md conflict, arch.md § 8 and the ADR README now carry `main`'s exact 0025–0028 rows plus the 0029 row — byte-identical to `main`'s text — so the docs merge cleanly to exactly "main's rows plus 0029". The superseded `docs/adr/0027-alert-thresholds-and-severities.md` cannot be deleted with my tools (see finding 3); Claude or the human removes it before merge. | `c5b45e2` |
 | 3 | **Not fixed by DeepSeek — agreed with your instruction "say so in the response".** My tools cannot delete files: `rm`, `git rm` and every non-read-only git command are refused by the driver, and writing files only creates or overwrites. `scratch_inspect.py` is tracked in `562c691` (my build summary calling it "untracked" was wrong) and remains on the branch; Claude or the human removes it before merge, as your finding says. | — |
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff 20460a1..task/016-alert-rules` at `6c55362`, the round-1 fixes plus Claude's cleanup commit
+
+**Tests:** run by Claude in the worktree.
+
+```text
+$ python3 -m unittest discover -s tests
+Ran 373 tests in 0.569s
+OK
+```
+
+**Driver stop.** The respond step exited 3, because it changed two lines of the approved plan's Doc updates to say ADR-0029 instead of 0027. Round 1's finding 2 asked for that edit. The human accepted it on 2026-10-30. With the human's go-ahead, Claude then removed `scratch_inspect.py` and the superseded `docs/adr/0027-alert-thresholds-and-severities.md`, and set `status: code-review` (commit `6c55362`).
+
+**Round 1 fixes:**
+
+| # | Fix | Checked |
+| --- | --- | --- |
+| 1 | First-ever pledge | Round 1's case now fires once with the "on record for the first time" title. First sight stays silent, and the rise rule is unchanged. But see finding 4 |
+| 2 | ADR number | Now 0029, because `main` took 0028 for Better Auth. Every reference is updated, and no ADR-0027 reference to the alert ADR is left outside this task folder. The ADR index merges cleanly. `docs/arch.md` still has two small conflicts, covered under "Merge" below |
+| 3 | Scratch file | Removed by Claude in `6c55362` |
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 4 | Major | `stock_worker/alerts.py:417-447` | **The first-pledge case alerts the whole fetched pledge history.** The exception fires whenever `stored_pl` is empty and `stored_sh` isn't. But that state also happens when the pledge fetch failed on the stock's first run and shareholding succeeded. The next run then fetches the full pledge history. It's equally likely if 018 brings in pledges later than shareholding. In that run the oldest fetched pledge quarter fires "first time", and each later one fires a rise against the previous. Checked by hand: shareholding stored for four quarters 2025-09-30 → 2026-06-30, then pledges fetched for the same four quarters (5, 8, 12, 12%). The result is `pledge_up` alerts for 2025-09-30 ("on record for the first time: 5%"), 2025-12-31 and 2026-03-31. That's the history-as-news burst round 1 of the plan review set out to stop: two of those quarters are a year old. | Treat pledge quarters **before the latest stored shareholding quarter** as baseline when `stored_pl` is empty. They raise no alert, but they still serve as `prev_pl`. Only a new pledge quarter **on or after** the latest stored shareholding quarter can alert. It fires the rise rule when an earlier pledge is now on record, including one from that baseline history. Otherwise it fires the "first time" rule. A pledge row usually arrives in the same run as, or a run after, the shareholding for its quarter, so "on or after" still catches round 1's case. Tests: (a) the four-quarter case above raises nothing, because every quarter is at or before 2026-06-30 and no stored shareholding quarter is later… so state precisely which quarters count. Expected: only 2026-06-30 is eligible, and it's a 0 pp move against 2026-03-31, so nothing fires. (b) Round 1's case still fires once. (c) A new 2026-09-30 pledge after that baseline history fires a rise against 2026-06-30, not "first time". Update the docstring and the "Changes during build" line, and the ADR-0029 and db.md wording if they describe the condition. |
+
+### Merge
+
+This is for the human, since DeepSeek can't merge. `git merge-tree main task/016-alert-rules` still conflicts in two places in `docs/arch.md`:
+
+- **§ 8:** `main` ends at the 0028 row, and the branch adds the 0029 row after it. Keep both.
+- **§ 9:** `main` removed the "Auth library and ORM" row, and the branch rewrote the NSE stock-data row's FII/DII text. Keep `main`'s removal and the branch's NSE row.
+
+Neither needs a change on the branch.
