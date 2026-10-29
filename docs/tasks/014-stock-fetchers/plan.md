@@ -189,7 +189,9 @@ No decisions remain open for the build; D09 was the only roadmap decision 014 de
 - **The prime lives in `fetchers.Session`, not in `net.py`** (plan review round 2's note). `ipo_agent/net.py`'s `Client` only holds the cookie jar; the `_primed` flag is on `ipo_agent/nse.py`'s `NSE` wrapper. Built to the plan's intent: `stock_worker/fetchers.py`'s `Session` wraps the client, primes once per run with a single GET of the stock page (`get-quotes/equity?symbol=X` — the same page the probe parses), ignores prime failures exactly as `nse.py` does, and the API calls use the stock page as referer.
 - **Results needs two API calls per run, not one.** The `results` source fetches `results-comparision` *and* `corporates-financial-results` (the filings join supplies `filed_at`/`source_url`), so `fetch_all` makes 1 prime + 2 (results) + 1 announcements + 1 shareholding + 1 pledges = **6 calls**; the "one API call per source" phrase holds for announcements/shareholding/pledges, and the test pins the exact 6-call sequence against a `FakeClient` (quote adds a 7th when it joins in 6b).
 - **The plan's text said "one API call per source"; the count is as above.** Same sentence, recorded precisely in `fetchers.fetch_all`'s docstring and the plan/verification.
-- **`revenue_cr` keeps the documented fallback to `re_total_inc`** (data-sources.md's field mapping from 003) when `re_net_sale` is absent; the EBITDA formula uses `re_net_sale` only, per the plan's four named fields.
+- **Round 1 review (respond): the probe's candidate failures and the consolidated re-check are fixed.** Finding 1 (blocker): `_parse_candidate_body`'s `(payload, error)` pair was nested inside `_try_candidate`'s own pair, so any 200 that wasn't a quote counted as success; `_try_candidate` now unpacks the pair and returns the parse error as the candidate's error — a 200 non-JSON body or a JSON body without `priceInfo.lastPrice` fails that candidate, moves to the next, and writes no `quote.json`. Finding 2 (major): the consolidated re-check no longer compares today's `consolidated=true` body with the 003 fixture — it fetches `results-comparision?symbol=X` and its `&consolidated=true` variant back to back under the same prime and records `identical`/`distinct` from that pair only (1 prime + up to 3 candidate fetches + 2 re-checks = `MAX_CALLS` 6, unchanged; `dry_run_lines`, the docstring and the budget comment updated, and both outcomes tested with a `FakeClient`).
+- **Round 1 review (respond): `revenue_cr` drops the `re_total_inc` fallback** — total income includes other income (its own column), so the fallback double-counted. A missing `re_net_sale` is `None`; the data-sources results row says so. (The build had kept 003's mapping; review finding 5 overruled it.) The EBITDA formula still uses `re_net_sale` only.
+- **Round 1 review (respond): the announcements `since` filter compares timezone-aware moments.** Both the row's `announced_at` and `since` go through the new `util.to_aware_datetime` (offset preserved; naive read as +05:30; date-only as midnight +05:30; junk `since` raises `ValueError`), so a UTC `since` no longer misorders IST rows; 018's stored run times compare correctly. The `industry` field is listed as an extra in the docstring (review finding 9) — it has no db.md column.
 - **Shareholding `filed_at` is `submissionDate`**, which is date-only in the sampled rows; the record keeps the ISO date exactly as stated (no invented time of day). `broadcastDate` exists alongside it with a full time, but the plan mapped `filed_at` ← `submissionDate`, so that is what the fetcher reads.
 - **Market-wide announcements use the same date-window convention as 003's smoke** (run date − 6 days, `DD-MM-YYYY`), matching the data-sources row's documented one-call option.
 
@@ -201,9 +203,9 @@ Run via the driver's `run` tool on the task branch; the dev CLI and the probe ar
 $ python3 -m unittest discover -s tests
 ......................................................................usage: python3.12 -m unittest [-h] [--all] [--root ROOT] [KEY ...]
 python3.12 -m unittest: error: give one or more IPO keys, or --all
-.......................................................................................................................................................................................................................................
+.........................................................................................................................................................................................................................................................
 ----------------------------------------------------------------------
-Ran 301 tests in 0.533s
+Ran 319 tests in 0.548s
 
 OK
 ```
@@ -214,7 +216,7 @@ OK
 $ python3 -m unittest discover -s .claude/hooks
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.533s
+Ran 19 tests in 0.191s
 
 OK
 ```
@@ -223,25 +225,30 @@ OK
 $ python3 -m unittest discover -s .claude/deepseek
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 2.482s
+Ran 21 tests in 2.335s
 
 OK
 ```
 
-New stock tests, run per step during the build:
+New stock tests, run during the build and again after the round-1 fixes:
 
 ```
 $ python3 -m unittest discover -s tests -p 'test_stock_*.py'
-..........................................................................
+............................................................................................
 ----------------------------------------------------------------------
-Ran 74 tests in 0.021s
+Ran 92 tests in 0.021s
 
 OK
 ```
 
-(74 = test_stock_util 19, test_stock_results 12, test_stock_announcements 8,
-test_stock_shareholding 6, test_stock_pledges 7, test_stock_probe 14,
-test_stock_fetchers 8.)
+(92 = test_stock_util 25, test_stock_results 13, test_stock_announcements 14,
+test_stock_shareholding 6, test_stock_pledges 8, test_stock_probe 18,
+test_stock_fetchers 8. The round-1 fixes added: probe 4 (non-JSON 200, JSON
+without lastPrice, all-fail writes nothing, distinct re-check; plus the
+in-run identical pair), util 6 (`to_aware_datetime`), announcements 6 (UTC
+`since` drop/keep, UTC boundary, naive → IST, date-only → midnight IST, junk
+raises, no-timestamp kept), results 1 (missing `re_net_sale` → `None`),
+pledges 1 (missing `comName` → `None`).)
 
 **Probe run: pending.** The human is asked to run once, after the build step:
 
