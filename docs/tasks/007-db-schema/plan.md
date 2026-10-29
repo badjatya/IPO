@@ -132,10 +132,15 @@ Both open items from the first draft are now decided; nothing remains open for t
 8. **Code-review round 1, findings 2, 4, 5: host, arch row, naming.** The harness's API host was `https://neon.tech/api/v2`, which 308-redirects to `neon.com` (404) and drops the `Authorization` header on the redirect — now `https://console.neon.tech/api/v2`. `docs/arch.md`'s Database row now keeps both statuses (test branches **Running**, preview branches **Decided** with D11). `WORKTREE_ROOT` renamed to `WEB_ROOT` (it points at `web/`), and `?connection_uris=true` dropped from the create-branch call (the API returns `connection_uris` whenever it creates an endpoint).
 9. **Code-review round 1, finding 3: primary-key shape test.** `web/tests/db/schema-shape.test.ts` gained a test reading `pg_constraint` (`contype = 'p'`) with `pg_get_constraintdef`: exactly one PK row per table and db.md's columns for each — composite for the seven natural-key tables, single-column for the rest, `id` for the identity/uuid tables.
 10. **Code-review round 2, finding 6: default-branch lookup.** The first real CI `db` run exposed that the Neon API v2 Branch object marks the default branch with `default: true` — there is no `is_default` field, so `branches.find((branch) => branch.is_default === true)` never matched and the harness died before creating a branch. The lookup is now the pure, offline-tested helper `findDefaultBranch(branches)` matching `branch.default === true` (fixture in the API's documented shape, including a test that the old `is_default` spelling does *not* match), and the "no default branch found" error now lists every branch it saw (`name [default: …]`) so the next field mismatch shows up in the job log. The create-response fields the harness reads next — `branch.id`, `connection_uris[].connection_uri`, `endpoints[].host`, `roles[].name`/`.password` — were checked against the API v2 reference and all match its documented shapes (the fallback's extra reads degrade to the correct `neondb` default). No branch was created by the failed run, so nothing needed cleaning up.
+11. **Code-review round 3, finding 7: unwrap drizzle's error wrapper.** drizzle-orm 0.45 wraps every driver error in `DrizzleQueryError` (message `Failed query: …`, the Postgres error on `.cause` — `pg-core/session.js`), so the rule tests saw `code`/`constraint`/`message` as `undefined`. `captureViolation` (in `web/tests/db/schema-rules.test.ts`) now **fails the test when the statement succeeds** — a dropped index can no longer read as the generic "undefined was not 23505" — then returns `error.cause ?? error` (the `NeonDbError` with `code`/`constraint`/`message`). The four unique-violation tests assert `code === "23505"` and that the error's `constraint` field or its `message` names the index read from the catalog (via the shared `expectUniqueViolation`). The new helper asserts from inside a helper, so `web/.oxlintrc.json`'s `vitest/expect-expect` now lists `expectUniqueViolation` in `assertFunctionNames` (keeping the vitest defaults `expect`, `expectTypeOf`, `assert`, `assertType`).
+12. **Code-review round 3, finding 8: queued-after-done probe.** The "allows a new queued job once the previous one is done" test selected all rows for the symbol and trusted the first back as `queued` — the insert had succeeded, but `done` came back first. It now selects every status for the symbol and asserts the sorted set is `['done', 'queued']`, so the test proves both the new queued row and the old done row without depending on row order.
+13. **Code-review round 3, finding 9: partial-index assertions on parts, not on the definition text.** `pg_get_indexdef` does not echo the migration text: it schema-qualifies the table (`ON public.analysis_jobs`), rewrites `in ('queued', 'running')` to `= ANY (ARRAY['queued'::job_status, 'running'::job_status])` and wraps predicates in parens (`WHERE (symbol IS NOT NULL)`), so the three `includes(...)` strings could never match. The shape test now reads each partial unique index's table, definition and `pg_get_expr(ix.indpred, ix.indrelid)` and asserts the pieces: the indexed column (`using btree (…)` in the definition) and the predicate's column/value tokens case-insensitively — plus the exact set of the three partial unique indexes (`analysis_jobs`, `ipos`, `stocks`).
+14. **Code-review round 3, finding 10: composite-FK regex.** `pg_get_constraintdef` writes `REFERENCES ipo_snapshots(ipo_key, taken_at)` with no space before the `(`, so the regexes' `ipo_snapshots \(` never matched. Both regexes now allow `\s*` before `\(`.
+15. **Code-review round 3, finding 11: enum values as `text[]`.** `e.enumlabel` has type `name`, so `array_agg` returned `name[]`, which the serverless driver can't parse (the values arrived as raw text and the deep-equal failed — the twelve keys were there on both sides). The query now aggregates `e.enumlabel::text`, so the driver returns a JS array of strings.
 
 ## Verification
 
-- **Offline (this build step):** all commands below ran in the task worktree and are pasted from real output. Re-run after the code-review round 2 fix (default-branch lookup, finding 6).
+- **Offline (this build step):** all commands below ran in the task worktree and are pasted from real output. Re-run after the code-review round 3 fixes (findings 7–11, all in the two db test files plus the lint config).
 
   ```text
   $ npm run typecheck            (web/)
@@ -144,12 +149,11 @@ Both open items from the first draft are now decided; nothing remains open for t
 
   $ npm run lint                 (web/)
   Found 0 warnings and 0 errors.
-  Finished in 44ms on 24 files with 250 rules using 12 threads.   (exit 0)
+  Finished in 25ms on 24 files with 250 rules using 12 threads.   (exit 0)
 
   $ npm test                     (web/)
   Test Files  4 passed (4)   — env-example, neon-branch helpers, layout, schema
-  Tests       25 passed (25)  — neon-branch helpers now 14 tests, incl. the new
-                                findDefaultBranch suite; tests/db/** excluded
+  Tests       25 passed (25)  — tests/db/** excluded
   (exit 0)
 
   $ npm run test:db              (web/, no NEON_API_KEY/NEON_PROJECT_ID here)
@@ -169,8 +173,8 @@ Both open items from the first draft are now decided; nothing remains open for t
   $ git status --porcelain web/db   (repo root) → empty
 
   $ python3 -m unittest discover -s tests   (repo root)
-  Ran 227 tests in 0.536s
+  Ran 227 tests in 0.512s
   OK
   ```
 
-- **Real branch — required before code review is approved:** the build step has no `NEON_API_KEY`, so `npm run test:db` cannot run here (it refuses, above). The first push after round 1 (71a4291) did run the CI `db` job — run 40935844323 — which got past authentication and the branch list, then failed on the round-2 finding: the API marks the default branch `default: true`, not `is_default`, so the harness stopped before creating anything. Finding 6 fixes that lookup, and the next push (or a human `cd web && npm run test:db` with the key) is the green run that proves the Done-when — "migrations build the full schema on an empty Neon branch" — and lands the status labels. The `web` job (with the schema-drift step) and `tests` were green on that run already. The green run's output or link goes here.
+- **Real branch — required before code review is approved:** the build step has no `NEON_API_KEY`, so `npm run test:db` cannot run here (it refuses, above). The round-2 push (03dc005) ran the CI `db` job — run 40937366828 — which for the first time built the whole schema on an empty Neon branch and deleted it again: all 23 tables, 23 primary keys, the view, the seed rows and the cascade **passed**; the 8 failures were all test assertions comparing against the wrong shape of a value Drizzle, Postgres or the driver returns (findings 7–11: the `DrizzleQueryError` wrapper, an order-dependent select, `pg_get_indexdef`'s rewrites, the space-less `REFERENCES table(`, and `name[]` enums). Those eight assertions are fixed in this round; the next push (or a human `cd web && npm run test:db` with the key) is the green run that proves the Done-when — "migrations build the full schema on an empty Neon branch" — and lands the status labels. The green run's output or link goes here.

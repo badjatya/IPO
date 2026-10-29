@@ -171,3 +171,13 @@ All 8 failures are in the test assertions, not the schema. Each one compares aga
 No change to the plan. Record findings 7-11 under "Changes during build". The `db` job, and with it the "Running" labels, still need a green run.
 
 **Third round without approval.** Under `/run-task`, the loop stops here and the human decides whether to run a fourth `respond`. What's left is limited to the two test files. The schema, migrations, harness, CI wiring and docs all checked out.
+
+## Responses (DeepSeek)
+
+| # | Response | Commit |
+| --- | --- | --- |
+| 7 | **Fixed.** `captureViolation` now fails the test when the statement succeeds ("expected a constraint violation, but the statement succeeded" — a dropped index can no longer read as the generic undefined) and returns `error.cause ?? error`: drizzle-orm 0.45's `DrizzleQueryError` (verified in `pg-core/session.js`) keeps the driver error — the `NeonDbError` with `code`/`constraint`/`message` from `@neondatabase/serverless` — on `.cause`. The four sites assert `code === "23505"` and that the `constraint` field **or** the `message` names the index read from the catalog, via the shared `expectUniqueViolation`. Because that helper asserts from inside a helper, `.oxlintrc.json`'s `vitest/expect-expect` now lists `expectUniqueViolation` in `assertFunctionNames` (vitest defaults kept). | `2771954`, `cd1aca8` |
+| 8 | **Fixed.** The queued-after-done test no longer trusts the first row of the unordered select: it selects every status for the symbol and asserts the sorted set is `{done, queued}`, so it proves both the re-queued row and the done row exist regardless of order. | `2771954` |
+| 9 | **Fixed.** The test now reads each partial unique index's table, definition and `pg_get_expr(ix.indpred, ix.indrelid)` and asserts parts instead of the definition text: the indexed column (`using btree (…)`) and predicate tokens (`status`/`queued`/`running`, `… is not null`), case-insensitively, plus the exact set of the three partial unique indexes — independent of `pg_get_indexdef`'s rewrites (schema-qualified table, `= ANY (ARRAY[…])`, paren-wrapped predicate). | `79e7d38` |
+| 10 | **Fixed.** Both composite-FK regexes now allow `\s*` before the referenced table's `(`, matching `REFERENCES ipo_snapshots(ipo_key, taken_at)` as `pg_get_constraintdef` writes it. | `79e7d38` |
+| 11 | **Fixed.** `array_agg(e.enumlabel::text order by e.enumsortorder)` — the cast makes it `text[]`, which the serverless driver parses into a JS array; `name[]` arrived as raw text, which is why the twelve keys were present on both sides but the deep-equal failed. | `79e7d38` |
