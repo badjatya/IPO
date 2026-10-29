@@ -43,6 +43,15 @@ export function isProtectedBranch(branch, { defaultBranchId, defaultBranchName }
 }
 
 /**
+ * The project's default branch: the Neon API v2 Branch object marks it with
+ * `default: true` (`is_default` and `primary` are not fields the API sends).
+ * Returns undefined when no branch carries the flag.
+ */
+export function findDefaultBranch(branches) {
+  return (branches ?? []).find((branch) => branch.default === true);
+}
+
+/**
  * Neon's pooled host is the direct host with `-pooler` before the region
  * (`ep-abc-123.us-east-2.aws.neon.tech` → `ep-abc-123-pooler.us-east-2.aws.neon.tech`).
  * The tests run over the pooled URL, migrations over the direct one.
@@ -100,9 +109,14 @@ async function main() {
 
   const branchesRes = await api(`/projects/${projectId}/branches`, {}, apiKey);
   const branches = branchesRes.branches ?? [];
-  const defaultBranch = branches.find((branch) => branch.is_default === true);
+  const defaultBranch = findDefaultBranch(branches);
   if (!defaultBranch) {
-    throw new Error("no default branch found; refusing to guess where to fork from");
+    const seen = branches
+      .map((branch) => `${branch.name ?? "(unnamed)"} [default: ${String(branch.default)}]`)
+      .join(", ");
+    throw new Error(
+      `no default branch found; refusing to guess where to fork from (saw: ${seen || "no branches"})`,
+    );
   }
 
   const branchName = `db-test-${Date.now()}`;
