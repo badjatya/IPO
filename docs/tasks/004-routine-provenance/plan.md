@@ -396,8 +396,33 @@ doc item is touched.
 
 ## Changes during build
 
-Anything built differently from the approved plan, and why.
+None — the build followed the approved plan exactly. Steps 1–3 are built; step 4 (the `ROUTINE.md`, `guard.py` and `test_guard.py` diffs) stays in this plan for the human to apply on `main` in one commit, before the next routine run.
 
 ## Verification
 
-Test commands run, with their output pasted.
+All commands run inside the task worktree; the full suite and the three new tests:
+
+```
+$ python3 -m unittest discover -s tests
+...............................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 191 tests in 0.267s
+
+OK
+
+$ python3 -m unittest discover -s tests -k provenance
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.005s
+
+OK
+
+$ python3 -m unittest discover -s tests -k quiet_shaped
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+OK
+```
+
+The `-k provenance` run covers `test_card_with_provenance_fields_loads` and `test_provenance_fields_do_not_change_the_output`; `-k quiet_shaped` covers `test_quiet_shaped_report_renders`. Step 4's guard tests (`python3 -m unittest discover -s .claude/hooks`) run only after the human applies the diffs; Claude's round-2 plan review already verified them on a scratch copy against this plan's hunks.
