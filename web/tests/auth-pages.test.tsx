@@ -26,8 +26,16 @@ afterEach(() => {
   searchParamsMock.value = "";
 });
 
+// jsdom can't navigate; the pages assign to window.location after a sign-in.
+function stubLocationAssign() {
+  const assign = vi.fn<() => void>();
+  Object.defineProperty(window, "location", { configurable: true, value: { assign } });
+  return assign;
+}
+
 describe("sign-in page", () => {
   it("renders the form and submits email and password to signIn.email", async () => {
+    stubLocationAssign();
     render(<SignInPage />);
     fireEvent.change(screen.getByLabelText("Email"), { target: { value: "a@example.com" } });
     fireEvent.change(screen.getByLabelText("Password"), { target: { value: "a-secret" } });
