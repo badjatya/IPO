@@ -515,6 +515,41 @@ class ComputeAlertsTests(NoNetworkCase):
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0]["title"], "Promoter holding down from 50% to 48%")
 
+    def test_from_the_second_run_on_each_new_results_filing_alerts_once_ever(self):
+        # A catch-up run bringing two new quarters: both are new against
+        # stored, both have an earlier quarter on record, so both alert —
+        # each new filing alerts exactly once, ever (Approach § 3).
+        fetched = {
+            "results": [
+                rs("2026-09-30", 12826.00, 872.00, filed_at="2026-10-25"),
+                rs("2026-12-31", 13000.00, 900.00, filed_at="2027-01-20"),
+            ]
+        }
+        stored = {"results": [rs("2026-06-30", 12000.00, 900.00, filed_at="2026-07-20")]}
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(
+            [alert["dedupe_key"] for alert in result],
+            ["RELIANCE:results:2026-09-30", "RELIANCE:results:2026-12-31"],
+        )
+
+    def test_has_earlier_counts_an_earlier_new_fetched_quarter(self):
+        # Backfilling older missing quarters against a stored later one: the
+        # first fetched quarter has no earlier quarter on record (the stored
+        # one is later), so it is the baseline; the second fetched quarter
+        # has an earlier *new fetched* quarter and fires (Approach § 3).
+        fetched = {
+            "results": [
+                rs("2026-06-30", 12000.00, 900.00, filed_at="2026-10-25"),
+                rs("2026-09-30", 12826.00, 872.00, filed_at="2026-10-26"),
+            ]
+        }
+        stored = {"results": [rs("2026-12-31", 13000.00, 900.00, filed_at="2027-01-20")]}
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(
+            [alert["dedupe_key"] for alert in result],
+            ["RELIANCE:results:2026-09-30"],
+        )
+
     def _sample_mixed_inputs(self):
         return {
             "fetched": {
