@@ -26,6 +26,9 @@ jobs:
       - name: Schema check (guard tests over every saved card and report)
         if: ${{ !cancelled() }}
         run: python3 -m unittest discover -s .claude/hooks
+      - name: Figures check (₹ figures vs RHP text; report only, never gates)
+        if: ${{ !cancelled() }}
+        run: python3 -m ipo_agent.figures_check --all
       - name: DeepSeek driver tests
         if: ${{ !cancelled() }}
         run: python3 -m unittest discover -s .claude/deepseek
