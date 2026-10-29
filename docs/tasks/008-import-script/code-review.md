@@ -168,3 +168,41 @@ The round-1 Blockers are fixed in the code. The rebuild now succeeds over the wh
 | 9 | Fixed. A `beforeEach` inside the temp-repo describe deletes the eight research tables child first plus `imports`, so (d), (g), (h) and (i)'s absolute counts (`toBe(1)`, `toBe(2)`) no longer see the whole-repo rebuild's rows (27 reports, 141 verdicts, 13 cards). App tables are left alone — schema-rules runs in parallel on the same branch and is untouched | `75175dd` |
 | 10 | Fixed. Test (g) filters the final select on `ipo_key` (the `where`-less `after[0]` could be another IPO's analysis), and now exercises the content-sha skip for real: it deletes commit a's `imports` row and re-imports the whole history (the `from: null` test seam), so `applyFile` re-runs on the same `.md` — a 0-commit run re-applies nothing, which is why the old `xmin` check held trivially — and asserts the row's `xmin` is unchanged | `75175dd` |
 | 11 | Agreed — recorded as a follow-up, no code change for this task. The one-awaited-insert-per-row pattern over the WebSocket plus one `git log` process per file stays for now; batching the snapshot/verdict inserts per file and a single `git log --name-only` pass for `commit_sha` is the natural perf work for the import Action (009) or a later task | — |
+
+## Round 3 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff 9170f3c..task/008-import-script` at e5dd018 (test-only changes, plus the Verification and Responses text)
+
+**Tests:**
+
+Locally (worktree): the offline suite, typecheck, lint and schema drift are unchanged from round 2 and clean.
+
+CI on the pushed branch ([run 40958324796](https://github.com/badjatya/IPO/actions/runs/40958324796)): `web` and `tests` passed; **`db` failed, 1 of 26**:
+
+```text
+ ✓ tests/db/schema-shape.test.ts (7 tests)
+ ✓ tests/db/schema-rules.test.ts (8 tests)
+ × rebuilds twice to identical counts that match the repo's own files 180007ms
+ ✓ leaves app tables alone through a rebuild 109627ms
+ ✓ spot-checks a snapshot, zetwerk's card, analysis and latest verdict, an override and an outcome
+ ✓ import: per-commit runs against a temp repo (6)   c, d, e, g, h, i all pass
+ ✓ import: CLI (2)
+Error: Test timed out in 180000ms.
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 25 passed (26)
+```
+
+Findings 8, 9 and 10 are fixed: the expected counts parse only JSON, a `beforeEach` resets the research tables and `imports`, and test (g) filters on `ipo_key` and really re-applies the analysis. Every temp-repo test now passes. #11 was recorded as a follow-up, but it is what keeps the suite red now (#12).
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 12 | Major | `web/tests/db/import.test.ts:135-146` (test a, 180 s timeout); `web/lib/import/apply.ts` (`upsertIpos`, the verdict and outcome loops, `rebuild`) | One whole-repo rebuild takes about **110 s** on CI (test b: 109.6 s). Test (a) runs two, needs about 220 s, and hits its 180 s timeout, so the `db` job is red and the branch can't merge. This is #11 come due. The time goes on one awaited statement per row over the WebSocket: an `ipos` upsert per snapshot entry (277), a verdict upsert per entry (143), an outcome upsert per row, plus a `git log` process per file. It also grows with every routine run, so a timeout raised just past today's figure fails again later. | Batch the statements, then set the timeout from a measured time with headroom. **(1)** One multi-row upsert per file: for `ipos`, `set` each fact column to `coalesce(excluded.<col>, ipos.<col>)`, which keeps the present-and-non-null merge (keys are unique within a snapshot), plus `updated_at = excluded.updated_at`; for verdicts, one statement per report; for outcomes, one statement. **(2)** In `rebuild`, get every path's last commit from a single `git log --format=%H --name-only` pass instead of a process per file. **(3)** Put the measured rebuild time in Verification, and give test (a) (and b) a timeout of a few times that. If (1) and (2) can't be done in this step, raising the timeouts alone (for example to 600 s) is acceptable for this task, as long as the measured per-rebuild time is recorded and #11 stays a follow-up for 009. |
+
+### Plan and docs
+
+- No other findings. The code, the docs and the Changes-during-build list match.
+- This is the **third code-review round without approval**, so `/run-task` stops here for the human. The open item is #12 only: everything else in the import passes on a real Neon branch.
