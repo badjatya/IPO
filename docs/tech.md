@@ -102,7 +102,7 @@ Names are planned; values are never committed. The app's variables are listed, e
 | Path | Contents | Status |
 | --- | --- | --- |
 | `ipo_agent/` | Python research agent | Running |
-| `stock_worker/` | NSE stock fetchers (014): quote probe, results, announcements, shareholding, pledges; standard library, reusing `ipo_agent/net.py` | New in 014 ([ADR-0026](adr/0026-stock-worker-code-location.md)) |
+| `stock_worker/` | NSE stock fetchers (014): quote probe, results, announcements, shareholding, pledges; alert rules (016: `stock_worker/alerts.py` — pure change detection, no network); standard library, reusing `ipo_agent/net.py` | New in 014; alert rules in 016 ([ADR-0026](adr/0026-stock-worker-code-location.md), [ADR-0029](adr/0029-alert-thresholds-and-severities.md)) |
 | `analysis/`, `reports/`, `data/` | Research output (system of record) | Running |
 | `docs/` | Project, architecture, stack, database, AI, sources, ADRs, plan | Running |
 | `CLAUDE.md`, `ROUTINE.md` | Instructions for Claude (routine and reviewer) | Running |
