@@ -314,7 +314,7 @@ Alerts belong to a stock, not to a user. Users see the alerts of the stocks they
 | `id` | `bigint` identity | PK | |
 | `symbol` | `text` | no | FK → `stocks` |
 | `kind` | `alert_kind` | no | |
-| `severity` | `severity` | no | From the settled severity map ([ADR-0027](adr/0027-alert-thresholds-and-severities.md)) |
+| `severity` | `severity` | no | From the settled severity map ([ADR-0029](adr/0029-alert-thresholds-and-severities.md)) |
 | `title` | `text` | no | e.g. "Promoter pledge up from 4% to 11%" (numbers from Python) |
 | `detail` | `text` | yes | Gemini's explanation, written in 020 and left `NULL` by the rules |
 | `dedupe_key` | `text` | no | Unique, e.g. `HDFCBANK:pledge_up:2026-09-30` |
@@ -324,6 +324,8 @@ Alerts belong to a stock, not to a user. Users see the alerts of the stocks they
 Index: `(symbol, created_at desc)`.
 
 The rules that produce these rows are pure functions in `stock_worker/alerts.py` (016): `pledge_up` rise ≥ 1.00 pp → `warning`, `promoter_down` fall ≥ 2.00 pp → `warning`, `fii_move`/`dii_move` absolute move ≥ 1.00 pp → `watch`, `results` → `info`, `announcement` → `watch` — the settled D10 values, held in code with **no `settings` rows**. Titles and every number in them are built by Python from stated fields ("not available" for gaps); the `announcement` rule is not part of `compute_alerts` — 020's rating step calls `announcement_alert` once per announcement it has just rated, after Gemini writes `importance`.
+
+`pledge_up` also covers a stock's **first-ever pledge on record** (code review round 1, finding 1): NSE's pledge data lists only companies with a pledge disclosure, so the first pledge row has no earlier record to compare with — it fires at the same 1.00 pp threshold with a title that states only what the record states ("Promoter pledge on record for the first time: 25% of promoter holding"), never an invented 0% baseline, and only when the stock is not on first sight (some shareholding history is stored).
 
 `dedupe_key` forms: `<SYMBOL>:<kind>:<quarter_end>` for `pledge_up`/`promoter_down`/`fii_move`/`dii_move` (e.g. `HDFCBANK:pledge_up:2026-09-30`), `<SYMBOL>:results:<period_end>`, `<SYMBOL>:announcement:<exchange_ref>`.
 

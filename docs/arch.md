@@ -399,7 +399,9 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | [0024](adr/0024-vitest-for-app-tests.md) | Vitest and Testing Library for the web app's tests | Accepted |
 | [0025](adr/0025-drizzle-on-neon-serverless-driver.md) | Drizzle ORM on Neon's serverless driver | Accepted |
 | [0026](adr/0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | Accepted |
-| [0027](adr/0027-alert-thresholds-and-severities.md) | Alert thresholds and severities in code (D10); FII/DII parsing is task 027 | Proposed |
+| [0027](adr/0027-shadcn-charts-on-recharts.md) | shadcn/ui charts, on Recharts, for the web app | Accepted |
+| [0028](adr/0028-better-auth-invite-only.md) | Better Auth, invite-only password sign-in, account emails through Resend | Accepted |
+| [0029](adr/0029-alert-thresholds-and-severities.md) | Alert thresholds and severities in code (D10); FII/DII parsing is task 027 | Proposed |
 
 ## 9. Open questions
 
