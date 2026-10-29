@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { buildUpsertSql, parseArgs } from "../scripts/first-admin.mjs";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { buildUpsertSql, parseArgs, runUpsert } from "../scripts/first-admin.mjs";
 
 describe("parseArgs", () => {
   it("lowercases and trims the email, joins the rest as the name", () => {
@@ -29,5 +29,29 @@ describe("buildUpsertSql", () => {
     expect(values).toEqual(["bob@example.com", "Bob Builder", "admin"]);
     expect(text).toContain("insert into users (email, name, role) values ($1, $2, $3)");
     expect(text).toContain("role = excluded.role, name = excluded.name");
+  });
+});
+
+describe("runUpsert (code review round 1 finding 1)", () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it("calls the client with the parameterised two-arg shape sql.query(text, values)", async () => {
+    const client = {
+      query: vi.fn<
+        (text: string, values: unknown[]) => Promise<{ id: string; email: string; role: string }[]>
+      >(async () => [{ id: "u-1", email: "alice@example.com", role: "admin" }]),
+    };
+    const row = await runUpsert(client, "alice@example.com", null);
+    expect(row).toMatchObject({ id: "u-1", role: "admin" });
+    const { text, values } = buildUpsertSql("alice@example.com", null);
+    expect(client.query).toHaveBeenCalledTimes(1);
+    expect(client.query).toHaveBeenCalledWith(text, values);
+  });
+
+  it("returns null when the upsert returns no rows", async () => {
+    const client = { query: vi.fn<(text: string, values: unknown[]) => Promise<unknown[]>>(async () => []) };
+    await expect(runUpsert(client, "bob@example.com", null)).resolves.toBeNull();
   });
 });

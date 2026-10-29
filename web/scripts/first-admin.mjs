@@ -45,6 +45,19 @@ on conflict (email) do update set ${set.join(", ")} returning id, email, role`,
   };
 }
 
+/**
+ * Run the upsert through a neon-http client and return the first row (or null).
+ * Exported for the offline test, which stubs the client so the call shape is
+ * covered without Neon (code review round 1 finding 1): the 1.x driver only
+ * accepts the parameterised form `client.query(text, values)` — calling the
+ * driver itself as a plain function is refused before any network call.
+ */
+export async function runUpsert(client, email, name) {
+  const { text, values } = buildUpsertSql(email, name);
+  const rows = await client.query(text, values);
+  return rows?.[0] ?? null;
+}
+
 async function main() {
   if (!process.env.DATABASE_URL) {
     console.error("first-admin needs DATABASE_URL in the environment (locally: `neon checkout dev`).");
@@ -55,9 +68,7 @@ async function main() {
     console.error("usage: node scripts/first-admin.mjs <email> [name]");
     process.exit(2);
   }
-  const { text, values } = buildUpsertSql(email, name);
-  const rows = await neon(process.env.DATABASE_URL)(text, ...values);
-  const [row] = rows ?? [];
+  const row = await runUpsert(neon(process.env.DATABASE_URL), email, name);
   console.log(
     row
       ? `First admin ready: ${row.email} (${row.id}) now has role '${row.role}'.`
