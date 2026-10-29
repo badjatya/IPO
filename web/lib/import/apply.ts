@@ -12,7 +12,7 @@ import {
 import { parseAnalysisDocument } from "./analysis";
 import { parseCardDocument } from "./card";
 import { classifyResearchFile, researchKey, type ResearchKind } from "./files";
-import { changedPaths, headSha, lastCommitTouching, listResearchFilesAtHead, readFilesAt } from "./git";
+import { changedPaths, headSha, lastCommitsTouching, listResearchFilesAtHead, readFilesAt } from "./git";
 import { recordFailed, recordOk } from "./log";
 import { parseOutcomesDocument } from "./outcomes";
 import { parseReportDocument } from "./report";
@@ -66,11 +66,71 @@ function replacedSet(
 }
 
 /**
+ * The SET for a multi-row upsert that *replaces* every row on the same natural
+ * keys — the batched equivalent of one `replacedSet` per row, so a whole
+ * report's verdicts, or the whole of data/outcomes.json, go in a single
+ * statement instead of one awaited round trip per row (findings 11/12 — the
+ * db suite's timeout). The expressions are evaluated per conflicting row:
+ *
+ * - carried by every row → `excluded.<col>` (each row's own incoming value);
+ * - carried by some rows and nullable → `excluded.<col>` — a row that lacks
+ *   the column inserts it as `default`, which is null for a nullable column
+ *   without a default, so the update nulls it, exactly like `replacedSet`;
+ * - carried by some rows and NOT NULL → `coalesce(excluded.<col>,
+ *   <table>.<col>)` — a lacking row keeps its old value, which is what
+ *   `replacedSet` did (it skipped NOT NULL columns the row lacked; a lacking
+ *   row can only reach the update by way of a column default);
+ * - carried by no row → a constant null update when the column is nullable,
+ *   left alone when NOT NULL.
+ *
+ * The SET only ever assigns one row's own incoming value or null — never
+ * another row's — so the keys of each multi-row VALUES array must be unique
+ * (true for `ipo_verdicts` — one row per ipo_key in a report — and for
+ * `ipo_outcomes`).
+ */
+export function commonReplacedSet(
+  table: Parameters<typeof getTableColumns>[0],
+  rows: Record<string, unknown>[],
+  keys: string[],
+): Record<string, unknown> {
+  const columns = getTableColumns(table);
+  const carried = new Set<string>();
+  for (const row of rows) for (const column of Object.keys(row)) carried.add(column);
+  const set: Record<string, unknown> = {};
+  for (const [column, meta] of Object.entries(columns)) {
+    if (keys.includes(column)) continue;
+    if (carried.has(column)) {
+      const excludedRef = sql`excluded.${sql.raw(meta.name)}`;
+      const everyRow = rows.every((row) => Object.hasOwn(row, column));
+      set[column] = !meta.notNull || everyRow ? excludedRef : sql`coalesce(${excludedRef}, ${columns[column]})`;
+    } else if (!meta.notNull) {
+      set[column] = null;
+    }
+  }
+  return set;
+}
+
+/**
  * `ipos` is merged, not replaced: only fields present and non-null in the
  * updating snapshot apply, so a later snapshot without NSE data cannot blank
  * previously imported facts (docs/db.md § `ipos`). The parser emits exactly the
  * present fields, so the SET is simply the row minus its key — and a snapshot
  * with no facts at all degrades to insert-only.
+ *
+ * This stays one statement per row on purpose, unlike the verdict and outcome
+ * upserts. A batched `on conflict do update` would need a common SET of
+ * `coalesce(excluded.<col>, ipos.<col>)` expressions, and the merge semantics
+ * assume the excluded value of a column a row does not carry is null. Drizzle
+ * fills a column a row lacks with the SQL `default` keyword, so the excluded
+ * value is the column's *evaluated default*, not null — which is exactly null
+ * for every `ipos` fact column except `anchor_done` (NOT NULL, default
+ * `false`): a snapshot entry that lacks the boolean would silently reset a
+ * previously true anchor to false, breaking the present-and-non-null merge
+ * (many of the repo's entries carry `anchor_done: null`). "Keep old when
+ * absent" for a NOT NULL defaulted column is inexpressible in one
+ * INSERT ... ON CONFLICT statement, so `ipos` keeps one round trip per row —
+ * a few per snapshot file; batching it exactly (an INSERT batch plus a
+ * UPDATE-from-VALUES merge) stays a follow-up with finding 11.
  */
 async function upsertIpos(tx: ImportTx, rows: typeof ipos.$inferInsert[]): Promise<void> {
   for (const row of rows) {
@@ -154,10 +214,14 @@ async function applyFile(tx: ImportTx, path: string, content: string, reportComm
         target: [reports.reportDate, reports.session],
         set: replacedSet(reports, report, ["reportDate", "session"]),
       });
-      for (const verdict of verdicts) {
-        await tx.insert(ipoVerdicts).values(verdict).onConflictDoUpdate({
+      // One statement for the whole report's verdicts (143 per-row upserts
+      // across the repo's 27 reports were most of the rebuild's round trips):
+      // the SET is per conflicting row, so it nulls the columns the file
+      // dropped for each verdict exactly like a per-row upsert would.
+      if (verdicts.length > 0) {
+        await tx.insert(ipoVerdicts).values(verdicts).onConflictDoUpdate({
           target: [ipoVerdicts.reportDate, ipoVerdicts.session, ipoVerdicts.ipoKey],
-          set: replacedSet(ipoVerdicts, verdict, ["reportDate", "session", "ipoKey"]),
+          set: commonReplacedSet(ipoVerdicts, verdicts, ["reportDate", "session", "ipoKey"]),
         });
       }
       break;
@@ -173,10 +237,10 @@ async function applyFile(tx: ImportTx, path: string, content: string, reportComm
       } else {
         await tx.delete(ipoOutcomes).where(notInArray(ipoOutcomes.ipoKey, keptKeys));
       }
-      for (const row of rows) {
-        await tx.insert(ipoOutcomes).values(row).onConflictDoUpdate({
+      if (rows.length > 0) {
+        await tx.insert(ipoOutcomes).values(rows).onConflictDoUpdate({
           target: ipoOutcomes.ipoKey,
-          set: replacedSet(ipoOutcomes, row, ["ipoKey"]),
+          set: commonReplacedSet(ipoOutcomes, rows, ["ipoKey"]),
         });
       }
       break;
@@ -319,9 +383,12 @@ export async function rebuild(db: ImportDb, root: string): Promise<{ files: numb
     for (const path of snapshots) {
       await applyFile(tx, path, contents[path], null);
     }
+    // One `git log --name-only` pass for every path's last commit, instead of
+    // a `git log -1` process per file (the reports' `commit_sha`).
+    const commitShas = lastCommitsTouching(root, files);
     for (const path of files) {
       if (classifyResearchFile(path) === "snapshot") continue;
-      await applyFile(tx, path, contents[path], lastCommitTouching(root, path));
+      await applyFile(tx, path, contents[path], commitShas.get(path) ?? null);
     }
 
     await recordOk(tx, { sha, files: files.length, startedAt, finishedAt: new Date() });

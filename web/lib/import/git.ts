@@ -178,3 +178,33 @@ export function lastCommitTouching(root: string, path: string): string | null {
   const sha = out.trim();
   return sha === "" ? null : sha;
 }
+
+/**
+ * The last commit that touched each of `paths` — the same result a per-path
+ * `git log -1 --format=%H -- <path>` would give — from a single
+ * `git log --name-only` pass instead of one process per file (a rebuild asks
+ * for every research file). Both use git's default walk order and history
+ * simplification, so the first commit listed for a path is exactly the commit
+ * `lastCommitTouching` would return for it; a path no commit touches (a
+ * deleted file in a partial listing) is absent from the result.
+ */
+export function lastCommitsTouching(root: string, paths: string[]): Map<string, string> {
+  const out = git(root, ["log", "--format=%H", "--name-only", "HEAD", "--", ...paths]);
+  const touchedBy = new Map<string, string>();
+  let sha: string | null = null;
+  for (const rawLine of out.split("\n")) {
+    const line = rawLine.trimEnd();
+    if (line === "") continue;
+    // `--format=%H` lines are 40-hex shas, newest commit first; every other
+    // non-blank line is one path of the current commit's name-only list
+    // (unindented — `--format` suppresses the diff's leading space).
+    if (/^[0-9a-f]{40}$/.test(line)) {
+      sha = line;
+      continue;
+    }
+    if (sha !== null && !touchedBy.has(line)) {
+      touchedBy.set(line, sha);
+    }
+  }
+  return touchedBy;
+}
