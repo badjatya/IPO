@@ -185,8 +185,68 @@ No decisions remain open for the build; D09 was the only roadmap decision 014 de
 
 ## Changes during build
 
-Anything built differently from the approved plan, and why.
+- **6b is pending: the quote probe (6a) shipped, but the human has not run it yet.** `python3 -m stock_worker.probe` is built and tested with no live call; the build summary below asks the human to run it once and paste the output. `stock_worker/quote.py`, `tests/test_stock_quote.py`, the `quote.json` fixture + manifest entry, and the `data-sources.md` quote/consolidated **outcome** rows are therefore not written in this build: `fetch_all` does not include quote yet, and the quote row's "not confirmed" status stands with the four candidates recorded (the docs say exactly that). The respond round completes 6b.
+- **The prime lives in `fetchers.Session`, not in `net.py`** (plan review round 2's note). `ipo_agent/net.py`'s `Client` only holds the cookie jar; the `_primed` flag is on `ipo_agent/nse.py`'s `NSE` wrapper. Built to the plan's intent: `stock_worker/fetchers.py`'s `Session` wraps the client, primes once per run with a single GET of the stock page (`get-quotes/equity?symbol=X` — the same page the probe parses), ignores prime failures exactly as `nse.py` does, and the API calls use the stock page as referer.
+- **Results needs two API calls per run, not one.** The `results` source fetches `results-comparision` *and* `corporates-financial-results` (the filings join supplies `filed_at`/`source_url`), so `fetch_all` makes 1 prime + 2 (results) + 1 announcements + 1 shareholding + 1 pledges = **6 calls**; the "one API call per source" phrase holds for announcements/shareholding/pledges, and the test pins the exact 6-call sequence against a `FakeClient` (quote adds a 7th when it joins in 6b).
+- **The plan's text said "one API call per source"; the count is as above.** Same sentence, recorded precisely in `fetchers.fetch_all`'s docstring and the plan/verification.
+- **`revenue_cr` keeps the documented fallback to `re_total_inc`** (data-sources.md's field mapping from 003) when `re_net_sale` is absent; the EBITDA formula uses `re_net_sale` only, per the plan's four named fields.
+- **Shareholding `filed_at` is `submissionDate`**, which is date-only in the sampled rows; the record keeps the ISO date exactly as stated (no invented time of day). `broadcastDate` exists alongside it with a full time, but the plan mapped `filed_at` ← `submissionDate`, so that is what the fetcher reads.
+- **Market-wide announcements use the same date-window convention as 003's smoke** (run date − 6 days, `DD-MM-YYYY`), matching the data-sources row's documented one-call option.
 
 ## Verification
 
-Test commands run, with their output pasted.
+Run via the driver's `run` tool on the task branch; the dev CLI and the probe are exercised through their `main(["--dry-run"])` tests (the driver's `run` tool only allows `python3 -m ipo_agent.<module>`, so `python3 -m stock_worker --dry-run` cannot be typed there; the human can run it and the probe in a shell).
+
+```
+$ python3 -m unittest discover -s tests
+......................................................................usage: python3.12 -m unittest [-h] [--all] [--root ROOT] [KEY ...]
+python3.12 -m unittest: error: give one or more IPO keys, or --all
+.......................................................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 301 tests in 0.533s
+
+OK
+```
+
+(The `usage:` line is an existing test's stdout from an IPO CLI invoked with no keys, not a failure.)
+
+```
+$ python3 -m unittest discover -s .claude/hooks
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.533s
+
+OK
+```
+
+```
+$ python3 -m unittest discover -s .claude/deepseek
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 2.482s
+
+OK
+```
+
+New stock tests, run per step during the build:
+
+```
+$ python3 -m unittest discover -s tests -p 'test_stock_*.py'
+..........................................................................
+----------------------------------------------------------------------
+Ran 74 tests in 0.021s
+
+OK
+```
+
+(74 = test_stock_util 19, test_stock_results 12, test_stock_announcements 8,
+test_stock_shareholding 6, test_stock_pledges 7, test_stock_probe 14,
+test_stock_fetchers 8.)
+
+**Probe run: pending.** The human is asked to run once, after the build step:
+
+```bash
+python3 -m stock_worker.probe
+```
+
+and paste the output (the candidates table with its `quote source:` line and the `consolidated re-check:` line) — that is step 6b's input for the respond round.
