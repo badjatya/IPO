@@ -39,3 +39,26 @@ Asked with `/run-task` on 2026-10-29:
 - **When "Running" becomes true.** The ai.md rows this task marks **Running** are true only once the human has applied the ROUTINE.md and guard diffs. Step 4 already says to apply them in one commit on `main` before the next routine run. Applying them right after merging this branch, before the next run, keeps the docs honest. No change needed.
 - **Quiet reports and carried calls.** A quiet report carries no provenance, but its entries are earlier AI calls carried from `carried_from`. The db.md note "absent on quiet runs (code-written)" could add "the carried calls' provenance is on the `carried_from` report". Optional.
 - **Provenance on `analysis/<key>.md`** stays out of scope, as the roadmap scopes 004 to cards and reports. Listing it as a possible follow-up under Doc updates is right.
+
+## Round 2 (2026-10-29)
+
+**Verdict:** Approved
+
+**Read:** plan.md (revision 1 and its Revisions row), the round-1 items above, `.claude/skills/{analyse-ipo,anchor-update,daily-verdict}/SKILL.md`.
+
+**Checked by running:** applied the revised `ROUTINE.md`, `guard.py` and `test_guard.py` diffs to a scratch copy. Every hunk applies exactly once, and `python3 -m unittest discover -s .claude/hooks` passes (22 tests), including the checks that every saved card and report still passes, and the new cases: no `ai_written_at`, `"not available"` rejected, a bare-number version rejected. None of the three skill files carries a JSON example or field list, which confirms the plan's claim under item 4.
+
+Items 1–5 are all resolved:
+
+1. `ai_written_at` is left out when `date -u` fails, and a test covers it.
+2. `ai_model` is the model ID from the system prompt, copied exactly. The examples use `claude-sonnet-5-5` throughout, and db.md principle 4 follows the same format.
+3. `ai_prompt_version` is a JSON string, and a test rejects a bare number.
+4. Approach § 1 says how the development-session skills pick up the fields. No skill diff is needed.
+5. The documents-as-data row in ai.md names both the `rhp-analyst` rule and the new `ROUTINE.md` rule.
+
+Both human decisions are written into "Decisions needed".
+
+### Notes
+
+- **Build scope.** The build changes `ipo_agent/cards.py`, `ipo_agent/email_render.py`, `tests/`, `docs/ai.md` and `docs/db.md` only. The `ROUTINE.md` and `.claude/hooks/` diffs stay in the plan for the human to apply after the merge, in one commit, before the next routine run.
+- **Code review will check** that the cards.py and email_render.py docstrings match the plan's diffs, and that the new renderer tests compare full HTML, text and subject output with and without the fields.
