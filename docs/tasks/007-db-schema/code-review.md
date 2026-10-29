@@ -50,3 +50,8 @@ OK
 
 | # | Response | Commit |
 | --- | --- | --- |
+| 1 | **Fixed.** Every composite key is now declared once at table level: `primaryKey({ columns: [...] })` in each table's extra config, column-level `.references()` kept (`web/db/schema.ts`). Since nothing has ever applied the migrations, I regenerated `0001` (`0001_cute_exodus.sql`; each of the seven tables now gets one `CONSTRAINT "…_pk" PRIMARY KEY(…)`) and recreated the seed as `0002_outstanding_lyja.sql` — a follow-up migration could never run, because broken `0001` fails before the journal advances. `drizzle-kit generate` is a no-op afterwards, so the CI drift step stays green. The green `npm run test:db` run that proves this still needs the human (no `NEON_API_KEY` here) or the CI `db` job — see Verification. | `19f8ae1` |
+| 2 | **Fixed.** `API` is now `https://console.neon.tech/api/v2` in `web/scripts/neon-branch.mjs`. Same caveat as finding 1: the harness can't run here, so the first real `npm run test:db` (human or CI) is the proof. | `3e5cea5` |
+| 3 | **Fixed.** `web/tests/db/schema-shape.test.ts` now reads `pg_constraint` (`contype = 'p'`) with `pg_get_constraintdef`: exactly one PK row per table, and per-table column lists against db.md — composite for the seven natural-key tables, single-column for the rest, `id` for the identity/uuid tables. | `c1dafeb` |
+| 4 | **Fixed.** `docs/arch.md` § 6 Database row keeps both: test-run branches **Running** (the `db` job), preview branches **Decided** (with the host, D11). | `5e0c686` |
+| 5 | **Fixed.** Renamed `WORKTREE_ROOT` → `WEB_ROOT` (it is `web/`) and dropped `?connection_uris=true` from the create-branch call; the `pickConnectionUri` fallback stays. | `3e5cea5` |

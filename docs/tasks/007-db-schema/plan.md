@@ -128,10 +128,13 @@ Both open items from the first draft are now decided; nothing remains open for t
 4. **`imports.started_at` / `finished_at` are nullable.** db.md listed no Null flag for them; the build reads that as nullable (a failed import may lack `finished_at`). Recorded in db.md's `imports` table.
 5. **Bare `numeric` columns pinned to the plan's widths.** db.md wrote `numeric` without precision for `ipo_outcomes.pe`/`size_cr` and `stock_quotes.price`/`change_pct`/`market_cap_cr`/`pe`. The build applies the plan's mapping (money `numeric(12,2)`, ₹ crore `numeric(14,2)`, percentages `numeric(7,2)`, `pe`/times `numeric(10,2)`); db.md's tables now show the exact types.
 6. **The offline Vitest config spells out Vitest's default excludes.** Setting `exclude` replaces Vitest's defaults, so `vitest.config.mts` lists the documented default pattern set plus `tests/db/**` — the plan's "keeping Vitest's default excludes" holds in effect, and the db tests are additionally impossible to run accidentally (separate config, marker guard in `tests/db/setup.ts`).
+7. **Code-review round 1, finding 1: 0001 regenerated, not patched.** The composite keys were declared as `.primaryKey()` on each column, so drizzle-kit emitted one `PRIMARY KEY` clause per column and Postgres rejects the table. The fix declares each composite key once via `primaryKey({ columns: [...] })` in the table's extra config (the column-level `.references()` stay). Because nothing has ever applied the migrations (test:db has never run), I regenerated `0001` instead of adding a follow-up migration — a follow-up could never run, since the broken 0001 fails before the journal advances: removed the stale `0001` and seed artifacts, ran `drizzle-kit generate` (new `0001_cute_exodus.sql` with `CONSTRAINT "…_pk" PRIMARY KEY(…)` table constraints), recreated the seed custom migration as `0002_outstanding_lyja.sql` (identical content). `generate` is a no-op afterwards, so the drift check stays green.
+8. **Code-review round 1, findings 2, 4, 5: host, arch row, naming.** The harness's API host was `https://neon.tech/api/v2`, which 308-redirects to `neon.com` (404) and drops the `Authorization` header on the redirect — now `https://console.neon.tech/api/v2`. `docs/arch.md`'s Database row now keeps both statuses (test branches **Running**, preview branches **Decided** with D11). `WORKTREE_ROOT` renamed to `WEB_ROOT` (it points at `web/`), and `?connection_uris=true` dropped from the create-branch call (the API returns `connection_uris` whenever it creates an endpoint).
+9. **Code-review round 1, finding 3: primary-key shape test.** `web/tests/db/schema-shape.test.ts` gained a test reading `pg_constraint` (`contype = 'p'`) with `pg_get_constraintdef`: exactly one PK row per table and db.md's columns for each — composite for the seven natural-key tables, single-column for the rest, `id` for the identity/uuid tables.
 
 ## Verification
 
-- **Offline (this build step):** all commands below ran in the task worktree and are pasted from real output.
+- **Offline (this build step):** all commands below ran in the task worktree and are pasted from real output. Re-run after the code-review round 1 fixes (composite primary keys, API host, PK shape test).
 
   ```text
   $ npm run typecheck            (web/)
@@ -140,7 +143,7 @@ Both open items from the first draft are now decided; nothing remains open for t
 
   $ npm run lint                 (web/)
   Found 0 warnings and 0 errors.
-  Finished in 47ms on 24 files with 250 rules using 12 threads.   (exit 0)
+  Finished in 59ms on 24 files with 250 rules using 12 threads.   (exit 0)
 
   $ npm test                     (web/)
   Test Files  4 passed (4)   — env-example, neon-branch helpers, layout, schema
@@ -158,12 +161,12 @@ Both open items from the first draft are now decided; nothing remains open for t
   (exit 1, as designed: a stray local run can never reach a real branch)
 
   $ npx drizzle-kit generate     (web/; config loads with no DATABASE_URL_UNPOOLED)
-  No schema changes, nothing to migrate 😴   (second run = no-op; drift check verified
-  with a probe column that made it create an untracked migration)
+  No schema changes, nothing to migrate 😴   (second run = no-op; the regenerated 0001 and
+  recreated 0002 leave the drift check green)
 
   $ python3 -m unittest discover -s tests   (repo root)
-  Ran 227 tests in 0.541s
+  Ran 227 tests in 0.534s
   OK
   ```
 
-- **Real branch — required before code review:** the build step has no `NEON_API_KEY`, so `npm run test:db` cannot run here (it refuses, above). It gets a green run before code review is approved: either the human runs `cd web && npm run test:db` locally with `NEON_API_KEY` set (output pasted here), or the human pushes the branch so the CI `db` job runs it (the run link goes here). Until one of those is green, the Done-when — "migrations build the full schema on an empty Neon branch" — is unproven. The `web` job's new schema-drift step also gets its green run on the same push.
+- **Real branch — required before code review is approved:** the build step has no `NEON_API_KEY`, so `npm run test:db` cannot run here (it refuses, above). It gets a green run: either the human runs `cd web && npm run test:db` locally with `NEON_API_KEY` set (output pasted here), or the human pushes the branch so the CI `db` job runs it (the run link goes here). Until one of those is green, the Done-when — "migrations build the full schema on an empty Neon branch" — is unproven. This is also the run that proves findings 1 and 2 are actually fixed. The `web` job's new schema-drift step gets its green run on the same push.
