@@ -65,3 +65,33 @@ The scope is right: 23 tables, 12 enums, the view, the three decided seed rows a
 - The harness has logic of its own: building the pooled URI from the response, the `finally` delete, and refusing protected branches. Small pure helpers with an offline unit test would cover it cheaply. Optional.
 - Neon's GitHub Actions (`neondatabase/create-branch-action`, `delete-branch-action`) could replace the API calls in CI. The plan's own script also works locally, so either is fine. Pick one and keep it simple.
 - `push` and `pull_request` both trigger CI, so a PR run creates two branches. That's harmless with an expiry set.
+
+## Round 2 (2026-10-29)
+
+**Verdict:** Approved
+
+**Read:** plan.md (revision 1), round 1 above, the same docs as round 1
+
+The nine items from round 1 are addressed:
+
+| # | Item | Where |
+| --- | --- | --- |
+| 1 | Decisions recorded | "Decisions (settled…)", Approach, db.md update (seed table and "Start the worker") |
+| 2 | Generated migration untouched | Custom migrations for citext, seed and view (if needed); `citext` as a `customType` |
+| 3 | Drift check | `generate` + `git status --porcelain web/db` in the `web` job; config loads without the URL |
+| 4 | Rule tests out of `npm test` | Excluded by config; separate node config that throws without `NEON_TEST_BRANCH_ID` |
+| 5 | Branch safety | Schema-only branch, `expires_at`, schemas dropped before migrate, delete by ID, default and `dev` refused |
+| 6 | Specific assertions | `23505` + index name, `running` + `queued`, `queued` after `done`, `pg_catalog` shape test |
+| 7 | Insert defaults | `now()` and `gen_random_uuid()`, recorded in db.md |
+| 8 | Packages and migrate driver | `drizzle-orm`; `-D drizzle-kit pg`; `process.loadEnvFile`; migrator fallback |
+| 9 | Real-branch run before code review | Verification section |
+
+### Decisions (human)
+
+The same two decisions as round 1 (cap row unseeded; gate closed while unset). Nothing else is open.
+
+### Notes
+
+- **`driver: "pg"`.** In the drizzle-kit versions I know, `driver` only takes special values (e.g. `aws-data-api`, `pglite`). For a plain Postgres URL, drizzle-kit uses `pg` on its own when it's installed. If config validation or the type check rejects `driver: "pg"`, leave the option out and record it under "Changes during build".
+- **Dropping `public`.** `DROP SCHEMA public CASCADE` also drops the `citext` extension if it lives there. That's fine, because the first custom migration recreates it. Recreate `public` with the same owner, so the branch's role can create in it.
+- **Code review won't approve without a real run.** Code review needs a green `npm run test:db` (pasted output or a CI run link). That's Verification's second bullet.
