@@ -103,6 +103,7 @@ flowchart LR
 | Next.js app | **Decided** | Pages, accounts, watchlist, analysis requests and progress, Ask, admin settings | Sessions, user actions |
 | Gemini API | **Decided** ([ADR-0014](adr/0014-gemini-free-api-for-ask.md), [0017](adr/0017-gemini-for-stocks-claude-for-ipos.md)) | Ask answers; stock analyses; filing summaries | — |
 | Gmail (connector on the routine's account) | **Running** | The IPO brief, to the admin only ([ADR-0015](adr/0015-email-to-admin-only.md)) | — |
+| Resend | **Decided** ([ADR-0028](adr/0028-better-auth-invite-only.md)) | Account emails from the app: invites and password resets only | — |
 
 **Two kinds of data, two owners.**
 
@@ -194,8 +195,8 @@ Scheduled runs also take any jobs still queued.
 | Watchlist | List, stock detail (price, results, announcements, shareholding, alerts) | Per user; adding a stock is free |
 | Analysis | "Get analysis" on a stock; loading screen with queue position and live steps | **Every request counts** against the monthly quota (3), whether the saved analysis is served or refreshed ([ADR-0017](adr/0017-gemini-for-stocks-claude-for-ipos.md)) |
 | Ask | Question box on IPO and stock pages | Gemini API; 5 questions a day per person ([ai.md](ai.md#in-app-ai-ask)) |
-| Accounts | Sign-up, sign-in | Auth library ([ADR](adr/README.md) to come); Google sign-in or password, because the app sends no email ([ADR-0015](adr/0015-email-to-admin-only.md)) |
-| Alerts | Shown on the watchlist and stock pages | In the app only; users get no email |
+| Accounts | Sign-in, admin invites, password reset | Better Auth, email and password; no public sign-up. The admin invites each user and Resend sends the set-password link ([ADR-0028](adr/0028-better-auth-invite-only.md)) |
+| Alerts | Shown on the watchlist and stock pages | In the app only; no alert emails |
 | Admin | Settings page (admin role only) | Edits [`settings`](db.md#settings): quotas and caps |
 | Worker dispatch | Server-side call to start the stock worker | Token in the app's environment only; sends no user text |
 
@@ -314,7 +315,7 @@ sequenceDiagram
 | Repo, Import Action | GitHub | Repo **Running**; Action **Decided** | Action secret: database URL |
 | Stock worker | GitHub Actions ([ADR-0018](adr/0018-stock-worker-on-github-actions.md)) | **Decided** | Action secrets: database URL, Gemini API key |
 | Database | Neon free tier; a branch per test run — the CI `db` job — deleted after the run (**Running**); a branch per preview deploy (**Decided** with the host, D11) | **Running** | Connection strings per branch; `NEON_API_KEY` secret and `NEON_PROJECT_ID` variable in CI |
-| Next.js app | Host **Open**; local until week 4 | **Decided** | Database URL, Gemini API key, auth secret, worker dispatch token |
+| Next.js app | Host **Open**; local until week 4 | **Decided** | Database URL, Gemini API key, auth secret, Resend API key, worker dispatch token |
 
 The worker writes progress to the database itself, so it never needs to reach the app. Hosting can stay in week 4.
 
@@ -326,7 +327,7 @@ The worker writes progress to the database itself, so it never needs to reach th
 | --- | --- | --- |
 | Scraped pages, RHPs, filings → AI | Prompt injection hidden in a document | Documents are passed as data, never as instructions. The IPO routine has only the Gmail connector and repo access. Gemini calls (worker and Ask) have no tools except search grounding, so injected text can at most change the written text |
 | App → stock worker | User text steering a research run | The dispatch carries no user text. The worker reads job rows whose symbols were checked against the stocks list. The dispatch token lives only in the app's environment |
-| Users → app | Account takeover, data leaks between users | Auth library, sessions in Postgres, every query scoped to the signed-in user, CSRF protection, rate limits on sign-in, Ask and analysis requests |
+| Users → app | Account takeover, data leaks between users | Better Auth, sessions in Postgres, sign-up off (admin invites only), one-time invite and reset links, every query scoped to the signed-in user, CSRF protection, rate limits on sign-in, Ask and analysis requests |
 | App and worker → Gemini API | Shared free quota used up; user data reaching Google (free-tier prompts may be used to improve Google's products) | Per-user quotas and a platform cap on analyses a day; prompts carry only public-source data and the user's question, never identity; the app says questions and analyses use Gemini |
 | Secrets | Exposure in git | Secrets only in GitHub Action secrets and the app's environment; no user data and no secrets in the repo |
 
@@ -387,7 +388,7 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | [0012](adr/0012-research-not-advice.md) | Research, not advice, for listed stocks | Accepted |
 | [0013](adr/0013-shared-per-stock-research.md) | Research is per stock and shared across users | Accepted |
 | [0014](adr/0014-gemini-free-api-for-ask.md) | Gemini API (free tier) for in-app Ask | Accepted |
-| [0015](adr/0015-email-to-admin-only.md) | Email goes to the admin only; no user emails | Accepted |
+| [0015](adr/0015-email-to-admin-only.md) | Email goes to the admin only; no user emails | Superseded by 0028 |
 | [0016](adr/0016-on-demand-stock-analysis.md) | On-demand stock analysis through the Claude routine | Superseded by 0017 |
 | [0017](adr/0017-gemini-for-stocks-claude-for-ipos.md) | Claude for IPOs only; Gemini for all stock work; every analysis request counts | Accepted |
 | [0018](adr/0018-stock-worker-on-github-actions.md) | Stock worker runs on GitHub Actions | Accepted |
@@ -400,6 +401,7 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | [0025](adr/0025-drizzle-on-neon-serverless-driver.md) | Drizzle ORM on Neon's serverless driver | Accepted |
 | [0026](adr/0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | Accepted |
 | [0027](adr/0027-shadcn-charts-on-recharts.md) | shadcn/ui charts, on Recharts, for the web app | Accepted |
+| [0028](adr/0028-better-auth-invite-only.md) | Better Auth, invite-only password sign-in, account emails through Resend | Accepted |
 
 ## 9. Open questions
 
@@ -407,6 +409,5 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | --- | --- | --- |
 | Gemini free quotas and grounding for the chosen model (read in AI Studio) | Quotas, platform cap, news step | Week 1 |
 | App host | Deployment, secrets | Week 4 |
-| Auth library and ORM | Accounts, schema migrations | Week 1 |
 | NSE stock data after 014: what still remains — the **quote source** (014's 2026-10-30 probe found no working candidate; all four candidates failed or were unprobed, errors recorded in [data-sources.md](data-sources.md#nse-stock-data); `fetch_quote` raises `SourceError` and `stock_quotes` stays unfilled until a later task confirms a source, the unprobed `/api/NextApi/…` paths being the candidate to try), the **consolidated results source** (the same probe's re-check was `identical`, so the endpoint still ignores `consolidated=true`; `results.py` returns no consolidated rows), and the **FII/DII split**, reachable only through XBRL parsing that 016/018 must add before `fii_move`/`dii_move` alerts can fire. Settled by 014: results unit (₹ lakh, converted to crore), operating-EBITDA derivation, the filings join, the pledge share. Confirmed fetchers: [data-sources.md](data-sources.md#nse-stock-data) | Stock worker | 016/018 |
 | Backups for app-owned data (Neon free tier keeps a short history) | Users, watchlists | Before real users |

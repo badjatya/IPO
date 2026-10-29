@@ -20,7 +20,7 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0012](0012-research-not-advice.md) | Research, not advice, for listed stocks | 2026-10-29 | Accepted |
 | [0013](0013-shared-per-stock-research.md) | Research is per stock and shared across users | 2026-10-29 | Accepted |
 | [0014](0014-gemini-free-api-for-ask.md) | Gemini API (free tier) for in-app Ask | 2026-10-29 | Accepted |
-| [0015](0015-email-to-admin-only.md) | Email goes to the admin only; no user emails | 2026-10-29 | Accepted |
+| [0015](0015-email-to-admin-only.md) | Email goes to the admin only; no user emails | 2026-10-29 | Superseded by 0028 |
 | [0016](0016-on-demand-stock-analysis.md) | On-demand stock analysis through the Claude routine | 2026-10-29 | Superseded by 0017 |
 | [0017](0017-gemini-for-stocks-claude-for-ipos.md) | Claude for IPOs only; Gemini for all stock work; every analysis request counts | 2026-10-29 | Accepted |
 | [0018](0018-stock-worker-on-github-actions.md) | Stock worker runs on GitHub Actions | 2026-10-29 | Accepted |
@@ -33,6 +33,7 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0025](0025-drizzle-on-neon-serverless-driver.md) | Drizzle ORM on Neon's serverless driver | 2026-10-29 | Accepted |
 | [0026](0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | 2026-10-30 | Accepted |
 | [0027](0027-shadcn-charts-on-recharts.md) | shadcn/ui charts, on Recharts, for the web app | 2026-10-30 | Accepted |
+| [0028](0028-better-auth-invite-only.md) | Better Auth, invite-only password sign-in, account emails through Resend | 2026-10-30 | Accepted |
 
 ## Adding one
 
@@ -42,4 +43,4 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 4. Add a row above, and update [arch.md § Decisions](../arch.md#8-decisions) in the same commit.
 5. Never edit an accepted decision's outcome. Supersede it with a new ADR and set the old one's status to "Superseded by ADR-NNNN".
 
-Still to decide, each to become an ADR: auth library, host.
+Still to decide, each to become an ADR: host.

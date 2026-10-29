@@ -1,6 +1,6 @@
 # Database
 
-PostgreSQL on Neon ([ADR-0010](adr/0010-postgresql-on-neon.md)). The schema below is **Running**: task 007 built it from `web/db/schema.ts` into the checked-in migrations in `web/db/migrations/`, and the database tests run against a real, disposable Neon branch per run (§ [Migrations and environments](#migrations-and-environments)). The auth tables will take whatever shape the auth library needs, which is still **Open** (task 010).
+PostgreSQL on Neon ([ADR-0010](adr/0010-postgresql-on-neon.md)). The schema below is **Running**: task 007 built it from `web/db/schema.ts` into the checked-in migrations in `web/db/migrations/`, and the database tests run against a real, disposable Neon branch per run (§ [Migrations and environments](#migrations-and-environments)). The auth tables are Better Auth's ([ADR-0028](adr/0028-better-auth-invite-only.md)), added by task 010.
 
 The design starts from data that exists today. Every research table below maps to a JSON file the routine already writes; the mapping is in [§ Where the data comes from](#where-the-data-comes-from).
 
@@ -327,7 +327,7 @@ Index: `(symbol, created_at desc)`.
 
 ### `users`
 
-The final shape follows the auth library (**Open**). These are the fields the app itself needs.
+Better Auth owns the rest of the shape ([ADR-0028](adr/0028-better-auth-invite-only.md)); task 010 maps its user model onto these fields, which the app itself needs.
 
 | Column | Type | Null | Notes |
 | --- | --- | --- | --- |
@@ -337,7 +337,7 @@ The final shape follows the auth library (**Open**). These are the fields the ap
 | `role` | `text` | no | `user` or `admin`; default `user`. Only an admin can change `settings` |
 | `created_at` | `timestamptz` | no | |
 
-Plus the auth library's own tables (sessions, accounts). Users get no email from the app ([ADR-0015](adr/0015-email-to-admin-only.md)), so sign-in can't rely on emailed links.
+Plus Better Auth's own tables (`session`, `account`, `verification`), built by task 010. There is no public sign-up: the admin invites each user, and the app emails only invite and password-reset links ([ADR-0028](adr/0028-better-auth-invite-only.md)).
 
 ### `watchlist_items`
 

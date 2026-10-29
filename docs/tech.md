@@ -23,7 +23,8 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Web language | TypeScript, strict mode | Running | [0023](adr/0023-typescript-strict.md) |
 | Database | PostgreSQL on Neon (free tier) | Running | [0010](adr/0010-postgresql-on-neon.md) |
 | ORM and migrations | Drizzle ORM, drizzle-kit migrations, on Neon's serverless driver | Running | [0025](adr/0025-drizzle-on-neon-serverless-driver.md) |
-| Auth | Auth library for Next.js, sessions in Postgres | Open | — |
+| Auth | Better Auth (Drizzle adapter), sessions in Postgres; email and password, admin invites only | Decided | [0028](adr/0028-better-auth-invite-only.md) |
+| Account email | Resend: invites and password resets only | Decided | [0028](adr/0028-better-auth-invite-only.md) |
 | UI components and styling | shadcn/ui (Base UI) with Tailwind CSS v4; rules in [design.md](design.md) | Running | [0020](adr/0020-shadcn-ui.md) |
 | Charts | shadcn/ui `chart` on Recharts, added with the first chart page | Decided | [0027](adr/0027-shadcn-charts-on-recharts.md) |
 | Sync | GitHub Actions: import on push | Decided | [0011](adr/0011-git-as-the-hand-off.md) |
@@ -58,7 +59,7 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Language | TypeScript, with strict mode ([ADR-0023](adr/0023-typescript-strict.md)) | Running |
 | Data access | Drizzle ORM; drizzle-kit for versioned migrations ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
 | Database driver | `@neondatabase/serverless`: HTTP for queries, WebSocket `Pool` for interactive transactions; connection in `web/lib/db.ts` ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
-| Auth | An auth library for Next.js with a Postgres adapter; Google sign-in or password (no emailed links, because the app sends no email) | Open |
+| Auth | Better Auth with its Drizzle adapter and database sessions. Email and password only; sign-up is off and the admin invites users. Invite and reset links are sent with the `resend` SDK behind a small mail module that tests replace ([ADR-0028](adr/0028-better-auth-invite-only.md)) | Decided |
 | AI | Google Gen AI SDK for the Gemini API, server side only, one module per side: the app's is TypeScript in `web/lib/`, the worker's is Python in `stock_worker/` (020) ([ADR-0026](adr/0026-stock-worker-code-location.md)) | Decided |
 | UI | shadcn/ui components in `web/components/ui/`, Tailwind CSS v4, theme in `web/app/globals.css`; see [design.md](design.md) | Running |
 | Charts | shadcn/ui `chart` (`web/components/ui/chart.tsx`, added by the first chart task) on Recharts, coloured by the `--chart-*` tokens; client components fed plain arrays by server pages. For GMP and subscription trends, results trends and the track record ([ADR-0027](adr/0027-shadcn-charts-on-recharts.md)) | Decided |
@@ -73,6 +74,7 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Anthropic: Claude Code routine | IPO research only | Personal Claude Pro plan (existing; nothing extra paid) | Running |
 | Google: Gemini API | Ask | Free tier: per-project quotas (check AI Studio); prompts may be used by Google | Decided |
 | GitHub | Repo, Actions (import, CI, stock worker) | Free: about 2,000 Actions minutes a month for a private repo (third-party sources; check GitHub's billing page) | Repo and CI running; import and stock worker decided |
+| Resend | Account emails: invites and password resets | Free tier; needs a verified sending domain | Decided |
 | Neon | PostgreSQL; branch per test run and preview | Free: 1 GB per project, 100 compute-hours a month, pauses when idle | Decided |
 | App host | Next.js | Not chosen yet | Open |
 
@@ -88,6 +90,8 @@ Names are planned; values are never committed. The app's variables are listed, e
 | `NEON_PROJECT_ID` | CI | The Neon project, `dark-field-33023581` (Actions variable, not secret) |
 | `GEMINI_API_KEY` | App, stock worker | Ask; stock analyses and summaries |
 | `AUTH_SECRET` | App | Session signing |
+| `RESEND_API_KEY` | App | Sends invite and password-reset emails |
+| `EMAIL_FROM` | App | The from-address for account emails, on the domain verified in Resend |
 | `GITHUB_DISPATCH_TOKEN` | App | Fine-grained token that can only dispatch the stock worker workflow |
 | `config/delivery.json` | Routine | The admin's email address for the brief (running) |
 | `OPENROUTER_API_KEY` | Dev tooling: `.claude/deepseek/deepseek.py` | DeepSeek through OpenRouter. In the main checkout's `.env.local` (gitignored); never in CI (running) |

@@ -1,6 +1,6 @@
 # ADR-0015: Email goes to the admin only; no user emails
 
-- **Status:** Accepted
+- **Status:** Superseded by ADR-0028
 - **Decided:** 2026-10-29 · **Recorded:** 2026-10-29
 - **Deciders:** Vijay · **Drafted with:** Claude Code (Opus 5.5)
 

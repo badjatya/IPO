@@ -58,7 +58,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Done |
 | [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | **Ready** |
 | [009](#009--import-action) | Import Action on push | 2 | 002, 008, H02 | Blocked |
-| [010](#010--accounts) | Accounts: sign-up, sign-in, roles | 2 | 007, D04 | Blocked |
+| [010](#010--accounts) | Accounts: invite-only sign-in, roles | 2 | 007, D04 | **Ready** |
 | [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | Blocked |
 | [012](#012--track-record-page) | Track record page | 2 | 008, D06 | Blocked |
 | [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | Blocked |
@@ -151,7 +151,7 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 | D01 | App in the same repo (`web/`) or a separate repo | Decided: same repo, `web/` ([ADR-0022](../adr/0022-web-app-in-same-repo.md)) | 006 | [x] |
 | D02 | TypeScript (strict) for the web app | Decided: TypeScript, strict ([ADR-0023](../adr/0023-typescript-strict.md)) | 006 | [x] |
 | D03 | ORM and migration tool (Drizzle or Prisma) | Decided: Drizzle with drizzle-kit, on Neon's serverless driver ([ADR-0025](../adr/0025-drizzle-on-neon-serverless-driver.md)) | 007 | [x] |
-| D04 | Auth library, and Google sign-in or password (no emailed links, [ADR-0015](../adr/0015-email-to-admin-only.md)) | Open | 010 | [ ] |
+| D04 | Auth library, and Google sign-in or password | Decided by the human on 2026-10-30: Better Auth, email and password, no public sign-up; the admin invites users, and invite and password-reset links go out through Resend ([ADR-0028](../adr/0028-better-auth-invite-only.md), superseding ADR-0015 for those two emails) | 010 | [x] |
 | D05 | UI components and styling | Decided: shadcn/ui with Tailwind CSS ([ADR-0020](../adr/0020-shadcn-ui.md)) | 006 | [x] |
 | D06 | Charts library | Decided by the human on 2026-10-30: shadcn/ui's `chart` component on Recharts, added with `npx shadcn@latest add chart` by the first task that draws a chart ([ADR-0027](../adr/0027-shadcn-charts-on-recharts.md)) | 011, 012, 019 | [x] |
 | D07 | App test runner | Decided: Vitest with React Testing Library ([ADR-0024](../adr/0024-vitest-for-app-tests.md)) | 006 | [x] |
@@ -173,8 +173,9 @@ Accounts and secrets that only the human can create. Values never go into git ([
 | H02 | Add `DATABASE_URL` as a GitHub Actions secret (for the import Action and the stock worker) | 009, 018 | [ ] |
 | H03 | Create the Gemini API key in AI Studio; add `GEMINI_API_KEY` to the local environment and as an Actions secret | 020, 023 | [ ] |
 | H04 | Create a fine-grained `GITHUB_DISPATCH_TOKEN` that can only dispatch the stock worker workflow | 022 | [ ] |
-| H05 | Create the host account and set its environment: `DATABASE_URL`, `GEMINI_API_KEY`, `AUTH_SECRET`, `GITHUB_DISPATCH_TOKEN` | 025 | [ ] |
+| H05 | Create the host account and set its environment: `DATABASE_URL`, `GEMINI_API_KEY`, `AUTH_SECRET`, `RESEND_API_KEY`, `EMAIL_FROM`, `GITHUB_DISPATCH_TOKEN` | 025 | [ ] |
 | H06 | Create a Neon API key and add it as an Actions secret, so CI can create a database branch per test run ([db.md § Migrations](../db.md#migrations-and-environments)). Done 2026-10-29: key `github-actions-ci`, scoped to the project, in the `NEON_API_KEY` secret; `NEON_PROJECT_ID` is an Actions variable | 007 | [x] |
+| H07 | Create a Resend account and API key, and verify a sending domain; put `RESEND_API_KEY` and `EMAIL_FROM` in `web/.env.local`. Until a domain is verified, Resend's test sender delivers only to the account owner's address. 010's tests don't need it (the mail module is replaced in tests); a real invite does | 010 (manual check), 025 | [ ] |
 
 ## Already in place
 
@@ -186,7 +187,7 @@ Nothing below needs a task. Evidence is in the repo.
 | Research output as the system of record | `analysis/`, `reports/`, `data/` |
 | Docs: project, architecture, stack, database, AI design, data sources, plan, journal | `docs/`, commit `c1e113d` |
 | UI design rules: component kit, theme, status colours, number formats, layout | `docs/design.md`, commit `33c5a73` |
-| ADRs 0001–0027 | `docs/adr/` |
+| ADRs 0001–0028 | `docs/adr/` |
 | Two-agent workflow: rules, statuses, reviewer guide, templates | `AGENTS.md`, `docs/tasks/`, commit `fecb83d` |
 | Claude Code guardrails: push guard, card and report schema check on write, with tests | `.claude/hooks/guard.py`, `.claude/hooks/test_guard.py` |
 | Claude Code skills and subagents | `.claude/skills/`, `.claude/agents/` |
@@ -414,16 +415,16 @@ A GitHub Actions workflow that runs the import on every push to `main` that touc
 | | |
 | --- | --- |
 | Slug | `010-accounts` |
-| Status | Blocked |
+| Status | Ready |
 | Depends on | 007, D04 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
 
-Sign-up and sign-in with the library and method chosen in D04, with sessions in Postgres and `users.role`. Includes a way to make the first admin, route guards, rate limits on sign-in, CSRF protection, and every user query scoped to the signed-in user.
+Invite-only accounts with Better Auth ([ADR-0028](../adr/0028-better-auth-invite-only.md)): email and password sign-in, sessions in Postgres through the Drizzle adapter, and `users.role`. **No public sign-up.** An admin invites a user by email, and the user gets a one-time link, sent through Resend, to set their password. Users can reset a forgotten password by an emailed link. Includes a way to make the first admin, an admin-only invite form (a minimal one; the settings page is 013), route guards, rate limits on sign-in and reset requests, CSRF protection, and every user query scoped to the signed-in user.
 
-- **Done when:** a user can sign up, sign in and out; admin-only routes refuse other users; tests cover scoping and the role check.
-- **Watch for:** the app sends no email ([ADR-0015](../adr/0015-email-to-admin-only.md)), so there are no magic links and no reset emails. The first-admin mechanism is for the plan to propose. No user data goes in git.
-- **Read:** [db.md § users](../db.md#users), [arch.md § 7.1](../arch.md#71-security-and-trust-boundaries).
+- **Done when:** sign-up is refused; an admin can invite a user, and the invited user can set a password, sign in and sign out; an invite or reset link works once and expires; "forgot password" doesn't reveal whether an account exists; admin-only routes refuse other users; tests cover scoping, the role check, invite and reset with the mail module replaced; db.md, tech.md and arch.md mark accounts as Running.
+- **Watch for:** db.md's `users` columns stay (`uuid` id, `citext` email, `role`), with Better Auth mapped onto them, and its tables come in through a drizzle-kit migration. Tests never call Resend. Account emails carry only the link, never research. The first-admin mechanism is for the plan to propose, and it must not be a public route. The app sends no other email (no alert digests). No user data goes in git. DeepSeek can't run `npm install`, so `/run-task` stops for the human to add `better-auth` and `resend`.
+- **Read:** [ADR-0028](../adr/0028-better-auth-invite-only.md), [db.md § users](../db.md#users), [arch.md § 7.1](../arch.md#71-security-and-trust-boundaries), [tech.md § Configuration](../tech.md#configuration-and-secrets).
 - **Start:** `/run-task 010`
 
 ### 011 · IPO pages

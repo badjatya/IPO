@@ -12,7 +12,7 @@ The product grows from an IPO email into a **multi-user research app for Indian 
 | Track record | Every IPO call against how it actually listed | Data in `data/outcomes.json`; needs a page |
 | Stock watchlist | Each user picks listed stocks and gets quarterly results, an announcements digest, and shareholding and pledge changes, with alerts | To build |
 | Stock analysis on request | Full company analysis by Gemini, started in the background with a live loading screen; saved and shared; every request counts against the quota | To build ([ADR-0017](adr/0017-gemini-for-stocks-claude-for-ipos.md)) |
-| Web app | Sign-up and login, per-user watchlist, IPO and stock pages, track record | To build |
+| Web app | Invite-only login, per-user watchlist, IPO and stock pages, track record | To build |
 | SME IPOs | — | **Out of scope for now** (decided 2026-10-29) |
 | Payments | — | **None in phase 1** (decided 2026-10-29). One free tier for every user: 5 Ask questions a day, 3 new stock analyses a month |
 
@@ -49,14 +49,16 @@ Architecture decisions are recorded one per file in [adr/](adr/README.md), and s
 
 - The stock worker runs on GitHub Actions ([ADR-0018](adr/0018-stock-worker-on-github-actions.md)).
 
-Still open: auth library, ORM, Gemini model for Ask, host ([arch.md § Open questions](arch.md#9-open-questions)).
+- Accounts: Better Auth, email and password, admin invites only, invite and reset links through Resend ([ADR-0028](adr/0028-better-auth-invite-only.md), superseding ADR-0015 for those two emails).
+
+Still open: Gemini model for Ask, host ([arch.md § Open questions](arch.md#9-open-questions)).
 
 ## Week by week
 
 | Week | Dates | Build |
 | --- | --- | --- |
 | 1 | 29 Oct – 4 Nov | `tests/` for the existing code; `.claude/` skills, subagents and hooks; ADRs; database schema (users, watchlists, stocks, filings, alerts); NSE fetchers for quotes, results, announcements and shareholding, with tests |
-| 2 | 5 – 11 Nov | Web app: sign-up, login, watchlist add/remove; IPO pages; track record page; stock pages showing the Python data |
+| 2 | 5 – 11 Nov | Web app: invite-only login, watchlist add/remove; IPO pages; track record page; stock pages showing the Python data |
 | 3 | 12 – 18 Nov | Gemini stock worker: results summary, announcements digest, shareholding and pledge alerts; shared per-stock cache; on-demand stock analysis with the loading screen and quotas; admin settings page; worker smoke-tested against NSE |
 | 4 | 19 – 27 Nov | "Ask about this stock or IPO"; security review; hosting; `project.md`, `architecture.md`, form text; demo video |
 
@@ -459,3 +461,13 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - Claude put three options to the human: shadcn chart on Recharts, hand-written SVG, and visx.
 - **Human decision:** shadcn chart on Recharts, the recommended option ([ADR-0027](adr/0027-shadcn-charts-on-recharts.md)).
 - **Docs:** tech.md, design.md and arch.md § Decisions now name the choice. arch.md also gains the missing 0025 and 0026 rows. On the roadmap, D06 is ticked; 011, 012 and 019 stay Blocked on their other dependencies.
+
+### 2026-10-30: D04, accounts
+
+- **Asked:** the human asked Claude to start task 010 with email and password login, admin invites only (no sign-up), and invite emails through Resend.
+- **AI did:**
+  - Claude found that sending invites conflicts with [ADR-0015](adr/0015-email-to-admin-only.md), which said the app emails no user.
+  - Claude checked the packages' peer dependencies: `better-auth` 1.7.14 accepts Next 16, React 19 and drizzle-orm 0.45, and `resend` is at 6.35.0.
+  - Claude put the auth library to the human: Better Auth, Auth.js or Neon Auth. It also asked whether "forgot password" should email a reset link, since that path comes almost free with invites.
+- **Human decisions:** Better Auth and self-serve reset by email, both the recommended options ([ADR-0028](adr/0028-better-auth-invite-only.md), superseding ADR-0015 for invite and reset emails only).
+- **Docs:** tech.md, db.md and arch.md name the choice. `web/.env.example` gains `RESEND_API_KEY` and `EMAIL_FROM`. On the roadmap, D04 is ticked, H07 (Resend account and domain) is added, and 010 is rewritten for invites and marked Ready.
