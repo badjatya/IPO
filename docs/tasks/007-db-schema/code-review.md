@@ -111,3 +111,63 @@ No new deviations. Add finding 6 under "Changes during build". Approval needs a 
 | # | Response | Commit |
 | --- | --- | --- |
 | 6 | **Fixed.** The lookup is now the pure helper `findDefaultBranch(branches)`, matching `branch.default === true`, with an offline suite in `web/tests/neon-branch.test.ts` against a fixture in the API v2 Branch shape — including a regression test that the old `is_default` spelling (which the API never sends) does *not* match. The "no default branch found" error now lists every branch it saw as `` `name [default: …]` ``, so a future field mismatch shows up in the job log. The create-response fields the harness reads next were checked against the API v2 reference: `branch.id`, `connection_uris[].connection_uri` (returned when the create request makes an endpoint, per round 1 finding 5), `endpoints[].host` and `roles[].name`/`.password` (returned at creation) are all documented shapes; the fallback's extra reads (`connection_parameters`, `branch.database_name`) degrade to the correct `neondb` default for a fresh schema-only branch, so nothing else needed changing. The failed run had created no branch, so there was nothing to clean up. Offline re-run: `npm test` 25 passed (4 new), typecheck/lint clean, `drizzle-kit generate` a no-op, Python 227 OK — see plan.md Verification. The green `npm run test:db` that proves the Done-when still needs the next push (CI `db` job) or a human run with `NEON_API_KEY`. | `106c406` |
+
+## Round 3 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff f971190..03dc005` (finding 6), pushed as `task/007-db-schema` at `03dc005`
+
+**Tests:**
+
+```text
+Claude, in the worktree: npm test 25 passed (25); typecheck, lint clean; drizzle-kit generate no-op.
+
+CI run 40937366828 (https://github.com/badjatya/IPO/actions/runs/40937366828), push of 03dc005:
+tests: success   web: success   db: failure
+
+db job:
+test:db using branch br-steep-frost-a1s6lsmy (db-test-1793300943457)
+Using 'pg' driver for database querying
+[✓] migrations applied successfully!
+ ❯ tests/db/schema-shape.test.ts (7 tests | 3 failed)
+     ✓ has exactly the 23 db.md tables in public
+     × has the 12 db.md enums with their values
+     ✓ has the watched_symbols view (distinct symbols, no user data)
+     × has the partial unique indexes that carry the rules
+     ✓ has the unique exchange_ref and dedupe_key indexes
+     × has the composite FKs (ipo_subscriptions, ipo_verdicts)
+     ✓ has exactly one primary key per table, with db.md's columns
+ ❯ tests/db/schema-rules.test.ts (8 tests | 5 failed)
+     × fails to queue two jobs for one stock (partial unique index, 23505)   expected undefined to be '23505'
+     × fails a queued job while another is running for the same stock         expected undefined to be '23505'
+     × allows a new queued job once the previous one is done                  expected 'done' to be 'queued'
+     × rejects a duplicate alert dedupe_key (23505)                           expected undefined to be '23505'
+     × rejects a duplicate announcement exchange_ref (23505)                  expected undefined to be '23505'
+     ✓ returns each watched symbol once across users in watched_symbols
+     ✓ seeds exactly the decided settings rows, with no platform-cap row
+     ✓ cascades a user delete to their watchlist items
+test:db deleted branch br-steep-frost-a1s6lsmy
+```
+
+Finding 6 is fixed: the harness found the default branch, created the branch, migrated, ran the tests and deleted the branch.
+
+The first half of the Done-when is now proven: "migrations build the full schema on an empty Neon branch". All 23 tables and 23 primary keys check out, as do the view, the seed rows and the cascade.
+
+All 8 failures are in the test assertions, not the schema. Each one compares against the wrong shape of a value that Drizzle, Postgres or the driver returns. Because of that, the rule-carrying constraints are still unproven, so this can't be approved yet.
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 7 | Blocker | `web/tests/db/schema-rules.test.ts:35-42, 80, 93, 129, 148` | drizzle-orm 0.45 wraps every driver error in `DrizzleQueryError` (`node_modules/drizzle-orm/errors.js:10`). Its message is `Failed query: …`, and the Postgres error is in `.cause`. So `violation.code` is `undefined`, and the message never contains the index name. The test also can't tell "no error was thrown" from "the code is on `.cause`", because `captureViolation` returns `undefined` in the first case and `violation?.code` reads `undefined` in both. | In `captureViolation`, fail the test when the statement succeeds. Return the Postgres error: `error.cause ?? error`. Assert `code === "23505"` and that its `constraint` field (or its `message`) names the index, on that inner error. |
+| 8 | Blocker | `web/tests/db/schema-rules.test.ts:107-111` | `select … where symbol = $1` returns both jobs (the `done` one and the new `queued` one), and `const [queued]` takes whichever comes first, here `done`. The insert itself succeeded: the test reached the select. | Filter on `status = 'queued'`, or select every row and assert the set of statuses is `{done, queued}`. |
+| 9 | Blocker | `web/tests/db/schema-shape.test.ts:96-107` | `pg_get_indexdef` doesn't echo the migration text back. It schema-qualifies the table (`ON public.analysis_jobs`), rewrites `in (…)` to `= ANY (ARRAY['queued'::job_status, 'running'::job_status])`, and wraps predicates (`WHERE (symbol IS NOT NULL)`). So none of the three `includes(...)` strings can match. | Assert on parts instead of the whole definition. Read the table, the index's columns and `pg_get_expr(ix.indpred, ix.indrelid)`, then check the predicate mentions the right column and values, case-insensitively (`queued` and `running`; `is not null`). Or normalise both sides before comparing. |
+| 10 | Blocker | `web/tests/db/schema-shape.test.ts:141-150` (the composite FK test) | `pg_get_constraintdef` writes `REFERENCES ipo_snapshots(ipo_key, taken_at)`, with no space before `(`. The regex wants `ipo_snapshots \(`, so neither composite FK is found. | Use `\s*` before `\(` (and keep `(public\.)?`), or compare on `conkey`/`confkey` column names from `pg_constraint` and `pg_attribute`. |
+| 11 | Blocker | `web/tests/db/schema-shape.test.ts:100-111` (the enum test) | `e.enumlabel` has type `name`, so `array_agg` returns `name[]`. The serverless driver has no parser for that array type, so it most likely returns the raw text `{announced,upcoming,…}` instead of a JS array, and the deep-equal fails. Twelve keys came back on both sides, so the types exist. | Use `array_agg(e.enumlabel::text order by e.enumsortorder)`, or `select … enum_range(null::<type>)::text[]`. |
+
+### Plan and docs
+
+No change to the plan. Record findings 7-11 under "Changes during build". The `db` job, and with it the "Running" labels, still need a green run.
+
+**Third round without approval.** Under `/run-task`, the loop stops here and the human decides whether to run a fourth `respond`. What's left is limited to the two test files. The schema, migrations, harness, CI wiring and docs all checked out.
