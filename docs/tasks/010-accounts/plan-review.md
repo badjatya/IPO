@@ -51,3 +51,27 @@ Write both into the plan as settled, and move them out of "Decisions needed". Th
 - Better Auth lowercases emails on sign-in and reset, and `citext` makes the unique index case-insensitive. The two agree, so nothing needs doing.
 - The ADR-0012 disclaimer line in account emails is fine.
 - The `AUTH_URL` row needs adding to both tech.md and `web/.env.example`, as planned. `web/.env.example` already lists `RESEND_API_KEY` and `EMAIL_FROM` on `main`.
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Read:** plan.md (revision 1), round 1 above, and again the published `better-auth@1.7.14` and `@better-auth/core@1.7.14` sources (`core/dist/db/get-tables.mjs`, `core/dist/db/schema/rate-limit.mjs`, `core/dist/types/init-options.d.mts`).
+
+All ten round 1 items and both decisions are answered, and the answers are sound. Option (b), dropping the admin plugin, is the simpler surface. Five small corrections remain. Four are places where the plan's config doesn't match 1.7.14 and would fail or misbehave at runtime, and one is a gap that fire-and-forget opened.
+
+### Changes requested
+
+1. **`rate_limit.last_request` is a number of milliseconds, not a timestamp.** Better Auth's `rateLimit` model has `lastRequest` as `type: "number", bigint: true` ("the last request time in milliseconds"), and the store writes `Date.now()` and reads it back with `Number(...)`. Make the column `bigint` (Drizzle `bigint(..., { mode: "number" })`), `not null`, in step 2 and in the db.md update. A `timestamptz` column would reject the insert.
+2. **`resetPasswordTokenExpiresIn` is a number of seconds inside `emailAndPassword`.** The type is `resetPasswordTokenExpiresIn?: number` under `emailAndPassword`, and the route computes `getDate(value || 3600, "sec")`. `"24 hours"` would give an invalid date. Write it as `emailAndPassword.resetPasswordTokenExpiresIn: 60 * 60 * 24` in step 3 and the Approach.
+3. **`customRules` is an object keyed by path, not an array.** `customRules?: { [path: string]: { window, max } | false | fn }`. Write it as `{ "/sign-in/email": { window: 900, max: 10 }, "/request-password-reset": { window: 3600, max: 5 } }`.
+4. **The admin must see a missing mail config, now that the hook fires and forgets.** Round 1 item 5 asked that, in production, a missing `RESEND_API_KEY` or `EMAIL_FROM` reaches the admin as an error. With delivery fired from the hook, the throw happens after the invite route has already answered "Invite sent", so it only reaches the log. Check the mail config up front instead:
+   - a small `mailConfigured()` or `assertMailConfig()` in `web/lib/mail.ts`;
+   - the invite route calls it before creating any row, and answers 500 with a plain "email is not configured" message if it fails;
+   - in production, `web/lib/auth.ts` also fails at start when it's missing, the same as `AUTH_SECRET`.
+   Unit-test the route's 500 branch. The public forgot-password route stays generic.
+5. **Revoke sessions on password reset.** Set `emailAndPassword.revokeSessionsOnPasswordReset: true`. A reset is how a user recovers a compromised account, and the attacker's session should end with it. Add one assertion to the Neon-branch test: a session from before the reset no longer resolves after it.
+
+### Notes
+
+- Once these five are in, the plan is ready to approve. Step 1 stops for the human's `npm install` as planned.

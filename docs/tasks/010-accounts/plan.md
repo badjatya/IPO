@@ -1,6 +1,6 @@
 ---
 task: 010-accounts
-status: plan-review
+status: plan-changes
 branch: task/010-accounts
 assigned_by: Vijay
 planner: DeepSeek deepseek-v4-flash-0731 (OpenRouter)
