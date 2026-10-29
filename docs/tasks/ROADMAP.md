@@ -64,7 +64,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | Blocked |
 | [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | Done |
 | [015](#015--stock-universe) | Stock universe | 2 | 008, 014 | Blocked |
-| [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | **Ready** |
+| [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | Done |
 | [017](#017--watchlist) | Watchlist | 3 | 010, 015 | Blocked |
 | [018](#018--stock-worker-scheduled-numbers-and-alerts) | Stock worker, scheduled: numbers and alerts | 3 | 007, 014, 015, 016, G1, H02 | Blocked |
 | [019](#019--stock-pages) | Stock pages | 3 | 017, 018, D06 | Blocked |
@@ -75,6 +75,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [024](#024--security-review-and-fixes) | Security review and fixes | 4 | 013, 022, 023 | Blocked |
 | [025](#025--hosting-environments-and-backups) | Hosting, environments and backups | 4 | 009–013, D11, D12, H05 | Blocked |
 | [026](#026--submission-package) | Submission package | 4 | 024, 025, D13 | Blocked |
+| [027](#027--xbrl-shareholding-parsing-fiidii) | XBRL shareholding parsing (FII/DII) | 3 | 014, 016 | **Ready** |
 
 ## Dependency graph
 
@@ -106,13 +107,14 @@ flowchart LR
     subgraph stocks ["Weeks 2–3: stock side"]
         T014[014 stock fetchers]:::done
         T015[015 stock universe]:::m2
-        T016[016 alert rules]:::ready
+        T016[016 alert rules]:::done
         T017[017 watchlist]:::m2
         T018[018 worker: scheduled]:::m2
         T019[019 stock pages]:::m2
         T020[020 Gemini + summaries]:::m2
         T021[021 worker: on request]:::m2
         T022[022 requests + loading]:::m2
+        T027[027 XBRL FII/DII]:::ready
     end
     subgraph wk4 ["Week 4: Ask, hardening, launch"]
         T023[023 Ask]
@@ -130,7 +132,8 @@ flowchart LR
     T003 --> T014
     T014 --> T015 & T016 & T018
     T015 --> T017 & T018
-    T016 --> T018
+    T016 --> T018 & T027
+    T014 --> T027
     T017 --> T019
     T018 --> T019 & T020
     T020 --> T021
@@ -157,7 +160,7 @@ Each is **Open** or **Proposed** in the docs, or missing from them. Tasks must n
 | D07 | App test runner | Decided: Vitest with React Testing Library ([ADR-0024](../adr/0024-vitest-for-app-tests.md)) | 006 | [x] |
 | D08 | Gemini model(s), free-tier quotas and search grounding, read in AI Studio. Sets the default for `analysis_daily_limit_platform` and confirms `ask_daily_limit_per_user` | Open ([db.md § settings](../db.md#settings)). Task 007 seeded no row for the cap; while it's missing the gate is closed and no analysis is dispatched (human, 2026-10-30) | 020, 021, 023 | [ ] |
 | D09 | Stock worker code: where it lives (new package or inside `ipo_agent/`) and its dependencies. It needs a Postgres driver and a Gemini client, and neither is in the standard library. [ADR-0002](../adr/0002-standard-library-only-agent.md) binds only `ipo_agent/`. Also, [tech.md](../tech.md#web-platform) says one Gemini module is shared by the app and the worker, which can't be one module across TypeScript and Python | Decided by the human at 014's plan review (2026-10-29): a new top-level package `stock_worker/`, importing `ipo_agent/net.py`; standard library in 014, later pinned packages through the package's own requirements file (Postgres driver in 018, Gemini SDK in 020); one Gemini module per side, TypeScript in `web/lib/` and Python in `stock_worker/`. Recorded in [ADR-0026](../adr/0026-stock-worker-code-location.md), accepted by the human on 2026-10-30 (option A) | 014, 020 | [x] |
-| D10 | Alert thresholds (pledge up, promoter holding down, FII and DII moves) and severities, and whether they live in `settings` or code | Not in the docs | 016 | [ ] |
+| D10 | Alert thresholds (pledge up, promoter holding down, FII and DII moves) and severities, and whether they live in `settings` or code | Decided by the human at 016's plan review (2026-10-30): pledge up ≥ 1.00 pp, promoter holding down ≥ 2.00 pp, FII/DII move ≥ 1.00 pp either way, quarter on quarter; `results` → info, `announcement`/`fii_move`/`dii_move` → watch, `pledge_up`/`promoter_down` → warning; held in code (`stock_worker/alerts.py`), no `settings` rows. Recorded in [ADR-0029](../adr/0029-alert-thresholds-and-severities.md), **Proposed** until the human accepts it | 016 | [ ] |
 | D11 | App host | Open | 025 | [ ] |
 | D12 | Backups for app-owned data (users, watchlists) | Open ([arch.md § 9](../arch.md#9-open-questions)) | 025 | [ ] |
 | D13 | Product name | Open ([plan.md](../plan.md#open-decisions)); the app uses a placeholder until then | 026 | [ ] |
@@ -187,7 +190,7 @@ Nothing below needs a task. Evidence is in the repo.
 | Research output as the system of record | `analysis/`, `reports/`, `data/` |
 | Docs: project, architecture, stack, database, AI design, data sources, plan, journal | `docs/`, commit `c1e113d` |
 | UI design rules: component kit, theme, status colours, number formats, layout | `docs/design.md`, commit `33c5a73` |
-| ADRs 0001–0028 | `docs/adr/` |
+| ADRs 0001–0029 (0029 Proposed) | `docs/adr/` |
 | Two-agent workflow: rules, statuses, reviewer guide, templates | `AGENTS.md`, `docs/tasks/`, commit `fecb83d` |
 | Claude Code guardrails: push guard, card and report schema check on write, with tests | `.claude/hooks/guard.py`, `.claude/hooks/test_guard.py` |
 | Claude Code skills and subagents | `.claude/skills/`, `.claude/agents/` |
@@ -539,7 +542,7 @@ Load NSE's list of listed equities into `stocks` (symbol, ISIN, name, industry, 
 | | |
 | --- | --- |
 | Slug | `016-alert-rules` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | 014, D10 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M2 |
@@ -548,6 +551,7 @@ Pure Python functions that compare a stock's latest filings with earlier ones, a
 
 - **Done when:** every rule has tests, including the first quarter on record and missing data (no alert); the same input never raises the same alert twice.
 - **D10 gates approval, not planning:** the plan lays out the thresholds and severities with a recommendation under "Decisions needed", and the human settles D10 at plan review.
+- **Built (merged 2026-10-30):** `stock_worker/alerts.py`. `compute_alerts(symbol, fetched, stored, existing_keys, thresholds)` covers the four change rules and `results`; `announcement_alert` is called by 020's rating step. A stock's first run raises no alerts, and only records new against `stored` can alert. FII/DII parsing went to task 027. D10 is recorded in ADR-0029 (Proposed).
 - **From 014:** the shareholding fetcher returns `fii_pct` and `dii_pct` as `None`, because the FII/DII split exists only in the XBRL filing. The `fii_move` and `dii_move` rules can't fire until something parses that XBRL: this task, or a separate task the plan proposes. Results are standalone only; never compare them with consolidated figures.
 - **Read:** [plan.md § Watchlist signals](../plan.md#watchlist-signals), [db.md § alerts and § shareholding](../db.md#alerts).
 - **Start:** `/run-task 016`
@@ -586,6 +590,9 @@ The GitHub Actions stock worker, scheduled twice each weekday, **without AI yet*
 - **From 014:**
   - **The fetchers:** `stock_worker.fetchers.fetch_all` returns each source's records and an `errors` list. The `since` filter on announcements takes a stored run time (a `datetime`, or a string with an offset).
   - **No quote source:** `fetch_quote` always raises `SourceError`, so `stock_quotes` stays empty. The plan must either confirm a quote source (NSE's `/api/NextApi/…` paths are the untried candidate), with one deliberate probe as in 014, or say that stock prices stay unavailable.
+- **From 016:**
+  - **Alerts:** call `stock_worker.alerts.compute_alerts` per symbol with `fetched=` (this run's results, shareholding and pledges, pledges already resolved to the symbol) and `stored=` (**every** stored record for those three series, in the 014 parsed shapes; a stored `shareholding` row with `promoter_pledged_pct` becomes one shareholding record plus one pledge record), plus `existing_keys=` (the symbol's stored alert keys). Insert the returned rows with `dedupe_key` as the conflict target. An incomplete `stored` set makes old quarters look new and bursts stale alerts, so the plan must test it.
+  - **FII/DII:** `fii_move`/`dii_move` alerts fire only after task 027 merges.
 - **Watch for:** the worker reads symbols only, no user data. It pushes only to `main` with no force. One run should stay well within free Actions minutes.
 - **Read:** [arch.md § 4.2](../arch.md#42-stock-worker-decided), [ADR-0018](../adr/0018-stock-worker-on-github-actions.md), [db.md](../db.md).
 - **Start:** `/run-task 018`
@@ -623,6 +630,7 @@ The worker's Gemini client (model from D08, built as D09 says) and its first job
 
 - **Done when:** tests with a stubbed client cover each prompt; every AI column has its provenance filled; a quota error leaves the filing unsummarised for the next run.
 - **Watch for:** filing text goes into prompts as quoted data, never as instructions, and no user text at all (rules 4 and 5). No tools except search grounding. Gemini quotes numbers but never produces them.
+- **From 016:** the announcement alert fires from the rating step, not from `compute_alerts`. After Gemini writes `importance` for each of the run's **new** announcements (rate only those, never re-rate stored ones), call `stock_worker.alerts.announcement_alert` and persist the returned row (`dedupe_key` as the conflict target) with `detail` and the `ai_*` provenance. `promoter_pledged_pct` is a share of the promoter holding, not of total equity; the alert-explanation prompt must say so ([ADR-0029](../adr/0029-alert-thresholds-and-severities.md)).
 - **Read:** [ai.md](../ai.md), [ADR-0017](../adr/0017-gemini-for-stocks-claude-for-ipos.md), [db.md § Sizing and retention](../db.md#sizing-and-retention).
 - **Start:** `/run-task 020`
 
@@ -665,6 +673,23 @@ The app side of analysis on request. "Get analysis" runs the one transaction in 
   - Dispatching needs the worker workflow on `main` (021 merged).
 - **Read:** [arch.md § 5.3](../arch.md#53-a-user-asks-for-a-stock-analysis-decided), [db.md § analysis_requests](../db.md#analysis_requests), [ADR-0017](../adr/0017-gemini-for-stocks-claude-for-ipos.md).
 - **Start:** `/run-task 022`
+
+### 027 · XBRL shareholding parsing (FII/DII)
+
+| | |
+| --- | --- |
+| Slug | `027-xbrl-fii-dii` |
+| Status | **Ready** |
+| Depends on | 014, 016 |
+| Owner | DeepSeek plans and builds |
+| Milestone | M2 |
+
+Fetch and parse the shareholding XBRL filing that 014 records as `shareholding.source_url`, and fill `fii_pct` and `dii_pct` from it, so 016's `fii_move` and `dii_move` rules can fire. Added at 016's plan review (the human chose a separate task over folding XBRL into 016).
+
+- **Done when:** a parser fills `fii_pct`/`dii_pct` from saved XBRL fixtures with exact values (half-up, 2 dp, as `numeric(7,2)`); a filing without the split leaves them `None`, never estimated; 016's FII/DII rules fire on the parsed records in a test.
+- **Watch for:** standard library only in `stock_worker/` unless the plan names a pinned package ([ADR-0026](../adr/0026-stock-worker-code-location.md)). Capture the fixtures with one deliberate, budgeted live run, as 014 did; tests never call NSE.
+- **Read:** [data-sources.md § NSE stock data](../data-sources.md#nse-stock-data), [db.md § shareholding](../db.md#shareholding), `stock_worker/shareholding.py`, `stock_worker/alerts.py`.
+- **Start:** `/run-task 027`
 
 ## Week 4: Ask, hardening, launch
 

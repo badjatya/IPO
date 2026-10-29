@@ -1,6 +1,6 @@
 ---
 task: 016-alert-rules
-status: merge-ready
+status: done
 branch: task/016-alert-rules
 assigned_by: Vijay
 planner: DeepSeek deepseek-v4-flash-0731 (OpenRouter)

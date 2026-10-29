@@ -471,3 +471,28 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - Claude put the auth library to the human: Better Auth, Auth.js or Neon Auth. It also asked whether "forgot password" should email a reset link, since that path comes almost free with invites.
 - **Human decisions:** Better Auth and self-serve reset by email, both the recommended options ([ADR-0028](adr/0028-better-auth-invite-only.md), superseding ADR-0015 for invite and reset emails only).
 - **Docs:** tech.md, db.md and arch.md name the choice. `web/.env.example` gains `RESEND_API_KEY` and `EMAIL_FROM`. On the roadmap, D04 is ticked, H07 (Resend account and domain) is added, and 010 is rewritten for invites and marked Ready.
+
+### 2026-10-30: Task 016, change detection and alert rules
+
+- **Asked:** the human asked Claude to start 016 ("you can pick task 16 right"), then to merge it and resolve the merge conflict.
+- **Rounds:**
+  - Three plan rounds and three code rounds.
+  - DeepSeek's six steps cost $0.16.
+  - One fix step was stopped by the driver (exit 3) for changing the ADR number in two lines of the approved plan's Doc updates. Claude's finding had asked for that edit, and the human accepted it.
+- **Human decisions:**
+  - **D10:** pledge up ≥ 1 pp, promoter holding down ≥ 2 pp, FII/DII move ≥ 1 pp; results info, pledge/promoter warning, the rest watch; held in code ([ADR-0029](adr/0029-alert-thresholds-and-severities.md), Proposed).
+  - **FII/DII:** XBRL parsing is a separate task 027.
+  - Each time, the human took the recommended option.
+- **AI did:**
+  - DeepSeek planned and built `stock_worker/alerts.py` (six pure rules, the `compute_alerts` orchestrator) and 46 fixture-only tests.
+  - Claude reviewed each step, and ran each edge case through the code by hand before recording it.
+  - Claude merged the branch and resolved the conflicts in `docs/arch.md` and the ADR index (main had added ADRs 0027 and 0028 meanwhile).
+- **Notable findings:**
+  - **History as news.** As first planned, a new stock's first run would have alerted every threshold crossing back to 2022, and 020 would have paid Gemini to explain each one. The rules now take `stored` and `fetched` and alert only what's new.
+  - **Dead announcement rule.** arch.md computes alerts (step 3) before Gemini rates importance (step 4), so the rule could never see a rated announcement. Hand-fed test values hid this. 020's rating step now calls it.
+  - **First-ever pledge.** NSE lists only companies with a pledge, so going from no pledge to 25% had nothing to compare with and was silent. The fix's first version then alerted a whole backfilled pledge history; quarters before the latest stored shareholding quarter are now baseline.
+  - **ADR numbering.** Two other sessions took 0027 and 0028 while 016 was in review, so its ADR became 0029.
+- **Learned:**
+  - For change detection, ask "what does the first run see?" and "what if one source failed last run?" at plan review. Both bugs were in the calling convention, not in the comparisons.
+  - Check a rule's inputs against the order of steps in arch.md, not only against the test fixtures.
+  - Reserve an ADR number late: parallel sessions take them.
