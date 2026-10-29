@@ -55,6 +55,31 @@ jobs:
       - name: Tests
         if: ${{ !cancelled() }}
         run: npm test
+      - name: Schema drift (drizzle-kit generate must be a no-op)
+        # No database needed: a later task can't change web/db/schema.ts without
+        # a checked-in migration (task 007). Fails if generate leaves changes.
+        if: ${{ !cancelled() }}
+        run: npx drizzle-kit generate && test -z "$(git status --porcelain db)"
       - name: Build
         if: ${{ !cancelled() }}
         run: npm run build
+
+  db:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - name: Database tests on a Neon branch
+        env:
+          NEON_API_KEY: ${{ secrets.NEON_API_KEY }}
+          NEON_PROJECT_ID: ${{ vars.NEON_PROJECT_ID }}
+        run: npm run test:db

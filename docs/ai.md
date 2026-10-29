@@ -170,4 +170,4 @@ flowchart LR
 | `.claude/settings.json` hooks | **Running** | Guardrails above, enforced by the harness instead of by instruction; tests in `.claude/hooks/test_guard.py` |
 | `.claude/deepseek/deepseek.py` | **Running** | Runs DeepSeek through OpenRouter for one step (`plan`, `revise`, `build`, `respond`): tools, write rules, post-step check, status and hand-off commit; tests in `test_deepseek.py`, run in CI |
 | Agent `tests/` | **Running** | Python `unittest` for the agent, saved fixtures only, no network |
-| CI | **Running** for the agent | GitHub Actions (`.github/workflows/ci.yml`): agent tests, the schema check and the figures check on every push and pull request. App tests against a Neon branch are **Decided** (tasks 006, 007) |
+| CI | **Running** for the agent and the app database | GitHub Actions (`.github/workflows/ci.yml`): agent tests, the schema check and the figures check on every push and pull request. App tests against a Neon branch are **Running** (task 007): the `db` job builds the full schema on an empty, disposable branch and runs the rule and shape tests; the offline `web` job adds a schema-drift check |

@@ -21,8 +21,8 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Owner's brief | Gmail connector on the routine's Claude account | Running | [0005](adr/0005-email-rendered-from-json.md) |
 | Web framework | Next.js: pages and API routes in one app | Decided | [0009](adr/0009-nextjs-web-platform.md) |
 | Web language | TypeScript, strict mode | Running | [0023](adr/0023-typescript-strict.md) |
-| Database | PostgreSQL on Neon (free tier) | Decided | [0010](adr/0010-postgresql-on-neon.md) |
-| ORM and migrations | Drizzle ORM, drizzle-kit migrations, on Neon's serverless driver | Decided | [0025](adr/0025-drizzle-on-neon-serverless-driver.md) |
+| Database | PostgreSQL on Neon (free tier) | Running | [0010](adr/0010-postgresql-on-neon.md) |
+| ORM and migrations | Drizzle ORM, drizzle-kit migrations, on Neon's serverless driver | Running | [0025](adr/0025-drizzle-on-neon-serverless-driver.md) |
 | Auth | Auth library for Next.js, sessions in Postgres | Open | — |
 | UI components and styling | shadcn/ui (Base UI) with Tailwind CSS v4; rules in [design.md](design.md) | Running | [0020](adr/0020-shadcn-ui.md) |
 | Charts | Not chosen yet | Open | — |
@@ -31,9 +31,9 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Email | Admin's brief only, through the Gmail connector; no email to users | Decided | [0015](adr/0015-email-to-admin-only.md) |
 | Hosting | Not chosen yet; local until week 4 | Open | — |
 | Agent tests | Python `unittest`; run with `python3 -m unittest discover -s tests` | Running | — |
-| App tests | Vitest with React Testing Library (jsdom), `npm test` in `web/`; database tests on Neon branches (Open) | Running | [0024](adr/0024-vitest-for-app-tests.md) |
+| App tests | Vitest with React Testing Library (jsdom), `npm test` in `web/`; database tests on a Neon branch per run (`npm run test:db`, task 007) | Running | [0024](adr/0024-vitest-for-app-tests.md) |
 | App lint | oxlint with its React, Next.js, jsx-a11y, import, TypeScript and Vitest plugins (`web/.oxlintrc.json`); ESLint's TypeScript parser doesn't support TypeScript 7 | Running | — |
-| CI | GitHub Actions on every push and pull request (`.github/workflows/ci.yml`): the `tests` job runs the agent tests, the schema check and the figures check (`ipo_agent/figures_check.py`); the `web` job runs the app's lint, type check, tests and build | Running | — |
+| CI | GitHub Actions on every push and pull request (`.github/workflows/ci.yml`): the `tests` job runs the agent tests, the schema check and the figures check (`ipo_agent/figures_check.py`); the `web` job runs the app's lint, type check, tests, a schema-drift check (`npx drizzle-kit generate` must be a no-op) and build; the `db` job runs `npm run test:db` on a Neon branch (`NEON_API_KEY` secret, `NEON_PROJECT_ID` variable) | Running | — |
 | Dev tooling | DeepSeek through OpenRouter (plans and builds; model in `OPENROUTER_MODEL_NAME`), run by `.claude/deepseek/deepseek.py`; Claude Code, Opus 5.5 (runs the loop, reviews plans and code) | Running | [0021](adr/0021-deepseek-on-openrouter.md) |
 
 ## Research agent
@@ -56,7 +56,7 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | --- | --- | --- |
 | Framework | Next.js: server-rendered pages for IPOs, track record and stocks; API routes for the watchlist, analysis requests and progress, Ask, admin settings and worker dispatch | Decided |
 | Language | TypeScript, with strict mode ([ADR-0023](adr/0023-typescript-strict.md)) | Running |
-| Data access | Drizzle ORM; drizzle-kit for versioned migrations ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Decided |
+| Data access | Drizzle ORM; drizzle-kit for versioned migrations ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
 | Database driver | `@neondatabase/serverless`: HTTP for queries, WebSocket `Pool` for interactive transactions; connection in `web/lib/db.ts` ([ADR-0025](adr/0025-drizzle-on-neon-serverless-driver.md)) | Running |
 | Auth | An auth library for Next.js with a Postgres adapter; Google sign-in or password (no emailed links, because the app sends no email) | Open |
 | AI | Google Gen AI SDK for the Gemini API, server side only, one module per side: the app's is TypeScript in `web/lib/`, the worker's is Python in `stock_worker/` (020) ([ADR-0026](adr/0026-stock-worker-code-location.md)) | Decided |
@@ -106,7 +106,7 @@ Names are planned; values are never committed. The app's variables are listed, e
 | `docs/tasks/` | Task plans, reviews and responses | Running |
 | `.claude/` | Claude Code skills, subagents, hooks, the DeepSeek driver (`.claude/deepseek/`), and their tests | Running |
 | `tests/` | Agent tests (`python3 -m unittest discover -s tests`, saved fixtures only) | Running |
-| `web/` | Next.js app (running); migrations and import script to come | Running ([ADR-0022](adr/0022-web-app-in-same-repo.md)) |
+| `web/` | Next.js app, the Drizzle schema (`web/db/schema.ts`) and its checked-in migrations (`web/db/migrations/`); import script to come | Running ([ADR-0022](adr/0022-web-app-in-same-repo.md)) |
 | `.github/workflows/` | CI (`ci.yml`) and the NSE stock smoke test (`nse-stock-smoke.yml`) running; the import Action decided | Running / Decided |
 
 ## Local setup
