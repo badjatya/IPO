@@ -45,7 +45,6 @@ The project's `opencode.json` denies `git push` and edits to the routine's files
 
 1. **Plan.** DeepSeek creates the branch `task/NNN-short-slug` from `main` together with its worktree, copies `docs/tasks/templates/plan.md` into the task folder in the worktree and fills it in. It writes no code in this step. It sets `status: plan-review`, commits the plan and stops.
    - Use opencode's plan agent to think. Switch to the build agent only to save the plan file.
-   - If a plugin or skill (such as superpowers) wants to save plans somewhere else, save them in the task folder instead.
 2. **Plan review.** Claude writes `plan-review.md` in the task folder, with a verdict of **Approved** or **Changes requested**.
 3. **Revise.** If changes are requested, DeepSeek updates `plan.md`, adds a row to its "Revisions" table and sets `status: plan-review` again. Steps 2 and 3 repeat until the plan is approved.
 4. **Build.** DeepSeek builds exactly the approved plan on the task branch. Anything that has to differ from the plan goes into the plan's "Changes during build" section, with the reason. When done, it sets `status: code-review`, commits and stops.
