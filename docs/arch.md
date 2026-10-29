@@ -394,6 +394,9 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | [0019](adr/0019-deepseek-builds-claude-reviews.md) | DeepSeek plans and builds; Claude reviews the plan and the code | Superseded by 0021 |
 | [0020](adr/0020-shadcn-ui.md) | shadcn/ui and Tailwind CSS for the web app | Accepted |
 | [0021](adr/0021-deepseek-on-openrouter.md) | DeepSeek runs through OpenRouter, driven by Claude Code | Accepted |
+| [0022](adr/0022-web-app-in-same-repo.md) | The web app lives in this repo, in `web/` | Accepted |
+| [0023](adr/0023-typescript-strict.md) | TypeScript in strict mode for the web app | Accepted |
+| [0024](adr/0024-vitest-for-app-tests.md) | Vitest and Testing Library for the web app's tests | Accepted |
 
 ## 9. Open questions
 
@@ -404,4 +407,3 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | Auth library and ORM | Accounts, schema migrations | Week 1 |
 | NSE stock data still unconfirmed after task 003: quote (403 locally and from a GitHub runner), consolidated results, FII/DII split, EBITDA and filing link in results. Confirmed endpoints: [data-sources.md](data-sources.md#nse-stock-data) | Stock worker | Task 014 |
 | Backups for app-owned data (Neon free tier keeps a short history) | Users, watchlists | Before real users |
-| Same repo or separate repo for the app | Import Action, CI, worker | Week 1 |

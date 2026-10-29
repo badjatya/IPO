@@ -20,7 +20,7 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Research store | Git repo (`analysis/`, `reports/`, `data/`) | Running | [0011](adr/0011-git-as-the-hand-off.md) |
 | Owner's brief | Gmail connector on the routine's Claude account | Running | [0005](adr/0005-email-rendered-from-json.md) |
 | Web framework | Next.js: pages and API routes in one app | Decided | [0009](adr/0009-nextjs-web-platform.md) |
-| Web language | TypeScript | Proposed | — |
+| Web language | TypeScript, strict mode | Running | [0023](adr/0023-typescript-strict.md) |
 | Database | PostgreSQL on Neon (free tier) | Decided | [0010](adr/0010-postgresql-on-neon.md) |
 | ORM and migrations | Drizzle or Prisma | Open | — |
 | Auth | Auth library for Next.js, sessions in Postgres | Open | — |
@@ -31,8 +31,9 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Email | Admin's brief only, through the Gmail connector; no email to users | Decided | [0015](adr/0015-email-to-admin-only.md) |
 | Hosting | Not chosen yet; local until week 4 | Open | — |
 | Agent tests | Python `unittest`; run with `python3 -m unittest discover -s tests` | Running | — |
-| App tests | Test runner not chosen yet; database tests on Neon branches | Open | — |
-| CI | GitHub Actions: agent tests, the schema check and the figures check (`ipo_agent/figures_check.py`) on every push and pull request (`.github/workflows/ci.yml`) | Running | — |
+| App tests | Vitest with React Testing Library (jsdom), `npm test` in `web/`; database tests on Neon branches (Open) | Running | [0024](adr/0024-vitest-for-app-tests.md) |
+| App lint | oxlint with its React, Next.js, jsx-a11y, import, TypeScript and Vitest plugins (`web/.oxlintrc.json`); ESLint's TypeScript parser doesn't support TypeScript 7 | Running | — |
+| CI | GitHub Actions on every push and pull request (`.github/workflows/ci.yml`): the `tests` job runs the agent tests, the schema check and the figures check (`ipo_agent/figures_check.py`); the `web` job runs the app's lint, type check, tests and build | Running | — |
 | Dev tooling | DeepSeek through OpenRouter (plans and builds; model in `OPENROUTER_MODEL_NAME`), run by `.claude/deepseek/deepseek.py`; Claude Code, Opus 5.5 (runs the loop, reviews plans and code) | Running | [0021](adr/0021-deepseek-on-openrouter.md) |
 
 ## Research agent
@@ -54,13 +55,16 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 | Item | Detail | Status |
 | --- | --- | --- |
 | Framework | Next.js: server-rendered pages for IPOs, track record and stocks; API routes for the watchlist, analysis requests and progress, Ask, admin settings and worker dispatch | Decided |
-| Language | TypeScript, with strict mode | Proposed |
+| Language | TypeScript, with strict mode ([ADR-0023](adr/0023-typescript-strict.md)) | Running |
 | Data access | ORM with versioned migrations (Drizzle or Prisma) | Open |
 | Database driver | Neon's serverless driver or standard Postgres driver, depending on the host | Open |
 | Auth | An auth library for Next.js with a Postgres adapter; Google sign-in or password (no emailed links, because the app sends no email) | Open |
 | AI | Google Gen AI SDK for the Gemini API, server side only, behind one module that the app (Ask) and the stock worker share | Decided |
 | UI | shadcn/ui components in `web/components/ui/`, Tailwind CSS v4, theme in `web/app/globals.css`; see [design.md](design.md) | Running |
 | Charts | GMP and subscription trends, results trends, the track record | Open |
+| Tests | Vitest, React Testing Library, jsdom; tests in `web/tests/` ([ADR-0024](adr/0024-vitest-for-app-tests.md)) | Running |
+| Lint and type check | oxlint (`npm run lint`), `tsc --noEmit` (`npm run typecheck`) | Running |
+| Product name and disclaimer | `web/lib/site.ts`: the name is a placeholder until D13; the footer shows the disclaimer on every page | Running |
 
 ## Infrastructure
 
@@ -74,7 +78,7 @@ Module by module: [arch.md § IPO routine](arch.md#41-ipo-routine-running). The 
 
 ## Configuration and secrets
 
-Names are planned; values are never committed.
+Names are planned; values are never committed. The app's variables are listed, empty, in `web/.env.example`; a test keeps that file in step with this table.
 
 | Variable | Used by | Purpose |
 | --- | --- | --- |
@@ -98,7 +102,7 @@ Names are planned; values are never committed.
 | `docs/tasks/` | Task plans, reviews and responses | Running |
 | `.claude/` | Claude Code skills, subagents, hooks, the DeepSeek driver (`.claude/deepseek/`), and their tests | Running |
 | `tests/` | Agent tests (`python3 -m unittest discover -s tests`, saved fixtures only) | Running |
-| `web/` | Next.js app, migrations, import script | Proposed (same repo; [arch.md § Open questions](arch.md#9-open-questions)) |
+| `web/` | Next.js app (running); migrations and import script to come | Running ([ADR-0022](adr/0022-web-app-in-same-repo.md)) |
 | `.github/workflows/` | CI (`ci.yml`) and the NSE stock smoke test (`nse-stock-smoke.yml`) running; the import Action decided | Running / Decided |
 
 ## Local setup
@@ -114,11 +118,15 @@ python3 -m ipo_agent.email_render reports/<date>-<am|pm>.json
 python3 -m ipo_agent.nse_stock_smoke --dry-run   # print the NSE stock smoke URLs without calling NSE
 ```
 
-Scheduled routine setup: [SETUP.md](../SETUP.md). The web app (`web/`) needs Node.js 20.9 or later:
+Scheduled routine setup: [SETUP.md](../SETUP.md). The web app (`web/`) needs Node.js 22.22 or later, or 24.15 or later (Vitest's jsdom needs it; CI uses 24):
 
 ```bash
 cd web
-npm install
-npm run dev      # http://localhost:3000
-npm run build    # production build and type check
+npm ci                  # install from the lockfile
+cp .env.example .env.local   # optional: nothing reads these yet
+npm run dev             # http://localhost:3000
+npm run lint            # oxlint
+npm run typecheck       # tsc --noEmit
+npm test                # Vitest, once; npm run test:watch to rerun on save
+npm run build           # production build
 ```
