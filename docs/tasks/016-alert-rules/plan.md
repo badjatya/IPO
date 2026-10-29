@@ -208,8 +208,76 @@ None — everything that was open at planning was settled by the human at the ro
 
 ## Changes during build
 
-Anything built differently from the approved plan, and why.
+- **First sight applies per series.** "Nothing stored" reads at the series level: a series whose `stored` set is empty treats its whole fetched set as that series' baseline (zero alerts from it), change rules and `results` alike. That is what the plan's per-series record sets imply ([Approach § 4](#4-only-whats-new-the-same-input-never-raises-the-same-alert-twice) layer 0), keeps a partial-history stock quiet per series, and makes the pinned first-sight test (all series empty → zero alerts) exact. The `compute_alerts` docstring states it.
+- **`results` titles drop the unit after "not available".** A missing revenue/PAT renders "revenue not available, PAT ₹8,721 cr" — no " cr" after "not available", because the unit has nothing to hang on ([Approach § 3](#3-existence-rules-new-results-important-announcements)). Stated values render exactly "revenue ₹128,260 cr" as the plan's examples do; both exact titles are pinned in tests.
+- **Docs consistency on top of the plan's list.** `docs/arch.md` § 8's decisions table had no rows for 0025 and 0026 (they were added on `main` without touching it); the ADR README's "Adding one" rule requires every ADR to appear there, so the same change adds 0025, 0026 and the new 0027 (Proposed). `docs/adr/README.md` gains the 0027 index row. `docs/db.md` § shareholding's "(016/018)" for XBRL parsing became "task 027" — the same settled-scoping fix the plan makes in arch § 9 ([Doc updates](#doc-updates)); the plan's own § 5 says 016 ships the rules and 027 parses.
+- **Two extra orchestrator tests.** Besides the plan's step-4 list, `tests/test_stock_alerts.py` pins the plan's own § 3 promises at the orchestrator level: "from the second run on, each new filing alerts once, ever" (two new results quarters → both alert) and the "earlier-new fetched quarter" branch of `has_earlier` (backfilling older quarters against a stored later one → only the second-oldest alerts).
+- **The six-kind `source_id` test (review item 5) landed in step 3's commit**, not step 2's: it needs `results_alert`/`announcement_alert`, which arrive with the existence rules. Commit ordering only; the built result matches the plan's step-2 test list.
 
 ## Verification
 
-Test commands run, with their output pasted.
+All four CI suites ran in the task worktree with no network (tests use only the saved `tests/fixtures/nse_stock/` files; `NoNetworkCase` blocks DNS and sockets):
+
+```
+$ python3 -m unittest discover -s tests
+......................................................................usage: python3.12 -m unittest [-h] [--all] [--root ROOT] [KEY ...]
+python3.12 -m unittest: error: give one or more IPO keys, or --all
+...........................................................................................................................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 369 tests in 0.572s
+
+OK
+```
+
+(The `usage:` line is `test_figures_check` exercising the module's no-keys error path; the suite result is `Ran 369 ... OK`.)
+
+```
+$ python3 -m unittest discover -s .claude/hooks
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.199s
+
+OK
+```
+
+```
+$ python3 -m ipo_agent.figures_check --all
+bls-polymers: 3/20 ₹ figures found (15%)
+  not found: ₹150, ₹255 Cr, ₹27.0 Cr, ₹150, ₹930 Cr, ₹89.5 Cr, ₹76.5 Cr, ₹150, ₹16.5 Cr, ₹14.7 Cr, ₹10.3 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹5.0 Cr, ₹89.5 Cr, ₹20
+bombay-coated-and-special-steels: 3/12 ₹ figures found (25%)
+  not found: ₹78, ₹82, ₹35.7 Cr, ₹76.5 Cr, ₹54.1 Cr, ₹82, ₹20.0 Cr, ₹14.1 Cr, ₹5.0 Cr
+bonfiglioli-transmissions: 2/11 ₹ figures found (18%), 2 approximate
+  not found: ₹558, ₹586, ₹14,650, ₹586, ₹12.65, ₹586, ₹759 Cr, ₹586, ₹33.6 Cr
+eaaa-alternatives: 3/23 ₹ figures found (13%), 1 approximate
+  not found: ₹1585, ₹1665, ₹170, ₹173, ₹400 Cr, ₹290 Cr, ₹360 Cr, ₹1,665, ₹38 Cr, ₹38 Cr, ₹31.7 Cr, ₹6.3 Cr, ₹19 Cr, ₹19 Cr, ₹20.5 Cr, ₹15.5 Cr, ₹16 Cr, ₹18.4 Cr, ₹10 Cr, ₹5 Cr
+fusion-cx: 11/29 ₹ figures found (38%), 1 approximate
+  not found: ₹275, ₹289, ₹14,739, ₹289, ₹288 Cr, ₹362 Cr, ₹264 Cr, ₹170 Cr, ₹375 Cr, ₹126 Cr, ₹13.47, ₹289, ₹61.1 Cr, ₹315 Cr, ₹289, ₹120 Cr, ₹363 Cr, ₹620 Cr
+hd-fire-protect: 5/33 ₹ figures found (15%), 3 approximate
+  not found: ₹258, ₹271, ₹14,905, ₹712.3 Cr, ₹4,749 Cr, ₹25, ₹56 Cr, ₹140 Cr, ₹29 Cr, ₹16 Cr, ₹271, ₹712 Cr, ₹213.1 Cr, ₹271, ₹26.2 Cr, ₹22.8 Cr, ₹22.8 Cr, ₹17.5 Cr, ₹8.7 Cr, ₹14.5 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹8.8 Cr, ₹8.8 Cr, ₹8.4 Cr, ₹8.4 Cr, ₹196 Cr, ₹83
+jio-platforms: 3/20 ₹ figures found (15%), 3 approximate
+  not found: ₹1,119, ₹30,213 Cr, ₹77,556 Cr, ₹34,255 Cr, ₹53,607 Cr, ₹8,653 Cr, ₹4,048 Cr, ₹8,110 Cr, ₹1,119, ₹499 Cr, ₹487 Cr, ₹303 Cr, ₹156 Cr, ₹123 Cr, ₹71 Cr, ₹30,213 Cr, ₹10 lakh Cr
+m-k-sons-fine-jewels: 1/17 ₹ figures found (6%), 4 approximate
+  not found: ₹153, ₹162, ₹275.4 Cr, ₹39.36, ₹12.13, ₹162, ₹30 Cr, ₹82.6 Cr, ₹162, ₹17.0 Cr, ₹16.0 Cr, ₹9.6 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹5.0 Cr, ₹150 Cr
+paras-healthcare: 9/30 ₹ figures found (30%), 2 approximate
+  not found: ₹660, ₹693, ₹237, ₹660, ₹693, ₹16 Cr, ₹164 Cr, ₹169 Cr, ₹448 Cr, ₹350 Cr, ₹693, ₹4.34, ₹54.1 Cr, ₹652.5 Cr, ₹693, ₹44 Cr, ₹541 Cr, ₹445 Cr, ₹116 Cr, ₹97, ₹111
+sahajanand-medical-technologies: 1/32 ₹ figures found (3%), 1 approximate
+  not found: ₹327, ₹344, ₹14,792, ₹475.5 Cr, ₹0, ₹3,497 Cr, ₹40, ₹46, ₹69.1 Cr, ₹80.3 Cr, ₹11.6 Cr, ₹8.7 Cr, ₹15.0 Cr, ₹286 Cr, ₹309 Cr, ₹1,210 Cr, ₹98.0 Cr, ₹16.0 Cr, ₹344, ₹62.76, ₹270 Cr, ₹320 Cr, ₹140 Cr, ₹344, ₹39.4 Cr, ₹20.3 Cr, ₹15 Cr, ₹11 Cr, ₹10 Cr, ₹40, ₹46
+sfc-environmental-technologies: 2/21 ₹ figures found (10%), 2 approximate
+  not found: ₹313, ₹330, ₹667.5 Cr, ₹609 Cr, ₹205 Cr, ₹74.9 Cr, ₹200.3 Cr, ₹330, ₹37.5 Cr, ₹27.3 Cr, ₹26.0 Cr, ₹34.2 Cr, ₹10.2 Cr, ₹10.0 Cr, ₹10.0 Cr, ₹6.8 Cr, ₹10.0 Cr, ₹31, ₹21
+tonbo-imaging: 7/40 ₹ figures found (18%), 4 approximate
+  not found: ₹700, ₹14,700, ₹345, ₹270, ₹345, ₹211.7 Cr, ₹144.8 Cr, ₹231.9 Cr, ₹82.4 Cr, ₹25,000, ₹17.7 Cr, ₹199 Cr, ₹111 Cr, ₹220 Cr, ₹320 Cr, ₹212 Cr, ₹97 Cr, ₹167 Cr, ₹8.88, ₹9.19, ₹700, ₹96.57, ₹104.6 Cr, ₹10.95, ₹19.49, ₹700, ₹255 Cr, ₹700, ₹17.5 Cr, ₹17.7 Cr, ₹111 Cr, ₹320 Cr, ₹345
+zetwerk: 4/28 ₹ figures found (14%), 4 approximate
+  not found: ₹143, ₹151, ₹14,949, ₹151, ₹6,508 Cr, ₹1,397 Cr, ₹1,464 Cr, ₹1,936 Cr, ₹475 Cr, ₹1,461 Cr, ₹1,014 Cr, ₹2,530 Cr, ₹512 Cr, ₹1,388 Cr, ₹11.02, ₹13,062 Cr, ₹1,300 Cr, ₹860 Cr, ₹2,251 Cr, ₹151, ₹288 Cr, ₹124 Cr, ₹75 Cr, ₹1,606 Cr
+TOTAL: 54/316 ₹ figures found (17%) across 13 analyses (0 skipped)
+```
+
+(`figures_check` is a report, never a gate; exit 0. The per-analysis lines are unchanged by 016 — the saved cards in `analysis/` are untouched.)
+
+```
+$ python3 -m unittest discover -s .claude/deepseek
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 2.457s
+
+OK
+```
