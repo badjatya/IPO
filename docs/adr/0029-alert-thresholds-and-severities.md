@@ -1,6 +1,6 @@
 # ADR-0029: Alert thresholds and severities live in code; FII/DII parsing is a separate task
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-30)
 - **Decided:** 2026-10-30 · **Recorded:** 2026-10-30
 - **Deciders:** Vijay · **Drafted with:** DeepSeek (deepseek-v4-flash-0731, OpenRouter) in task 016; reviewed by Claude Code
 

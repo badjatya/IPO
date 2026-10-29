@@ -34,7 +34,7 @@ Decisions made before the hackathon (0001–0008) were **recorded** on 2026-10-2
 | [0026](0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | 2026-10-30 | Accepted |
 | [0027](0027-shadcn-charts-on-recharts.md) | shadcn/ui charts, on Recharts, for the web app | 2026-10-30 | Accepted |
 | [0028](0028-better-auth-invite-only.md) | Better Auth, invite-only password sign-in, account emails through Resend | 2026-10-30 | Accepted |
-| [0029](0029-alert-thresholds-and-severities.md) | Alert thresholds and severities in code (D10); FII/DII parsing is task 027 | 2026-10-30 | Proposed |
+| [0029](0029-alert-thresholds-and-severities.md) | Alert thresholds and severities in code (D10); FII/DII parsing is task 027 | 2026-10-30 | Accepted |
 
 ## Adding one
 

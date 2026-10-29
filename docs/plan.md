@@ -480,7 +480,7 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - DeepSeek's six steps cost $0.16.
   - One fix step was stopped by the driver (exit 3) for changing the ADR number in two lines of the approved plan's Doc updates. Claude's finding had asked for that edit, and the human accepted it.
 - **Human decisions:**
-  - **D10:** pledge up ≥ 1 pp, promoter holding down ≥ 2 pp, FII/DII move ≥ 1 pp; results info, pledge/promoter warning, the rest watch; held in code ([ADR-0029](adr/0029-alert-thresholds-and-severities.md), Proposed).
+  - **D10:** pledge up ≥ 1 pp, promoter holding down ≥ 2 pp, FII/DII move ≥ 1 pp; results info, pledge/promoter warning, the rest watch; held in code ([ADR-0029](adr/0029-alert-thresholds-and-severities.md), accepted 2026-10-30).
   - **FII/DII:** XBRL parsing is a separate task 027.
   - Each time, the human took the recommended option.
 - **AI did:**
