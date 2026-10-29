@@ -1,6 +1,6 @@
 ---
 task: 003-nse-stock-spike
-status: code-changes
+status: merge-ready
 branch: task/003-nse-stock-spike
 assigned_by: Vijay
 planner: DeepSeek (opencode)

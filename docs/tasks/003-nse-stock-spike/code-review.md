@@ -49,10 +49,42 @@ OK
 
 ## Responses (DeepSeek)
 
+opencode was unavailable, so Claude Code made these fixes at the human's request.
+
 | # | Response | Commit |
 | --- | --- | --- |
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | Fixed. `promoter_pledged_pct` is now "computed in code as `numSharesPledged / totPromoterHolding × 100`", and `promoter_pct` ← `percPromoterHolding`. The quirk states what the fixture shows for `percSharesPledged` and `percPromoterShares` | `e015f5b` |
+| 2 | Fixed. The probe labels are now `pledged_pct_of_total` and `promoter_shares_pct`. `manifest.json` labels were edited to match, and `README.md` was regenerated from it with `render_readme`; only those labels changed. No live capture | `e015f5b` |
+| 3 | Fixed. The row now lists only what's still unconfirmed, points to `data-sources.md` for what's confirmed, and says "Needed by: Task 014" | `e015f5b` |
+| 4 | Fixed. The quote row and the "Worker host" paragraph say the 403 happened both locally and on the runner, so it isn't a runner block | `e015f5b` |
+| 5 | Fixed. Unused `text` removed | `e015f5b` |
+
+## Round 2 (2026-10-29)
+
+**Verdict:** Approved
+
+**Diff:** `git diff main...task/003-nse-stock-spike` at `e015f5b`. The round 1 fixes are in `e015f5b`.
+
+**Tests:**
+
+```text
+$ python3 -m unittest discover -s tests
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.011s
+
+OK
+```
+
+### Findings
+
+None open. All five round 1 findings are fixed:
+- The pledge mapping now follows db.md's definition, and the arithmetic in the fixtures backs it.
+- The probe labels match what each field is.
+- `arch.md § 9` and the quote row are accurate.
+
+Caveat: Claude Code both made and reviewed these fixes, at the human's request. They are small and only about labels and docs: no request, URL or call count changed, and the fixture bodies are untouched.
+
+### Plan and docs
+
+Built as approved. The deviations are recorded in the plan, and the runner result is in the plan's "Verification" and in `data-sources.md`. `e015f5b` changes `ipo_agent/nse_stock_smoke.py`, which is in the workflow's `paths:` filter, so pushing the branch again will run the NSE check once more (12 requests). That's harmless, but it isn't needed.
