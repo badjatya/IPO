@@ -61,3 +61,31 @@ The shape is right. The library sits in `web/lib/import/` with a CLI. Snapshots 
 - **Concurrency.** Taking `pg_advisory_xact_lock(<constant>)` at the start of each import and rebuild transaction is a cheap guard against a local run overlapping the Action (009). It's worth adding, but not required.
 - **`reports.commit_sha`.** With change 3, the per-commit value is the commit being imported, and the rebuild value is `git log -1 --format=%H -- <path>`. Both are "the last commit that changed the file". db.md says "the commit that added it", so reword that line in the doc updates.
 - Today's HEAD has 35 snapshots (277 IPO entries), 13 cards, 13 analyses, 27 reports and 8 outcomes. The plan's counts are slightly behind, which is another reason to derive them at run time, as planned.
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Approved
+
+**Read:** plan.md (revision 1), the round-1 items, `web/tests/db/schema-shape.test.ts` (enum assertions), `web/db/migrations/` (next number is `0003`)
+
+All ten round-1 items and the two notes are in the plan:
+- the human decisions as a new migration step
+- the WebSocket `Pool` as `poolDb()` in `web/lib/db.ts`, with `pg` left a devDependency
+- every read from git objects
+- a first-parent walk diffed against the first parent, with a deleted-file policy
+- an exact "last ok", with a rebuild when there's nothing to resume from and an ok row that upserts over a failed one
+- the four missing `ipos` columns, and `updated_at` taken from `generated_at`
+- temp-repo git tests that work in a shallow clone
+- the quiet-report fixture, the fail → fix → retry test, env loading, and the advisory lock
+
+Nothing blocking remains.
+
+### Notes
+
+Points for the build. None of them changes the plan:
+
+1. **Repo root as a parameter.** Tests (c) and (d) run the import against a temp repo. The git helpers and `run()` therefore need the repo root passed in, with discovery from `web/scripts` only as the CLI's default.
+2. **Temp-repo test order.** On an empty `imports` table the default command rebuilds. So test (c) has to import a good first commit before it adds the bad one, or it tests the rebuild path instead of the per-commit path. Do the same in (d).
+3. **Enum migration.** drizzle-kit should emit `ALTER TYPE "sub_category" ADD VALUE 'shareholder'`. Postgres won't let a value added inside a transaction be used in that same transaction. No later migration uses it, and the import runs in its own transactions, so it's fine. Keep it that way, and don't add a seed or check that uses the value in the migration.
+4. **Every mainline commit gets an `imports` row,** including commits with no research files (`files = 0`), so "last ok" keeps moving. Say so in db.md.
+5. **Small corrections when writing the docs.** The plan's Context says phases are null on some early snapshots, but none are at HEAD (all 277 entries have one). The tsx fallback paragraph is moot now that the human chose tsx. Neither needs to reach the docs.
