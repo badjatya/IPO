@@ -64,7 +64,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | Blocked |
 | [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | Done |
 | [015](#015--stock-universe) | Stock universe | 2 | 008, 014 | Blocked |
-| [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | Blocked |
+| [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | **Ready** |
 | [017](#017--watchlist) | Watchlist | 3 | 010, 015 | Blocked |
 | [018](#018--stock-worker-scheduled-numbers-and-alerts) | Stock worker, scheduled: numbers and alerts | 3 | 007, 014, 015, 016, G1, H02 | Blocked |
 | [019](#019--stock-pages) | Stock pages | 3 | 017, 018, D06 | Blocked |
@@ -106,7 +106,7 @@ flowchart LR
     subgraph stocks ["Weeks 2–3: stock side"]
         T014[014 stock fetchers]:::done
         T015[015 stock universe]:::m2
-        T016[016 alert rules]:::m2
+        T016[016 alert rules]:::ready
         T017[017 watchlist]:::m2
         T018[018 worker: scheduled]:::m2
         T019[019 stock pages]:::m2
@@ -524,7 +524,7 @@ Load NSE's list of listed equities into `stocks` (symbol, ISIN, name, industry, 
 | | |
 | --- | --- |
 | Slug | `016-alert-rules` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 014, D10 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M2 |
@@ -532,6 +532,7 @@ Load NSE's list of listed equities into `stocks` (symbol, ISIN, name, industry, 
 Pure Python functions that compare a stock's latest filings with earlier ones, and raise alerts (pledge up, promoter holding down, FII or DII move, new results, important announcement) using the thresholds from D10. Each alert's title and numbers come from Python, with a `dedupe_key`.
 
 - **Done when:** every rule has tests, including the first quarter on record and missing data (no alert); the same input never raises the same alert twice.
+- **D10 gates approval, not planning:** the plan lays out the thresholds and severities with a recommendation under "Decisions needed", and the human settles D10 at plan review.
 - **From 014:** the shareholding fetcher returns `fii_pct` and `dii_pct` as `None`, because the FII/DII split exists only in the XBRL filing. The `fii_move` and `dii_move` rules can't fire until something parses that XBRL: this task, or a separate task the plan proposes. Results are standalone only; never compare them with consolidated figures.
 - **Read:** [plan.md § Watchlist signals](../plan.md#watchlist-signals), [db.md § alerts and § shareholding](../db.md#alerts).
 - **Start:** `/run-task 016`
