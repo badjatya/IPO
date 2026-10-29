@@ -18,7 +18,9 @@ The Next.js app ([ADR-0009](0009-nextjs-web-platform.md)) needs UI components an
 
 ## Decision
 
-The web app uses shadcn/ui (style `base-nova`, Base UI primitives, neutral base colour) with Tailwind CSS v4. The rules for using it are in [design.md](../design.md).
+The web app uses shadcn/ui with Tailwind CSS v4. The rules for using it are in [design.md](../design.md).
+
+The sub-choices are the `shadcn init --defaults` values, not a human decision: style `base-nova`, Base UI primitives (rather than Radix) and the neutral base colour. Base UI or Radix is still open ([design.md § Open questions](../design.md#open-questions)).
 
 ## Consequences
 
@@ -28,7 +30,7 @@ The web app uses shadcn/ui (style `base-nova`, Base UI primitives, neutral base 
 
 ## AI involvement
 
-The human chose shadcn/ui. Claude Code ran `shadcn init` with its defaults (`--defaults`: the `next` template and `nova` preset) and wrote [design.md](../design.md).
+The human chose shadcn/ui. Claude Code wrote the options table afterwards to record the alternatives; they were not weighed before the choice. Claude ran `shadcn init` with its defaults (`--defaults`: the `next` template and `nova` preset) and wrote [design.md](../design.md).
 
 ## Evidence
 

@@ -13,20 +13,20 @@ Status labels (**Running**, **Decided**, **Proposed**, **Open**) are defined in 
 | Principle | What it means on a page | Status |
 | --- | --- | --- |
 | Research, not advice | The footer says "Research, not investment advice." on every page; it lives in `web/app/layout.tsx`, not in page code. IPO verdicts are labelled as research. Stock pages never say buy, sell or hold ([ADR-0012](adr/0012-research-not-advice.md)) | Running (footer); Decided (wording) |
-| Every number has a source and a time | A block of figures shows where they came from and "as of HH:MM IST", as the email does. GMP is marked unofficial | Decided |
+| Every number has a source and a time | A block of figures shows where they came from and "as of HH:MM IST", as the email does. GMP is marked unofficial | Decided ([arch.md § 7.2](arch.md#72-failure-handling): the app shows the "as of" time); Proposed (per block) |
 | Numbers are exact | The page shows the stored figure. It never rounds a figure into a different claim, and never computes one the research didn't produce | Decided ([ADR-0001](adr/0001-python-for-exact-work-claude-for-judgement.md)) |
 | Same words as the email | Verdicts, phases, trends and grades use the email's labels (below), so the brief and the app read as one product | Proposed |
 | Dense but scannable | Lead with the call and the key figures; details (RHP sections, anchor list, day-by-day subscription) go below or in tabs | Proposed |
-| Colour is never the only signal | Every coloured badge has a text label; every trend has an arrow | Decided |
+| Colour is never the only signal | Every coloured badge has a text label; every trend has an arrow | Proposed |
 
 ## Foundation
 
 | Item | Choice | Status |
 | --- | --- | --- |
-| Component kit | [shadcn/ui](https://ui.shadcn.com), style `base-nova`: components are copied into `web/components/ui/` and owned by us | Decided ([ADR-0020](adr/0020-shadcn-ui.md)) |
-| Primitives | Base UI (`@base-ui/react`) | Running |
+| Component kit | [shadcn/ui](https://ui.shadcn.com) (style `base-nova`, an init default): components are copied into `web/components/ui/` and owned by us | Decided ([ADR-0020](adr/0020-shadcn-ui.md)) |
+| Primitives | Base UI (`@base-ui/react`), the `shadcn init` default; Radix is the alternative | Running; Open (Base UI or Radix) |
 | Styling | Tailwind CSS v4; no `tailwind.config`, the theme lives in `web/app/globals.css` | Running |
-| Theme tokens | CSS variables in `globals.css` (`--background`, `--primary`, `--muted`, `--destructive`, `--chart-1`…`5`, `--radius` and the rest), neutral base colour, light and `.dark` sets | Running |
+| Theme tokens | CSS variables in `globals.css` (`--background`, `--primary`, `--muted`, `--destructive`, `--chart-1`…`5`, `--radius` and the rest), neutral base colour (an init default), light and `.dark` sets | Running |
 | Class merging | `cn()` from `web/lib/utils.ts` (the `cn` package from shadcn) | Running |
 | Font | Geist via `next/font/google`, as `--font-sans` | Running |
 | Icons | lucide-react | Running |
@@ -73,7 +73,7 @@ On stock pages, green and red show only direction (a price or a figure went up o
 | Price and GMP | ₹ value, then percent of the issue price | ₹51 (34%) | Proposed (matches the email) |
 | Subscription | Times, one or two decimals, `x` suffix | 21x, 0.15x | Proposed (matches the email) |
 | Dates | Short weekday, day, month | Wed 29 Oct | Proposed (matches the email) |
-| Times | 24-hour IST, always labelled | as of 19:07 IST | Decided |
+| Times | 24-hour IST, always labelled | as of 19:07 IST | Proposed (matches the email) |
 | Columns of figures | Right-aligned, `tabular-nums` | | Proposed |
 
 Format numbers in one shared module (to be added with the first page that shows figures), not inline in each page.
@@ -84,7 +84,7 @@ Format numbers in one shared module (to be added with the first page that shows 
 | --- | --- | --- |
 | Page shell | `body` is a full-height column; content above, disclaimer footer at the bottom | Running |
 | Content width | `max-w-5xl`, centred, `px-4` side gutter | Running (home page) |
-| Mobile | Works at 360 px wide with no sideways page scroll; wide tables scroll inside their own container | Decided |
+| Mobile | Works at 360 px wide with no sideways page scroll; wide tables scroll inside their own container | Proposed |
 | Navigation | Header with the modules a user can reach: IPOs, Track record, Watchlist; Admin only for admins. Product name is a placeholder until D13 | Proposed |
 | Page header | Title, then the "as of" line and source, then the main call | Proposed |
 
@@ -119,3 +119,4 @@ Which shadcn component each part of [arch.md § 4.4](arch.md#44-nextjs-app-decid
 | Charts library (D06) | IPO trends, track record, stock results |
 | Product name (D13) | Header, page titles, metadata |
 | Brand colour, or stay on the neutral base | `--primary` and the header |
+| Base UI or Radix primitives. Base UI composes with a `render` prop, Radix with `asChild`; most shadcn examples use Radix | Every component; cheapest to switch now |

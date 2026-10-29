@@ -296,10 +296,12 @@ A standard-library script that checks that every ₹ figure in `analysis/<key>.m
 
 The Next.js app ([ADR-0009](../adr/0009-nextjs-web-platform.md)) in the location chosen in D01, with the language from D02, the UI kit from D05 and the test runner from D07. It has a base layout with "not investment advice" on every page, a product-name placeholder (D13), environment variables named as in tech.md, lint and test scripts, and a CI job.
 
+A bare app already exists in `web/` (commits c835c42 and 33c5a73): Next.js with strict TypeScript, shadcn/ui on Tailwind CSS v4, and the disclaimer footer. This task builds on it rather than starting over.
+
 - **Done when:** the app starts locally and shows an empty home page with the disclaimer; its tests run in CI; `tech.md` has the local setup and updated status labels.
 - **Out of scope:** database, auth, real pages.
 - **Watch for:** `npm install` asks for permission in opencode.
-- **Read:** [tech.md](../tech.md), [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [ADR-0012](../adr/0012-research-not-advice.md).
+- **Read:** [tech.md](../tech.md), [design.md](../design.md), [arch.md § 4.4](../arch.md#44-nextjs-app-decided), [ADR-0012](../adr/0012-research-not-advice.md), [ADR-0020](../adr/0020-shadcn-ui.md).
 - **Start:** `/plan-task Task 006 from docs/tasks/ROADMAP.md`
 
 ### 007 · Database schema and migrations
