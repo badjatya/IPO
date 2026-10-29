@@ -370,5 +370,212 @@ class AnnouncementRuleTests(NoNetworkCase):
             self.assertIsNone(alert["detail"])
 
 
+class ComputeAlertsTests(NoNetworkCase):
+    """Step 4: the orchestrator — newness against ``stored``, the quarter
+    timeline with its ``quarter_end`` join, per-series dedupe, ``results``
+    first-sight baseline, ``existing_keys`` and deterministic ordering."""
+
+    def test_first_sight_whole_fetched_history_raises_no_alerts_at_all(self):
+        # Nothing stored, everything fetched: the whole history becomes the
+        # baseline, even for pairs that cross a threshold — the "backfill
+        # burst" would otherwise alert every historical crossing back to 2022.
+        fetched = {
+            "results": [
+                rs("2026-06-30", 12000.00, 900.00, filed_at="2026-07-20"),
+                rs("2026-09-30", 12826.00, 872.00, filed_at="2026-10-25"),
+            ],
+            "shareholding": [
+                sh("2026-06-30", 52.00, filed_at="2026-07-16"),
+                sh("2026-09-30", 49.00, filed_at="2026-10-21"),
+            ],
+            "pledges": [
+                pl("2026-06-30", 4.00, disclosed_at="2026-07-16"),
+                pl("2026-09-30", 11.00, disclosed_at="2026-10-21"),
+            ],
+        }
+        self.assertEqual(compute(fetched=fetched, stored={}), [])
+
+    def test_fetched_new_quarter_against_a_stored_predecessor_crosses_the_threshold(self):
+        # The threshold-crossing pair is a synthetic case, not the fixture
+        # (the fixture's own 0.04 pp promoter fall is pinned in step 5b,
+        # review round 2, item 7).
+        fetched = {"shareholding": [sh("2026-09-30", 49.00, filed_at="2026-10-21")]}
+        stored = {"shareholding": [sh("2026-06-30", 52.00, filed_at="2026-07-16")]}
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        alert = result[0]
+        self.assertEqual(alert["kind"], "promoter_down")
+        self.assertEqual(alert["title"], "Promoter holding down from 52% to 49%")
+        self.assertEqual(alert["dedupe_key"], "RELIANCE:promoter_down:2026-09-30")
+
+    def test_everything_stored_and_nothing_fetched_alerts_nothing(self):
+        stored = {
+            "results": [rs("2026-06-30", 12000.00, 900.00, filed_at="2026-07-20")],
+            "shareholding": [sh("2026-09-30", 49.00, filed_at="2026-10-21")],
+            "pledges": [pl("2026-09-30", 11.00, disclosed_at="2026-10-21")],
+        }
+        self.assertEqual(compute(fetched={}, stored=stored), [])
+
+    def test_revision_never_realerts_and_its_fetched_value_serves_as_prev(self):
+        # 2026-06-30 is already stored; the fetched revision must not re-alert.
+        # The new 2026-09-30 quarter compares against the *revised* value
+        # (a fetched record supersedes a stored record on the timeline), so
+        # the exact title pins which value was the comparison partner.
+        fetched = {
+            "shareholding": [
+                sh("2026-06-30", 30.00, filed_at="2026-10-21"),  # revision: 52.00 -> 30.00
+                sh("2026-09-30", 28.00, filed_at="2026-10-25"),
+            ]
+        }
+        stored = {
+            "shareholding": [
+                sh("2026-03-31", 50.00, filed_at="2026-04-20"),
+                sh("2026-06-30", 52.00, filed_at="2026-07-16"),
+            ]
+        }
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0]["title"], "Promoter holding down from 30% to 28%")
+
+    def test_two_records_for_the_same_quarter_keep_the_later_filed_at(self):
+        # Both fetched records are for 2026-09-30; the one filed on 10-25
+        # wins. If the 10-21 record (50.44%) won, the fall vs 52.00% would be
+        # 1.56 pp and nothing would fire; the later record (50.00%) makes it
+        # exactly 2.00 pp and the alert fires (review round 1, item 3).
+        fetched = {
+            "shareholding": [
+                sh("2026-09-30", 50.44, filed_at="2026-10-21"),
+                sh("2026-09-30", 50.00, filed_at="2026-10-25"),
+            ]
+        }
+        stored = {"shareholding": [sh("2026-06-30", 52.00, filed_at="2026-07-16")]}
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0]["title"], "Promoter holding down from 52% to 50%")
+
+    def test_none_timestamps_keep_the_same_winner_in_either_input_order(self):
+        # Both records state no filing time (a record that states none cannot
+        # be proven newer); the canonical tie-break keeps the greater
+        # serialisation no matter the input order. Either candidate crosses
+        # the absolute FII threshold (±1.00 pp vs 14.2%), so an alert always
+        # fires — and its exact title identifies which record won (15.2% >
+        # 13.2% canonically, so the up-move wins).
+        winner = sh("2026-09-30", fii=15.2, filed_at=None)
+        loser = sh("2026-09-30", fii=13.2, filed_at=None)
+        stored = {"shareholding": [sh("2026-06-30", fii=14.2, filed_at="2026-07-16")]}
+        first = compute(fetched={"shareholding": [loser, winner]}, stored=stored)
+        second = compute(fetched={"shareholding": [winner, loser]}, stored=stored)
+        self.assertEqual(first, second)
+        self.assertEqual(len(first), 1)
+        self.assertEqual(first[0]["title"], "FII holding up from 14.2% to 15.2%")
+
+    def test_equal_stated_timestamps_keep_the_same_winner_in_either_input_order(self):
+        winner = sh("2026-09-30", fii=15.2, filed_at="2026-10-21T10:00:00+05:30")
+        loser = sh("2026-09-30", fii=13.2, filed_at="2026-10-21T10:00:00+05:30")
+        stored = {"shareholding": [sh("2026-06-30", fii=14.2, filed_at="2026-07-16")]}
+        first = compute(fetched={"shareholding": [loser, winner]}, stored=stored)
+        second = compute(fetched={"shareholding": [winner, loser]}, stored=stored)
+        self.assertEqual(first, second)
+        self.assertEqual(len(first), 1)
+        self.assertEqual(first[0]["title"], "FII holding up from 14.2% to 15.2%")
+
+    def test_quarter_with_shareholding_but_no_pledge_row_yields_no_pledge_up(self):
+        fetched = {
+            "shareholding": [sh("2026-09-30", 48.00, filed_at="2026-10-21")],
+            "pledges": [],
+        }
+        stored = {
+            "shareholding": [sh("2026-03-31", 50.00, filed_at="2026-04-20")],
+            "pledges": [pl("2026-03-31", 5.00, disclosed_at="2026-04-20")],
+        }
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual([alert["kind"] for alert in result], ["promoter_down"])
+
+    def test_quarter_with_pledge_but_no_shareholding_yields_no_shareholder_alerts(self):
+        fetched = {
+            "shareholding": [],
+            "pledges": [pl("2026-09-30", 8.00, disclosed_at="2026-10-21")],
+        }
+        stored = {
+            "shareholding": [sh("2026-03-31", 50.00, filed_at="2026-04-20")],
+            "pledges": [pl("2026-03-31", 5.00, disclosed_at="2026-04-20")],
+        }
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0]["kind"], "pledge_up")
+        self.assertEqual(result[0]["title"], "Promoter pledge up from 5% to 8%")
+
+    def test_gap_quarters_are_skipped_the_comparison_is_vs_the_previous_quarter_on_record(self):
+        # No shareholding record exists for 2026-06-30; the new 2026-09-30
+        # quarter still compares against the latest earlier quarter on record
+        # (2026-03-31) and fires.
+        fetched = {"shareholding": [sh("2026-09-30", 48.00, filed_at="2026-10-21")]}
+        stored = {"shareholding": [sh("2026-03-31", 50.00, filed_at="2026-04-20")]}
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0]["title"], "Promoter holding down from 50% to 48%")
+
+    def _sample_mixed_inputs(self):
+        return {
+            "fetched": {
+                "results": [rs("2026-09-30", 12826.00, 872.00, filed_at="2026-10-25")],
+                "shareholding": [sh("2026-09-30", 49.00, filed_at="2026-10-21")],
+                "pledges": [pl("2026-09-30", 5.00, disclosed_at="2026-10-21")],
+            },
+            "stored": {
+                "results": [rs("2026-06-30", 12000.00, 900.00, filed_at="2026-07-20")],
+                "shareholding": [sh("2026-06-30", 52.00, filed_at="2026-07-16")],
+                "pledges": [pl("2026-06-30", 2.00, disclosed_at="2026-07-16")],
+            },
+        }
+
+    def test_same_input_twice_returns_identical_lists_with_unique_keys(self):
+        inputs = self._sample_mixed_inputs()
+        first = compute(**inputs)
+        second = compute(**inputs)
+        self.assertEqual(first, second)
+        keys = [alert["dedupe_key"] for alert in first]
+        self.assertEqual(len(keys), 3)
+        self.assertEqual(len(keys), len(set(keys)))
+
+    def test_existing_keys_suppress_everything_already_emitted(self):
+        inputs = self._sample_mixed_inputs()
+        first = compute(**inputs)
+        keys = [alert["dedupe_key"] for alert in first]
+        self.assertEqual([alert["kind"] for alert in first], [
+            "pledge_up", "promoter_down", "results",
+        ])
+        again = compute(existing_keys=keys, **inputs)
+        self.assertEqual(again, [])
+        # a partially-supplied set drops only those keys
+        partial = compute(existing_keys=keys[:1], **inputs)
+        self.assertEqual([alert["dedupe_key"] for alert in partial], keys[1:])
+
+    def test_output_order_is_deterministic_by_kind_then_period(self):
+        # Two alerts, different kinds and periods: pledge_up (2026-06-30)
+        # sorts before promoter_down (2026-09-30) by (kind, period).
+        fetched = {
+            "shareholding": [sh("2026-09-30", 49.00, filed_at="2026-10-21")],
+            "pledges": [
+                pl("2026-06-30", 6.00, disclosed_at="2026-07-16"),
+                pl("2026-09-30", 5.00, disclosed_at="2026-10-21"),
+            ],
+        }
+        stored = {
+            "shareholding": [
+                sh("2026-03-31", 50.00, filed_at="2026-04-20"),
+                sh("2026-06-30", 52.00, filed_at="2026-07-16"),
+            ],
+            "pledges": [pl("2026-03-31", 2.00, disclosed_at="2026-04-20")],
+        }
+        result = compute(fetched=fetched, stored=stored)
+        self.assertEqual([alert["kind"] for alert in result], [
+            "pledge_up", "promoter_down",
+        ])
+        self.assertEqual([alert["source_id"] for alert in result], [
+            "2026-06-30", "2026-09-30",
+        ])
+
+
 if __name__ == "__main__":
     unittest.main()

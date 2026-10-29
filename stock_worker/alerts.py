@@ -253,3 +253,146 @@ def announcement_alert(symbol, record):
         "source_table": "announcements",
         "source_id": exchange_ref,
     }
+
+
+def _canonical(record):
+    """Key-sorted serialisation, ``Decimal`` via ``str()`` — the documented
+    tie-break for equal or missing timestamps, so the winner never depends on
+    input order."""
+    return json.dumps(record, sort_keys=True, default=str)
+
+
+def _newer(candidate, current, stamp_field):
+    """Is ``candidate`` strictly newer than ``current`` under the per-series
+    stamp rule? A ``None`` stamp sorts older than any stated timestamp; when
+    both are ``None`` or equal, the greater canonical serialisation wins."""
+    candidate_stamp = candidate.get(stamp_field)
+    current_stamp = current.get(stamp_field)
+    if candidate_stamp is not None or current_stamp is not None:
+        if candidate_stamp is None:
+            return False
+        if current_stamp is None:
+            return True
+        if candidate_stamp != current_stamp:
+            return candidate_stamp > current_stamp
+    return _canonical(candidate) > _canonical(current)
+
+
+def _dedupe_latest(records, key_field, stamp_field):
+    """One record per natural key, keeping the latest by ``stamp_field``.
+
+    ``stamp_field`` is ``filed_at`` for results and shareholding,
+    ``disclosed_at`` for pledges. A record without a natural key cannot be
+    joined or keyed and is dropped.
+    """
+    latest = {}
+    for record in records or []:
+        key = record.get(key_field)
+        if key is None:
+            continue
+        current = latest.get(key)
+        if current is None or _newer(record, current, stamp_field):
+            latest[key] = record
+    return latest
+
+
+def compute_alerts(symbol, fetched, stored, existing_keys=(), thresholds=DEFAULT_THRESHOLDS):
+    """All four change rules plus ``results`` for one symbol, from the records
+    018 is about to persist (``fetched``) and the records already on hand
+    (``stored``) for the three series that compare or flag by themselves:
+    ``results``, ``shareholding`` and ``pledges``. Announcements are not part
+    of it — their rule fires from 020's rating step (round-2 review, item 6).
+
+    Each series is deduped by natural key keeping the latest (``filed_at``
+    for results and shareholding, ``disclosed_at`` for pledges; a ``None``
+    timestamp sorts older than any stated one; equal or ``None`` timestamps
+    are broken by a canonical serialisation, so the winner never depends on
+    input order). The quarter timeline is the union of the stored and fetched
+    shareholding and pledge records (a fetched record supersedes a stored
+    record with the same ``quarter_end``), sorted ascending, with pledge
+    records joined to shareholding quarters on ``quarter_end``.
+
+    An alert fires only for a record that is new against ``stored`` — its
+    natural key is not in the stored set — and only when the stored set for
+    that series is non-empty: on first sight (nothing stored for the series)
+    the whole fetched history is the baseline and raises no alerts at all,
+    change rules and ``results`` alike. A change rule compares the new
+    quarter with the latest earlier quarter on record, which may come from
+    ``stored``; an omitted quarter simply means the next one on record is the
+    comparison partner. A revised filing whose key is already stored never
+    re-alerts, and its value still serves as the comparison partner for later
+    new quarters. ``results`` fires for a new filing that has an earlier
+    quarter on record (from ``stored`` or an earlier new fetched quarter).
+
+    Alerts whose ``dedupe_key`` is already in ``existing_keys`` are dropped —
+    018 passes the symbol's stored alert keys as a second guard behind the
+    unique index on ``alerts.dedupe_key`` (built by 007) — and the result is
+    a deterministic list ordered by ``(kind, period)``. ``thresholds`` maps
+    the four change-rule kinds to their percentage-point moves.
+    """
+    fetched = fetched or {}
+    stored = stored or {}
+    existing = set(existing_keys or ())
+    alerts_list = []
+
+    stored_sh = _dedupe_latest(stored.get("shareholding") or [], "quarter_end", "filed_at")
+    fetched_sh = _dedupe_latest(fetched.get("shareholding") or [], "quarter_end", "filed_at")
+    stored_pl = _dedupe_latest(stored.get("pledges") or [], "quarter_end", "disclosed_at")
+    fetched_pl = _dedupe_latest(fetched.get("pledges") or [], "quarter_end", "disclosed_at")
+
+    sh_by_quarter = dict(stored_sh)
+    sh_by_quarter.update(fetched_sh)  # a fetched record supersedes a stored one
+    pl_by_quarter = dict(stored_pl)
+    pl_by_quarter.update(fetched_pl)
+    quarter_order = sorted(set(sh_by_quarter) | set(pl_by_quarter))
+
+    if stored_sh:
+        prev_sh = None
+        for quarter in quarter_order:
+            shareholding_record = sh_by_quarter.get(quarter)
+            if shareholding_record is None:
+                # A quarter with a pledge but no shareholding row is not a
+                # promoter_down/FII/DII candidate; ``prev_sh`` stays put.
+                continue
+            if quarter in fetched_sh and quarter not in stored_sh:
+                for kind, rule in (
+                    ("promoter_down", promoter_down_alert),
+                    ("fii_move", fii_move_alert),
+                    ("dii_move", dii_move_alert),
+                ):
+                    alert = rule(symbol, prev_sh, shareholding_record, thresholds[kind])
+                    if alert is not None:
+                        alerts_list.append(alert)
+            prev_sh = shareholding_record
+
+    if stored_pl:
+        prev_pl = None
+        for quarter in quarter_order:
+            pledge_record = pl_by_quarter.get(quarter)
+            if pledge_record is None:
+                # A quarter with shareholding but no pledge row is not a
+                # pledge_up candidate; ``prev_pl`` stays put.
+                continue
+            if quarter in fetched_pl and quarter not in stored_pl:
+                alert = pledge_up_alert(
+                    symbol, prev_pl, pledge_record, thresholds["pledge_up"]
+                )
+                if alert is not None:
+                    alerts_list.append(alert)
+            prev_pl = pledge_record
+
+    stored_results = _dedupe_latest(stored.get("results") or [], "period_end", "filed_at")
+    fetched_results = _dedupe_latest(fetched.get("results") or [], "period_end", "filed_at")
+    if stored_results:
+        results_by_period = dict(stored_results)
+        results_by_period.update(fetched_results)  # a fetched record supersedes a stored one
+        for index, period in enumerate(sorted(results_by_period)):
+            record = results_by_period[period]
+            if period in fetched_results and period not in stored_results:
+                alert = results_alert(symbol, record, has_earlier=index > 0)
+                if alert is not None:
+                    alerts_list.append(alert)
+
+    kept = [alert for alert in alerts_list if alert["dedupe_key"] not in existing]
+    kept.sort(key=lambda alert: (alert["kind"], alert["source_id"]))
+    return kept
