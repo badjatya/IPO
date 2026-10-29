@@ -577,5 +577,83 @@ class ComputeAlertsTests(NoNetworkCase):
         ])
 
 
+class FixtureIntegrationTests(NoNetworkCase):
+    """Step 5: the 014 parsers run over the saved ``tests/fixtures/nse_stock/``
+    fixtures end to end. No live sites, no AI APIs."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.results_records = results.parse_results(
+            load("results_standalone.json"), load("results_filings.json")
+        )
+        cls.shareholding_records = shareholding.parse(load("shareholding.json"))
+        cls.pledge_records = pledges.parse(load("pledges.json"))
+
+    def test_first_sight_on_the_real_fixture_raises_zero_alerts(self):
+        # RELIANCE first sight: stored empty, the whole fetched history — no
+        # results alert for any of the five quarters, no promoter_down
+        # (the pair-wise crossings of the past are the baseline), no
+        # pledge_up (no RELIANCE quarter has a pledge row), no FII/DII.
+        fetched = {
+            "results": self.results_records,
+            "shareholding": self.shareholding_records,
+            "pledges": [],
+        }
+        self.assertEqual(alerts.compute_alerts("RELIANCE", fetched, {}), [])
+
+    def test_second_run_alerts_only_what_is_new_with_exact_counts(self):
+        # Stored = the fixture records except the latest results quarter
+        # (2024-12-31) and the latest shareholding quarter (2026-09-30);
+        # fetched = those two latest records. Exactly ONE alert —
+        # RELIANCE:results:2024-12-31 — and zero change alerts: the fetched
+        # shareholding quarter 2026-09-30 (50.44%) vs the stored 2026-06-30
+        # (50.48%) is a 0.04 pp fall, below the 2.00 pp promoter_down
+        # threshold; fii_pct/dii_pct are None on every row; no RELIANCE
+        # quarter has a pledge row, so there is no pledge_up candidate
+        # (review round 2, item 7).
+        stored = {
+            "results": self.results_records[1:],
+            "shareholding": self.shareholding_records[1:],
+            "pledges": [],
+        }
+        fetched = {
+            "results": self.results_records[:1],
+            "shareholding": self.shareholding_records[:1],
+            "pledges": [],
+        }
+        result = alerts.compute_alerts("RELIANCE", fetched, stored)
+        self.assertEqual(len(result), 1)
+        alert = result[0]
+        self.assertEqual(alert["kind"], "results")
+        self.assertEqual(alert["severity"], "info")
+        self.assertEqual(alert["dedupe_key"], "RELIANCE:results:2024-12-31")
+        self.assertEqual(alert["source_table"], "quarterly_results")
+        self.assertEqual(alert["source_id"], "2024-12-31")
+        self.assertEqual(
+            alert["title"],
+            "Quarterly results for 2024-12-31: revenue ₹128,260 cr, PAT ₹8,721 cr",
+        )
+        self.assertIsNone(alert["detail"])
+        keys = [a["dedupe_key"] for a in result]
+        self.assertEqual(len(keys), len(set(keys)))
+
+    def test_adanient_pledge_fixture_as_its_own_single_symbol_case(self):
+        # The fixture row carries no symbol — only comName, "Adani
+        # Enterprises Limited" (015/018 resolve the name); the test passes it
+        # for ADANIENT exactly as 018 would after 015's resolution, without
+        # asserting on company. First sight: the single quarter becomes the
+        # baseline, no alert (no earlier pledge quarter on record), and a
+        # second call with the first call's keys emits nothing.
+        self.assertEqual(len(self.pledge_records), 1)
+        self.assertEqual(self.pledge_records[0]["quarter_end"], "2026-09-30")
+        fetched = {"results": [], "shareholding": [], "pledges": self.pledge_records}
+        first = alerts.compute_alerts("ADANIENT", fetched, {})
+        self.assertEqual(first, [])
+        keys = [alert["dedupe_key"] for alert in first]
+        self.assertEqual(
+            alerts.compute_alerts("ADANIENT", fetched, {}, existing_keys=keys), []
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
