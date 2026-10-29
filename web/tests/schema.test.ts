@@ -20,6 +20,10 @@ const tables = [
   "announcements",
   "alerts",
   "users",
+  "session",
+  "account",
+  "verification",
+  "rateLimit",
   "watchlistItems",
   "aiQuestions",
   "analysisJobs",
@@ -28,6 +32,9 @@ const tables = [
   "settings",
   "imports",
 ];
+
+// The relations that let Better Auth's adapter join (task 010).
+const relations = ["userRelations", "sessionRelations", "accountRelations"];
 
 const enums = [
   "ipoPhase",
@@ -48,7 +55,7 @@ describe("db schema module", () => {
   // Cast away the namespace so the import rule's computed-access check doesn't fire.
   const exported = schema as unknown as Record<string, unknown>;
 
-  it("exports all 23 tables from db.md", () => {
+  it("exports all 27 tables from db.md", () => {
     for (const name of tables) {
       expect(exported[name]).toBeDefined();
     }
@@ -64,8 +71,14 @@ describe("db schema module", () => {
     expect(exported.watchedSymbols).toBeDefined();
   });
 
+  it("exports the relations Better Auth's adapter joins on (task 010)", () => {
+    for (const name of relations) {
+      expect(exported[name]).toBeDefined();
+    }
+  });
+
   it("exports nothing unexpected", () => {
-    const expected = new Set([...tables, ...enums, "watchedSymbols"]);
+    const expected = new Set([...tables, ...relations, ...enums, "watchedSymbols"]);
     expect(Object.keys(exported).filter((name) => !expected.has(name))).toEqual([]);
   });
 });
