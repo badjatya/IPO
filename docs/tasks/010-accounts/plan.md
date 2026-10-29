@@ -136,7 +136,7 @@ Anything built differently from the approved plan, and why.
    ```
 
    after which `npm test` is fully green (see Verification).
-3. **Confirmations against the installed package, as the Risks section allowed** (all consistent with the plan, nothing to change): `isTest()` skips Better Auth's origin checks, which is why the harness sets `NODE_ENV=development` (the forged-origin tests' subject); `advanced.backgroundTasks` is present but its default handler swallows errors silently, so our hook keeps its own `.catch(console.error)` (the plan's named fallback — failures still reach the log); `runWithTransaction` on the pg adapter runs the callback directly, so the neon-http `db()` works; `resetCredentialPassword` creates the `credential` `account` row for an invitee (no password yet), which is what makes set-password work for fresh invites.
+3. **Confirmations against the installed package, as the Risks section allowed** (all consistent with the plan, nothing to change): `isTest()` skips Better Auth's origin checks — **and the first version of this note was wrong about what triggers it under the harness**: it is not `NODE_ENV` but vitest's own `process.env.TEST = "true"` (set in every worker) that makes `isTest()` true, so the checks silently never ran in CI. Code review round 3 (finding 1) caught the forged-Origin test passing 200; `tests/db/setup.ts` now deletes `process.env.TEST` before the auth instance is built and the suite asserts `skipOriginCheck === false`. `NODE_ENV=development` stays in the harness (isTest()'s first clause; print-mode mail must never run in production); `advanced.backgroundTasks` is present but its default handler swallows errors silently, so our hook keeps its own `.catch(console.error)` (the plan's named fallback — failures still reach the log); `runWithTransaction` on the pg adapter runs the callback directly, so the neon-http `db()` works; `resetCredentialPassword` creates the `credential` `account` row for an invitee (no password yet), which is what makes set-password work for fresh invites.
 4. **Wording detail in step 8's proof:** the plan's step 8 parenthetical said the first-admin forgot-password mail is "(reset wording)". The approved hook (review item 8: "a never-set-up invitee who asks for a reset still gets invite wording") sends invite wording for the fresh admin — the Neon suite asserts that ("Set up" + "invited").
 5. **Test-infra fix (not a deviation):** the interrupted run's leftover `web/tests/auth-pages.test.tsx` change stubs `window.location.assign` for the sign-in success test — jsdom cannot navigate, and the page assigns to `window.location` after a successful sign-in.
 6. **Step 9 (CI) needed no change** — the `db` job already runs `npm run test:db` with the Neon secrets, and the harness now supplies `AUTH_SECRET`/`AUTH_URL`/`NODE_ENV` to the child process itself.
@@ -144,6 +144,26 @@ Anything built differently from the approved plan, and why.
 ## Verification
 
 Test commands run on the branch, with their real output.
+
+**Round 3 (this response):** both round-3 findings are fixed in the test harness, not the app:
+
+- **Finding 1 (Blocker):** `tests/db/setup.ts` now deletes `process.env.TEST` before anything builds the auth instance — vitest sets `TEST=true` in every worker, and Better Auth's `isTest()` (`NODE_ENV === "test" || toBoolean(env.TEST)`, `@better-auth/core/dist/env/env-impl.mjs`) makes `createAuthContext` set `skipOriginCheck: true`, silently turning off exactly the origin/CSRF checks the forged-Origin test exists to exercise (round 3 CI showed it passing 200). `NODE_ENV=development` stays in the harness; `tests/db/auth.test.ts` adds an assertion that `skipOriginCheck === false` before the forged-Origin test runs, and the `api()` helper now sends `origin: BASE` on POSTs by default (a browser always does; with the check on, a cookie-bearing POST without an Origin is 403 `MISSING_OR_NULL_ORIGIN`), letting the forged-Origin test override it.
+- **Finding 2 (Major):** the scoping test no longer hand-builds `better-auth.session_token=<session.token>` from the `session` table — Better Auth signs the cookie (`<token>.<HMAC signature>`, URL-encoded), so that cookie resolved to no session and the test failed on its own construction. It now takes the token part (before the first `.`, after `decodeURIComponent`) from the cookies Better Auth itself issued, asserts the two tokens differ, and that each token's `session` row keys to its own user's `user_id`/email.
+- The harness comment in `web/scripts/neon-branch.mjs` and "Changes during build" 3 are corrected to record what actually skips the checks (vitest's `TEST`, not `NODE_ENV`).
+
+Offline, re-run on the branch:
+
+- `npm run typecheck` → `tsc --noEmit`, exit 0 (no output).
+- `npm run lint` → "Found 0 warnings and 0 errors. Finished in 43ms on 51 files with 250 rules using 12 threads".
+- `npm test` (offline vitest, `web/`) → **16/16 files, 96/96 tests pass** (the env-example test stays green):
+
+```
+ Test Files  16 passed (16)
+      Tests  96 passed (96)
+   Duration  1.97s (environment 59%, tests 18%, import 11%, setup 9%, transform 2%)
+```
+
+- `npm run test:db` (the Neon-branch auth suite) → **not run here**: it needs `NEON_API_KEY`/`NEON_PROJECT_ID` and creates a real, disposable Neon branch; per task 007's lesson it only counts in CI. The branch must be pushed for the `db` job to rerun (the human or Claude pushes; round 4 approves only when that job is green). Expected: the two round-3 failures (scoping 338, forged-Origin 350) are exactly what findings 1 and 2 address — the scoping test now asserts only on cookies Better Auth issued, and the forged-Origin test runs with the origin check genuinely on (setup.ts deletes `TEST`, the new first test proves `skipOriginCheck === false`, and cookie-bearing POSTs carry a real `Origin`).
 
 **Round 2 (this response):** the Blocker finding (vitest's default 5 s `testTimeout` stalling the Neon suite mid-run) is fixed in `web/vitest.db.config.mts` — `testTimeout: 60_000` and `hookTimeout: 60_000` with a comment explaining why (each Better Auth call to the real branch takes about 1 s, the first-admin test's `spawnSync` blocks the event loop, and the rate-limit test needs up to ten ~1 s failed sign-ins). The offline config `vitest.config.mts` keeps Vitest's default, as the review directed, so the offline suite stays fast.
 
