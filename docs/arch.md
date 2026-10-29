@@ -186,7 +186,7 @@ Scheduled runs also take any jobs still queued.
 | Bookkeeping | `imports` table records the last commit imported; a failed import retries from there |
 | Rebuild | A full replay of the repo recreates every research table ([db.md](db.md#import-and-rebuild)) |
 
-### 4.4 Next.js app (Decided)
+### 4.4 Next.js app (Running)
 
 | Module | Pages / routes | Notes |
 | --- | --- | --- |
@@ -195,7 +195,7 @@ Scheduled runs also take any jobs still queued.
 | Watchlist | List, stock detail (price, results, announcements, shareholding, alerts) | Per user; adding a stock is free |
 | Analysis | "Get analysis" on a stock; loading screen with queue position and live steps | **Every request counts** against the monthly quota (3), whether the saved analysis is served or refreshed ([ADR-0017](adr/0017-gemini-for-stocks-claude-for-ipos.md)) |
 | Ask | Question box on IPO and stock pages | Gemini API; 5 questions a day per person ([ai.md](ai.md#in-app-ai-ask)) |
-| Accounts | Sign-in, admin invites, password reset | Better Auth, email and password; no public sign-up. The admin invites each user and Resend sends the set-password link ([ADR-0028](adr/0028-better-auth-invite-only.md)) |
+| Accounts | Sign-in, admin invites, password reset | Running. Better Auth, email and password; no public sign-up. The admin invites each user and Resend sends the set-password link; forgot-password and invite are one token mechanism with a 24-hour expiry; one-time links work once and expire ([ADR-0028](adr/0028-better-auth-invite-only.md), [ADR-0029](adr/0029-first-admin-bootstrap.md)) |
 | Alerts | Shown on the watchlist and stock pages | In the app only; no alert emails |
 | Admin | Settings page (admin role only) | Edits [`settings`](db.md#settings): quotas and caps |
 | Worker dispatch | Server-side call to start the stock worker | Token in the app's environment only; sends no user text |
@@ -327,7 +327,7 @@ The worker writes progress to the database itself, so it never needs to reach th
 | --- | --- | --- |
 | Scraped pages, RHPs, filings → AI | Prompt injection hidden in a document | Documents are passed as data, never as instructions. The IPO routine has only the Gmail connector and repo access. Gemini calls (worker and Ask) have no tools except search grounding, so injected text can at most change the written text |
 | App → stock worker | User text steering a research run | The dispatch carries no user text. The worker reads job rows whose symbols were checked against the stocks list. The dispatch token lives only in the app's environment |
-| Users → app | Account takeover, data leaks between users | Better Auth, sessions in Postgres, sign-up off (admin invites only), one-time invite and reset links, every query scoped to the signed-in user, CSRF protection, rate limits on sign-in, Ask and analysis requests |
+| Users → app | Account takeover, data leaks between users | Implemented by task 010: Better Auth, sessions in Postgres, sign-up off (admin invites only), one-time invite and reset links, every query scoped to the signed-in user, CSRF protection (Better Auth's origin check on `/api/auth/*` plus the app's own same-origin check on its cookie-authenticated routes), rate limits on sign-in and reset requests (database-backed), Ask and analysis requests |
 | App and worker → Gemini API | Shared free quota used up; user data reaching Google (free-tier prompts may be used to improve Google's products) | Per-user quotas and a platform cap on analyses a day; prompts carry only public-source data and the user's question, never identity; the app says questions and analyses use Gemini |
 | Secrets | Exposure in git | Secrets only in GitHub Action secrets and the app's environment; no user data and no secrets in the repo |
 
@@ -402,6 +402,7 @@ All Gemini work (Ask, analyses, filing summaries) shares one free quota per Goog
 | [0026](adr/0026-stock-worker-code-location.md) | Stock worker code lives in `stock_worker/`, standard library first | Accepted |
 | [0027](adr/0027-shadcn-charts-on-recharts.md) | shadcn/ui charts, on Recharts, for the web app | Accepted |
 | [0028](adr/0028-better-auth-invite-only.md) | Better Auth, invite-only password sign-in, account emails through Resend | Accepted |
+| [0029](adr/0029-first-admin-bootstrap.md) | First admin is a CLI script; one 24-hour expiry for invite and reset links | Accepted |
 
 ## 9. Open questions
 
