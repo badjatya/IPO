@@ -167,10 +167,10 @@ Both sets use the **014 parsed record shapes** — shareholding records without 
 - `docs/arch.md`: § 4.2, Mode 1 step 3 — the change/alert computation is implemented in `stock_worker/alerts.py` (016); § 9's open-question row — the FII/DII item now points at task 027 (quote and consolidated items unchanged).
 - `docs/tech.md`: repository layout — the `stock_worker/` row's description gains the alert rules module (numerics only, standard library; no new entry point).
 - `docs/ai.md`: the "Alert explanation" row — note that the rule that fired, with its numbers, comes from 016's Python rules; Gemini writes only `alerts.detail` (decision unchanged); and that the `announcement` rule fires from 020's rating step — 020 calls `announcement_alert` once it has written `importance` (review round 2, item 6).
-- New ADR `0027-alert-thresholds-and-severities` (D10), status **Proposed**, written in the build with the values the human settled at round-1 plan review ([plan-review.md § Decisions](plan-review.md)): the three thresholds (percentage points, quarter-on-quarter), the severity map, and code as their home with no `settings` rows. The ADR also states that `promoter_pledged_pct` is a **share of the promoter's holding** (not of total equity), so 020's explanation prompt can say so.
+- New ADR `0029-alert-thresholds-and-severities` (D10), status **Proposed**, written in the build with the values the human settled at round-1 plan review ([plan-review.md § Decisions](plan-review.md)): the three thresholds (percentage points, quarter-on-quarter), the severity map, and code as their home with no `settings` rows. The ADR also states that `promoter_pledged_pct` is a **share of the promoter's holding** (not of total equity), so 020's explanation prompt can say so, and records the first-pledge-on-record case (review round 1, finding 1). Renumbered from the planned 0027: `main` took 0027 (D06, shadcn charts) and 0028 (D04, Better Auth) while 016 was in build/review, so the ADR is 0029 — see Changes during build.
 - **Roadmap changes for the human or Claude to make on `main` after merge** (`ROADMAP.md` is edited only there):
   - Mark **016** Done.
-  - Tick **D10** once the human accepts ADR-0027, and write the settled thresholds, severities and home (code) into the decision table's "Docs today" cell.
+  - Tick **D10** once the human accepts ADR-0029, and write the settled thresholds, severities and home (code) into the decision table's "Docs today" cell.
   - Add **task 027 "XBRL shareholding parsing (FII/DII)"** (next unused ID): depends on 014 and 016; feeds `fii_pct`/`dii_pct` from the shareholding XBRL filing recorded as `source_url` by 014, so the 016 rules can fire; status Ready once 016 merges.
   - In **018**'s entry, add that it wires `stock_worker/alerts.py` (the plan's contract: fetched + stored records for results, shareholding and pledges → alert rows, unique key as conflict target; an incomplete `stored` set would burst stale alerts), and that `fii_move`/`dii_move` alerts fire only after task 027 merges.
   - In **020**'s entry, add that its rating step (arch.md Mode 1 step 4) calls `stock_worker.alerts.announcement_alert` once per announcement it has just rated and persists the returned alert row (dedupe key as the conflict target) with `detail` and the `ai_*` provenance — the announcement rule fires from the rating run, not from `compute_alerts` (round-2 review, item 6).
@@ -213,6 +213,9 @@ None — everything that was open at planning was settled by the human at the ro
 - **Docs consistency on top of the plan's list.** `docs/arch.md` § 8's decisions table had no rows for 0025 and 0026 (they were added on `main` without touching it); the ADR README's "Adding one" rule requires every ADR to appear there, so the same change adds 0025, 0026 and the new 0027 (Proposed). `docs/adr/README.md` gains the 0027 index row. `docs/db.md` § shareholding's "(016/018)" for XBRL parsing became "task 027" — the same settled-scoping fix the plan makes in arch § 9 ([Doc updates](#doc-updates)); the plan's own § 5 says 016 ships the rules and 027 parses.
 - **Two extra orchestrator tests.** Besides the plan's step-4 list, `tests/test_stock_alerts.py` pins the plan's own § 3 promises at the orchestrator level: "from the second run on, each new filing alerts once, ever" (two new results quarters → both alert) and the "earlier-new fetched quarter" branch of `has_earlier` (backfilling older quarters against a stored later one → only the second-oldest alerts).
 - **The six-kind `source_id` test (review item 5) landed in step 3's commit**, not step 2's: it needs `results_alert`/`announcement_alert`, which arrive with the existence rules. Commit ordering only; the built result matches the plan's step-2 test list.
+- **A stock's first-ever pledge on record fires `pledge_up` (review round 1, finding 1).** NSE's pledge data lists only companies with a pledge disclosure, so a stock whose promoters have never pledged has no pledge records at all — stored or fetched. When the first pledge row arrives, the per-series first-sight guard used to skip the whole pledge loop, and even without it the previous pledge would be `None`: going from no pledge to 25% pledged (the most serious pledge event) was silent. `compute_alerts` now fires the "first pledge on record" alert — same `kind`, severity, `dedupe_key` and `source_id` forms as a rise — when some `shareholding` history is stored (the stock is not on first sight), the quarter is new, no pledge is on record at all, and the stated `promoter_pledged_pct` is at or above the `pledge_up` threshold: "Promoter pledge on record for the first time: 25% of promoter holding". Missing is missing: no invented 0% baseline (rule 1). First sight for the stock stays silent, and the rise rule applies unchanged once an earlier pledge is on record. Recorded in ADR-0029 and db.md § alerts. Four tests pin it: the reviewer's exact case fires once with that title, first sight stays silent, below the threshold stays silent (at-threshold fires), and the rise rule is unchanged.
+- **The ADR is numbered 0029, not 0027 (review round 1, finding 2).** `main` took 0027 for the charts decision (D06, commit `8b47b5e`) and then 0028 for Better Auth (D04, commit `444da7f`) while 016 was in build and review, so the planned ADR-0027 clashed. It is now `docs/adr/0029-alert-thresholds-and-severities.md` with heading "ADR-0029", and every reference — the README index row, arch.md § 8, db.md, tech.md, the two comments in `alerts.py`, and the Doc updates/roadmap notes in this plan — points at 0029. The review's suggested number 0028 is itself taken on `main` (ADR-0028-better-auth, merged 2026-10-30 01:08, a minute before the review was committed), so 0029 is the next free number; the XBRL task keeps its ID 027, which is still free. arch.md § 8 and the ADR README now carry `main`'s exact 0025–0028 rows plus the new 0029 row (byte-identical to `main`'s text), so the docs merge without the leftover conflict the review anticipated. The superseded `docs/adr/0027-alert-thresholds-and-severities.md` cannot be deleted with my tools — Claude or the human removes it before merge (Finding 3).
+- **`scratch_inspect.py` stays on the branch (review round 1, finding 3).** My tools cannot delete files (`rm`/`git rm` are outside the allowed command set), so the scratch script remains tracked from the last build commit despite being "untracked" in the build summary; Claude or the human removes it before merge.
 
 ## Verification
 
@@ -224,18 +227,18 @@ $ python3 -m unittest discover -s tests
 python3.12 -m unittest: error: give one or more IPO keys, or --all
 ...........................................................................................................................................................................................................................................................................................................
 ----------------------------------------------------------------------
-Ran 369 tests in 0.572s
+Ran 373 tests in 0.561s
 
 OK
 ```
 
-(The `usage:` line is `test_figures_check` exercising the module's no-keys error path; the suite result is `Ran 369 ... OK`.)
+(The `usage:` line is `test_figures_check` exercising the module's no-keys error path; the suite result is `Ran 373 ... OK`. `373 = 369 + 4`: the four `FirstPledgeTests` added in the review round-1 response, code review finding 1.)
 
 ```
 $ python3 -m unittest discover -s .claude/hooks
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.199s
+Ran 19 tests in 0.202s
 
 OK
 ```
@@ -277,7 +280,7 @@ TOTAL: 54/316 ₹ figures found (17%) across 13 analyses (0 skipped)
 $ python3 -m unittest discover -s .claude/deepseek
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 2.457s
+Ran 21 tests in 2.303s
 
 OK
 ```
