@@ -139,12 +139,17 @@ Anything built differently from the approved plan, and why.
 3. **Test (b) asserts the seeded `settings` rows survive, not a new one.** The schema-rules db suite asserts `settings` has *exactly* the three seed rows, and db test files run in parallel on the same branch, so inserting a new row would make that suite flaky. A `users` row and a watchlist item on a standalone `stocks` row are still inserted and asserted; the settings coverage is a read + equality check of the seeded rows.
 4. **Test (a)'s expected counts are computed by raw JSON parsing** of the repo's own files (distinct keys, entry/subscription/report-entry counts), not by reusing the import's parsers — reusing them would make the "same counts" check a tautology.
 5. **Replaced tables null their absent fields.** The plan says cards, analyses, outcomes, reports and verdicts are "replaced on their natural keys"; the build implements "replaced" as: the update also nulls the table's nullable columns the file no longer carries (`ipos` alone keeps the present-and-non-null merge). This is what makes per-commit and rebuild converge to exactly the file state, and is documented in db.md § Import and rebuild.
+6. **Review round 1 fixes.** The respond step changed how the parsers build rows and how the apply layer orders and trims them:
+   - Timestamps are converted to `Date` at the parser boundary (`maybeDate`, which throws on an unparseable value), and numerics are passed as `string` — the rows are built with each table's real insert type instead of `Loose<T>` plus casts, which is what let the timestamp bug through. A stricter parse-time error also replaced the insert-time not-null failure for a snapshot entry missing `phase`.
+   - A commit's changes are applied in FK order (deletions first, then snapshot → card → analysis → report → outcome) instead of `git diff`'s path order — this is the plan's own "foreign-key order" promise, which the first build did not keep.
+   - An edited report or `data/outcomes.json` drops the entries the new version no longer carries (leftover verdicts/outcomes), which the plan's convergence claim needed; skipped empty snapshot/subscription inserts let the 10 no-subscription snapshots import.
+   - `--from`/`--root` without a value exit with usage (code 2) instead of silently running the default command.
 
 ## Verification
 
-Test commands run, with their output pasted.
+Test commands run (respond step, after review round 1), with their output pasted.
 
-**Offline suite** (`npm test` — 6 files, 55 tests, all green; the db suite is excluded by design):
+**Offline suite** (`npm test` — 6 files, 57 tests, all green; the db suite is excluded by design):
 
 ```text
 > test
@@ -152,13 +157,13 @@ Test commands run, with their output pasted.
 
  ✓ tests/env-example.test.ts (2 tests) 2ms
  ✓ tests/neon-branch.test.ts (14 tests) 4ms
- ✓ tests/layout.test.tsx (5 tests) 57ms
+ ✓ tests/layout.test.tsx (5 tests) 60ms
  ✓ tests/schema.test.ts (4 tests) 2ms
- ✓ tests/import-parsers.test.ts (15 tests) 16ms
- ✓ tests/import-git.test.ts (15 tests) 387ms
+ ✓ tests/import-parsers.test.ts (17 tests) 19ms
+ ✓ tests/import-git.test.ts (15 tests) 354ms
 
  Test Files  6 passed (6)
-      Tests  55 passed (55)
+      Tests  57 passed (57)
 ```
 
 **Type check** (`npm run typecheck` — clean):
@@ -183,6 +188,12 @@ Found 0 warnings and 0 errors.
 No schema changes, nothing to migrate 😴
 ```
 
+**Parser run over every committed file** (the closest offline proxy for the db suite's whole-repo import: parse all 373 committed files with the built parsers — 277 snapshot rows, 13 cards, 13 analyses, 27 reports, 8 outcome rows — zero failures):
+
+```text
+parsed OK across 373 committed files: snapshot-rows=277 cards=13 analyses=13 reports=27 outcome-rows=8 failures=0
+```
+
 **CLI smoke tests** (`npx --no-install tsx scripts/import.ts`):
 
 ```text
@@ -194,12 +205,16 @@ usage: tsx scripts/import.ts [--rebuild] [--from <sha>] [--root <repo>]
   --from     import only the commits after <sha>, instead of the last ok row
   --root     the repo to import (default: the checkout containing web/scripts)
 
+$ npx --no-install tsx scripts/import.ts --from        # no value → usage, exit 2
+--from needs a value
+usage: ... (as above)
+
 $ npx --no-install tsx scripts/import.ts --rebuild --root /tmp
 DATABASE_URL is not set: the npm scripts load web/.env.local (write it with
 `neon checkout dev` in web/); CI and the import Action set the variable instead.
 ```
 
-**Database suite** (`npm run test:db` — `web/tests/db/import.test.ts` plus the existing schema tests). It cannot run in this environment: the harness refuses without the Neon secrets, exactly as designed. The refusal itself:
+**Database suite** (`npm run test:db` — `web/tests/db/import.test.ts` plus the existing schema tests). Still cannot run in this environment: the harness refuses without the Neon secrets, exactly as designed. The refusal itself:
 
 ```text
 > npm run test:db
@@ -209,4 +224,4 @@ test:db needs NEON_API_KEY and NEON_PROJECT_ID (CI secrets, H06). Refusing to ru
 the db tests must never touch the `dev` branch by accident.
 ```
 
-The three whole-repo import tests (a, b, f) and the four temp-repo per-commit tests (c, d, e, g) run under that harness in CI's `db` job (which has the secrets), on a fresh schema-only branch per run (`npm run test:db`). All of them were written against the branch that the harness provisions; the offline suite, typecheck and lint all pass with them present.
+Round 1's CI `db` job caught the three blockers this respond step fixed (findings 1–3); the run transcript is in code-review.md. Claude pushes this branch after the respond step so the `db` job re-runs, and pastes the run result into the next review round. The suite's tests: (a) rebuild twice → identical counts matching the repo's files, (b) app rows survive, (c) bad commit leaves no rows + failed-row upsert retry, (d) deleted report's rows go with it, (e) re-running a complete range changes nothing, (f) spot-checks of known rows, (g) an unchanged analysis is not rewritten, (h) an edit that drops an entry removes its rows and matches a rebuild (new), (i) one commit can first introduce an IPO with its card, analysis and report (new), plus the CLI value-flag check (new).
