@@ -63,7 +63,7 @@ Other settings:
 - **No `paths-ignore`:** the routine's pushes to `main` carry the new cards and reports, and those are the commits the schema check exists for.
 - **Read-only:** `permissions: contents: read`, no secrets, and no network beyond checkout and setup-python.
 - **Fast:** `timeout-minutes: 5`. Both suites take under a second together; checkout and setup take most of the run.
-- **Concurrency:** grouped by ref. On task branches, a new push cancels the older run. On `main`, every run finishes (`cancel-in-progress` is false there), so each routine push gets its own result.
+- **Concurrency:** on task branches the group is the ref, so a new push cancels the older run. On `main` the group is the commit SHA, so runs never share a group and every routine push gets its own result. (Keying `main` by ref with `cancel-in-progress: false` isn't enough: GitHub keeps only one pending run per group and cancels the others.)
 - **Python 3.12:** the same version as the smoke workflow and local development.
 
 ## Steps
