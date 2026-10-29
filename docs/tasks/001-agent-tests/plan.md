@@ -1,6 +1,6 @@
 ---
 task: 001-agent-tests
-status: approved
+status: code-review
 branch: task/001-agent-tests
 assigned_by: Vijay
 planner: DeepSeek (opencode)
@@ -124,7 +124,10 @@ None. The agent test runner (`unittest`) and its command are already Decided/rec
 
 ## Bugs found
 
-To be filled during the build. Each entry gets: module, current behaviour, documented/intended behaviour, the `expectedFailure` test name, the assertion message the test fails with today, and a one-line suggestion for the human. No fix is made here. A behaviour is called a bug only when a doc or code comment states the intended behaviour; where intent is not written down, the test pins the current behaviour and the question goes to the human. This keeps `expectedFailure` from passing on an unrelated error (broken fixture, `KeyError`, a `NoNetworkAttempt`) while pretending to hide a bug; when the section is filled, each recorded message must be an `AssertionError` on the point being tested.
+None found. No test needed `@unittest.expectedFailure`, and no test exposed a behaviour that a doc or code comment says is wrong. Two parser behaviours looked surprising but are pinned as they are, with no intent recorded to call them bugs:
+
+- `nse.parse_detail` takes `issueInfo.dataList[0].title` as the company name (`nse.py:103`); a real response whose first row is a label would report the label. The fixture leaves that row's title empty so the `companyName` fallback is exercised.
+- `outcomes.listing_prices` returns NSE's raw `CH_OPENING_PRICE` value as `listing` (`outcomes.py:104`). The test pins the type the fixture supplies rather than assuming a float; no saved evidence says the live API sends a string, so this is not recorded as a bug.
 
 ## Risks and rollback
 
@@ -144,6 +147,24 @@ To be filled during the build. Each entry gets: module, current behaviour, docum
 
 ## Changes during build
 
+- **`tests/test_support.py` added.** Step 1 asked for self-tests of the guard and `TempRepo` but named no file; they live in this extra test module so the scaffolding is proven before the module tests rely on it.
+- **Two fixtures split out.** `nse_detail_BETA.json` (the NSE-only row) and `sebi_rhp_page_generic.html` (the second `pdf_url` link shape) are separate files rather than more rows or variants inside the files named in the plan. This keeps one fixture per parser branch and lets `tests/fixtures/README.md` name each one.
+- **Malformed Investorgain page is built inline.** The layout-change `ValueError` test constructs a tiny page in the test instead of adding a file that exists only to be broken.
+- **`quiet.main` outcome-error test patches `quiet.outcomes.update`.** It returns `([], [], {"hd-fire": ...})` so the test exercises `quiet`'s `outcome_errors` branch without a network client. `outcomes.update`'s own error paths (no symbol, no prices, waiting, already recorded) are covered directly in `tests/test_outcomes.py`.
+- No changes to `ipo_agent/`, `data/`, `analysis/` or `reports/`.
+
 ## Verification
 
-To be filled during the build with the exact command output.
+```text
+$ python3 -m unittest discover -s tests
+.......................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 167 tests in 0.320s
+
+OK
+
+$ git status --short data/ analysis/ reports/
+(no output)
+```
+
+The suite ran from the repo root with no network: every test case inherits `NoNetworkCase`, which blocks `socket.getaddrinfo` and `socket.socket.connect` and fails `tearDown` if either was attempted. No test wrote outside a `TempRepo` directory.
