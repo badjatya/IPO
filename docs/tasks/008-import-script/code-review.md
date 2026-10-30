@@ -212,3 +212,52 @@ Findings 8, 9 and 10 are fixed: the expected counts parse only JSON, a `beforeEa
 | # | Response | Commit |
 | --- | --- | --- |
 | 12 | Fixed, with one deliberate deviation. **Batched:** a whole report's verdicts now upsert in one statement and the whole of `data/outcomes.json` in one — `commonReplacedSet` builds the per-conflicting-row SET (`excluded.<col>`; nulls for columns no row carries; `coalesce` for a NOT NULL column some rows carry) that the per-row `replacedSet` it replaces produced, verified by new offline unit tests. **Single git-log pass:** `rebuild` gets every path's last commit from one `git log --name-only` (`lastCommitsTouching`), tested equal to the per-file results on the temp repo. **Timeouts:** tests (a) and (b) (the two that run whole-repo rebuilds) are raised to 600 s. Per-rebuild statements drop ~550 → ~430, plus 54 fewer git processes. **Deviation — `ipos` stays one statement per row:** a common `coalesce(excluded.<col>, ipos.<col>)` SET assumes an absent column's excluded value is null, but Drizzle fills a cell a row lacks with the SQL `default` keyword, so the excluded value is the column's *evaluated default* — which is exactly null for every `ipos` fact column except `anchor_done` (NOT NULL, default `false`). A later snapshot entry carrying `anchor_done: null` (many of the repo's entries do) would then silently reset a previously true value, breaking the documented present-and-non-null merge (db.md § `ipos`). "Keep old when absent" for a NOT NULL defaulted column is inexpressible in one `INSERT ... ON CONFLICT` statement; an exact batch (one INSERT + one UPDATE-from-VALUES merge) stays the #11 follow-up. The measured per-rebuild time can't be produced here (the db suite refuses without the Neon secrets); CI's vitest prints each test's duration, so it goes into plan.md Verification with the next `db` run — the 600 s timeouts are several times even the old ~110 s figure, so the red job should go green without leaning on today's exact number | `46461d4`, `0082f00` |
+
+## Round 4 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff 4ca4f2e..task/008-import-script` at `b3d76f3`. That covers round 3's response (`46461d4`, `0082f00`, `3194123`, `b45b505`) and the merge of main (task 010) in `b3d76f3`, which renumbered the `shareholder` migration to `0004_daily_thunderbolts.sql` (still the same single `ALTER TYPE … ADD VALUE 'shareholder' BEFORE 'total'`).
+
+**Tests:**
+
+Database suite, run locally by the human at `b3d76f3` on a throwaway Neon branch:
+
+```text
+test:db using branch br-autumn-sun-a1leihog (db-test-1793333677153)
+[✓] migrations applied successfully!
+ RUN  v5.0.5 /Users/badjatya/Developer/IPO/.worktrees/008-import-script/web
+ Test Files  4 passed (4)
+      Tests  43 passed (43)
+   Start at  09:44:52
+   Duration  146.69s (tests 99%, import 1%)
+test:db deleted branch br-autumn-sun-a1leihog
+```
+
+Offline, run by Claude in the worktree at `b3d76f3`:
+
+```text
+$ npm test                        Test Files 19 passed (19) · Tests 133 passed (133)
+$ npm run typecheck               exit 0
+$ npm run lint                    exit 0
+$ npx --no-install drizzle-kit generate
+No schema changes, nothing to migrate 😴
+$ python3 -m unittest discover -s tests
+Ran 376 tests in 0.604s
+OK
+```
+
+**#12 is fixed.** The whole db suite, including test (a)'s two whole-repo rebuilds and test (b)'s one, finished in 147 s. So a rebuild takes at most about 49 s from this machine, far inside the new 600 s timeouts. Verdicts and outcomes upsert in one statement per file, and `lastCommitsTouching` replaces the per-file `git log` processes. The reason `ipos` stays one statement per row (`anchor_done` is NOT NULL with a default, so a batched `coalesce(excluded…)` would reset it) is sound and documented. After the merge, the migrations build an empty branch with both `0003` (010) and `0004` (008).
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 13 | Major | `web/lib/import/run.ts:66-86`; `docs/db.md:518` and `:557` | **A bad commit blocks the import for good, even after a later commit fixes the file.** Each commit is read exactly as it was committed, so a failed commit stays failed. Say the routine commits a malformed card in commit N and fixes it in N+1. Every later run resumes from N−1, retries N, fails on N's own unchanged content, and stops before reaching N+1. Nothing imports again until someone runs `npm run import -- --rebuild` by hand. History on main is never rewritten, so the `--amend` route that test (c) uses doesn't exist in practice. db.md contradicts itself here: line 518 says a commit that failed "after its files were fixed imports on a later run", which isn't true, while line 557 admits it "keeps failing while it stays on main". With the 009 Action this means a push-triggered import that silently stops for days. Also, `rebuild()` records nothing in `imports` when it throws (`run.ts:41-44`, `:55-61`), so a failed rebuild leaves no `failed` row behind. | In the default mode, when the first commit to import already has a `failed` row and HEAD is a newer commit, run the rebuild at HEAD instead of retrying it, and log why ("commit X failed before; HEAD has moved on, so rebuilding from HEAD"). HEAD's tree has the fixed files, and the rebuild is the tested way to converge on git. A commit that fails for the first time, or that is HEAD itself, still retries as it does now, so transient failures behave the same. When a rebuild throws, record a `failed` row for HEAD with the error in its own small transaction, as `importCommit` does. **Tests:** a temp-repo test where commit B has a malformed card (the run fails with a `failed` row for B), commit C fixes the card on top, and the next default run succeeds. Assert that C's card and B's good snapshot are both in the database and that HEAD (C) has an `ok` row. Add a test that a rebuild failure records a `failed` row for HEAD. **Docs:** correct db.md line 518, and replace the "(or the history is rewritten …)" clause on line 557 with the fallback. Keep test (c) as it is: it still covers the ok-over-failed upsert. |
+| 14 | Minor | `docs/tasks/008-import-script/plan.md` § Verification | Round 3's response said the measured rebuild time would go into Verification with the next `db` run. It's still the "can't run here" note. | Paste the db-suite run above into Verification (43/43 in 146.69 s at `b3d76f3`, three whole-repo rebuilds within it, so at most about 49 s each locally). Note that 009's first CI run should record the runner's figure. |
+
+### Plan and docs
+
+- Round 3's response is built as described, and its deviation (`ipos` per row) is recorded in Changes during build 8.
+- The merge resolved `tech.md` by keeping both the import-script row and 010's Better Auth rows. db.md's import sections came through intact, apart from the contradiction in #13.
+- **Process:** this round is the fourth. The human asked for it after round 3 hit the three-round stop. It was written by the session that ran the plan reviews and the build, after the human ran the db suite locally.
