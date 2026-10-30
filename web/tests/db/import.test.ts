@@ -563,6 +563,104 @@ describe("import: per-commit runs against a temp repo", () => {
     expect(counts.reports).toBe(1);
     expect(counts.verdicts).toBe(1);
   }, 180_000);
+
+  it("(j) a commit that failed before stops blocking once HEAD moves on: the default run rebuilds at HEAD", async () => {
+    const { repo, git } = makeRepo();
+    // a: a good snapshot, so there is a last ok to resume from.
+    write(repo, "data/snapshots/2026-10-29T0907.json", JSON.stringify({
+      generated_at: "2026-10-29T09:07+05:30",
+      ipos: [{ key: "sfc-environmental-technologies", name: "SFC", phase: "closing_today" }],
+    }));
+    commitAll(git, "a: one snapshot");
+    const first = await runImport({ root: repo, db: db(), from: null });
+    expect(first.ok).toBe(true);
+    const snapshotsAfterA = (await tableCounts()).snapshots;
+
+    // b adds another good snapshot plus a malformed card: the commit fails on
+    // its own content and records a failed row for b.
+    write(repo, "data/snapshots/2026-10-28T0907.json", JSON.stringify({
+      generated_at: "2026-10-28T09:07+05:30",
+      ipos: [{ key: "sfc-environmental-technologies", name: "SFC", phase: "open", gmp: 8 }],
+    }));
+    write(
+      repo,
+      "analysis/sfc-environmental-technologies.json",
+      JSON.stringify({ name: "SFC Environmental Technologies", source: "rhp", verdict: "buy", verdict_text: "Buy", anchor_grade: "strong" }),
+    );
+    const bad = commitAll(git, "b: good snapshot + malformed card");
+
+    // b is HEAD, so the default run still retries it (transient failures and a
+    // failing HEAD behave as before) — and b fails again on its own content.
+    const failed = runCli(["--root", repo]);
+    expect(failed.status).not.toBe(0);
+    const badRow = await db().select().from(schema.imports).where(eq(schema.imports.commitSha, bad));
+    expect(badRow).toHaveLength(1);
+    expect(badRow[0]!.status).toBe("failed");
+
+    // c fixes the card on top — history is NOT rewritten, so b stays on the
+    // chain and would fail again on every retry, blocking c and everything
+    // after it forever.
+    write(
+      repo,
+      "analysis/sfc-environmental-technologies.json",
+      JSON.stringify({ name: "SFC Environmental Technologies", source: "rhp", verdict: "neutral", verdict_text: "Neutral", anchor_grade: "strong" }),
+    );
+    const head = commitAll(git, "c: fixed card");
+    expect(head).not.toBe(bad);
+
+    // The next default run must not retry b: b already has a failed row and
+    // HEAD (c) has moved on, so the run rebuilds from HEAD's tree, which holds
+    // both b's good snapshot and c's fixed card.
+    const retried = runCli(["--root", repo]);
+    expect(retried.status).toBe(0);
+    expect(retried.stdout + retried.stderr).toContain("rebuilding from HEAD");
+
+    const counts = await tableCounts();
+    expect(counts.snapshots).toBe(snapshotsAfterA + 1); // b's snapshot, replayed from HEAD's tree
+    expect(counts.cards).toBe(1); // c's fixed card
+    const card = await db().select().from(schema.ipoCards).where(eq(schema.ipoCards.ipoKey, "sfc-environmental-technologies"));
+    expect(card[0]!.verdict).toBe("neutral");
+    const headRow = await db().select().from(schema.imports).where(eq(schema.imports.commitSha, head));
+    expect(headRow).toHaveLength(1);
+    expect(headRow[0]!.status).toBe("ok");
+    // b's good snapshot and its facts are replayed from HEAD's tree.
+    const bSnap = await db()
+      .select()
+      .from(schema.ipoSnapshots)
+      .where(
+        and(
+          eq(schema.ipoSnapshots.ipoKey, "sfc-environmental-technologies"),
+          eq(schema.ipoSnapshots.takenAt, new Date("2026-10-28T09:07+05:30")),
+        ),
+      );
+    expect(bSnap).toHaveLength(1);
+    expect(Number(bSnap[0]!.gmp)).toBe(8);
+  }, 180_000);
+
+  it("(k) a rebuild that fails records a failed row for HEAD", async () => {
+    const { repo, git } = makeRepo();
+    // A malformed card at HEAD makes the whole-repo rebuild itself throw in its
+    // own transaction (the deletes roll back with it).
+    write(
+      repo,
+      "analysis/sfc-environmental-technologies.json",
+      JSON.stringify({ name: "SFC Environmental Technologies", source: "rhp", verdict: "buy", verdict_text: "Buy", anchor_grade: "strong" }),
+    );
+    const head = commitAll(git, "a: malformed card");
+
+    const result = runCli(["--root", repo, "--rebuild"]);
+    expect(result.status).not.toBe(0);
+
+    // The failure is recorded for HEAD in its own small transaction, exactly
+    // like a failed commit's row — not only in the exit code.
+    const rows = await db().select().from(schema.imports).where(eq(schema.imports.commitSha, head));
+    expect(rows).toHaveLength(1);
+    expect(rows[0]!.status).toBe("failed");
+    expect(rows[0]!.error).toContain("verdict");
+    expect(rows[0]!.finishedAt).toBeNull();
+    // Nothing survived the rolled-back rebuild.
+    expect((await tableCounts()).cards).toBe(0);
+  }, 180_000);
 });
 
 describe("import: CLI", () => {

@@ -7,8 +7,11 @@ import type { ImportDb, ImportTx } from "./types";
 // sequence column, so "last ok" is found through git: the first sha in
 // `git rev-list --first-parent HEAD` (newest first) that has an ok row. Writing
 // an ok row upserts over an earlier failed row for the same sha (commit_sha is
-// the primary key), so a commit that failed once — transiently, or after its
-// files were fixed — imports on a later run.
+// the primary key), so a commit that failed once transiently imports on a later
+// run. A commit that failed on its own content can never be fixed in place —
+// history is immutable — so once HEAD has moved past it the default run stops
+// retrying it and converges with the rebuild (run.ts); `failedCommitShas` here
+// is what lets it know.
 
 export interface ImportStamp {
   sha: string;
@@ -21,6 +24,12 @@ export interface ImportStamp {
 /** Every currently-ok sha — used to skip already-imported commits. */
 export async function okCommitShas(db: ImportDb): Promise<Set<string>> {
   const rows = await db.select({ commitSha: imports.commitSha }).from(imports).where(eq(imports.status, "ok"));
+  return new Set(rows.map((row) => row.commitSha));
+}
+
+/** Shas with a failed row — the default run stops retrying a commit that has one. */
+export async function failedCommitShas(db: ImportDb): Promise<Set<string>> {
+  const rows = await db.select({ commitSha: imports.commitSha }).from(imports).where(eq(imports.status, "failed"));
   return new Set(rows.map((row) => row.commitSha));
 }
 
