@@ -1,0 +1,270 @@
+# Code review: 008-import-script
+
+## Round 1 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff main...task/008-import-script` at e4424f6
+
+**Tests:**
+
+The offline checks pass locally, in the worktree:
+
+```text
+$ npm test                       # web/
+ Test Files  6 passed (6)
+      Tests  55 passed (55)
+$ npm run typecheck              # clean
+$ npm run lint                   # clean
+$ npx drizzle-kit generate
+No schema changes, nothing to migrate 😴
+$ python3 -m unittest discover -s tests
+Ran 330 tests in 0.602s
+OK
+$ python3 -m unittest discover -s .claude/hooks
+Ran 19 tests in 0.211s
+OK
+```
+
+The database suite had never run: the plan's Verification says it couldn't run without the Neon secrets. Claude pushed `task/008-import-script` so CI's `db` job would run it ([run 40953566444](https://github.com/badjatya/IPO/actions/runs/40953566444)). `web` and `tests` passed; **`db` failed, with 7 of the 8 import tests failing**:
+
+```text
+ ✓ tests/db/schema-shape.test.ts (7 tests)
+ ✓ tests/db/schema-rules.test.ts (8 tests)
+ × rebuilds twice to identical counts that match the repo's own files
+ × leaves app tables alone through a rebuild
+ × spot-checks a snapshot, zetwerk's card, analysis and latest verdict, an override and an outcome
+ × (c) a bad commit leaves no rows and fails the run; a fixed commit imports and flips its row to ok
+ × (d) a deleted report file's rows go with it; ipos facts survive
+ × (e) re-running an already-imported range changes nothing
+ × (g) an unchanged ipo_analyses row is not rewritten
+ ✓ import: CLI > exits non-zero with a clear message when DATABASE_URL is unset
+
+TypeError: value.toISOString is not a function
+ ❯ PgTimestamp.mapToDriverValue node_modules/src/pg-core/columns/timestamp.ts:68:16
+AssertionError: expected [] to have a length of 1 but got +0
+AssertionError: expected false to be true   (tests/db/import.test.ts:266, :346 — first.ok)
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  7 failed | 16 passed (23)
+```
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 1 | Blocker | `web/lib/import/snapshot.ts:61,77,106,129`, `card.ts:42`, `report.ts:52`, `outcomes.ts:38`, `types.ts:10-28` | Every `timestamptz` column (`ipos.updated_at`, `ipo_snapshots.taken_at`, `ipo_subscriptions.taken_at`, `ai_written_at`, `ipo_outcomes.gmp_eve_snapshot`) gets an ISO **string**. Drizzle's `timestamp()` columns are in `date` mode, and `PgTimestamp.mapToDriverValue` calls `value.toISOString()`, so the first snapshot insert throws `TypeError: value.toISOString is not a function`. Nothing imports: rebuild and per-commit mode both fail (CI above). The comment at `types.ts:11-12` ("Postgres accepts both") is wrong for Drizzle's mapping, and `Loose<T>` plus the casts back to the insert type kept `tsc` from catching it. | Convert at the parser boundary: `new Date(value)`, with a check that throws on an invalid date so it lands in `imports.error`. The alternative is `mode: "string"` on those columns, which changes no SQL. Either way, fix the comment. See also #4. |
+| 2 | Blocker | `web/lib/import/apply.ts:99-100` | `tx.insert(...).values([])` throws `values() must be called with at least one value`. **10 of HEAD's 35 snapshots have no subscription data at all** (`2026-10-12T1634` … `2026-10-13T0907`, and `2026-10-26T0907`), so `rows.subscriptions` is empty and the rebuild fails every time. A snapshot with an empty `ipos` array does the same on line 99. Reproduced with `parseSnapshotDocument` on `data/snapshots/2026-10-26T0907.json`: `subscriptions rows: 0`, and `.values(rows.subscriptions)` throws. Finding #1 currently hides this one. | Skip the insert when the array is empty, for both `snapshots` and `subscriptions`. Add a parser or db test with one of the real no-subscription snapshots. |
+| 3 | Blocker | `web/lib/import/apply.ts:216-223` (with `git.ts:91-106`) | Per-commit mode applies files in `git diff` order, which is path order: `analysis/` < `data/outcomes.json` < `data/snapshots/` < `reports/`. That is not the FK order the plan promises ("Within the transaction the upserts run in foreign-key order: `ipos`, then snapshots…"). When a routine run analyses a newly listed IPO, the same commit adds its card and analysis **and** the snapshot that first creates its `ipos` row. The card goes in first and violates `ipo_cards.ipo_key → ipos.key`, the commit fails, and because a commit's content never changes, every later import is blocked until someone runs a rebuild. Replaying main's first-parent history shows this in **6 real routine commits**: `ffdb3cb` (paras-healthcare), `6632e26` (bls-polymers), `07abccd` (eaaa-alternatives, sfc-environmental-technologies), `f35a790` (bombay-coated-and-special-steels), `6962cca` (m-k-sons-fine-jewels). For `6962cca`, `changedPaths` returns `analysis/m-k-sons-fine-jewels.json, analysis/m-k-sons-fine-jewels.md, data/outcomes.json, data/snapshots/2026-10-23T1908.json, reports/2026-10-23-pm.json`. This is the normal path for the Action (009). The rebuild avoids it only because it applies snapshots first. | Sort a commit's changes by kind before applying them: upserts in FK order (snapshot → card → analysis → report → outcome), deletions child first. Add a temp-repo db test where **one commit** adds a snapshot that first introduces an IPO together with its card, analysis and a report, and assert it imports `ok`. |
+| 4 | Major | `web/lib/import/types.ts:18-28`, every `as NewX` cast in the parsers | `Loose<T>` widens every column to `string \| number \| boolean \| Date \| …` and casts back, which switched off the type checking that would have caught #1 at `npm run typecheck`. | Build the rows with the real insert types (`typeof table.$inferInsert`), converting dates (#1) and passing numerics as `string` (Drizzle's `numeric` type). Keep a cast only where it can't be avoided, with a comment saying why. |
+| 5 | Major | `web/lib/import/apply.ts:132-137` (report), `:141-147` (outcomes); `docs/db.md` § Import and rebuild | Per-commit mode and the rebuild disagree after an edit that **drops an entry**. If a report is rewritten without one of its IPOs (for example, a re-run brief), or `data/outcomes.json` loses a key, the per-commit upsert leaves the old `ipo_verdicts` / `ipo_outcomes` row in place, while a rebuild drops it. db.md (as changed in this task) says per-commit mode "converges to exactly git … matching the rebuild", and the plan's "twice, same counts" check depends on that. | When applying a report, delete that `(report_date, session)`'s verdict rows whose `ipo_key` isn't in the file. When applying `data/outcomes.json`, delete outcome rows whose key isn't in it. Add a temp-repo test: commit a report with two IPOs, then one with one, and assert the counts equal a rebuild's. |
+| 6 | Major | `docs/tasks/008-import-script/plan.md` § Verification | The task was handed off with its database suite never run, and the suite fails on every import test. CI on a pushed branch is how this suite runs (it ran this way for 007). | Before handing back, record a green `db` job in Verification. Claude pushes the branch after the fix step so CI runs; DeepSeek can't push, so it pastes what it can run, and Claude adds the CI run link in the next round. |
+| 7 | Minor | `web/scripts/import.ts:34-37` | `--from` or `--root` given without a value (`npm run import -- --from`) gives `undefined`, and the CLI silently runs the default (last-ok, or a rebuild!) on the default root. | Exit with usage (code 2) when a value flag has no value or the value starts with `--`. |
+
+### Plan and docs
+
+- **Built as approved, mostly.** The five "Changes during build" are justified:
+  - (1) Test (c) uses `--amend`: the plan's own recovery path for an immutable bad commit.
+  - (2) A synthetic no-verdict fixture replaces the misnamed real file.
+  - (3) The settings rows are read rather than inserted, because the db suites run in parallel.
+  - (4) Raw-JSON expected counts avoid a tautology.
+  - (5) Replaced tables null the fields a file drops.
+
+  Point 5 needs #5 above to make convergence hold for dropped *entries* as well as dropped *fields*.
+- **The FK-order promise isn't kept** in per-commit mode (#3); the plan's Approach is right and the code isn't.
+- **Docs:**
+  - db.md, tech.md and arch.md are updated with the Running labels, the four new mapping rows, the `shareholder` enum, the `updated_at` semantics, the `commit_sha` rewording and the rebuild boundary. They match the code, except db.md's convergence claim (#5).
+  - The migration `0003_zippy_dexter_bennett.sql` is generated, and `drizzle-kit generate` is a no-op afterwards.
+- **Rules:**
+  - No AI calls, no secrets, nothing computed.
+  - Numbers pass through verbatim (rule 1).
+  - Research rows are rebuildable from git (rule 9).
+  - App tables are left alone: plain child-first `DELETE`, no `TRUNCATE … CASCADE`.
+
+  No project rule is broken.
+- **Package lockfile:** `tsx` was already in `package-lock.json` as a transitive dependency, so the one-line lock change is in sync. `npm ci --dry-run` succeeds.
+- **Process note:** this round was written by a different Claude session from the plan reviews. The session that ran `/run-task 008` got stuck on a permission prompt partway through its code review and wrote nothing. The human had told this session to take over 008 if it stalled.
+
+## Responses (DeepSeek)
+
+| # | Response | Commit |
+| --- | --- | --- |
+| 1 | Fixed. The parsers now convert timestamps to `Date` at the boundary (`maybeDate` — throws on an unparseable value so it lands in `imports.error`; parser test added), for `ipos.updated_at`, `ipo_snapshots`/`ipo_subscriptions.taken_at`, both `ai_written_at` columns, `ipo_outcomes.gmp_eve_snapshot` and `recorded_at`; the wrong `types.ts` comment is gone (see also #4) | `eb608ce` |
+| 2 | Fixed. `apply.ts` skips the snapshot and subscription inserts when their row arrays are empty; the parser test covers a real no-subscription snapshot (`data/snapshots/2026-10-26T0907.json` → `subscriptions: []`), and the whole-repo rebuild (test a) now imports all 10 of them | `91ddb4f` (parser test in `eb608ce`) |
+| 3 | Fixed. `importCommit` now applies deletions first (each `deleteFileRows` removes its own children) and then the upserts sorted by kind in FK order: snapshot (which upserts `ipos`) → card → analysis → report → outcome. New temp-repo test (i) puts the snapshot, card, analysis and report in one commit and asserts it imports `ok` | `91ddb4f` |
+| 4 | Fixed. `Loose<T>` is deleted; every parser builds rows with the table's real insert type (`typeof table.$inferInsert`) — timestamps as `Date` (#1), numerics as `string`, integers/bigints as `number`. The only remaining casts are the file-driven `Partial` accumulators, each with a comment saying why (a file decides which optional columns to carry, so NOT NULL columns can't be proven present at build time) | `eb608ce` |
+| 5 | Fixed. Applying a report now deletes the `(report_date, session)`'s verdict rows whose `ipo_key` isn't in the file (all of them when the file has no entries), and applying `data/outcomes.json` deletes the outcome rows whose key isn't in it — so per-commit mode converges to exactly git. New temp-repo test (h) rewrites a report and outcomes.json dropping one IPO and asserts the counts equal a rebuild's | `91ddb4f` |
+| 6 | Fixed as far as this step can. Verification is updated with everything run here: the offline suite (57 tests), typecheck, lint, schema drift, the parser run over all 373 committed files (277 snapshot rows, 13 cards, 13 analyses, 27 reports, 8 outcomes, 0 failures), and the CLI smoke tests. The db suite still refuses to run without the Neon secrets, so it runs in CI's `db` job once this branch is pushed — per the finding's own instruction, Claude pastes the CI run link in the next review round | `eb608ce`, `91ddb4f`, `95606de`, `5f1707a` |
+| 7 | Fixed. A `flagValue` helper exits with usage (code 2) when `--from` / `--root` has no value or the next token starts with `--`; the db suite's CLI block covers all four bad invocations | `95606de` |
+
+## Round 2 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff 4a3d0b9..task/008-import-script` at d9e8a75. The first respond step (`2403ca7`) ended on a turn with no content and no tool calls: the model spent its whole output budget reasoning. It changed nothing but the status, so Claude set `code-changes` again (`4a3d0b9`) and reran the step.
+
+**Tests:**
+
+Locally, in the worktree: `npm test` 6 files, 57 passed. `npm run typecheck`, `npm run lint` and `npx drizzle-kit generate` (no changes) are clean.
+
+CI on the pushed branch ([run 40956884017](https://github.com/badjatya/IPO/actions/runs/40956884017)): `web` and `tests` passed; **`db` failed, 5 of 26**:
+
+```text
+ ✓ tests/db/schema-shape.test.ts (7 tests)
+ ✓ tests/db/schema-rules.test.ts (8 tests)
+ × rebuilds twice to identical counts that match the repo's own files   110292ms
+ ✓ leaves app tables alone through a rebuild                            109387ms
+ ✓ spot-checks a snapshot, zetwerk's card, analysis and latest verdict, an override and an outcome
+ ✓ (c) a bad commit leaves no rows and fails the run; a fixed commit imports and flips its row to ok
+ × (d) a deleted report file's rows go with it; ipos facts survive
+ ✓ (e) re-running an already-imported range changes nothing
+ × (g) an unchanged ipo_analyses row is not rewritten
+ × (h) an edit that drops an entry removes its rows, matching a rebuild
+ × (i) one commit can first introduce an IPO with its card, analysis and report
+ ✓ import: CLI (2)
+
+SyntaxError: No number after minus sign in JSON at position 1 (line 1 column 2)        (a)
+AssertionError: expected 27 to be 1                                                     (d)
+AssertionError: expected '5276b3dd5f00eed638f580af5b9b718eb541d…' to be 'f59e94213450fdd5e6d66807c68d1e5e5e1ec…'  (g)
+AssertionError: expected 141 to be 2                                                    (h)
+AssertionError: expected 13 to be 1                                                     (i)
+ Test Files  1 failed | 2 passed (3)
+      Tests  5 failed | 21 passed (26)
+```
+
+The round-1 Blockers are fixed in the code. The rebuild now succeeds over the whole repo (test b and the spot-checks pass on its rows), and so do the failure/retry path (c) and the re-run (e). All five remaining failures are bugs in the tests.
+
+### Round 1 findings
+
+| # | Status |
+| --- | --- |
+| 1 | Fixed: `maybeDate` at the parser boundary; the rebuild writes every timestamp column. |
+| 2 | Fixed: empty inserts are skipped; all 10 no-subscription snapshots import. |
+| 3 | Fixed in code: deletions first, then upserts in FK order. Its test (i) can't pass yet (#9). |
+| 4 | Fixed: `Loose` removed, real insert types, commented `Partial` accumulators. |
+| 5 | Fixed in code. Its test (h) can't pass yet (#9). |
+| 6 | Open until the `db` job is green. |
+| 7 | Fixed, and covered by the CLI test. |
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 8 | Major | `web/tests/db/import.test.ts:97-101` (`expectedResearchCounts`) | Runs `JSON.parse` on **every** research file, including the `analysis/<key>.md` analyses, whose `---` front matter throws `No number after minus sign in JSON`. Test (a), the roadmap's "twice, same counts" check, therefore never compares anything. | Parse only the JSON kinds (snapshot, report). Count cards and analyses from the file list, as it already does. |
+| 9 | Major | `web/tests/db/import.test.ts:253` onward (tests d, g, h, i) | The temp-repo tests assume an empty research database, but they run on the same branch after the whole-repo rebuild tests, which leave the repo's rows behind (27 reports, 141 verdicts, 13 cards). Their absolute counts (`toBe(1)`, `toBe(2)`) then fail. (c) and (e) pass only because they compare relative values. | Before each temp-repo test, reset the research tables **and `imports`**: a `beforeEach` that deletes them child first, or a rebuild over an empty temp repo plus an `imports` delete. Leave the app tables alone, since `schema-rules` runs in parallel on the same branch. |
+| 10 | Major | `web/tests/db/import.test.ts:424-425` (test g) | The last assertion selects `ipo_analyses` with no `where`, so `after[0]` is whichever row comes first. #9 makes that another IPO's analysis, hence the hash mismatch. Also, the third run imports 0 commits, so the content-sha skip (`apply.ts` `setWhere`) is never exercised: an unchanged `xmin` holds trivially, because nothing was re-applied. | Filter on `ipo_key`. To exercise the skip, re-apply the analysis with unchanged content. For example, delete the second commit's `imports` row, or re-import from the first commit with `from` after deleting its ok rows, so `applyFile` runs on the same `.md`. Then assert `xmin` is unchanged. |
+| 11 | Minor | `web/lib/import/apply.ts` `rebuild()` | A whole-repo rebuild takes about 55 s on CI (two rebuilds take 110 s in test a). That's one awaited insert per row over the WebSocket, plus one `git log` process per file for `commit_sha`. It's fine today, but it grows by two runs every weekday. | Record as a follow-up. Batch the inserts per file (the snapshot and verdict arrays), and get `commit_sha` for every path from one `git log --name-only` pass. No change needed for this task. |
+
+### Plan and docs
+
+- **Changes during build 6 and 7** (Verification and the responses hash) are fine. The db.md edits match the new convergence behaviour: deletions first, FK order, dropped entries removed.
+- **To approve,** CI's `db` job must be green, with the run linked here.
+
+## Responses (DeepSeek)
+
+| # | Response | Commit |
+| --- | --- | --- |
+| 8 | Fixed. `expectedResearchCounts` now parses only the JSON kinds (snapshot, report); the analysis `<key>.md` files are counted from the file list — their `---` front matter was the `No number after minus sign in JSON` throw that made test (a) compare nothing. Checked against the repo's own files (pasted in plan.md Verification): every snapshot and report parses, and the counts match the import's rows (277 snapshot rows, 13 distinct IPO keys, 513 subscriptions, 13 cards, 13 analyses, 27 reports, 143 verdicts, 8 outcomes) | `75175dd` |
+| 9 | Fixed. A `beforeEach` inside the temp-repo describe deletes the eight research tables child first plus `imports`, so (d), (g), (h) and (i)'s absolute counts (`toBe(1)`, `toBe(2)`) no longer see the whole-repo rebuild's rows (27 reports, 141 verdicts, 13 cards). App tables are left alone — schema-rules runs in parallel on the same branch and is untouched | `75175dd` |
+| 10 | Fixed. Test (g) filters the final select on `ipo_key` (the `where`-less `after[0]` could be another IPO's analysis), and now exercises the content-sha skip for real: it deletes commit a's `imports` row and re-imports the whole history (the `from: null` test seam), so `applyFile` re-runs on the same `.md` — a 0-commit run re-applies nothing, which is why the old `xmin` check held trivially — and asserts the row's `xmin` is unchanged | `75175dd` |
+| 11 | Agreed — recorded as a follow-up, no code change for this task. The one-awaited-insert-per-row pattern over the WebSocket plus one `git log` process per file stays for now; batching the snapshot/verdict inserts per file and a single `git log --name-only` pass for `commit_sha` is the natural perf work for the import Action (009) or a later task | — |
+
+## Round 3 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff 9170f3c..task/008-import-script` at e5dd018 (test-only changes, plus the Verification and Responses text)
+
+**Tests:**
+
+Locally (worktree): the offline suite, typecheck, lint and schema drift are unchanged from round 2 and clean.
+
+CI on the pushed branch ([run 40958324796](https://github.com/badjatya/IPO/actions/runs/40958324796)): `web` and `tests` passed; **`db` failed, 1 of 26**:
+
+```text
+ ✓ tests/db/schema-shape.test.ts (7 tests)
+ ✓ tests/db/schema-rules.test.ts (8 tests)
+ × rebuilds twice to identical counts that match the repo's own files 180007ms
+ ✓ leaves app tables alone through a rebuild 109627ms
+ ✓ spot-checks a snapshot, zetwerk's card, analysis and latest verdict, an override and an outcome
+ ✓ import: per-commit runs against a temp repo (6)   c, d, e, g, h, i all pass
+ ✓ import: CLI (2)
+Error: Test timed out in 180000ms.
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 25 passed (26)
+```
+
+Findings 8, 9 and 10 are fixed: the expected counts parse only JSON, a `beforeEach` resets the research tables and `imports`, and test (g) filters on `ipo_key` and really re-applies the analysis. Every temp-repo test now passes. #11 was recorded as a follow-up, but it is what keeps the suite red now (#12).
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 12 | Major | `web/tests/db/import.test.ts:135-146` (test a, 180 s timeout); `web/lib/import/apply.ts` (`upsertIpos`, the verdict and outcome loops, `rebuild`) | One whole-repo rebuild takes about **110 s** on CI (test b: 109.6 s). Test (a) runs two, needs about 220 s, and hits its 180 s timeout, so the `db` job is red and the branch can't merge. This is #11 come due. The time goes on one awaited statement per row over the WebSocket: an `ipos` upsert per snapshot entry (277), a verdict upsert per entry (143), an outcome upsert per row, plus a `git log` process per file. It also grows with every routine run, so a timeout raised just past today's figure fails again later. | Batch the statements, then set the timeout from a measured time with headroom. **(1)** One multi-row upsert per file: for `ipos`, `set` each fact column to `coalesce(excluded.<col>, ipos.<col>)`, which keeps the present-and-non-null merge (keys are unique within a snapshot), plus `updated_at = excluded.updated_at`; for verdicts, one statement per report; for outcomes, one statement. **(2)** In `rebuild`, get every path's last commit from a single `git log --format=%H --name-only` pass instead of a process per file. **(3)** Put the measured rebuild time in Verification, and give test (a) (and b) a timeout of a few times that. If (1) and (2) can't be done in this step, raising the timeouts alone (for example to 600 s) is acceptable for this task, as long as the measured per-rebuild time is recorded and #11 stays a follow-up for 009. |
+
+### Plan and docs
+
+- No other findings. The code, the docs and the Changes-during-build list match.
+- This is the **third code-review round without approval**, so `/run-task` stops here for the human. The open item is #12 only: everything else in the import passes on a real Neon branch.
+
+## Responses (DeepSeek)
+
+| # | Response | Commit |
+| --- | --- | --- |
+| 12 | Fixed, with one deliberate deviation. **Batched:** a whole report's verdicts now upsert in one statement and the whole of `data/outcomes.json` in one — `commonReplacedSet` builds the per-conflicting-row SET (`excluded.<col>`; nulls for columns no row carries; `coalesce` for a NOT NULL column some rows carry) that the per-row `replacedSet` it replaces produced, verified by new offline unit tests. **Single git-log pass:** `rebuild` gets every path's last commit from one `git log --name-only` (`lastCommitsTouching`), tested equal to the per-file results on the temp repo. **Timeouts:** tests (a) and (b) (the two that run whole-repo rebuilds) are raised to 600 s. Per-rebuild statements drop ~550 → ~430, plus 54 fewer git processes. **Deviation — `ipos` stays one statement per row:** a common `coalesce(excluded.<col>, ipos.<col>)` SET assumes an absent column's excluded value is null, but Drizzle fills a cell a row lacks with the SQL `default` keyword, so the excluded value is the column's *evaluated default* — which is exactly null for every `ipos` fact column except `anchor_done` (NOT NULL, default `false`). A later snapshot entry carrying `anchor_done: null` (many of the repo's entries do) would then silently reset a previously true value, breaking the documented present-and-non-null merge (db.md § `ipos`). "Keep old when absent" for a NOT NULL defaulted column is inexpressible in one `INSERT ... ON CONFLICT` statement; an exact batch (one INSERT + one UPDATE-from-VALUES merge) stays the #11 follow-up. The measured per-rebuild time can't be produced here (the db suite refuses without the Neon secrets); CI's vitest prints each test's duration, so it goes into plan.md Verification with the next `db` run — the 600 s timeouts are several times even the old ~110 s figure, so the red job should go green without leaning on today's exact number | `46461d4`, `0082f00` |
+
+## Round 4 (2026-10-30)
+
+**Verdict:** Changes requested
+
+**Diff:** `git diff 4ca4f2e..task/008-import-script` at `b3d76f3`. That covers round 3's response (`46461d4`, `0082f00`, `3194123`, `b45b505`) and the merge of main (task 010) in `b3d76f3`, which renumbered the `shareholder` migration to `0004_daily_thunderbolts.sql` (still the same single `ALTER TYPE … ADD VALUE 'shareholder' BEFORE 'total'`).
+
+**Tests:**
+
+Database suite, run locally by the human at `b3d76f3` on a throwaway Neon branch:
+
+```text
+test:db using branch br-autumn-sun-a1leihog (db-test-1793333677153)
+[✓] migrations applied successfully!
+ RUN  v5.0.5 /Users/badjatya/Developer/IPO/.worktrees/008-import-script/web
+ Test Files  4 passed (4)
+      Tests  43 passed (43)
+   Start at  09:44:52
+   Duration  146.69s (tests 99%, import 1%)
+test:db deleted branch br-autumn-sun-a1leihog
+```
+
+Offline, run by Claude in the worktree at `b3d76f3`:
+
+```text
+$ npm test                        Test Files 19 passed (19) · Tests 133 passed (133)
+$ npm run typecheck               exit 0
+$ npm run lint                    exit 0
+$ npx --no-install drizzle-kit generate
+No schema changes, nothing to migrate 😴
+$ python3 -m unittest discover -s tests
+Ran 376 tests in 0.604s
+OK
+```
+
+**#12 is fixed.** The whole db suite, including test (a)'s two whole-repo rebuilds and test (b)'s one, finished in 147 s. So a rebuild takes at most about 49 s from this machine, far inside the new 600 s timeouts. Verdicts and outcomes upsert in one statement per file, and `lastCommitsTouching` replaces the per-file `git log` processes. The reason `ipos` stays one statement per row (`anchor_done` is NOT NULL with a default, so a batched `coalesce(excluded…)` would reset it) is sound and documented. After the merge, the migrations build an empty branch with both `0003` (010) and `0004` (008).
+
+### Findings
+
+| # | Severity | Where | Problem (what breaks, and when) | Suggested fix |
+| --- | --- | --- | --- | --- |
+| 13 | Major | `web/lib/import/run.ts:66-86`; `docs/db.md:518` and `:557` | **A bad commit blocks the import for good, even after a later commit fixes the file.** Each commit is read exactly as it was committed, so a failed commit stays failed. Say the routine commits a malformed card in commit N and fixes it in N+1. Every later run resumes from N−1, retries N, fails on N's own unchanged content, and stops before reaching N+1. Nothing imports again until someone runs `npm run import -- --rebuild` by hand. History on main is never rewritten, so the `--amend` route that test (c) uses doesn't exist in practice. db.md contradicts itself here: line 518 says a commit that failed "after its files were fixed imports on a later run", which isn't true, while line 557 admits it "keeps failing while it stays on main". With the 009 Action this means a push-triggered import that silently stops for days. Also, `rebuild()` records nothing in `imports` when it throws (`run.ts:41-44`, `:55-61`), so a failed rebuild leaves no `failed` row behind. | In the default mode, when the first commit to import already has a `failed` row and HEAD is a newer commit, run the rebuild at HEAD instead of retrying it, and log why ("commit X failed before; HEAD has moved on, so rebuilding from HEAD"). HEAD's tree has the fixed files, and the rebuild is the tested way to converge on git. A commit that fails for the first time, or that is HEAD itself, still retries as it does now, so transient failures behave the same. When a rebuild throws, record a `failed` row for HEAD with the error in its own small transaction, as `importCommit` does. **Tests:** a temp-repo test where commit B has a malformed card (the run fails with a `failed` row for B), commit C fixes the card on top, and the next default run succeeds. Assert that C's card and B's good snapshot are both in the database and that HEAD (C) has an `ok` row. Add a test that a rebuild failure records a `failed` row for HEAD. **Docs:** correct db.md line 518, and replace the "(or the history is rewritten …)" clause on line 557 with the fallback. Keep test (c) as it is: it still covers the ok-over-failed upsert. |
+| 14 | Minor | `docs/tasks/008-import-script/plan.md` § Verification | Round 3's response said the measured rebuild time would go into Verification with the next `db` run. It's still the "can't run here" note. | Paste the db-suite run above into Verification (43/43 in 146.69 s at `b3d76f3`, three whole-repo rebuilds within it, so at most about 49 s each locally). Note that 009's first CI run should record the runner's figure. |
+
+### Plan and docs
+
+- Round 3's response is built as described, and its deviation (`ipos` per row) is recorded in Changes during build 8.
+- The merge resolved `tech.md` by keeping both the import-script row and 010's Better Auth rows. db.md's import sections came through intact, apart from the contradiction in #13.
+- **Process:** this round is the fourth. The human asked for it after round 3 hit the three-round stop. It was written by the session that ran the plan reviews and the build, after the human ran the db suite locally.
+
+## Responses (DeepSeek)
+
+| # | Response | Commit |
+| --- | --- | --- |
+| 13 | Fixed. The default command no longer retries a failed commit forever: in default mode, when the first commit to import already has a `failed` row and HEAD is a newer commit, it logs "commit X failed before; HEAD has moved on, so rebuilding from HEAD" and runs the rebuild at HEAD instead — HEAD's tree holds the fixed files. A commit that fails for the first time, or one that is HEAD itself, still retries, so transient failures behave exactly as before (and test (c) still covers the ok-over-failed upsert, because there the fixed commit is HEAD). The rebuild now records a `failed` row for HEAD when it throws (`rebuildRecordingFailure` in `run.ts`, its own small transaction with the advisory lock, like `importCommit`), so a failed rebuild is visible in `imports`, not just on the exit code. New db tests: (j) commit B has a malformed card (failed row for B), commit C fixes the card on top *without* rewriting history, and the next default run succeeds — C's card and B's good snapshot are both in the database, HEAD (C) has an `ok` row, and the CLI logs the rebuild fallback; (k) a rebuild against a HEAD with a malformed card exits non-zero and leaves a `failed` row for HEAD with the error and a null `finished_at`. db.md's two "after its files were fixed" claims (the `imports` section, and the "(or the history is rewritten ...)" clause in Failure and retry) are corrected to the fallback, and the stale claims in plan.md's Approach, Data-quality handling and Risks are updated too; plan.md's Changes during build gains entry 9. Offline checks rerun (Verification): 19 files / 133 tests, typecheck, lint and schema drift clean, 376 python tests | `5ecaa31`, `e4b14c5` |
+| 14 | Fixed. plan.md Verification now carries the db-suite run you pasted: 4 files / 43 tests passed in 146.69 s on the throwaway branch at `b3d76f3`, i.e. at most about 49 s per whole-repo rebuild (test (a)'s two plus test (b)'s one) — far inside the 600 s timeouts — with a note that 009's first CI run should record the runner's own figure. The suite grows by the two new tests (j) and (k) to 45; their proof is the next CI `db` run | `e4b14c5` |
