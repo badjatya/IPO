@@ -518,3 +518,17 @@ One entry per working session: what we asked the AI to do, what it did, what a h
 - **Learned:**
   - A review can't approve database code on offline tests; push the branch early so the `db` job runs in round 1.
   - Test frameworks set environment flags that libraries read. When a security check "passes" in tests, assert that it is switched on.
+
+### 2026-10-30: Task 013, admin settings page
+
+- **Asked:** run 013 after 010's merge. The human then asked Claude to merge whatever was merge-ready.
+- **Rounds:** two plan rounds and one code round, approved with one minor finding and two nits. The steps' DeepSeek cost wasn't recorded in the task files.
+- **Human decisions:** none. The plan listed D08 as a decision; review moved it out, because db.md already says the cap has no row until D08.
+- **AI did:**
+  - DeepSeek planned and built the known-keys validator, the admin settings page and `GET`/`POST /api/admin/settings`, and offline tests plus a Neon block.
+  - Claude reviewed the plan and code, pushed the branch for CI's `db` job (run 40961622654, green) and merged it.
+- **Notable findings:**
+  - **Shared rate-limit bucket.** With no client IP in the harness, every test sign-in shares one bucket of 10 per 15 minutes. A new block's own sign-ins would have pushed 010's rate-limit test over the edge, so the settings block reuses the existing cookies.
+  - **Number inputs post strings.** The validator refuses `"5"`; the page converts with `Number(...)`, and the test asserts the posted type.
+  - **Palette colour.** Both admin pages use `text-emerald-600` for success, against design.md; left as a follow-up under 024.
+- **Learned:** a test harness with one shared rate-limit bucket is a budget every later test spends; plans must say what they add to it.

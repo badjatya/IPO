@@ -1,6 +1,7 @@
 import { spawnSync } from "node:child_process";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { POST as adminInvite } from "@/app/api/admin/invite/route";
+import { GET as adminSettingsGet, POST as adminSettingsPost } from "@/app/api/admin/settings/route";
 import { getAuth } from "@/lib/auth";
 import { sql } from "@/lib/db";
 
@@ -117,8 +118,29 @@ async function invite(email: string, cookie: string, origin = BASE): Promise<{ s
   return { status: res.status, json: await res.json().catch(() => null) };
 }
 
+/** The app's admin settings route, with the session cookie (Origin on POST). */
+async function settingsApi(
+  method: "GET" | "POST",
+  cookie: string,
+  body?: unknown,
+  origin = BASE,
+): Promise<{ status: number; json: unknown }> {
+  const headers: Record<string, string> = { cookie };
+  if (body !== undefined) headers["content-type"] = "application/json";
+  if (method === "POST") headers.origin = origin;
+  const init: RequestInit = { method, headers };
+  if (body !== undefined) init.body = JSON.stringify(body);
+  const request = new Request(`${BASE}/api/admin/settings`, init);
+  const res = method === "GET" ? await adminSettingsGet(request) : await adminSettingsPost(request);
+  return { status: res.status, json: await res.json().catch(() => null) };
+}
+
 // Shared across the file's tests, filled in order (vitest runs them serially).
+// userCookie is minted by the role-check test and reused by the admin settings
+// block — 013's block adds no sign-in calls, because every /sign-in/email call
+// shares one database bucket (10 per 15 minutes, no client IP, D11 open).
 let adminCookie = "";
+let userCookie = "";
 
 afterEach(() => {
   vi.restoreAllMocks();
@@ -353,23 +375,111 @@ describe("accounts on a real branch", () => {
   });
 
   it("role check: a signed-in user's invite is refused, the admin's succeeds (guards are layered)", async () => {
-    const userCookie = await signInCookie("invite-user@example.com", "FreshPass1");
+    // The session is also kept file-wide as `userCookie` for the admin settings
+    // block below, so that block needs no sign-in of its own (013 plan step 4).
+    userCookie = await signInCookie("invite-user@example.com", "FreshPass1");
     expect((await invite("blocked@example.com", userCookie)).status).toBe(403);
     expect((await invite("blocked@example.com", "")).status).toBe(401);
     expect((await invite("role-check@example.com", adminCookie)).status).toBe(200);
   });
 
+  describe("admin settings on a real branch", () => {
+    // Sits between the role-check test and the rate-limit test (which must
+    // stay last). Adds no sign-in calls: it reuses `adminCookie` and the
+    // `userCookie` the role-check test minted, and every /sign-in/email call
+    // shares one database bucket (10 per 15 minutes, no client IP — D11 open).
+    it("an admin lists exactly the three seeded rows with descriptions and no updater", async () => {
+      const r = await settingsApi("GET", adminCookie);
+      expect(r.status).toBe(200);
+      const rows = (r.json as {
+        settings: Array<{ key: string; value: number; description: string; updatedBy: unknown; updatedByEmail: unknown }>;
+      }).settings;
+      expect(rows.map((row) => [row.key, row.value])).toEqual([
+        ["analysis_monthly_limit_per_user", 3],
+        ["analysis_refresh_after_days", 30],
+        ["ask_daily_limit_per_user", 5],
+      ]);
+      for (const row of rows) {
+        expect(row.description).toBeTruthy();
+        expect(row.updatedBy).toBeNull(); // seeded: null, per db.md
+        expect(row.updatedByEmail).toBeNull();
+      }
+    });
+
+    it("an admin edits a value; the row records the admin's id and a fresh updated_at", async () => {
+      const adminId = (await sql()`select id from users where email = 'admin@example.com'`) as { id: string }[];
+      expect(adminId).toHaveLength(1);
+
+      const saved = await settingsApi("POST", adminCookie, { key: "ask_daily_limit_per_user", value: 7 });
+      expect(saved.status).toBe(200);
+      expect(saved.json).toMatchObject({
+        ok: true,
+        settings: { key: "ask_daily_limit_per_user", value: 7, updatedBy: adminId[0].id },
+      });
+
+      const row = (await sql()`select value, updated_by, (updated_at > now() - interval '5 minutes') as fresh
+          from settings where key = 'ask_daily_limit_per_user'`) as {
+        value: number;
+        updated_by: string;
+        fresh: boolean;
+      }[];
+      expect(row).toHaveLength(1);
+      expect(row[0]).toEqual({ value: 7, updated_by: adminId[0].id, fresh: true });
+    });
+
+    it("refuses bad values and unknown keys with 400 and leaves the row unchanged", async () => {
+      const attempts = [
+        { key: "analysis_refresh_after_days", value: -1 },
+        { key: "analysis_refresh_after_days", value: 0.5 },
+        { key: "analysis_refresh_after_days", value: "30" },
+        { key: "not_a_real_key", value: 1 },
+      ];
+      for (const body of attempts) {
+        const r = await settingsApi("POST", adminCookie, body);
+        expect(r.status).toBe(400);
+      }
+      const row = (await sql()`select value from settings where key = 'analysis_refresh_after_days'`) as { value: number }[];
+      expect(row[0].value).toBe(30); // untouched by the refusals
+    });
+
+    it("refuses the row-less platform-cap key with 404 and no row appears (the gate stays closed)", async () => {
+      // analysis_daily_limit_platform is a known key with no row (D08 open);
+      // the route is update-only, so this must 404 and create nothing.
+      const r = await settingsApi("POST", adminCookie, { key: "analysis_daily_limit_platform", value: 10 });
+      expect(r.status).toBe(404);
+      const count = (await sql()`select count(*)::int as n from settings where key = 'analysis_daily_limit_platform'`) as {
+        n: number;
+      }[];
+      expect(count[0].n).toBe(0);
+    });
+
+    it("refuses a signed-in non-admin on both handlers", async () => {
+      expect(userCookie).not.toBe("");
+      expect((await settingsApi("GET", userCookie)).status).toBe(403);
+      expect((await settingsApi("POST", userCookie, { key: "ask_daily_limit_per_user", value: 5 })).status).toBe(403);
+    });
+
+    it("refuses a forged-Origin POST even with an admin session", async () => {
+      const r = await settingsApi("POST", adminCookie, { key: "ask_daily_limit_per_user", value: 5 }, "https://evil.example");
+      expect(r.status).toBe(403);
+      const row = (await sql()`select value from settings where key = 'ask_daily_limit_per_user'`) as { value: number }[];
+      expect(row[0].value).toBe(7); // the earlier edit is untouched
+    });
+  });
+
   it("scoping: each session token resolves only to its own user", async () => {
     const adminSession = await api("GET", "/api/auth/get-session", { cookie: adminCookie });
     expect((adminSession.json as { user: { email: string } }).user.email).toBe("admin@example.com");
-    const userCookie = await signInCookie("reinvite@example.com", "Reinvite1");
-    const userSession = await api("GET", "/api/auth/get-session", { cookie: userCookie });
+    // Local name only: the file-level `userCookie` (role-check test) is the
+    // admin settings block's non-admin session.
+    const scopingCookie = await signInCookie("reinvite@example.com", "Reinvite1");
+    const userSession = await api("GET", "/api/auth/get-session", { cookie: scopingCookie });
     expect((userSession.json as { user: { email: string } }).user.email).toBe("reinvite@example.com");
     expect((userSession.json as { user: { role?: string } }).user.role).toBe("user");
     // A cross-run through the invite surface with a user cookie is refused
     // above; here the cookie tokens themselves key to their own users.
     const adminToken = tokenOf(adminCookie);
-    const userToken = tokenOf(userCookie);
+    const userToken = tokenOf(scopingCookie);
     expect(adminToken).not.toBe(userToken);
     expect(await sessionOwnerEmail(adminToken)).toBe("admin@example.com");
     expect(await sessionOwnerEmail(userToken)).toBe("reinvite@example.com");

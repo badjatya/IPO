@@ -501,6 +501,8 @@ Seeded rows:
 
 New settings are added as new rows, plus an entry in the app's list of known keys. No schema change is needed.
 
+The admin settings page (013, Running) lists every row and edits one at a time through `web/app/admin/settings/page.tsx` and `GET/POST /api/admin/settings` (admin role only via `requireAdmin`; POST also checks `Origin` — the app's own routes are outside Better Auth's origin check, arch § 7.1). Every write is validated against the known-keys list in `web/lib/settings.ts` — a whole number at or above the key's bound — and records `updated_by` and `updated_at`. A new setting (like the D08 cap row) is seeded with its code change and then editable like the rest.
+
 **One tier in phase 1.** There are no payments and no paid plans in phase 1, so every user gets the same limits from these rows. There are no plan, subscription or billing tables, and no per-user overrides.
 
 ### `imports`

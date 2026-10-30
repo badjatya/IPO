@@ -61,7 +61,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [010](#010--accounts) | Accounts: invite-only sign-in, roles | 2 | 007, D04 | Done |
 | [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | Blocked |
 | [012](#012--track-record-page) | Track record page | 2 | 008, D06 | Blocked |
-| [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | **Ready** |
+| [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | Done |
 | [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | Done |
 | [015](#015--stock-universe) | Stock universe | 2 | 008, 014 | Blocked |
 | [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | Done |
@@ -102,7 +102,7 @@ flowchart LR
         T010[010 accounts]:::done
         T011[011 IPO pages]
         T012[012 track record]
-        T013[013 admin settings]
+        T013[013 admin settings]:::done
     end
     subgraph stocks ["Weeks 2–3: stock side"]
         T014[014 stock fetchers]:::done
@@ -471,7 +471,7 @@ Every IPO call against how it listed, from `ipo_outcomes`: a per-IPO table, the 
 | | |
 | --- | --- |
 | Slug | `013-admin-settings` |
-| Status | Ready |
+| Status | Done |
 | Depends on | 010 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -481,6 +481,7 @@ An admin-only page that lists the `settings` rows and edits one at a time. Each 
 - **Done when:** an admin can change a value; a bad value is refused; a non-admin gets 403; tests cover all three.
 - **From 010:** guard the page and its route with `requireAdmin` and `assertSameOrigin` from `web/lib/auth-guard.ts`; the app's own routes are outside Better Auth's origin check. The admin layout (`web/app/admin/layout.tsx`) already checks the session and role for every `/admin/*` page. The Neon tests' `api()` helper in `web/tests/db/auth.test.ts` shows how to sign in and send `Origin` in tests.
 - **Read:** [db.md § settings](../db.md#settings), [AGENTS.md](../../AGENTS.md) rule 6.
+- **Built (merged 2026-10-30):** `/admin/settings` and `GET`/`POST /api/admin/settings`, guarded by `assertSameOrigin` then `requireAdmin`. It edits one existing row at a time, checked against the known-keys list in `web/lib/settings.ts` (db.md's four keys and lower bounds, no coercion), and records `updated_by` and `updated_at`. The D08 cap stays row-less (404). A row with an unknown key shows read-only. Offline tests plus a Neon block in `web/tests/db/auth.test.ts` that adds no sign-in calls; CI run 40961622654 passed.
 - **Start:** `/run-task 013`
 
 ## Weeks 2–3: the stock side
@@ -725,6 +726,7 @@ A question box on IPO and stock pages, answered by Gemini from the stored card, 
 A full pass over user scoping, CSRF, rate limits, secrets, the dispatch token's scope, prompt injection through documents, and user identity in prompts.
 
 - **Done when:** every Blocker and Major finding is fixed and tested; `arch.md § 7.1` matches what's built.
+- **From 013:** the admin invite and settings pages show success in `text-emerald-600`, a Tailwind palette colour that design.md's rules don't allow. Add a success token (or plain text) for both, here or in the first page task that needs a success colour.
 - **Start:** the human asks Claude for the review, then `/run-task 024` once the findings file is in the repo.
 
 ### 025 · Hosting, environments and backups

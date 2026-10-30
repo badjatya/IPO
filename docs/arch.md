@@ -197,7 +197,7 @@ Scheduled runs also take any jobs still queued.
 | Ask | Question box on IPO and stock pages | Gemini API; 5 questions a day per person ([ai.md](ai.md#in-app-ai-ask)) |
 | Accounts | Sign-in, admin invites, password reset | Running. Better Auth, email and password; no public sign-up. The admin invites each user and Resend sends the set-password link; forgot-password and invite are one token mechanism with a 24-hour expiry; one-time links work once and expire ([ADR-0028](adr/0028-better-auth-invite-only.md), [ADR-0030](adr/0030-first-admin-bootstrap.md)) |
 | Alerts | Shown on the watchlist and stock pages | In the app only; no alert emails |
-| Admin | Settings page (admin role only) | Edits [`settings`](db.md#settings): quotas and caps |
+| Admin | Settings page (admin role only) | Running. Lists every [`settings`](db.md#settings) row and edits one at a time through `web/app/admin/settings/page.tsx` and `GET/POST /api/admin/settings`; POST validates against the known-keys list in `web/lib/settings.ts` and records `updated_by`/`updated_at` |
 | Worker dispatch | Server-side call to start the stock worker | Token in the app's environment only; sends no user text |
 
 ## 5. Runtime flows
