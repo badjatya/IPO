@@ -532,3 +532,25 @@ One entry per working session: what we asked the AI to do, what it did, what a h
   - **Number inputs post strings.** The validator refuses `"5"`; the page converts with `Number(...)`, and the test asserts the posted type.
   - **Palette colour.** Both admin pages use `text-emerald-600` for success, against design.md; left as a follow-up under 024.
 - **Learned:** a test harness with one shared rate-limit bucket is a budget every later test spends; plans must say what they add to it.
+
+### 2026-10-30: Task 008, import script
+
+- **Asked:** the human asked Claude to start task 008 with `/run-task 008`, then, after the fourth code round, to accept DeepSeek's last step as it was and merge.
+- **Rounds:**
+  - Two plan rounds and four code rounds. Rounds 1–3 of the code review were written by a second Claude session, which the human had asked to take over if the first one stalled; the first had stopped on a question to the human.
+  - DeepSeek's eight steps cost $0.49.
+  - The human installed `tsx` and ran the Neon-branch suite locally (43 of 43 at `b3d76f3`).
+- **Human decisions:** `shareholder` added to the `sub_category` enum; `tsx` as the CLI runner. Both times the recommended option.
+- **AI did:**
+  - DeepSeek planned and built the import: git helpers, five parsers, the apply and run layers, the CLI, the migration, and offline and Neon-branch tests.
+  - Claude checked the plan against the repo's actual files and history before reviewing it, and reviewed each step.
+- **Notable findings:**
+  - **Plan, from the data.** Six snapshot entries use a `shareholder` subscription category that the enum lacked, so the import would have failed on today's files. Four `ipos` columns that the snapshots carry were missing from db.md's mapping.
+  - **Plan, from git.** Reading files from the working tree would have stored later content under an earlier commit. `git show --name-only` on a merge lists only conflicted paths. One routine commit (`77b5ed5`) reached main only through a merge.
+  - **Plan, from CI.** Tests pinned to commit shas would fail in CI's shallow clone, so they build a temp repo from copies of real files instead.
+  - **Code.** The first build never ran its database suite, and the suite failed on every import test (timestamps passed as strings, an empty `values([])`, path order instead of FK order). Later rounds found test bugs and a rebuild too slow for the 180 s timeout.
+  - **Design.** Importing each commit exactly as committed means one bad commit blocks every later run, because a later fix can't change it. Round 4 asked for a rebuild fallback. It was merged before that response was reviewed.
+- **Learned:**
+  - Run the plan's claims against the real files and `git log` before approving. Most plan findings came from the data, not the docs.
+  - "Per-commit and immutable" needs a recovery path, or one bad file stops the pipeline.
+  - Check `ListAgents` and the branch log before writing a review round; another session may already own the task.

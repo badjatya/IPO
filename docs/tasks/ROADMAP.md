@@ -56,14 +56,14 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [005](#005--figures-check) | Figures check (₹ figures vs RHP text) | 1 | 001, 002 | Done |
 | [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | Done |
 | [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Done |
-| [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | **Ready** |
+| [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | Done |
 | [009](#009--import-action) | Import Action on push | 2 | 002, 008, H02 | Blocked |
 | [010](#010--accounts) | Accounts: invite-only sign-in, roles | 2 | 007, D04 | Done |
-| [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | Blocked |
-| [012](#012--track-record-page) | Track record page | 2 | 008, D06 | Blocked |
+| [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | **Ready** |
+| [012](#012--track-record-page) | Track record page | 2 | 008, D06 | **Ready** |
 | [013](#013--admin-settings-page) | Admin settings page | 2 | 010 | Done |
 | [014](#014--nse-stock-fetchers) | NSE stock fetchers | 2 | 003, D09 | Done |
-| [015](#015--stock-universe) | Stock universe | 2 | 008, 014 | Blocked |
+| [015](#015--stock-universe) | Stock universe | 2 | 008, 014 | **Ready** |
 | [016](#016--change-detection-and-alert-rules) | Change detection and alert rules | 3 | 014, D10 | Done |
 | [017](#017--watchlist) | Watchlist | 3 | 010, 015 | Blocked |
 | [018](#018--stock-worker-scheduled-numbers-and-alerts) | Stock worker, scheduled: numbers and alerts | 3 | 007, 014, 015, 016, G1, H02 | Blocked |
@@ -97,16 +97,16 @@ flowchart LR
     subgraph wk2 ["Week 2: web app, IPO side"]
         T006[006 scaffold]:::done
         T007[007 schema]:::done
-        T008[008 import script]:::ready
+        T008[008 import script]:::done
         T009[009 import Action]
         T010[010 accounts]:::done
-        T011[011 IPO pages]
-        T012[012 track record]
+        T011[011 IPO pages]:::ready
+        T012[012 track record]:::ready
         T013[013 admin settings]:::done
     end
     subgraph stocks ["Weeks 2–3: stock side"]
         T014[014 stock fetchers]:::done
-        T015[015 stock universe]:::m2
+        T015[015 stock universe]:::ready
         T016[016 alert rules]:::done
         T017[017 watchlist]:::m2
         T018[018 worker: scheduled]:::m2
@@ -384,7 +384,7 @@ Every table, enum and index in [db.md](../db.md), written as versioned migration
 | | |
 | --- | --- |
 | Slug | `008-import-script` |
-| Status | **Ready** |
+| Status | Done |
 | Depends on | 007 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -396,6 +396,21 @@ The script that turns the repo's research files into rows. It reads snapshots, c
 - **Watch for:** the import runs outside `ipo_agent/`, which has no Postgres driver ([tech.md](../tech.md#repository-layout) puts it in `web/`).
 - **Read:** [db.md § Import and rebuild](../db.md#import-and-rebuild), [arch.md § 4.3](../arch.md#43-import-action-decided).
 - **Start:** `/run-task 008`
+- **Result:** merged 2026-10-30, by Claude at the human's request. Two plan rounds and four code rounds; DeepSeek's eight steps cost $0.49.
+  - **Human decisions:** `shareholder` joins the `sub_category` enum (six committed snapshot entries carry it), and `tsx` runs the CLI.
+  - **What it adds:**
+    - `web/lib/import/`: git helpers (first-parent walk, per-commit diffs against the first parent, reads from git objects, never the working tree), the file classifier, one parser per file kind, and the apply and run layers
+    - `npm run import` (one transaction per commit after the last `ok` row; rebuilds when there's nothing to resume from) and `npm run import -- --rebuild`; CLI `web/scripts/import.ts`
+    - `poolDb()` / `closePool()` in `web/lib/db.ts`: Neon's WebSocket `Pool`, for the import's transactions ([ADR-0025](../adr/0025-drizzle-on-neon-serverless-driver.md))
+    - migration `0004`: `shareholder` on `sub_category`
+    - temp-repo git tests built from copies of real files, parser tests, and the Neon-branch import suite (`web/tests/db/import.test.ts`)
+    - db.md: the four missing `ipos` mapping rows (`rhp_url`, `rhp_source`, `investorgain_url`, `anchor_done`), § Import and rebuild marked Running
+  - **Packages:** `tsx` as a dev dependency (installed by the human).
+  - **Verification:** the human ran `npm run test:db` locally at `b3d76f3`: 43 of 43 passed in 147 s, three whole-repo rebuilds included.
+  - **Merged with open items** (the human: "accept it and we will see this later"):
+    - **Round 4's response is unreviewed.** `5ecaa31`, `e4b14c5` and `2f25dc7` add the failed-commit fallback (code-review #13: when the first commit to import already failed and HEAD has moved on, the default run rebuilds at HEAD; a failed rebuild records a `failed` row). Its tests (j) and (k) haven't run on a Neon branch yet. The first `db` CI run on `main` should show them.
+    - **Plan wording.** That step also edited the approved plan's Approach, Data-quality and Risks text (the driver stopped it with exit 3). The human accepted the wording.
+    - **`ipos` upserts** stay one statement per row (#11 follow-up): a batched `coalesce(excluded…)` would reset `anchor_done`.
 
 ### 009 · Import Action
 
@@ -408,6 +423,8 @@ The script that turns the repo's research files into rows. It reads snapshots, c
 | Milestone | M1 |
 
 A GitHub Actions workflow that runs the import on every push to `main` that touches `analysis/`, `reports/` or `data/`.
+
+- **From 008:** the script is `npm run import` in `web/` (`DATABASE_URL` in the environment). The checkout needs `fetch-depth: 0` for the first-parent walk and per-commit reads. The script takes a Postgres advisory lock per transaction, but the workflow still needs its own concurrency group. A whole-repo rebuild took under about 50 s locally; record the runner's figure on the first run.
 
 - **Done when:** a push imports the new commit; a failed run retries from the last imported commit; two quick pushes can't race (one concurrency group); `arch.md` marks the import Action as Running.
 - **Read:** [arch.md § 4.3 and § 5.2](../arch.md#43-import-action-decided).
@@ -436,7 +453,7 @@ Invite-only accounts with Better Auth ([ADR-0028](../adr/0028-better-auth-invite
 | | |
 | --- | --- |
 | Slug | `011-ipo-pages` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 006, 008, D06 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -454,7 +471,7 @@ Invite-only accounts with Better Auth ([ADR-0028](../adr/0028-better-auth-invite
 | | |
 | --- | --- |
 | Slug | `012-track-record` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 008, D06 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M1 |
@@ -527,7 +544,7 @@ Fetchers and parsers for the endpoints confirmed in 003: quote, quarterly result
 | | |
 | --- | --- |
 | Slug | `015-stock-universe` |
-| Status | Blocked |
+| Status | **Ready** |
 | Depends on | 008, 014 |
 | Owner | DeepSeek plans and builds |
 | Milestone | M2 |
@@ -537,6 +554,7 @@ Load NSE's list of listed equities into `stocks` (symbol, ISIN, name, industry, 
 - **Done when:** the import fills `stocks` from the file; IPOs that listed are linked to their stock; tests use the 003 fixture.
 - **From 003:** `EQUITY_L.csv` has no industry and no active flag, and its header has spaces after the commas.
 - **Watch for:** the stocks list is what the watchlist and the worker check symbols against ([arch.md § 7.1](../arch.md#71-security-and-trust-boundaries)). How often it refreshes is for the plan to propose (likely inside 018).
+- **From 008:** extend the classifier, the apply layer and the rebuild's table list (`web/lib/import/`) for the `data/stocks/` file. Today the rebuild deletes only the eight IPO tables, and `DELETE FROM ipos` will fail once `stocks.ipo_key` references a row, so the rebuild has to handle `stocks` first.
 - **Read:** [db.md § stocks](../db.md#stocks), [ADR-0011](../adr/0011-git-as-the-hand-off.md).
 - **Start:** `/run-task 015`
 
