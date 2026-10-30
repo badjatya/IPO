@@ -57,7 +57,7 @@ If M2 slips, deploy the M1 cut (task 025 right after 013) and submit that.
 | [006](#006--web-app-scaffold) | Web app scaffold | 2 | 002, D01, D02, D05, D07 | Done |
 | [007](#007--database-schema-and-migrations) | Database schema and migrations | 2 | 006, D03, H01, H06 | Done |
 | [008](#008--import-script-git-to-database) | Import script: git → database | 2 | 007 | Done |
-| [009](#009--import-action) | Import Action on push | 2 | 002, 008, H02 | **Ready** (H02 not done yet; see the task) |
+| [009](#009--import-action) | Import Action on push | 2 | 002, 008, H02 | Ready |
 | [010](#010--accounts) | Accounts: invite-only sign-in, roles | 2 | 007, D04 | Done |
 | [011](#011--ipo-pages) | IPO pages: Today and IPO detail | 2 | 006, 008, D06 | **Ready** |
 | [012](#012--track-record-page) | Track record page | 2 | 008, D06 | **Ready** |
@@ -173,7 +173,7 @@ Accounts and secrets that only the human can create. Values never go into git ([
 | ID | Step | Needed by | Done |
 | --- | --- | --- | --- |
 | H01 | Create the Neon project and a development branch; put `DATABASE_URL` in the local environment. Done 2026-10-29: project `dark-field-33023581`, branches `production` (default) and `dev`; `neon checkout dev` in `web/` writes `web/.env.local` | 007 | [x] |
-| H02 | Add `DATABASE_URL` as a GitHub Actions secret (for the import Action and the stock worker). **Not done yet** (2026-10-30): the human will add it later. 009 may be built before it; 009's first real run and 018's build need it | 009, 018 | [ ] |
+| H02 | Add `DATABASE_URL` as a GitHub Actions secret (for the import Action and the stock worker). Done 2026-10-30: the pooled URL of the Neon `production` branch (`br-small-snow-a1mxr62e`, database `neondb`). Whether `production` has the migrations applied is unchecked; 009's first real run needs them | 009, 018 | [x] |
 | H03 | Create the Gemini API key in AI Studio; add `GEMINI_API_KEY` to the local environment and as an Actions secret | 020, 023 | [ ] |
 | H04 | Create a fine-grained `GITHUB_DISPATCH_TOKEN` that can only dispatch the stock worker workflow | 022 | [ ] |
 | H05 | Create the host account and set its environment: `DATABASE_URL`, `GEMINI_API_KEY`, `AUTH_SECRET`, `RESEND_API_KEY`, `EMAIL_FROM`, `GITHUB_DISPATCH_TOKEN` | 025 | [ ] |
@@ -426,7 +426,7 @@ A GitHub Actions workflow that runs the import on every push to `main` that touc
 
 - **From 008:** the script is `npm run import` in `web/` (`DATABASE_URL` in the environment). The checkout needs `fetch-depth: 0` for the first-parent walk and per-commit reads. The script takes a Postgres advisory lock per transaction, but the workflow still needs its own concurrency group. A whole-repo rebuild took under about 50 s locally; record the runner's figure on the first run.
 
-- **H02 not done yet:** the `DATABASE_URL` Actions secret isn't added; the human will add it later. The human decided on 2026-10-30 that 009 may be planned and built without it: only the workflow's runs on GitHub need the secret. Until it's added, the workflow can't import, and the "a push imports the new commit" check below waits for it.
+- **H02 done (2026-10-30):** the `DATABASE_URL` Actions secret holds the Neon `production` branch's pooled URL. The migrations may not have been applied to `production` yet (only `dev` and the CI test branches are known to have them); the plan must say how they get there before the first real import.
 - **Done when:** a push imports the new commit; a failed run retries from the last imported commit; two quick pushes can't race (one concurrency group); `arch.md` marks the import Action as Running.
 - **Read:** [arch.md § 4.3 and § 5.2](../arch.md#43-import-action-decided).
 - **Start:** `/run-task 009`

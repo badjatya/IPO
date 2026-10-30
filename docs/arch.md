@@ -178,7 +178,7 @@ Scheduled runs also take any jobs still queued.
 
 ### 4.3 Import Action (Decided)
 
-The import **script** is running (task 008: `web/lib/import/` + `web/scripts/import.ts`, `npm run import` in `web/` — [db.md § Import and rebuild](db.md#import-and-rebuild)); the **Action** that triggers it on push is task 009 and stays **Decided** (it is blocked on the `DATABASE_URL` Actions secret, H02).
+The import **script** is running (task 008: `web/lib/import/` + `web/scripts/import.ts`, `npm run import` in `web/` — [db.md § Import and rebuild](db.md#import-and-rebuild)); the **Action** that triggers it on push is task 009 and stays **Decided** until it is built (the `DATABASE_URL` Actions secret, H02, is in place).
 
 | Concern | Design |
 | --- | --- |
