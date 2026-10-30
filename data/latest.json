@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T09:08+05:30",
+ "generated_at": "2026-10-30T19:08+05:30",
  "date": "2026-10-30",
  "ipos": [
   {
@@ -12,12 +12,12 @@
    "price": 162.0,
    "lot": 91,
    "size_cr": 275.4,
-   "gmp": 12.5,
-   "gmp_pct": 7.72,
-   "gmp_low": 7.0,
+   "gmp": 3.0,
+   "gmp_pct": 1.85,
+   "gmp_low": 3.0,
    "gmp_high": 15.0,
    "pe": 13.36,
-   "gmp_updated": "30-Oct 7:37",
+   "gmp_updated": "30-Oct 16:02",
    "url": "https://www.investorgain.com/gmp/mksons-fine-jewels-ipo/2288/",
    "nse": {
     "company": "M. K. Sons Fine Jewels Limited",
@@ -40,33 +40,33 @@
     "subscription": {
      "qib": {
       "shares_offered": 3400000.0,
-      "shares_bid": 2106468.0,
-      "times": 0.62
+      "shares_bid": 2368730.0,
+      "times": 0.7
      },
      "nii": {
       "shares_offered": 2550000.0,
-      "shares_bid": 3357172.0,
-      "times": 1.32
+      "shares_bid": 21766108.0,
+      "times": 8.54
      },
      "bnii": {
       "shares_offered": 1700000.0,
-      "shares_bid": 2571569.0,
-      "times": 1.51
+      "shares_bid": 15628158.0,
+      "times": 9.19
      },
      "snii": {
       "shares_offered": 850000.0,
-      "shares_bid": 785603.0,
-      "times": 0.92
+      "shares_bid": 6137950.0,
+      "times": 7.22
      },
      "retail": {
       "shares_offered": 5950000.0,
-      "shares_bid": 2882698.0,
-      "times": 0.48
+      "shares_bid": 10420774.0,
+      "times": 1.75
      },
      "total": {
       "shares_offered": 11900000.0,
-      "shares_bid": 8346338.0,
-      "times": 0.7
+      "shares_bid": 34555612.0,
+      "times": 2.9
      }
     },
     "series": "EQ"
@@ -78,33 +78,33 @@
    "subscription": {
     "qib": {
      "shares_offered": 3400000.0,
-     "shares_bid": 2106468.0,
-     "times": 0.62
+     "shares_bid": 2368730.0,
+     "times": 0.7
     },
     "nii": {
      "shares_offered": 2550000.0,
-     "shares_bid": 3357172.0,
-     "times": 1.32
+     "shares_bid": 21766108.0,
+     "times": 8.54
     },
     "bnii": {
      "shares_offered": 1700000.0,
-     "shares_bid": 2571569.0,
-     "times": 1.51
+     "shares_bid": 15628158.0,
+     "times": 9.19
     },
     "snii": {
      "shares_offered": 850000.0,
-     "shares_bid": 785603.0,
-     "times": 0.92
+     "shares_bid": 6137950.0,
+     "times": 7.22
     },
     "retail": {
      "shares_offered": 5950000.0,
-     "shares_bid": 2882698.0,
-     "times": 0.48
+     "shares_bid": 10420774.0,
+     "times": 1.75
     },
     "total": {
      "shares_offered": 11900000.0,
-     "shares_bid": 8346338.0,
-     "times": 0.7
+     "shares_bid": 34555612.0,
+     "times": 2.9
     }
    },
    "anchor_done": true,
@@ -115,12 +115,12 @@
      "min_lots": 1,
      "min_shares": 91,
      "min_amount": 14742,
-     "subscription_x": 0.48,
-     "odds": 1.0,
-     "odds_text": "full",
-     "gain_if_allotted": 1138,
-     "expected_gain": 1138,
-     "return_on_blocked_pct": 7.72
+     "subscription_x": 1.75,
+     "odds": 0.5714,
+     "odds_text": "≥1 in 2",
+     "gain_if_allotted": 273,
+     "expected_gain": 156,
+     "return_on_blocked_pct": 1.06
     },
     {
      "category": "snii",
@@ -128,12 +128,12 @@
      "min_lots": 14,
      "min_shares": 1274,
      "min_amount": 206388,
-     "subscription_x": 0.92,
-     "odds": 1.0,
-     "odds_text": "full",
-     "gain_if_allotted": 15925,
-     "expected_gain": 15925,
-     "return_on_blocked_pct": 7.72
+     "subscription_x": 7.22,
+     "odds": 0.1385,
+     "odds_text": "≥1 in 7",
+     "gain_if_allotted": 3822,
+     "expected_gain": 529,
+     "return_on_blocked_pct": 0.26
     },
     {
      "category": "bnii",
@@ -141,12 +141,12 @@
      "min_lots": 68,
      "min_shares": 6188,
      "min_amount": 1002456,
-     "subscription_x": 1.51,
-     "odds": 0.6623,
-     "odds_text": "≥1 in 2",
-     "gain_if_allotted": 77350,
-     "expected_gain": 51225,
-     "return_on_blocked_pct": 5.11
+     "subscription_x": 9.19,
+     "odds": 0.1088,
+     "odds_text": "≥1 in 9",
+     "gain_if_allotted": 18564,
+     "expected_gain": 2020,
+     "return_on_blocked_pct": 0.2
     }
    ],
    "best_category": "retail",
@@ -202,11 +202,11 @@
       },
       {
        "date": "2026-10-30",
-       "gmp": 12.5
+       "gmp": 3.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹7 → … → ₹15 → ₹11 → ₹12.5 since 25 Oct, falling (peak ₹15)"
+     "text": "GMP ₹7 → … → ₹15 → ₹11 → ₹3 since 25 Oct, falling (peak ₹15)"
     },
     "subscription": {
      "days": [
@@ -231,9 +231,20 @@
         "retail": 0.48,
         "total": 0.7
        }
+      },
+      {
+       "day": 3,
+       "date": "2026-10-30",
+       "times": {
+        "qib": 0.7,
+        "bnii": 9.19,
+        "snii": 7.22,
+        "retail": 1.75,
+        "total": 2.9
+       }
       }
      ],
-     "text": "Day 1 → 2: Retail 0.13x → 0.48x · sNII 0.07x → 0.92x · bNII 1.1x → 1.51x · QIB 0.61x → 0.62x · Total 0.4x → 0.7x"
+     "text": "Day 1 → 3: Retail 0.13x → 0.48x → 1.75x · sNII 0.07x → 0.92x → 7.22x · bNII 1.1x → 1.51x → 9.19x · QIB 0.61x → 0.62x → 0.7x · Total 0.4x → 0.7x → 2.9x"
     }
    }
   },
@@ -247,12 +258,12 @@
    "price": 82.0,
    "lot": 182,
    "size_cr": 183.06,
-   "gmp": 9.0,
-   "gmp_pct": 10.98,
-   "gmp_low": 8.0,
+   "gmp": 7.0,
+   "gmp_pct": 8.54,
+   "gmp_low": 7.0,
    "gmp_high": 9.0,
    "pe": 10.88,
-   "gmp_updated": "30-Oct 7:37",
+   "gmp_updated": "30-Oct 16:02",
    "url": "https://www.investorgain.com/gmp/bombay-coated-and-special-steels-ipo/1936/",
    "nse": {
     "company": "Bombay Coated and Special Steels Limited",
@@ -275,33 +286,33 @@
     "subscription": {
      "qib": {
       "shares_offered": 4798588.0,
-      "shares_bid": 0.0,
+      "shares_bid": 2548.0,
       "times": 0.0
      },
      "nii": {
       "shares_offered": 3520327.0,
-      "shares_bid": 1261442.0,
-      "times": 0.36
+      "shares_bid": 3588676.0,
+      "times": 1.02
      },
      "bnii": {
       "shares_offered": 2346885.0,
-      "shares_bid": 428246.0,
-      "times": 0.18
+      "shares_bid": 1476748.0,
+      "times": 0.63
      },
      "snii": {
       "shares_offered": 1173442.0,
-      "shares_bid": 833196.0,
-      "times": 0.71
+      "shares_bid": 2111928.0,
+      "times": 1.8
      },
      "retail": {
       "shares_offered": 8214097.0,
-      "shares_bid": 6110104.0,
-      "times": 0.74
+      "shares_bid": 14962584.0,
+      "times": 1.82
      },
      "total": {
       "shares_offered": 16533012.0,
-      "shares_bid": 7371546.0,
-      "times": 0.45
+      "shares_bid": 18553808.0,
+      "times": 1.12
      }
     },
     "series": "EQ"
@@ -313,33 +324,33 @@
    "subscription": {
     "qib": {
      "shares_offered": 4798588.0,
-     "shares_bid": 0.0,
+     "shares_bid": 2548.0,
      "times": 0.0
     },
     "nii": {
      "shares_offered": 3520327.0,
-     "shares_bid": 1261442.0,
-     "times": 0.36
+     "shares_bid": 3588676.0,
+     "times": 1.02
     },
     "bnii": {
      "shares_offered": 2346885.0,
-     "shares_bid": 428246.0,
-     "times": 0.18
+     "shares_bid": 1476748.0,
+     "times": 0.63
     },
     "snii": {
      "shares_offered": 1173442.0,
-     "shares_bid": 833196.0,
-     "times": 0.71
+     "shares_bid": 2111928.0,
+     "times": 1.8
     },
     "retail": {
      "shares_offered": 8214097.0,
-     "shares_bid": 6110104.0,
-     "times": 0.74
+     "shares_bid": 14962584.0,
+     "times": 1.82
     },
     "total": {
      "shares_offered": 16533012.0,
-     "shares_bid": 7371546.0,
-     "times": 0.45
+     "shares_bid": 18553808.0,
+     "times": 1.12
     }
    },
    "anchor_done": true,
@@ -350,12 +361,12 @@
      "min_lots": 1,
      "min_shares": 182,
      "min_amount": 14924,
-     "subscription_x": 0.74,
-     "odds": 1.0,
-     "odds_text": "full",
-     "gain_if_allotted": 1638,
-     "expected_gain": 1638,
-     "return_on_blocked_pct": 10.98
+     "subscription_x": 1.82,
+     "odds": 0.5495,
+     "odds_text": "≥1 in 2",
+     "gain_if_allotted": 1274,
+     "expected_gain": 700,
+     "return_on_blocked_pct": 4.69
     },
     {
      "category": "snii",
@@ -363,12 +374,12 @@
      "min_lots": 14,
      "min_shares": 2548,
      "min_amount": 208936,
-     "subscription_x": 0.71,
-     "odds": 1.0,
-     "odds_text": "full",
-     "gain_if_allotted": 22932,
-     "expected_gain": 22932,
-     "return_on_blocked_pct": 10.98
+     "subscription_x": 1.8,
+     "odds": 0.5556,
+     "odds_text": "≥1 in 2",
+     "gain_if_allotted": 17836,
+     "expected_gain": 9909,
+     "return_on_blocked_pct": 4.74
     },
     {
      "category": "bnii",
@@ -376,15 +387,15 @@
      "min_lots": 68,
      "min_shares": 12376,
      "min_amount": 1014832,
-     "subscription_x": 0.18,
+     "subscription_x": 0.63,
      "odds": 1.0,
      "odds_text": "full",
-     "gain_if_allotted": 111384,
-     "expected_gain": 111384,
-     "return_on_blocked_pct": 10.98
+     "gain_if_allotted": 86632,
+     "expected_gain": 86632,
+     "return_on_blocked_pct": 8.54
     }
    ],
-   "best_category": "retail",
+   "best_category": "bnii",
    "analysis_file": "analysis/bombay-coated-and-special-steels.md",
    "needs_analysis": false,
    "card_file": "analysis/bombay-coated-and-special-steels.json",
@@ -441,13 +452,39 @@
       },
       {
        "date": "2026-10-30",
-       "gmp": 9.0
+       "gmp": 7.0
       }
      ],
-     "direction": "up",
-     "text": "GMP ₹8 → … → ₹9 → ₹9 → ₹9 since 23 Oct, rising"
+     "direction": "down",
+     "text": "GMP ₹8 → … → ₹9 → ₹9 → ₹7 since 23 Oct, falling (peak ₹9)"
     },
-    "subscription": null
+    "subscription": {
+     "days": [
+      {
+       "day": 1,
+       "date": "2026-10-29",
+       "times": {
+        "qib": 0.0,
+        "bnii": 0.18,
+        "snii": 0.71,
+        "retail": 0.74,
+        "total": 0.45
+       }
+      },
+      {
+       "day": 2,
+       "date": "2026-10-30",
+       "times": {
+        "qib": 0.0,
+        "bnii": 0.63,
+        "snii": 1.8,
+        "retail": 1.82,
+        "total": 1.12
+       }
+      }
+     ],
+     "text": "Day 1 → 2: Retail 0.74x → 1.82x · sNII 0.71x → 1.8x · bNII 0.18x → 0.63x · QIB 0x → 0x · Total 0.45x → 1.12x"
+    }
    }
   },
   {
@@ -460,12 +497,12 @@
    "price": 1665.0,
    "lot": 9,
    "size_cr": 1200.0,
-   "gmp": 38.0,
-   "gmp_pct": 2.28,
+   "gmp": 54.0,
+   "gmp_pct": 3.24,
    "gmp_low": 11.0,
    "gmp_high": 121.0,
    "pe": 40.59,
-   "gmp_updated": "30-Oct 7:37",
+   "gmp_updated": "30-Oct 16:02",
    "url": "https://www.investorgain.com/gmp/eaaa-india-alternatives-ipo/1635/",
    "nse": null,
    "rhp_url": null,
@@ -484,7 +521,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 342,
+     "gain_if_allotted": 486,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -497,7 +534,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 4788,
+     "gain_if_allotted": 6804,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -510,7 +547,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 22914,
+     "gain_if_allotted": 32562,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -568,11 +605,11 @@
       },
       {
        "date": "2026-10-30",
-       "gmp": 38.0
+       "gmp": 54.0
       }
      ],
-     "direction": "flat",
-     "text": "GMP ₹33 → … → ₹28 → ₹28 → ₹38 since 25 Oct, steady"
+     "direction": "up",
+     "text": "GMP ₹33 → … → ₹28 → ₹28 → ₹54 since 25 Oct, rising"
     },
     "subscription": {
      "days": [
@@ -624,12 +661,12 @@
    "price": 330.0,
    "lot": 45,
    "size_cr": 667.53,
-   "gmp": 19.0,
-   "gmp_pct": 5.76,
+   "gmp": 21.0,
+   "gmp_pct": 6.36,
    "gmp_low": 10.0,
    "gmp_high": 32.0,
    "pe": 19.24,
-   "gmp_updated": "30-Oct 7:37",
+   "gmp_updated": "30-Oct 16:02",
    "url": "https://www.investorgain.com/gmp/sfc-environmental-technologies-ipo/1642/",
    "nse": {
     "company": "SFC Environmental Technologies Limited",
@@ -730,9 +767,9 @@
      "subscription_x": 1.72,
      "odds": 0.5814,
      "odds_text": "≥1 in 2",
-     "gain_if_allotted": 855,
-     "expected_gain": 497,
-     "return_on_blocked_pct": 3.35
+     "gain_if_allotted": 945,
+     "expected_gain": 549,
+     "return_on_blocked_pct": 3.7
     },
     {
      "category": "snii",
@@ -743,9 +780,9 @@
      "subscription_x": 6.63,
      "odds": 0.1508,
      "odds_text": "≥1 in 7",
-     "gain_if_allotted": 11970,
-     "expected_gain": 1805,
-     "return_on_blocked_pct": 0.87
+     "gain_if_allotted": 13230,
+     "expected_gain": 1995,
+     "return_on_blocked_pct": 0.96
     },
     {
      "category": "bnii",
@@ -756,9 +793,9 @@
      "subscription_x": 8.86,
      "odds": 0.1129,
      "odds_text": "≥1 in 9",
-     "gain_if_allotted": 58140,
-     "expected_gain": 6562,
-     "return_on_blocked_pct": 0.65
+     "gain_if_allotted": 64260,
+     "expected_gain": 7253,
+     "return_on_blocked_pct": 0.72
     }
    ],
    "best_category": "retail",
@@ -818,11 +855,11 @@
       },
       {
        "date": "2026-10-30",
-       "gmp": 19.0
+       "gmp": 21.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹21 → … → ₹10 → ₹15.5 → ₹19 since 23 Oct, falling (peak ₹32)"
+     "text": "GMP ₹21 → … → ₹10 → ₹15.5 → ₹21 since 23 Oct, falling (peak ₹32)"
     },
     "subscription": {
      "days": [
@@ -874,12 +911,12 @@
    "price": 150.0,
    "lot": 100,
    "size_cr": 255.0,
-   "gmp": 68.0,
-   "gmp_pct": 45.33,
+   "gmp": 74.0,
+   "gmp_pct": 49.33,
    "gmp_low": 18.0,
-   "gmp_high": 68.0,
+   "gmp_high": 74.0,
    "pe": 25.0,
-   "gmp_updated": "30-Oct 7:37",
+   "gmp_updated": "30-Oct 16:02",
    "url": "https://www.investorgain.com/gmp/bls-polymers-ipo/1849/",
    "nse": {
     "company": "BLS Polymers Limited",
@@ -980,9 +1017,9 @@
      "subscription_x": 78.89,
      "odds": 0.0127,
      "odds_text": "≥1 in 79",
-     "gain_if_allotted": 6800,
-     "expected_gain": 86,
-     "return_on_blocked_pct": 0.57
+     "gain_if_allotted": 7400,
+     "expected_gain": 94,
+     "return_on_blocked_pct": 0.63
     },
     {
      "category": "snii",
@@ -993,9 +1030,9 @@
      "subscription_x": 322.9,
      "odds": 0.0031,
      "odds_text": "≥1 in 323",
-     "gain_if_allotted": 95200,
-     "expected_gain": 295,
-     "return_on_blocked_pct": 0.14
+     "gain_if_allotted": 103600,
+     "expected_gain": 321,
+     "return_on_blocked_pct": 0.15
     },
     {
      "category": "bnii",
@@ -1006,9 +1043,9 @@
      "subscription_x": 396.02,
      "odds": 0.0025,
      "odds_text": "≥1 in 396",
-     "gain_if_allotted": 455600,
-     "expected_gain": 1150,
-     "return_on_blocked_pct": 0.11
+     "gain_if_allotted": 495800,
+     "expected_gain": 1252,
+     "return_on_blocked_pct": 0.12
     }
    ],
    "best_category": "retail",
@@ -1068,11 +1105,11 @@
       },
       {
        "date": "2026-10-30",
-       "gmp": 68.0
+       "gmp": 74.0
       }
      ],
      "direction": "up",
-     "text": "GMP ₹38 → … → ₹51 → ₹62 → ₹68 since 23 Oct, rising"
+     "text": "GMP ₹38 → … → ₹51 → ₹62 → ₹74 since 23 Oct, rising"
     },
     "subscription": {
      "days": [
