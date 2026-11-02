@@ -1,23 +1,23 @@
-# IPO numbers – 2026-11-02 (as of 09:07 IST)
+# IPO numbers – 2026-11-02 (as of 19:31 IST)
 
 ## Bombay Coated and Special Steels — closing today
 - Dates: open 2026-10-29 · close 2026-11-02 · allotment 2026-11-03 · listing 2026-11-05
 - Price band: ₹78–82 · lot 182 shares · size ₹183.06 Cr · P/E 10.88
-- GMP: ₹9 (10.98%) · anchor allocation: done (https://nsearchives.nseindia.com/content/ipo/ANCHOR_BCSSL.zip)
-- GMP ₹9 → … → ₹9 → ₹7 → ₹9 since 26 Oct, steady
+- GMP: ₹9.25 (11.28%) · anchor allocation: done (https://nsearchives.nseindia.com/content/ipo/ANCHOR_BCSSL.zip)
+- GMP ₹9 → … → ₹9 → ₹7 → ₹9.25 since 26 Oct, steady
 - Cached call (rhp, 2026-10-26): Listing gains only · anchor weak · Mumbai steel processing centre that slits and cuts coated steel coils for appliance, HVAC and auto makers; JSW Steel authorised partner since 2021.
 - Issue: Initial Public Offer comprising of Fresh Issue aggregating upto Rs. 1,830.57 million (including Anchor reservation portion of 65,97,500 Equity Shares)
 - Lead managers: Smart Horizon Capital Advisors Private Limited · registrar: KFin Technologies Limited
-- Subscription: QIB 0.0x · NII 1.02x · BNII 0.63x · SNII 1.8x · RETAIL 1.82x · TOTAL 1.12x
-- Subscription by day: Day 1 → 2: Retail 0.74x → 1.82x · sNII 0.71x → 1.8x · bNII 0.18x → 0.63x · QIB 0x → 0x · Total 0.45x → 1.12x
+- Subscription: QIB 16.43x · NII 82.34x · BNII 90.21x · SNII 66.58x · RETAIL 21.0x · TOTAL 32.73x
+- Subscription by day: Day 1 → 3: Retail 0.74x → 1.82x → 21x · sNII 0.71x → 1.8x → 66.58x · bNII 0.18x → 0.63x → 90.21x · QIB 0x → 0x → 16.43x · Total 0.45x → 1.12x → 32.73x
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
-| Retail | 1 lot (182 sh) | ₹14,924 | ≥1 in 2 | ₹900 | 6.03% |
-| Small HNI (sNII) | 14 lot (2548 sh) | ₹2.09 L | ≥1 in 2 | ₹12,740 | 6.1% |
-| Big HNI (bNII) | 68 lot (12376 sh) | ₹10.15 L | full | ₹1.11 L | 10.98% |
+| Retail | 1 lot (182 sh) | ₹14,924 | ≥1 in 21 | ₹80 | 0.54% |
+| Small HNI (sNII) | 14 lot (2548 sh) | ₹2.09 L | ≥1 in 67 | ₹354 | 0.17% |
+| Big HNI (bNII) | 68 lot (12376 sh) | ₹10.15 L | ≥1 in 90 | ₹1,269 | 0.13% |
 
-Best category by return on capital: **bnii**
+Best category by return on capital: **retail**
 
 ## EAAA India Alternatives — listing today
 - Dates: open 2026-10-26 · close 2026-10-28 · allotment 2026-10-29 · listing 2026-11-02
@@ -36,8 +36,8 @@ Best category by return on capital: **bnii**
 ## SFC Environmental Technologies — awaiting listing
 - Dates: open 2026-10-27 · close 2026-10-29 · allotment 2026-10-30 · listing 2026-11-03
 - Price band: ₹330 (upper) · lot 45 shares · size ₹667.53 Cr · P/E 19.24
-- GMP: ₹26 (7.88%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹27 → … → ₹15.5 → ₹21 → ₹26 since 26 Oct, steady
+- GMP: ₹21 (6.36%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹27 → … → ₹15.5 → ₹21 → ₹21 since 26 Oct, falling
 - Cached call (rhp, 2026-10-22): Listing gains only · anchor strong · Wastewater and solid-waste treatment technology firm (C-Tech SBR process, over 80% SBR market share per F&S) with 728 installations.
 - Subscription by day: Day 1 → 3: Retail 0.1x → 0.2x → 1.72x · sNII 0.09x → 0.33x → 6.63x · bNII 0.04x → 0.19x → 8.86x · QIB 0x → 0x → 5.8x · Total 0.06x → 0.15x → 4.26x
 
@@ -50,8 +50,8 @@ Best category by return on capital: **bnii**
 ## BLS Polymers — awaiting listing
 - Dates: open 2026-10-27 · close 2026-10-29 · allotment 2026-10-30 · listing 2026-11-03
 - Price band: ₹150 (upper) · lot 100 shares · size ₹255 Cr · P/E 25.0
-- GMP: ₹68 (45.33%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹40 → … → ₹62 → ₹74 → ₹68 since 26 Oct, falling (peak ₹74)
+- GMP: ₹67 (44.67%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹40 → … → ₹62 → ₹74 → ₹67 since 26 Oct, falling (peak ₹74)
 - Cached call (rhp, 2026-10-19): Listing gains only · anchor weak · Goa-based maker of custom polymer compounds for power/telecom cables and 3LPE pipeline coating; ₹255 Cr fresh issue.
 - Subscription by day: Day 1 → 3: Retail 4.3x → 18.45x → 78.89x · sNII 11.91x → 62.03x → 322.9x · bNII 6.75x → 45.49x → 396.02x · QIB 3.71x → 3.8x → 127.39x · Total 5.02x → 21.24x → 155.48x
 

@@ -1,0 +1,8 @@
+{"date": "2026-11-02", "session": "PM",
+ "headline": "Bombay Coated closes today at 32.7x (Retail 21x, GMP ~11%) — listing gains only; EAAA listed +1%",
+ "ipos": {
+  "bombay-coated-and-special-steels": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Retail",
+    "category_note": "Retail 21x is the least subscribed; 1 lot per family PAN. Weak anchor, so sell on listing"},
+  "sfc-environmental-technologies": {"category_note": "GMP falling since 26 Oct (₹27 → ₹21); allotment is out, listing 3 Nov"},
+  "m-k-sons-fine-jewels": {"category_note": "GMP falling since 26 Oct (peak ₹15, now ₹5.5); QIB only 0.7x; listing 4 Nov"}},
+ "notes": ["EAAA India Alternatives listed +1% (GMP said +3%); our call: Avoid"]}

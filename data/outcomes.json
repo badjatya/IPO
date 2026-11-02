@@ -270,5 +270,39 @@
   "subscription_source": "nse ipo-detail 2026-10-28",
   "price_source": "nse",
   "recorded_at": "2026-10-28T19:17+05:30"
+ },
+ "eaaa-alternatives": {
+  "name": "EAAA India Alternatives",
+  "symbol": "EDELALTS",
+  "listing_date": "2026-11-02",
+  "issue_price": 1665,
+  "listing_price": 1675.5,
+  "day_close": 1727.8,
+  "day_high": 1762.5,
+  "day_low": 1601,
+  "listing_gain_pct": 0.63,
+  "close_gain_pct": 3.77,
+  "gmp_eve": 54.0,
+  "gmp_eve_pct": 3.24,
+  "gmp_eve_snapshot": "2026-10-30T19:08+05:30",
+  "gmp_eve_updated": "30-Oct 16:02",
+  "gmp_miss_pts": -2.61,
+  "verdict": "avoid",
+  "verdict_text": "Avoid",
+  "best_category": null,
+  "verdict_report": "2026-10-28-am.json",
+  "anchor_grade": "strong",
+  "pe": 40.59,
+  "size_cr": 1200.0,
+  "subscription": {
+   "qib": 10.08,
+   "snii": 1.53,
+   "bnii": 4.93,
+   "retail": 0.73,
+   "total": 4.06
+  },
+  "subscription_source": "nse ipo-detail 2026-11-02",
+  "price_source": "nse",
+  "recorded_at": "2026-11-02T19:32+05:30"
  }
 }
