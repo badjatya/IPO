@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T09:08+05:30",
+ "generated_at": "2026-11-03T19:07+05:30",
  "date": "2026-11-03",
  "ipos": [
   {
@@ -17,7 +17,7 @@
    "gmp_low": 10.0,
    "gmp_high": 32.0,
    "pe": 19.24,
-   "gmp_updated": "3-Nov 6:37",
+   "gmp_updated": "3-Nov 9:37",
    "url": "https://www.investorgain.com/gmp/sfc-environmental-technologies-ipo/1642/",
    "nse": null,
    "rhp_url": null,
@@ -176,12 +176,12 @@
    "price": 150.0,
    "lot": 100,
    "size_cr": 255.0,
-   "gmp": 68.0,
-   "gmp_pct": 45.33,
+   "gmp": 69.0,
+   "gmp_pct": 46.0,
    "gmp_low": 18.0,
    "gmp_high": 70.0,
    "pe": 25.0,
-   "gmp_updated": "3-Nov 6:37",
+   "gmp_updated": "3-Nov 9:37",
    "url": "https://www.investorgain.com/gmp/bls-polymers-ipo/1849/",
    "nse": null,
    "rhp_url": null,
@@ -200,7 +200,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 6800,
+     "gain_if_allotted": 6900,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -213,7 +213,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 95200,
+     "gain_if_allotted": 96600,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -226,7 +226,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 455600,
+     "gain_if_allotted": 462300,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -284,11 +284,11 @@
       },
       {
        "date": "2026-11-03",
-       "gmp": 68.0
+       "gmp": 69.0
       }
      ],
-     "direction": "down",
-     "text": "GMP ₹43 → … → ₹74 → ₹67 → ₹68 since 27 Oct, falling (peak ₹74)"
+     "direction": "up",
+     "text": "GMP ₹43 → … → ₹74 → ₹67 → ₹69 since 27 Oct, rising"
     },
     "subscription": {
      "days": [
@@ -340,12 +340,12 @@
    "price": 162.0,
    "lot": 91,
    "size_cr": 275.4,
-   "gmp": 6.5,
-   "gmp_pct": 4.01,
+   "gmp": 11.0,
+   "gmp_pct": 6.79,
    "gmp_low": 5.5,
    "gmp_high": 15.0,
    "pe": 13.36,
-   "gmp_updated": "3-Nov 6:37",
+   "gmp_updated": "3-Nov 16:02",
    "url": "https://www.investorgain.com/gmp/mksons-fine-jewels-ipo/2288/",
    "nse": null,
    "rhp_url": null,
@@ -364,7 +364,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 592,
+     "gain_if_allotted": 1001,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -377,7 +377,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 8281,
+     "gain_if_allotted": 14014,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -390,7 +390,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 40222,
+     "gain_if_allotted": 68068,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -448,11 +448,11 @@
       },
       {
        "date": "2026-11-03",
-       "gmp": 6.5
+       "gmp": 11.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹7 → … → ₹3 → ₹5.5 → ₹6.5 since 27 Oct, falling (peak ₹15)"
+     "text": "GMP ₹7 → … → ₹3 → ₹5.5 → ₹11 since 27 Oct, falling (peak ₹15)"
     },
     "subscription": {
      "days": [
@@ -504,12 +504,12 @@
    "price": 82.0,
    "lot": 182,
    "size_cr": 183.06,
-   "gmp": 8.0,
-   "gmp_pct": 9.76,
+   "gmp": 9.0,
+   "gmp_pct": 10.98,
    "gmp_low": 7.0,
    "gmp_high": 9.0,
    "pe": 10.88,
-   "gmp_updated": "3-Nov 6:37",
+   "gmp_updated": "3-Nov 16:02",
    "url": "https://www.investorgain.com/gmp/bombay-coated-and-special-steels-ipo/1936/",
    "nse": {
     "company": "Bombay Coated and Special Steels Limited",
@@ -610,9 +610,9 @@
      "subscription_x": 21.0,
      "odds": 0.0476,
      "odds_text": "≥1 in 21",
-     "gain_if_allotted": 1456,
-     "expected_gain": 69,
-     "return_on_blocked_pct": 0.46
+     "gain_if_allotted": 1638,
+     "expected_gain": 78,
+     "return_on_blocked_pct": 0.52
     },
     {
      "category": "snii",
@@ -623,9 +623,9 @@
      "subscription_x": 66.58,
      "odds": 0.015,
      "odds_text": "≥1 in 67",
-     "gain_if_allotted": 20384,
-     "expected_gain": 306,
-     "return_on_blocked_pct": 0.15
+     "gain_if_allotted": 22932,
+     "expected_gain": 344,
+     "return_on_blocked_pct": 0.16
     },
     {
      "category": "bnii",
@@ -636,9 +636,9 @@
      "subscription_x": 90.21,
      "odds": 0.0111,
      "odds_text": "≥1 in 90",
-     "gain_if_allotted": 99008,
-     "expected_gain": 1098,
-     "return_on_blocked_pct": 0.11
+     "gain_if_allotted": 111384,
+     "expected_gain": 1235,
+     "return_on_blocked_pct": 0.12
     }
    ],
    "best_category": "retail",
@@ -694,11 +694,11 @@
       },
       {
        "date": "2026-11-03",
-       "gmp": 8.0
+       "gmp": 9.0
       }
      ],
-     "direction": "down",
-     "text": "GMP ₹9 → … → ₹7 → ₹9.25 → ₹8 since 27 Oct, falling (peak ₹9.25)"
+     "direction": "flat",
+     "text": "GMP ₹9 → … → ₹7 → ₹9.25 → ₹9 since 27 Oct, steady"
     },
     "subscription": {
      "days": [

@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-03",
+  "session": "PM",
+  "headline": "No IPO open today · SFC Environmental Technologies lists today · BLS Polymers lists today · BLS Polymers listed +65% · SFC Environmental Technologies listed +8% · M.K.Sons Fine Jewels lists Wed 04 Nov",
+  "ipos": {
+    "m-k-sons-fine-jewels": {
+      "category_note": "Lists 4 Nov; GMP ~4% (₹6.5), QIB only 0.7x"
+    },
+    "bombay-coated-and-special-steels": {
+      "verdict": "listing_gains",
+      "verdict_text": "Listing gains only",
+      "best_category": "Retail"
+    }
+  },
+  "notes": [
+    "BLS Polymers listed +65% (GMP said +45%); our call: Listing gains only",
+    "SFC Environmental Technologies listed +8% (GMP said +6%); our call: Avoid",
+    "Quiet run: no IPO open and nothing new to research. Numbers refreshed; calls carried over from the 2026-11-03 AM brief."
+  ],
+  "generated": "quiet",
+  "carried_from": "2026-11-03-am.json"
+}

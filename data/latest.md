@@ -1,4 +1,4 @@
-# IPO numbers – 2026-11-03 (as of 09:08 IST)
+# IPO numbers – 2026-11-03 (as of 19:07 IST)
 
 ## SFC Environmental Technologies — listing today
 - Dates: open 2026-10-27 · close 2026-10-29 · allotment 2026-10-30 · listing 2026-11-03
@@ -17,8 +17,8 @@
 ## BLS Polymers — listing today
 - Dates: open 2026-10-27 · close 2026-10-29 · allotment 2026-10-30 · listing 2026-11-03
 - Price band: ₹150 (upper) · lot 100 shares · size ₹255 Cr · P/E 25.0
-- GMP: ₹68 (45.33%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹43 → … → ₹74 → ₹67 → ₹68 since 27 Oct, falling (peak ₹74)
+- GMP: ₹69 (46%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹43 → … → ₹74 → ₹67 → ₹69 since 27 Oct, rising
 - Cached call (rhp, 2026-10-19): Listing gains only · anchor weak · Goa-based maker of custom polymer compounds for power/telecom cables and 3LPE pipeline coating; ₹255 Cr fresh issue.
 - Subscription by day: Day 1 → 3: Retail 4.3x → 18.45x → 78.89x · sNII 11.91x → 62.03x → 322.9x · bNII 6.75x → 45.49x → 396.02x · QIB 3.71x → 3.8x → 127.39x · Total 5.02x → 21.24x → 155.48x
 
@@ -31,8 +31,8 @@
 ## M.K.Sons Fine Jewels — awaiting listing
 - Dates: open 2026-10-28 · close 2026-10-30 · allotment 2026-11-02 · listing 2026-11-04
 - Price band: ₹162 (upper) · lot 91 shares · size ₹275.4 Cr · P/E 13.36
-- GMP: ₹6.5 (4.01%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹7 → … → ₹3 → ₹5.5 → ₹6.5 since 27 Oct, falling (peak ₹15)
+- GMP: ₹11 (6.79%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹7 → … → ₹3 → ₹5.5 → ₹11 since 27 Oct, falling (peak ₹15)
 - Cached call (rhp, 2026-10-23): Neutral · anchor weak · Mumbai/Ahmedabad retail jeweller (gold, diamond, CZ) with 5 showrooms; ₹275 Cr issue, ~80% fresh.
 - Subscription by day: Day 1 → 3: Retail 0.13x → 0.48x → 1.75x · sNII 0.07x → 0.92x → 7.22x · bNII 1.1x → 1.51x → 9.19x · QIB 0.61x → 0.62x → 0.7x · Total 0.4x → 0.7x → 2.9x
 
@@ -45,8 +45,8 @@
 ## Bombay Coated and Special Steels — awaiting listing
 - Dates: open 2026-10-29 · close 2026-11-02 · allotment 2026-11-03 · listing 2026-11-05
 - Price band: ₹78–82 · lot 182 shares · size ₹183.06 Cr · P/E 10.88
-- GMP: ₹8 (9.76%) · anchor allocation: done (https://nsearchives.nseindia.com/content/ipo/ANCHOR_BCSSL.zip)
-- GMP ₹9 → … → ₹7 → ₹9.25 → ₹8 since 27 Oct, falling (peak ₹9.25)
+- GMP: ₹9 (10.98%) · anchor allocation: done (https://nsearchives.nseindia.com/content/ipo/ANCHOR_BCSSL.zip)
+- GMP ₹9 → … → ₹7 → ₹9.25 → ₹9 since 27 Oct, steady
 - Cached call (rhp, 2026-10-26): Listing gains only · anchor weak · Mumbai steel processing centre that slits and cuts coated steel coils for appliance, HVAC and auto makers; JSW Steel authorised partner since 2021.
 - Issue: Initial Public Offer comprising of Fresh Issue aggregating upto Rs. 1,830.57 million (including Anchor reservation portion of 65,97,500 Equity Shares)
 - Lead managers: Smart Horizon Capital Advisors Private Limited · registrar: KFin Technologies Limited
@@ -55,8 +55,8 @@
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
-| Retail | 1 lot (182 sh) | ₹14,924 | ≥1 in 21 | ₹69 | 0.46% |
-| Small HNI (sNII) | 14 lot (2548 sh) | ₹2.09 L | ≥1 in 67 | ₹306 | 0.15% |
-| Big HNI (bNII) | 68 lot (12376 sh) | ₹10.15 L | ≥1 in 90 | ₹1,098 | 0.11% |
+| Retail | 1 lot (182 sh) | ₹14,924 | ≥1 in 21 | ₹78 | 0.52% |
+| Small HNI (sNII) | 14 lot (2548 sh) | ₹2.09 L | ≥1 in 67 | ₹344 | 0.16% |
+| Big HNI (bNII) | 68 lot (12376 sh) | ₹10.15 L | ≥1 in 90 | ₹1,235 | 0.12% |
 
 Best category by return on capital: **retail**
