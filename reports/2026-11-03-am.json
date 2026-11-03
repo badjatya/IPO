@@ -1,0 +1,9 @@
+{"date": "2026-11-03", "session": "AM",
+ "headline": "SFC Environmental (GMP ~4.7%) and BLS Polymers (GMP ~45%) list today; Bombay Coated lists 5 Nov, GMP ~10%",
+ "ipos": {
+  "bombay-coated-and-special-steels": {"verdict": "listing_gains", "verdict_text": "Listing gains only", "best_category": "Retail",
+    "category_note": "Allotment out today; GMP ~10%. Weak anchor, so sell on listing 5 Nov"},
+  "sfc-environmental-technologies": {"category_note": "Lists today; GMP fell from peak ₹21 to ₹15.5 (~4.7%) — expect a modest listing"},
+  "bls-polymers": {"category_note": "Lists today; GMP ~45% (₹68) on 155x subscription — sell on listing, weak anchor"},
+  "m-k-sons-fine-jewels": {"category_note": "Lists 4 Nov; GMP ~4% (₹6.5), QIB only 0.7x"}},
+ "notes": ["Listing-day prices for BLS Polymers and SFC Environmental are not out yet; will be scored on the next run."]}
