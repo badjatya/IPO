@@ -1,335 +1,7 @@
 {
- "generated_at": "2026-11-03T19:07+05:30",
- "date": "2026-11-03",
+ "generated_at": "2026-11-04T09:07+05:30",
+ "date": "2026-11-04",
  "ipos": [
-  {
-   "key": "sfc-environmental-technologies",
-   "name": "SFC Environmental Technologies",
-   "open": "2026-10-27",
-   "close": "2026-10-29",
-   "allotment": "2026-10-30",
-   "listing": "2026-11-03",
-   "price": 330.0,
-   "lot": 45,
-   "size_cr": 667.53,
-   "gmp": 15.5,
-   "gmp_pct": 4.7,
-   "gmp_low": 10.0,
-   "gmp_high": 32.0,
-   "pe": 19.24,
-   "gmp_updated": "3-Nov 9:37",
-   "url": "https://www.investorgain.com/gmp/sfc-environmental-technologies-ipo/1642/",
-   "nse": null,
-   "rhp_url": null,
-   "rhp_source": null,
-   "phase": "listing_today",
-   "price_high": 330.0,
-   "subscription": null,
-   "anchor_done": null,
-   "categories": [
-    {
-     "category": "retail",
-     "label": "Retail",
-     "min_lots": 1,
-     "min_shares": 45,
-     "min_amount": 14850,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 698,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    },
-    {
-     "category": "snii",
-     "label": "Small HNI (sNII)",
-     "min_lots": 14,
-     "min_shares": 630,
-     "min_amount": 207900,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 9765,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    },
-    {
-     "category": "bnii",
-     "label": "Big HNI (bNII)",
-     "min_lots": 68,
-     "min_shares": 3060,
-     "min_amount": 1009800,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 47430,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    }
-   ],
-   "best_category": null,
-   "analysis_file": "analysis/sfc-environmental-technologies.md",
-   "needs_analysis": false,
-   "card_file": "analysis/sfc-environmental-technologies.json",
-   "needs_card": false,
-   "card": {
-    "name": "SFC Environmental Technologies Limited",
-    "source": "rhp",
-    "analysed": "2026-10-22",
-    "verdict": "listing_gains",
-    "verdict_text": "Listing gains only",
-    "summary": "Wastewater and solid-waste treatment technology firm (C-Tech SBR process, over 80% SBR market share per F&S) with 728 installations.",
-    "financials": "FY26 revenue ₹804 Cr (+15%), PAT about ₹160 Cr (flat vs FY25); Q1 FY27 revenue ₹134 Cr; net worth ₹825 Cr.",
-    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
-    "positives": [
-     "Market leader in SBR sewage treatment technology",
-     "Repeat customers 92% of FY26 revenue",
-     "Cheap at P/E about 19"
-    ],
-    "red_flags": [
-     "Trade receivables ₹609 Cr (76% of FY26 revenue) and rising",
-     "Profit flat in FY26 despite 15% revenue growth",
-     "Only ₹150 Cr fresh; most of the issue is OFS by selling shareholders"
-    ],
-    "anchor": "Anchors ₹200.3 Cr, 17 funds led by SBI MF, Nippon, ICICI Pru, Quant (strong grade)",
-    "anchor_grade": "strong"
-   },
-   "needs_anchor_update": false,
-   "trend": {
-    "gmp": {
-     "points": [
-      {
-       "date": "2026-10-27",
-       "gmp": 18.0
-      },
-      {
-       "date": "2026-10-28",
-       "gmp": 10.0
-      },
-      {
-       "date": "2026-10-29",
-       "gmp": 15.5
-      },
-      {
-       "date": "2026-10-30",
-       "gmp": 21.0
-      },
-      {
-       "date": "2026-11-02",
-       "gmp": 21.0
-      },
-      {
-       "date": "2026-11-03",
-       "gmp": 15.5
-      }
-     ],
-     "direction": "down",
-     "text": "GMP ₹18 → … → ₹21 → ₹21 → ₹15.5 since 27 Oct, falling (peak ₹21)"
-    },
-    "subscription": {
-     "days": [
-      {
-       "day": 1,
-       "date": "2026-10-27",
-       "times": {
-        "qib": 0.0,
-        "bnii": 0.04,
-        "snii": 0.09,
-        "retail": 0.1,
-        "total": 0.06
-       }
-      },
-      {
-       "day": 2,
-       "date": "2026-10-28",
-       "times": {
-        "qib": 0.0,
-        "bnii": 0.19,
-        "snii": 0.33,
-        "retail": 0.2,
-        "total": 0.15
-       }
-      },
-      {
-       "day": 3,
-       "date": "2026-10-29",
-       "times": {
-        "qib": 5.8,
-        "bnii": 8.86,
-        "snii": 6.63,
-        "retail": 1.72,
-        "total": 4.26
-       }
-      }
-     ],
-     "text": "Day 1 → 3: Retail 0.1x → 0.2x → 1.72x · sNII 0.09x → 0.33x → 6.63x · bNII 0.04x → 0.19x → 8.86x · QIB 0x → 0x → 5.8x · Total 0.06x → 0.15x → 4.26x"
-    }
-   }
-  },
-  {
-   "key": "bls-polymers",
-   "name": "BLS Polymers",
-   "open": "2026-10-27",
-   "close": "2026-10-29",
-   "allotment": "2026-10-30",
-   "listing": "2026-11-03",
-   "price": 150.0,
-   "lot": 100,
-   "size_cr": 255.0,
-   "gmp": 69.0,
-   "gmp_pct": 46.0,
-   "gmp_low": 18.0,
-   "gmp_high": 70.0,
-   "pe": 25.0,
-   "gmp_updated": "3-Nov 9:37",
-   "url": "https://www.investorgain.com/gmp/bls-polymers-ipo/1849/",
-   "nse": null,
-   "rhp_url": null,
-   "rhp_source": null,
-   "phase": "listing_today",
-   "price_high": 150.0,
-   "subscription": null,
-   "anchor_done": null,
-   "categories": [
-    {
-     "category": "retail",
-     "label": "Retail",
-     "min_lots": 1,
-     "min_shares": 100,
-     "min_amount": 15000,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 6900,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    },
-    {
-     "category": "snii",
-     "label": "Small HNI (sNII)",
-     "min_lots": 14,
-     "min_shares": 1400,
-     "min_amount": 210000,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 96600,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    },
-    {
-     "category": "bnii",
-     "label": "Big HNI (bNII)",
-     "min_lots": 67,
-     "min_shares": 6700,
-     "min_amount": 1005000,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 462300,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    }
-   ],
-   "best_category": null,
-   "analysis_file": "analysis/bls-polymers.md",
-   "needs_analysis": false,
-   "card_file": "analysis/bls-polymers.json",
-   "needs_card": false,
-   "card": {
-    "name": "BLS Polymers Limited",
-    "source": "rhp",
-    "analysed": "2026-10-19",
-    "verdict": "listing_gains",
-    "verdict_text": "Listing gains only",
-    "summary": "Goa-based maker of custom polymer compounds for power/telecom cables and 3LPE pipeline coating; ₹255 Cr fresh issue.",
-    "financials": "FY26 revenue ₹349 Cr (+6% on FY25), PAT about ₹27 Cr; full P&L not extracted.",
-    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
-    "positives": [
-     "100% fresh issue, no promoter selling",
-     "CPSE enlistments are a barrier to entry",
-     "Wire and cable demand from power and telecom"
-    ],
-    "red_flags": [
-     "Top 5 customers 53.5% of FY26 revenue",
-     "Single Goa plant; untraceable records and shareholders",
-     "Growth is single-digit; ₹89.5 Cr of proceeds go to working capital"
-    ],
-    "anchor": "Anchors ₹76.5 Cr, 7 small AIFs/offshore funds (weak grade)",
-    "anchor_grade": "weak"
-   },
-   "needs_anchor_update": false,
-   "trend": {
-    "gmp": {
-     "points": [
-      {
-       "date": "2026-10-27",
-       "gmp": 43.0
-      },
-      {
-       "date": "2026-10-28",
-       "gmp": 51.0
-      },
-      {
-       "date": "2026-10-29",
-       "gmp": 62.0
-      },
-      {
-       "date": "2026-10-30",
-       "gmp": 74.0
-      },
-      {
-       "date": "2026-11-02",
-       "gmp": 67.0
-      },
-      {
-       "date": "2026-11-03",
-       "gmp": 69.0
-      }
-     ],
-     "direction": "up",
-     "text": "GMP ₹43 → … → ₹74 → ₹67 → ₹69 since 27 Oct, rising"
-    },
-    "subscription": {
-     "days": [
-      {
-       "day": 1,
-       "date": "2026-10-27",
-       "times": {
-        "qib": 3.71,
-        "bnii": 6.75,
-        "snii": 11.91,
-        "retail": 4.3,
-        "total": 5.02
-       }
-      },
-      {
-       "day": 2,
-       "date": "2026-10-28",
-       "times": {
-        "qib": 3.8,
-        "bnii": 45.49,
-        "snii": 62.03,
-        "retail": 18.45,
-        "total": 21.24
-       }
-      },
-      {
-       "day": 3,
-       "date": "2026-10-29",
-       "times": {
-        "qib": 127.39,
-        "bnii": 396.02,
-        "snii": 322.9,
-        "retail": 78.89,
-        "total": 155.48
-       }
-      }
-     ],
-     "text": "Day 1 → 3: Retail 4.3x → 18.45x → 78.89x · sNII 11.91x → 62.03x → 322.9x · bNII 6.75x → 45.49x → 396.02x · QIB 3.71x → 3.8x → 127.39x · Total 5.02x → 21.24x → 155.48x"
-    }
-   }
-  },
   {
    "key": "m-k-sons-fine-jewels",
    "name": "M.K.Sons Fine Jewels",
@@ -340,17 +12,17 @@
    "price": 162.0,
    "lot": 91,
    "size_cr": 275.4,
-   "gmp": 11.0,
-   "gmp_pct": 6.79,
+   "gmp": 10.0,
+   "gmp_pct": 6.17,
    "gmp_low": 5.5,
    "gmp_high": 15.0,
    "pe": 13.36,
-   "gmp_updated": "3-Nov 16:02",
+   "gmp_updated": "4-Nov 7:37",
    "url": "https://www.investorgain.com/gmp/mksons-fine-jewels-ipo/2288/",
    "nse": null,
    "rhp_url": null,
    "rhp_source": null,
-   "phase": "awaiting_listing",
+   "phase": "listing_today",
    "price_high": 162.0,
    "subscription": null,
    "anchor_done": null,
@@ -364,7 +36,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 1001,
+     "gain_if_allotted": 910,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -377,7 +49,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 14014,
+     "gain_if_allotted": 12740,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -390,7 +62,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 68068,
+     "gain_if_allotted": 61880,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -427,10 +99,6 @@
     "gmp": {
      "points": [
       {
-       "date": "2026-10-27",
-       "gmp": 7.0
-      },
-      {
        "date": "2026-10-28",
        "gmp": 15.0
       },
@@ -449,10 +117,14 @@
       {
        "date": "2026-11-03",
        "gmp": 11.0
+      },
+      {
+       "date": "2026-11-04",
+       "gmp": 10.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹7 → … → ₹3 → ₹5.5 → ₹11 since 27 Oct, falling (peak ₹15)"
+     "text": "GMP ₹15 → … → ₹5.5 → ₹11 → ₹10 since 28 Oct, falling"
     },
     "subscription": {
      "days": [
@@ -504,102 +176,20 @@
    "price": 82.0,
    "lot": 182,
    "size_cr": 183.06,
-   "gmp": 9.0,
-   "gmp_pct": 10.98,
+   "gmp": 7.0,
+   "gmp_pct": 8.54,
    "gmp_low": 7.0,
    "gmp_high": 9.0,
    "pe": 10.88,
-   "gmp_updated": "3-Nov 16:02",
+   "gmp_updated": "4-Nov 7:37",
    "url": "https://www.investorgain.com/gmp/bombay-coated-and-special-steels-ipo/1936/",
-   "nse": {
-    "company": "Bombay Coated and Special Steels Limited",
-    "symbol": "BCSSL",
-    "issue_period": [
-     "29-Oct-2026",
-     "02-Nov-2026"
-    ],
-    "price_low": 78.0,
-    "price_high": 82.0,
-    "face_value": "Rs. 10 per Equity Share",
-    "lot": 182,
-    "issue_size_text": "Initial Public Offer comprising of Fresh Issue aggregating upto Rs. 1,830.57 million (including Anchor reservation portion of 65,97,500 Equity Shares)",
-    "employee_discount": "NA",
-    "lead_managers": "Smart Horizon Capital Advisors Private Limited",
-    "registrar": "KFin Technologies Limited",
-    "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_BCSSL.zip",
-    "ratios_url": "https://nsearchives.nseindia.com/content/ipo/RATIOS_BCSSL.zip",
-    "anchor_report_url": "https://nsearchives.nseindia.com/content/ipo/ANCHOR_BCSSL.zip",
-    "subscription": {
-     "qib": {
-      "shares_offered": 4798588.0,
-      "shares_bid": 78831662.0,
-      "times": 16.43
-     },
-     "nii": {
-      "shares_offered": 3520327.0,
-      "shares_bid": 289848650.0,
-      "times": 82.34
-     },
-     "bnii": {
-      "shares_offered": 2346885.0,
-      "shares_bid": 211721874.0,
-      "times": 90.21
-     },
-     "snii": {
-      "shares_offered": 1173442.0,
-      "shares_bid": 78126776.0,
-      "times": 66.58
-     },
-     "retail": {
-      "shares_offered": 8214097.0,
-      "shares_bid": 172504878.0,
-      "times": 21.0
-     },
-     "total": {
-      "shares_offered": 16533012.0,
-      "shares_bid": 541185190.0,
-      "times": 32.73
-     }
-    },
-    "series": "EQ"
-   },
-   "rhp_url": "https://nsearchives.nseindia.com/content/ipo/RHP_BCSSL.zip",
-   "rhp_source": "nse",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
    "phase": "awaiting_listing",
    "price_high": 82.0,
-   "subscription": {
-    "qib": {
-     "shares_offered": 4798588.0,
-     "shares_bid": 78831662.0,
-     "times": 16.43
-    },
-    "nii": {
-     "shares_offered": 3520327.0,
-     "shares_bid": 289848650.0,
-     "times": 82.34
-    },
-    "bnii": {
-     "shares_offered": 2346885.0,
-     "shares_bid": 211721874.0,
-     "times": 90.21
-    },
-    "snii": {
-     "shares_offered": 1173442.0,
-     "shares_bid": 78126776.0,
-     "times": 66.58
-    },
-    "retail": {
-     "shares_offered": 8214097.0,
-     "shares_bid": 172504878.0,
-     "times": 21.0
-    },
-    "total": {
-     "shares_offered": 16533012.0,
-     "shares_bid": 541185190.0,
-     "times": 32.73
-    }
-   },
-   "anchor_done": true,
+   "subscription": null,
+   "anchor_done": null,
    "categories": [
     {
      "category": "retail",
@@ -607,12 +197,12 @@
      "min_lots": 1,
      "min_shares": 182,
      "min_amount": 14924,
-     "subscription_x": 21.0,
-     "odds": 0.0476,
-     "odds_text": "≥1 in 21",
-     "gain_if_allotted": 1638,
-     "expected_gain": 78,
-     "return_on_blocked_pct": 0.52
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 1274,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
     },
     {
      "category": "snii",
@@ -620,12 +210,12 @@
      "min_lots": 14,
      "min_shares": 2548,
      "min_amount": 208936,
-     "subscription_x": 66.58,
-     "odds": 0.015,
-     "odds_text": "≥1 in 67",
-     "gain_if_allotted": 22932,
-     "expected_gain": 344,
-     "return_on_blocked_pct": 0.16
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 17836,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
     },
     {
      "category": "bnii",
@@ -633,15 +223,15 @@
      "min_lots": 68,
      "min_shares": 12376,
      "min_amount": 1014832,
-     "subscription_x": 90.21,
-     "odds": 0.0111,
-     "odds_text": "≥1 in 90",
-     "gain_if_allotted": 111384,
-     "expected_gain": 1235,
-     "return_on_blocked_pct": 0.12
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 86632,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
     }
    ],
-   "best_category": "retail",
+   "best_category": null,
    "analysis_file": "analysis/bombay-coated-and-special-steels.md",
    "needs_analysis": false,
    "card_file": "analysis/bombay-coated-and-special-steels.json",
@@ -673,10 +263,6 @@
     "gmp": {
      "points": [
       {
-       "date": "2026-10-27",
-       "gmp": 9.0
-      },
-      {
        "date": "2026-10-28",
        "gmp": 9.0
       },
@@ -695,10 +281,14 @@
       {
        "date": "2026-11-03",
        "gmp": 9.0
+      },
+      {
+       "date": "2026-11-04",
+       "gmp": 7.0
       }
      ],
-     "direction": "flat",
-     "text": "GMP ₹9 → … → ₹7 → ₹9.25 → ₹9 since 27 Oct, steady"
+     "direction": "down",
+     "text": "GMP ₹9 → … → ₹9.25 → ₹9 → ₹7 since 28 Oct, falling (peak ₹9.25)"
     },
     "subscription": {
      "days": [

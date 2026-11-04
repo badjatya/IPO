@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-04",
+  "session": "AM",
+  "headline": "No IPO open today · M.K.Sons Fine Jewels lists today · Bombay Coated and Special Steels lists Thu 05 Nov",
+  "ipos": {
+    "m-k-sons-fine-jewels": {
+      "category_note": "Lists 4 Nov; GMP ~4% (₹6.5), QIB only 0.7x"
+    },
+    "bombay-coated-and-special-steels": {
+      "verdict": "listing_gains",
+      "verdict_text": "Listing gains only",
+      "best_category": "Retail"
+    }
+  },
+  "notes": [
+    "Quiet run: no IPO open and nothing new to research. Numbers refreshed; calls carried over from the 2026-11-03 PM brief."
+  ],
+  "generated": "quiet",
+  "carried_from": "2026-11-03-pm.json"
+}
