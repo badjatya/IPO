@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T09:07+05:30",
+ "generated_at": "2026-11-04T19:07+05:30",
  "date": "2026-11-04",
  "ipos": [
   {
@@ -12,12 +12,12 @@
    "price": 162.0,
    "lot": 91,
    "size_cr": 275.4,
-   "gmp": 10.0,
-   "gmp_pct": 6.17,
+   "gmp": 11.0,
+   "gmp_pct": 6.79,
    "gmp_low": 5.5,
    "gmp_high": 15.0,
    "pe": 13.36,
-   "gmp_updated": "4-Nov 7:37",
+   "gmp_updated": "4-Nov 9:37",
    "url": "https://www.investorgain.com/gmp/mksons-fine-jewels-ipo/2288/",
    "nse": null,
    "rhp_url": null,
@@ -36,7 +36,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 910,
+     "gain_if_allotted": 1001,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -49,7 +49,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 12740,
+     "gain_if_allotted": 14014,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -62,7 +62,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 61880,
+     "gain_if_allotted": 68068,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -120,11 +120,11 @@
       },
       {
        "date": "2026-11-04",
-       "gmp": 10.0
+       "gmp": 11.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹15 → … → ₹5.5 → ₹11 → ₹10 since 28 Oct, falling"
+     "text": "GMP ₹15 → … → ₹5.5 → ₹11 → ₹11 since 28 Oct, falling"
     },
     "subscription": {
      "days": [
@@ -176,12 +176,12 @@
    "price": 82.0,
    "lot": 182,
    "size_cr": 183.06,
-   "gmp": 7.0,
-   "gmp_pct": 8.54,
+   "gmp": 8.5,
+   "gmp_pct": 10.37,
    "gmp_low": 7.0,
    "gmp_high": 9.0,
    "pe": 10.88,
-   "gmp_updated": "4-Nov 7:37",
+   "gmp_updated": "4-Nov 15:37",
    "url": "https://www.investorgain.com/gmp/bombay-coated-and-special-steels-ipo/1936/",
    "nse": null,
    "rhp_url": null,
@@ -200,7 +200,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 1274,
+     "gain_if_allotted": 1547,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -213,7 +213,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 17836,
+     "gain_if_allotted": 21658,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -226,7 +226,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 86632,
+     "gain_if_allotted": 105196,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -284,11 +284,11 @@
       },
       {
        "date": "2026-11-04",
-       "gmp": 7.0
+       "gmp": 8.5
       }
      ],
-     "direction": "down",
-     "text": "GMP ₹9 → … → ₹9.25 → ₹9 → ₹7 since 28 Oct, falling (peak ₹9.25)"
+     "direction": "flat",
+     "text": "GMP ₹9 → … → ₹9.25 → ₹9 → ₹8.5 since 28 Oct, steady"
     },
     "subscription": {
      "days": [
