@@ -372,5 +372,39 @@
   "subscription_source": "nse ipo-detail 2026-11-03",
   "price_source": "nse",
   "recorded_at": "2026-11-03T19:08+05:30"
+ },
+ "bombay-coated-and-special-steels": {
+  "name": "Bombay Coated and Special Steels",
+  "symbol": "BCSSL",
+  "listing_date": "2026-11-05",
+  "issue_price": 82,
+  "listing_price": 91,
+  "day_close": 94.81,
+  "day_high": 95.55,
+  "day_low": 91,
+  "listing_gain_pct": 10.98,
+  "close_gain_pct": 15.62,
+  "gmp_eve": 8.5,
+  "gmp_eve_pct": 10.37,
+  "gmp_eve_snapshot": "2026-11-04T19:07+05:30",
+  "gmp_eve_updated": "4-Nov 15:37",
+  "gmp_miss_pts": 0.61,
+  "verdict": "listing_gains",
+  "verdict_text": "Listing gains only",
+  "best_category": "Big HNI",
+  "verdict_report": "2026-11-02-am.json",
+  "anchor_grade": "weak",
+  "pe": 10.88,
+  "size_cr": 183.06,
+  "subscription": {
+   "qib": 16.43,
+   "snii": 66.58,
+   "bnii": 90.21,
+   "retail": 21.0,
+   "total": 32.73
+  },
+  "subscription_source": "nse ipo-detail 2026-11-05",
+  "price_source": "nse",
+  "recorded_at": "2026-11-05T19:08+05:30"
  }
 }

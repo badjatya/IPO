@@ -1,4 +1,4 @@
-# IPO numbers – 2026-11-05 (as of 09:07 IST)
+# IPO numbers – 2026-11-05 (as of 19:08 IST)
 
 ## Bombay Coated and Special Steels — listing today
 - Dates: open 2026-10-29 · close 2026-11-02 · allotment 2026-11-03 · listing 2026-11-05
