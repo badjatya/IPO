@@ -1,0 +1,171 @@
+{
+ "generated_at": "2026-11-05T09:07+05:30",
+ "date": "2026-11-05",
+ "ipos": [
+  {
+   "key": "bombay-coated-and-special-steels",
+   "name": "Bombay Coated and Special Steels",
+   "open": "2026-10-29",
+   "close": "2026-11-02",
+   "allotment": "2026-11-03",
+   "listing": "2026-11-05",
+   "price": 82.0,
+   "lot": 182,
+   "size_cr": 183.06,
+   "gmp": 8.0,
+   "gmp_pct": 9.76,
+   "gmp_low": 7.0,
+   "gmp_high": 9.0,
+   "pe": 10.88,
+   "gmp_updated": "5-Nov 7:02",
+   "url": "https://www.investorgain.com/gmp/bombay-coated-and-special-steels-ipo/1936/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "listing_today",
+   "price_high": 82.0,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 182,
+     "min_amount": 14924,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 1456,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 2548,
+     "min_amount": 208936,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 20384,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 68,
+     "min_shares": 12376,
+     "min_amount": 1014832,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 99008,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    }
+   ],
+   "best_category": null,
+   "analysis_file": "analysis/bombay-coated-and-special-steels.md",
+   "needs_analysis": false,
+   "card_file": "analysis/bombay-coated-and-special-steels.json",
+   "needs_card": false,
+   "card": {
+    "name": "Bombay Coated and Special Steels Limited",
+    "source": "rhp",
+    "analysed": "2026-10-26",
+    "verdict": "listing_gains",
+    "verdict_text": "Listing gains only",
+    "summary": "Mumbai steel processing centre that slits and cuts coated steel coils for appliance, HVAC and auto makers; JSW Steel authorised partner since 2021.",
+    "financials": "FY26 revenue ₹1,267 Cr (+20%), PAT ₹30.5 Cr (+6%, 2.4% margin); debt/equity 2.8x.",
+    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
+    "positives": [
+     "100% fresh issue; ₹125 Cr goes to debt repayment",
+     "Debt/equity down from 4.3x (FY24) to 2.0x (Jun 2026)",
+     "Issue P/E ~11"
+    ],
+    "red_flags": [
+     "Thin margins (PAT 2.4%); finance cost eats most of EBIT",
+     "Dependence on JSW Steel; capacity only ~60% used",
+     "ROE falling from 48% to 30%"
+    ],
+    "anchor": "₹54.1 Cr from 6 small AIFs/funds (IMAP Catalyst ₹20 Cr, LRSD ₹14 Cr); no MFs or insurers",
+    "anchor_grade": "weak"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-10-29",
+       "gmp": 9.0
+      },
+      {
+       "date": "2026-10-30",
+       "gmp": 7.0
+      },
+      {
+       "date": "2026-11-02",
+       "gmp": 9.25
+      },
+      {
+       "date": "2026-11-03",
+       "gmp": 9.0
+      },
+      {
+       "date": "2026-11-04",
+       "gmp": 8.5
+      },
+      {
+       "date": "2026-11-05",
+       "gmp": 8.0
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹9 → … → ₹9 → ₹8.5 → ₹8 since 29 Oct, falling (peak ₹9.25)"
+    },
+    "subscription": {
+     "days": [
+      {
+       "day": 1,
+       "date": "2026-10-29",
+       "times": {
+        "qib": 0.0,
+        "bnii": 0.18,
+        "snii": 0.71,
+        "retail": 0.74,
+        "total": 0.45
+       }
+      },
+      {
+       "day": 2,
+       "date": "2026-10-30",
+       "times": {
+        "qib": 0.0,
+        "bnii": 0.63,
+        "snii": 1.8,
+        "retail": 1.82,
+        "total": 1.12
+       }
+      },
+      {
+       "day": 3,
+       "date": "2026-11-02",
+       "times": {
+        "qib": 16.43,
+        "bnii": 90.21,
+        "snii": 66.58,
+        "retail": 21.0,
+        "total": 32.73
+       }
+      }
+     ],
+     "text": "Day 1 → 3: Retail 0.74x → 1.82x → 21x · sNII 0.71x → 1.8x → 66.58x · bNII 0.18x → 0.63x → 90.21x · QIB 0x → 0x → 16.43x · Total 0.45x → 1.12x → 32.73x"
+    }
+   }
+  }
+ ],
+ "errors": {}
+}

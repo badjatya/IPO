@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-05",
+  "session": "AM",
+  "headline": "No IPO open today · Bombay Coated and Special Steels lists today",
+  "ipos": {
+    "bombay-coated-and-special-steels": {
+      "verdict": "listing_gains",
+      "verdict_text": "Listing gains only",
+      "best_category": "Retail"
+    }
+  },
+  "notes": [
+    "Quiet run: no IPO open and nothing new to research. Numbers refreshed; calls carried over from the 2026-11-04 PM brief."
+  ],
+  "generated": "quiet",
+  "carried_from": "2026-11-04-pm.json"
+}

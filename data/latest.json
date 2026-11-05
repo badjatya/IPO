@@ -1,171 +1,7 @@
 {
- "generated_at": "2026-11-04T19:07+05:30",
- "date": "2026-11-04",
+ "generated_at": "2026-11-05T09:07+05:30",
+ "date": "2026-11-05",
  "ipos": [
-  {
-   "key": "m-k-sons-fine-jewels",
-   "name": "M.K.Sons Fine Jewels",
-   "open": "2026-10-28",
-   "close": "2026-10-30",
-   "allotment": "2026-11-02",
-   "listing": "2026-11-04",
-   "price": 162.0,
-   "lot": 91,
-   "size_cr": 275.4,
-   "gmp": 11.0,
-   "gmp_pct": 6.79,
-   "gmp_low": 5.5,
-   "gmp_high": 15.0,
-   "pe": 13.36,
-   "gmp_updated": "4-Nov 9:37",
-   "url": "https://www.investorgain.com/gmp/mksons-fine-jewels-ipo/2288/",
-   "nse": null,
-   "rhp_url": null,
-   "rhp_source": null,
-   "phase": "listing_today",
-   "price_high": 162.0,
-   "subscription": null,
-   "anchor_done": null,
-   "categories": [
-    {
-     "category": "retail",
-     "label": "Retail",
-     "min_lots": 1,
-     "min_shares": 91,
-     "min_amount": 14742,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 1001,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    },
-    {
-     "category": "snii",
-     "label": "Small HNI (sNII)",
-     "min_lots": 14,
-     "min_shares": 1274,
-     "min_amount": 206388,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 14014,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    },
-    {
-     "category": "bnii",
-     "label": "Big HNI (bNII)",
-     "min_lots": 68,
-     "min_shares": 6188,
-     "min_amount": 1002456,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 68068,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    }
-   ],
-   "best_category": null,
-   "analysis_file": "analysis/m-k-sons-fine-jewels.md",
-   "needs_analysis": false,
-   "card_file": "analysis/m-k-sons-fine-jewels.json",
-   "needs_card": false,
-   "card": {
-    "name": "M.K. Sons Fine Jewels Limited",
-    "source": "rhp",
-    "analysed": "2026-10-23",
-    "verdict": "neutral",
-    "verdict_text": "Neutral",
-    "summary": "Mumbai/Ahmedabad retail jeweller (gold, diamond, CZ) with 5 showrooms; ₹275 Cr issue, ~80% fresh.",
-    "financials": "FY26 revenue ₹539 Cr (+53%), EBITDA ₹83 Cr (15.4%), PAT ₹52 Cr (+123%); P/E ~13.4x at upper band vs peer avg 20.3x.",
-    "quota": "QIB ≤50% · NII ≥15% · Retail ≥35%",
-    "positives": [
-     "P/E ~13x vs listed jewellery peers averaging ~20x",
-     "Revenue ₹217 Cr to ₹539 Cr and PAT ₹8 Cr to ₹52 Cr in two years",
-     "Fresh issue mostly funds a new showroom's inventory and ₹30 Cr debt repayment"
-    ],
-    "red_flags": [
-     "Growth and margin jump (gross margin 9% to 19%) with the same 5 stores; Q1 EBITDA margin 23%",
-     "Inventory days 122 to 333; net operating cycle 321 days",
-     "Promoter selling ₹55 Cr via OFS; business only moved into the company in Mar 2025; Mumbai/Ahmedabad concentration"
-    ],
-    "anchor": "Anchors ₹82.6 Cr, 9 offshore/small funds, no domestic MFs (weak grade)",
-    "anchor_grade": "weak"
-   },
-   "needs_anchor_update": false,
-   "trend": {
-    "gmp": {
-     "points": [
-      {
-       "date": "2026-10-28",
-       "gmp": 15.0
-      },
-      {
-       "date": "2026-10-29",
-       "gmp": 11.0
-      },
-      {
-       "date": "2026-10-30",
-       "gmp": 3.0
-      },
-      {
-       "date": "2026-11-02",
-       "gmp": 5.5
-      },
-      {
-       "date": "2026-11-03",
-       "gmp": 11.0
-      },
-      {
-       "date": "2026-11-04",
-       "gmp": 11.0
-      }
-     ],
-     "direction": "down",
-     "text": "GMP ₹15 → … → ₹5.5 → ₹11 → ₹11 since 28 Oct, falling"
-    },
-    "subscription": {
-     "days": [
-      {
-       "day": 1,
-       "date": "2026-10-28",
-       "times": {
-        "qib": 0.61,
-        "bnii": 1.1,
-        "snii": 0.07,
-        "retail": 0.13,
-        "total": 0.4
-       }
-      },
-      {
-       "day": 2,
-       "date": "2026-10-29",
-       "times": {
-        "qib": 0.62,
-        "bnii": 1.51,
-        "snii": 0.92,
-        "retail": 0.48,
-        "total": 0.7
-       }
-      },
-      {
-       "day": 3,
-       "date": "2026-10-30",
-       "times": {
-        "qib": 0.7,
-        "bnii": 9.19,
-        "snii": 7.22,
-        "retail": 1.75,
-        "total": 2.9
-       }
-      }
-     ],
-     "text": "Day 1 → 3: Retail 0.13x → 0.48x → 1.75x · sNII 0.07x → 0.92x → 7.22x · bNII 1.1x → 1.51x → 9.19x · QIB 0.61x → 0.62x → 0.7x · Total 0.4x → 0.7x → 2.9x"
-    }
-   }
-  },
   {
    "key": "bombay-coated-and-special-steels",
    "name": "Bombay Coated and Special Steels",
@@ -176,17 +12,17 @@
    "price": 82.0,
    "lot": 182,
    "size_cr": 183.06,
-   "gmp": 8.5,
-   "gmp_pct": 10.37,
+   "gmp": 8.0,
+   "gmp_pct": 9.76,
    "gmp_low": 7.0,
    "gmp_high": 9.0,
    "pe": 10.88,
-   "gmp_updated": "4-Nov 15:37",
+   "gmp_updated": "5-Nov 7:02",
    "url": "https://www.investorgain.com/gmp/bombay-coated-and-special-steels-ipo/1936/",
    "nse": null,
    "rhp_url": null,
    "rhp_source": null,
-   "phase": "awaiting_listing",
+   "phase": "listing_today",
    "price_high": 82.0,
    "subscription": null,
    "anchor_done": null,
@@ -200,7 +36,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 1547,
+     "gain_if_allotted": 1456,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -213,7 +49,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 21658,
+     "gain_if_allotted": 20384,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -226,7 +62,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 105196,
+     "gain_if_allotted": 99008,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -263,10 +99,6 @@
     "gmp": {
      "points": [
       {
-       "date": "2026-10-28",
-       "gmp": 9.0
-      },
-      {
        "date": "2026-10-29",
        "gmp": 9.0
       },
@@ -285,10 +117,14 @@
       {
        "date": "2026-11-04",
        "gmp": 8.5
+      },
+      {
+       "date": "2026-11-05",
+       "gmp": 8.0
       }
      ],
-     "direction": "flat",
-     "text": "GMP ₹9 → … → ₹9.25 → ₹9 → ₹8.5 since 28 Oct, steady"
+     "direction": "down",
+     "text": "GMP ₹9 → … → ₹9 → ₹8.5 → ₹8 since 29 Oct, falling (peak ₹9.25)"
     },
     "subscription": {
      "days": [
