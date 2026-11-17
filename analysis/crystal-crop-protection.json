@@ -1,0 +1,24 @@
+{
+ "name": "Crystal Crop Protection",
+ "source": "rhp",
+ "analysed": "2026-11-17",
+ "verdict": "neutral",
+ "verdict_text": "Neutral",
+ "summary": "Delhi-based agrochemicals and hybrid seeds maker (80% crop protection, 19% seeds) with 14,700 distributors, raising ₹455 Cr (₹355 Cr fresh, ~₹101 Cr OFS) mostly to repay debt.",
+ "financials": "FY26 revenue ₹3,152 Cr (+17%), EBITDA 14.5%, PAT ₹145 Cr (+22%), RoNW 7.1%, debt ₹820 Cr; Q1 FY27 operating cash flow only ₹43 Cr",
+ "quota": "QIB up to 50% · NII at least 15% · Retail at least 35%",
+ "positives": [
+  "Revenue +17-21% a year; EBITDA margin up from 9.4% to 14.5%",
+  "Diversified brands, 18 granted patents, top-three positions in pearl millet and mustard seed",
+  "Proceeds mostly repay debt (net debt/equity 0.41)"
+ ],
+ "red_flags": [
+  "CBI and ED excise-refund case (₹75.5 Cr) against the company and two promoters, still pending",
+  "~24.6x P/E vs peer average 20x, with RoNW only 7.1%",
+  "Heavy working capital: Q1 FY27 operating cash flow ₹43 Cr, receivables up 34% since March"
+ ],
+ "anchor": "Pending — anchor allocation not yet out",
+ "anchor_grade": "pending",
+ "ai_model": "claude-sonnet-5-5", "ai_prompt_version": "1",
+ "ai_written_at": "2026-11-17T04:00:00Z"
+}
