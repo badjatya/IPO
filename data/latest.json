@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-17T19:08+05:30",
- "date": "2026-11-17",
+ "generated_at": "2026-11-18T09:07+05:30",
+ "date": "2026-11-18",
  "ipos": [
   {
    "key": "crystal-crop-protection",
@@ -12,17 +12,17 @@
    "price": 272.0,
    "lot": 55,
    "size_cr": 455.49,
-   "gmp": 14.0,
-   "gmp_pct": 5.15,
+   "gmp": 19.0,
+   "gmp_pct": 6.99,
    "gmp_low": 13.0,
    "gmp_high": 40.0,
    "pe": 28.19,
-   "gmp_updated": "17-Nov 17:37",
+   "gmp_updated": "18-Nov 7:37",
    "url": "https://www.investorgain.com/gmp/crystal-crop-protection-ipo/2067/",
    "nse": null,
    "rhp_url": null,
    "rhp_source": null,
-   "phase": "upcoming",
+   "phase": "open",
    "price_high": 272.0,
    "subscription": null,
    "anchor_done": null,
@@ -36,7 +36,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 770,
+     "gain_if_allotted": 1045,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -49,7 +49,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 10780,
+     "gain_if_allotted": 14630,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -62,7 +62,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 51590,
+     "gain_if_allotted": 70015,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -97,9 +97,22 @@
     "ai_prompt_version": "1",
     "ai_written_at": "2026-11-17T04:00:00Z"
    },
-   "needs_anchor_update": false,
+   "needs_anchor_update": true,
    "trend": {
-    "gmp": null,
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-11-17",
+       "gmp": 14.0
+      },
+      {
+       "date": "2026-11-18",
+       "gmp": 19.0
+      }
+     ],
+     "direction": "up",
+     "text": "GMP ₹14 → ₹19 since 17 Nov, rising"
+    },
     "subscription": null
    }
   },
@@ -113,12 +126,12 @@
    "price": 136.0,
    "lot": 110,
    "size_cr": 8981.12,
-   "gmp": 4.0,
-   "gmp_pct": 2.94,
+   "gmp": 3.75,
+   "gmp_pct": 2.76,
    "gmp_low": 3.5,
    "gmp_high": 9.25,
    "pe": 8.42,
-   "gmp_updated": "17-Nov 17:37",
+   "gmp_updated": "18-Nov 7:37",
    "url": "https://www.investorgain.com/gmp/mahanadi-coalfields-ipo/2401/",
    "nse": null,
    "rhp_url": null,
@@ -137,7 +150,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 440,
+     "gain_if_allotted": 412,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -150,7 +163,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 6160,
+     "gain_if_allotted": 5775,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -163,7 +176,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 29480,
+     "gain_if_allotted": 27638,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -200,7 +213,20 @@
    },
    "needs_anchor_update": false,
    "trend": {
-    "gmp": null,
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-11-17",
+       "gmp": 4.0
+      },
+      {
+       "date": "2026-11-18",
+       "gmp": 3.75
+      }
+     ],
+     "direction": "flat",
+     "text": "GMP ₹4 → ₹3.75 since 17 Nov, steady"
+    },
     "subscription": null
    }
   }

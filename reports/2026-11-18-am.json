@@ -1,0 +1,5 @@
+{"date": "2026-11-18", "session": "AM",
+ "headline": "Crystal Crop opens today (closes 20 Nov) — GMP rising to ~7%, still neutral; Mahanadi Coalfields opens tomorrow",
+ "ipos": {"crystal-crop-protection": {"verdict": "neutral", "verdict_text": "Neutral", "best_category": null, "category_note": "Day 1: GMP rising ₹14 → ₹19 (~7%) but valuation full and CBI/ED case pending; live subscription unavailable (NSE blocked) — recheck on 20 Nov before bidding"},
+          "mahanadi-coalfields": {"best_category": null, "category_note": "Opens 19 Nov — GMP ~3%, steady; apply for value/dividend, not a listing pop"}},
+ "notes": ["NSE blocked (403): live subscription/odds unavailable; numbers from Investorgain, RHPs from SEBI.", "Crystal Crop anchor book not yet findable via web search; card left pending.", "M K Sons Fine Jewels listed 4 Nov at ₹171 on NSE (+5.6% vs ₹162 issue price, per news); day-1 close not found, not recorded."]}
