@@ -1,0 +1,5 @@
+{"date": "2026-11-18", "session": "PM",
+ "headline": "Crystal Crop open (closes 20 Nov) — GMP rising to ~7%, still neutral; Mahanadi Coalfields opens tomorrow",
+ "ipos": {"crystal-crop-protection": {"verdict": "neutral", "verdict_text": "Neutral", "best_category": null, "category_note": "GMP rising ₹14 → ₹19 since 17 Nov (~7%) but valuation full and CBI/ED case pending; live subscription unavailable (NSE blocked) — recheck on 20 Nov before bidding"},
+          "mahanadi-coalfields": {"best_category": null, "category_note": "Opens 19 Nov — GMP ~2.5%, steady; apply for value/dividend, not a listing pop"}},
+ "notes": ["NSE blocked (403): live subscription/odds unavailable; numbers from Investorgain, RHPs from SEBI.", "Crystal Crop anchor book (bidding 17 Nov) still not findable via web search; card left pending."]}

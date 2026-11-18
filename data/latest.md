@@ -1,4 +1,4 @@
-# IPO numbers – 2026-11-18 (as of 09:07 IST)
+# IPO numbers – 2026-11-18 (as of 19:08 IST)
 
 ## Crystal Crop Protection — open
 - Dates: open 2026-11-18 · close 2026-11-20 · allotment 2026-11-23 · listing 2026-11-26
@@ -16,8 +16,8 @@
 ## Mahanadi Coalfields — upcoming
 - Dates: open 2026-11-19 · close 2026-11-23 · allotment 2026-11-25 · listing 2026-11-27
 - Price band: ₹136 (upper) · lot 110 shares · size ₹8981.12 Cr · P/E 8.42
-- GMP: ₹3.75 (2.76%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹4 → ₹3.75 since 17 Nov, steady
+- GMP: ₹3.4 (2.5%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹4 → ₹3.4 since 17 Nov, steady
 - Cached call (rhp, 2026-11-17): Apply (long-term) · anchor pending · Coal India subsidiary and India's largest single coal producer (21% of FY26 output, Odisha); 100% OFS by CIL of ~₹8,981 Cr, selling 10% and keeping ~90%.
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
