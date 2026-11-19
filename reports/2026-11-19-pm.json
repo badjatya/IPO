@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-19",
+ "session": "PM",
+ "headline": "Crystal Crop closes tomorrow (20 Nov), GMP ₹17 (~6%) — Neutral; Mahanadi GMP fading to ₹2.7",
+ "ipos": {
+  "crystal-crop-protection": {
+   "verdict": "neutral",
+   "verdict_text": "Neutral",
+   "best_category": "Retail",
+   "category_note": "GMP ₹14 → ₹18 → ₹17 since 17 Nov, rising but flat last day. Live subscription unavailable (NSE blocked) — apply only for modest listing gains; recheck 20 Nov"
+  },
+  "mahanadi-coalfields": {
+   "best_category": "Retail",
+   "category_note": "GMP ₹4 → ₹3.1 → ₹2.7 since 17 Nov, ~2% and drifting down; gains are for long-term holders only. Closes 23 Nov; recheck subscription then"
+  }
+ },
+ "notes": [
+  "NSE blocked (403): live subscription and odds unavailable; GMP from Investorgain.",
+  "Crystal Crop anchor (₹135.95 Cr, 17 institutions) from web search; names not found. Mahanadi anchor book not findable yet; left pending."
+ ]
+}

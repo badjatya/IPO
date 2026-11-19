@@ -30,7 +30,7 @@ Revenue +17% FY26, PAT +22%. Operating cash flow ₹337.79 / 383.03 / 256.42 Cr 
 Debt repayment ₹247.94 Cr, ₹22.06 Cr into subsidiary Saffire for debt repayment, rest unidentified acquisitions and general corporate purposes (capped 35%). OFS money goes to the promoter. Pre-IPO ₹84.29 Cr already spent (₹65 Cr debt, ₹19.29 Cr general).
 
 ## Anchor book
-**Pending** — anchor allocation not public as of 2026-11-17. Up to 60% of QIB portion for anchors; lock-in 50% 30 days, 50% 90 days.
+Total ₹135.95 Cr (~30% of issue) from 17 institutions across 10 fund houses at ₹272 (17 Nov 2026). Names not found; grade Average (unverified). Lock-in 50% 30 days, 50% 90 days.
 
 ## Red flags
 CBI FIR (Jan 2020, charge sheet Dec 2021) and ED/PMLA case against the company and two promoters over DFIA excise-refund claims (₹75.53 Cr, 3.47% of net worth); discharge applications pending. ROE 6-8% against ~24x P/E. Weak Q1 cash conversion, heavy working capital; 22% OFS; pre-IPO struck at the upper band; industry report company-commissioned.

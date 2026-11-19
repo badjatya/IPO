@@ -17,8 +17,9 @@
   "~24.6x P/E vs peer average 20x, with RoNW only 7.1%",
   "Heavy working capital: Q1 FY27 operating cash flow ₹43 Cr, receivables up 34% since March"
  ],
- "anchor": "Pending — anchor allocation not yet out",
- "anchor_grade": "pending",
- "ai_model": "claude-sonnet-5-5", "ai_prompt_version": "1",
+ "anchor": "₹135.95 Cr from 17 institutions (10 fund houses) at ₹272 on 17 Nov; names not verified",
+ "anchor_grade": "average",
+ "ai_model": "claude-sonnet-5-5",
+ "ai_prompt_version": "1",
  "ai_written_at": "2026-11-17T04:00:00Z"
 }
