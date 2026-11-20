@@ -1,0 +1,28 @@
+{
+ "date": "2026-11-20",
+ "session": "AM",
+ "headline": "Crystal Crop closes today, GMP ₹17 (~6%) steady — Neutral; Mahanadi GMP down to ₹1.8 (1.3%), now Neutral",
+ "ipos": {
+  "crystal-crop-protection": {
+   "verdict": "neutral",
+   "verdict_text": "Neutral",
+   "best_category": "Retail",
+   "category_note": "Closes 20 Nov. GMP ₹14 → ₹18 → ₹17 → ₹17 since 17 Nov, rising but flat. Live subscription unavailable (NSE blocked) — apply only for modest listing gains, 1 lot per family PAN"
+  },
+  "mahanadi-coalfields": {
+   "verdict": "neutral",
+   "verdict_text": "Neutral",
+   "best_category": "Retail",
+   "category_note": "GMP falling since 17 Nov (₹4 → ₹3.1 → ₹2.7 → ₹1.8, ~1.3%) — no listing gain expected; apply only if you'd hold the ~8.4x P/E dividend payer long term. Closes 23 Nov"
+  },
+  "foodlink-f-and-b-holdings": {
+   "verdict": "pending",
+   "verdict_text": "Analysis pending",
+   "category_note": "Opens 26 Nov; price band not announced and RHP not yet analysed"
+  }
+ },
+ "notes": [
+  "NSE blocked (403): live subscription, odds and RHP links unavailable; GMP from Investorgain.",
+  "Mahanadi anchor allocation not findable by web search; card left pending. Foodlink card is a web stub from one search."
+ ]
+}
