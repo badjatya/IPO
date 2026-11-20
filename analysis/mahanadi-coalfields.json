@@ -17,8 +17,9 @@
   "~69% of sales to thermal power; coal demand projected to decline after FY36",
   "100% OFS, government-controlled parent; very large ~₹9,000 Cr issue limits listing gains"
  ],
- "anchor": "Pending — anchor allocation not yet out",
- "anchor_grade": "pending",
- "ai_model": "claude-sonnet-5-5", "ai_prompt_version": "1",
+ "anchor": "₹2,295 Cr from 53 anchors (18 Nov, at ₹136); LIC largest at ~₹568 Cr",
+ "anchor_grade": "strong",
+ "ai_model": "claude-sonnet-5-5",
+ "ai_prompt_version": "1",
  "ai_written_at": "2026-11-17T04:10:00Z"
 }

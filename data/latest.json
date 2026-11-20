@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T09:07+05:30",
+ "generated_at": "2026-11-20T19:08+05:30",
  "date": "2026-11-20",
  "ipos": [
   {
@@ -12,12 +12,12 @@
    "price": 272.0,
    "lot": 55,
    "size_cr": 455.49,
-   "gmp": 17.0,
-   "gmp_pct": 6.25,
+   "gmp": 14.5,
+   "gmp_pct": 5.33,
    "gmp_low": 13.0,
    "gmp_high": 40.0,
    "pe": 28.19,
-   "gmp_updated": "20-Nov 8:02",
+   "gmp_updated": "20-Nov 16:02",
    "url": "https://www.investorgain.com/gmp/crystal-crop-protection-ipo/2067/",
    "nse": null,
    "rhp_url": null,
@@ -36,7 +36,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 935,
+     "gain_if_allotted": 798,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -49,7 +49,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 13090,
+     "gain_if_allotted": 11165,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -62,7 +62,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 62645,
+     "gain_if_allotted": 53432,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -115,11 +115,11 @@
       },
       {
        "date": "2026-11-20",
-       "gmp": 17.0
+       "gmp": 14.5
       }
      ],
-     "direction": "up",
-     "text": "GMP ₹14 → ₹18 → ₹17 → ₹17 since 17 Nov, rising"
+     "direction": "down",
+     "text": "GMP ₹14 → ₹18 → ₹17 → ₹14.5 since 17 Nov, falling (peak ₹18)"
     },
     "subscription": null
    }
@@ -134,12 +134,12 @@
    "price": 136.0,
    "lot": 110,
    "size_cr": 8981.12,
-   "gmp": 1.8,
-   "gmp_pct": 1.32,
-   "gmp_low": 1.8,
+   "gmp": 1.3,
+   "gmp_pct": 0.96,
+   "gmp_low": 1.3,
    "gmp_high": 9.25,
    "pe": 8.42,
-   "gmp_updated": "20-Nov 8:02",
+   "gmp_updated": "20-Nov 16:02",
    "url": "https://www.investorgain.com/gmp/mahanadi-coalfields-ipo/2401/",
    "nse": null,
    "rhp_url": null,
@@ -158,7 +158,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 198,
+     "gain_if_allotted": 143,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -171,7 +171,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 2772,
+     "gain_if_allotted": 2002,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -184,7 +184,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 13266,
+     "gain_if_allotted": 9581,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -237,11 +237,11 @@
       },
       {
        "date": "2026-11-20",
-       "gmp": 1.8
+       "gmp": 1.3
       }
      ],
      "direction": "down",
-     "text": "GMP ₹4 → ₹3.1 → ₹2.7 → ₹1.8 since 17 Nov, falling"
+     "text": "GMP ₹4 → ₹3.1 → ₹2.7 → ₹1.3 since 17 Nov, falling"
     },
     "subscription": null
    }
@@ -261,11 +261,11 @@
    "gmp_low": 12.0,
    "gmp_high": 12.0,
    "pe": null,
-   "gmp_updated": "20-Nov 8:02",
+   "gmp_updated": "20-Nov 16:02",
    "url": "https://www.investorgain.com/gmp/foodlink-fb-ipo/1810/",
    "nse": null,
-   "rhp_url": null,
-   "rhp_source": null,
+   "rhp_url": "https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1795156924590.pdf",
+   "rhp_source": "sebi",
    "phase": "upcoming",
    "price_high": null,
    "subscription": null,
@@ -275,6 +275,96 @@
    "analysis_file": "analysis/foodlink-f-and-b-holdings.md",
    "needs_analysis": true,
    "card_file": "analysis/foodlink-f-and-b-holdings.json",
+   "needs_card": false,
+   "card": {
+    "name": "Foodlink F&B Holdings",
+    "source": "web",
+    "analysed": "2026-11-20",
+    "verdict": "pending",
+    "verdict_text": "Analysis pending",
+    "summary": "Mumbai-based luxury food services company: events catering, casual dining and cloud kitchens, and banquets with integrated F&B; raising about ₹160 Cr (fresh issue plus promoter OFS).",
+    "financials": "Not yet analysed — RHP not read",
+    "quota": "not found",
+    "positives": [],
+    "red_flags": [],
+    "anchor": "Pending — anchor bidding not yet held",
+    "anchor_grade": "pending",
+    "ai_model": "claude-sonnet-5-5",
+    "ai_prompt_version": "1",
+    "ai_written_at": "2026-11-20T03:40:00Z"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": null,
+    "subscription": null
+   }
+  },
+  {
+   "key": "integris-medtech",
+   "name": "Integris Medtech",
+   "open": "2026-11-27",
+   "close": "2026-12-01",
+   "allotment": "2026-12-02",
+   "listing": "2026-12-04",
+   "price": null,
+   "lot": null,
+   "size_cr": null,
+   "gmp": null,
+   "gmp_pct": null,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
+   "pe": null,
+   "gmp_updated": "20-Nov 14:10",
+   "url": "https://www.investorgain.com/gmp/integris-medtech-ipo/2029/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "upcoming",
+   "price_high": null,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [],
+   "best_category": null,
+   "analysis_file": "analysis/integris-medtech.md",
+   "needs_analysis": true,
+   "card_file": "analysis/integris-medtech.json",
+   "needs_card": true,
+   "card": null,
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": null,
+    "subscription": null
+   }
+  },
+  {
+   "key": "monomark-engineering",
+   "name": "Monomark Engineering",
+   "open": null,
+   "close": null,
+   "allotment": null,
+   "listing": null,
+   "price": null,
+   "lot": null,
+   "size_cr": null,
+   "gmp": null,
+   "gmp_pct": null,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
+   "pe": null,
+   "gmp_updated": "20-Nov 12:10",
+   "url": "https://www.investorgain.com/gmp/monomark-engineering-ipo/2232/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "announced",
+   "price_high": null,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [],
+   "best_category": null,
+   "analysis_file": "analysis/monomark-engineering.md",
+   "needs_analysis": true,
+   "card_file": "analysis/monomark-engineering.json",
    "needs_card": true,
    "card": null,
    "needs_anchor_update": false,

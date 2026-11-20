@@ -1,0 +1,17 @@
+{
+ "ai_model": "claude-sonnet-5-5",
+ "ai_prompt_version": "1",
+ "ai_written_at": "2026-11-20T13:45:00Z",
+ "analysed": "2026-11-20",
+ "source": "web",
+ "verdict": "pending",
+ "verdict_text": "Analysis pending",
+ "quota": "not found",
+ "positives": [],
+ "red_flags": [],
+ "anchor": "Pending — anchor bidding not yet held",
+ "anchor_grade": "pending",
+ "name": "Integris Medtech",
+ "summary": "Everstone-backed medical devices maker (cardiovascular devices, clinical diagnostics, scientific lab solutions) with plants in India, Germany and the Netherlands; fresh issue cut to ₹600 Cr (~₹510 Cr for debt repayment) plus a reduced OFS.",
+ "financials": "Not yet analysed — RHP not read"
+}

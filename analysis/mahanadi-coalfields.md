@@ -30,7 +30,7 @@ Revenue CAGR -1.7%, PAT CAGR -5.0% FY24-26; H1 FY27 revenue +9.3%, PAT +6.7% YoY
 Nil to company; all proceeds go to CIL.
 
 ## Anchor book
-**Pending** — anchor allocation not public as of 2026-11-17. Up to 60% of QIB portion for anchors; lock-in 50% 30 days, 50% 90 days.
+**Strong** — ₹2,295 Cr raised from 53 anchors on 18 Nov at ₹136 (16.88 Cr shares); LIC the largest at ~₹568 Cr. Lock-in 50% 30 days, 50% 90 days.
 
 ## Red flags
 Revenue, operating EBITDA and PAT fell FY24-26; FY26 profit leans on doubled other income. ~69% of sales to thermal power, demand projected to peak ~FY36; non-current provisions ₹18,326.72 Cr. 100% OFS, government-controlled parent decides dividends. Very large issue (~₹9,000 Cr). Litigation detail not reviewed (truncated extract).

@@ -1,10 +1,10 @@
-# IPO numbers – 2026-11-20 (as of 09:07 IST)
+# IPO numbers – 2026-11-20 (as of 19:08 IST)
 
 ## Crystal Crop Protection — closing today
 - Dates: open 2026-11-18 · close 2026-11-20 · allotment 2026-11-23 · listing 2026-11-26
 - Price band: ₹272 (upper) · lot 55 shares · size ₹455.49 Cr · P/E 28.19
-- GMP: ₹17 (6.25%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹14 → ₹18 → ₹17 → ₹17 since 17 Nov, rising
+- GMP: ₹14.5 (5.33%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹14 → ₹18 → ₹17 → ₹14.5 since 17 Nov, falling (peak ₹18)
 - Cached call (rhp, 2026-11-17): Neutral · anchor average · Delhi-based agrochemicals and hybrid seeds maker (80% crop protection, 19% seeds) with 14,700 distributors, raising ₹455 Cr (₹355 Cr fresh, ~₹101 Cr OFS) mostly to repay debt.
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
@@ -16,8 +16,8 @@
 ## Mahanadi Coalfields — open
 - Dates: open 2026-11-19 · close 2026-11-23 · allotment 2026-11-25 · listing 2026-11-27
 - Price band: ₹136 (upper) · lot 110 shares · size ₹8981.12 Cr · P/E 8.42
-- GMP: ₹1.8 (1.32%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹4 → ₹3.1 → ₹2.7 → ₹1.8 since 17 Nov, falling
+- GMP: ₹1.3 (0.96%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹4 → ₹3.1 → ₹2.7 → ₹1.3 since 17 Nov, falling
 - Cached call (rhp, 2026-11-17): Apply (long-term) · anchor pending · Coal India subsidiary and India's largest single coal producer (21% of FY26 output, Odisha); 100% OFS by CIL of ~₹8,981 Cr, selling 10% and keeping ~90%.
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
@@ -30,6 +30,18 @@
 - Dates: open 2026-11-26 · close 2026-11-30 · allotment 2026-12-01 · listing 2026-12-03
 - Price band: not announced · lot ? shares · size - · P/E -
 - GMP: ₹12 (0%) · anchor allocation: unknown (not on NSE yet)
+- Cached call (web, 2026-11-20): Analysis pending · anchor pending · Mumbai-based luxury food services company: events catering, casual dining and cloud kitchens, and banquets with integrated F&B; raising about ₹160 Cr (fresh issue plus promoter OFS).
+
+## Integris Medtech — upcoming
+- Dates: open 2026-11-27 · close 2026-12-01 · allotment 2026-12-02 · listing 2026-12-04
+- Price band: not announced · lot ? shares · size - · P/E -
+- GMP: - · anchor allocation: unknown (not on NSE yet)
+- Cached call: none — write the card
+
+## Monomark Engineering — announced
+- Dates: open ? · close ? · allotment ? · listing ?
+- Price band: not announced · lot ? shares · size - · P/E -
+- GMP: - · anchor allocation: unknown (not on NSE yet)
 - Cached call: none — write the card
 
 ## Source errors

@@ -1,0 +1,1589 @@
+
+===== THE OFFER =====
+the Offer
+QA  Quality Assurance
+QIB  Qualified Institutional Buyers
+QSR  Quick Service Restaurant
+R&D  Research and Development
+RII  Retail Individual Investors
+ROU  Right of Use
+Sales Tax  The Central Sales Tax Act, 1956
+Service Tax  Tax levied under the Finance Act, 1994
+Storage Facility(ies)  The three equipment storage facilities and warehouses located in Mumbai and three
+  equipment storage facility located in Dubai
+STT  Securities Transaction Tax
+Social Security Code  Code on Social Security, 2020
+TDS  Tax Deducted at Source
+Top Corporates  Large-scale, significant financial strength, operational scale, and market influence.
+  Companies exhibiting annual revenues exceeding ₹ 10,000.00 crore
+UAE  United Arab Emirates
+UK  United Kingdom
+UHNW  Ultra-high Net Worth
+Ultra-luxury Events  Any social or cultural events such as wedding where total aggregate expenditure across all
+  categories of event spend including food and beverage, venue, accommodation, logistic,
+  décor, apparel, jewellery, entertainment, gift etc. exceeds ₹3.00 crore
+USD  United States Dollar
+VAT  Value Added Tax
+VPN  Virtual Private Network
+KPI Definitions
+  Term(s)  Description
+EBITDA  Restated profit before tax plus Finance Cost plus Depreciation and Amortisation expense
+  and less Other income
+EBITDA Margin  EBITDA as a percentage of Revenue from Operations.
+Profit / (loss) After Tax  Profit/(loss) for the period/year.
+Profit / (loss) After Tax Margin Profit After Tax as a percentage of Total Income.
+Revenue from Operations (From Revenue from operations derived from inside India basis the delivery and service location
+India)
+Revenue from Operations (From Revenue from operations derived from outside India basis the delivery and service
+Outside India)  location.
+  12
+  Term(s)  Description
+Events Catering business as % of Revenue from Events Catering business as a percentage of Revenue from Operations.
+Revenue from Operations  Revenue from Events Catering Business is defined as the revenue generated from the
+  catering related services provided and this excludes the services which is provided at the
+  Banquets and Integrated F&B Business.
+Casual Dining Restaurants & Revenue from Casual Dining Restaurants & Cloud Kitchens business as a percentage of
+Cloud Kitchens business as % of Revenue from Operations. Revenue from Casual Dining Restaurants & Cloud Kitchens
+Revenue from Operations  business is defined as Revenue from Casual Dining Restaurant Chain as per the Restated
+  Consolidated Financial Information
+Banquets and Integrated F&B Revenue from Banquets and Integrated F&B Services business as a percentage of Revenue
+Services business as % of from Operations. Revenue from Banquets and Integrated F&B Services business is
+Revenue from Operations  defined as the revenue generated from the services provided related to the locations of
+  banquet and Integrated F&B locations.
+Total number of events catered in Number of events catered during the period except for the events catered in the company’s
+Events Catering Business  operated banquets and exclusive Integrated F&B venues during the period.
+Total number of Operating Number of operating banquet venues and exclusive integrated F&B venues at the end of
+Banquets and Integrated F&B the Fiscal/period.
+Venues
+Total number of events catered in Number of events catered in company operated banquets and Integrated F&B venues
+banquets and Integrated F&B during the Fiscal/period.
+services business
+Number of Casual Dining Number of operating casual dining restaurant and cloud kitchen at the end of Fiscal/period.
+Restaurant and Cloud Kitchen
+Total Number of Centralized Number of operating centralized kitchens at the end of the Fiscal/period.
+Kitchen
+Conventional Terms/Abbreviations
+  Term  Description
+AGM  Annual General Meeting
+“Alternative Investment Funds” Alternative investment funds as defined in, and registered under the SEBI AIF Regulations
+or “AIFs”
+AS / Accounting Standards  Accounting Standards issued by the ICAI
+BSE  BSE Limited
+CAGR  Compounded Annual Growth Rate
+Category I AIF  AIFs who are registered as “Category I Alternative Investment Funds” under the SEBI
+  AIF
+Category I FPIs  FPIs registered as “Category I foreign portfolio investors” under the SEBI FPI Regulations
+Category II AIF  AIFs who are registered as “Category II Alternative Investment Funds” under the SEBI
+  AIF
+Category II FPIs  FPIs registered as “Category II foreign portfolio investors” under the SEBI FPI
+  Regulations
+Category III AIF  AIFs who are registered as “Category III Alternative Investment Funds” under the SEBI
+  AIF
+CDSL  Central Depository Services (India) Limited
+CIN  Corporate identity number
+Companies Act, 1956  The Companies Act, 1956, read with the rules, regulations, clarifications and
+  modifications notified thereunder
+“Companies Act” or “Companies The Companies Act, 2013, read with the rules, regulations, clarifications and amendments
+Act, 2013”  notified thereunder
+Consolidated FDI Policy  The consolidated FDI Policy, effective from October 15, 2020, issued by the DPIIT, and
+  any modifications thereto or substitutions thereof, issued from time to time
+CrPC  Code of Criminal Procedure, 1973
+CSR  Corporate social responsibility
+Depositories  NSDL and CDSL
+Depositories Act  Depositories Act, 1996, as amended
+“DP” or “Depository Participant” A depository participant as defined under the Depositories Act
+DIN  Director Identification Number
+DP ID  Depository Participant’s identity number
+DPIIT  Department of Promotion of Industry and Internal Trade, Ministry of Commerce and
+  Industry, Government of India
+  13
+  Term  Description
+EBITDA  Earnings before interest, tax, depreciation and amortization and is calculated as the
+  restated profit for the period/year, adjusted to exclude (i) depreciation and amortization
+  expenses; (ii) finance costs; (iii) income tax expense and (iv) other income
+EGM  Extraordinary General Meeting
+Equirus  Equirus Capital Limited (formerly known as Equirus  [...truncated]
+
+===== SUMMARY OF RESTATED FINANCIAL INFORMATION =====
+SUMMARY OF FINANCIAL INFORMATION
+The following tables set forth the summary financial information derived from the Restated Consolidated Financial Information.
+The summary financial information presented below should be read in conjunction with “Restated Consolidated Financial
+Information” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” on page 299 and
+368, respectively.
+  [The remainder of this page has intentionally been left blank]
+  88
+  RESTATED STATEMENT OF ASSETS AND LIABILITIES
+  (in ₹ million, unless otherwise specified)
+  Particulars  As at  As at March 31, As at March 31, As at March 31,
+  September 30,  2026  2025  2024
+  2026*
+ASSETS
+Non-Current Assets
+(a) Property, Plant and Equipment  1,527.42  1,514.80  905.42  853.60
+(b) Capital Work-In-Progress  175.21  42.05  25.70  10.92
+(c) Goodwill  0.00  0.00  0.00  0.00
+(d) Other Intangible Assets  11.02  14.26  21.48  5.73
+(e) Intangible Assets Under Development  0  0.00  0.00  0.00
+(f) Right-of-use Assets  813.57  891.41  923.78  849.61
+(g) Financial Assets  0.00  0.00  0.00  0.00
+-Investments  1.75  13.84  12.81  1.75
+-Loans  0.00  0.00  0.00  0.00
+-Other Financial Assets  302.56  148.80  126.48  87.90
+Income Tax Assets (Net)  68.51  105.73  92.94  76.24
+(i) Deferred Tax Assets (Net)  132.46  133.60  118.97  85.19
+(j) Other Non-Current Assets  145.14  89.96  29.16  17.03
+Total Non-Current Assets (A)  3,177.64  2,954.45  2,256.74  1,987.97
+Current Assets
+(a) Inventories  159.85  177.38  168.10  104.36
+(b) Financial Assets
+-Investments  0.00  0.00  0.00  0.00
+-Trade Receivables  513.75  600.47  298.43  177.40
+-Cash and Cash Equivalents  234.15  231.27  63.70  111.16
+-Bank Balances other than above  2.23  53.05  130.94  80.36
+-Loans  0.00  0.00  0.00  0.00
+-Other Financial Assets  32.26  229.87  17.86  17.97
+(c) Other Current Assets  320.06  296.67  250.15  202.12
+(d) Assets Held for Sale  0.00  0.00  0.00  0.00
+Total Current Assets (B)  1,262.30  1,588.71  929.18  693.37
+TOTAL ASSETS (A)+(B)  4,439.94  4,543.16  3,185.92  2,681.34
+EQUITY AND LIABILITIES
+Equity
+(a) Equity Share Capital  104.60  104.60  99.65  16.52
+(b) Other Equity  2,055.54  2,188.94  962.55  779.38
+Equity attributable to owners  2,160.14  2,293.54  1,062.20  795.90
+Non-controlling Interest  0  0.00  0.00  0.00
+Total Equity (A)  2,160.14  2,293.54  1,062.20  795.90
+Liabilities
+Non-Current Liabilities
+(a) Financial Liabilities
+-Borrowings  60.21  83.75  117.36  94.88
+-Lease Liabilities  767.70  834.80  864.38  744.99
+(b) Provisions  78.42  69.44  35.23  26.48
+Total Non-Current Liabilities (B)  906.33  987.99  1,016.97  866.35
+Current Liabilities
+(a) Financial Liabilities
+-Borrowings  163.60  159.13  241.39  258.11
+-Lease Liabilities  203.32  202.00  166.25  156.09
+-Trade Payables
+Total Outstanding dues of Micro and Small Enterprises  63.21  71.56  47.67  61.23
+Total Outstanding dues of other than Micro and Small  600.95  557.43  441.48  345.37
+Enterprises
+-Others Financial Liabilities  128.51  141.19  70.80  55.50
+(b) Provisions  37.83  37.35  31.29  33.65
+  89
+  Particulars  As at  As at March 31, As at March 31, As at March 31,
+  September 30,  2026  2025  2024
+  2026*
+(c) Current Tax Liabilities (Net)  0.00  0.00  11.76  0.00
+(d) Other Current Liabilities  176.05  92.97  96.11  109.14
+(e) Liabilities directly associated with assets classified as held  0.00  0.00  0.00  0.00
+for sale
+Total Current Liabilities (C)  1,373.47  1,261.63  1,106.75  1,019.09
+TOTAL EQUITY AND LIABILITIES (A)+(B)+(C)  4,439.94  4,543.16  3,185.92  2,681.34
+* Not annualized
+  90
+  RESTATED STATEMENT OF PROFIT AND LOSS
+  (in ₹ million, unless otherwise specified)
+  Particulars  For the six  For the year  For the year  For the year
+  months ended  ended March  ended March  ended March
+  September 30,  31, 2026  31, 2025  31, 2024
+  2026*
+INCOME
+(a) Revenue from Operations  2,198.25  5,674.99  4,508.61  3,771.93
+(b) Other income  23.53  47.57  45.35  29.78
+TOTAL INCOME  2,221.78  5,722.56  4,553.96  3,801.71
+EXPENSES
+(a) Cost of materials consumed  372.69  1,085.54  908.19  1,070.14
+(b) Purchases of stock-in-trade  0.00  0.00  0.00  2.05
+(c) Employee benefits expenses  618.75  1,164.76  880.86  755.05
+(d) Finance cost  63.46  131.79  128.60  110.81
+(e) Depreciation & amortization expenses  264.66  410.15  410.94  409.71
+(f) Other expenses  1,045.27  2,629.65  2,105.06  1,638.40
+TOTAL EXPENSES  2,364.83  5,421.89  4,433.65  3,986.16
+Profit / (loss) before exceptional items and tax III= (I-II)  (143.05)  300.67  120.31  (184.45)
+Exceptional items (charge) (IV)  0.00  10.71  0.00  0.00
+Profit / (loss) before tax (III-IV)  (143.05)  289.96  120.31  (184.45)
+Tax Expenses
+(a) Current tax expense  17.16  12.36  11.64  0.00
+(b) Adjustment of tax relating to earlier periods  0.00  0.19  0.00  0.00
+(c) Deferred tax expense/(credit)  1.29  (13.66)  (33.94)  (30.93)
+Total income tax expense / (credit)  18.45  (1.11)  (22.3)  (30.93)
+Profit/(Loss) for the year  (161.50)  291.07  142.61  (153.52)
+Other Comprehensive Income / (Loss)
+(i) Items that will not be reclassified to profit or loss
+- Remeasurement Gain / (Loss) on defined benefit plans  (0.58)  (3.91)  0.76  (3.12)
+- Income tax  0.15  0.98  (0.19)  0.79
+(ii) Items that will be reclassified to profit or loss
+- Foreign currency translation gain / (loss)  20.05  46.34  3.82  (3.14)
+Other Comprehensive Income / (Loss) for the period/year  19.62  43.41  4.39  (5.47)
+Total Comprehensive Income / (Loss) for the period/year  (141.88)  334.48  147.00  (158.99)
+Net Profit for the period/year attributable to  (161.50)  291.07  142.61  (153.52)
+Owners of the parent  (161.50)  291.07  142.61  (153.52)
+Non-controlling interest  0.00  -  -  0.00
+Other Comprehensive Income / (Loss) for the period/year  19.62  43.41  4.39  (5.47)
+attributable to
+Owners of the parent  19.62  43.41  4.39  (5.47)
+Non-controlling interest  0.00  0.00  0.00  0.00
+Total Comprehensive Income / (Loss) for the period/year  (141.88)  334.48  147.00  (158.99)
+attributable to
+Owners of the parent  (141.88)  334.48  147.00  (158.99)
+Non-controlling interest  0.00  0.00  0.00  0.00
+Restated Earning Per Equity Share (Face Value of Rs.2
+each)
+Basic and Diluted
+Basic (INR)  (3.09)  5.58  2.88  (3.10)
+Diluted (INR)  (3.09)  5.48  2.83  (3.10)
+* Not annualized
+  91
+  RESTATED STATEMENT OF CASH FLOWS
+  (in ₹ million, unless otherwise specified)
+  Particulars  For the six  For the year  For the year  For the year
+  months ended  ended March  ended March  ended March
+  September 30,  31, 2026  31, 2025  31, 2024
+  2026*
+Restated Profit Before taxation from  (143.05)  289.96  120.31  (184.45)
+Adjustments for:
+Depreciation and amortisation expense  264.66  410.15  410.94  409.71
+Share-based compensation expense  8.49  15.61  19.30  0.00
+Finance costs  63.46  131.79  128.60  110.81
+Interest income  (3.96)  (12.25)  (4.81)  (4.55)
+Unwinding of interest on security deposits  (3.87)  (4.18)  (3.19)  (2.46)
+Gain on sale of property, plant and equipment  0  (1.75)  0.00  (0.18)
+Impairment on investment  12.30  0  0  0
+Gain on termination of lease  (7.64)  (1.52)  (0.74)  (0.92)
+Balances written-off  0.02  0.54  10.87  2.66
+Dividend income  (0.18)  (0.44)  (1.84)  0.00
+Advances written off  0  0.00  0.00  4.57
+Liabilities written back as no longer required  (6.81)  (5.10)  (14.63)  (8.28)
+Unrealised foreign exchange gain (net)  0  0.00  (2.97)  (6.87)
+Property, plant and equipment written off  0.20  0.00  0.81  3.11
+Operating profit before working capital changes  183.62  822.81  662.65  323.15
+Adjustments for (increase)/decrease in operating assets:
+Trade receivables  86.72  (302.04)  (121.03)  (112.80)
+Inventories  17.54  (9.28)  (63.74)  (17.01)
+Other non-current and current financial assets  73.75  (248.18)  (37.34)  (30.97)
+Other non-current and current assets  (81.65)  (155.30)  (78.20)  (40.28)
+Adjustments for increase/(decrease) in operating liabilities:
+Trade payables  41.98  144.95  97.17  142.97
+Other current liabilities  4.82  24.10  1.71  (34.76)
+Current financial liabilities  83.08  (3.14)  (13.03)  19.74
+Provisions  8.88  36.36  7.15  12.01
+Cash Generated from / (Used in) operations  418.74  310.27  455.34  262.05
+Net income tax paid  22.84  (11.20)  (15.41)  (28.53)
+Net cash Generated from / (Used in) operating activities (A)  441.58  299.07  439.93  233.52
+B. Cash flow from investing activities
+Purchase of property, plant & equipment and intangible assets  (293.29)  (687.72)  (306.06)  (220.56)
+Proceeds from sale of property, plant & equipment and intangible  0.26  4.53  38.59  1.03
+assets
+Proceeds from/(investment in) fixed deposits  50.82  77.89  (50.58)  (27.30)
+Investment in Gastronomics FZCO  0  0  (11.06)  0.00
+Interest received  1.19  10.61  4.18  3.77
+Dividend income received  0.18  0.44  1.84  0.00
+Net cash Generated from / (Used in) investing activities (B)  (240.84)  (594.25)  (323.09)  (243.06)
+C. Cash flow from financing activities
+Finance cost paid  (15.40)  (34.64)  (36.92)  (36.20)
+Proceeds from borrowings  49.98  150.80  142.12  263.15
+Repayment of borrowings  (69.32)  (266.67)  (136.86)  (57.34)
+Proceeds from issue of shares  0  881.24  100.00  0.00
+Principal repayment of lease liabilities  (115.29)  (161.51)  (140.89)  (123.59)
+Interest payment of lease liabilities  (47.78)  (97.15)  (91.17)  (79.23)
+Net cash Generated from / (Used in) financing activities (C)  (197.81)  472.07  (163.72)  (33.21)
+Net Increase / (decrease) in Cash and Cash Equivalents  (2.93)  176.89  (46.88)  (42.75)
+(A)+(B)+(C)
+Cash and cash equivalents at the beginning of the period/year  231.27  63.70  111.16  160.37
+Effect of exchange differences on restatement of foreign currency  (0.05)  (9.32)  (0.58)  (6.46)
+Cash and cash equivalents
+Cash and Cash Equivalents at the end of the period/year  234.15  231.27  63.70  111.16
+Cash and cash equivalents as per above comprise of the
+following:
+Balances with banks
+in current accounts  214.77  225.74  55.10  77.06
+Cash in hand  19.38  5.53  8.60  34.10
+Balances as per statement of cash flows  234.15  231.27  63.70  111.16
+  92
+* Not annualized
+  93
+
+===== CAPITAL STRUCTURE =====
+CAPITAL STRUCTURE
+Our Company’s share capital, as of the date of this Red Herring Prospectus, is disclosed below.
+  (In ₹ except share data)
+  S. No.  Particulars  Aggregate value at face value  Aggregate value at Offer
+  (₹)  Price*
+ A  AUTHORISED SHARE CAPITAL(1)
+  90,000,000 Equity Shares of face value ₹ 2 each  180,000,000  -
+ B  ISSUED, SUBSCRIBED AND PAID-UP CAPITAL BEFORE
+
+===== OBJECTS OF THE OFFER =====
+OBJECTS OF THE OFFER
+The Offer comprises the Fresh Issue of [●] Equity Shares, aggregating up to ₹1,920.00 million by our Company and the Offer
+for Sale of up to 8,835,382 Equity Shares, aggregating up to ₹ [●] million by the Selling Shareholders. For details, see “The
+Offer” on page 84.
+Offer for Sale
+The Selling Shareholders shall be entitled to the proceeds of the Offer for Sale after deducting their respective proportion of
+Offer expenses and relevant taxes thereon. Our Company will not receive any proceeds from the Offer for Sale and the proceeds
+received from the Offer for Sale will not form part of the Net Proceeds. For further details in reference to the Offer expenses,
+see “- Offer expenses” on page 171.
+Fresh Issue
+Net Proceeds
+The details of the proceeds of the Net Proceeds from the Fresh Issue are set out below:
+  Particulars  Estimated Amount
+  (₹ million)
+Gross proceeds of the Fresh Issue  Up to 1,920.00
+(Less) Offer-related expenses in relation to the Fresh Issue  [●](1)(2)
+Net Proceeds  [●](2)
+See “– Offer expenses” on page 171.
+(1) To be finalized upon determination of the Offer Price and will be updated in the Prospectus prior to filing with the RoC.
+Requirement of funds
+Our Company proposes to utilize the Net Proceeds towards funding the following objects (collectively, referred to herein as the
+“Objects”):
+1.  Funding of capital expenditure towards setting up one new centralized kitchen (“Proposed Centralized Kitchen”) by
+  our Company;
+2.  Funding of capital expenditure towards setting up two new banquets (“Proposed Banquets”) by our Company;
+3.  Investment in Foodlink Global Restaurants & Catering Services LLC (“FGRCS”), our Material Subsidiary, for
+  funding of capital expenditure towards setting up four new casual dining restaurants (“Proposed Casual Dining
+  Restaurants”);
+4.  Repayment or prepayment, in full or in part, of all or a portion of certain outstanding borrowings availed by our
+  Company and FGRCS; and
+5.  General corporate purposes
+In addition, our Company expects to receive the benefits of listing of the Equity Shares on the Stock Exchanges and
+enhancement of our Company’s visibility and brand image and creation of a public market for our Equity Shares in India. The
+main objects and objects incidental and ancillary to the main objects set out in our Memorandum of Association enable us: (i)
+to undertake our existing business activities and other activities set out therein; (ii) to undertake the activities proposed to be
+funded from the Net Proceeds; and (iii) undertake the activities towards which the loans proposed to be repaid or pre-paid from
+the Net Proceeds were utilised.
+Utilization of Net Proceeds
+Our Company proposes to utilize the Net Proceeds towards the following objects:
+Sr. No.  Particulars  Estimated amount (₹ million)
+1.  Funding of capital expenditure towards setting up one Proposed Centralized Kitchen by our  213.98
+  Company
+2.  Funding of capital expenditure towards setting up two Proposed Banquets by our Company  415.03
+3.  Investment in FGRCS, our Material Subsidiary, for funding of capital expenditure towards  508.07
+  setting up four Proposed Casual Dining Restaurants
+  150
+Sr. No.  Particulars  Estimated amount (₹ million)
+4.  Repayment or prepayment, in full or in part, of all or a portion of certain outstanding  210.00
+  borrowings availed by our Company and FGRCS
+5.  General Corporate Purposes(1)  [●]
+  Net Proceeds(1)  [●]
+The amount utilised for general corporate purposes shall not exceed 25% of the Gross Proceeds of the Fresh Issue. To be determined upon finalisation of the
+Offer Price and updated in the Prospectus prior to filing with the RoC.
+Proposed schedule of implementation and deployment of Net Proceeds
+We propose to deploy the Net Proceeds towards the Objects in accordance with the estimated schedule of implementation and
+deployment of funds, as set forth in the table below:
+  (in ₹ million)
+  Particulars  Estimated  Estimated schedule of deployment of
+  utilization from  Net Proceeds
+  Net Proceeds  Fiscal 2027  Fiscal 2028
+Funding of capital expenditure towards setting up one Proposed Centralized  213.98  -  213.98
+Kitchen by our Company
+Funding of capital expenditure towards setting up two Proposed Banquets by  415.03  -  415.03
+our Company
+Investment in FGRCS, our Material Subsidiary, for funding of capital  508.07  -  508.07
+expenditure towards setting up four Proposed Casual Dining Restaurants
+Repayment or prepayment, in full or in part, of all or a portion of certain  210.00  210.00  -
+outstanding borrowings availed by our Company and FGRCS
+General corporate purposes(1)  [●]  [●]  [●]
+Total  [●]  [●]  [●]
+(1)  The amount utilised for general corporate purposes shall not exceed 25% of the Gross Proceeds of the Fresh Issue. To be determined upon finalisation
+  of the Offer Price and updated in the Prospectus prior to filing with the RoC.
+We intend to deploy the Net Proceeds towards the Objects as disclosed in the table above, in accordance with the business
+needs of our Company. However, the actual deployment of funds will depend on a number of factors, including the timing of
+completion of the Offer, market conditions, our Board’s analysis of economic trends and business requirements as well as
+general factors affecting our results of operations and financial condition. Depending upon such factors, we may have to reduce
+or extend the deployment period for the stated Objects, at the discretion of our management, and in accordance with applicable
+laws. In the event that the estimated utilization of the Net Proceeds in a scheduled Fiscal is not completely met, including due
+to the reasons stated above, the same shall be utilized in the next Fiscal, as may be determined by our Company, in accordance
+with applicable laws. For further details, see “Risk Factors– We have not yet placed orders in relation to the capital expenditure
+for setting up the Proposed Centralized Kitchen, the Proposed Banquets by our Company and the Proposed Casual Dining
+Restaurants by our Material Subsidiary, Foodlink Global Restaurants & Catering Services LLC. In the event of any delay in
+placing the orders, or in the event the vendor is not able to provide the equipment, fit out, civil, electrical or plumbing works,
+etc. in a timely manner, or at all, it may result in time and cost overruns and our business, prospects and results of operations
+may be adversely affected.” on page 23.
+The above requirement of funds are based on our current business plan as approved by our Board of Directors pursuant to their
+resolution dated November 10, 2026, internal management estimates based on the prevailing market conditions, and also based
+on quotations obtained from certain vendors. These funding requirements or deployments have not been appraised by any bank
+or financial institution. We may have to revise our funding requirements and deployment from time to time on account of
+various factors, such as change in costs, including due to inflation or increase in the rate of taxation, revision in quotations at
+the time of actual expenditure, change in financial and market conditions, our management’s analysis of economic trends and
+our business requirements, changes in technology, as well as general factors affecting our results of operations, financial
+condition, business and strategy and interest/exchange rate fluctuations or other external factors, which may not be within the
+control of our management. This may entail rescheduling (including preponing the deployment of Net Proceeds) and revising
+the funding requirement for a particular Object or increasing or decreasing the amounts earmarked towards any of the
+aforementioned Objects at the discretion of our management, subject to compliance with applicable law.
+In case of a shortfall in meeting the aforementioned Objects, we may explore a range of alternate funding options including
+utilizing our internal accruals and availing future debt from lenders. We believe that such alternate funding arrangements would
+be available to fund any such shortfalls.
+In the event that estimated utilization out of the Net Proceeds in a Fiscal is not completely met due to factors such as (i) economic
+and business conditions; (ii) delay in procuring and operationalizing assets or necessary licenses and approvals; or (iii) any
+other commercial considerations, such unutilized portion of the Net Proceeds shall be utilized in the subsequent fiscals, as may
+be decided by our Company, in accordance with applicable laws. Any such change in our plans may require rescheduling of
+our expenditure programs and increasing or decreasing expenditure for a particular object vis-à-vis the utilization of Net
+Proceeds.
+  151
+Means of finance
+The fund requirements for the Objects are proposed to be met from the Net Proceeds and any shortfall from our internal accruals.
+Accordingly, we confirm that there is no requirement to make firm arrangements of finance through verifiable means towards
+at least 75% of the stated means of finance, excluding the amount to be raised through the Fresh Issue as required under
+Paragraph 9(C)(1) of Part A of Schedule VIII and Regulation 7(1)(e) the SEBI ICDR Regulations and existing identifiable
+internal accruals. In case of a shortfall in the Net Proceeds or any increase in the actual utilisation of funds earmarked for the
+Objects, our Company may explore a range of options including utilizing our internal accruals.
+Details of the Objects
+1.  Funding of capital expenditure towards setting up one Proposed Centralized Kitchen by our Company
+  As on the date of this Red Herring Prospectus, we have six centralized kitchens in India, located at Mumbai
+  (Maharashtra), Ahmedabad (Gujarat), Mohali (Punjab), Hyderabad (Telangana), Jaipur (Rajasthan), and New Delhi
+  (National Capital Territory of Delhi), and one centralized kitchen outside India located at Dubai (United Arab
+  Emirates). As on the date of this Red Herring Prospectus, our Centralized Kitchens are spread over a combined area
+  of over 91,500 square feet and have the capacity to provide over 100,000 meals per day.
+  Our Board in its meeting held on November 10, 2026 approved an amount of ₹ 213.98 million for the purpose of
+  funding the proposed capital expenditure as stated herein from the Net Proceeds.
+  The details of commencement of our centralized kitchens are as follows
+  Sr. No.  Particulars  City  Operations start year
+  1.  Centralized Kitchen  Mumbai, Maharashtra  Fiscal 2013*
+  Fiscal 2019
+  2.  Centralized Kitchen  Ahmedabad, Gujarat  Fiscal 2014
+  3.  Centralized Kitchen  Mohali, Punjab  Fiscal 2020
+  4.  Centralized Kitchen  Delhi, NCR  Fiscal 2023
+  5.  Centralized Kitchen  Hyderabad, Telangana  Fiscal 2024
+  6.  Centralized Kitchen  Dubai, UAE  Fiscal 2024
+  7.  Centralized Kitchen  Jaipur, India  Fiscal 2027
+  *  The Centralized Kitchen in Mumbai was originally established in Fiscal 2013 and subsequently relocated to another site within Mumbai
+  during Fiscal 2019.
+  Details of costs incurred for opening centralized kitchens in the six months ended September 30, 2026, and Fiscals
+  2026, 2025, and 2024
+  The actual cost incurred for opening the centralized kitchen by the Company in the six months ended September 30,
+  2026, and Fiscal 2026, Fiscal 2025 and Fiscal 2024 are as under:
+  Particulars  Six months ended  Fiscal 2026 (in ₹  Fiscal 2025 (in ₹  Fiscal 2024 (in ₹ million)
+  September 30, 2026 (in  million)  million)
+  ₹ million)
+  Cost incurred for  66.10  -  - 32.49
+  opening
+  centralized
+  kitchens
+  (including taxes)
+  Setting up one Proposed Centralized Kitchen
+  Our Centralized Kitchens are integral to our Events Catering business. As per the F&S Report, in Fiscal 2026, luxury
+  and ultra luxury wedding catering segment accounted for ₹387- 823 billion (₹38,700 – 82,350 Crore) accounting for
+  31-40% of the total wedding catering market size. Together, the luxury, ultra-luxury and premium wedding segments, [...truncated]
+
+===== BASIS OF OFFER PRICE =====
+BASIS FOR OFFER PRICE
+The Price Band and the Offer Price will be determined by our Company, in consultation with the BRLMs, on the basis of assessment
+of market demand for the Equity Shares offered through the Book Building Process and the quantitative and qualitative factors as
+described below and is justified in view of these parameters. The face value of the Equity Shares is ₹2 each and the Floor Price is [●]
+times the face value of the Equity Shares and the Cap Price is [●] times the face value of the Equity Shares.
+Investors should also refer to “Risk Factors”, “Our Business”, “Summary of Financial Information”, “Restated Consolidated Financial
+Information”, and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” on pages 22, 230, 88,
+299 and 368, respectively, to have an informed view before making an investment decision.
+Qualitative factors
+Some of the qualitative factors which form the basis for computing the Offer Price are:
+•  As per the F&S Report, we were India’s largest player by revenue in Fiscal 2025 * amongst our peers in terms of organized,
+  ultra-luxury and luxury catering (weddings, meetings, incentives, conferences, and exhibitions (“MICE”), sports, personal
+  celebration catering and banquets), with a focus on casual dining, banquets and integrated F&B services. As per the F&S
+  Report, we cater to a niche yet growing segment of the market that demands premium quality and service.
+  *
+  Information provided for Fiscal 2025, as revenue details for certain unlisted peer companies for Fiscal 2026 are not available as
+  on the date of this Red Herring Prospectus.
+•  We have strategically located centralized kitchens with streamlined supply chain and well-established processes. We believe
+  that we have distinguished ourselves in the competitive landscape by embracing a centralized kitchen model, which allows
+  for the delivery of consistently high-quality food across multiple regions. We have six strategically located centralized
+  kitchens in India, located at Mumbai (Maharashtra), Ahmedabad (Gujarat), Mohali (Punjab), Hyderabad (Telangana), Jaipur
+  (Rajasthan) and New Delhi (National Capital Territory of Delhi).
+•  We have a diversified geographical presence. In the six months ended September 30, 2026 we derive 26.27% of revenue
+  from operations from outside India. As of September 30, 2026, we have operations in India, United Arab Emirates, United
+  Kingdom and Malaysia, and have catered for events in countries including Switzerland, Turkey, Italy, Spain, United Arab
+  Emirates, France, Oman, Qatar, Egypt, Jordan, Maldives, Thailand, Nigeria, United Kingdom and Malaysia. We have seven
+  Centralized Kitchens – six spread across India and one in United Arab Emirates. We have three banquets, one each in
+  Mumbai, Ahmedabad, and New Delhi.
+•  We have an experienced promoter and professional management team with domain knowledge. We benefit from the industry
+  experience, vision and guidance of our Promoter, Sanjay Manohar Vazirani. Our Promoter, Sanjay Manohar Vazirani has
+  over three decades of experience in conceptualizing, executing, developing and expanding luxury catering, food and
+  beverages business in India and UAE. Our Promoter, together with our Directors and management team, have industry
+  experience which enables us to anticipate and address market trends, manage and grow our operations, maintain and leverage
+  customer relationships and respond to changes in customer preference.
+For further details, see “Risk Factors” and “Our Business” on pages 22 and 230, respectively.
+Quantitative factors
+Some of the information presented below relating to our Company is derived from the Restated Consolidated Financial Information.
+For further details, see “Restated Consolidated Financial Information” on page 299.
+Some of the quantitative factors which may form the basis for calculating the Offer Price are as follows:
+1.  Basic and diluted Earnings/Loss per Share (“EPS”) at face value of ₹2 each, as adjusted for changes in capital:
+  Financial Year  Basic EPS (in ₹)  Diluted EPS (in ₹)  Weight
+  March 31, 2024  (3.10)  (3.10)  1
+  March 31, 2025  2.88  2.83  2
+  March 31, 2026  5.58  5.48  3
+  Weighted Average  3.23  3.17  -
+  September 30, 2026*  (3.09)  (3.09)
+  *Not annualised
+  Notes:
+  (1) Basic EPS (₹) = Basic earnings per share are calculated by dividing the net restated profit for the year attributable to equity shareholders by
+  the weighted average number of Equity Shares outstanding during the period/year.
+  (2) Diluted EPS (₹) = Diluted earnings per share are calculated by dividing the net restated profit for the year attributable to equity shareholders
+  by the weighted average number of Equity Shares outstanding during the period/year as adjusted for the effects of all dilutive potential Equity
+  Shares during the period/year.
+  175
+  (3)  Weighted average number of equity shares is the number of equity shares outstanding at the beginning of the year adjusted by the number of
+  equity shares issued during the period/year multiplied by the time weighting factor.
+2.  Price/Earnings (“P/E”) ratio in relation to Price Band of ₹ [●] to ₹ [●] per Equity Share:
+  Particulars  P/E at the Floor Price  P/E at the Cap Price (no. of
+  (no. of times)*  times)*
+  Based on basic EPS as per the Restated Consolidated Financial  [●]  [●]
+  Information for the financial year ended March 31, 2026
+  Based on diluted EPS as per the Restated Consolidated Financial  [●]  [●]
+  Information for the financial year ended March 31, 2026
+  *To be populated after finalization of price band.
+3.  Industry P/ E ratio
+  There are no listed companies in India or globally which operate in a similar business model as ours. We are a global
+  premier luxury food services business focused on providing curated culinary experiences driven by innovation. Our
+  integrated business model comprises three distinct yet complementary businesses of (i) Events Catering, (ii) Casual
+  Dining Restaurants & Cloud Kitchens, and (iii) Banquets and Integrated F&B Services.
+4.  Average Return on Net Worth (“RoNW”)
+  Financial Year  RoNW (%)  Weight
+  March 31, 2024  (17.88%)  1
+  March 31, 2025  15.35%  2
+  March 31, 2026  17.35%  3
+  Weighted Average  10.81%  -
+  September 30, 2026*  (7.25%)  -
+  * Not annualised
+  Notes:
+  1. Weighted average = Aggregate of financial year-wise weighted Return on Net Worth divided by the aggregate of weights i.e. [(Return on Net
+  Worth x Weight) for each financial year] / [Total of weights]
+  2. Return on Net Worth (%) = Net profit after tax, as restated /Average Net worth as restated as at period/year end.
+5.  Net Asset Value (“NAV”) per Equity Share (face value of ₹2 each)
+  Net Asset Value per Equity Share  (₹)
+  As at September 30, 2026  41.30
+  As at March 31, 2026  44.00
+  After the completion of the Offer
+  - At the Floor Price  [●]
+  - At the Cap Price  [●]
+  - At the Offer Price  [●]
+  Notes:
+  (1) Net Asset Value per Equity Share = Net worth as per the Restated Consolidated Financial Information / Total number of equity shares
+  outstanding as at the end of period/year.
+6.  Comparison with listed industry peers
+  There are no listed companies in India or globally which operate in a similar business model as ours.
+7.  The Offer Price is [●] times of the face value of the Equity Shares.
+  The Offer Price of ₹ [●] has been determined by our Company in consultation with the BRLMs, on the basis of
+  assessment of market demand from investors for Equity Shares through the Book Building Process, and is justified in
+  view of the above qualitative and quantitative parameters. The trading price of the Equity Shares could decline,
+  including due to the factors mentioned in “Risk Factors” on page 22, and you may lose all or part of your investments.
+8.  Key Performance Indicators (“KPIs”)
+  The KPIs disclosed below have been used historically by our Company to understand and analyze its business
+  performance, which in result, help us in analyzing the growth of business in comparison to our peers. The following
+  table highlights our key performance indicators of our financial performance that have a bearing on arriving at the
+  basis for Offer Price and disclosed to our investors during the three years preceding to the date of this Red Herring
+  Prospectus, as at the dates and for the period indicated:
+  176
+  Particulars  Units  Six months  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  ended
+  September 30,
+  2026#
+ Financial KPIs
+ Revenue from Operations  ₹ in million  2,198.25  5,674.99  4,508.61  3,771.93
+ EBITDA(1)  ₹ in million  161.54  784.33  614.49  306.30
+ EBITDA Margin(2)  in %  7.35%  13.82%  13.63%  8.12%
+ Profit/ (Loss) After Tax(3)  ₹ in million  (161.50)  291.07  142.61  (153.52)
+ Profit/ (Loss) After Tax Margin(4) In %  (7.27%)  5.09%  3.13%  (4.04%)
+ Operational KPIs
+ Revenue from Operations (From ₹ in million  1,620.87  4,184.26  3,135.68  2,910.56
+ India) (5)
+ Revenue from Operations (From ₹ in million  577.38  1,490.73  1,372.93  861.37
+ Outside India) (6)
+ Events Catering business as % of in %  44.15%  52.89%  54.26%  59.42%
+ Revenue from Operations(7)
+ Casual Dining Restaurants & in %  30.25%  24.17%  22.92%  28.49%
+ Cloud Kitchens business as % of
+ Revenue from Operations(8)
+ Banquets and Integrated F&B in %  25.41%  22.51%  21.99%  11.35%
+ Services business as % of Revenue
+ from Operations(9)
+ Total number of events catered in In number  402  1,092  1,012  911
+ Events Catering Business(10)
+ Total number of Operating In number  6  6  3  3
+ Banquets and Integrated F&B
+ Venues(11)
+ Total number of events catered in In number  595  1,089  1,020  658
+ banquets and Integrated F&B
+ services business(12)
+ Number of Casual Dining In number  17  21  18  20
+ Restaurant (13)
+ Number of Cloud Kitchen(13)  In number  11  13  10  14
+ Total Number of Centralized In number  7  6  6  6
+ Kitchen(14)
+*  As certified by S M A R T S & Co, by way of their certificate dated November 19, 2026 (UDIN: 26630587OMRWWO8284).
+# Not annualised
+Notes:
+1. EBITDA is defined as Restated profit before tax plus Finance Cost plus Depreciation and Amortisation expense and less Other income.
+2. EBITDA Margin is defined as EBITDA as a percentage of Revenue from Operations.
+3. Profit/ (Loss) after tax is as disclosed in Restated Consolidated Financial Information as Profit/(loss) for the period/year.
+4. Profit/ (Loss) after Tax Margin is defined as Profit/ (Loss) After Tax as a percentage of Total Income.
+5. Revenue from Operations (From India) is defined as the revenue from operations derived from inside India basis the delivery and service
+  location
+6. Revenue from Operation (from outside India) is defined as the revenue from operations derived from outside India basis the delivery and
+  service location.
+7. Events Catering business as % of Revenue from Operations is defined as the Revenue from Events Catering business as a percentage of
+  Revenue from Operations. Revenue from Events Catering Business is defined as the revenue generated from the catering related services
+  provided and this excludes the services which is provided at the Banquets and Integrated F&B Business.
+8. Casual Dining Restaurants & Cloud Kitchens business as % of Revenue from Operations is defined as the Revenue from Casual Dining
+  Restaurants & Cloud Kitchens business as a percentage of Revenue from Operations. Revenue from Casual Dining Restaurants & Cloud
+  Kitchens business is defined as Revenue from Casual Dining Restaurant Chain as per the Restated Consolidated Financial Information
+9. Banquets and Integrated F&B Services business as % of Revenue from Operations is defined as the Revenue from Banquets and Integrated
+  F&B Services business as a percentage of Revenue from Operations. Revenue from Banquets and Integrated F&B Services business is defined
+  as the revenue generated from the services provided related to the locations of banquet and Integrated F&B locations.
+10. Total number of events catered in the events catering business is defined as the number of events catered during the period except for the
+  events catered in the company’s operated banquets and exclusive Integrated F&B venues during the Fiscal/period.
+11. Total number of operating banquets and Integrated F&B venues is defined as the number of operating banquet venues and exclusive integrated
+  F&B venues at the end of the Fiscal/period.
+12. Total number of events catered in banquets and Integrated F&B services business is defined as the number of events catered in company
+  operated banquets and Integrated F&B venues during the Fiscal/period.
+13. Number of Casual Dining Restaurant and Cloud Kitchen is defined as the number of operating casual dining restaurant and cloud kitchen at
+  the end of Fiscal/period.
+14. Total Number of centralized kitchens is defined as the number of operating centralized kitchens at the end of the Fiscal/period.
+Explanation for the Key Performance Indicators:
+  177
+  KPI  Explanation and rationale for inclusion as a KPI
+Financial KPIs
+Revenue from Operations  Revenue from Operations is used by the management to track the revenue profile
+  of the business and in turn helps assess the overall financial performance of our
+  Company and size of the business.
+EBITDA  We believe that tracking EBITDA helps us identify underlying trends in our
+  business and facilitates evaluation of year-on-year operating performance by
+  eliminating items that are not considered by us in the evaluation of ongoing
+  operating performance and allowing comparison of our core business operating
+  results over multiple periods
+EBITDA Margin  We believe that tracking EBITDA Margin helps us track the margin of the
+  company at an operating level by considering only the core business operating
+  results.
+Profit/(Loss) After Tax  We believe that tracking profit for the year helps us track the overall profitability
+  of our business after tax.
+Profit/(Loss) After Tax Margin  We believe that tracking Profit Margin for the year helps us track the overall
+  profitability of our business after tax.
+Operational KPIs
+Revenue from Operations (From India)  We track our revenue from geography in which our customers’ revenue originates
+Revenue from Operations (From Outside based on the location of the customer. Accordingly, we believe tracking our
+India)  revenue from India and Outside India that we cater to enables us to assess the
+  overall performance of our Company and relative contribution of clients in these
+  geographies to our overall revenue from operations.
+Events Catering business as % of Revenue We believe that tracking our revenue attributable to each of the operating segment
+from Operations  as a percentage of revenue from operations, enables us to analyse performance of
+Casual Dining Restaurants & Cloud Kitchens our Company in our primary line of business by knowing the relative contribution
+business as % of Revenue from Operations  of these segments to our overall revenue from operations.
+Banquets and Integrated F&B Services
+business as % of Revenue from Operations
+Total number of events catered in Events We believe that tracking the number of events in this segment enables us to track
+Catering Business  the scale of the business segment.
+Total number of Operating Banquets and We believe that tracking the number of banquets enable us to track the growth and
+F&B Venues  performance in the banquets and Integrated F&B service segments.
+Total number of events catered in banquets We believe that tracking the number of events in the banquets and Integrated F&B
+and Integrated F&B services business  services business enables us to analyse the scale of this segment.
+Number of Casual Dining Restaurant  We believe that the number of casual dining restaurant enables us to analyse the
+  scale and penetration in this segment.
+Number of Cloud Kitchen  We believe that the number of cloud kitchen enables us to analyse the scale and
+  penetration in this segment.
+Total Number of Centralized Kitchen  We believe that the tracking of number of centralized kitchen enables us to track
+  the scalability in that location which indicates higher penetration and scalability.
+The key performance indicators set forth above, have been approved by the Audit Committee pursuant to its resolution dated
+November 18, 2026. Further, the Audit Committee has on November 18, 2026 taken on record that other than the key
+performance indicators set forth above, our Company has not disclosed any other such key performance indicators during
+the last three years preceding the date of this Red Herring Prospectus to its investors. Further, the aforementioned KPIs have
+been verified and certified by S M A R T S & Co, by their certificate dated November 19, 2026 (UDIN:
+26630587OMRWWO8284).
+Our Company shall continue to disclose the KPIs disclosed above, on a periodic basis, at least once in a year (or for any
+lesser period as determined by our Company), for a duration that is at least the later of (i) one year after the listing date or
+period specified by SEBI; or (ii) till the utilisation of the Net Proceeds. Any change in these KPIs, during the aforementioned
+period, will be explained by our Company. The ongoing KPIs will continue to be certified as required under the SEBI ICDR
+Regulations.
+For further details of our other operating metrics, see “Our Business” and “Management’s Discussion and Analysis of
+Financial Condition and Results of Operations” on pages 230 and 368, respectively.
+Description on the historic use of the KPIs by our Company to analyze, track or monitor the operational and/or
+financial performance of our Company
+In evaluating our business, we consider and use certain KPIs as a supplemental measure to review and assess our financial
+and operating performance. The presentation of these KPIs is not intended to be considered in isolation or as a substitute for
+the Restated Consolidated Financial Information. We use these KPIs to evaluate our financial and operating performance.
+These KPIs have limitations as analytical tools. Further, these KPIs may differ from the similar information used by other
+companies and hence their comparability may be limited. Therefore, these metrics should not be considered in isolation or
+construed as an alternative to Ind AS measures of performance or as an indicator of our operating performance, liquidity or
+  178
+  results of operation. Although these KPIs are not a measure of performance calculated in accordance with applicable
+  accounting standards, our Company’s management believes that it provides an additional tool for investors to use in
+  evaluating our ongoing operating results and trends and in comparing our financial results with other companies in our
+  industry because it provides consistency and comparability with past financial performance, when taken collectively with
+  financial measures prepared in accordance with Ind AS. Investors are encouraged to review the Ind AS financial measures
+  and to not rely on any single financial or operational metric to evaluate our business.
+  Comparison of KPIs based on additions or dispositions to our business
+  Our Company has not made any material additions or dispositions to its business in the six months ended September 30,
+  2026 and in Fiscals 2026, 2025 and 2024, accordingly, no comparison of KPIs over time based on additions or dispositions
+  to the business are required to be provided.
+9.  Comparison of our key performance indicators with listed industry peers
+  There are no listed companies in India or globally which operate in a similar business model as ours. We are a global premier
+  luxury food services business focused on providing curated culinary experiences driven by innovation. Our integrated
+  business model comprises three distinct yet complementary businesses of (i) Events Catering, (ii) Banquets and Integrated
+  F&B Services, and (iii) Casual Dining Restaurants & Cloud Kitchens.
+10.  Past transfer(s)/ allotment(s)
+  Our Company confirms that there has been no:
+  (a)  primary/new issue of shares (Equity Shares/convertible securities), excluding grants of any options and issuance
+  of bonus shares, equal to or more than 5% of the fully diluted paid-up share capital of our Company (calculated on
+  the pre-issue capital before such transaction and excluding employee stock options granted but not vested), in a
+  single transaction or multiple transactions (combined together over a span of rolling 30 days) during 18 months
+  preceding the date of filing of this Red Herring Prospectus, in a single transaction or multiple transactions combined
+  together over a span of rolling 30 days; and
+  (b)  secondary sale/acquisition of shares (Equity Share/convertible securities) by the Promoter, Promoter Group
+  entities, Selling Shareholders, Shareholders having the right to nominate directors to the Board, excluding gifts,
+  where either acquisition or sale is equal to or more than 5% of the fully diluted paid-up share capital of our Company
+  (calculated on the pre-issue capital before such transaction and excluding employee stock options granted but not
+  vested), in a single transaction or multiple transactions (combined together over a span of rolling 30 days) during
+  18 months preceding the date of filing of this Red Herring Prospectus, in a single transaction or multiple
+  transactions combined together over a span of rolling 30 days.
+  Since there are no such transaction to report to under (a) and (b), the following are the details of the last five primary or
+  secondary transactions (secondary transactions where the Promoter or members of the Promoter Group or Selling
+  Shareholders or Shareholder(s) having the right to nominate director(s) on our Board, are a party to the transaction), not
+  older than three years prior to the date of filing of this Red Herring Prospectus irrespective of the size of transactions:
+  Name of Acquirer  Date of  Number of  Face Value  Cost per  Total cost  Reason for
+  acquisition  Equity shares  per equity  equity share  allotment/
+  share  transfer
+  Rajendrakumar Shivkishan Agarwal, May 6, 2025  4,95,867  2  363  17,99,99,721  Private
+  trustee of Malakshmi Trust  Placement
+  Ajay Agarwal  68,870  2  363  2,49,99,810
+  Pradeep Suresh Agarwal HUF  16,528  2  363  59,99,664
+  Pace Commodity Brokers Private Limited  3,16,804  2  363  11,49,99,852
+  Shikhar Raj on behalf of S Four Capital  82,644  2  363  2,99,99,772
+  Ankit Halwai  2,500  2  363  9,07,500
+  Rahul Kumar Ghose  13,774  2  363  49,99,962
+  Manohar  Lal  Agarwal April 23,  4,95,867  2  363  17,99,99,721  Private
+  and Madhu Sudan Agarwal, partners of  2025  Placement
+  ARK Investments
+  Neeleshwar Bhatnagar  1,37,741  2  363  4,99,99,983
+  IRB Holding Private Limited  1,38,000  2  363  5,00,94,000
+  Arun Jain  1,37,741  2  363  4,99,99,983
+  J H Dalmia Trust through its trustee  82,644  2  363  2,99,99,772
+  Anupama Dalmia
+  Sukeshi Dalmia Jaipuria  55,096  2  363  1,99,99,848
+  Nikhil Maniar  1,377  2  363  4,99,851
+  Shlok Vazirani  April 17,  5,70,075  2  Nil  Nil  Transfer of
+  2025  shares by way
+  of gift from
+  Sanjay
+  179
+  Name of Acquirer  Date of  Number of  Face Value  Cost per  Total cost  Reason for
+  acquisition  Equity shares  per equity  equity share  allotment/
+  share  transfer
+  Manohar
+  Vazirani
+  Granth Vazirani  April 22,  5,70,075  2  Nil  Nil  Transfer of
+  2025  shares by way
+  of gift from
+  Sanjay
+  Manohar
+  Vazirani
+  Rekha Jhunjhunwala  April 16,  1,37,741  2  363  4,99,99,983  Private
+  Varalakshmi Enterprises LLP  2025  55,096  2  363  1,99,99,848  Placement
+  Smita Jatia held jointly with Amit Jatia  27,548  2  363  99,99,924
+  Amvak Private Limited  68,870  2  363  2,49,99,810
+  Ravi Agarwal  34,435  2  363  1,24,99,905
+  R2TM Private Limited  34,435  2  363  1,24,99,905
+  K. Prakash Shetty  68,870  2  363  2,49,99,810
+  36,12,598  89,74,98,624
+  Weighted Average cost of Acquisition  248.44
+  (A/B)
+11.  The Floor Price and Cap Price vis-à-vis Weighted Average Cost of Acquisition based on past allotment(s)/
+  secondary transaction(s)
+  Floor Price and Cap Price as compared to the weighted average cost of acquisition of Equity Shares based on primary/
+  secondary transaction(s), as disclosed in paragraph 10 above, are set out below:
+  Past allotment/ secondary transactions  Weighted average cost  Floor Price  Cap Price
+  of acquisition  (i.e., ₹ [●])#  (i.e., ₹ [●])#
+  (in ₹)
+  Weighted average cost of acquisition of last five  248.44  [●] times  [●] times
+  primary/ secondary transactions in last three
+  years*
+  As certified by S M A R T S & Co, by way of their certificate dated November 19, 2026 (UDIN: 26630587MUUTQX3828).
+  *  Secondary transactions where Promoter, Promoter Group entities, Selling Shareholders or Shareholders having the right to nominate
+  directors are a party to the transaction.
+  #  To be included at the Prospectus stage [...truncated]
+
+===== OUR BUSINESS =====
+OUR BUSINESS
+Some of the information in this section, including information with respect to our business plans and strategies, contain
+forward-looking statements that involve risks and uncertainties. Prospective investors should read “Forward-Looking
+Statements” beginning on page 20 for a discussion of the risks and uncertainties related to those statements along with “Risk
+Factors”, “Industry Overview”, “Financial Information” and “Management’s Discussion and Analysis of Financial Condition
+and Results of Operations” beginning on pages 22, 190, 299 and 368, respectively, for a discussion of certain factors that may
+affect our business, financial condition or results of operations. Our actual results may differ materially from those expressed
+in or implied by these forward-looking statements.
+Our Company’s financial year commences on April 1 and ends on March 31 of the immediately subsequent year, and references
+to a particular fiscal year are to the 12 months ended March 31 of that particular year. Unless otherwise indicated or the
+context otherwise requires, the financial information for the six months ended September 30, 2026, and Fiscal 2026, Fiscal
+2025 and Fiscal 2024, included herein is based on or derived from our Restated Consolidated Financial Information included
+in this Red Herring Prospectus. For further information, see “Restated Consolidated Financial Information” beginning on
+page 299. Please also refer to “Definitions and Abbreviations - Technical/ Industry and business related terms” on page 10
+for certain terms used in this section. The Restated Consolidated Financial Information is based on our audited financial
+statements and is restated in accordance with the Companies Act, 2013, and the SEBI ICDR Regulations.
+Certain non-GAAP financial information are presented below for supplemental informational purposes only. These have
+limitations as analytical tools and should not be considered in isolation or as a substitute for financial information presented
+in accordance with Ind AS. Non-GAAP financial information may be different from similarly-titled non-GAAP measures used
+by other companies. A reconciliation of these non-GAAP measures are provided in the section entitled “Management’s
+Discussion and Analysis of Financial Condition and Results of Operations” beginning on page 368 for each non-GAAP
+financial measure to the most directly comparable financial measure prepared in accordance with Ind AS. Investors are
+encouraged to review the related Ind AS financial measures and the reconciliation of non-GAAP financial measures to their
+most directly comparable Ind AS financial measures and to not rely on any single financial measure to evaluate our business.
+Our audited financial statements are prepared in accordance with Indian Accounting Standards, which differ in certain
+material respects with IFRS and U.S. GAAP. For details, see “Risk Factors – Significant differences exist between Ind AS used
+to prepare our financial information and other accounting principles, such as US GAAP and IFRS which may affect investors’
+assessments of our Company’s financial condition” on page 77.
+Unless otherwise indicated, industry and market data used in this section has been derived from the industry report titled
+“Independent Market Report for Foodservice and Catering Service Market in India” dated September 2026 (the “F&S
+Report”) which is exclusively prepared for the purpose of the Offer and issued by Frost & Sullivan (“F&S”) and is exclusively
+commissioned for an agreed fee and paid for by the Company in connection with the Offer. F&S was appointed pursuant to an
+engagement letter entered into with our Company dated November 22, 2024, revised pursuant to addendum dated July 25,
+2026. F&S is not related in any other manner to our Company. F&S is not, and has not in the past, been engaged or interested
+in the formation, or promotion, or management, of our Company. Further, it is an independent agency and neither our
+Company, nor our Directors, Promoter, Key Managerial Personnel, Senior Management and Subsidiaries, nor the BRLMs are
+a related party to F&S as per the definition of “related party” under the Companies Act, 2013. The data included herein
+includes excerpts from the F&S Report and may have been re-ordered by us for the purposes of presentation. Further, the F&S
+Report was prepared on the basis of information as of specific dates and opinions in the F&S Report may be based on estimates,
+projections, forecasts and assumptions that may be as of such dates. F&S has prepared this study in an independent and
+objective manner, and it has taken all reasonable care to ensure its accuracy and has further advised that it has taken due care
+and caution in preparing the F&S Report based on the information obtained by it from sources which it considers reliable.
+Unless otherwise indicated, financial, operational, industry and other related information derived from the F&S Report and
+included herein with respect to any particular year refers to such information for the relevant calendar year. A copy of the F&S
+Report will be available on the website of our Company at https://foodlink.global/investors-industry-report from the date of
+this Red Herring Prospectus until the Bid/ Offer Closing Date. Further, the F&S Report is not a recommendation to invest or
+disinvest in any company covered in the report. Prospective investors are advised not to unduly rely on the F&S Report. The
+views expressed in the F&S Report are that of F&S. For more information and risks in relation to commissioned reports, see
+“Risk Factors - Certain sections of this Red Herring Prospectus contain information from the F&S Report which we
+commissioned and purchased and any reliance on such information for making an investment decision in the Offer is subject
+to inherent risks.” on page 70. Also see, “Certain Conventions, Presentation of Financial, Industry and Market Data – Industry
+and Market Data” on page 19.
+Unless the context otherwise requires, in this section, references to “our Company” or “the Company” refers to Foodlink F&B
+Holdings India Limited on a standalone basis and references to “we”, “us”, “our” refers to Foodlink F&B Holdings India
+Limited and its Subsidiaries on a consolidated basis.
+  230
+Overview
+We are a global luxury food services business focused on providing curated culinary experiences. As per the F&S Report, we
+were India’s largest player by revenue in Fiscal 2025* amongst our peers in terms of organized, ultra-luxury and luxury catering
+(weddings, meetings, incentives, conferences, and exhibitions (“MICE”), sports, personal celebration catering and banquets).
+As of September 30, 2026, we have operations in India, United Arab Emirates, United Kingdom and Malaysia, and have catered
+for events in countries including Switzerland, Turkey, Italy, Spain, United Arab Emirates, France, Oman, Qatar, Egypt, Jordan,
+Maldives, Thailand, Nigeria, United Kingdom and Malaysia.
+*
+ Information provided for Fiscal 2025, as revenue details for certain unlisted peer companies for Fiscal 2026 are not available as on the
+date of this Red Herring Prospectus.
+Our Businesses
+Our integrated business model comprises three distinct yet complementary businesses of (i) Events Catering, (ii) Casual Dining
+Restaurants & Cloud Kitchens, and (iii) Banquets and Integrated F&B Services.
+Events Catering
+Through our Events Catering business, we provide luxury and tailored catering services to weddings, sports, social and
+corporate events domestically and internationally. This business has been critical for our brand’s identity, enabling us to deliver
+culinary experiences that are not only gourmet in quality but also culturally curated and customizable to the customer
+preferences. As per the F&S Report, owing to our reputation, we remain capable of serving at these prestigious hotel venues
+due to the high quality of our offerings. This ability to perform at the highest levels across hospitality venues is a clear reflection
+of our standards, ensuring its place as the go-to catering partner for both high-profile events and the luxury market. In order to
+support the growing demand for international events, we set up a Storage Facility in Dubai (United Arab Emirates) in Fiscal
+2022, for storage of cooking equipment required for catering of international events.
+For details in relation to the key awards of our Events Catering business, see “History and Certain Other Corporate Matters -
+Key awards, accreditations, certifications and recognitions received by our Company” on page 264.
+Details in relation to events through our Events Catering business during the six months ended September 30, 2026, and Fiscals
+2026, 2025, and 2024 are provided below, which demonstrates our scale, and we also have the capability of handling over
+30,000 guests at a single event, as well as the ability to handle multiple events across different locations simultaneously.
+  Particulars  Six months  Fiscal  Fiscal  Fiscal
+  ended  2026  2025  2024
+  September 30,
+  2026
+Total number of events catered through Events Catering business  402  1,092  1,012  911
+Since March 2025, we have also been empanelled as one of the caterers with a prominent sports and entertainment club centre
+located in Mumbai, and a wedding venue with sea view located in Mumbai, for events held at these locations.
+Our key customers in the Events Catering business include various film actors, cricketers’ families, high net worth individuals
+(“HNIs”), large corporates and certain government entities, amongst others. Our customers in the Events Catering business
+include inter alia Hardcastle Restaurant Private Limited (master franchisee operator of a large global burger chain in western
+and southern India), Zee Entertainment, Greenply.
+Please see below certain illustrations in relation to our Events Catering business:
+Social celebration in Hyderabad in August, 2023:
+A glimpse of our signature serving styles.
+Left: Our chef prepares a Mexican burrito bowl, topped with a charcoal smoke bubble for a dramatic finish.
+Right: Avocado crostini canapés float in on helium balloons - turning service into a visual experience.
+  231
+Mushroom mousse tarts in a glasshouse:
+We presented delicate mushroom mousse tarts within a custom-designed glasshouse installation, adding a playful, eye-catching
+touch to our grazing tables.
+Sous vide:
+Our chef demonstrates the art of sous vide, a refined French technique where marinated ingredients are sealed in vacuum
+pouches and gently cooked in a temperature-controlled water tank. We slow-cooked heirloom tomatoes, white and green
+asparagus, avocados, and rainbow carrots, preserving their natural flavour and texture.
+Casual Dining Restaurants & Cloud Kitchens
+We forayed into the Casual Dining Restaurants business in Fiscal 2008 and Cloud Kitchen business in Fiscal 2022. Since our
+first Casual Dining Restaurant in 2008, we have used our restaurant roll out and development process with the aim of growing
+our Casual Dining Restaurants & Cloud Kitchens business. We operate our Casual Dining Restaurants & Cloud Kitchens
+business in key metropolitan areas and cities across India and United Arab Emirates.
+Details in relation to our Casual Dining Restaurants & Cloud Kitchens as on the date of this Red Herring Prospectus are provided
+below:
+  232
+  Particulars  Number as on the date of this Red
+  Herring Prospectus
+Total Casual Dining Restaurants & Cloud Kitchens in India and outside India  28
+(a) Casual Dining Restaurants & Cloud Kitchens in India  15
+  -  Number of cities  2
+  -  Number of locations  10
+(b) Casual Dining Restaurants & Cloud Kitchens outside India  13
+  -  Number of cities  2
+  -  Number of locations  7
+Out of the 28 Casual Dining Restaurants & Cloud Kitchens in India and outside India:
+  -  Number of pan-Asian restaurants under our China Bistro Brand  14
+  -  Number of Indian restaurants under our India Bistro Brand  1
+  -  Number of world fusion all-day dining and bars under our Glocal (formerly known as  1
+  Glocal Junction) Brand
+  -  Number of restaurants under our Art of Dum brand  1
+  -  Number of Cloud Kitchens under our Art of Dum brand  11
+As on the date of this Red Herring Prospectus, our Casual Dining Restaurants & Cloud Kitchens are spread across a combined
+area of over 51,339 square feet.
+For details in relation to the key awards of our Casual Dining Restaurants & Cloud Kitchens business, see “History and Certain
+Other Corporate Matters - Key awards, accreditations, certifications and recognitions received by our Company” on page 264.
+Banquets and Integrated F&B Services
+We diversified into the Banquets business with the launch of the Jade Banquets in Mumbai (Maharashtra) in Fiscal 2017,
+followed by Jade Banquet in Ahmedabad (Gujarat) in Fiscal 2022, and Jade Banquet in New Delhi (NCT) in Fiscal 2026, and
+thereafter diversified this business through our Integrated F&B Services.
+We have been granted the exclusive mandate for providing F&B services at a large-scale convention and exhibition facility
+located in Delhi, for a period of 10 years from October 1, 2023. It offers an expansive indoor exhibition and convention area of
+300,000 square meters, and has a 6,000-seat plenary hall and over 20,000 capacity in the multipurpose arena.
+During Fiscal 2026, we have been granted the exclusive mandate for providing F&B services at a premier waterfront convention
+and exhibition venue located in Penang, Malaysia, for an initial period of five years commencing September 1, 2025, with
+renewal rights subject to the terms and conditions of the agreement. The venue is designed to host international conventions,
+exhibitions, corporate events, and luxury celebrations, offering an event space, a column-free convention hall, meeting rooms,
+a waterfront terrace, and a rooftop venue for premium events.
+In addition, we have also been granted the exclusive mandate for providing F&B services at a contemporary event venue within
+a luxury event complex in Gurugram, for a period of five years commencing November 1, 2025. The venue features dedicated
+event space, a lobby, and a multi-level layout designed for large-format social and corporate gatherings, which is supported by
+an adjoining experience hall and convention hall, making it suitable for exhibitions, conferences, concerts, weddings, and
+premium events.
+The Banquets and Integrated F&B Services business not only diversifies and deepens our catering capabilities but also
+showcases our ability to manage complex, high-footfall, government-backed venues at global standards. The abovementioned
+mandates reflect our growing stature in the business-to-business (“B2B”) category, complementing our existing banquet and
+luxury catering business.
+As part of our Banquets and Integrated F&B Services business, we have catered for the annual summit organized by the Indian
+legislative body in New Delhi in Fiscal 2024, where we served over 1,800 persons, through an array of regional, hyper-regional
+Indian cuisine and food inspired from Ayurveda highlighting the culinary heritage of India, with special emphasis on health
+and wellness. This exclusive mandate provides us the capability to scale up operations during mega events, including joint
+promotional activities and special event-specific F&B planning in collaboration with organizers and government authorities.
+As on the date of this Red Herring Prospectus, our Jade Banquets in Mumbai, Ahmedabad and New Delhi span a combined
+area of over 242,000 square feet, which include both indoor banquets and outdoor venues offering hospitality and catering.
+Number of events catered for through our Banquets and Integrated F&B Services business during the six months ended
+September 30, 2026, and Fiscals 2026, 2025 and 2024 are provided below:
+  233
+  Particulars  Six months  Fiscal  Fiscal  Fiscal
+  ended  2026  2025  2024
+  September
+  30, 2026
+Total number of events catered through our Banquets and Integrated F&B services  595  1,089  1,020  658
+business
+As per the F&S Report, the banquet sector benefits from its ability to offer predictable revenue streams, a key advantage in
+combating the steady flow of wedding demand. Unlike other event-related businesses, which face fluctuations based on demand,
+banquets can rely on annual bookings for key events, such as personal celebrations in addition to weddings, to ensure steady
+income. This stability is complemented by the growing interest in high-end venues, which offer banquet facilities that can
+accommodate large gatherings, a trend that continues to rise. Given this, our Banquets and Integrated F&B Services and Casual
+Dining Restaurants & Cloud Kitchens businesses which operate throughout the year help us mitigate the seasonality of our
+Events Catering business, lending to our complimentary business model.
+Jade Banquets – Mumbai
+Jade Banquet - Ahmedabad
+Jade Banquet - New Delhi
+  234
+Luxury car related event held at Jade Banquet – Ahmedabad in January 2025.
+Since the launch of Luxury Banquet in Ahmedabad, we have hosted luxury timeless celebrations and exquisite events like
+weddings, exhibitions and luxury gatherings. Our key customers in the Banquets and Integrated F&B business include
+corporates such as curator of a luxury bridal exhibition, and HNIs.
+Centralized Kitchens
+In order to service our customers and support our operations across all three businesses mentioned above, we have six
+centralized kitchens in India, located at Mumbai (Maharashtra), Ahmedabad (Gujarat), Mohali (Punjab), Hyderabad
+(Telangana), Jaipur (Rajasthan), and New Delhi (National Capital Territory of Delhi), and one centralized kitchen outside India
+located at Dubai (United Arab Emirates).
+Our Centralized Kitchens are integral to our operations. We believe that we have distinguished ourselves in the competitive
+landscape by embracing a centralized kitchen model, which allows for the delivery of consistently high-quality food across
+multiple regions. By establishing a centralized kitchen model in strategically located cities, we can source authentic, regional
+ingredients locally, ensuring each dish retains its authenticity while adhering to the highest standards of quality.
+As on the date of this Red Herring Prospectus, our centralized kitchens are spread over a combined area of over 91,500 square
+feet and have the capacity to provide over 100,000 meals per day. We have adopted an organized asset light hub-and-spoke
+model, which increases our efficiency by optimizing our operations and enabling us to cater for all three businesses from a
+central location.
+For our Events Catering Business, we have set up a three Storage Facilities in Mumbai (Maharashtra) and three Storage
+Facilities in Dubai (United Arab Emirates), for storage of cooking equipment required for catering.
+Key Business Statistics
+Certain key statistics in relation to our (i) Events Catering business, (ii) Banquets and Integrated F&B Services business, and
+(iii) Casual Dining Restaurants & Cloud Kitchens business are illustrated in the infographics below:
+  235
+Details of revenue generated from our Events Catering business, Banquets and Integrated F&B Services business and Casual
+Dining Restaurants & Cloud Kitchens business for the six months ended September 30, 2026, and Fiscal 2026, Fiscal 2025 and
+Fiscal 2024, including as a percentage of revenue from operations are provided below.
+  Particulars  Six months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  September 30, 2026
+  Revenue (in  As a  Revenue (in  As a  Revenue  As a  Revenue  As a
+  ₹ million)  percenta  ₹ million)  percentage  (in ₹  percentage  (in ₹  percentage
+  ge of  of Revenue  million)  of Revenue million) of Revenue
+  Revenue  from  from  from
+  from  Operations  Operations  Operations
+  Operatio  (in %)  (in %)  (in %)
+  ns (in %)
+Events Catering business  970.56  44.15%  3,001.28  52.89%  2,446.15  54.26% 2,241.15  59.42%
+  236
+  Particulars  Six months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  September 30, 2026
+  Revenue (in  As a  Revenue (in  As a  Revenue  As a  Revenue  As a
+  ₹ million)  percenta  ₹ million)  percentage  (in ₹  percentage  (in ₹  percentage
+  ge of  of Revenue  million)  of Revenue million) of Revenue
+  Revenue  from  from  from
+  from  Operations  Operations  Operations
+  Operatio  (in %)  (in %)  (in %)
+  ns (in %)
+  Casual Dining Restaurants  664.93  30.25%  1,371.52  24.17%  1,033.58  22.92% 1,074.74  28.49%
+  & Cloud Kitchens business
+  Banquets and Integrated  558.55  25.41%  1,277.57  22.51%  991.49  21.99%  428.05  11.35%
+  F&B Services business
+  Total (A)  2,194.03  99.81%  5,650.37  99.57%  4,471.22  99.17% 3,743.94  99.26%
+  Others* (B)  4.22  0.19%  24.62  0.43%  37.39  0.83%  27.99  0.74%
+  Total (A+B)  2,198.25 100.00%  5,674.99  100.00%  4,508.61  100.00% 3,771.93  100.00%
+*
+  Others include revenue from sale of traded goods and revenue from other operating revenues
+Further, details of revenue from sales within India and outside India for the six months ended September 30, 2026, and Fiscal
+2026, Fiscal 2025 and Fiscal 2024, including as a percentage of revenue from operations are provided below.
+  Particulars  Six months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  September 30, 2026
+  Revenue  As a  Revenue  Percentage Revenue Percentage Revenue Percentage
+  (in ₹  percentage contributio of revenue contributi of revenue contributi of revenue
+  million)  of Revenue  n (in ₹  from  on (in ₹  from  on (in ₹  from
+  from  million)  operations  million)  operations  million) operations
+  Operations  (in %)  (in %)  (in %)
+  (in %)
+  Revenue from operations in  1,620.87  73.73%  4,184.26  73.73%  3,135.68  69.55% 2,910.56  77.16%
+  India*
+  Revenue  from  our  577.38  26.27%  1,490.73  26.27%  1,372.93  30.45%  861.37  22.84%
+  operations outside India*
+  Total  2,198.25  100.00%  5,674.99  100.00%  4,508.61  100.00%  3,771.93  100.00%
+*
+  Includes other operating income
+Key Financial and Oper [...truncated]
+
+===== OUR PROMOTERS AND PROMOTER GROUP =====
+OUR PROMOTER AND PROMOTER GROUP
+Our Promoter
+Sanjay Manohar Vazirani is the Promoter of our Company.
+As on the date of this Red Herring Prospectus, our Promoter holds 25,885,740 Equity Shares, representing 49.50% of the paid-
+up Equity Share capital of our Company. For details, see “Capital Structure – Details of Build-up, Contribution and Lock-in of
+Promoter’ Shareholding and Lock-in of other Equity Shares” on page 125.
+Details of our Promoter are as follows:
+Sanjay Manohar Vazirani
+  Sanjay Manohar Vazirani, aged 60 years, is a Promoter, and is also the Chairman and
+  Managing Director of our Company. He is a resident of Flat no 1702 1802, Supreme
+  Signature Chs Ltd Union Park, V N Purav Marg, Chembur, Opp Maitri Park, Mumbai,
+  Maharashtra, 400071.
+  DIN: 00090798
+  Date of birth: June 9, 1966
+  Permanent account number: ACNPV7946D
+  For the complete profile of Sanjay Manohar Vazirani, along with details of his
+  educational qualifications, professional experience, position/posts held in the past and
+  directorships held, see “Our Management – Board of Directors” on page 275.
+Our Company confirms that the permanent account number, bank account number, Aadhaar card number, driving license
+number and passport number of Sanjay Manohar Vazirani, shall be submitted to the Stock Exchanges at the time of filing this
+Red Herring Prospectus.
+Change in the management and control of our Company
+Sanjay Manohar Vazirani is the original promoter of our Company. There has been no change in control in our Company in the
+last five years preceding this Red Herring Prospectus.
+Interests of our Promoter
+Our Promoter is interested in our Company: (i) to the extent that he has promoted our Company; (ii) to the extent of his direct
+and indirect shareholding in our Company, the shareholding of his relatives and entities in which our Promoter is interested and
+which hold Equity Shares in our Company; (iii) and other distributions in respect of the Equity Shares held by our Promoter;
+(iv) to the extent of his directorship in our Company and our Subsidiaries; and (v) to the extent of his remuneration and
+employment benefits for being the directors in our Company and our Subsidiaries. For further details, see “Capital Structure”
+on page 108. Additionally, our Promoter may be interested in transactions entered into by our Company with him, his relatives
+or other entities which are controlled by our Promoter. For further details, please see “Our Management – Interest of Directors”
+and “Restated Consolidated Financial Information - Related Party Transactions – Note 40” on pages 279 and 349 of this Red
+Herring Prospectus.
+Except in the ordinary course of business and as stated in the “Restated Consolidated Financial Information – Note 40” on page
+349, our Company has not entered into any contract, agreements or arrangements in which our Promoter is directly or indirectly
+interested, and no payments have been made to our Promoter in respect of the contracts, agreements or arrangements which are
+proposed to be made with it.
+Our Promoter is not interested as a member of a firm or company and no sum has been paid or agreed to be paid to our Promoter
+or to any such firm or company in cash or shares or otherwise by any person either to induce him to become, or to qualify him
+as, a director, or otherwise, for services rendered by such Promoter or by such firm or company in connection with the promotion
+or formation of our Company.
+There is no conflict of interest between our Promoter or members of our Promoter Group and the suppliers of raw materials
+and third-party service providers, which are crucial for the operations of our Company. Except as disclosed under “Our
+  295
+Management – Other confirmations” on page 280, there is no conflict of interest between our Promoter or members of our
+Promoter Group and lessors of the immovable properties, which are crucial for the operations of our Company.
+Interest in property, land, construction of building and supply of machinery
+Our Promoter does not have an interest in any property acquired by our Company during the three preceding years immediately
+preceding the date of this Red Herring Prospectus or proposed to be acquired by our Company, or in any transaction by our
+Company for acquisition of land, construction of building or supply of machinery.
+Payment or benefits to Promoter or Promoter Group
+Except as disclosed herein and as stated in “Restated Consolidated Financial Information - Related Party Transactions – Note
+40” and “Our Management- Terms of Appointment of the Executive Directors of our Company” on pages 349 and 278,
+respectively, there has been no payment or benefits by the Company to our Promoter or any of the members of the Promoter
+Group during the two years preceding the date of this Red Herring Prospectus nor is there any intention to pay or give any
+benefit to our Promoter or Promoter Group as on the date of this Red Herring Prospectus.
+Common Pursuit
+Other than as disclosed under “ – Promoter Group” on page 296, our Promoter is not involved in any other ventures. Certain
+members of our promoter group, namely, Foodlink Cook House (India) Private Limited, Foodlink Services (India) Private
+Limited, A-link Global Limited, Trans Global Hotels LLP and F&T Food Channel LLP are authorised by their constitutional
+documents to carry on the same line of business, however, as of the date of this Red Herring Prospectus, these entities are not
+engaged in the same line of business as our Company. However, none of the entities forming part of the Promoter group are
+engaged in the same operations as that of our Company as on the date of this Red Herring Prospectus and accordingly, there is
+no conflict of interest or non-compete arrangement or IP sharing arrangement. For further details, please see “Risk Factors –
+Our Promoter and some of our Directors, Promoter Group, Subsidiaries and Group Companies may have interest in entities,
+which are in businesses similar to ours, or may enter into ventures that may lead to real or potential conflicts of interest with
+our business” on page 46.
+Companies or firms with which our Promoter has disassociated in the last three years
+Our Promoter has not dissociated himself from any companies or firms in the three years preceding the date of this Red Herring
+Prospectus.
+Material guarantees
+As on the date of this Red Herring Prospectus, our Promoter has not given any material guarantee to any third party with respect
+to the Equity Shares.
+Promoter Group
+In addition to our Promoter, the individuals and entities that form a part of the Promoter Group of our Company in terms of
+Regulation 2(1) (pp) of the SEBI ICDR Regulations are set out below:
+Natural persons who are part of our Promoter Group
+The natural persons who are part of our Promoter Group, other than our Promoter, are as follows:
+Sanjay Manohar Vazirani
+ S. No.  Name of member of our Promoter Group  Relationship with our Promoter
+1.  Ankita Chugh  Spouse
+2.  Shlok Vazirani  Son
+3.  Ayanna Sanjay Vazirani  Daughter
+4.  Naresh Chand Chugh  Spouse’s Father
+5.  Shashi Chugh  Spouse’s Mother
+6.  Saurabh Chugh  Spouse’s Brother
+Entities forming part of the Promoter Group
+The entities (excluding the subsidiaries of our Company) forming part of our Promoter Group are as follows:
+1.  A-link Global Limited
+  296
+2.  Ankita Chugh Weddings and Events Private Limited
+3.  Avenir Realtors Private Limited
+4.  Crale Foodlink Private Limited*
+5.  Foodlink Cook House (India) Private Limited
+6.  Foodlink Services (India) Private Limited
+7.  Goldium Estate Private Limited
+8.  Shriam Financial Private Limited
+9.  Soulitude Café LLC
+10.  F&T Food Channel LLP
+11.  Trans Global Hotels LLP
+12.  Varada Events LLP
+13.  Naresh Chand Chugh HUF
+14.  Saurabh Chugh HUF
+*  The company is in the process of winding up, with the liquidation process being carried out pursuant to the order of the National Company Law Tribunal,
+  Mumbai Bench dated February 2, 2026.
+  297
+
+===== RISK FACTORS =====
+SECTION II: RISK FACTORS
+An investment in the Equity Shares involves a high degree of risk. Prospective investors should carefully consider all the
+information in this Red Herring Prospectus, including the risks and uncertainties described below, before making an investment
+in our Equity Shares. The risks described below may not be exhaustive or the only ones relevant to us, the Equity Shares or the
+industry segments in which we currently operate. Additional risks and uncertainties, not presently known to us or that we
+currently do not deem material may arise or may become material in the future. Unless specified or quantified in the relevant
+risk factors below, we are not in a position to quantify the financial implication of any of the risks mentioned below. If any or
+a combination of the following risks, or other risks that are not currently known or are not currently deemed material, actually
+occur, our business, results of operations, cash flows and financial condition could be adversely affected, the trading price of
+our Equity Shares could decline, and investors may lose all or part of their investment. Further, some events may be material
+collectively rather than individually.
+In order to obtain a more comprehensive understanding of our Company and our business, prospective investors should read
+this section in conjunction with “Industry Overview”, “Our Business”, “Key Regulations and Policies”, “Management’s
+Discussion and Analysis of Financial Condition and Results of Operations” and “Outstanding Litigation and Material
+Developments” on pages 190, 230, 256, 368 and 395 respectively, as well as “Other Financial Information” on page 362 in
+this Red Herring Prospectus. In making an investment decision, prospective investors must rely on their own examination of us
+and our business and the terms of the Offer, including the merits and risks involved. Potential investors should consult their
+tax, financial and legal advisors about the particular consequences of investing in the Offer. Potential investors should pay
+particular attention to the fact that our Company is incorporated under the laws of India and is subject to legal and regulatory
+environment which may differ in certain respects from that of other countries.
+Unless otherwise indicated, industry and market data used in this section has been derived from the industry report titled
+“Independent Market Report for Foodservice and Catering Service Market in India” dated September 2026 (the “F&S
+Report”) which is exclusively prepared for the purpose of the Offer and issued by Frost & Sullivan (“F&S”) and is exclusively
+commissioned for an agreed fee and paid for by the Company in connection with the Offer. F&S was appointed pursuant to an
+engagement letter entered into with our Company dated November 22, 2024 revised pursuant to addendum dated July 25, 2026.
+F&S is not, and has not in the past, been engaged or interested in the formation, or promotion, or management, of our Company.
+Further, it is an independent agency and neither our Company, nor our Directors, Promoter, Key Managerial Personnel, Senior
+Management and Subsidiaries, nor the BRLMs are a related party to F&S as per the definition of “related party” under the
+Companies Act, 2013. The data included herein includes excerpts from the Industry Report which may have been re-ordered
+by us for the purposes of presentation. Further, the F&S Report was prepared on the basis of information as of specific dates,
+and the opinions in the F&S Report may be based on estimates, projections, forecasts and assumptions that may be as of such
+dates. F&S has prepared this study in an independent and objective manner, and it has taken all reasonable care to ensure its
+accuracy and completeness. A copy of the F&S Report will be available on the website of our Company at
+https://foodlink.global/investors-industry-report from the date of this Red Herring Prospectus until the Bid/ Offer Closing Date.
+Further, the F&S Report is not a recommendation to invest or disinvest in any company covered in the F&S Report. Prospective
+investors are advised not to unduly rely on the F&S Report. For more information and risks in relation to commissioned reports,
+please see “Risk Factors - Certain sections of this Red Herring Prospectus contain information from the F&S Report which we
+commissioned and purchased and any reliance on such information for making an investment decision in the Offer is subject
+to inherent risks.” on page 70. Also see, “Certain Conventions, Presentation of Financial, Industry and Market Data - Industry
+and Market Data” on page 19. For details relating to the defined terms in the section, please see “Definitions and
+Abbreviations” beginning on page 1.
+Unless the context otherwise requires, in this section, references to “our Company” or “the Company” refers to Foodlink F&B
+Holdings India Limited on a standalone basis and references to “we”, “us”, “our” refers to Foodlink F&B Holdings India
+Limited and its Subsidiaries on a consolidated basis.
+Internal Risks
+1.  We have not yet identified any location for opening the Proposed Centralized Kitchen, the Proposed Banquets, and
+  the Proposed Casual Dining Restaurants for which Net Proceeds are being raised. If we are unable to identify and
+  obtain suitable locations for opening the Proposed Centralized Kitchen, the Proposed Banquets by our Company
+  and the Proposed Casual Dining Restaurants by our Material Subsidiary, Foodlink Global Restaurants & Catering
+  Services LLC, or if there is any delay in identifying such properties, it may delay our ability to obtain the material
+  statutory approvals required to commence operations, and lead to lower footfalls and table turns rates which would
+  adversely affect our anticipated growth in our businesses and may result in an inability to undertake the Objects of
+  the Offer.
+  As on the date of this Red Herring Prospectus, we have not yet identified the specific properties at which the Proposed
+  Centralized Kitchen, the Proposed Banquets and the Proposed Casual Dining Restaurants will be located. We propose
+  to set up the Proposed Centralized Kitchen in Rajasthan and the Proposed Banquets in Rajasthan and Bangalore. In
+  22
+  addition, we propose to set up four Proposed Casual Dining Restaurants, including one China Bistro and three dine-in
+  Art of Dum Restaurants, in Abu Dhabi and Dubai (United Arab Emirates) through our Material Subsidiary, Foodlink
+  Global Restaurants & Catering Services LLC. For details, see “Objects of the Offer” on page 150. We have not yet
+  identified exact location of the premises for setting up the Proposed Centralized Kitchen, Proposed Banquets, and the
+  Proposed Casual Dining Restaurants. We cannot assure you that we will be able to acquire the required location and
+  undertake such capital expenditure within the estimated cost or that there will not be cost escalations. Since the location
+  of such premises is a prerequisite for initiating applications for various regulatory approvals, the identification of
+  locations is critical to our ability to obtain the material statutory approvals necessary to commence operations.
+  In respect of our Proposed Centralized Kitchen, we will be required to obtain various statutory approvals, including
+  but not limited to registrations under Shops and Establishments (Regulation of Employment and Conditions of Service)
+  Act, 2017, FSSAI registration, a business registration number, trade license and fire license from the respective
+  municipalities of Rajasthan, GST registration, certification under the Legal Metrology Act, 2009, and other
+  registrations as required under applicable laws. For details, see “Objects of the Offer - Funding of capital expenditure
+  towards setting up one Proposed Centralized Kitchen by our Company - Material Government Approvals” on page
+  156.
+  In relation to our Proposed Banquets, we will be required to obtain various statutory approvals, including but not
+  limited to registrations under the Shops and Establishments (Regulation of Employment and Conditions of Service)
+  Act, 2017, FSSAI registration, a business registration number, trade license and fire license from the respective
+  municipalities of Rajasthan, GST registration, certification under the Legal Metrology Act, 2009, music license from
+  Phonographic Performance Limited, and other registrations as required under applicable laws. For details, see “Objects
+  of the Offer - Funding of capital expenditure towards setting up two Proposed Banquets by our Company - Material
+  Government Approvals” on page 161.
+  Similarly, in relation to our Proposed Casual Dining Restaurants, we will be required to obtain trade licenses, food
+  safety permits, health and safety standards compliance from the respective authorities in the jurisdiction. For details,
+  see “Objects of the Offer - Investment in FGRCS, our Material Subsidiary, for funding of capital expenditure towards
+  setting up four Proposed Casual Dining Restaurants - Material Government Approvals” on page 167.
+  Since the process of identifying properties is ongoing, we have not yet applied for these location-specific approvals.
+  There can be no assurance that suitable properties will be identified in a timely manner, or that once identified, we will
+  be able to obtain the necessary regulatory approvals within the required timelines or at all. Any delay or inability in
+  securing such approvals may adversely affect the commencement of our operations, expansion plans, and overall
+  business performance.
+  In addition, our business has been adversely affected and may continue to be adversely affected by the ongoing regional
+  conflict and geopolitical instability in the United Arab Emirates. If we are unable to identify the properties for the
+  Proposed Centralized Kitchen in Rajasthan or the Proposed Banquets in Rajasthan and Bangalore, or the Proposed
+  Casual Dining Restaurants in the United Arab Emirates, it may result in an inability to undertake the Objects of the
+  Offer, resulting in a variation in the utilisation of Net Proceeds. For details, see “- Variation in the utilisation of Net
+  Proceeds would be subject to certain compliance requirements, including prior shareholders’ approval” and “Objects
+  of the Offer - Variation in Objects.” on pages 46 and 174, respectively. We also intend to expand our Banquets and
+  Integrated F&B Services businesses with the setup of banquet(s), and increase the reach of our Casual Dining
+  Restaurant & Cloud Kitchens business by opening outlets of China Bistro, India Bistro and Art of Dum in new locations
+  in the future. We also intend to set up additional Casual Dining Restaurants across our brands of China Bistro, India
+  Bistro and Glocal (formerly known as Glocal Junction), to geographically expand our offerings in a phased manner.
+  Identifying and securing ideal locations for our new restaurants is essential to our business. Desirable locations may
+  be limited for many reasons, including the general lack of prime real estate in the markets in which we compete and
+  restrictions in some of these markets on the use of certain locations for restaurants. As a result, desirable locations for
+  new restaurants or for the relocation of existing restaurants may not be available on commercially acceptable terms or
+  at all. If we are unable to identify and obtain suitable locations for our new restaurants, or obtain the necessary
+  regulatory approvals within the required timelines, we may witness a delay in commencement of our operations, we
+  may witness lower footfalls, and table turns which would adversely affect our ability to achieve our anticipated growth
+  in revenue and profitability.
+2.  We have not yet placed orders in relation to the capital expenditure for setting up the Proposed Centralized Kitchen,
+  the Proposed Banquets by our Company and the Proposed Casual Dining Restaurants by our Material Subsidiary,
+  Foodlink Global Restaurants & Catering Services LLC. In the event of any delay in placing the orders, or in the
+  event the vendor is not able to provide the equipment, fit out, civil, electrical or plumbing works, etc. in a timely
+  manner, or at all, it may result in time and cost overruns and our business, prospects and results of operations may
+  be adversely affected.
+  23
+  We intend to utilize a portion of the Net Proceeds towards (i) funding of capital expenditure towards setting up the
+  Proposed Centralized Kitchen by our Company; (ii) funding of capital expenditure towards setting up the Proposed
+  Banquets by our Company; and (iii) investment in Foodlink Global Restaurants & Catering Services LLC, our Material
+  Subsidiary, for funding of capital expenditure towards setting up the Proposed Casual Dining Restaurants. While we
+  have procured quotations from vendors in relation to the capital expenditure to be incurred, we have not placed orders
+  for the capital expenditure proposed to be funded from the Net Proceeds and have not entered into any definitive
+  agreements with the vendors in relation to such capital expenditure as of the date of this Red Herring Prospectus. For
+  details in respect of the foregoing, see “Objects of the Offer” on page 150. Such bids are valid for a certain period of
+  time and may be subject to revisions, and other commercial and technical factors. We cannot assure you that we will
+  be able to undertake such capital expenditure within the cost indicated by such bid or that there will not be cost
+  escalations. Further, the actual amount and timing of our future capital requirements may differ from our estimates as
+  a result of, among other things, unforeseen delays or cost overruns, unanticipated expenses, regulatory changes, design
+  changes and technological changes. In the event of any delay in placing the orders, or an escalation in the cost of
+  undertaking the proposed capital expenditure, or in the event the vendor is not able to provide the equipment, fit out,
+  civil, electrical or plumbing works, etc. in a timely manner, or at all, we may encounter time and cost overruns. Further,
+  if we are unable to procure the requisite equipment, fit out, civil, electrical or plumbing works, etc. from the vendors
+  from whom we have procured bid, we cannot assure you that we may be able to identify alternate vendor to provide
+  us with the materials which satisfy our requirements at acceptable prices. Our inability to procure the equipment, fit
+  out, civil, electrical or plumbing works, etc. at acceptable prices or in a timely manner, may result in an increase in
+  capital expenditure, the proposed schedule of implementation and deployment of the Net Proceeds may be extended
+  or may vary accordingly, thereby resulting in an adverse effect on our business, prospects and results of operations.
+3.  Our Company and certain of our Subsidiaries have incurred losses in the past, and we may not be able t [...truncated]
+
+===== MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF =====
+MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF
+  OPERATIONS
+The following discussion of our financial condition and results of operations should be read in conjunction with our Restated
+Consolidated Financial Information beginning on page 299.
+Our Company’s financial year commences on April 1 and ends on March 31 of the immediately subsequent year, and references
+to a particular fiscal year, are to the 12 months ended March 31 of that particular year. Unless otherwise indicated or the
+context otherwise requires, the financial information for the six months ended September 30, 2026, and Fiscals 2026, 2025 and
+2024, included herein is based on or derived from our Restated Consolidated Financial Information included in this Red
+Herring Prospectus. For details, please see “Restated Consolidated Financial Information” beginning on page 299. The
+Restated Consolidated Financial Information is based on our audited financial statements and is restated in accordance with
+the Companies Act, 2013, and the SEBI ICDR Regulations. Our audited financial statements are prepared in accordance with
+Indian Accounting Standards, which differs in certain material respects with IFRS and U.S. GAAP. For details, see “Risk
+Factors - Significant differences exist between Ind AS used to prepare our financial information and other accounting
+principles, such as US GAAP and IFRS, which may affect investors’ assessments of our Company’s financial condition” on
+page 77.
+Unless otherwise indicated, industry and market data used in this section has been derived from the report titled “Independent
+Market Report for Foodservice and Catering Service Market in India” dated September 2026 (the “F&S Report”), prepared
+and issued by Frost & Sullivan (“F&S”), which was exclusively commissioned and paid for by our Company for the Offer, and
+was prepared and released by F&S, who were appointed by us pursuant to the engagement letter dated November 22, 2024,
+revised pursuant to addendum dated July 25, 2026. F&S is not, and has not in the past, been engaged or interested in the
+formation, or promotion, or management, of our Company. Further, it is an independent agency and neither our Company, nor
+our Directors, Promoter, Key Managerial Personnel, Senior Management and Subsidiaries, nor the BRLMs are a related party
+to F&S as per the definition of “related party” under the Companies Act, 2013. The data included herein includes excerpts
+from the Industry Report which may have been re-ordered by us for the purposes of presentation. Further, the F&S Report was
+prepared on the basis of information as of specific dates and opinions in the F&S Report may be based on estimates, projections,
+forecasts and assumptions that may be as of such dates. F&S has prepared this study in an independent and objective manner,
+and it has taken all reasonable care to ensure its accuracy and completeness. A copy of the F&S Report will be available on
+the website of our Company at https://foodlink.global/investors-industry-report from the date of this Red Herring Prospectus
+until the Bid/ Offer Closing Date. Further, the F&S Report is not a recommendation to invest or disinvest in any company
+covered in the F&S Report. Prospective investors are advised not to unduly rely on the F&S Report. For more information and
+risks in relation to commissioned reports, please see “Risk Factors - Certain sections of this Red Herring Prospectus contain
+information from the F&S Report which we commissioned and purchased and any reliance on such information for making an
+investment decision in the Offer is subject to inherent risks.” on page 70. Also see, “Certain Conventions, Presentation of
+Financial, Industry and Market Data - Industry and Market Data” on page 19
+Unless the context otherwise requires, in this section, references to “our Company” or “the Company” refers to Foodlink F&B
+Holdings India Limited on a standalone basis and references to “we”, “us”, “our” refers to Foodlink F&B Holdings India
+Limited and its Subsidiaries on a consolidated basis.
+OVERVIEW
+For details in relation to our business overview, competitive strengths, business strategies and business operations, please see
+“Our Business” beginning on page 230.
+SIGNIFICANT FACTORS AFFECTING OUR RESULTS OF OPERATION
+The results of our operations and our financial conditions are affected by numerous factors and uncertainties, many of which
+may be beyond our control, including as discussed in “Our Business” and “Risk Factors”, beginning on pages 230 and 22. Set
+out below is a discussion of certain factors that we believe may be expected to have a significant effect on our financial condition
+and results of operations:
+Cost management
+Our profitability depends in part on our ability to anticipate and react to changes in the cost of our supplies. Increases in the
+cost of important products could significantly increase our expenses. Most ingredients used while catering to events and in our
+restaurants, including cooking oil, meat products and vegetables, are commodities and therefore subject to price fluctuations as
+a result of inflation, seasonality, weather, supply and demand in local and international markets, economic conditions and other
+factors which are beyond our control. Majority of the raw materials used by us are perishable in nature. Increase in the cost of
+important raw materials could significantly increase our expenses.
+  368
+The table below sets out the cost of food and beverages consumed in the six months ended September 30, 2026, and Fiscal
+2026, Fiscal 2025 and Fiscal 2024, including as a percentage of our total expenses:
+  Particulars  Six months ended  Fiscal 2026  Fiscal 2025  Fiscal 2024
+  September 30, 2026
+  In ₹  As a  In ₹  As a  In ₹  As a  In ₹  As a
+  million  percentage  million  percentage  million  percentage  million  percentage
+  of our total  of our total  of our total  of our total
+  expenses  expenses  expenses  expenses
+  (%)*  (%)*  (%)*  (%)*
+Cost of food and beverages  372.69  15.76%  1,085.54  20.02%  908.19  20.48%  1,070.14  26.85%
+consumed
+*Total expenses excluding tax expenses
+We have historically been able to pass on a significant portion of increased raw material and operating costs to our customers.
+Our scale of operations enables us to negotiate discounts and other favourable terms on contracts with our suppliers. Such
+favourable terms can help reduce our cost of goods sold and can therefore help improve our gross margin. In addition, we
+maintain a number of suppliers for each of our key ingredients, which we believe can help mitigate price volatility. Given the
+increase in the number of events catered to and our restaurants and scale of operations, we have increased our efforts to centralise
+supply sources and consequently, enhance our bargaining power with suppliers.
+We have no control over fluctuations in the price and availability of ingredients or variations in products caused by external
+factors. If we are not able to obtain requisite quantities of quality ingredients at commercially reasonable prices, our ability to
+provide the menu items that are central to our business, or as required by our customers whose events we cater to, would be
+adversely affected. In addition, any shortage of raw materials in the market generally could impact the prices charged by our
+suppliers, making the cost of raw materials more expensive for us. This in turn could result in an increase in prices to our
+customers which may reduce demand and therefore adversely affect our business, financial condition, results of operations and
+prospects. In addition, we purchase electricity, oil, natural gas and other related supplies needed to operate our Casual Dining
+Restaurants, Cloud Kitchens and Centralized Kitchens. Any significant increase in energy costs could adversely affect us
+through higher rates or imposition of fuel surcharges by our suppliers.
+We cannot predict whether we will be able to anticipate and react favourably to changing costs by adjusting our purchasing
+practices and pricing, and a failure to do so could adversely affect our business, financial condition, results of operations and
+prospects. In addition, we may be unable to fully pass on price increases to our customers. In addition, if we are unable to adjust
+our significant fixed costs including lease costs and staff costs, in response to a reduction in revenues in the future, our business,
+financial condition, results of operations and prospects could be adversely affected.
+Consumer spending and general economic and market conditions
+Our success depends to a significant extent on consumer spending patterns, which is influenced by general economic conditions
+and discretionary income levels. Many factors affect the level of consumer confidence and spending, including recession,
+inflation, deflation, political uncertainty, availability of consumer credit, taxation, stock market performance and
+unemployment. Our performance may decline during recessionary periods or in other periods where one or more
+macroeconomic factors, or potential macroeconomic factors, negatively affect the level of consumer confidence and spending,
+including the amount that consumers spend on luxury events and restaurant dining.
+As per the F&S Report, India’s wedding market stands as one of the most robust sectors globally, deeply intertwined with the
+nation’s cultural ethos and economic dynamics. With 4.86-6.62 million weddings annually and a wedding spend of ₹8,000–
+16,000 billion, the Indian wedding market is not just a cultural phenomenon but a significant driver of discretionary spending.
+A significant portion of spending in luxury weddings goes toward catering and hospitality. Catering accounts for 18–20% of
+the overall budget, often involves gourmet regional cuisines, fusion dishes, and live food counters that add an interactive
+element to the dining experience. India’s Casual Dining Restaurant (CDR) and Fine Dining Restaurant (FDR) segments have
+emerged as pivotal players in the evolving foodservice market, driven by rising disposable incomes, aspirational consumption,
+and an increasing preference for experiential dining.
+Unfavourable changes in the above factors or in other business and economic conditions affecting our customers could increase
+our costs, impose practical limits on the pricing of our products, any of which could lower our profit margins and have an
+adverse effect on our business, results of operations and financial condition.
+Competition
+The overall food service market is highly competitive with respect to food quality, price, service, convenience and concept.
+Due to increased competition, we could experience downward pressure on prices, lower demand for our products, reduced
+margins, an inability to take advantage of new business opportunities and a loss of market share, all of which may have an
+adverse impact on our business, results of operations, financial condition and prospects. We also compete with other businesses
+  369
+for management, staff and store locations. Difficulty in securing suitable management, staff and suitable banquet and restaurant
+locations may have an adverse impact on our business, results of operations, financial condition and prospects.
+We believe that we have distinguished ourselves in the competitive landscape by embracing a centralized kitchen model which
+allows for the delivery of consistently high-quality food across multiple regions.
+Brand reputation and goodwill
+We believe that our brand plays a role in the success of our business and sustains customer loyalty. The ability to differentiate
+our brand and products from that of our competitors through our promotional, marketing and advertising initiatives is an
+important factor in attracting customers. There can be no assurance that our brand name will not be adversely affected in the
+future by actions that are beyond our control including customer complaints or adverse publicity from any  [...truncated]
+
+===== OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS =====
+OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS
+Except as disclosed in this section, there are no outstanding (i) criminal proceedings including matters which are at first
+information report stage involving our Company, its Subsidiaries, its Directors or, Promoter; (ii) actions by any regulatory
+authorities and statutory authorities (including any notices by such authorities) against our Company, its Subsidiaries, its
+Directors or, Promoter; (iii) outstanding claims related to direct and indirect taxes, giving the number of cases and total
+amount; and (iv) other pending litigations involving our Company, Directors, Promoter or Subsidiaries (other than proceedings
+covered under (i) to (iii) above) as determined to be material by our Board pursuant to the policy on materiality (“Materiality
+Policy”) approved by the Board of Directors, in each case involving our Company, Subsidiaries, Promoter and Directors
+(“Relevant Parties”).
+All criminal proceedings involving Key Managerial Personnel and Senior Management of the Company and actions taken by
+the regulatory and statutory authorities against such Key Managerial Personnel and Senior Management shall also be
+disclosed.
+Further, except as disclosed in this section, there are (i) no disciplinary actions including penalties imposed by the SEBI or the
+stock exchanges against our Promoter in the last five Fiscals preceding this Red Herring Prospectus including any outstanding
+action.
+For the purpose of identification of material litigation in (iv) above, our Board has considered and adopted the following policy
+on materiality with regard to outstanding litigation in relation to the Relevant Parties to be disclosed in this Red Herring
+Prospectus pursuant to the Board resolution dated June 24, 2025:
+a)  Monetary threshold: For the purpose of this policy, pending civil cases involving the Relevant Parties in which the
+  monetary amount of claim by or against the Relevant Parties in any such pending proceeding to the extent quantifiable,
+  is lower of: a) two percent of turnover, for the most recent financial year as per the Restated Consolidated Financial
+  Information; or (b) two percent of net worth, as at the end of the most recent financial year as per the Restated
+  Consolidated Financial Information; or (c) five percent of the total consolidated average of absolute value of profit
+  or loss after tax of the Company on a consolidated basis, as per the last three financial years Restated Financial
+  Information, included in the Offer Documents, whichever is lower (“Monetary Threshold”) shall be considered for
+  the purposes of disclosure in the Offer Documents.
+  Accordingly, 5% of the total consolidated average of absolute value of profit or loss after tax for Fiscals 2026, 2025
+  and 2024, based on the Restated Consolidated Financial Information disclosed in this Red Herring Prospectus, i.e.,
+  ₹9.79 million has been considered as the Materiality Threshold for the Relevant Parties.
+b)  Subjective threshold: under this test, such pending matters involving our Company and its Subsidiaries, whose
+  outcome may have a material impact, in the opinion of the Board, on the business, performance, financial position,
+  cash flows, prospects, reputation, operations or any adverse impact on the Company, irrespective of their monetary
+  quantum, will necessitate disclosure. This may include any writ petitions filed involving the Company or similar
+  matters which may have a material impact on the business of the Company and all outstanding civil litigation against
+  the Promoter and Directors of the Company where an adverse outcome would materially and adversely affect the
+  business, prospects, cash flows, performance, operations or financial position or reputation of the Company
+  (irrespective of the amount involved in such litigation), would be considered as material for the Company.
+c)  Additional threshold: there are any findings or observations arising out of any of the inspections by the Securities and
+  Exchange Board of India or by any other regulator in or outside India, which are outstanding.
+Pre-litigation notices received by the Relevant Parties from third parties (excluding those notices issued by governmental,
+statutory, regulatory, judicial, quasi-judicial or taxation authorities or notices threatening criminal action) shall, in any event,
+not be considered as litigation and evaluated for materiality, until such time that Relevant Parties are impleaded as defendants
+in litigation proceedings before any judicial/arbitral forum.
+For identification of material creditors, a creditor of the Company shall be considered material for the purpose of disclosure
+in the Offer Documents, if the amounts due to such creditor exceeds 5% of the restated consolidated total trade payables of the
+Company as of the end of the latest financial period covered in the restated consolidated financial information disclosed in this
+Red Herring Prospectus. Accordingly, creditors of our Company to whom our Company owes an amount exceeding ₹ 33.21
+million are considered material (“Material Creditor”), including the consolidated number of creditors and the aggregate
+amount involved.
+  395
+I.  Litigation involving our Company
+A.  Litigation filed by our Company
+  Material civil litigation
+  1.  Our Company has filed a trademark infringement suit dated November 28, 2022 before the High Court of
+  New Delhi (the “High Court”) against Wow Momo Foods Private Limited (“Wow Momo”) seeking (i)
+  permanent and mandatory injunction against trademark infringement by alleging the use of “WOW! CHINA
+  BISTRO” by Wow Momo, a deceptively similar trademark to “CHINA BISTRO” registered in the name of
+  our Company; and (ii) payment of ₹20.00 million as damages. On August 3, 2023, the High Court passed an
+  order (“Order”), directing Wow Momo to stand injuncted from using the trademark “WOW! CHINA
+  BISTRO” as a trademark, label, device, trading style, trade name, logo, keyword, meta ta [...truncated]
+
+===== OFFER STRUCTURE =====
+OFFER STRUCTURE
+The Offer of up to [●] Equity Shares bearing face value of ₹2 each for cash at a price of ₹[●] per Equity Share (including a
+share premium of ₹[●] per Equity Share) aggregating up to ₹[●] million comprising a Fresh Issue of up to [●] Equity Shares
+by our Company aggregating up to ₹ 1,920.00 million and an Offer for Sale of up to 8,835,382 Equity Shares aggregating up
+to ₹[●] million by the Selling Shareholders.
+The Offer shall constitute [●]% of the post-Offer paid-up Equity Share capital of our Company. The Offer is being made through
+the Book Building Process.
+  Particulars  QIBs(1)  Non-Institutional Bidders  Retail Individual Bidders
+Number of Equity Shares Not less than [●] Equity Shares of Not more than [●] Equity Shares Not more than [●] Equity Shares
+available  for  Allotment/ ₹ 2 each  of ₹ 2 each available for of ₹ 2 each available for
+allocation (2)  allocation or Offer less allocation allocation or Offer less allocation
+  to QIB Bidders and Retail to QIB Bidders and Non-
+  Individual Bidders  Institutional Bidders
+Percentage of Offer size available Not less than 75% of the Offer Not more than 15% of the Offer Not more than 10% of the Offer
+for Allotment/ allocation  shall be available for allocation to or the Offer less allocation to or Offer less allocation to QIBs
+  QIBs. However, up to 5% of the QIBs and Retail Individual and Non-Institutional Bidders
+  Net QIB Portion (excluding the Bidders will be available for will be available for allocation
+  Anchor Investor Portion) shall be allocation.
+  available  for  allocation Further, (a) one third of such
+  proportionately to Mutual Funds portion available to Non-
+  only. Mutual Funds participating Institutional Bidders shall be
+  in the Mutual Fund Portion will reserved for applicants with an
+  also be eligible for allocation in application size of more than ₹
+  the remaining balance QIB 0.20 million and up to ₹ 1.00
+  Portion (excluding the Anchor million; and (b) two third of such
+  Investor  Portion).  The portion available to Non-
+  unsubscribed portion in the Institutional Bidders shall be
+  Mutual Fund Portion will be reserved for applicants with
+  available for allocation to other application size of more than ₹
+  QIBs  1.00 million, provided that the
+  unsubscribed portion in either the
+  sub-categories mentioned above
+  may be allocated to applicants in
+  the other sub-category of Non-
+  Institutional Bidders.
+Basis of Allotment/ allocation if Proportionate  as  follows The Equity Shares of ₹ 2 each The allotment to each Retail
+respective  category  is (excluding the Anchor Investor available for allocation to Non- Individual Bidder shall not be
+oversubscribed*  Portion):  Institutional Bidders under the less than the minimum Bid lot,
+  (a) up to [●] Equity Shares of ₹ Non- Institutional Portion, shall subject to availability of Equity
+  2 each shall be available for be subject to the following:  Shares of ₹ 2 each in the Retail
+  allocation on a proportionate a) one third of the portion Portion and the remaining
+  basis to Mutual Funds only; available to Non-Institutional available Equity Shares of ₹ 2
+  and  Bidders being [●] Equity Shares each, if any, shall be allotted on a
+  (b) up to [●] Equity Shares of ₹ of ₹ 2 each are reserved for proportionate basis. For details,
+  2 each shall be available for Bidders Biddings more than ₹ see “Offer Procedure” on page
+  allocation on a proportionate 0.20 million and up to ₹ 1.00 445.
+  basis to all QIBs, including million; and
+  Mutual Funds receiving b) two third of the portion
+  allocation as per (a) above. available to Non-Institutional
+  Up to 60% of the QIB Portion (of Bidders being [●] Equity Shares
+  up to [●] Equity Shares of ₹ 2 of ₹ 2 each are reserved for
+  each) may be allocated on a Bidders Bidding more than ₹ 1.00
+  discretionary basis to Anchor million.
+  Investors of which 40% shall be The unsubscribed portion in
+  reserved for domestic Mutual either of the categories specified
+  Funds, Life Insurance Companies in (a) or (b) above, may be
+  and Pension Funds, in the allocated to Bidders in the other
+  following manner (i) 33.33% sub-  category  of  Non-
+  shall be reserved for domestic Institutional  Portion  in
+  Mutual Funds; and (ii) 6.67% accordance with SEBI ICDR
+  shall be reserved for Life Regulations.
+  Insurance  Companies  and The allotment of specified
+  Pension Funds, subject to valid securities  to  each  Non-
+  Bids being received from Institutional Bidder shall not be
+  domestic Mutual Funds, life less  than  the  minimum
+  application size, subject to
+  442
+  Particulars  QIBs(1)  Non-Institutional Bidders  Retail Individual Bidders
+  Insurance  Companies  and availability  in  the  Non-
+  Pension Funds at or above the Institutional Portion, and the
+  Anchor Investor Allocation Price. remainder, if any, shall be allotted
+  In the event of under-subscription on a proportionate basis in
+  in the Anchor Investor Portion accordance with the conditions
+  reserved for Life Insurance specified in this regard in
+  Companies and Pension Funds, Schedule XIII of the SEBI ICDR
+  the balance Equity Shares shall be Regulations. For details, see
+  available for allocation to “Offer Procedure” on page 445.
+  domestic Mutual Funds.
+Minimum Bid  Such number of Equity Shares of Such number of Equity Shares of [●] Equity Shares of ₹ 2 each and
+  ₹ 2 each so that the Bid Amount ₹ 2 each so that the Bid Amount in multiples of [●] Equity Shares
+  exceeds ₹0.20 million and in exceeds ₹0.20 million and in of ₹ 2 each
+  multiples of [●] Equity Shares of multiples of [●] Equity Shares of
+  ₹ 2 each  ₹ 2 each
+Maximum Bid  Such number of Equity Shares of Such number of Equity Shares of Such number of Equity Shares of
+  ₹ 2 each in multiples of [●] Equity ₹ 2 each in multiples of [●] ₹ 2 each in multiples of [●]
+  Shares of ₹ 2 each so that the Bid Equity Shares of ₹ 2 each so that Equity Shares of ₹ 2 each so that
+  does not exceed the size of the the Bid does not exceed the size the Bid Amount does not exceed
+  Offer (excluding the Anchor of the Offer (excluding the QIB ₹0.20 million
+  Portion), subject to applicable Portion), subject to applicable
+  limits  limits
+Mode of Allotment  Compulsorily in dematerialised form
+Bid Lot  [●] Equity Shares of ₹ 2 each and in multiples of [●] Equity Shares of ₹ 2 each thereafter
+Allotment Lot  [●] Equity Shares of ₹ 2 each and thereafter in multiples of one Equity Share of ₹ 2 each thereafter
+Trading Lot  One Equity Share of ₹ 2 each
+Who can apply(3) (4)  Public financial institutions as Resident Indian individuals, Resident Indian individuals,
+  specified in Section 2(72) of the Eligible NRIs, HUFs (in the name Eligible NRIs and HUFs (in the
+  Companies Act 2013, scheduled of karta), companies, corporate name of karta)
+  commercial banks, Mutual Funds bodies, scientific institutions,
+  registered with SEBI, FPIs (other societies, trusts and FPIs who are
+  than individuals, corporate bodies ind [...truncated]
