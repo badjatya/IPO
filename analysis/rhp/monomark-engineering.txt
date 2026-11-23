@@ -1,0 +1,1435 @@
+
+===== THE OFFER =====
+[not found]
+
+===== SUMMARY OF RESTATED FINANCIAL INFORMATION =====
+SUMMARY OF RESTATED CONSOLIDATED FINANCIAL INFORMATION
+The summary financial information presented below should be read in conjunction with the Restated
+Consolidated Financial Information, the notes thereto and the sections “Restated Consolidated Financial
+Information” and “Management’s Discussion and Analysis of Financial Condition and Results of
+Operations” beginning on pages 264 and 390 respectively. Further a direct link of access to the financial
+statements of the stub period and last three fiscal years of our Company is
+https://www.monomark.co.in/investors-2/.
+RESTATED CONSOLIDATED STATEMENT OF ASSETS AND LIABILITIES
+  (₹ in lakhs)
+  For the period ended  For the Fiscal Year ended on March 31
+  Particulars
+  on June 30, 2026  2026  2025  2024
+  ASSETS
+ (A) Non - current assets
+ (a) Property, plant and equipment’s  6,680.24  6,581.24  5,229.77  5,027.54
+ (b) Right-of-use assets  34.26  40.26  67.07  93.76
+ (c) Intangible assets under development  -  -  53.12  42.94
+ (d) Other Intangible Assets  52.93  57.47  -  -
+ (e) Capital work in progress  -  -  -  3.23
+ (f) Financial assets
+  - Investments  0.03  0.03  0.03  0.03
+  - Other financial assets  1,109.16  540.30  2,311.45  792.09
+ (g) Deferred tax assets (net)  570.88  523.89  466.08  226.57
+  Total non-current assets  8,447.50  7,743.19  8,127.52  6,186.16
+ (B) Current assets
+ (a) Inventories  6,569.59  6,093.54  6,316.42  4,345.52
+ (b) Financial assets
+ -Trade receivables  8,201.44  8,563.13  5,241.13  4,773.35
+ -Cash and cash equivalents  1,630.05  842.42  389.61  534.30
+ -Bank Balances other than Cash and cash
+  1,229.23  2,411.52  772.76  1,695.05
+ equivalents
+ -Loans  11.89  14.00  7.07  6.38
+ -Other Financial assets  7,851.43  7,642.73  7,584.12  5,769.18
+ (c) Current Tax Assets (Net)  413.03  426.93  461.37  394.63
+ (d) Other Current Assets  575.38  481.87  452.42  376.64
+  Total current assets  26,482.04  26,476.14  21,224.90  17,895.05
+  Total assets  34,929.54  34,219.33  29,352.42  24,081.21
+ EQUITY AND LIABILITIES
+ 1) Equity
+ Equity Share capital  6,904.12  6,904.12  901.26  901.26
+ Other equity  5,027.96  4,769.91  6,424.55  5,109.54
+ Equity attributable to equity holders of the
+  11,932.08  11,674.03  7,325.81  6,010.80
+ parent
+ Non-controlling Interest  -  -  -  -
+  Total Equity  11,932.08  11,674.03  7,325.81  6,010.80
+ 2) Liabilities
+ Non - Current Liabilities
+ Financial liabilities
+  - Borrowings  1,600.44  1,650.62  789.17  1,415.49
+  - Lease liabilities  19.10  25.20  58.35  89.95
+  - Other Financial Liabilities  62.44  61.43  34.88  22.81
+ Provisions  956.74  851.07  1,495.84  865.91
+  Total non - current liabilities  2,638.72  2,588.32  2,378.24  2,394.16
+ Current liabilities
+  84
+  For the period ended  For the Fiscal Year ended on March 31
+  Particulars
+  on June 30, 2026  2026  2025  2024
+Financial liabilities
+  - Borrowings  7,611.28  7,083.28  7,688.26  6,600.84
+  - Lease liabilities  30.52  33.15  31.60  27.05
+  - Trade payables
+  (a) total outstanding dues of micro and small
+  240.56  344.92  564.17  531.34
+  enterprises
+  (b) total outstanding dues of creditors other
+  6,952.86  6,842.16  5,357.42  4,079.09
+  than micro and small enterprises
+  - Other financial liabilities  -  -  18.81  441.33
+Other current liabilities  1,093.47  1,316.16  2,571.31  1,606.57
+Provisions  4,430.05  4,337.31  3,416.80  2,390.03
+  Total current liabilities  20,358.74  19,956.98  19,648.37  15,676.25
+  Total liabilities  22,997.46  22,545.30  22,026.61  18,070.41
+  Total equity and liabilities  34,929.54  34,219.33  29,352.42  24,081.21
+  85
+RESTATED CONSOLIDATED STATEMENT OF PROFIT AND LOSS
+  (₹ in lakhs)
+  For the period ended For the Fiscal Year ended on March 31
+  Particulars
+  on June 30, 2026  2026  2025  2024
+Income
+Revenue from operations  14,231.73  56,188.89  47,503.19  38,985.95
+Other income  50.30  285.49  225.54  228.46
+Total income  14,282.03  56,474.38  47,728.73  39,214.41
+Expenses
+Cost of Material Consumed  3,567.66  9,264.84  3,594.46  5,142.04
+Purchases of stock-in-trade  3.90  55.34  23.41  -
+Changes in inventories of Finished Goods/Work in
+  0.07  311.32  399.06  (118.88)
+Progress/Stock in Trade
+Employee benefit expenses  7,137.29  29,568.75  31,135.70  22,664.26
+Finance costs  224.81  851.81  897.37  749.52
+Depreciation and amortization expenses  198.13  777.85  682.62  605.13
+Other expenses  2,753.28  12,114.41  8,424.18  8,110.03
+Total expenses  13,885.14  52,944.32  45,156.80  37,152.10
+Profit before tax  396.89  3,530.06  2,571.93  2,062.31
+Tax Expenses
+Current tax  126.94  860.98  819.92  409.32
+Deferred tax  (32.17)  78.75  (69.25)  170.36
+Total tax expenses  94.77  939.73  750.67  579.68
+Restated Profit after tax  302.12  2,590.33  1,821.26  1,482.63
+Other comprehensive (income) / expenses
+Items that will not be reclassified to Profit or Loss
+  - Remeasurement gain / (loss) of the defined benefit
+  (65.13)  (544.54)  (678.57)  (702.43)
+  plan
+  - Income tax in respect of above  16.39  137.05  170.78  204.55
+Items that will be reclassified to Profit or Loss
+  - Exchange differences in translating the financial
+  6.24  1.96  2.06  0.29
+  information of foreign operations
+  - Income tax in respect of above  (1.57)  (0.49)  (0.52)  (0.08)
+Restated Total other comprehensive income for the
+  (44.07)  (406.02)  (506.25)  (497.67)
+year
+Restated Total comprehensive income for the year  258.05  2,184.31  1,315.00  984.96
+Restated Net Profit after Tax for the year
+attributable to:
+  - Equity holders of the parent  302.12  2,590.33  1,821.26  1,482.63
+  - Non-controlling interests  -  -  -  -
+Restated Other comprehensive income / (loss) for
+the year attributable to:
+  - Equity holders of the parent  (44.07)  (406.02)  (506.25)  (497.67)
+  - Non-controlling interests  -  -  -  -
+Restated Total comprehensive income / (loss) for the
+year attributable to:
+  - Equity holders of the parent  258.05  2,184.31  1,315.00  984.96
+  - Non-controlling interests  -  -  -  -
+ Restated Earnings per equity share of face value of
+ INR 10 each attributable to equity holders of the
+ Company (EPS) (in Rs.)
+- Basic/Diluted per share  0.44  3.84  20.21  16.45
+- Adjusted Earnings/(loss) per share (with Bonus share)  0.44  3.84  2.89  2.35
+  86
+RESTATED CONSOLIDATED STATEMENT OF CASH FLOWS
+  (₹ in lakhs)
+  For the period ended For the Fiscal Year ended on March 31
+  Particulars
+  on June 30, 2026  2026  2025  2024
+A. Cash flow from operating activities
+Net Profit Before Tax and Extraordinary Items  396.89  3,530.06  2,571.93  2,062.31
+Adjustments for:
+Depreciation  198.13  777.85  682.62  605.13
+Effect related to Other Comprehensive Income  (65.13)  (544.54)  (678.57)  (702.43)
+Provision For Gratuity and Leave Encashment  150.27  514.87  560.47  370.21
+Rent Payment  (9.79)  (36.18)  (35.03)  (39.40)
+Amendments to Lease Agreements  -  (1.12)  -  -
+Interest Received  (49.10)  (228.92)  (208.42)  (154.69)
+Interest and Finance Charges  224.81  851.81  897.37  749.52
+Profit/Loss on Sale of Fixed Assets  2.95  203.98  106.68  141.74
+Operating Profit before working capital changes  849.03  5,067.81  3,897.05  3,032.39
+Adjustments for:
+Change in Inventories  (476.05)  222.88 (1,970.90)  (1,817.97)
+Changes in Trade receivables  361.69  (3,322.01) (467.78)  1,273.20
+Changes in Short term Other Financial Liabilities  -  (18.81) (422.52)  441.33
+Changes in Other Financial Asset  (208.70)  (58.61) (1,814.94)  (691.47)
+Changes in Other Current Asset  (93.51)  (29.45)  (75.78)  (121.62)
+Changes in Trade Payables  (4.30)  1,253.37 1,286.38  (201.60)
+Changes in Long term Other Financial Liabilities  1.01  26.55  12.07  (2.93)
+Changes in Short‐term loans and advances  2.11  (6.93)  (0.69)  4.81
+Changes in Short Term Provisions  92.74  920.51 1,026.78  (73.38)
+Changes in Long Term Loans and Advances  -  -  -  97.35
+Changes in Long Term Provisions  (44.60)  (1,159.64)  69.46  (285.22)
+Changes in Current Liabilities  (222.69)  (1,255.15)  964.74  254.97
+Cash generated from operations  256.73  1,640.52 2,503.87  1,909.86
+Tax Paid  (113.04)  (826.54) (886.66)  (386.80)
+Net cash From/(Used in) Operating Activities (A)  143.69  813.98 1,617.21  1,523.06
+B. Cash flow from investing Activities
+Purchase of Property, Plant and Equipment  (292.54)  (2,457.95) (1,035.18)  (949.77)
+Addition In Right of Use of Assets  -  -  -  -
+Changes In Intangible Asset Under Development  -  (4.35)  (10.18)  (24.40)
+Sale of Property, Plant and Equipment  3.00  151.34  70.34  76.36
+Changes in Capital Work‐in‐progress  -  -  3.23  (1.91)
+Changes in Other Financial Asset  (568.86)  1,771.15 (1,519.36)  786.86
+Change in Bank Balance Other Than Cash and Cash
+  1,182.29  (1,638.76)  922.29  (1,227.98)
+Equivalents
+Interest Received  49.10  228.92  208.42  154.69
+Net cash From/(Used in) Investing Activities (B)  372.99  (1,949.65) (1,360.44)  (1,186.15)
+C. Cash Flow from financing activities
+Proceeds from issue of shares  -  595.30  -  -
+Security Premium  -  1,666.84  -  -
+Issue Expense Related to Private Placement  -  (98.23)  -  -
+Interest and Finance Charges  (212.88)  (832.13) (862.11)  (732.11)
+Changes in Short Term Borrowing  528.00  (604.98) 1,087.42  435.70
+Proceeds From Long Term Borrowings  177.96  2,184.18  683.10  793.75
+Repayment of Long Term Borrowing  (228.37)  (1,324.46) (1,311.93)  (540.43)
+Net Cash From Financing Activities (C)  264.71  1,586.52 (403.52)  (43.09)
+Net increase / (decrease) in Cash (A)+(B)+(C)  781.39  450.85 (146.75)  293.82
+Cash and cash equivalents at the beginning of the year  842.42  389.61  534.30  240.19
+Less: Foreign Exchange (Loss) / Gain on Restatement of
+  6.24  1.96  2.06  0.29
+Foreign Currency Cash and Cash Equivalents
+Cash and cash equivalents at the end of the year  1,630.05  842.42  389.61  534.30
+  87
+  SUMMARY OF CONTINGENT LIABILITIES
+A summary of our contingent liabilities for the period ended on June 30, 2026, as per Ind AS 37 –
+Provisions, Contingent Liabilities and Contingent Assets, derived from our Restated Consolidated
+Financial Information is set forth below:
+  (Amount in Lakhs)
+  For the period ended on
+  Particulars
+  June 30, 2026
+ (I) Contingent liabilities**
+  a) Contingent liability in respect of receivables financed under arrangement with recourse*  2,300.21
+  b) Under Income Tax  5.42
+  c) Under Goods and Service Tax  131.89
+  d) Corporate Guarantees given By Company  208.19
+  e) Bank Guarantees  3,000.84
+ (II) Commitments:
+  (a) Estimated amount of contracts remaining to be executed on capital account and not provided  -
+  for (net of capital advances)
+ Total  5,646.55
+*The Company has entered into a vendor finance arrangement, termed "Cash Credit (Clean)‐e‐VFS", in respect of its supplies to Vedanta Limited
+(Vedanta Group), under which State Bank of India (SBI) acts as vendor financer to Vedanta.
+Under this arrangement, the Company supplies products and services to Vedanta Group, and at Vedanta's advice, SBI pays the Company's invoices
+on behalf of Vedanta. The Company does not pay any interest to SBI on these transactions. All amounts due to SBI are paid by Vedanta on the
+respective due dates. The Company has not created any charge on its assets in respect of this arrangement.
+The amounts financed and outstanding as at the reporting dates, as disclosed in item above, are repayable to SBI by Vedanta Group. In case of
+default by Vedanta Group, the Company is liable to repay the amount to SBI, and the Company has the right to recover the same from Vedanta
+Group. Accordingly, the same has been disclosed as a contingent liability.
+**The Company does not have any contingent assets as at the reporting date where an inflow of economic benefits is probable requiring disclosure
+under Ind AS 37 – Provisions, Contingent Liabilities and Contingent Assets. Accordingly, no disclosure in respect of contingent assets is required.
+Pursuant to the CA Certificate dated November 04, 2026, from our statutory and peer review auditor M/s Keyur Shah & Associates, Chartered
+Accountants vide UDIN No. 26181329WWCCLX1875.
+For further details of our contingent liabilities (as per Ind AS 37) as on June 30, 2026, see “Restated
+Consolidated Financial Information – Note 38 - Contingent Liabilities and Capital Commitments” on
+page 343.
+For details on risks in relation to our contingent liabilities, see “Risk Factor No. – 21 – Our contingent
+liabilities are ₹ 5,646.55 lakhs as on June 30, 2026, which tantamount to 47.32% of our total net worth.
+If these contingent liabilities materialised, it could adversely affect our financial condition and results
+of operations.” on page 47-48.
+  88
+  SUMMARY OF RELATED PARTY TRANSACTIONS
+The details of related party transaction for the period ended on June 30, 2026 and for the Fiscal Year ended on March 31, 2026, 2025 and 2024 based on Restated
+Consolidated Financial Information are given as under:
+  (Amount in Lakhs)
+  Value of RPT  Value of RPT  Value of RPT  % of  Value of RPT
+  Nature of  % of Total  % of Total  % of Total
+Sr. No.  Name of Party  Nature of Relation  transactions  transactions  transactions  Total  transactions
+  Transaction  Revenue  Revenue  Revenue
+  (June 30, 2026)  (FY 2025-26)  (FY 2024-25)  Revenue  (FY 2023-24)
+  Promoter  Director
+  Mr.  Narendra  30.00  0.21%  112.77  0.20%  108.00  0.23%  108.00  0.28%
+  1.  (Chairman and  Remuneration
+  Chordia
+  Managing Director)  Insurance  -  0.00%  0.71  0.00%  -  0.00%  0.56  0.00%
+  Director
+  16.50  0.12%  62.38  0.11%  60.00  0.13%  60.00  0.15%
+  Promoter  Remuneration
+  Mrs. Meena
+  2.  (Whole Time Director) Reimbursement
+  Chordia  -  0.00%  -  0.00%  -  0.00%  0.66  0.00%
+  Expense
+  Insurance  2.00  0.01%  0.43  0.00%  1.00  0.00%  1.47  0.00%
+  Director
+  16.50  0.12%  51.53  0.09%  42.00  0.09%  30.00  0.08%
+  Promoter  Remuneration
+  Mr.  Nitesh
+  3.  (Whole Time Director) Reimbursement
+  Chordia  0.27  0.00%  19.35  0.03%  51.82  0.11%  55.17  0.14%
+  Expense
+  Insurance  -  0.00%  2.56  0.00%  2.00  0.00%  4.50  0.01%
+  Director
+  12.00  0.08%  40.77  0.07%  36.00  0.08%  1 [...truncated]
+
+===== CAPITAL STRUCTURE =====
+CAPITAL STRUCTURE
+The share capital of our Company, as on the date of this Red Herring Prospectus, is set forth below:
+  (₹ in Lakhs except share data)
+  Aggregate  Aggregate
+ S.
+  Particulars  nominal value value at Issue
+No.
+  (in ₹)  Price (in ₹)
+ A.  AUTHORISED SHARE CAPITAL
+  10,00,00,000 Equity Shares of face value of ₹ 10/- each  10,000.00  -
+  Total  10,000.00  -
+ B.  ISSUED, SUBSCRIBED AND PAID-UP SHARE CAPITAL BEFORE THE ISSUE (1)
+  6,90,41,200 Equity Shares of face value of ₹ 10/- each  6,904.12  -
+  Total  6,904.12  -
+  PRESENT ISSUE
+ C.  Fresh Issue of up to 2,70,00,000 Equity Shares of face value of ₹ 10/- each
+  [●]  [●]
+  aggregating up to ₹ [●] Lakhs
+ D.  ISSUED, SUBSCRIBED AND PAID-UP CAPITAL AFTER THE ISSUE
+  [●] Equity Shares of face value of ₹ 10/- each*  [●]  [●]
+  Total  [●]  [●]
+ E.  SECURITIES PREMIUM ACCOUNT
+  Before the Issue  1,568.61
+  After the Issue  [●]
+*To be updated upon the finalization of the Issue Price, and subject to Basis of Allotment.
+(1) Our Company has only one class of share capital i.e., Equity Shares of face value of ₹ 10/- each only. All Equity Shares issued
+  are fully paid-up. Our Company has no outstanding convertible instruments as on the date of filing this Red Herring
+  Prospectus.
+(2) The Issue has been authorized by our Board of Directors pursuant to the resolution passed at their meeting held on November
+  01, 2025 and by our shareholders pursuant to the special resolution passed at their meeting held on November 07, 2025.
+AVERAGE COST OF ACQUISITION OF SHARE FOR PROMOTERS AND SELLING SHAREHOLDERS
+There are no selling shareholders in our company. The average cost of acquisition of Equity Shares for
+Promoters as on the date of this Red Herring Prospectus is set forth below:
+  Average cost of acquisition per
+ S. No.  Name  Number of Equity Shares
+  Equity Share (in ₹) #
+  Promoters
+  1.  Narendra Chordia  3,15,00,000  0.01
+  2.  Meena Chordia  2,10,00,000  0.01
+  3.  Nitesh Chordia*  59,68,200  Nil
+  4.  Gaurav Chordia*  46,20,000  Nil
+  5.  Kirti  Nil  Nil
+#The average cost of acquisition of Equity Shares held by the Promoters have been calculated by taking the average of the
+amounts paid by them to acquire the Equity Shares of the Company.
+*Shares were initially received by way of gift and subsequently bonus shares were allotted thereon; accordingly, the cost of
+acquisition of such shares has been considered as Nil for computing average cost.
+Notes: Pursuant to the certificate dated November 04, 2026, received from our Statutory and Peer Review auditor, Keyur Shah
+& Associates, Chartered Accountants vide UDIN No. 26181329RVHZLS6698.
+NOTES TO THE CAPITAL STRUCTURE
+1.  For details in relation to the changes in the authorised share capital of our Company in the past 10
+  years, refer “History and Certain Corporate Matters - Amendments to the Memorandum of
+  Association” beginning on page 230.
+2.  Paid-up share capital history of our Company:
+  Our Company is in compliance with the Companies Act, 1956 and the Companies Act, 2013, to the
+  extent applicable, with respect to the issuance of securities from the date of incorporation of our
+  Company till the date of filing of this Red Herring Prospectus.
+  101
+Pursuant to the bonus issue undertaken in May 2025, the paid-up Equity Share capital of our Company increased from ₹ 901 lakhs, comprising 90,12,600 Equity Shares
+to ₹ 6,309 lakhs, comprising 6,30,88,200 Equity Shares, by capitalising reserves and surplus. The bonus issue resulted in an increase in the number of Equity Shares held
+by the existing shareholders in proportion to their respective shareholding, without any change in their percentage shareholding in the Company. The bonus issue did
+not involve any fresh cash inflow or fund-raising by our Company. Further, the increase in the number of outstanding Equity Shares pursuant to the bonus issue resulted
+in a corresponding reduction in the book value per Equity Share of our company from ₹ 81.28 to ₹ 11.61 post bonus. The history of the Equity Share capital of our
+Company in a tabular format is set forth:
+  Number of  Issue
+  Face value  Cumulative Cumulative Number
+ Date of  Equity  price per  Details of allottees and number of equity
+  Nature of allotment/ Reason  per Equity  Nature of consideration  number of paid-up Equity  of
+allotment  Shares  Equity  shares allotted to the allottees
+  Share (₹)  Equity Shares Share capital allottees
+  allotted  Share (₹)
+  S.  Number of
+  Name of allottees
+  No.  Equity Shares
+September
+  Initial subscription to MOA  50,000  10/-  10/-  Cash  50,000  5,00,000  2  1. Narendra Chordia  30,000
+ 29, 2005  2. Meena Chordia  20,000
+  Total  50,000
+  S.  Number of
+  Name of allottees
+  No.  Equity Shares
+  1. Dinesh Kumar Jain  2,400
+  2. Laxmi Jain  1,200
+  3. Sunil Kumar Jain  1,200
+March 29,  4. MN Prasanan  1,200
+  Further Issue  10,084  10/-  250/-  Cash  60,084  6,00,840  9  5. Rekha Ranka  884
+ 2010
+  6. Pista Jain  800
+  7. Arvind Kothari  800
+  8. Anil Kumar Jain  800
+  9. Anil Kumar Jain  800
+  Total  10,084
+  S.  Number of
+  Name of allottees
+  Bonus issue in the ratio of 149 equity  No.  Equity Shares
+  shares of face value of ₹ 10 each for  1. Narendra Chordia  44,70,000
+March 29,
+  every one equity share of face value of  89,52,516  10/-  NA  Other than Cash  90,12,600  9,01,26,000  4  2. Meena Chordia  29,80,000
+ 2017  3. Nitesh Chordia  8,46,916
+  ₹ 10 each held by the shareholders in
+  our Company (1)  4. Gaurav Chordia  6,55,600
+  Total  89,52,516
+  Bonus issue in the ratio of 6 equity  S.
+  Name of allottees
+  Number of
+  shares of face value of ₹ 10 each for  No.  Equity Shares
+  every one equity share of face value of  1. Narendra Chordia  2,70,00,000
+ May 26,
+  2025  ₹ 10 each held by the shareholders in 5,40,75,600  10/-  NA  Other than Cash  6,30,88,200 63,08,82,000  4  2. Meena Chordia  1,80,00,000
+  our Company (2)  3. Nitesh Chordia  51,15,600
+  4. Gaurav Chordia  39,60,000
+  Total  5,40,75,600
+ July 02,  S.
+  Name of allottees
+  Number of
+  Private Placement*  59,53,000  10/-  38/-  Cash  6,90,41,200 69,04,12,000  31  No  Equity Shares
+  2025
+  102
+  Number of  Issue
+  Face value  Cumulative Cumulative Number
+ Date of  Equity  price per  Details of allottees and number of equity
+  Nature of allotment/ Reason  per Equity  Nature of consideration  number of paid-up Equity  of
+allotment  Shares  Equity  shares allotted to the allottees
+  Share (₹)  Equity Shares Share capital allottees
+  allotted  Share (₹)
+  1  Rashmi Jain  5,45,000
+  2  Umesh Kumar Jain  5,30,000
+  3  Coalsale Company Ltd  5,28,000
+  4  Rajesh Goyal  5,28,000
+  5  Pankaj Malani HUF  3,70,000
+  6  Sunil Malani HUF  3,60,000
+  7  Bhupendra Kumar Dak  3,50,000
+  8  Ameet Mallani  3,50,000
+  Kamlesh Ratanlal Nahar
+  9  2,64,000
+  HUF
+  10  Kapila Dhoka  2,60,000
+  11  Vivek Kumar Jagwayan  2,00,000
+  12  Nirmala Chandwar  2,00,000
+  13  Abhishek Chitlangia  1,32,000
+  14  Ritu Dak  1,30,000
+  15  Roshni Jain  1,30,000
+  16  Suresh Sablawat  1,00,000
+  17  Shreepal Jain  1,00,000
+  18  Payal Gupta  1,00,000
+  19  Ekta Jain  1,00,000
+  20  Mukesh Agarwal  1,00,000
+  21  Shruti Jain  1,00,000
+  Veloce Opportunities
+  22  75,000
+  Fund
+  23  Anita Rawat  60,000
+  24  Dimple Parwal  55,000
+  25  Shiv Ratan Maheshwari  55,000
+  26  Saurabh Bhalla  55,000
+  27  Ankit Jain  52,000
+  28  Deepak Kumar Kedia  50,000
+  29  Anubhav Garg  40,000
+  30  Pratiksha Bhomia  25,000
+  31  Neha Verma  9,000
+  Total  59,53,000
+* The shares under the private placement have been issued to 31 persons/entities that do not form part of the Promoter Group, for the purpose of meeting the Company’s fund requirements towards general corporate purposes, aggregating to ₹
+22.62 crores. The equity shares were issued at a price of ₹ 38/- per share, as determined in accordance with the valuation report dated May 31, 2025, issued by CA Arvind Kaushik, a Registered Valuer bearing registration number
+IBBI/RV/06/2019/10707. For detailed valuation report, refer to the “Material Contracts and Documents for Inspection” beginning on page 550.
+(1) Bonus issuance of 89,52,516 Equity Shares of face value of ₹ 10/- each of our Company was made pursuant to resolutions of the Board and Shareholders, each dated March 07, 2017 and March 29, 2017, respectively, out of the reserves and
+  surplus of the Company.
+(2) Bonus issuance of 5,40,75,600 Equity Shares of face value of ₹ 10/- each of our Company was made pursuant to resolutions of the Board and Shareholders, each dated May 21, 2025 and May 24, 2025, respectively, out of the reserves and
+  surplus of the Company.
+  103
+3. Secondary transactions of Equity Shares by the Promoters and the Promoter Group of our
+  Company:
+  Except as disclosed in “Build-up of Promoter’s Shareholding-Build-up of the Equity Shareholding of
+  our Promoters in our Company” beginning on page 107, none of our Promoters and members of our
+  Promoter Group have purchased or sold any securities of our Company through secondary market
+  since inception.
+4. Specified securities acquired by the Promoters, Promoter Group, shareholders entitled with right
+  to nominate directors or any other rights in last three years
+  There are no specified securities acquired by our Promoters, members of our Promoter Group,
+  shareholders entitled with right to nominate directors or any other rights in last three years.
+5. Issue of Equity Shares for consideration other than cash or out of revaluation reserves
+  Except as set out below, our Company has not issued Equity Shares through bonus issue or for
+  consideration other than cash since incorporation. Further our Company has not issued any Equity
+  Shares out of revaluation reserves since incorporation:
+  No. of
+  Face  Issue  Reason /
+  Name of the  Equity  Benefits accrued to
+  Date of Issue  value  Price  Nature of
+  allottees  Shares  our Company
+  (₹)  (₹)  Allotment
+  allotted
+  Narendra Chordia  44,70,000
+  Bonus Issue in
+  Meena Chordia  29,80,000  Capitalization of
+ March 29, 2017  10  -  the ratio of
+  Nitesh Chordia  8,46,916  Reserves & Surplus
+  149:1
+  Gaurav Chordia  6,55,600
+  Narendra Chordia  2,70,00,000
+  Meena Chordia  1,80,00,000  Bonus Issue in  Capitalization of
+  May 26, 2025  10  -
+  Nitesh Chordia  51,15,600  the ratio of 6:1  Reserves & Surplus
+  Gaurav Chordia  39,60,000
+6.  Issue of Shares pursuant to schemes of arrangement
+  Our Company has not allotted any Equity Shares in terms of any scheme of arrangement approved
+  under sections 391-394 of the Companies Act, 1956 or sections 230-234 of the Companies Act, 2013
+  as on the date of this RHP.
+7.  Employee Stock Option Scheme
+  Our company doesn’t have any Employee stock option scheme (“ESOP”)/ Employee Stock purchase
+  scheme (“ESPS”) for our employees and we do not intent to allot any equity shares to our
+  employees under ESOP and ESPS from the proposed Issue. As and when options are granted to our
+  employees under the ESOP scheme, our Company shall comply with the SEBI (Share Based
+  Employee Benefits and Sweat Equity) Regulations, 2021.
+8.  Issue of Equity Shares at a price lower than the Issue Price in the last year
+  The Issue Price is ₹ [●] per equity share. For further details in relation to the issuances in preceding
+  one year, see “Notes to the Capital Structure – Share capital history of our Company – paid up
+  share capital history of our Company” beginning on page 101.
+  104
+  9.  Shareholding pattern of our Company
+  Set forth below is the shareholding pattern of our Company in accordance with Regulation 31 of the SEBI (LODR) Regulations 2015, as on the date of this Red
+  Herring Prospectus:
+  i.  Summary of Equity Shareholding Pattern as on November 13, 2026:
+  Number of
+  Shareholding as a
+  shares
+  Shareholding as Number of voting rights held in No. of shares % assuming full Number of locked
+  No. of  pledged or  Number of
+  No. of  a % of total no.  each class of securities  underlying  conversion of  in shares
+  No. of  partly  otherw [...truncated]
+
+===== OBJECTS OF THE OFFER =====
+OBJECTS OF THE ISSUE
+ The Issue comprises the Fresh Issue of up to 2,70,00,000 Equity Shares of face value of ₹ 10 each
+ aggregating up to ₹ [●] Lakhs subject to finalization of Basis of Allotment. For details, see “The Issue”
+ beginning on page 82.
+ APPRAISING AGENCY
+ None of the objects of the Issue for which the Net Proceeds will be utilized have been appraised by any
+ external agency or any bank/financial institution.
+ OBJECTS OF THE ISSUE
+ The net proceeds of the Issue, i.e., gross proceeds of the Issue less the Issue related expenses (“Net
+ Proceeds”) are proposed to be utilised in the following manner:
+ ➢ Funding the incremental working capital requirements of our Company.
+ ➢ General corporate purposes.
+ (Collectively, referred to herein as the “Objects”)
+ In addition, we expect to achieve the benefits of listing of our Equity Shares bearing face value of ₹ 10/-
+ on the Stock Exchanges, including enhancement of our Company’s brand name and creation of a public
+ market for our Equity Shares bearing face value of ₹ 10/- in India.
+ The main object clause and the objects ancillary to the main object clause as set out in our Memorandum
+ of Association enables our company to (i) to undertake our existing business activities and (ii) to
+ undertake the activities proposed to be funded from the Net Proceeds.
+ ISSUE PROCEEDS
+ The details of the Issue Proceeds are summarized in the table below:
+  (₹ in Lakhs)
+  S. No  Particulars  Amount (1)
+  1  Gross Proceeds from the Issue  [●]
+  (1)
+  2  Less: Issue related expenses  [●]
+  Net Proceeds of the Issue (2)  [●]
+ (1) See “Issue Related Expenses” below on page 129.
+ (2) To be finalized on determination of the Issue Price and updated in the Prospectus prior to filing with the RoC.
+PROPOSED UTILISATION OF NET ISSUE PROCEEDS
+The Net Issue proceeds are proposed to be utilized in the following manner:
+  (₹ in Lakhs)
+  Particulars  Amount (1)
+  Funding the incremental working capital requirements of our Company  12,000.00
+  General Corporate Purposes (1)(2)  [●]
+  Grand Total  [●]
+ (1) To be finalized on determination of the Issue Price and updated in the Prospectus prior to filing with the RoC.
+ (2) The amount utilised for general corporate purposes shall not exceed 25% of the Gross Proceeds in accordance with SEBI ICDR
+  Regulations.
+ Our Board, in its meeting dated September 23, 2026, approved the utilization of the Net Proceeds
+ towards (i) Funding the incremental working capital requirements of our Company (ii) General Corporate
+ Purposes.
+  113
+PROPOSED SCHEDULE OF IMPLEMENTATION AND DEPLOYMENT OF FUNDS
+The following table sets forth the details of the estimated schedule of implementation and expected
+deployment of the net proceeds:
+  (₹ in Lakhs)
+  Amount proposed  Estimated deployment in
+ S.
+  Particulars  to be funded from
+No.  FY 2026-27  FY 2027-28
+  the Net Proceeds (1)
+  Funding the incremental working capital requirements
+  1  12,000.00  8,250.00  3,750.00
+  of our Company
+  2  General Corporate Purposes (1)(2)  [●]  [●]  [●]
+  Total  [●]  [●]  [●]
+(1) To be finalized on determination of the Issue Price and updated in the Prospectus prior to filing with the RoC.
+(2) The amount utilized for general corporate purposes shall not exceed 25% of the Gross Proceeds of the Issue.
+The funds requirements, proposed deployment of funds and the intended use of the Net Proceeds set
+out above are based on our current business plan, internal management estimates, current
+circumstances of our business, prevailing market conditions and other commercial considerations.
+However, these fund requirements and proposed deployment of Net Proceeds have not been appraised
+by any bank or financial institution. We may have to revise our funding requirement on account of
+various factors, such as financial and market conditions, delay in procuring and operationalizing assets
+or necessary licenses and approvals, competition, price fluctuations, interest rate fluctuations and other
+external factors, which may not be within the control of our Board of Directors. This may also entail
+rescheduling the proposed deployment of Net Proceeds at the discretion of our Board of Directors,
+subject to compliance with applicable laws. Further, in the event, the Net Proceeds are not utilized (in
+full or in part) for the objects of the Issue during the period stated above due to any reason, including (i)
+the timing of completion of the Issue; (ii) market conditions outside the control of our Company; and
+(iii) any other economic, business and commercial considerations, the remaining Net Proceeds shall be
+utilized in next fiscal year i.e. 2028-29 in accordance with applicable laws. This may also entail
+rescheduling or revising the planned expenditure and funding requirements, including the expenditure
+for a particular purpose at the discretion of our Board of Directors, subject to compliance with applicable
+law. Also, Board of Directors has discretion in how it may use a portion of the Net Proceeds of the Issue.
+Subject to compliance with applicable laws, if the actual utilization towards any of the Objects, as set out
+above, is lower than the proposed deployment, such balance will be used towards funding any other
+Object including general corporate purposes, provided that the total amount to be utilized towards
+general corporate purposes will not exceed 25% of the Gross Proceeds, in accordance with the SEBI ICDR
+Regulations. In case of a shortfall in raising requisite capital from Net Proceeds towards meeting the
+Objects of the Issue, we may explore a range of options including utilizing our internal accruals, any
+additional equity or debt arrangements or both. Such alternate arrangements would be available to fund
+any such shortfalls. Further, in case of any variations in the actual utilization of funds earmarked for the
+purposes set forth above, increased fund requirements for a particular purpose may be financed by
+surplus funds, including from internal accruals, if any, available in respect of the other purposes for which
+funds are being raised in the Issue. To the extent our Company is unable to utilize any portion of the Net
+Proceeds towards the aforementioned Objects, per the estimated schedule of deployment specified
+above, our Company shall deploy the Net Proceeds in subsequent year i.e. 2028-29 towards the
+aforementioned Objects, in accordance with applicable law. Our Company may also utilize any portion of
+the Net Proceeds, towards the aforementioned Objects of the Issue, ahead of the estimated schedule of
+deployment specified above.
+MEANS OF FINANCE
+The fund requirements for all the Objects of the Issue are proposed to be entirely funded from the Net
+Proceeds. Accordingly, we confirm that there is no requirement for us to make firm arrangements of
+finance under Regulation 7(1)(e) the SEBI ICDR Regulations through verifiable means towards at least 75%
+of the stated means of finance, excluding the amount to be raised through the Issue or through existing
+identifiable internal accruals.
+  114
+DETAILS OF THE OBJECTS OF THE ISSUE
+1. Funding the working capital requirements of our Company
+  Our Company proposes to utilise ₹ 12,000.00 Lakhs towards funding our incremental working capital
+  requirement.
+  Our Company has considered the Restated Standalone Financial Statements for the purpose of
+  assessing its existing working capital requirements and corresponding funding arrangements, as
+  Restated Standalone Financial Information includes certain restatements and adjustments which have
+  an impact on the audited standalone financial statements and, accordingly, have been appropriately
+  reflected therein.
+  Accordingly, our working capital requirements and the sources of funding thereof, based on our
+  Restated Standalone Financial Information for the stub period ended on June 30, 2026, and fiscal years
+  ended on March 31, 2026, 2025 and 2024, are set forth below:
+  (₹ in Lakhs)
+  S. No.  Particulars  June 30, 2026 March 31, 2026 March 31, 2025 March 31, 2024
+  A.  Current Assets
+  1.  Inventory
+  − Raw Materials  1,238.79  1,016.62  1,120.37  966.50
+  − Finished Goods  147.95  151.92  72.25  437.98
+  − Work In Progress  -  -  389.95  424.32
+  − Consumables, Stores, Spares and
+  5,178.95  4,925.00  4,732.81  2,516.72
+  Others
+  − Stock Trading Material  3.90  -  1.04  -
+  2.  Trade Receivables  8,145.78  8,563.13  5,117.24  4,672.53
+  3.  Advance to Suppliers  323.98  268.33  237.67  161.05
+  4.  Earmarked FDR (Kept as margin in BG Limit)  300.08  281.45  368.02  342.38
+  5.  Other Financial and current assets  8,220.52  7,996.15  8,083.04  6,178.89
+  Total Current Assets  23,559.95  23,202.60  20,122.39  15,700.37
+  B.  Current Liabilities
+  1.  Trade payables  7,154.60  7,159.17  5,896.38  4,563.85
+  2.  Advance from Customers  818.13  831.97  1,029.61  855.44
+  3.  Other Financial and Current Liabilities  4,601.93  4,725.02  4,790.69  3,004.21
+  Total Current Liabilities  12,574.66  12,716.16  11,716.68  8,423.50
+  C.  Working Capital Gap  10,985.29  10,486.44  8,405.71  7,276.87
+  D.  Working Capital Turnover Ratio  1.28  5.29  5.54  5.25
+  E.  Means of Finance
+  1.  External Borrowings
+  − Working Capital Limits from Banks and
+  6,664.79  6,091.55  6,722.73  5,867.76
+  financial Institutions
+  − Short term borrowings from others
+  -  -  18.81  441.33
+  (Unsecured loans)
+  2.  Net worth  4,320.50  4,394.89  1,664.17  967.78
+  Total  10,985.29  10,486.44  8,405.71  7,276.87
+  Note: Pursuant to the certificate dated November 05, 2026, from our statutory and peer review auditor, M/s Keyur Shah &
+  Associates, Chartered Accountants vide UDIN No. 26181329ATCITF8873.
+  Note: While calculating the Working Capital Gap as above, all liquid and freely available funds such as cash, cash equivalents
+  and other bank balances (including fixed deposits) have been excluded except Fixed Deposits earmarked as margin for bank
+  guarantee limits.
+  Reasons for the increase in working capital requirements of the company during the stub period
+  ended on June 30, 2026 and last 3 fiscal years:
+  Our company is engaged in the business of providing Industrial Operations and Maintenance (O&M)
+  services, Industrial Project Execution services, and Metal Fabrication solutions to a diversified base
+  115
+of clients across sectors such as metals, cement, ports, and engineering/OEMs. Our integrated service
+offerings enable us to support clients across multiple stages of the industrial asset lifecycle, including
+plant operations, equipment maintenance, fabrication of engineering components, and execution of
+installation, modification, and expansion projects. Our O&M segment constitutes a significant
+portion of our operations and involves deployment of technical manpower, utilization of
+consumables and spares, and maintenance of plant machinery to ensure operational efficiency and
+reliability. We also undertake port-related O&M activities, including cargo handling and vessel
+loading and unloading. Our project execution services include mechanical erection, installation,
+alignment, and commissioning of plant equipment and structural systems, while our fabrication
+vertical focuses on manufacturing structural steel components and assemblies for industrial and OEM
+clients.
+Our working capital requirements are primarily driven by procurement and maintenance of
+inventory, including consumables, spares, and fabrication materials, as well as receivables from our
+O&M and project orders. Additional factors influencing our working capital include retention
+receivables, tax deducted at source (TDS), unbilled revenues, and operational liabilities arising from
+manpower deployment across multiple sites. We typically finance these requirements through a
+combination of fund-based and non-fund-based banking facilities. Further, we are required to furnish
+bank guarantees, including performance and project-related guarantees, which necessitate
+maintaining margin money with banks in the form of deposits or [...truncated]
+
+===== BASIS OF OFFER PRICE =====
+[not found]
+
+===== OUR BUSINESS =====
+OUR BUSINESS
+Some of the information in the following discussion, including information with respect to our plans and
+strategies, contains forward-looking statements that involve risks and uncertainties. You should read
+“Forward-Looking Statements” beginning on page 24 for a discussion of the risks and uncertainties
+related to those statements. Our actual results may differ materially from those expressed in or implied
+by these forward-looking statements. Also read “Risk Factors”, “Objects of the Issue”, “Restated
+Consolidated Financial Information “and “Management’s Discussion and Analysis of Financial
+Condition and Results of Operations” beginning on pages 26, 113, 264 and 390 respectively for a
+discussion of certain factors that may affect our business, financial condition, or results of operations.
+Our Company’s Financial Year commences on April 1 and ends on March 31 of the immediately
+subsequent year, and references to a particular Financial Year are to the 12 months ended on March 31
+of that particular year. In this Red Herring Prospectus, we have included various operational and financial
+performance indicators, some of which may not be derived from our Restated Consolidated Financial
+Information. The manner in which such operational and financial performance indicators are calculated
+and presented, along with the assumptions and estimates used in such calculations, may vary from those
+used by other companies in India and other jurisdictions. Investors are accordingly cautioned against
+placing undue reliance on such information when making an investment decision. They should consult
+their own advisors and evaluate such information in the context of the Restated Consolidated Financial
+Information and other information relating to our business and operations included in this Red Herring
+Prospectus.
+Unless otherwise indicated or the context otherwise requires, the financial information included herein is
+derived from the Restated Consolidated Financial Information for the period ended on June 30, 2026 and
+Fiscal Years ended on March 31, 2026, 2025 and 2024, included in this Red Herring Prospectus. For further
+information, see the chapter titled “Restated Consolidated Financial Information” beginning on page
+264.
+Unless otherwise indicated or the context otherwise requires, in this section, references to “we” or “us”
+mean Monomark Engineering (India) Limited, and its Subsidiary and reference to “Company” or “our
+Company” mean “Monomark Engineering (India) Limited”.
+The industry-related information contained in this section is derived from the D&B Report titled “Industry
+Report on Industrial Operations & Maintenance (O&M), Metal Fabrication and Project Execution
+Services” dated September 14, 2026, which is commissioned and paid for by our Company in connection
+with the Issue available at https://www.monomark.co.in/investors-2/. For further details and risks in
+relation to the commissioned report, see “Risk Factors No. 51 – Certain sections of this Red Herring
+Prospectus disclose information from the industry report which has been commissioned and paid for
+by our Company only for the purposes of the Issue is available at
+https://www.monomark.co.in/investors-2/ and any reliance on such information for making an
+investment decision in the Issue is subject to inherent risks” on page 67.
+OVERVIEW
+Monomark Engineering (India) Limited ("Monomark" or "MEIL") is engaged in the business of providing
+Industrial Operations and Maintenance (“O&M”) services, Metal Fabrication solutions and Industrial
+Project Execution services to a diversified base of industrial clients across multiple sectors like metals,
+cement, ports, engineering/OEMs to a wide range of industrial and infrastructure clients. Through our
+integrated service offerings, we support our clients in maintaining operational efficiency, reducing
+downtime, ensuring reliability of industrial assets and executing engineering and infrastructure projects
+in accordance with their technical and operational requirements.
+Our ability to provide O&M services, Metal Fabrication solutions and Industrial Project Execution
+capabilities enable us to support industrial clients across multiple stages of the industrial asset lifecycle.
+Through our diversified offerings, we assist our clients in managing plant operations and production
+  185
+processes, undertaking maintenance of industrial equipment, fabricating engineering components, and
+executing installation, modification and expansion projects. The combination of these services enables
+coordinated execution of operational and project-related requirements, reduces operational
+complexities and minimizes reliance on multiple service providers, thereby supporting efficient
+implementation of engineering and operational activities at industrial facilities. This integrated model
+reduces client dependence on multiple vendors, lowers coordination costs and enables deeper, longer-
+lasting partnerships.
+Our business operations broadly comprise the following segments:
+  I. Industrial Operations and Maintenance (“O&M”) services,
+ II. Metal Fabrication solutions, and
+III. Industrial Project Execution services.
+Through these services, we cater to various lifecycle requirements of industrial facilities, ranging from
+plant operations and maintenance to fabrication and installation of engineering equipment and
+infrastructure.
+INDUSTRIAL OPERATIONS AND MAINTENANCE (“O&M”) SERVICES
+Our O&M services involve providing operational and technical support for the functioning of industrial
+plants, production processes and mechanical systems at client facilities. These services are designed to
+assist our clients in maintaining operational continuity, reducing equipment downtime and ensuring
+efficient utilization of plant infrastructure and industrial assets.
+A significant portion of our O&M engagements involves production support and operations
+management services, under which we undertake operational responsibilities relating to specific
+production processes or plant sections at the client’s facility. Such engagements are typically governed
+by contractual arrangements in which the scope of services, operational parameters and performance
+expectations are defined through an agreed bill of quantities (“BOQ”), KPI sheet or similar contractual
+framework.
+Under this model, the client generally undertakes the capital expenditure relating to plant infrastructure,
+machinery and equipment, and provides the raw materials required for the production process. The
+production activities at the facility are overseen and managed by our technical teams, who are
+responsible for operating plant machinery and executing the relevant production processes at the
+client’s facility in accordance with agreed technical specifications and operational parameters. This
+includes operating the relevant equipment, managing production activities and carrying out the
+production processes necessary for manufacturing the required output.
+The commercial terms of these arrangements generally include compensation linked to agreed
+operational parameters, which may include a minimum production quantity threshold. In addition to
+the base compensation linked to the agreed scope of services and minimum production levels, additional
+payments may be payable where the actual production output exceeds the agreed quantity levels.
+Through this engagement structure, we undertake production operations on behalf of our clients while
+enabling efficient utilization of their plant infrastructure and equipment.
+In addition to production support services, we also undertake plant operations and maintenance
+assignments, which involve providing technical services relating to monitoring, maintenance and
+operational support for industrial equipment and mechanical systems. The scope of such engagements
+may include preventive maintenance, breakdown maintenance, equipment monitoring and other
+technical activities aimed at ensuring the reliable functioning of plant machinery and engineering
+infrastructure.
+The details of the number of O&M projects undertaken by our company in the last 5 years and number
+of ongoing O&M projects as on the date of the RHP is as under:
+  186
+  Particulars  Number of Projects
+  O&M Projects completed  14
+  Ongoing O&M Projects  21
+  Pursuant to CA certificate dated November 05, 2026 received from our statutory and peer review auditor, M/s Keyur Shah &
+  Associates, Chartered Accountants vide UDIN No. 26181329NJTCAO1855 and 26181329VHEGMF9786.
+ The details of the revenue bifurcation between the Production services and plant operations and
+ maintenance under the broad head ‘Industrial Operations and Maintenance’ for the prior three fiscals
+ is as under:
+  (Amount in Lakhs)
+  For the period ended on
+  Particulars  FY 2026  FY 2025  FY 2024
+  June 30, 2026
+  Revenue generated from Production
+  8,436.87  28,601.15  22,093.75  16,738.97
+  linked O&M services
+  Revenue generated from non-
+  4,337.55  16,429.59  9,192.15  8,235.46
+  production linked O&M services
+  Total Revenue generated from O&M
+  12,774.42  45,030.74  31,285.90  24,974.43
+  services
+ Pursuant to the certificate dated November 04, 2026, received from our statutory and peer review auditor, M/s Keyur Shah & Associates,
+ Chartered Accountants vide UDIN No. 26181329RCURWR4835.
+METAL FABRICATION SOLUTIONS
+We are metal fabricators and are engaged in the process of cutting, welding, bending and shaping the
+raw materials into pre-engineered structural components and the subsequent assembly and installation
+of these components at the site of our clients. Our company manufactures and supply these fabricated
+metal components and structures for industrial and engineering applications. Our dedicated fabrication
+facility is located at Plot 331-338, Village-Samrathpura, Near Singhpur Toll Plaza, Kapasan, Chittorgarh,
+Rajasthan- 312207 with an annual installed capacity of 4,000 MT. Our fabrication activities primarily
+involve the production of sheet metal fabricated machine components and other customized fabricated
+products based on client specifications and engineering drawings. These fabricated components are
+supplied to original equipment manufacturers (“OEMs”) and other industrial customers for use in
+machinery, plant equipment and industrial infrastructure.
+INDUSTRIAL PROJECT EXECUTION SERVICES
+In Industrial Project Execution services, our Company provides engineering, procurement and
+construction (EPC) services involving the conversion of engineering designs and procured components
+into fully functional industrial systems through structured construction and installation processes. The
+scope of services includes heavy machinery erection, piping works, structural steel assembly, equipment
+installation and integration with civil and electrical systems. This segment supports the execution of
+projects in accordance with technical specifications, stipulated timeline and budgets, thereby supporting
+the efficiency, reliability and productivity of industrial operations.
+Our Company operates under two execution models within this segment:
+(a) Complete EPC Contracts:
+  Under this model, we undertake the entire lifecycle of a project on an end-to-end basis. This includes:
+•  Engineering: Preparation of plant designs and manufacturing site layouts aimed at optimizing
+  operational efficiency, minimizing downtime and ensuring cost-effective project execution.
+•  Procurement: Upon client approval of the engineering designs, our Company undertakes
+  procurement of the required materials, components and equipment necessary for the construction
+  of the facility.
+•  Construction: We execute the construction activities in accordance with the approved designs and
+  client requirements.
+  187
+•  Erection, Installation and Commissioning: After completion of construction, we undertake erection
+  and installation of machinery at the site, including assembly, equipment installation and connection
+  to utilities such as water and power. Thereafter we subsequently conduct testing and commissioning
+  of the plant, which includes testing of individual sections, trial runs of machinery, and verification of
+  utility connections. Upon successful completion of testing and client approval, the project is
+  considered complete.
+(b) On-Site Fabrication, Erection, Installation and Commissioning (FEIC):
+  Under this model, we undertake specific execution activities rather than the entire EPC scope. We
+  are primarily responsible for on-site fabrication of metal components and the erection, installation,
+  and commissioning (FIEC) of machinery and plant equipment. The engineering design and
+  procurement activities are carried out by the client or other contractors. Once the machinery
+  supplied by original equipment manufacturers (OEMs) is delivered to the project site, our Company
+  performs the erection and installation of the equipment along with the allied structures and other
+  fabricated components. This is followed by testing and commissioning activities, including system
+  testing, machinery trial runs, and verification of power and water connections. Upon successful
+  testing and client approval, the project execution is completed.
+  Our project execution services are undertaken under different engagement models depending on
+  client requirements. These may include comprehensive project execution arrangements involving
+  engineering design, procurement of materials and construction activities, as well as contracts focused
+  on on-site fabrication, erection, installation and commissioning (FEIC) of equipment and plant
+  systems.
+  The segment-wise revenue breakup of our company based on Restated Consolidated Financial
+  Information is as follows:
+  (Amount in Lakhs)
+  For the period ended  For the year ended For the year ended For the year ended
+  on June 30, 2026  March 31, 2026  March 31, 2025  March 31, 2024
+  Particulars  % of  % of  % of  % of
+  Amount  Total Amount  Total  Amount  Total  Amount  Total
+  Revenue  Revenue  Revenue  Revenue
+  Industrial  Operations  and
+  12,774.42  89.76% 45,030.74 80.14% 31,285.90 65.86% 24,974.43 64.06%
+  Management (O&M) Services
+  Industrial Project Execution  1,453.21  10.21% 9,487.83 16.89% 12,914.86 27.19% 11,293.89 28.97%
+  Metal Fabrication  4.10  0.03% 1,305.12 2.32% 3,213.20 6.76% 2,717.63 6.97%
+  Others*  -  -  365.20  0.65%  89.23  0.19%  -  -
+  Total  14,231.73  100.00% 56,188.89 100.00% 47,503.19 100.00% 38,985.95 100.00%
+  *Others include Job Work and Trading Sales
+  Pursuant to the CA certificate dated November 04, 2026, received from our statutory and peer review auditor, M/s Keyur Shah & Associates,
+  Chartered Accountants vide UDIN No. 26181329KSXXVQ1631.
+In addition to our technical workforce and engineering capabilities, we own and operate a large fleet of
+industrial equipment and vehicles which supports the execution of our O&M services as well as Industrial
+Project Execution activities. Our equipment fleet includes machinery such as hydras, trucks, forklifts,
+cranes, excavators, loaders, and other specialized material handling and construction equipment
+operated by trained personnel. The details of such industrial equipment and vehicles owned by our
+company as on September 30, 2026, are as under:
+  Vehicle name  Count
+  Forklifts  51
+  Trucks  32
+  Excavators  24
+  Cranes  20
+  Commercial Vehicles  24
+  HYDRA Machines  20
+  Staff Cars  15
+  Bulldozers  8
+  Loaders  8
+  Cars  3
+  188
+  Vehicle name  Count
+ Others  27
+  Grand Total  232
+The availability of these equipment enables us to undertake a wide range of operational, maintenance
+and project execution activities in a timely and efficient manner, while maintaining greater control over
+operational scheduling and site-level logistics. This in-house equipment capability enhances our ability
+to mobilize resources quickly, improves productivity at project locations and reduces dependency on
+third-party equipment providers. The combination of our trained team and owned equipment fleet
+allows us to deliver reliable and efficient services to our clients and has contributed to the development
+of long-term client relationships across multiple industrial sectors.
+There are no leased/rented vehicles included in the list of 232 equipment listed above, however we do
+hire similar types of machines or equipment separately on each project site on need basis when our
+owned equipment does not suffice and there is requirement of more machines at the project site. The
+hired machines and equipment generally include multiple high value vehicles like hydra machines,
+cranes, dumpers and loaders etc. For this we have incurred machine and equipment hire charges
+aggregating to ₹ 277.80 lakhs, ₹ 1,565.20 Lakhs, ₹ 1,496.10 Lakhs and ₹ 1,850.04 Lakhs in the period
+ended on June 30, 2026 and Fiscal 2026, 2025 and 2024 respectively.
+Through our diversified service offerings, we aim to support industrial clients throughout various stages
+of their operational and project lifecycle requirements. Our services are deployed across multiple
+industrial sectors which includes cement, metals, ports and industrial engineering/OEMs, enabling us to
+cater to a wide range of operational and engineering needs of our customers. The revenue generated
+through each industry by our company based on Restated Consolidated Financial Information is as
+under:
+  (Amount in Lakhs)
+  For the period ended on  For the Fiscal Year ended on March 31,
+  June 30, 2026  2026  2025  2024
+  Industry  % of
+  % of total  % of total  % of total
+  Amount  Amount  Amount  total  Amount
+  revenue  revenue  revenue
+  revenue
+  Metal Industry  12,694.56  89.20%  47,022.35  83.68%  36,565.58  76.98% 27,235.02 69.86%
+  Ports  860.63  6.05%  2,242.60  3.99%  205.96  0.43%  -  0.00%
+ Cement Industry  635.53  4.46%  5,060.46  9.01%  6,590.26  13.87% 7,762.90  19.91%
+ Engineering/OEM  41.01  0.29%  1,802.64  3.21%  4,118.24  8.67%  3,988.03  10.23%
+  Miscellaneous-
+  -  -  60.84  0.11%  23.15  0.05%  -  0.00%
+  Scrap Sales*
+  TOTAL  14,231.73  100.00%  56,188.89  100.00%  47,503.19  100.00% 38,985.95  100.00%
+*Miscellaneous- Scrap Sales include sales made to oil and lubricant trading companies.
+Pursuant the certificate dated November 04, 2026, received from our Statutory and Peer Review auditor, M/s Keyur Shah & Associates, Chartered
+Accountants vide UDIN No. 26181329KSXXVQ1631.
+As of September 30, 2026, we had a total of 28 ongoing projects across our business verticals,
+comprising 21 O&M projects and 7 Industrial Execution projects. Over the past five years, we have
+successfully executed 27 projects for our clients, including 14 O&M projects, 7 Industrial Execution
+projects and also includes 6 projects which are completed but certification is pending, demonstrating
+our consistent project delivery capabilities and operational expertise across diverse sectors.
+As on September 30, 2026, our Company has a running unexecuted order book of ₹ 1,76,192.16 lakhs.
+The details of our Order book, amount already billed and order book yet to be executed is as under:
+  (Amount in lakhs)
+  Particulars  Total Order Value  Amount Already Billed#$  Amount Pending#$*
+ O&M Services  2,08,948.07  39,300.80  1,69,647.27
+ Industrial Projects  16,551.61  10,006.72  6,544.89
+ Total Value  2,25,499.68  49,307.52  1,76,192.16
+#Till September 30, 2026
+$Exclusive of GST
+*The amount pending disclosed above has been computed as the difference between the total order value and the amount
+already billed for the respective categories. This amount represents the unbilled portion as per available records. We hereby
+  189
+clarify that we have not verified or certified the certainty, timing or actual realization of such pending amounts and no assurance
+is provided that the same will be billed or materialized in future.
+Note: Pursuant to the certificate dated November 05, 2026, received from our Statutory and Peer Review auditor, M/s Keyur
+Shah & Associates, Chartered Accountants vide UDIN No. 26181329NJTCAO1855.
+The order book gives us clear visibility of our future revenue and supports our growth plans. We focus
+on maintaining appropriate standards of quality, safety and operational efficiency in the execution of
+our services and projects. Our business approach is centred on developing long-term relationships with
+our clients through the delivery of engineering services and operational solutions aligned with their
+technical and operational requirements.
+The certifications and recognitions awarded to our company include the following:
+S. No.  Certification  Validity
+  Certificate of ISO 9001:2015 for the Quality Management System applicable to Fabrication of Plant
+  1.  May 26, 2028
+  Equipment, Projects Erection & Commissioning and Operation & Maintenance Services.
+  Certificate of ISO 14001:2015 for the Environmental Management System applicable to Fabrication
+  2.  October 28, 2028
+  of Plant Equipment, Projects Erection and Commissioning and Operation & Maintenance Services.
+  Certificate of ISO 45001: 2018 for the Occupational Health and Safety Management System
+  3.  applicable to Fabrication of Plant Equipment, Projects Erection and Commissioning and Operation October 28, 2028
+  & Maintenance Services.
+Our experience includes engagements with large industrial organizations across core sectors. These
+engagements reflect our experience in undertaking engineering services, plant operations and
+maintenance assignments for large industrial facilities. The details of projects completed, and revenue
+generated from these clients across the core industrial sectors for the period ended on June 30, 2026
+and for the fiscal year ended on March 31, 2026, 2025 and 2024 is as follows:
+  (Amount in lakhs)
+  For the period ended  For the Fiscal Year ended on March 31,
+ S. No.  Name of the Client
+  on June 30, 2026  2026  2025  2024
+  1.  Vedanta Group of Companies  11,858.27  43,753.42  31,018.60  25,204.52
+  2.  Adani Group of Companies  1,830.8 [...truncated]
+
+===== OUR PROMOTERS AND PROMOTER GROUP =====
+OUR PROMOTERS AND PROMOTER GROUP
+OUR PROMOTERS
+The Promoters of our Company are:
+ 1.  Mr. Narendra Chordia;
+ 2.  Mrs. Meena Chordia;
+ 3.  Mr. Nitesh Chordia;
+ 4.  Mr. Gaurav Chordia; and
+ 5.  Ms. Kirti
+As on the date of this Red Herring Prospectus, our Promoters Narendra Chordia, Meena Chordia, Nitesh
+Chordia and Gaurav Chordia together hold 6,30,88,200 Equity Shares of face value of ₹ 10 each,
+representing 91.37% of the issued, subscribed and paid-up Equity Share capital of our Company.
+For details on build-up of the shareholding of our Promoters in our Company, refer the section titled
+“Capital Structure – Build-up of Equity Shareholding of our Promoters in our Company”, “Capital
+Structure – Details of Promoter’s contribution and lock-in” on pages 107 and 109 respectively. Further,
+for details on shareholding of the members of our Promoter Group in our Company, refer the section
+titled “Capital Structure – Equity shareholding of our Promoters and Promoter Group” on page 108.
+DETAILS OF OUR PROMOTERS
+NARENDRA CHORDIA:
+  Mr. Narendra Chordia, aged 65 years, is one of the Promoter and Chairman and
+  Managing Director of our Company. For the complete profile of Mr. Narendra Chordia
+  along with the details of his date of birth, personal address, educational
+  qualifications, professional experience, position / posts held in the past, directorships
+  held and business and financial activities, other directorships, other ventures and
+  special achievements and relationship with other Promoters of our Company refer
+  “Our Management – Board of Directors” beginning on page 235.
+  His Permanent Account Number is ABCPJ8610J.
+ As on date of this Red Herring Prospectus, Narendra Chordia holds 3,15,00,000 Equity Shares of face value of ₹
+ 10 each, representing 45.62% of the pre-issued, subscribed and paid-up equity share capital of our Company.
+MEENA CHORDIA:
+  Mrs. Meena Chordia, aged 59 years, is one of the Promoter and Whole-Time Director
+  of our Company. For the complete profile of Mrs. Meena Chordia along with the details
+  of her date of birth, personal address, educational qualifications, professional
+  experience, position / posts held in the past, directorships held, and business and
+  financial activities, other directorships, other ventures and special achievements and
+  relationship with other Promoters of our Company refer “Our Management – Board of
+  Directors” beginning on page 235.
+  Her Permanent Account Number is AAPPC9163M.
+ As on date of this Red Herring Prospectus, Meena Chordia holds 2,10,00,000 Equity Shares of face value of ₹ 10
+ each, representing 30.42% of the pre- issued, subscribed and paid-up equity share capital of our Company.
+  256
+NITESH CHORDIA:
+  Mr. Nitesh Chordia, aged 36 years, is one of the Promoter and Whole-Time Director
+  of our Company. For the complete profile of Mr. Nitesh Chordia along with the details
+  of his date of birth, personal address, educational qualifications, professional
+  experience, position / posts held in the past, directorships held and business and
+  financial activities, other directorships, other ventures and special achievements and
+  relationship with other Promoters of our Company refer “Our Management – Board
+  of Directors” beginning on page 235.
+  His Permanent Account Number is AJLPC4789N.
+ As on date of this Red Herring Prospectus, Nitesh Chordia holds 59,68,200 Equity Shares of face value of ₹ 10
+ each, representing 8.64% of the pre-issued, subscribed and paid-up equity share capital of our Company.
+GAURAV CHORDIA:
+  Mr. Gaurav Chordia, aged 32 years, is one of the Promoter and Whole-Time Director
+  of our Company. For the complete profile of Mr. Gaurav Chordia along with the details
+  of his date of birth, personal address, educational qualifications, professional
+  experience, position / posts held in the past, directorships held and business and
+  financial activities, other directorships, other ventures and special achievements and
+  relationship with other Promoters of our Company refer “Our Management – Board
+  of Directors” beginning on page 235.
+  His Permanent Account Number is AVKPC1449C.
+ As on date of this Red Herring Prospectus, Gaurav Chordia holds 46,20,000 Equity Shares of face value of ₹ 10
+ each, representing 6.69% of the pre-issued, subscribed and paid-up equity share capital of our Company.
+KIRTI:
+  Ms. Kirti, aged 32 years, is the Promoter and Non-Executive Director of our Company.
+  For the complete profile of Ms. Kirti along with the details of her date of birth,
+  personal address, educational qualifications, professional experience, position /
+  posts held in the past, directorships held, and business and financial activities, other
+  directorships, other ventures and special achievements and relationship with other
+  Promoters of our Company refer see “Our Management – Board of Directors”
+  beginning on page 235.
+  Her Permanent Account Number is EGEPK9059R.
+ As on date of this Red Herring Prospectus, Ms. Kirti holds Nil Equity Shares, representing 0.00% of the pre-issue
+ issued, subscribed and paid-up equity share capital of our Company.
+DECLARATION
+Our Company confirms that the permanent account number, bank account number(s), passport number,
+Aadhar card number and driving license number of our Promoters, shall be submitted to the Stock
+Exchanges at the time of filing of the Draft Red Herring Prospectus.
+Further our Company does not have any corporate promoters as on the date of filing of this Red Herring
+Prospectus.
+CHANGE IN THE CONTROL OF OUR COMPANY
+Mr. Narendra Chordia and Mrs. Meena Chordia are the original promoters of our Company. Further Mr.
+Nitesh Chordia and Mr. Gaurav Chordia joined our Company as the Promoter and Director in 2018 and
+2022 respectively. Furthermore, Ms. Kirti joined our Company as Director in 2025 and designated as the
+  257
+Promoter of our Company in 2026. Except for our Promoters no other shareholders exercise control over
+our Company.
+Further except mentioned above there has been no change in control of our Company during the last
+five years immediately preceding the date of this Red Herring Prospectus.
+INTERESTS OF PROMOTERS
+Our Promoters are interested in our Company to the extent that (i) they are the promoters of our
+Company, (ii) to the extent of their respective direct and indirect shareholdings in our Company (iii) their
+directorship in our Company (iv) the dividends payable and other distribution in respect of their
+respective shareholdings in our Company, from time to time. For further details of shareholding of our
+Promoters in our Company, refer “Capital Structure – Build-up of Equity Shareholding of our Promoters
+in our Company” and “Capital Structure – Equity shareholding of our Promoters and Promoter Group”
+on pages 108 and 109 respectively.
+Additionally, our Promoters may be interested in transactions entered into by our Company with other
+entities (i) in which our Promoters hold shares, or (ii) controlled by our Promoters.
+For further details of interest of our Promoters in our company, refer “Restated Consolidated Financial
+Information Note 47 – Related Party Transactions” on page 355-360.
+Our Promoters may also be deemed to be interested to the extent of the remuneration, benefits and
+reimbursement of expenses payable to them if any, in their capacity as the Managing Director and
+Whole-Time Director on our Board. For further details refer “Our Management” beginning on page 235.
+Except Narendra Chordia, Meena Chordia, Nitesh Chordia, Gaurav Chordia and Kirti who are the
+Promoters and Directors of our Company holding 6,30,88,200 Equity Shares of face value of ₹ 10 each
+aggregating to 91.37% of the issued, subscribed and paid-up Equity Share capital of our Company, none
+of our other Directors or Group Company (ies) have any interest in the promotion of our Company.
+Our Promoters are not interested as a member of a firm or company and no sum has been paid, or
+agreed to be paid to our Promoters or to any firm o [...truncated]
+
+===== RISK FACTORS =====
+SECTION II - RISK FACTORS
+An investment in Equity Shares involves a high degree of risk. Prospective investors should carefully
+consider all the information in this Red Herring Prospectus, including the risks and uncertainties described
+below, before evaluating our business and making an investment in Equity Shares pursuant to the Issue.
+This section should be read in conjunction with “Industry Overview”, “Our Business”, “Restated
+Consolidated Financial Information” and “Management’s Discussion and Analysis of Financial
+Condition and Results of Operations”, beginning on pages 147, 185, 264, and 390, respectively, before
+making an investment decision in relation to the Equity Shares. For capitalized terms used but not defined
+herein, see “Definitions and Abbreviations” beginning on page 2.
+The risks and uncertainties described in this section are not the only risks that are relevant to us, the
+Equity Shares or the industry and sector in which we operate. Additional risks and uncertainties not
+currently known to us or that we currently believe to be immaterial may also have an adverse effect on
+our business, results of operations, cash flows and financial condition. If any of the following risks or other
+risks that are not currently known or are now deemed immaterial actually occur, our business, results of
+operations, cash flows and financial condition could be adversely affected, the trading price of the Equity
+Shares could decline, and investors may lose all or part of their investment. The financial and other related
+implications of risks concerned, wherever quantifiable, have been disclosed in the risk factors described
+below. However, there are certain risk factors where such implications are not quantifiable, and hence
+any quantification of the underlying risks has not been disclosed in such risk factors.
+In making an investment decision, prospective investors must rely on their own examination of our
+Company and the terms of the Issue, including the merits and risks involved. Prospective investors should
+consult their tax, financial and legal advisors about the particular consequences they may encounter from
+investing in Equity Shares.
+This Red Herring Prospectus also contains certain forward-looking statements that involve risks,
+assumptions, estimates and uncertainties. Our actual results could differ from those anticipated in these
+forward-looking statements as a result of certain factors, including the considerations described below
+and elsewhere in this Red Herring Prospectus. For further information, see chapter titled “Forward-
+Looking Statements” beginning on page 24.
+Unless otherwise indicated or the context requires otherwise, the financial information included herein is
+based on our Restated Consolidated Financial Information included in this Red Herring Prospectus. For
+further information, see “Restated Consolidated Financial Information” beginning on page 264. Our
+financial or fiscal year ends on March 31 of each relevant year. Accordingly, references to a “Fiscal” or
+“fiscal year” are to the 12-month period ended March 31 of the relevant year. Unless otherwise indicated,
+industry and market data used in this section have been derived from the report titled “Industry Report
+on Industrial Operations & Maintenance (O&M), Metal Fabrication and Project Execution Services”
+dated September 14, 2026 (“D&B Report”) prepared and issued by Dun and Bradstreet Information
+Services India Private Limited and exclusively commissioned and paid for by us in connection with the
+Issue. Dun & Bradstreet is an independent agency which has no relationship with our Company, our
+Promoter or any of our directors or KMPs or SMPs. The data included herein includes excerpts from the
+D&B Report and may have been re-ordered by us for the purposes of presentation. There are no parts,
+data or information (which may be relevant for the proposed Issue), that have been left out or changed
+in any manner. Unless otherwise indicated, financial, operational, industry and other related information
+derived from the D&B Report and included herein with respect to any particular year refers to such
+information for the relevant calendar year. A copy of the D&B Report is available on the website of our
+Company at https://www.monomark.co.in/investors-2/ until the Bid/Issue Closing Date.
+INTERNAL RISKS
+RISKS RELATING TO OUR BUSINESS
+1. We are dependent on and derive 41.31%, 35.35%, 35.74% and 42.01% of our revenue for the period
+  ended on June 30, 2026, and for the Fiscal Years ended on March 31, 2026, 2025 and 2024 from our
+  26
+single largest customer namely Hindustan Zinc Limited (HZL) and further we derive 91.37%, 79.30%,
+75.08% and 75.44% of our revenue from operations from our top 5 customers for the period ended
+on June 30, 2026 and for the Fiscal Years ended on March 31, 2026, 2025 and 2024 respectively. The
+loss of one or more such customers, deterioration of their financial condition, any cancellation or
+delay in execution of contracts or purchase orders or our inability to meet their expectations could
+adversely affect our business, results of operations and financial condition.
+We are dependent on certain of our key customers. The details of contribution of largest customer,
+top five and top ten customers to our total revenue from operations for the period ended on June 30,
+2026 and for the Fiscal years ended on March 31, 2026, 2025 and 2024 based on Restated
+Consolidated Financial Information have been set out below:
+  (Amount in Lakhs)
+  For the period ended on  For the Fiscal Year ended on March 31,
+  June 30, 2026  2026  2025  2024
+  Particulars  % of revenue  % of revenue  % of revenue  % of revenue
+  Amount  from  Amount  from  Amount  from  Amount  from
+  operations  operations  operations  operations
+ Hindustan Zinc
+  5,878.65  41.31%  19,865.30  35.35%  16,977.97  35.74%  16,380.45  42.01%
+ Limited
+ Top 5 Customers  13,003.81  91.37%  44,559.92  79.30%  35,665.96  75.08%  29,413.26  75.44%
+ Top  10
+  13,826.03  97.15%  51,250.97  91.21%  41,642.43  87.67%  33,883.35  86.91%
+ Customers
+Pursuant to certificate dated November 04, 2026, received from our statutory and peer review auditor, M/s Keyur Shah & Associates,
+Chartered Accountants vide UDIN No. 26181329BLQWUK7997.
+Note: For the period ended on June 30, 2026, our top 10 customers are (i) Hindustan Zinc Limited, (ii) Vedanta Limited, (iii) Runaya Green
+Tech Private Limited, (iv) Kutch Copper Limited, (v) Adani Ports and SEZ Limited, (vi) Customer 6, (vii) Fujairah Gold FZC (viii) Hindustan
+Copper Limited, (ix) Adani International Container Terminal Pvt Ltd and (x) Customer 10. The name of certain customers is not included in
+the above table as consent for disclosure of customer’s name was not available.
+Our largest customer, Hindustan Zinc Limited (HZL), has been associated with us for approximately
+16 years, since 2010. We have entered operation and maintenance (“O&M”) and project execution
+contracts with HZL. The tenure of our O&M contracts generally ranges from two to five years, while
+project execution contracts generally have a tenure of one to two years. O&M contracts may initially
+be entered into for a period of up to five years and may be extended with the consent of the customer.
+While our long-standing relationship with HZL represents an established business relationship, there
+can be no assurance that such relationship will continue for the same duration, that existing contracts
+will be renewed or extended, or that future contracts will be awarded to us on the same or
+commercially acceptable terms.
+Further, our arrangements with HZL are primarily governed by contracts and purchase orders, and
+the level of business we derive from HZL is dependent on, among other things, its requirements,
+procurement policies, commercial considerations, production levels, operational requirements and
+applicable contractual arrangements. In particular, the production and utilization levels of HZL may
+affect the volumes of services required from us and, consequently, our revenue realization. Any
+reduction, suspension or interruption in HZL’s production or utilization levels, or any reduction in its
+requirements for our services, could adversely affect our revenue and capacity utilization.
+Although certain of our contracts with HZL provide for a minimum guaranteed volume, HZL has
+committed to provide a minimum of 90% of the annual volume allocated under the relevant
+arrangement (“Minimum Guaranteed Volume”). Volumes treated above the Minimum Guaranteed
+Volume are charged at the discounted rate applicable to volumes exceeding the minimum guarantee.
+However, the actual revenue realized by us remains dependent on the terms of the relevant
+contracts, the volume of work undertaken and the operational requirements and production levels
+of HZL. Accordingly, the Minimum Guaranteed Volume should not be construed as assurance of our
+future revenue at historical levels or that our overall revenue from HZL will not decline.
+Further, the pricing terms applicable to our contracts are generally specified in the respective
+contracts, and no other escalation is applicable to the contracted rates, with rates generally remaining
+fixed for the overall contract period, except where specific contractual escalation or adjustment
+mechanisms apply. Consequently, increases in our operating costs, including costs of manpower,
+  27
+  materials, transportation, fuel and other inputs, may not necessarily be fully recoverable from our
+  customers. Any inability to pass on increases in our costs could adversely affect our margins,
+  profitability and cash flow.
+  Our contracts with HZL may also be terminated in specified circumstances, including material breach
+  of contractual terms or the occurrence of specified events. In addition, HZL may terminate all or part
+  of the relevant agreement by giving one month's written notice without assigning any reason, or in
+  certain other circumstances specified in the relevant agreement. Therefore, notwithstanding the
+  long-standing nature of our relationship with HZL and the existence of Minimum Guaranteed Volume
+  provisions in certain contracts, there can be no assurance that HZL will not terminate a contract,
+  reduce the scope of work, or discontinue or reduce the volume of business awarded to us.
+  Our concentration of revenue also exposes us to customer credit risk. HZL currently has a credit rating
+  of “AAA/Stable/Reaffirmed” from CRISIL and “A1+/Reaffirmed” from ICRA. However, credit ratings
+  are subject to change and do not eliminate the risk of delayed payments or deterioration in a
+  customer's financial condition. Any material deterioration in the financial condition, creditworthiness
+  or liquidity of HZL or any of our other significant customers could result in delayed payments,
+  increased receivable balances, defaults or write-offs and could adversely affect our working capital,
+  liquidity and cash flows. Although we have not experienced any material instances of such events
+  during the past three Fiscal Years and stub period, there can be no assurance that such events will
+  not occur in the future.
+  Our relationships with our customers are also dependent on our ability to consistently meet their
+  expectations in terms of price competitiveness, timely and efficient delivery, operational
+  performance and consistent product and service quality. Our customers may cancel, reduce, delay or
+  postpone contracts or purchase orders, subject to the terms of the relevant contractual
+  arrangements, or may choose not to renew or extend existing contracts. We may also be required to
+  compete through tender processes or negotiate commercial terms for contract renewals. We may
+  not be successful in securing new contracts, renewing existing contracts or retaining existing levels of
+  business.
+  The loss of any one or more of our significant customers, including HZL, or any material reduction in
+  the volume or value of business from such customers, could arise from a variety of factors, including
+  termination or non-renewal of contracts, unsuccessful tender bids, failure to negotiate acceptable
+  commercial terms, disputes, changes in customer procurement policies, changes in customer
+  production or operational levels, reduced or delayed customer requirements, financial difficulties,
+  shutdowns, labour strikes or other work stoppages. Any such event could have a material adverse
+  effect on our business, results of operations, financial condition, cash flow and liquidity.
+2. We depend on metal and cement industry for a significant portion of our revenues. We derive
+  93.66%, 92.69%, 90.85% and 89.77% of our revenue from operations for the period ended on June
+  30, 2026 and for the fiscal years ended on March 31, 2026, 2025 and 2024 from the sale of services
+  and products to metal and cement industry. Any downturn in these sectors or shift in industry
+  dynamics may adversely affect our business, results of operations, financial condition and cash
+  flow.
+  Our business is substantially dependent on the performance, growth and capital expenditure cycles
+  of the metal and cement sectors. A signification portion of our revenue is derived from the sale of
+  services and products to metal and cement industry. The industry-wise revenue bifurcation of our
+  company based on Restated Consolidated Financial Information as follows:
+  (Amount in Lakhs)
+  For the period ended on  For the Fiscal Year ended on March 31,
+  June 30, 2026  2026  2025  2024
+  Industry  % of revenue  % of revenue  % of revenue  % of revenue
+  Amount  from  Amount  from  Amount  from  Amount  from
+  operations  operations  operations  operations
+  Metal Industry  12,694.56  89.20%  47,022.35  83.68%  36,565.58  76.98%  27,235.02  69.86%
+  Cement Industry  635.53  4.46%  5,060.46  9.01%  6,590.26  13.87%  7,762.90  19.91%
+  Ports  860.63  6.05%  2,242.60  3.99%  205.96  0.43%  -  0.00%
+  28
+  For the period ended on  For the Fiscal Year ended on March 31,
+  June 30, 2026  2026  2025  2024
+  Industry  % of revenue  % of revenue  % of revenue  % of revenue
+  Amount  from  Amount  from  Amount  from  Amount  from
+  operations  operations  operations  operations
+  Engineering/OEM  41.01  0.29%  1,802.64  3.21%  4,118.24  8.67%  3,988.03  10.23%
+  Miscellaneous-
+  -  -  60.84  0.11%  23.15  0.05%  -  0.00%
+  Scrap Sales*
+  TOTAL (A+B)  14,231.73  100.00%  56,188.89  100.00%  47,503.19  100.00%  38,985.95  100.00%
+*Miscellaneous- Scrap Sales include sales made to oil and lubricant trading companies.
+Pursuant the certificate dated November 04, 2026, received from our Statutory and Peer Review auditor, M/s Keyur Shah & Associates,
+Chartered Accountants vide UDIN No. 26181329KSXXVQ1631.
+Additionally, we generate majority of our revenue through O&M Segment, the industry-wise revenue
+breakup of the revenue generated from O&M segment is as follows:
+  (Amount in Lakhs)
+  For the period ended on  F [...truncated]
+
+===== MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF =====
+MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF
+OPERATIONS ............................................................................................................................. 390
+CAPITALISATION STATEMENT................................................................................................... 447
+FINANCIAL INDEBTEDNESS ....................................................................................................... 448
+SECTION VII - LEGAL AND OTHER INFORMATION .............................................................. 453
+OUTSTANDING LITIGATIONS AND MATERIAL DEVELOPMENTS ............................................... 453
+GOVERNMENT AND OTHER APPROVALS.................................................................................. 458
+OUR GROUP COMPANIES ......................................................................................................... 465
+OTHER REGULATORY AND STATUTORY DISCLOSURES ............................................................. 467
+SECTION VIII - ISSUE RELATED INFORMATION ................................................................... 483
+TERMS OF THE ISSUE ................................................................................................................ 483
+ISSUE STRUCTURE ..................................................................................................................... 489
+ISSUE PROCEDURE .................................................................................................................... 493
+RESTRICTIONS ON FOREIGN OWNERSHIP OF INDIAN SECURITIES .......................................... 515
+SECTION IX - DESCRIPTION OF EQUITY SHARES AND TERMS OF THE ARTICLES OF ASSOCIATION
+........................................................................................................................................ 519
+SECTION X – OTHER INFORMATION .................................................................................. 550
+MATERIAL CONTRACTS AND DOCUMENTS FOR INSPECTION .................................................. 550
+DECLARATION ........................................................................................................................... 554
+  SECTION I – GENERAL
+
+===== OUTSTANDING LITIGATION AND MATERIAL DEVELOPMENTS =====
+[not found]
+
+===== OFFER STRUCTURE =====
+ISSUE STRUCTURE
+The Issue of up to 2,70,00,000 Equity Shares of face value of ₹ 10/- each for cash at price of ₹ [●] per
+Equity Share (including a share premium of ₹ [●] per Equity Share) aggregating to ₹ [●] Lakh.
+In terms of Rule 19(2)(b) of the SCRR the Issue is being made through the Book Building Process in
+compliance with Regulation 6(1) and Regulation 31 of the SEBI ICDR Regulations.
+The Face value of the Equity Shares is ₹ 10/- each.
+  Particulars  QIBs (1)  Non-Institutional Bidders  Retail Individual Bidders
+ Number of Equity  Not  more  than  Not less than 40,60,800 Equity  Not less than 94,54,500 Equity
+ Shares available  1,34,84,700  Equity  Shares of face value of ₹ 10/-  Shares of face value of ₹ 10/-
+ for  Allotment/  Shares of face value of ₹  each available for allocation or  each available for allocation or
+ Allocation (2)  10/- each  Issue less allocation to QIB  issue less allocation to QIB
+  Bidders and Retail Individual  Bidders and Non-Institutional
+  Bidders.  Bidders.
+ Percentage  of  Not more than 50% of Not less than 15% of the Issue  Not less than 35% of the Issue or
+ Issue  Size  the Issue Size shall be or the Issue less allocation to  Issue less allocation to QIBs and
+ available  for  Allotted to QIBs.  QIBs and Retail Individual  Non-Institutional Bidders will be
+ Allotment  /  Bidders will be available for  available for allocation.
+ Allocation.  However, up to 5% of the allocation subject to the
+  Net QIB Portion will be following:
+  available for allocation i. One-third of the Non-
+  proportionately  to  Institutional Portion will be
+  Mutual Funds only.  available for allocation to
+  Mutual  Funds  Bidders with an application
+  participating in the  size more than ₹ 2.00 lakhs
+  Mutual Fund Portion will  to ₹ 10.00 lakhs and
+  also be eligible for ii. two-thirds of the Non-
+  allocation  in  the  Institutional Portion Will be
+  remaining QIB Portion.  available for allocation to
+  The  unsubscribed  Bidders with an application
+  portion in the Mutual  size of more than ₹ 10.00
+  Fund Portion will be  lakhs.
+  available for allocation to Provided  that  the
+  QIBs.  unsubscribed portion in either
+  of the sub-categories specified
+  above may be allocated to
+  applicants in the other sub-
+  category of Non- Institutional
+  Bidders.
+ Basis of Allotment  Proportionate as follows Proportionate however, the  The Allotment to each Retail
+ / allocation if  (excluding the Anchor allotment  of  specified  Individual Bidder shall not be less
+ respective  Investor Portion):  securities to each Non-  than the minimum Bid lot,
+ categories  are  (a) up to 2,69,550 Institutional Bidders shall not  subject to availability of Equity
+ oversubscribed*  Equity Shares of face be less than the minimum  Shares in Retail Portion and the
+  value of ₹ 10/- each application size, subject to  remaining  available  Equity
+  shall be available for availability in the Non-  Shares is any, shall be allotted on
+  allocation on a Institutional Portion, and the  a proportionate basis. For
+  proportionate basis remainder, if any, shall be  details, see the chapter titled
+  to Mutual Funds allotted on a proportionate  “Issue Procedure” beginning on
+  only; and  basis in accordance with the  page 493.
+  (b) 51,25,050  Equity conditions specified in the SEBI
+  Shares of face value ICDR Regulations.
+  of ₹ 10/- each shall
+  be Allotted on a
+  proportionate basis
+  to all QIBs including
+  Mutual  Funds
+  489
+  Particulars  QIBs (1)  Non-Institutional Bidders  Retail Individual Bidders
+  receiving allocation
+  as per (a) above.
+  Up to 60% of the QIB
+  Portion (up to 80,90,100
+  Equity Shares of face
+  value of ₹ 10/- each) may
+  be allocated on a
+  discretionary basis to
+  Anchor Investors of
+  which up to 40% of the
+  Anchor Investor Portion
+  shall be reserved in the
+  following manner (i)
+  33.33% of the Anchor
+  Investor Portion shall be
+  reserved for domestic
+  Mutual Funds; and (ii)
+  6.67% of the Anchor
+  Investor Portion shall be
+  reserved  for  Life
+  Insurance  Companies
+  and Pension Funds,
+  subject to valid Bids
+  being received from
+  domestic Mutual Funds,
+  Life  Insurance
+  Companies and Pension
+  Funds, as applicable, at
+  or above the Anchor
+  Investor Allocation Price.
+Minimum Bid  Such number of Equity Such number of Equity Shares  [●] Equity Shares and in
+  Shares and in multiples and in multiples of [●] Equity  multiples of [●] Equity Shares
+  of [●] Equity Shares so Shares so that the Bid Amount  thereafter
+  that the Bid Amount exceeds ₹ 2.00 lakhs
+  exceeds ₹ 2.00 lakhs and
+  in multiples of [●] Equity
+  Shares thereafter
+Maximum Bid  Such number of Equity Such number of Equity Shares  Such number of Equity Shares in
+  Shares in multiples of [●] in multiples of [●] Equity  multiples of [●] Equity Shares so
+  Equity  Shares  not Shares not exceeding the size  that the Bid Amount does not
+  exceeding the size of the of the Issue (excluding the QIB  exceed ₹ 2.00 lakhs
+  Issue,  subject  to Portion), subject to applicable
+  applicable limits.  limits.
+Mode  of  Compulsorily in dematerialized form.
+Allotment
+Mode of Bidding  Only through the ASBA process (including the UPI Mechanism, as applicable) (except for Anchor
+  Investors).
+  SEBI ICDR Master Circular has prescribed that all individual investors applying in initial public
+  offerings opening on or after May 1, 2022, where the application amount is up to ₹ 5.00 may
+  use UPI. Individual investors bidding under the Non-Institutional Portion bidding and up to ₹
+  5.00 shall be required to use the UPI Mechanism.)
+Bid Lot  [● Equity Shares and in multiples of [●] Equity Shares thereafter
+Allotment Lot  A minimum of [●] Equity Shares and thereafter in multiples of one Equity Share
+  For Retail Individual Bidders, [●] Equity Shares and in multiples of one Equity Share thereafter,
+  subject to availability in the Retail Portion.
+Trading Lot  One Equity Share
+  490
+  Particulars  QIBs (1)  Non-Institutional Bidders  Retail Individual Bidders
+ Who can apply (2)  Public  financial Eligible NRIs, Resident Indian Resident Indian individuals, HUFs
+ (3) (4)
+  institutions as specified individuals, HUFs (in the name (in the name of the Karta) and
+  in section 2(72) of the of the Karta), companies, Eligible NRIs.
+  Companies Act, 2013,  corporate bodies, scientific
+  scheduled commercial institutions, societies, trusts,
+  banks, Mutual Funds, family offices and FPIs who are
+  FPIs  (other  than individuals, corporate bodies
+  individuals,  corporate and family offices which are re-
+  bodies  and  family categorized as Category II FPIs
+  offices), VCFs, AIFs, FVCIs (as defined in the SEBI FPI
+  registered with SEBI, Regulations) and registered
+  multilateral and bilateral with SEBI.
+  development financial
+  institutions,  state
+  industrial development
+  corporation, insurance
+  companies  registered
+  with IRDAI, provident
+  funds  (subject  to
+  applicable law) with
+  minimum corpus ₹ 2,500
+  Lakh, pension f [...truncated]
