@@ -1,0 +1,442 @@
+{
+ "generated_at": "2026-11-23T09:07+05:30",
+ "date": "2026-11-23",
+ "ipos": [
+  {
+   "key": "mahanadi-coalfields",
+   "name": "Mahanadi Coalfields",
+   "open": "2026-11-19",
+   "close": "2026-11-23",
+   "allotment": "2026-11-25",
+   "listing": "2026-11-27",
+   "price": 136.0,
+   "lot": 110,
+   "size_cr": 8981.12,
+   "gmp": 0.7,
+   "gmp_pct": 0.51,
+   "gmp_low": 0.7,
+   "gmp_high": 9.25,
+   "pe": 8.42,
+   "gmp_updated": "23-Nov 7:02",
+   "url": "https://www.investorgain.com/gmp/mahanadi-coalfields-ipo/2401/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "closing_today",
+   "price_high": 136.0,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 110,
+     "min_amount": 14960,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 77,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 1540,
+     "min_amount": 209440,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 1078,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 67,
+     "min_shares": 7370,
+     "min_amount": 1002320,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 5159,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    }
+   ],
+   "best_category": null,
+   "analysis_file": "analysis/mahanadi-coalfields.md",
+   "needs_analysis": false,
+   "card_file": "analysis/mahanadi-coalfields.json",
+   "needs_card": false,
+   "card": {
+    "name": "Mahanadi Coalfields",
+    "source": "rhp",
+    "analysed": "2026-11-17",
+    "verdict": "apply",
+    "verdict_text": "Apply (long-term)",
+    "summary": "Coal India subsidiary and India's largest single coal producer (21% of FY26 output, Odisha); 100% OFS by CIL of ~₹8,981 Cr, selling 10% and keeping ~90%.",
+    "financials": "FY26 revenue ₹30,550 Cr, PAT ₹10,698 Cr, RoNW 53.8%, almost no debt, ~₹20,000 Cr cash; FY24-26 PAT CAGR -5%, H1 FY27 PAT +7%",
+    "quota": "QIB up to 50% · NII at least 15% · Retail at least 35% of Net Offer",
+    "positives": [
+     "~8.4x FY26 P/E, in line with Coal India (8.05x) and below peer average 11.6x",
+     "Net-cash balance sheet and heavy dividends (₹7,650 Cr paid in FY26)",
+     "Scale leader with ~45 years of reserves and low-cost, rail-led operations"
+    ],
+    "red_flags": [
+     "Revenue, operating EBITDA and PAT fell FY24-26; FY26 profit leans on other income that doubled to ₹3,350 Cr",
+     "~69% of sales to thermal power; coal demand projected to decline after FY36",
+     "100% OFS, government-controlled parent; very large ~₹9,000 Cr issue limits listing gains"
+    ],
+    "anchor": "₹2,295 Cr from 53 anchors (18 Nov, at ₹136); LIC largest at ~₹568 Cr",
+    "anchor_grade": "strong",
+    "ai_model": "claude-sonnet-5-5",
+    "ai_prompt_version": "1",
+    "ai_written_at": "2026-11-17T04:10:00Z"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-11-17",
+       "gmp": 4.0
+      },
+      {
+       "date": "2026-11-18",
+       "gmp": 3.1
+      },
+      {
+       "date": "2026-11-19",
+       "gmp": 2.7
+      },
+      {
+       "date": "2026-11-20",
+       "gmp": 1.3
+      },
+      {
+       "date": "2026-11-23",
+       "gmp": 0.7
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹4 → ₹3.1 → ₹2.7 → ₹1.3 → ₹0.7 since 17 Nov, falling"
+    },
+    "subscription": null
+   }
+  },
+  {
+   "key": "foodlink-f-and-b-holdings",
+   "name": "Foodlink F&B Holdings",
+   "open": "2026-11-26",
+   "close": "2026-11-30",
+   "allotment": "2026-12-01",
+   "listing": "2026-12-03",
+   "price": null,
+   "lot": null,
+   "size_cr": null,
+   "gmp": 12.0,
+   "gmp_pct": 0.0,
+   "gmp_low": 12.0,
+   "gmp_high": 12.0,
+   "pe": null,
+   "gmp_updated": "23-Nov 7:02",
+   "url": "https://www.investorgain.com/gmp/foodlink-fb-ipo/1810/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "upcoming",
+   "price_high": null,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [],
+   "best_category": null,
+   "analysis_file": "analysis/foodlink-f-and-b-holdings.md",
+   "needs_analysis": false,
+   "card_file": "analysis/foodlink-f-and-b-holdings.json",
+   "needs_card": false,
+   "card": {
+    "name": "Foodlink F&B Holdings",
+    "source": "rhp",
+    "analysed": "2026-11-20",
+    "verdict": "neutral",
+    "verdict_text": "Neutral",
+    "summary": "Luxury events caterer, casual dining chain (China Bistro, Art of Dum) and banquet operator with 7 centralized kitchens; fresh issue ₹192 Cr plus OFS of up to 88.35 lakh shares; price band not yet in the RHP.",
+    "financials": "FY26 revenue ₹567.50 Cr (+25.9%), EBITDA ₹78.43 Cr (13.82%), PAT ₹29.11 Cr, borrowings ₹24.29 Cr excl. leases; H1 FY27 PAT loss ₹16.15 Cr",
+    "quota": "QIB not less than 75% · NII not more than 15% · Retail not more than 10% (RHP Offer Structure)",
+    "positives": [
+     "Revenue +19.5% FY25, +25.9% FY26; PAT from ₹15.35 Cr loss (FY24) to ₹29.11 Cr; operating cash flow positive every period",
+     "Claimed largest organised luxury caterer in India (FY25); 7 kitchens and exclusive F&B mandates",
+     "Borrowings only ₹22.38 Cr at Sep 2026 (excl. ₹97.10 Cr leases)"
+    ],
+    "red_flags": [
+     "H1 FY27 loss ₹16.15 Cr, EBITDA margin 7.35%; profits seasonal and recent",
+     "₹113.71 Cr of fresh issue is capex with no sites, approvals or orders; UAE conflict hurt business",
+     "No listed peers, company-commissioned industry report; receivables ₹17.74 Cr → ₹60.05 Cr in two years"
+    ],
+    "anchor": "Pending — anchor bidding not yet held",
+    "anchor_grade": "pending",
+    "ai_model": "claude-sonnet-5-5",
+    "ai_prompt_version": "1",
+    "ai_written_at": "2026-11-20T14:10:00Z"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-11-20",
+       "gmp": 12.0
+      },
+      {
+       "date": "2026-11-23",
+       "gmp": 12.0
+      }
+     ],
+     "direction": "flat",
+     "text": "GMP ₹12 → ₹12 since 20 Nov, steady"
+    },
+    "subscription": null
+   }
+  },
+  {
+   "key": "integris-medtech",
+   "name": "Integris Medtech",
+   "open": "2026-11-27",
+   "close": "2026-12-01",
+   "allotment": "2026-12-02",
+   "listing": "2026-12-04",
+   "price": null,
+   "lot": null,
+   "size_cr": null,
+   "gmp": null,
+   "gmp_pct": 0.0,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
+   "pe": null,
+   "gmp_updated": "23-Nov 5:55",
+   "url": "https://www.investorgain.com/gmp/integris-medtech-ipo/2029/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "upcoming",
+   "price_high": null,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [],
+   "best_category": null,
+   "analysis_file": "analysis/integris-medtech.md",
+   "needs_analysis": true,
+   "card_file": "analysis/integris-medtech.json",
+   "needs_card": false,
+   "card": {
+    "ai_model": "claude-sonnet-5-5",
+    "ai_prompt_version": "1",
+    "ai_written_at": "2026-11-20T13:45:00Z",
+    "analysed": "2026-11-20",
+    "source": "web",
+    "verdict": "pending",
+    "verdict_text": "Analysis pending",
+    "quota": "not found",
+    "positives": [],
+    "red_flags": [],
+    "anchor": "Pending — anchor bidding not yet held",
+    "anchor_grade": "pending",
+    "name": "Integris Medtech",
+    "summary": "Everstone-backed medical devices maker (cardiovascular devices, clinical diagnostics, scientific lab solutions) with plants in India, Germany and the Netherlands; fresh issue cut to ₹600 Cr (~₹510 Cr for debt repayment) plus a reduced OFS.",
+    "financials": "Not yet analysed — RHP not read"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": null,
+    "subscription": null
+   }
+  },
+  {
+   "key": "monomark-engineering",
+   "name": "Monomark Engineering",
+   "open": "2026-12-02",
+   "close": "2026-12-04",
+   "allotment": "2026-12-07",
+   "listing": "2026-12-09",
+   "price": null,
+   "lot": null,
+   "size_cr": null,
+   "gmp": 23.0,
+   "gmp_pct": 0.0,
+   "gmp_low": 23.0,
+   "gmp_high": 23.0,
+   "pe": null,
+   "gmp_updated": "23-Nov 7:02",
+   "url": "https://www.investorgain.com/gmp/monomark-engineering-ipo/2232/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "upcoming",
+   "price_high": null,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [],
+   "best_category": null,
+   "analysis_file": "analysis/monomark-engineering.md",
+   "needs_analysis": true,
+   "card_file": "analysis/monomark-engineering.json",
+   "needs_card": false,
+   "card": {
+    "ai_model": "claude-sonnet-5-5",
+    "ai_prompt_version": "1",
+    "ai_written_at": "2026-11-20T13:45:00Z",
+    "analysed": "2026-11-20",
+    "source": "web",
+    "verdict": "pending",
+    "verdict_text": "Watchlist",
+    "quota": "not found",
+    "positives": [],
+    "red_flags": [],
+    "anchor": "Pending — anchor bidding not yet held",
+    "anchor_grade": "pending",
+    "name": "Monomark Engineering",
+    "summary": "Mumbai-based industrial O&M, metal fabrication and project execution services firm (clients in metals, cement, ports, OEMs); fresh issue of up to 2.70 Cr shares, no OFS, for working capital.",
+    "financials": "Not yet analysed — DRHP/RHP not read"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": null,
+    "subscription": null
+   }
+  },
+  {
+   "key": "crystal-crop-protection",
+   "name": "Crystal Crop Protection",
+   "open": "2026-11-18",
+   "close": "2026-11-20",
+   "allotment": "2026-11-23",
+   "listing": "2026-11-26",
+   "price": 272.0,
+   "lot": 55,
+   "size_cr": 455.49,
+   "gmp": 14.5,
+   "gmp_pct": 5.33,
+   "gmp_low": 13.0,
+   "gmp_high": 40.0,
+   "pe": 28.19,
+   "gmp_updated": "23-Nov 7:02",
+   "url": "https://www.investorgain.com/gmp/crystal-crop-protection-ipo/2067/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "awaiting_listing",
+   "price_high": 272.0,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 55,
+     "min_amount": 14960,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 798,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 770,
+     "min_amount": 209440,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 11165,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 67,
+     "min_shares": 3685,
+     "min_amount": 1002320,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 53432,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    }
+   ],
+   "best_category": null,
+   "analysis_file": "analysis/crystal-crop-protection.md",
+   "needs_analysis": false,
+   "card_file": "analysis/crystal-crop-protection.json",
+   "needs_card": false,
+   "card": {
+    "name": "Crystal Crop Protection",
+    "source": "rhp",
+    "analysed": "2026-11-17",
+    "verdict": "neutral",
+    "verdict_text": "Neutral",
+    "summary": "Delhi-based agrochemicals and hybrid seeds maker (80% crop protection, 19% seeds) with 14,700 distributors, raising ₹455 Cr (₹355 Cr fresh, ~₹101 Cr OFS) mostly to repay debt.",
+    "financials": "FY26 revenue ₹3,152 Cr (+17%), EBITDA 14.5%, PAT ₹145 Cr (+22%), RoNW 7.1%, debt ₹820 Cr; Q1 FY27 operating cash flow only ₹43 Cr",
+    "quota": "QIB up to 50% · NII at least 15% · Retail at least 35%",
+    "positives": [
+     "Revenue +17-21% a year; EBITDA margin up from 9.4% to 14.5%",
+     "Diversified brands, 18 granted patents, top-three positions in pearl millet and mustard seed",
+     "Proceeds mostly repay debt (net debt/equity 0.41)"
+    ],
+    "red_flags": [
+     "CBI and ED excise-refund case (₹75.5 Cr) against the company and two promoters, still pending",
+     "~24.6x P/E vs peer average 20x, with RoNW only 7.1%",
+     "Heavy working capital: Q1 FY27 operating cash flow ₹43 Cr, receivables up 34% since March"
+    ],
+    "anchor": "₹135.95 Cr from 17 institutions (10 fund houses) at ₹272 on 17 Nov; names not verified",
+    "anchor_grade": "average",
+    "ai_model": "claude-sonnet-5-5",
+    "ai_prompt_version": "1",
+    "ai_written_at": "2026-11-17T04:00:00Z"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-11-17",
+       "gmp": 14.0
+      },
+      {
+       "date": "2026-11-18",
+       "gmp": 18.0
+      },
+      {
+       "date": "2026-11-19",
+       "gmp": 17.0
+      },
+      {
+       "date": "2026-11-20",
+       "gmp": 14.5
+      },
+      {
+       "date": "2026-11-23",
+       "gmp": 14.5
+      }
+     ],
+     "direction": "down",
+     "text": "GMP ₹14 → ₹18 → ₹17 → ₹14.5 → ₹14.5 since 17 Nov, falling (peak ₹18)"
+    },
+    "subscription": null
+   }
+  }
+ ],
+ "errors": {
+  "nse.current": "URLError(OSError('Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)'))",
+  "nse.upcoming": "URLError(OSError('Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)'))"
+ }
+}
