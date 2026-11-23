@@ -1,0 +1,8 @@
+{"date":"2026-11-23","session":"PM",
+"headline":"Mahanadi closes today — GMP down to ₹0.4 (0.3%), no listing gain; apply only for long term",
+"ipos":{
+"mahanadi-coalfields":{"verdict":"neutral","verdict_text":"Long-term only","best_category":"Retail","category_note":"GMP falling since 17 Nov (₹4 → ₹0.4) — apply only if you'd hold long term; live subscription unavailable today"},
+"crystal-crop-protection":{"verdict":"neutral","verdict_text":"Neutral","best_category":null,"category_note":"Bids closed; GMP ₹14.5 (5%) off peak ₹18; allotment today, listing 26 Nov"},
+"monomark-engineering":{"verdict":"neutral","verdict_text":"Neutral (price band awaited)","best_category":null,"category_note":"Opens 2 Dec; GMP shown is unreliable until band is announced"},
+"matangi-rubber":{"best_category":null,"category_note":"Opens 1 Dec; GMP ₹21 (12%); anchor bidding 30 Nov"}},
+"notes":["NSE blocked by proxy (nse.current/nse.upcoming): no live subscription or odds today. Matangi and Monomark analysed from SEBI RHPs; some RHP sections (cash flow, litigation, peers) were missing from extracts."]}

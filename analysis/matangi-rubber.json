@@ -1,0 +1,17 @@
+{
+  "name": "Matangi Rubber Limited",
+  "source": "rhp",
+  "analysed": "2026-11-23",
+  "verdict": "neutral",
+  "verdict_text": "Neutral",
+  "summary": "Contract manufacturer of tyre flaps, tubes and 2/3-wheeler tyres (mainly job work for JK Tyre) with five plants in Uttarakhand, Tamil Nadu and Madhya Pradesh; tyre-flap contract manufacturing is 73.4% of FY26 revenue.",
+  "financials": "FY26 revenue ₹129.76 Cr, EBITDA ₹35.06 Cr (27.0%), PAT ₹22.33 Cr; FY25 PAT ₹20.03 Cr; Q1 FY27 PAT ₹6.42 Cr. D/E 0.85, ROE 20.98%. Trailing P/E ~16.6x at ₹172 (22x on post-issue capital) vs peer composite 23.53.",
+  "quota": "QIB up to 50% · NII at least 35% (sNII 1/3, bNII 2/3) · Retail at least 15% (RHP Offer Structure); fresh ~₹99 Cr + OFS ~₹26 Cr at upper band",
+  "positives": ["Revenue ~+28% in FY26 with EBITDA margin 27.0% and PAT ₹22.33 Cr", "About ₹45 Cr of the fresh issue repays bank loans (D/E already down from 1.54 to 0.85)", "Plants sit close to the main customer's facilities; new 2/3-wheeler and tube capacity started"],
+  "red_flags": ["Top five customers were 91.6% of FY26 revenue and 98.1% of Q1 FY27, JK Tyre the key customer", "EBITDA margin fell from 30.5% (FY25) to 22.4% (Q1 FY27); new 2/3-wheeler plant at ~39% utilisation", "~21% of issue is OFS; Jan 2026 pre-IPO round at ~₹95 bonus-adjusted vs ₹172 band; ₹4.19 Cr recovery suit pending"],
+  "anchor": "Pending — anchor bidding on 30 Nov 2026",
+  "anchor_grade": "pending",
+  "ai_model": "claude-sonnet-5-5",
+  "ai_prompt_version": "1",
+  "ai_written_at": "2026-11-23T14:30:00Z"
+}
