@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T09:07+05:30",
+ "generated_at": "2026-11-24T19:08+05:30",
  "date": "2026-11-24",
  "ipos": [
   {
@@ -12,12 +12,12 @@
    "price": 191.0,
    "lot": 78,
    "size_cr": 360.76,
-   "gmp": 15.0,
-   "gmp_pct": 7.85,
+   "gmp": 16.0,
+   "gmp_pct": 8.38,
    "gmp_low": 12.0,
-   "gmp_high": 15.0,
+   "gmp_high": 16.0,
    "pe": 34.29,
-   "gmp_updated": "23-Nov 23:37",
+   "gmp_updated": "24-Nov 17:02",
    "url": "https://www.investorgain.com/gmp/foodlink-fb-ipo/1810/",
    "nse": null,
    "rhp_url": null,
@@ -36,7 +36,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 1170,
+     "gain_if_allotted": 1248,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -49,7 +49,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 16380,
+     "gain_if_allotted": 17472,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -62,7 +62,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 79560,
+     "gain_if_allotted": 84864,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -108,10 +108,14 @@
       {
        "date": "2026-11-23",
        "gmp": 15.0
+      },
+      {
+       "date": "2026-11-24",
+       "gmp": 16.0
       }
      ],
      "direction": "up",
-     "text": "GMP ₹12 → ₹15 since 20 Nov, rising"
+     "text": "GMP ₹12 → ₹15 → ₹16 since 20 Nov, rising"
     },
     "subscription": null
    }
@@ -131,7 +135,7 @@
    "gmp_low": 0.0,
    "gmp_high": 0.0,
    "pe": null,
-   "gmp_updated": "23-Nov 5:55",
+   "gmp_updated": "24-Nov 5:55",
    "url": "https://www.investorgain.com/gmp/integris-medtech-ipo/2029/",
    "nse": null,
    "rhp_url": null,
@@ -184,7 +188,7 @@
    "gmp_low": 21.5,
    "gmp_high": 21.5,
    "pe": 17.6,
-   "gmp_updated": "23-Nov 23:37",
+   "gmp_updated": "24-Nov 17:02",
    "url": "https://www.investorgain.com/gmp/matangi-rubber-ipo/2290/",
    "nse": null,
    "rhp_url": null,
@@ -266,7 +270,20 @@
    },
    "needs_anchor_update": false,
    "trend": {
-    "gmp": null,
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-11-23",
+       "gmp": 21.5
+      },
+      {
+       "date": "2026-11-24",
+       "gmp": 21.5
+      }
+     ],
+     "direction": "flat",
+     "text": "GMP ₹21.5 → ₹21.5 since 23 Nov, steady"
+    },
     "subscription": null
    }
   },
@@ -285,7 +302,7 @@
    "gmp_low": 23.0,
    "gmp_high": 23.0,
    "pe": null,
-   "gmp_updated": "23-Nov 23:37",
+   "gmp_updated": "24-Nov 17:02",
    "url": "https://www.investorgain.com/gmp/monomark-engineering-ipo/2232/",
    "nse": null,
    "rhp_url": null,
@@ -327,7 +344,20 @@
    },
    "needs_anchor_update": false,
    "trend": {
-    "gmp": null,
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-11-23",
+       "gmp": 23.0
+      },
+      {
+       "date": "2026-11-24",
+       "gmp": 23.0
+      }
+     ],
+     "direction": "flat",
+     "text": "GMP ₹23 → ₹23 since 23 Nov, steady"
+    },
     "subscription": null
    }
   },
@@ -341,12 +371,12 @@
    "price": 272.0,
    "lot": 55,
    "size_cr": 455.49,
-   "gmp": 14.0,
-   "gmp_pct": 5.15,
+   "gmp": 18.0,
+   "gmp_pct": 6.62,
    "gmp_low": 13.0,
    "gmp_high": 40.0,
    "pe": 28.19,
-   "gmp_updated": "23-Nov 23:37",
+   "gmp_updated": "24-Nov 17:02",
    "url": "https://www.investorgain.com/gmp/crystal-crop-protection-ipo/2067/",
    "nse": null,
    "rhp_url": null,
@@ -365,7 +395,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 770,
+     "gain_if_allotted": 990,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -378,7 +408,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 10780,
+     "gain_if_allotted": 13860,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -391,7 +421,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 51590,
+     "gain_if_allotted": 66330,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -449,10 +479,14 @@
       {
        "date": "2026-11-23",
        "gmp": 14.0
+      },
+      {
+       "date": "2026-11-24",
+       "gmp": 18.0
       }
      ],
-     "direction": "down",
-     "text": "GMP ₹14 → ₹18 → ₹17 → ₹14.5 → ₹14 since 17 Nov, falling (peak ₹18)"
+     "direction": "up",
+     "text": "GMP ₹14 → … → ₹14.5 → ₹14 → ₹18 since 17 Nov, rising"
     },
     "subscription": null
    }
@@ -472,7 +506,7 @@
    "gmp_low": 0.0,
    "gmp_high": 9.25,
    "pe": 8.42,
-   "gmp_updated": "23-Nov 23:37",
+   "gmp_updated": "24-Nov 17:02",
    "url": "https://www.investorgain.com/gmp/mahanadi-coalfields-ipo/2401/",
    "nse": null,
    "rhp_url": null,
