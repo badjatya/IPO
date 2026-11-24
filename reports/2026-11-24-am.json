@@ -1,0 +1,8 @@
+{"date":"2026-11-24","session":"AM",
+"headline":"No IPO open today — Mahanadi lists 27 Nov with GMP near zero (₹0.4); Foodlink opens 26 Nov at ₹191",
+"ipos":{
+"mahanadi-coalfields":{"verdict":"neutral","verdict_text":"Long-term only","best_category":null,"category_note":"Bids closed; allotment 25 Nov, listing 27 Nov. GMP falling since 17 Nov (₹4 → ₹0.4) — expect a flat listing; hold only for the long term"},
+"crystal-crop-protection":{"verdict":"neutral","verdict_text":"Neutral","best_category":null,"category_note":"Bids closed; GMP ₹14 (5%) falling from peak ₹18; listing 26 Nov"},
+"foodlink-f-and-b-holdings":{"best_category":null,"category_note":"Opens 26 Nov; band ₹191, GMP ₹15 (8%) rising from ₹12"},
+"integris-medtech":{"verdict":"pending","verdict_text":"Analysis pending","best_category":null,"category_note":"Opens 27 Nov; price band and RHP not yet available"}},
+"notes":["NSE blocked by proxy (nse.current/nse.upcoming): no live subscription or odds today; Mahanadi GMP from last run's trend. Integris RHP link not available, analysis pending."]}
