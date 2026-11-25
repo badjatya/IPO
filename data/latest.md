@@ -1,10 +1,10 @@
-# IPO numbers – 2026-11-25 (as of 09:08 IST)
+# IPO numbers – 2026-11-25 (as of 19:08 IST)
 
 ## Foodlink F&B Holdings — upcoming
 - Dates: open 2026-11-26 · close 2026-11-30 · allotment 2026-12-01 · listing 2026-12-03
 - Price band: ₹191 (upper) · lot 78 shares · size ₹360.76 Cr · P/E 34.29
-- GMP: ₹21 (10.99%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹12 → ₹15 → ₹16 → ₹21 since 20 Nov, rising
+- GMP: ₹27 (14.14%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹12 → ₹15 → ₹16 → ₹27 since 20 Nov, rising
 - Cached call (rhp, 2026-11-20): Neutral · anchor pending · Luxury events caterer, casual dining chain (China Bistro, Art of Dum) and banquet operator with 7 centralized kitchens; fresh issue ₹192 Cr plus OFS of up to 88.35 lakh shares; price band not yet in the RHP.
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
@@ -34,16 +34,22 @@
 
 ## Monomark Engineering — upcoming
 - Dates: open 2026-12-02 · close 2026-12-04 · allotment 2026-12-07 · listing 2026-12-09
-- Price band: not announced · lot ? shares · size - · P/E -
-- GMP: ₹23 (0%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹23 → ₹23 → ₹23 since 23 Nov, steady
+- Price band: ₹65 (upper) · lot 225 shares · size ₹175.5 Cr · P/E 17.33
+- GMP: ₹21 (32.31%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹23 → ₹23 → ₹21 since 23 Nov, falling
 - Cached call (rhp, 2026-11-23): Neutral (price band awaited) · anchor pending · Industrial O&M (80% of FY26 revenue), project execution and metal fabrication for metals, cement and ports clients; Hindustan Zinc is 35% of revenue; order book ₹1,762 Cr; 100% fresh issue.
+
+| Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
+|---|---|---|---|---|---|
+| Retail | 1 lot (225 sh) | ₹14,625 | n/a | - | - |
+| Small HNI (sNII) | 14 lot (3150 sh) | ₹2.05 L | n/a | - | - |
+| Big HNI (bNII) | 69 lot (15525 sh) | ₹10.09 L | n/a | - | - |
 
 ## Crystal Crop Protection — awaiting listing
 - Dates: open 2026-11-18 · close 2026-11-20 · allotment 2026-11-23 · listing 2026-11-26
 - Price band: ₹272 (upper) · lot 55 shares · size ₹455.49 Cr · P/E 28.19
-- GMP: ₹19 (6.99%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹18 → … → ₹14 → ₹18 → ₹19 since 18 Nov, steady
+- GMP: ₹18 (6.62%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹18 → … → ₹14 → ₹18 → ₹18 since 18 Nov, steady
 - Cached call (rhp, 2026-11-17): Neutral · anchor average · Delhi-based agrochemicals and hybrid seeds maker (80% crop protection, 19% seeds) with 14,700 distributors, raising ₹455 Cr (₹355 Cr fresh, ~₹101 Cr OFS) mostly to repay debt.
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
