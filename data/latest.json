@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-25T19:08+05:30",
- "date": "2026-11-25",
+ "generated_at": "2026-11-26T09:08+05:30",
+ "date": "2026-11-26",
  "ipos": [
   {
    "key": "foodlink-f-and-b-holdings",
@@ -12,17 +12,17 @@
    "price": 191.0,
    "lot": 78,
    "size_cr": 360.76,
-   "gmp": 27.0,
-   "gmp_pct": 14.14,
+   "gmp": 18.0,
+   "gmp_pct": 9.42,
    "gmp_low": 12.0,
-   "gmp_high": 27.0,
+   "gmp_high": 21.0,
    "pe": 34.29,
-   "gmp_updated": "25-Nov 15:02",
+   "gmp_updated": "26-Nov 7:02",
    "url": "https://www.investorgain.com/gmp/foodlink-fb-ipo/1810/",
    "nse": null,
    "rhp_url": null,
    "rhp_source": null,
-   "phase": "upcoming",
+   "phase": "open",
    "price_high": 191.0,
    "subscription": null,
    "anchor_done": null,
@@ -36,7 +36,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 2106,
+     "gain_if_allotted": 1404,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -49,7 +49,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 29484,
+     "gain_if_allotted": 19656,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -62,7 +62,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 143208,
+     "gain_if_allotted": 95472,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -97,7 +97,7 @@
     "ai_prompt_version": "1",
     "ai_written_at": "2026-11-20T14:10:00Z"
    },
-   "needs_anchor_update": false,
+   "needs_anchor_update": true,
    "trend": {
     "gmp": {
      "points": [
@@ -116,64 +116,145 @@
       {
        "date": "2026-11-25",
        "gmp": 27.0
+      },
+      {
+       "date": "2026-11-26",
+       "gmp": 18.0
       }
      ],
-     "direction": "up",
-     "text": "GMP ₹12 → ₹15 → ₹16 → ₹27 since 20 Nov, rising"
+     "direction": "down",
+     "text": "GMP ₹12 → ₹15 → ₹16 → ₹27 → ₹18 since 20 Nov, falling (peak ₹27)"
     },
     "subscription": null
    }
   },
   {
-   "key": "integris-medtech",
-   "name": "Integris Medtech",
-   "open": "2026-11-27",
-   "close": "2026-12-01",
-   "allotment": "2026-12-02",
-   "listing": "2026-12-04",
-   "price": null,
-   "lot": null,
-   "size_cr": null,
-   "gmp": null,
-   "gmp_pct": 0.0,
-   "gmp_low": 0.0,
-   "gmp_high": 0.0,
-   "pe": null,
-   "gmp_updated": "25-Nov 5:55",
-   "url": "https://www.investorgain.com/gmp/integris-medtech-ipo/2029/",
+   "key": "crystal-crop-protection",
+   "name": "Crystal Crop Protection",
+   "open": "2026-11-18",
+   "close": "2026-11-20",
+   "allotment": "2026-11-23",
+   "listing": "2026-11-26",
+   "price": 272.0,
+   "lot": 55,
+   "size_cr": 455.49,
+   "gmp": 17.0,
+   "gmp_pct": 6.25,
+   "gmp_low": 13.0,
+   "gmp_high": 40.0,
+   "pe": 28.19,
+   "gmp_updated": "26-Nov 7:02",
+   "url": "https://www.investorgain.com/gmp/crystal-crop-protection-ipo/2067/",
    "nse": null,
    "rhp_url": null,
    "rhp_source": null,
-   "phase": "upcoming",
-   "price_high": null,
+   "phase": "listing_today",
+   "price_high": 272.0,
    "subscription": null,
    "anchor_done": null,
-   "categories": [],
+   "categories": [
+    {
+     "category": "retail",
+     "label": "Retail",
+     "min_lots": 1,
+     "min_shares": 55,
+     "min_amount": 14960,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 935,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "snii",
+     "label": "Small HNI (sNII)",
+     "min_lots": 14,
+     "min_shares": 770,
+     "min_amount": 209440,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 13090,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    },
+    {
+     "category": "bnii",
+     "label": "Big HNI (bNII)",
+     "min_lots": 67,
+     "min_shares": 3685,
+     "min_amount": 1002320,
+     "subscription_x": null,
+     "odds": null,
+     "odds_text": "n/a",
+     "gain_if_allotted": 62645,
+     "expected_gain": null,
+     "return_on_blocked_pct": null
+    }
+   ],
    "best_category": null,
-   "analysis_file": "analysis/integris-medtech.md",
-   "needs_analysis": true,
-   "card_file": "analysis/integris-medtech.json",
+   "analysis_file": "analysis/crystal-crop-protection.md",
+   "needs_analysis": false,
+   "card_file": "analysis/crystal-crop-protection.json",
    "needs_card": false,
    "card": {
+    "name": "Crystal Crop Protection",
+    "source": "rhp",
+    "analysed": "2026-11-17",
+    "verdict": "neutral",
+    "verdict_text": "Neutral",
+    "summary": "Delhi-based agrochemicals and hybrid seeds maker (80% crop protection, 19% seeds) with 14,700 distributors, raising ₹455 Cr (₹355 Cr fresh, ~₹101 Cr OFS) mostly to repay debt.",
+    "financials": "FY26 revenue ₹3,152 Cr (+17%), EBITDA 14.5%, PAT ₹145 Cr (+22%), RoNW 7.1%, debt ₹820 Cr; Q1 FY27 operating cash flow only ₹43 Cr",
+    "quota": "QIB up to 50% · NII at least 15% · Retail at least 35%",
+    "positives": [
+     "Revenue +17-21% a year; EBITDA margin up from 9.4% to 14.5%",
+     "Diversified brands, 18 granted patents, top-three positions in pearl millet and mustard seed",
+     "Proceeds mostly repay debt (net debt/equity 0.41)"
+    ],
+    "red_flags": [
+     "CBI and ED excise-refund case (₹75.5 Cr) against the company and two promoters, still pending",
+     "~24.6x P/E vs peer average 20x, with RoNW only 7.1%",
+     "Heavy working capital: Q1 FY27 operating cash flow ₹43 Cr, receivables up 34% since March"
+    ],
+    "anchor": "₹135.95 Cr from 17 institutions (10 fund houses) at ₹272 on 17 Nov; names not verified",
+    "anchor_grade": "average",
     "ai_model": "claude-sonnet-5-5",
     "ai_prompt_version": "1",
-    "ai_written_at": "2026-11-20T13:45:00Z",
-    "analysed": "2026-11-20",
-    "source": "web",
-    "verdict": "pending",
-    "verdict_text": "Analysis pending",
-    "quota": "not found",
-    "positives": [],
-    "red_flags": [],
-    "anchor": "Pending — anchor bidding not yet held",
-    "anchor_grade": "pending",
-    "name": "Integris Medtech",
-    "summary": "Everstone-backed medical devices maker (cardiovascular devices, clinical diagnostics, scientific lab solutions) with plants in India, Germany and the Netherlands; fresh issue cut to ₹600 Cr (~₹510 Cr for debt repayment) plus a reduced OFS.",
-    "financials": "Not yet analysed — RHP not read"
+    "ai_written_at": "2026-11-17T04:00:00Z"
    },
    "needs_anchor_update": false,
    "trend": {
-    "gmp": null,
+    "gmp": {
+     "points": [
+      {
+       "date": "2026-11-19",
+       "gmp": 17.0
+      },
+      {
+       "date": "2026-11-20",
+       "gmp": 14.5
+      },
+      {
+       "date": "2026-11-23",
+       "gmp": 14.0
+      },
+      {
+       "date": "2026-11-24",
+       "gmp": 18.0
+      },
+      {
+       "date": "2026-11-25",
+       "gmp": 18.0
+      },
+      {
+       "date": "2026-11-26",
+       "gmp": 17.0
+      }
+     ],
+     "direction": "flat",
+     "text": "GMP ₹17 → … → ₹18 → ₹18 → ₹17 since 19 Nov, steady"
+    },
     "subscription": null
    }
   },
@@ -187,12 +268,12 @@
    "price": 172.0,
    "lot": 87,
    "size_cr": 125.16,
-   "gmp": 21.5,
-   "gmp_pct": 12.5,
+   "gmp": 27.0,
+   "gmp_pct": 15.7,
    "gmp_low": 21.5,
-   "gmp_high": 21.5,
+   "gmp_high": 27.0,
    "pe": 17.6,
-   "gmp_updated": "25-Nov 15:02",
+   "gmp_updated": "26-Nov 7:02",
    "url": "https://www.investorgain.com/gmp/matangi-rubber-ipo/2290/",
    "nse": null,
    "rhp_url": null,
@@ -211,7 +292,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 1870,
+     "gain_if_allotted": 2349,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -224,7 +305,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 26187,
+     "gain_if_allotted": 32886,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -237,7 +318,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 125324,
+     "gain_if_allotted": 157383,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -287,10 +368,14 @@
       {
        "date": "2026-11-25",
        "gmp": 21.5
+      },
+      {
+       "date": "2026-11-26",
+       "gmp": 27.0
       }
      ],
-     "direction": "flat",
-     "text": "GMP ₹21.5 → ₹21.5 → ₹21.5 since 23 Nov, steady"
+     "direction": "up",
+     "text": "GMP ₹21.5 → ₹21.5 → ₹21.5 → ₹27 since 23 Nov, rising"
     },
     "subscription": null
    }
@@ -310,7 +395,7 @@
    "gmp_low": 21.0,
    "gmp_high": 23.0,
    "pe": 17.33,
-   "gmp_updated": "25-Nov 15:02",
+   "gmp_updated": "26-Nov 7:02",
    "url": "https://www.investorgain.com/gmp/monomark-engineering-ipo/2232/",
    "nse": null,
    "rhp_url": null,
@@ -405,140 +490,14 @@
       {
        "date": "2026-11-25",
        "gmp": 21.0
+      },
+      {
+       "date": "2026-11-26",
+       "gmp": 21.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹23 → ₹23 → ₹21 since 23 Nov, falling"
-    },
-    "subscription": null
-   }
-  },
-  {
-   "key": "crystal-crop-protection",
-   "name": "Crystal Crop Protection",
-   "open": "2026-11-18",
-   "close": "2026-11-20",
-   "allotment": "2026-11-23",
-   "listing": "2026-11-26",
-   "price": 272.0,
-   "lot": 55,
-   "size_cr": 455.49,
-   "gmp": 18.0,
-   "gmp_pct": 6.62,
-   "gmp_low": 13.0,
-   "gmp_high": 40.0,
-   "pe": 28.19,
-   "gmp_updated": "25-Nov 15:02",
-   "url": "https://www.investorgain.com/gmp/crystal-crop-protection-ipo/2067/",
-   "nse": null,
-   "rhp_url": null,
-   "rhp_source": null,
-   "phase": "awaiting_listing",
-   "price_high": 272.0,
-   "subscription": null,
-   "anchor_done": null,
-   "categories": [
-    {
-     "category": "retail",
-     "label": "Retail",
-     "min_lots": 1,
-     "min_shares": 55,
-     "min_amount": 14960,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 990,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    },
-    {
-     "category": "snii",
-     "label": "Small HNI (sNII)",
-     "min_lots": 14,
-     "min_shares": 770,
-     "min_amount": 209440,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 13860,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    },
-    {
-     "category": "bnii",
-     "label": "Big HNI (bNII)",
-     "min_lots": 67,
-     "min_shares": 3685,
-     "min_amount": 1002320,
-     "subscription_x": null,
-     "odds": null,
-     "odds_text": "n/a",
-     "gain_if_allotted": 66330,
-     "expected_gain": null,
-     "return_on_blocked_pct": null
-    }
-   ],
-   "best_category": null,
-   "analysis_file": "analysis/crystal-crop-protection.md",
-   "needs_analysis": false,
-   "card_file": "analysis/crystal-crop-protection.json",
-   "needs_card": false,
-   "card": {
-    "name": "Crystal Crop Protection",
-    "source": "rhp",
-    "analysed": "2026-11-17",
-    "verdict": "neutral",
-    "verdict_text": "Neutral",
-    "summary": "Delhi-based agrochemicals and hybrid seeds maker (80% crop protection, 19% seeds) with 14,700 distributors, raising ₹455 Cr (₹355 Cr fresh, ~₹101 Cr OFS) mostly to repay debt.",
-    "financials": "FY26 revenue ₹3,152 Cr (+17%), EBITDA 14.5%, PAT ₹145 Cr (+22%), RoNW 7.1%, debt ₹820 Cr; Q1 FY27 operating cash flow only ₹43 Cr",
-    "quota": "QIB up to 50% · NII at least 15% · Retail at least 35%",
-    "positives": [
-     "Revenue +17-21% a year; EBITDA margin up from 9.4% to 14.5%",
-     "Diversified brands, 18 granted patents, top-three positions in pearl millet and mustard seed",
-     "Proceeds mostly repay debt (net debt/equity 0.41)"
-    ],
-    "red_flags": [
-     "CBI and ED excise-refund case (₹75.5 Cr) against the company and two promoters, still pending",
-     "~24.6x P/E vs peer average 20x, with RoNW only 7.1%",
-     "Heavy working capital: Q1 FY27 operating cash flow ₹43 Cr, receivables up 34% since March"
-    ],
-    "anchor": "₹135.95 Cr from 17 institutions (10 fund houses) at ₹272 on 17 Nov; names not verified",
-    "anchor_grade": "average",
-    "ai_model": "claude-sonnet-5-5",
-    "ai_prompt_version": "1",
-    "ai_written_at": "2026-11-17T04:00:00Z"
-   },
-   "needs_anchor_update": false,
-   "trend": {
-    "gmp": {
-     "points": [
-      {
-       "date": "2026-11-18",
-       "gmp": 18.0
-      },
-      {
-       "date": "2026-11-19",
-       "gmp": 17.0
-      },
-      {
-       "date": "2026-11-20",
-       "gmp": 14.5
-      },
-      {
-       "date": "2026-11-23",
-       "gmp": 14.0
-      },
-      {
-       "date": "2026-11-24",
-       "gmp": 18.0
-      },
-      {
-       "date": "2026-11-25",
-       "gmp": 18.0
-      }
-     ],
-     "direction": "flat",
-     "text": "GMP ₹18 → … → ₹14 → ₹18 → ₹18 since 18 Nov, steady"
+     "text": "GMP ₹23 → ₹23 → ₹21 → ₹21 since 23 Nov, falling"
     },
     "subscription": null
    }
@@ -558,7 +517,7 @@
    "gmp_low": 0.0,
    "gmp_high": 9.25,
    "pe": 8.42,
-   "gmp_updated": "25-Nov 15:02",
+   "gmp_updated": "26-Nov 7:02",
    "url": "https://www.investorgain.com/gmp/mahanadi-coalfields-ipo/2401/",
    "nse": null,
    "rhp_url": null,
@@ -666,6 +625,59 @@
      "direction": "down",
      "text": "GMP ₹4 → ₹3.1 → ₹2.7 → ₹1.3 → ₹0.4 since 17 Nov, falling"
     },
+    "subscription": null
+   }
+  },
+  {
+   "key": "integris-medtech",
+   "name": "Integris Medtech",
+   "open": null,
+   "close": null,
+   "allotment": null,
+   "listing": null,
+   "price": null,
+   "lot": null,
+   "size_cr": null,
+   "gmp": null,
+   "gmp_pct": 0.0,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
+   "pe": null,
+   "gmp_updated": "26-Nov 5:55",
+   "url": "https://www.investorgain.com/gmp/integris-medtech-ipo/2029/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "announced",
+   "price_high": null,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [],
+   "best_category": null,
+   "analysis_file": "analysis/integris-medtech.md",
+   "needs_analysis": true,
+   "card_file": "analysis/integris-medtech.json",
+   "needs_card": false,
+   "card": {
+    "ai_model": "claude-sonnet-5-5",
+    "ai_prompt_version": "1",
+    "ai_written_at": "2026-11-20T13:45:00Z",
+    "analysed": "2026-11-20",
+    "source": "web",
+    "verdict": "pending",
+    "verdict_text": "Analysis pending",
+    "quota": "not found",
+    "positives": [],
+    "red_flags": [],
+    "anchor": "Pending — anchor bidding not yet held",
+    "anchor_grade": "pending",
+    "name": "Integris Medtech",
+    "summary": "Everstone-backed medical devices maker (cardiovascular devices, clinical diagnostics, scientific lab solutions) with plants in India, Germany and the Netherlands; fresh issue cut to ₹600 Cr (~₹510 Cr for debt repayment) plus a reduced OFS.",
+    "financials": "Not yet analysed — RHP not read"
+   },
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": null,
     "subscription": null
    }
   }

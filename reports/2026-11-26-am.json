@@ -1,0 +1,10 @@
+{"date":"2026-11-26","session":"AM",
+"headline":"Foodlink opens today (band ₹191, GMP ₹18, down from ₹27 peak) — neutral; Crystal Crop lists today, Mahanadi tomorrow with GMP near zero",
+"ipos":{
+"foodlink-f-and-b-holdings":{"verdict":"neutral","verdict_text":"Neutral","best_category":null,"category_note":"Open 26–30 Nov. GMP falling since 24 Nov (₹27 → ₹18, 9.4%) — apply only if you'd hold; H1 FY27 loss. Anchor book not findable yet. Recheck subscription at close 30 Nov"},
+"crystal-crop-protection":{"verdict":"neutral","verdict_text":"Neutral","best_category":null,"category_note":"Lists today; GMP ₹17 (6.25%), steady"},
+"mahanadi-coalfields":{"verdict":"neutral","verdict_text":"Long-term only","best_category":null,"category_note":"Lists 27 Nov. GMP falling since 17 Nov (₹4 → ₹0.4) — expect a flat listing; hold only for the long term"},
+"matangi-rubber":{"best_category":null,"category_note":"Opens 1 Dec; band ₹172, GMP ₹27 (15.7%) rising from ₹21.5"},
+"monomark-engineering":{"best_category":null,"category_note":"Opens 2 Dec; band ₹65, GMP ₹21 (32%) falling from ₹23 since 23 Nov — watch the trend"},
+"integris-medtech":{"verdict":"pending","verdict_text":"Analysis pending","best_category":null,"category_note":"Price band and RHP not yet available"}},
+"notes":["NSE blocked by proxy (nse.current/nse.upcoming): no live subscription or odds today; numbers from Investorgain only.","Foodlink anchor allocation not found by web search; still pending.","Crystal Crop listing prices not out yet; outcome needs recording once published (no NSE symbol in snapshots)."]}
