@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T09:08+05:30",
+ "generated_at": "2026-11-26T19:07+05:30",
  "date": "2026-11-26",
  "ipos": [
   {
@@ -12,12 +12,12 @@
    "price": 191.0,
    "lot": 78,
    "size_cr": 360.76,
-   "gmp": 18.0,
-   "gmp_pct": 9.42,
+   "gmp": 12.0,
+   "gmp_pct": 6.28,
    "gmp_low": 12.0,
    "gmp_high": 21.0,
    "pe": 34.29,
-   "gmp_updated": "26-Nov 7:02",
+   "gmp_updated": "26-Nov 17:02",
    "url": "https://www.investorgain.com/gmp/foodlink-fb-ipo/1810/",
    "nse": null,
    "rhp_url": null,
@@ -36,7 +36,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 1404,
+     "gain_if_allotted": 936,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -49,7 +49,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 19656,
+     "gain_if_allotted": 13104,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -62,7 +62,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 95472,
+     "gain_if_allotted": 63648,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -119,11 +119,11 @@
       },
       {
        "date": "2026-11-26",
-       "gmp": 18.0
+       "gmp": 12.0
       }
      ],
      "direction": "down",
-     "text": "GMP ₹12 → ₹15 → ₹16 → ₹27 → ₹18 since 20 Nov, falling (peak ₹27)"
+     "text": "GMP ₹12 → ₹15 → ₹16 → ₹27 → ₹12 since 20 Nov, falling (peak ₹27)"
     },
     "subscription": null
    }
@@ -137,13 +137,13 @@
    "listing": "2026-11-26",
    "price": 272.0,
    "lot": 55,
-   "size_cr": 455.49,
+   "size_cr": 455.72,
    "gmp": 17.0,
    "gmp_pct": 6.25,
    "gmp_low": 13.0,
    "gmp_high": 40.0,
    "pe": 28.19,
-   "gmp_updated": "26-Nov 7:02",
+   "gmp_updated": "26-Nov 9:37",
    "url": "https://www.investorgain.com/gmp/crystal-crop-protection-ipo/2067/",
    "nse": null,
    "rhp_url": null,
@@ -273,7 +273,7 @@
    "gmp_low": 21.5,
    "gmp_high": 27.0,
    "pe": 17.6,
-   "gmp_updated": "26-Nov 7:02",
+   "gmp_updated": "26-Nov 17:02",
    "url": "https://www.investorgain.com/gmp/matangi-rubber-ipo/2290/",
    "nse": null,
    "rhp_url": null,
@@ -390,12 +390,12 @@
    "price": 65.0,
    "lot": 225,
    "size_cr": 175.5,
-   "gmp": 21.0,
-   "gmp_pct": 32.31,
+   "gmp": 24.0,
+   "gmp_pct": 36.92,
    "gmp_low": 21.0,
-   "gmp_high": 23.0,
+   "gmp_high": 24.0,
    "pe": 17.33,
-   "gmp_updated": "26-Nov 7:02",
+   "gmp_updated": "26-Nov 17:02",
    "url": "https://www.investorgain.com/gmp/monomark-engineering-ipo/2232/",
    "nse": null,
    "rhp_url": null,
@@ -414,7 +414,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 4725,
+     "gain_if_allotted": 5400,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -427,7 +427,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 66150,
+     "gain_if_allotted": 75600,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -440,7 +440,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": 326025,
+     "gain_if_allotted": 372600,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -493,11 +493,11 @@
       },
       {
        "date": "2026-11-26",
-       "gmp": 21.0
+       "gmp": 24.0
       }
      ],
-     "direction": "down",
-     "text": "GMP ₹23 → ₹23 → ₹21 → ₹21 since 23 Nov, falling"
+     "direction": "flat",
+     "text": "GMP ₹23 → ₹23 → ₹21 → ₹24 since 23 Nov, steady"
     },
     "subscription": null
    }
@@ -512,12 +512,12 @@
    "price": 136.0,
    "lot": 110,
    "size_cr": 8981.12,
-   "gmp": null,
-   "gmp_pct": 0.0,
-   "gmp_low": 0.0,
+   "gmp": 0.5,
+   "gmp_pct": 0.37,
+   "gmp_low": 0.5,
    "gmp_high": 9.25,
    "pe": 8.42,
-   "gmp_updated": "26-Nov 7:02",
+   "gmp_updated": "26-Nov 17:02",
    "url": "https://www.investorgain.com/gmp/mahanadi-coalfields-ipo/2401/",
    "nse": null,
    "rhp_url": null,
@@ -536,7 +536,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": null,
+     "gain_if_allotted": 55,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -549,7 +549,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": null,
+     "gain_if_allotted": 770,
      "expected_gain": null,
      "return_on_blocked_pct": null
     },
@@ -562,7 +562,7 @@
      "subscription_x": null,
      "odds": null,
      "odds_text": "n/a",
-     "gain_if_allotted": null,
+     "gain_if_allotted": 3685,
      "expected_gain": null,
      "return_on_blocked_pct": null
     }
@@ -602,14 +602,6 @@
     "gmp": {
      "points": [
       {
-       "date": "2026-11-17",
-       "gmp": 4.0
-      },
-      {
-       "date": "2026-11-18",
-       "gmp": 3.1
-      },
-      {
        "date": "2026-11-19",
        "gmp": 2.7
       },
@@ -620,11 +612,52 @@
       {
        "date": "2026-11-23",
        "gmp": 0.4
+      },
+      {
+       "date": "2026-11-26",
+       "gmp": 0.5
       }
      ],
      "direction": "down",
-     "text": "GMP ₹4 → ₹3.1 → ₹2.7 → ₹1.3 → ₹0.4 since 17 Nov, falling"
+     "text": "GMP ₹2.7 → ₹1.3 → ₹0.4 → ₹0.5 since 19 Nov, falling"
     },
+    "subscription": null
+   }
+  },
+  {
+   "key": "swara-baby-products",
+   "name": "Swara Baby Products",
+   "open": null,
+   "close": null,
+   "allotment": null,
+   "listing": null,
+   "price": null,
+   "lot": null,
+   "size_cr": 1000.0,
+   "gmp": null,
+   "gmp_pct": null,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
+   "pe": null,
+   "gmp_updated": "26-Nov 17:00",
+   "url": "https://www.investorgain.com/gmp/swara-baby-products-ipo/2340/",
+   "nse": null,
+   "rhp_url": null,
+   "rhp_source": null,
+   "phase": "announced",
+   "price_high": null,
+   "subscription": null,
+   "anchor_done": null,
+   "categories": [],
+   "best_category": null,
+   "analysis_file": "analysis/swara-baby-products.md",
+   "needs_analysis": true,
+   "card_file": "analysis/swara-baby-products.json",
+   "needs_card": true,
+   "card": null,
+   "needs_anchor_update": false,
+   "trend": {
+    "gmp": null,
     "subscription": null
    }
   },

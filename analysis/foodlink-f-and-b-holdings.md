@@ -30,7 +30,7 @@ Not found (band blank). RHP says no listed peers with a similar model. FY26 basi
 Fresh ₹192 Cr: Rajasthan kitchen ₹21.40 Cr; two banquets ₹41.50 Cr; UAE subsidiary, four restaurants ₹50.81 Cr; debt repayment ₹21.00 Cr; general corporate up to 25%. No sites identified, no approvals or vendor orders. OFS money goes to sellers.
 
 ## Anchor book
-**Pending** — anchor allocation not out. Lock-in 50% 30 days, 50% 90 days.
+**Average.** ₹162.34 Cr from 12 funds at ₹191 (25 Nov): Amicorp Capital (Mauritius) ₹35 Cr, ITI MF two schemes (~17%), Founders Collective Fund, SG Finserve. Lock-in 50% to 1 Jan 2027, 50% to 2 Mar 2027.
 
 ## Red flags
 H1 FY27 loss and 7.35% margin; thin recent profit; ₹113.71 Cr capex unplanned; UAE conflict hit business; receivables nearly doubled; company-commissioned report and no peers; group company Crale Foodlink being wound up (NCLT). Litigation not fully reviewed (truncated).

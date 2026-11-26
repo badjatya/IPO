@@ -440,5 +440,33 @@
   "subscription_source": "nse ipo-detail 2026-11-05",
   "price_source": "nse",
   "recorded_at": "2026-11-05T19:08+05:30"
+ },
+ "crystal-crop-protection": {
+  "name": "Crystal Crop Protection",
+  "symbol": null,
+  "listing_date": "2026-11-26",
+  "issue_price": 272.0,
+  "listing_price": 278.0,
+  "day_close": null,
+  "day_high": null,
+  "day_low": null,
+  "listing_gain_pct": 2.21,
+  "close_gain_pct": null,
+  "gmp_eve": 18.0,
+  "gmp_eve_pct": 6.62,
+  "gmp_eve_snapshot": "2026-11-25T19:08+05:30",
+  "gmp_eve_updated": "25-Nov 15:02",
+  "gmp_miss_pts": -4.41,
+  "verdict": "neutral",
+  "verdict_text": "Neutral",
+  "best_category": "Retail",
+  "verdict_report": "2026-11-20-am.json",
+  "anchor_grade": "average",
+  "pe": 28.19,
+  "size_cr": 455.72,
+  "subscription": {},
+  "subscription_source": null,
+  "price_source": "manual",
+  "recorded_at": "2026-11-26T19:08+05:30"
  }
 }
