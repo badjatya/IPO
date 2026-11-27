@@ -468,5 +468,33 @@
   "subscription_source": null,
   "price_source": "manual",
   "recorded_at": "2026-11-26T19:08+05:30"
+ },
+ "mahanadi-coalfields": {
+  "name": "Mahanadi Coalfields",
+  "symbol": null,
+  "listing_date": "2026-11-27",
+  "issue_price": 136.0,
+  "listing_price": 134.0,
+  "day_close": 132.5,
+  "day_high": null,
+  "day_low": null,
+  "listing_gain_pct": -1.47,
+  "close_gain_pct": -2.57,
+  "gmp_eve": 0.5,
+  "gmp_eve_pct": 0.37,
+  "gmp_eve_snapshot": "2026-11-26T19:07+05:30",
+  "gmp_eve_updated": "26-Nov 17:02",
+  "gmp_miss_pts": -1.84,
+  "verdict": "neutral",
+  "verdict_text": "Long-term only",
+  "best_category": "Retail",
+  "verdict_report": "2026-11-23-am.json",
+  "anchor_grade": "strong",
+  "pe": 8.42,
+  "size_cr": 8981.12,
+  "subscription": {},
+  "subscription_source": null,
+  "price_source": "manual",
+  "recorded_at": "2026-11-27T19:09+05:30"
  }
 }
