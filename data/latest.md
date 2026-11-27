@@ -1,11 +1,11 @@
-# IPO numbers – 2026-11-26 (as of 19:07 IST)
+# IPO numbers – 2026-11-27 (as of 09:08 IST)
 
 ## Foodlink F&B Holdings — open
 - Dates: open 2026-11-26 · close 2026-11-30 · allotment 2026-12-01 · listing 2026-12-03
 - Price band: ₹191 (upper) · lot 78 shares · size ₹360.76 Cr · P/E 34.29
-- GMP: ₹12 (6.28%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹12 → ₹15 → ₹16 → ₹27 → ₹12 since 20 Nov, falling (peak ₹27)
-- Cached call (rhp, 2026-11-20): Neutral · anchor pending · Luxury events caterer, casual dining chain (China Bistro, Art of Dum) and banquet operator with 7 centralized kitchens; fresh issue ₹192 Cr plus OFS of up to 88.35 lakh shares; price band not yet in the RHP.
+- GMP: ₹7 (3.66%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹12 → ₹15 → ₹16 → ₹27 → ₹7 since 20 Nov, falling (peak ₹27)
+- Cached call (rhp, 2026-11-20): Neutral · anchor average · Luxury events caterer, casual dining chain (China Bistro, Art of Dum) and banquet operator with 7 centralized kitchens; fresh issue ₹192 Cr plus OFS of up to 88.35 lakh shares; price band ₹181–191.
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
@@ -13,18 +13,18 @@
 | Small HNI (sNII) | 14 lot (1092 sh) | ₹2.09 L | n/a | - | - |
 | Big HNI (bNII) | 68 lot (5304 sh) | ₹10.13 L | n/a | - | - |
 
-## Crystal Crop Protection — listing today
-- Dates: open 2026-11-18 · close 2026-11-20 · allotment 2026-11-23 · listing 2026-11-26
-- Price band: ₹272 (upper) · lot 55 shares · size ₹455.72 Cr · P/E 28.19
-- GMP: ₹17 (6.25%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹17 → … → ₹18 → ₹18 → ₹17 since 19 Nov, steady
-- Cached call (rhp, 2026-11-17): Neutral · anchor average · Delhi-based agrochemicals and hybrid seeds maker (80% crop protection, 19% seeds) with 14,700 distributors, raising ₹455 Cr (₹355 Cr fresh, ~₹101 Cr OFS) mostly to repay debt.
+## Mahanadi Coalfields — listing today
+- Dates: open 2026-11-19 · close 2026-11-23 · allotment 2026-11-25 · listing 2026-11-27
+- Price band: ₹136 (upper) · lot 110 shares · size ₹8981.12 Cr · P/E 8.42
+- GMP: ₹0.7 (0.51%) · anchor allocation: unknown (not on NSE yet)
+- GMP ₹2.7 → ₹1.3 → ₹0.4 → ₹0.7 since 19 Nov, falling
+- Cached call (rhp, 2026-11-17): Apply (long-term) · anchor strong · Coal India subsidiary and India's largest single coal producer (21% of FY26 output, Odisha); 100% OFS by CIL of ~₹8,981 Cr, selling 10% and keeping ~90%.
 
 | Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
 |---|---|---|---|---|---|
-| Retail | 1 lot (55 sh) | ₹14,960 | n/a | - | - |
-| Small HNI (sNII) | 14 lot (770 sh) | ₹2.09 L | n/a | - | - |
-| Big HNI (bNII) | 67 lot (3685 sh) | ₹10.02 L | n/a | - | - |
+| Retail | 1 lot (110 sh) | ₹14,960 | n/a | - | - |
+| Small HNI (sNII) | 14 lot (1540 sh) | ₹2.09 L | n/a | - | - |
+| Big HNI (bNII) | 67 lot (7370 sh) | ₹10.02 L | n/a | - | - |
 
 ## Matangi Rubber — upcoming
 - Dates: open 2026-12-01 · close 2026-12-03 · allotment 2026-12-04 · listing 2026-12-08
@@ -52,24 +52,11 @@
 | Small HNI (sNII) | 14 lot (3150 sh) | ₹2.05 L | n/a | - | - |
 | Big HNI (bNII) | 69 lot (15525 sh) | ₹10.09 L | n/a | - | - |
 
-## Mahanadi Coalfields — awaiting listing
-- Dates: open 2026-11-19 · close 2026-11-23 · allotment 2026-11-25 · listing 2026-11-27
-- Price band: ₹136 (upper) · lot 110 shares · size ₹8981.12 Cr · P/E 8.42
-- GMP: ₹0.5 (0.37%) · anchor allocation: unknown (not on NSE yet)
-- GMP ₹2.7 → ₹1.3 → ₹0.4 → ₹0.5 since 19 Nov, falling
-- Cached call (rhp, 2026-11-17): Apply (long-term) · anchor strong · Coal India subsidiary and India's largest single coal producer (21% of FY26 output, Odisha); 100% OFS by CIL of ~₹8,981 Cr, selling 10% and keeping ~90%.
-
-| Category | Min application | Capital | Odds | Exp. gain | Return on blocked |
-|---|---|---|---|---|---|
-| Retail | 1 lot (110 sh) | ₹14,960 | n/a | - | - |
-| Small HNI (sNII) | 14 lot (1540 sh) | ₹2.09 L | n/a | - | - |
-| Big HNI (bNII) | 67 lot (7370 sh) | ₹10.02 L | n/a | - | - |
-
 ## Swara Baby Products — announced
 - Dates: open ? · close ? · allotment ? · listing ?
 - Price band: not announced · lot ? shares · size ₹1000 Cr · P/E -
 - GMP: - · anchor allocation: unknown (not on NSE yet)
-- Cached call: none — write the card
+- Cached call (web, 2026-11-26): Watchlist · anchor pending · FirstCry (Brainbees) subsidiary and India's largest hygiene contract manufacturer (baby/adult diapers, sanitary napkins; own Cuddles and Shields brands); ₹1,000 Cr IPO = ₹500 Cr fresh + ₹500 Cr OFS, SEBI nod received.
 
 ## Integris Medtech — announced
 - Dates: open ? · close ? · allotment ? · listing ?

@@ -1,0 +1,5 @@
+{"date":"2026-11-27","session":"AM",
+ "headline":"Foodlink open (closes 30 Nov): GMP fell from ₹27 to ₹7 — skip unless you'd hold long-term",
+ "ipos":{"foodlink-f-and-b-holdings":{"verdict":"avoid","verdict_text":"Avoid for listing gains","best_category":null,"category_note":"GMP falling since 20 Nov (₹27 → ₹7, ~3.7%) — thin listing upside. Day-1 subscription (web): QIB 1.01x, NII 0.40x, Retail 2.33x, total 1.08x; NII least subscribed. Recheck 30 Nov."},
+ "mahanadi-coalfields":{"verdict":"neutral","verdict_text":"Listing today","best_category":null,"category_note":"GMP ~₹0.7 (0.5%) — flat listing expected"}},
+ "notes":["NSE blocked by proxy: subscription numbers from web search (Groww/Upstox, Day 1 close); Mahanadi listing price not yet published — outcome not recorded (no NSE symbol); retry next run."]}
